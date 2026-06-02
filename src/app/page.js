@@ -81,7 +81,7 @@ export default function Home() {
           <p className="promo-title">Discover the Beauty of Morocco: Book Morocco Desert Tours Today!</p>
           <div className="discount-badge-container">
             <span className="discount-badge">
-              <i className="fa-solid fa-gift"></i> Now discount 20% on all destinations on our Morocco Sahara desert tours packages.
+              <i className="fa-solid fa-gift"></i> Save 20% on all signature Morocco Sahara Desert tour packages for a limited time!
             </span>
           </div>
         </div>
