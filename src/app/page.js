@@ -81,7 +81,7 @@ export default function Home() {
           <p className="promo-title">Discover the Beauty of Morocco: Book Morocco Desert Tours Today!</p>
           <div className="discount-badge-container">
             <span className="discount-badge">
-              <i className="fa-solid fa-gift"></i> Limited Offer: Save 20% on Sahara Desert Tours!
+              <i className="fa-solid fa-gift"></i> Limited Offer: Save 30% on Sahara Desert Tours!
             </span>
           </div>
         </div>
