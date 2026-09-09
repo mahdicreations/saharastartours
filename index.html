@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -40,7 +40,7 @@
     .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 28px;font-family:var(--font-sans);font-size:0.95rem;font-weight:500;border-radius:50px;cursor:pointer;transition:var(--transition-smooth);border:none;outline:none;position:relative;overflow:hidden;}
     .btn-primary{background:linear-gradient(135deg,var(--terracotta) 0%,hsl(14,75%,45%) 100%);color:var(--text-main);box-shadow:0 8px 24px var(--terracotta-glow);}
     .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px hsla(14,62%,52%,0.4);}
-    .btn-secondary{background:rgba(255,255,255,0.05);border:1px solid var(--glass-border);color:var(--text-main);backdrop-filter:blur(10px);}
+    .btn-secondary{background:rgba(255,255,255,0.1);border:1px solid rgba(232,195,158,0.3);color:var(--text-main);backdrop-filter:blur(10px);}
     .btn-secondary:hover{background:var(--sand-gold);color:var(--night-bg);border-color:var(--sand-gold);transform:translateY(-2px);box-shadow:0 8px 20px var(--sand-gold-glow);}
     .btn-sm{padding:10px 20px;font-size:0.85rem;border-radius:30px;}
     .reveal{opacity:0;transform:translateY(30px);transition:opacity 0.8s ease,transform 0.8s ease;}
@@ -254,12 +254,12 @@
       .nav-links{display:none;}
       .nav-links.open{display:flex;flex-direction:column;position:fixed;top:0;left:0;width:100%;height:100vh;background:var(--night-bg);justify-content:flex-start;align-items:center;gap:16px;z-index:999;padding:100px 30px 60px;overflow-y:auto;animation:fadeInMobileMenu 0.4s cubic-bezier(0.16,1,0.3,1) forwards;}
       .nav-links.open>li{width:100%;text-align:center;flex-direction:column;gap:4px;}
-      .nav-links.open a{padding:6px 0;font-size:1.15rem;}
+      .nav-links.open a{padding:12px 0;font-size:1.15rem;}
       .nav-links.open .dropdown-menu{position:static;transform:none;opacity:1;pointer-events:all;display:none;width:100%;background:rgba(0,0,0,0.25);border:none;border-left:2px solid var(--terracotta);box-shadow:none;backdrop-filter:none;border-radius:0;padding:10px 0 10px 16px;margin-top:8px;}
       .nav-links.open .dropdown-menu.open{display:block;}
       .nav-links.open .megamenu-two-col{display:flex;flex-direction:column;gap:6px;padding:0;}
       .nav-links.open .dropdown-standard{width:100%;display:flex;flex-direction:column;gap:6px;padding:0;}
-      .nav-links.open .dropdown-menu a{text-align:left;padding:8px 12px;font-size:0.92rem;border-radius:var(--radius-sm);}
+      .nav-links.open .dropdown-menu a{text-align:left;padding:12px 16px;font-size:0.95rem;border-radius:var(--radius-sm);}
       .mobile-nav-toggle{display:block;}
       .hero-content h1{font-size:3rem;}
       .hero-content p{font-size:1.05rem;}
@@ -357,16 +357,28 @@
 <!-- HERO -->
 <section class="hero" id="hero">
   <div class="hero-background">
-    <img src="assets/hero_sahara_sunset.png" alt="Sahara Desert Sunset Morocco" />
+    <img src="assets/hero_sahara_sunset.png" alt="Sahara Desert Sunset Morocco" fetchpriority="high" loading="eager" />
   </div>
   <div class="hero-gradient"></div>
   <div class="hero-content">
-    <span class="subtitle">Sahara Star Tours | Bespoke Journeys &amp; Luxury Escapes</span>
+    <span class="subtitle" style="color: var(--sand-gold); text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Sahara Star Tours | Bespoke Journeys &amp; Luxury Escapes</span>
     <h1>Experience the Majestic Magic of Morocco with <span>Sahara Star Tours</span></h1>
-    <p>Embark on tailor-made private tours, luxury Sahara Desert safaris, and epic imperial city expeditions across Morocco with our premier locally-owned travel agency.</p>
+    <p style="color: var(--text-main); text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Embark on tailor-made private tours, luxury Sahara Desert safaris, and epic imperial city expeditions across Morocco with our premier locally-owned travel agency.</p>
     <div class="hero-btns">
       <a href="#tours" class="btn btn-primary">Explore Our Tours</a>
       <a href="#planner" class="btn btn-secondary">Custom Price Estimator</a>
+    </div>
+    <!-- NEW: Trust Signals / Social Proof -->
+    <div style="margin-top: 40px; display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; opacity: 0; animation: slideUpFade 1s forwards 1s cubic-bezier(0.16,1,0.3,1);">
+      <span style="font-size: 0.85rem; color: var(--text-main); display: flex; align-items: center; gap: 8px;">
+        <i class="fa-solid fa-star" style="color: var(--sand-gold);"></i> 5-Star Rated (500+ Reviews)
+      </span>
+      <span style="font-size: 0.85rem; color: var(--text-main); display: flex; align-items: center; gap: 8px;">
+        <i class="fa-solid fa-certificate" style="color: var(--sand-gold);"></i> Licensed Local Agency
+      </span>
+      <span style="font-size: 0.85rem; color: var(--text-main); display: flex; align-items: center; gap: 8px;">
+        <i class="fa-solid fa-headset" style="color: var(--sand-gold);"></i> 24/7 Dedicated Concierge
+      </span>
     </div>
   </div>
 </section>
