@@ -1,0 +1,844 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sahara Star Tours | Bespoke Sahara Desert & Morocco Travel Agency</title>
+  <meta name="description" content="Discover the magic of Morocco with Sahara Star Tours. From luxury Sahara Desert safaris to Marrakech medina tours and high Atlas treks, book your dream journey today." />
+  <meta name="keywords" content="sahara star tours, morocco travel agency, sahara desert tour, marrakech riad booking, moroccan tours, custom travel morocco" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <style>
+    :root {
+      --night-bg:hsl(20,12%,6%);--night-surface:hsl(20,10%,10%);--night-card:hsl(20,8%,14%);
+      --terracotta:hsl(14,62%,52%);--terracotta-glow:hsla(14,62%,52%,0.25);
+      --sand-gold:hsl(38,72%,76%);--sand-gold-glow:hsla(38,72%,76%,0.15);
+      --text-main:hsl(30,20%,96%);--text-muted:hsl(30,10%,72%);
+      --glass-bg:rgba(28,24,22,0.7);--glass-border:rgba(232,195,158,0.12);
+      --font-serif:'Playfair Display',serif;--font-sans:'Outfit',sans-serif;
+      --radius-sm:8px;--radius-md:16px;--radius-lg:24px;
+      --transition-smooth:all 0.4s cubic-bezier(0.16,1,0.3,1);
+      --shadow-premium:0 20px 40px rgba(0,0,0,0.5);
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;font-family:var(--font-sans);background-color:var(--night-bg);color:var(--text-main);overflow-x:hidden;}
+    body{line-height:1.6;}
+    ::-webkit-scrollbar{width:8px;}::-webkit-scrollbar-track{background:var(--night-bg);}
+    ::-webkit-scrollbar-thumb{background:var(--night-card);border-radius:var(--radius-sm);border:2px solid var(--night-bg);}
+    ::-webkit-scrollbar-thumb:hover{background:var(--terracotta);}
+    h1,h2,h3,h4{font-family:var(--font-serif);font-weight:600;letter-spacing:0.5px;}
+    p{color:var(--text-muted);font-weight:300;}
+    a{color:inherit;text-decoration:none;}
+    img{max-width:100%;height:auto;display:block;}
+    section{padding:100px 5% 80px;position:relative;}
+    .section-header{text-align:center;max-width:650px;margin:0 auto 60px;}
+    .section-header .tag{color:var(--sand-gold);font-size:0.9rem;text-transform:uppercase;letter-spacing:3px;font-weight:600;display:inline-block;margin-bottom:12px;}
+    .section-header h2{font-size:2.8rem;line-height:1.2;margin-bottom:16px;background:linear-gradient(135deg,var(--text-main) 30%,var(--sand-gold) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 28px;font-family:var(--font-sans);font-size:0.95rem;font-weight:500;border-radius:50px;cursor:pointer;transition:var(--transition-smooth);border:none;outline:none;position:relative;overflow:hidden;}
+    .btn-primary{background:linear-gradient(135deg,var(--terracotta) 0%,hsl(14,75%,45%) 100%);color:var(--text-main);box-shadow:0 8px 24px var(--terracotta-glow);}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px hsla(14,62%,52%,0.4);}
+    .btn-secondary{background:rgba(255,255,255,0.05);border:1px solid var(--glass-border);color:var(--text-main);backdrop-filter:blur(10px);}
+    .btn-secondary:hover{background:var(--sand-gold);color:var(--night-bg);border-color:var(--sand-gold);transform:translateY(-2px);box-shadow:0 8px 20px var(--sand-gold-glow);}
+    .btn-sm{padding:10px 20px;font-size:0.85rem;border-radius:30px;}
+    .reveal{opacity:0;transform:translateY(30px);transition:opacity 0.8s ease,transform 0.8s ease;}
+    .reveal.active{opacity:1;transform:translateY(0);}
+    header{position:fixed;top:0;left:0;width:100%;z-index:1000;transition:var(--transition-smooth);border-bottom:1px solid transparent;}
+    header.scrolled{background:var(--glass-bg);backdrop-filter:blur(20px);border-bottom:1px solid var(--glass-border);}
+    .navbar{display:flex;justify-content:space-between;align-items:center;max-width:1400px;margin:0 auto;padding:20px 5%;transition:var(--transition-smooth);}
+    header.scrolled .navbar{padding:10px 5%;}
+    .logo{display:flex;align-items:center;gap:10px;}
+    .logo img{height:110px;width:auto;object-fit:contain;transition:var(--transition-smooth);}
+    header.scrolled .logo img{height:75px;}
+    .nav-links{display:flex;list-style:none;gap:32px;}
+    .nav-links>li{position:relative;display:flex;align-items:center;cursor:pointer;}
+    .nav-links a{font-size:0.95rem;font-weight:400;color:var(--text-muted);transition:var(--transition-smooth);position:relative;padding:10px 0;display:inline-flex;align-items:center;gap:6px;}
+    .nav-links a i.fa-chevron-down{font-size:0.7rem;transition:var(--transition-smooth);}
+    .nav-links>li:hover a i.fa-chevron-down{transform:rotate(180deg);color:var(--sand-gold);}
+    .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--terracotta);transition:var(--transition-smooth);}
+    .nav-links a:hover,.nav-links a.active{color:var(--text-main);}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+    .dropdown-menu{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(15px);background:var(--glass-bg);backdrop-filter:blur(25px);border:1px solid var(--glass-border);border-radius:var(--radius-md);box-shadow:var(--shadow-premium);opacity:0;pointer-events:none;transition:all 0.4s cubic-bezier(0.16,1,0.3,1);z-index:1010;list-style:none;}
+    .nav-links>li:hover .dropdown-menu{opacity:1;pointer-events:all;transform:translateX(-50%) translateY(0);}
+    .dropdown-standard{width:280px;padding:16px;display:flex;flex-direction:column;gap:4px;}
+    .megamenu-two-col{display:grid;grid-template-columns:repeat(2,310px);gap:6px 16px;padding:24px;}
+    .dropdown-menu li{width:100%;}
+    .dropdown-menu a{display:block;width:100%;padding:10px 14px;font-size:0.88rem;color:var(--text-muted);border-radius:var(--radius-sm);transition:var(--transition-smooth);line-height:1.3;text-align:left;}
+    .dropdown-menu a::after{display:none;}
+    .dropdown-menu a:hover{background:rgba(217,107,67,0.08);color:var(--sand-gold);padding-left:18px;}
+    .megamenu-title-badge{display:inline-flex;align-items:center;gap:8px;font-size:0.8rem;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;color:var(--sand-gold);padding:6px 14px;background:rgba(232,195,158,0.06);border-radius:30px;border:1px solid rgba(232,195,158,0.15);margin-bottom:4px;}
+    .mobile-nav-toggle{display:none;font-size:1.8rem;color:var(--text-main);background:none;border:none;cursor:pointer;}
+    .hero{height:100vh;display:flex;align-items:center;justify-content:center;position:relative;padding:0 5%;overflow:hidden;}
+    .hero-background{position:absolute;top:0;left:0;width:100%;height:100%;z-index:1;}
+    .hero-background img{width:100%;height:100%;object-fit:cover;filter:brightness(0.4) contrast(1.1);animation:slowZoom 25s infinite alternate ease-in-out;}
+    .hero-gradient{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(to bottom,rgba(17,14,13,0.2) 0%,rgba(17,14,13,0.4) 60%,var(--night-bg) 100%);z-index:2;}
+    .hero-content{position:relative;z-index:3;text-align:center;max-width:900px;margin-top:50px;}
+    .hero-content .subtitle{font-size:1.1rem;text-transform:uppercase;letter-spacing:4px;color:var(--sand-gold);font-weight:600;margin-bottom:20px;display:inline-block;opacity:0;transform:translateY(20px);animation:slideUpFade 1s forwards 0.2s cubic-bezier(0.16,1,0.3,1);}
+    .hero-content h1{font-size:4.8rem;line-height:1.1;margin-bottom:24px;color:var(--text-main);opacity:0;transform:translateY(25px);animation:slideUpFade 1s forwards 0.4s cubic-bezier(0.16,1,0.3,1);}
+    .hero-content h1 span{background:linear-gradient(135deg,var(--terracotta) 0%,var(--sand-gold) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+    .hero-content p{font-size:1.2rem;max-width:650px;margin:0 auto 40px;opacity:0;transform:translateY(20px);animation:slideUpFade 1s forwards 0.6s cubic-bezier(0.16,1,0.3,1);}
+    .hero-btns{display:flex;gap:16px;justify-content:center;opacity:0;transform:translateY(20px);animation:slideUpFade 1s forwards 0.8s cubic-bezier(0.16,1,0.3,1);}
+    .tours-section{padding-top:100px;}
+    .category-showcase-container{max-width:1400px;margin:0 auto;padding:0 5%;}
+    .category-tabs{display:flex;justify-content:center;flex-wrap:wrap;gap:12px 18px;margin:0 auto 50px;list-style:none;max-width:800px;}
+    .category-tab{background:rgba(255,255,255,0.03);border:1px solid var(--glass-border);color:var(--text-muted);border-radius:50px;padding:12px 28px;font-family:var(--font-sans);font-size:0.9rem;font-weight:500;cursor:pointer;transition:var(--transition-smooth);box-shadow:0 4px 15px rgba(0,0,0,0.15);}
+    .category-tab:hover{border-color:var(--sand-gold);color:var(--text-main);transform:translateY(-2px);}
+    .category-tab.active{background:linear-gradient(135deg,var(--terracotta) 0%,hsl(14,75%,45%) 100%);color:var(--text-main);border-color:var(--terracotta);box-shadow:0 6px 20px var(--terracotta-glow);}
+    .category-tab span{font-size:0.8rem;opacity:0.8;margin-left:6px;}
+    .category-tours-wrapper{min-height:400px;}
+    .category-tour-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:30px;opacity:1;transition:opacity 0.3s ease;}
+    .category-tour-grid.fade-out{opacity:0;}
+    .tour-card{background:var(--night-surface);border:1px solid var(--glass-border);border-radius:var(--radius-md);overflow:hidden;position:relative;transition:var(--transition-smooth);box-shadow:0 10px 30px rgba(0,0,0,0.2);}
+    .tour-card:hover{transform:translateY(-10px);border-color:rgba(232,195,158,0.25);box-shadow:var(--shadow-premium);}
+    .tour-img-wrapper{height:240px;position:relative;overflow:hidden;}
+    .tour-img-wrapper img{width:100%;height:100%;object-fit:cover;transition:transform 0.8s ease;}
+    .tour-card:hover .tour-img-wrapper img{transform:scale(1.08);}
+    .tour-badge{position:absolute;top:20px;left:20px;background:var(--terracotta);color:var(--text-main);padding:6px 14px;border-radius:30px;font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;z-index:2;box-shadow:0 4px 10px rgba(217,107,67,0.4);}
+    .tour-info{padding:24px;}
+    .tour-meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.85rem;color:var(--sand-gold);}
+    .tour-meta div{display:flex;align-items:center;gap:6px;}
+    .tour-title{font-size:1.4rem;margin-bottom:12px;transition:var(--transition-smooth);}
+    .tour-card:hover .tour-title{color:var(--sand-gold);}
+    .tour-desc{font-size:0.9rem;margin-bottom:24px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+    .tour-footer{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--glass-border);padding-top:20px;}
+    .tour-price{font-size:0.85rem;color:var(--text-muted);}
+    .tour-price span{display:block;font-size:1.4rem;font-family:var(--font-serif);color:var(--text-main);font-weight:700;}
+    .starting-cities-section{padding:100px 5% 80px;background:linear-gradient(180deg,var(--night-bg) 0%,var(--night-surface) 100%);border-top:1px solid var(--glass-border);}
+    .starting-cities-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;max-width:1400px;margin:0 auto;}
+    .city-card{background:var(--night-surface);border:1px solid var(--glass-border);border-radius:var(--radius-md);overflow:hidden;transition:var(--transition-smooth);box-shadow:0 10px 30px rgba(0,0,0,0.2);display:flex;flex-direction:column;}
+    .city-card:hover{transform:translateY(-10px);border-color:rgba(232,195,158,0.25);box-shadow:var(--shadow-premium);}
+    .city-img-wrapper{height:240px;position:relative;overflow:hidden;}
+    .city-img-wrapper img{width:100%;height:100%;object-fit:cover;transition:transform 0.8s ease;}
+    .city-card:hover .city-img-wrapper img{transform:scale(1.08);}
+    .city-badge{position:absolute;top:20px;left:20px;background:var(--terracotta);color:var(--text-main);padding:6px 14px;border-radius:30px;font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;z-index:2;box-shadow:0 4px 10px rgba(217,107,67,0.4);}
+    .city-content{padding:24px;display:flex;flex-direction:column;flex-grow:1;}
+    .city-content h3{font-size:1.45rem;margin-bottom:12px;color:var(--text-main);font-family:var(--font-serif);transition:var(--transition-smooth);}
+    .city-card:hover .city-content h3{color:var(--sand-gold);}
+    .city-content p{font-size:0.9rem;margin-bottom:20px;line-height:1.6;}
+    .city-meta{margin-top:auto;display:flex;flex-direction:column;gap:8px;padding:16px 0;border-top:1px solid var(--glass-border);border-bottom:1px solid var(--glass-border);font-size:0.85rem;color:var(--sand-gold);}
+    .city-meta span{display:flex;align-items:center;gap:8px;}
+    .city-meta span i{color:var(--terracotta);font-size:0.9rem;}
+    .city-footer{padding-top:20px;display:flex;justify-content:flex-end;}
+    .calculator-section{background:linear-gradient(180deg,var(--night-bg) 0%,var(--night-surface) 50%,var(--night-bg) 100%);}
+    .calculator-container{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.2fr 0.8fr;gap:40px;background:var(--night-surface);border:1px solid var(--glass-border);border-radius:var(--radius-lg);padding:40px;box-shadow:var(--shadow-premium);position:relative;overflow:hidden;}
+    .calculator-container::before{content:'';position:absolute;top:-100px;right:-100px;width:300px;height:300px;background:radial-gradient(circle,var(--terracotta-glow) 0%,transparent 70%);z-index:0;pointer-events:none;}
+    .calc-inputs{position:relative;z-index:1;}
+    .calc-inputs h3{font-size:1.8rem;margin-bottom:24px;color:var(--sand-gold);}
+    .calc-group{margin-bottom:30px;}
+    .calc-label-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;}
+    .calc-label-row label{font-size:0.95rem;font-weight:500;}
+    .calc-value{color:var(--terracotta);font-weight:600;font-size:1.1rem;}
+    input[type=range]{-webkit-appearance:none;width:100%;background:transparent;}
+    input[type=range]:focus{outline:none;}
+    input[type=range]::-webkit-slider-runnable-track{width:100%;height:6px;cursor:pointer;background:rgba(255,255,255,0.1);border-radius:3px;}
+    input[type=range]::-webkit-slider-thumb{height:20px;width:20px;border-radius:50%;background:var(--terracotta);cursor:pointer;-webkit-appearance:none;margin-top:-7px;box-shadow:0 0 10px var(--terracotta-glow);transition:var(--transition-smooth);}
+    input[type=range]::-webkit-slider-thumb:hover{transform:scale(1.2);background:var(--sand-gold);}
+    .tier-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+    .tier-card{background:rgba(255,255,255,0.03);border:1px solid var(--glass-border);border-radius:var(--radius-sm);padding:16px;cursor:pointer;transition:var(--transition-smooth);text-align:center;}
+    .tier-card.active{background:rgba(217,107,67,0.08);border-color:var(--terracotta);box-shadow:0 4px 15px rgba(217,107,67,0.15);}
+    .tier-card i{font-size:1.5rem;color:var(--sand-gold);margin-bottom:8px;display:block;}
+    .tier-card span{display:block;font-size:0.9rem;font-weight:500;}
+    .tier-card small{color:var(--text-muted);font-size:0.75rem;}
+    .addons-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;}
+    .addon-item{background:rgba(255,255,255,0.03);border:1px solid var(--glass-border);border-radius:var(--radius-sm);padding:12px 16px;display:flex;align-items:center;gap:12px;cursor:pointer;transition:var(--transition-smooth);}
+    .addon-item:hover{background:rgba(255,255,255,0.05);}
+    .addon-item.active{border-color:var(--sand-gold);background:rgba(232,195,158,0.05);}
+    .addon-item input[type=checkbox]{appearance:none;width:18px;height:18px;border:1px solid var(--glass-border);border-radius:4px;outline:none;cursor:pointer;transition:var(--transition-smooth);flex-shrink:0;position:relative;}
+    .addon-item input[type=checkbox]:checked{background-color:var(--sand-gold);border-color:var(--sand-gold);}
+    .addon-details{display:flex;flex-direction:column;}
+    .addon-name{font-size:0.85rem;font-weight:500;}
+    .addon-price{font-size:0.75rem;color:var(--sand-gold);}
+    .calc-summary-wrapper{position:relative;z-index:1;}
+    .calc-summary{background:var(--night-card);border:1px solid rgba(232,195,158,0.15);border-radius:var(--radius-md);padding:30px;position:sticky;top:100px;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,0.3);}
+    .calc-summary h4{font-size:1.5rem;margin-bottom:20px;border-bottom:1px solid var(--glass-border);padding-bottom:15px;}
+    .calc-summary-details{list-style:none;text-align:left;margin-bottom:30px;}
+    .calc-summary-details li{display:flex;justify-content:space-between;font-size:0.9rem;margin-bottom:12px;}
+    .calc-summary-details li span:last-child{font-weight:500;color:var(--text-main);}
+    .calc-total-box{background:rgba(217,107,67,0.1);border:1px dashed var(--terracotta);border-radius:var(--radius-sm);padding:16px;margin:20px 0;text-align:center;}
+    .planner-status-badge{color:var(--sand-gold);font-size:0.85rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;display:inline-flex;align-items:center;gap:6px;margin-bottom:4px;}
+    .culture-section{overflow:hidden;}
+    .culture-slider{display:flex;gap:30px;overflow-x:auto;padding:20px 0 40px;max-width:1400px;margin:0 auto;scroll-snap-type:x mandatory;}
+    .culture-slider::-webkit-scrollbar{height:6px;}.culture-slider::-webkit-scrollbar-thumb{background:var(--glass-border);}
+    .culture-card{flex:0 0 350px;background:var(--night-surface);border:1px solid var(--glass-border);border-radius:var(--radius-md);overflow:hidden;scroll-snap-align:start;transition:var(--transition-smooth);}
+    .culture-card:hover{border-color:var(--sand-gold);transform:translateY(-5px);}
+    .culture-img{height:200px;overflow:hidden;}
+    .culture-img img{width:100%;height:100%;object-fit:cover;transition:var(--transition-smooth);}
+    .culture-card:hover .culture-img img{transform:scale(1.06);}
+    .culture-info{padding:24px;}
+    .culture-info h3{font-size:1.3rem;color:var(--sand-gold);margin-bottom:10px;}
+    .culture-info p{font-size:0.88rem;}
+    .reviews-container{max-width:800px;margin:0 auto;position:relative;overflow:hidden;}
+    .reviews-wrapper{display:flex;transition:transform 0.6s cubic-bezier(0.16,1,0.3,1);}
+    .review-slide{flex:0 0 100%;min-width:100%;text-align:center;padding:20px;}
+    .review-stars{color:var(--sand-gold);font-size:1.1rem;margin-bottom:20px;}
+    .review-quote{font-family:var(--font-serif);font-size:1.6rem;line-height:1.4;margin-bottom:30px;color:var(--text-main);font-style:italic;}
+    .review-user{display:flex;align-items:center;justify-content:center;gap:14px;}
+    .review-avatar{width:60px;height:60px;border-radius:50%;object-fit:cover;border:2px solid var(--sand-gold);}
+    .review-user-info h5{font-size:1rem;font-weight:600;text-align:left;}
+    .review-user-info span{font-size:0.8rem;color:var(--text-muted);display:block;text-align:left;}
+    .review-dots{display:flex;justify-content:center;gap:8px;margin-top:30px;}
+    .review-dot{width:8px;height:8px;border-radius:50%;background:var(--glass-border);cursor:pointer;transition:var(--transition-smooth);}
+    .review-dot.active{background:var(--terracotta);width:24px;border-radius:4px;}
+    .agency-seo-showcase{background:linear-gradient(180deg,var(--night-bg) 0%,var(--night-surface) 100%);border-top:1px solid var(--glass-border);border-bottom:1px solid var(--glass-border);}
+    .seo-grid{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;}
+    .seo-text h3{font-size:2.2rem;color:var(--text-main);margin-bottom:20px;}
+    .seo-text h3 span{color:var(--sand-gold);}
+    .seo-text p{margin-bottom:20px;font-size:1.05rem;line-height:1.7;}
+    .seo-highlight-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
+    .seo-card{background:var(--night-surface);border:1px solid var(--glass-border);border-radius:var(--radius-md);padding:24px;transition:var(--transition-smooth);}
+    .seo-card i{color:var(--terracotta);font-size:2rem;margin-bottom:15px;display:block;}
+    .seo-card h4{font-size:1.15rem;color:var(--sand-gold);margin-bottom:10px;}
+    .seo-card p{font-size:0.88rem;margin-bottom:0;}
+    .seo-card:hover{border-color:rgba(232,195,158,0.2);box-shadow:var(--shadow-premium);transform:translateY(-5px);}
+    .contact-container{max-width:900px;margin:0 auto;background:var(--night-surface);border:1px solid var(--glass-border);border-radius:var(--radius-lg);padding:50px;box-shadow:var(--shadow-premium);}
+    .contact-form{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
+    .form-full{grid-column:span 2;}
+    .form-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px;grid-column:span 2;}
+    .form-group{position:relative;margin-bottom:8px;}
+    .form-group input,.form-group select,.form-group textarea{width:100%;background:rgba(255,255,255,0.03);border:1px solid var(--glass-border);border-radius:var(--radius-sm);padding:16px;color:var(--text-main);font-family:var(--font-sans);font-size:0.95rem;outline:none;transition:var(--transition-smooth);}
+    .form-group textarea{resize:vertical;min-height:120px;}
+    .form-group label{position:absolute;left:16px;top:18px;color:var(--text-muted);pointer-events:none;transition:var(--transition-smooth);font-size:0.95rem;}
+    .form-group input:focus~label,.form-group input:not(:placeholder-shown)~label,.form-group textarea:focus~label,.form-group textarea:not(:placeholder-shown)~label{top:-10px;left:12px;font-size:0.75rem;color:var(--sand-gold);background:var(--night-surface);padding:0 6px;}
+    .form-group select~label{top:-10px;left:12px;font-size:0.75rem;color:var(--sand-gold);background:var(--night-surface);padding:0 6px;}
+    .form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--terracotta);background:rgba(255,255,255,0.06);box-shadow:0 0 15px var(--terracotta-glow);}
+    .btn-submit{grid-column:span 2;height:55px;font-size:1.05rem;width:100%;}
+    .success-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);backdrop-filter:blur(8px);z-index:3000;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:var(--transition-smooth);padding:20px;}
+    .success-overlay.active{opacity:1;pointer-events:all;}
+    .success-card{background:var(--night-surface);border:1px solid var(--glass-border);border-radius:var(--radius-lg);max-width:480px;width:100%;padding:40px;text-align:center;transform:scale(0.9);transition:var(--transition-smooth);box-shadow:var(--shadow-premium);}
+    .success-overlay.active .success-card{transform:scale(1);}
+    .success-icon-box{width:80px;height:80px;border-radius:50%;background:rgba(217,107,67,0.1);border:2px solid var(--terracotta);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;}
+    .success-icon-box i{color:var(--terracotta);font-size:2.2rem;}
+    .success-card h3{font-size:1.8rem;color:var(--sand-gold);margin-bottom:12px;}
+    .success-card p{font-size:0.95rem;margin-bottom:30px;}
+    .success-card .btn{width:100%;}
+    footer{background:#0d0a09;border-top:1px solid var(--glass-border);padding:80px 5% 40px;color:var(--text-muted);}
+    .footer-grid{max-width:1400px;margin:0 auto 50px;display:grid;grid-template-columns:1.5fr 1fr 1fr 1.5fr;gap:40px;}
+    .footer-col h4{font-size:1.2rem;color:var(--text-main);margin-bottom:24px;}
+    .footer-col p{font-size:0.9rem;margin-bottom:20px;}
+    .footer-col .logo img{height:120px;margin-bottom:15px;}
+    .footer-socials{display:flex;gap:12px;}
+    .social-link{width:38px;height:38px;background:rgba(255,255,255,0.03);border:1px solid var(--glass-border);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:var(--transition-smooth);color:var(--text-main);}
+    .social-link:hover{background:var(--terracotta);border-color:var(--terracotta);transform:translateY(-3px);}
+    .footer-links{list-style:none;}
+    .footer-links li{margin-bottom:12px;}
+    .footer-links a{font-size:0.9rem;transition:var(--transition-smooth);}
+    .footer-links a:hover{color:var(--sand-gold);padding-left:5px;}
+    .newsletter-form{display:flex;gap:8px;}
+    .newsletter-form input{flex:1;background:rgba(255,255,255,0.03);border:1px solid var(--glass-border);border-radius:var(--radius-sm);padding:12px 16px;color:var(--text-main);outline:none;font-family:var(--font-sans);font-size:0.9rem;}
+    .newsletter-form input:focus{border-color:var(--terracotta);}
+    .newsletter-form .btn{padding:12px 20px;border-radius:var(--radius-sm);}
+    .footer-bottom{max-width:1400px;margin:0 auto;border-top:1px solid var(--glass-border);padding-top:30px;display:flex;justify-content:space-between;align-items:center;font-size:0.85rem;}
+    .promo-title{font-family:var(--font-sans);font-size:1.25rem;color:var(--sand-gold);margin-bottom:16px;font-weight:500;}
+    .discount-badge-container{display:flex;justify-content:center;margin-top:20px;}
+    .discount-badge{background:linear-gradient(135deg,hsla(14,62%,52%,0.15) 0%,hsla(38,72%,76%,0.15) 100%);border:1px dashed var(--terracotta);color:var(--text-main);padding:12px 28px;border-radius:50px;font-size:0.95rem;font-weight:500;display:inline-flex;align-items:center;gap:12px;box-shadow:0 0 20px rgba(217,107,67,0.15);animation:glowPulse 2s infinite alternate;}
+    .discount-badge i{color:var(--terracotta);font-size:1.15rem;animation:wiggle 1s ease-in-out infinite alternate;}
+    @keyframes slowZoom{0%{transform:scale(1.02);}100%{transform:scale(1.10);}}
+    @keyframes slideUpFade{to{opacity:1;transform:translateY(0);}}
+    @keyframes glowPulse{0%{box-shadow:0 0 10px rgba(217,107,67,0.15);border-color:var(--terracotta);}100%{box-shadow:0 0 30px rgba(217,107,67,0.45);border-color:var(--sand-gold);}}
+    @keyframes wiggle{0%{transform:rotate(-10deg);}100%{transform:rotate(10deg);}}
+    @keyframes pulse{0%{opacity:0.7;}100%{opacity:1;}}
+    @keyframes fadeInMobileMenu{from{opacity:0;transform:translateY(-20px);}to{opacity:1;transform:translateY(0);}}
+    @media(max-width:1024px){
+      .hero-content h1{font-size:3.8rem;}
+      .calculator-container{grid-template-columns:1fr;padding:30px;}
+      .calc-summary{position:static;}
+      .footer-grid{grid-template-columns:repeat(2,1fr);}
+      .seo-grid{grid-template-columns:1fr;gap:30px;}
+      .starting-cities-grid{grid-template-columns:repeat(2,1fr);}
+    }
+    @media(max-width:768px){
+      section{padding:80px 6% 60px;}
+      .section-header h2{font-size:2.2rem;}
+      .nav-links{display:none;}
+      .nav-links.open{display:flex;flex-direction:column;position:fixed;top:0;left:0;width:100%;height:100vh;background:var(--night-bg);justify-content:flex-start;align-items:center;gap:16px;z-index:999;padding:100px 30px 60px;overflow-y:auto;animation:fadeInMobileMenu 0.4s cubic-bezier(0.16,1,0.3,1) forwards;}
+      .nav-links.open>li{width:100%;text-align:center;flex-direction:column;gap:4px;}
+      .nav-links.open a{padding:6px 0;font-size:1.15rem;}
+      .nav-links.open .dropdown-menu{position:static;transform:none;opacity:1;pointer-events:all;display:none;width:100%;background:rgba(0,0,0,0.25);border:none;border-left:2px solid var(--terracotta);box-shadow:none;backdrop-filter:none;border-radius:0;padding:10px 0 10px 16px;margin-top:8px;}
+      .nav-links.open .dropdown-menu.open{display:block;}
+      .nav-links.open .megamenu-two-col{display:flex;flex-direction:column;gap:6px;padding:0;}
+      .nav-links.open .dropdown-standard{width:100%;display:flex;flex-direction:column;gap:6px;padding:0;}
+      .nav-links.open .dropdown-menu a{text-align:left;padding:8px 12px;font-size:0.92rem;border-radius:var(--radius-sm);}
+      .mobile-nav-toggle{display:block;}
+      .hero-content h1{font-size:3rem;}
+      .hero-content p{font-size:1.05rem;}
+      .tours-section{padding-top:80px;}
+      .tier-cards{grid-template-columns:1fr;}
+      .contact-container{padding:30px 20px;}
+      .contact-form{grid-template-columns:1fr;}
+      .form-full,.btn-submit{grid-column:span 1;}
+      .form-grid-2{grid-template-columns:1fr;grid-column:span 1;}
+      .footer-grid{grid-template-columns:1fr;}
+      .footer-bottom{flex-direction:column;gap:15px;text-align:center;}
+      .starting-cities-grid{grid-template-columns:1fr;}
+      .discount-badge{font-size:0.85rem;padding:10px 20px;}
+      .category-tab{padding:10px 20px;font-size:0.82rem;}
+      .review-quote{font-size:1.2rem;}
+    }
+  </style>
+</head>
+<body><!-- HEADER -->
+<header id="main-header"
+  x-data="{isScrolled:false,isMobileOpen:false,activeDropdowns:{},init(){const s=()=>{this.isScrolled=window.scrollY>50;};s();window.addEventListener('scroll',s);},closeMobileMenu(){this.isMobileOpen=false;this.activeDropdowns={};},toggleDropdown(cat){if(window.innerWidth<=768){this.activeDropdowns[cat]=!this.activeDropdowns[cat];this.activeDropdowns={...this.activeDropdowns};}}}"
+  :class="isScrolled?'scrolled':''"
+>
+  <div class="navbar">
+    <a href="#hero" class="logo" @click="closeMobileMenu()">
+      <img src="assets/logo.png" alt="Sahara Star Tours Logo" />
+    </a>
+    <ul class="nav-links" :class="isMobileOpen?'open':''" id="nav-links">
+      <li><a href="#hero" class="active" @click="closeMobileMenu()">Home</a></li>
+      <li class="has-dropdown">
+        <a href="#" @click.prevent="toggleDropdown('desert')">Desert Tours <i class="fa-solid fa-chevron-down" :style="activeDropdowns['desert']?'transform:rotate(180deg)':''"></i></a>
+        <ul class="dropdown-menu megamenu-two-col" :class="activeDropdowns['desert']?'open':''">
+          <li style="display:flex;flex-direction:column;gap:4px">
+            <span class="megamenu-title-badge"><i class="fa-solid fa-plane-departure"></i> From Casablanca</span>
+            <a href="#tours" @click="closeMobileMenu()">Morocco Itinerary 6 Days Desert Tour (6 Days)</a>
+            <a href="#tours" @click="closeMobileMenu()">Best 7-Day Morocco Tour (7 Days)</a>
+            <a href="#tours" @click="closeMobileMenu()">Ideal Morocco 8 Days Itinerary (8 Days)</a>
+            <a href="#tours" @click="closeMobileMenu()">9 Day Authentic Morocco Tour (9 Days)</a>
+            <a href="#tours" @click="closeMobileMenu()">Morocco 9 Days Desert &amp; Imperial (9 Days)</a>
+            <a href="#tours" @click="closeMobileMenu()">10 Days Morocco Tour From Casablanca (10 Days)</a>
+          </li>
+          <li style="display:flex;flex-direction:column;gap:4px">
+            <a href="#tours" style="margin-top:28px" @click="closeMobileMenu()">10 Days Desert Tour from Casablanca (10 Days)</a>
+            <a href="#tours" @click="closeMobileMenu()">12 Days Tour from Casablanca (12 Days)</a>
+            <a href="#tours" @click="closeMobileMenu()">Private 12 Days Trip To Desert &amp; Marrakech (12 Days)</a>
+            <a href="#tours" @click="closeMobileMenu()">Best 12 Days Morocco Tour (12 Days)</a>
+            <a href="#tours" @click="closeMobileMenu()">16 days Morocco Tour from Casablanca (16 Days)</a>
+            <span class="megamenu-title-badge" style="margin-top:8px"><i class="fa-solid fa-plane-departure"></i> From Marrakech</span>
+            <a href="#tours" @click="closeMobileMenu()">3 Days Tour From Marrakech To Merzouga (3 Days)</a>
+            <a href="#tours" @click="closeMobileMenu()">Ideal 4 Days Marrakech Desert Tour (4 Days)</a>
+          </li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <a href="#" @click.prevent="toggleDropdown('imperial')">Imperial Cities <i class="fa-solid fa-chevron-down" :style="activeDropdowns['imperial']?'transform:rotate(180deg)':''"></i></a>
+        <ul class="dropdown-menu dropdown-standard" :class="activeDropdowns['imperial']?'open':''">
+          <li><a href="#tours" @click="closeMobileMenu()">15 Days Tour from Casablanca</a></li>
+          <li><a href="#tours" @click="closeMobileMenu()">Best 13 Days Casablanca Tour</a></li>
+          <li><a href="#tours" @click="closeMobileMenu()">11 Days Morocco Classic Tour</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <a href="#" @click.prevent="toggleDropdown('daytrips')">Day Trips <i class="fa-solid fa-chevron-down" :style="activeDropdowns['daytrips']?'transform:rotate(180deg)':''"></i></a>
+        <ul class="dropdown-menu dropdown-standard" :class="activeDropdowns['daytrips']?'open':''">
+          <li><a href="#tours" @click="closeMobileMenu()">Agafay Desert Dinner &amp; Ride</a></li>
+          <li><a href="#tours" @click="closeMobileMenu()">Day Trip Essaouira Mogador</a></li>
+          <li><a href="#tours" @click="closeMobileMenu()">Day Trip Ait Ben Haddou</a></li>
+          <li><a href="#tours" @click="closeMobileMenu()">Day Trip Ouzoud Waterfalls</a></li>
+          <li><a href="#tours" @click="closeMobileMenu()">One Day Marrakech City Tour</a></li>
+          <li><a href="#tours" @click="closeMobileMenu()">Ourika Valley Nature Tour</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <a href="#" @click.prevent="toggleDropdown('activities')">Activities <i class="fa-solid fa-chevron-down" :style="activeDropdowns['activities']?'transform:rotate(180deg)':''"></i></a>
+        <ul class="dropdown-menu dropdown-standard" :class="activeDropdowns['activities']?'open':''">
+          <li><a href="#tours" @click="closeMobileMenu()">Hot Air Balloon in Marrakech</a></li>
+          <li><a href="#tours" @click="closeMobileMenu()">Horse Riding in Morocco</a></li>
+          <li><a href="#tours" @click="closeMobileMenu()">Fantasia Chez Ali Marrakech</a></li>
+          <li><a href="#tours" @click="closeMobileMenu()">Quad Biking In Marrakech</a></li>
+          <li><a href="#tours" @click="closeMobileMenu()">Raid Buggy In Marrakech</a></li>
+          <li><a href="#tours" @click="closeMobileMenu()">Camel Riding Palm Groves</a></li>
+        </ul>
+      </li>
+      <li><a href="#seo-details" @click="closeMobileMenu()">About Us</a></li>
+      <li><a href="#contact" @click="closeMobileMenu()">Contact Us</a></li>
+    </ul>
+    <a href="#planner" class="btn btn-primary" id="nav-cta" @click="closeMobileMenu()">Plan a Trip</a>
+    <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Toggle Menu" @click="isMobileOpen=!isMobileOpen">
+      <i :class="isMobileOpen?'fa-solid fa-xmark':'fa-solid fa-bars'"></i>
+    </button>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-background">
+    <img src="assets/hero_sahara_sunset.png" alt="Sahara Desert Sunset Morocco" />
+  </div>
+  <div class="hero-gradient"></div>
+  <div class="hero-content">
+    <span class="subtitle">Sahara Star Tours | Bespoke Journeys &amp; Luxury Escapes</span>
+    <h1>Experience the Majestic Magic of Morocco with <span>Sahara Star Tours</span></h1>
+    <p>Embark on tailor-made private tours, luxury Sahara Desert safaris, and epic imperial city expeditions across Morocco with our premier locally-owned travel agency.</p>
+    <div class="hero-btns">
+      <a href="#tours" class="btn btn-primary">Explore Our Tours</a>
+      <a href="#planner" class="btn btn-secondary">Custom Price Estimator</a>
+    </div>
+  </div>
+</section>
+<!-- TOURS SECTION -->
+<section class="tours-section" id="tours"
+  x-data="{
+    activeCategory:'Desert Tours',
+    categories:[{name:'Desert Tours',count:6},{name:'Imperial Cities',count:3},{name:'Day Trips',count:6},{name:'Activities',count:6}],
+    allTours:{
+      'Desert Tours':[
+        {key:'9day',title:'9 Day Authentic Morocco Tour',duration:'9 Days / 8 Nights',rating:'4.9',price:'$1,120',image:'assets/tour_9day_authentic.png',desc:'Marhaban! Welcome to Morocco. Upon landing at Casablanca Mohammed V International Airport, you will be warmly greeted by your private expert driver-guide transferred in a luxury air-conditioned vehicle to your premium oceanfront hotel.'},
+        {key:'16day',title:'16 Days Morocco Tour from Casablanca',duration:'16 Days / 15 Nights',rating:'4.9',price:'$1,890',image:'assets/tour_16day_casablanca.png',desc:'Private airport pickup and transfer to your luxury beachfront hotel. Relax and unwind as you acclimate to the beautiful Mediterranean climate, enjoying a fresh seafood dinner at the port harbor.'},
+        {key:'12day-desert',title:'Private 12 Days Trip To Desert and Marrakech',duration:'12 Days / 11 Nights',rating:'4.8',price:'$1,450',image:'assets/tour_12day_desert.png',desc:'Upon arrival, your private driver will transfer you to your beachfront hotel. Rest up and enjoy the beautiful views of the Hassan II Mosque standing over the Atlantic ocean.'},
+        {key:'12day-casablanca',title:'Best 12 Days Morocco Tour From Casablanca',duration:'12 Days / 11 Nights',rating:'4.9',price:'$1,490',image:'assets/tour_12day_casablanca.png',desc:'Private airport pickup and check-in to your luxury hotel. Enjoy a fresh seafood dinner along the Atlantic coast and prepare for your spectacular Moroccan tour.'},
+        {key:'8day',title:'Ideal Morocco 8 Days Itinerary from Casablanca',duration:'8 Days / 7 Nights',rating:'4.8',price:'$980',image:'assets/tour_8day_casablanca.png',desc:'Begin your Moroccan odyssey with a warm private airport transfer to your premium hotel along the iconic Casablanca coastline.'},
+        {key:'9day-imperial',title:'Morocco 9 Days Desert and Imperial Cities',duration:'9 Days / 8 Nights',rating:'4.8',price:'$1,150',image:'assets/tour_9day_imperial.png',desc:'Your private English-speaking guide meets you at Casablanca airport and drives you to your boutique hotel for your first night in Morocco.'}
+      ],
+      'Imperial Cities':[
+        {key:'15day',title:'15 Days Tour from Casablanca',duration:'15 Days / 14 Nights',rating:'4.9',price:'$1,750',image:'assets/tour_12day_grand.png',desc:'Private airport welcome and transfer to your luxury Casablanca hotel, overlooking the magnificent Hassan II Mosque on the Atlantic coast.'},
+        {key:'13day',title:'Best 13 Days Casablanca Tour',duration:'13 Days / 12 Nights',rating:'4.9',price:'$1,620',image:'assets/tour_10day_imperial.png',desc:'Welcome to Morocco! Meet your driver at Casablanca airport and relax in your beachfront hotel.'},
+        {key:'11day',title:'11 Days Morocco Classic Tour',duration:'11 Days / 10 Nights',rating:'4.8',price:'$1,350',image:'assets/tour_10day_casablanca.png',desc:'Arrive in Casablanca and transfer to your beachfront hotel for a peaceful first night on the Atlantic coast.'}
+      ],
+      'Day Trips':[
+        {key:'agafay',title:'Agafay Desert Dinner and Ride Under Stars',duration:'1 Day',rating:'4.9',price:'$95',image:'assets/camel_trek_dunes.png',desc:'Depart from Marrakech in a private 4x4 vehicle heading south past the old city walls to the rocky Agafay desert plateau just 40 km from the city.'},
+        {key:'essaouira',title:'Day Trip Essaouira Mogador',duration:'1 Day',rating:'4.8',price:'$75',image:'assets/chefchaouen_street.png',desc:'Depart Marrakech early morning and head west along the scenic Atlantic coastal road toward the wind-swept blue and white medina of Essaouira.'},
+        {key:'ouarzazate',title:'Day Trip Ait Ben Haddou and Ouarzazate',duration:'1 Day',rating:'4.9',price:'$85',image:'assets/atlas_mountains_valley.png',desc:'Depart at dawn from Marrakech heading southeast over the dramatic High Atlas mountain passes toward cinematic Ait Ben Haddou.'},
+        {key:'ouzoud',title:'Day Trip Ouzoud Waterfalls',duration:'1 Day',rating:'4.9',price:'$70',image:'assets/fes_medina_gate.png',desc:'Depart from Marrakech heading northeast through rolling olive groves and traditional Berber farming villages toward the majestic falls.'},
+        {key:'marrakech-city',title:'One Day Guided Tour Of Marrakech City',duration:'1 Day',rating:'4.8',price:'$65',image:'assets/marrakech_riad_pool.png',desc:'Begin the morning at the iconic Koutoubia Mosque gardens, the spiritual heart of Marrakech, before diving into the labyrinth medina.'},
+        {key:'ourika',title:'Ourika Valley Nature and Wildlife Tour',duration:'1 Day',rating:'4.8',price:'$65',image:'assets/tangier_coast.png',desc:'Depart Marrakech and drive south through the fertile plains toward the stunning green terraces of the Ourika Valley in the High Atlas foothills.'}
+      ],
+      'Activities':[
+        {key:'balloon',title:'Hot Air Balloon in Marrakech',duration:'4 hours',rating:'5.0',price:'$180',image:'assets/hero_sahara_sunset.png',desc:'Rise before dawn and transfer to the balloon launch site on the outskirts of Marrakech for a breathtaking sunrise float over the desert.'},
+        {key:'horse',title:'Horse Riding in Morocco',duration:'2 hours',rating:'4.8',price:'$85',image:'assets/atlas_mountains_valley.png',desc:'Saddle up for a guided horse riding experience through the lush Marrakech palm groves with local equestrian experts.'},
+        {key:'chez-ali',title:'Fantasia Chez Ali Marrakech Show',duration:'3 hours',rating:'4.7',price:'$70',image:'assets/marrakech_riad_pool.png',desc:'Transfer to the famous Chez Ali outdoor theater complex in the Marrakech palmerie for a spectacular Moroccan folklore show.'},
+        {key:'quad',title:'Quad Biking In Marrakech Palm Groves',duration:'2 hours',rating:'4.8',price:'$75',image:'assets/camel_trek_dunes.png',desc:'Suit up with a helmet and gloves and jump aboard your powerful quad bike at the edge of the Marrakech palm groves.'},
+        {key:'buggy',title:'Raid Buggy In Marrakech Desert',duration:'2 hours',rating:'4.9',price:'$95',image:'assets/chefchaouen_street.png',desc:'Experience the thrill of off-road buggy racing across the rocky terrain surrounding Marrakech desert.'},
+        {key:'camel',title:'Camel Riding in Marrakech Palm Groves',duration:'1 hour',rating:'4.7',price:'$45',image:'assets/tangier_coast.png',desc:'Experience a classic Moroccan camel ride through the tranquil Marrakech palm grove oasis.'}
+      ]
+    },
+    get filteredTours(){return(this.allTours[this.activeCategory]||[]).slice(0,6);},
+    setCategory(cat){const g=document.getElementById('tour-grid');if(g)g.classList.add('fade-out');setTimeout(()=>{this.activeCategory=cat;if(g)g.classList.remove('fade-out');},300);}
+  }"
+>
+  <div class="section-header reveal active">
+    <span class="tag">Featured Destinations: Explore Morocco</span>
+    <h2>FEATURED TOURS &amp; DAY TRIPS</h2>
+    <p class="promo-title">Discover the Beauty of Morocco: Book Morocco Desert Tours Today!</p>
+    <div class="discount-badge-container">
+      <span class="discount-badge"><i class="fa-solid fa-gift"></i> Limited Offer: Save 30% on Sahara Desert Tours!</span>
+    </div>
+  </div>
+  <ul class="category-tabs reveal active">
+    <template x-for="cat in categories" :key="cat.name">
+      <li class="category-tab" :class="activeCategory===cat.name?'active':''" @click="setCategory(cat.name)">
+        <span x-text="cat.name"></span><span x-text="'('+cat.count+')'"></span>
+      </li>
+    </template>
+  </ul>
+  <div class="category-showcase-container">
+    <div class="category-tours-wrapper">
+      <div class="category-tour-grid" id="tour-grid">
+        <template x-for="tour in filteredTours" :key="tour.key">
+          <div class="tour-card reveal active">
+            <div class="tour-badge" x-text="activeCategory"></div>
+            <div class="tour-img-wrapper"><img :src="tour.image" :alt="tour.title" loading="lazy" /></div>
+            <div class="tour-info">
+              <div class="tour-meta">
+                <div><i class="fa-regular fa-clock"></i> <span x-text="tour.duration"></span></div>
+                <div><i class="fa-solid fa-star"></i> <span x-text="tour.rating"></span></div>
+              </div>
+              <h3 class="tour-title" x-text="tour.title"></h3>
+              <p class="tour-desc" x-text="tour.desc"></p>
+              <div class="tour-footer">
+                <div class="tour-price">From per person<span x-text="tour.price"></span></div>
+                <a href="#contact" class="btn btn-secondary btn-sm">View Details</a>
+              </div>
+            </div>
+          </div>
+        </template>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- STARTING CITIES -->
+<section class="starting-cities-section" id="starting-cities">
+  <div class="section-header reveal active">
+    <span class="tag">Featured Destinations: Best cities to Start your Morocco Tours</span>
+    <h2>Best Cities to Start Your Morocco Tours</h2>
+    <p>Let's explore the best of Morocco and discover the best Morocco Desert, cultural, Family, and private Tours</p>
+  </div>
+  <div class="starting-cities-grid reveal active">
+    <div class="city-card">
+      <div class="city-img-wrapper">
+        <img src="assets/casablanca_gateway.png" alt="Casablanca Gateway Morocco" loading="lazy" />
+        <div class="city-badge">Casablanca Departure</div>
+      </div>
+      <div class="city-content">
+        <h3>Casablanca Gateway</h3>
+        <p>As Morocco's primary international gateway, starting your journey in Casablanca is perfect for long, grand expeditions. Settle in and explore the magnificent Hassan II Mosque before venturing into the imperial or desert routes.</p>
+        <div class="city-meta">
+          <span><i class="fa-solid fa-route"></i> Starts Grand Tours: 16, 15, 13, 11, 10, 8, 7 Days</span>
+          <span><i class="fa-solid fa-plane-arrival"></i> Main International Hub</span>
+        </div>
+        <div class="city-footer"><a href="#tours" class="btn btn-secondary btn-sm">Explore Casablanca Tours</a></div>
+      </div>
+    </div>
+    <div class="city-card">
+      <div class="city-img-wrapper">
+        <img src="assets/marrakech_riad_pool.png" alt="Marrakech Riad Pool Morocco" loading="lazy" />
+        <div class="city-badge">Marrakech Departure</div>
+      </div>
+      <div class="city-content">
+        <h3>Marrakech Oasis</h3>
+        <p>The beating cultural heart of Morocco. Launching your tour from Marrakech offers immediate immersion into ancient medina life and swift access to the Sahara Desert via the dramatic High Atlas mountain passes.</p>
+        <div class="city-meta">
+          <span><i class="fa-solid fa-route"></i> Starts Desert Safaris: 5, 4, 3 Days &amp; Day Trips</span>
+          <span><i class="fa-solid fa-map-pin"></i> Desert &amp; Atlas Gateway</span>
+        </div>
+        <div class="city-footer"><a href="#tours" class="btn btn-secondary btn-sm">Explore Marrakech Tours</a></div>
+      </div>
+    </div>
+    <div class="city-card">
+      <div class="city-img-wrapper">
+        <img src="assets/fes_medina_gate.png" alt="Fes Medina Gate Morocco" loading="lazy" />
+        <div class="city-badge">Fes Departure</div>
+      </div>
+      <div class="city-content">
+        <h3>Fes Imperial Capital</h3>
+        <p>Step back in time by starting in Fes, the intellectual and spiritual capital of Morocco. Home to the world's oldest medieval active medina, it is the premier launching pad for authentic cultural and desert crossings.</p>
+        <div class="city-meta">
+          <span><i class="fa-solid fa-route"></i> Starts Cultural &amp; Sahara Desert Connections</span>
+          <span><i class="fa-solid fa-book-open"></i> Ancient Spiritual Heart</span>
+        </div>
+        <div class="city-footer"><a href="#tours" class="btn btn-secondary btn-sm">Explore Fes Tours</a></div>
+      </div>
+    </div>
+    <div class="city-card">
+      <div class="city-img-wrapper">
+        <img src="assets/tangier_coast.png" alt="Tangier Coastal Morocco" loading="lazy" />
+        <div class="city-badge">Tangier Departure</div>
+      </div>
+      <div class="city-content">
+        <h3>Tangier Coastal Gate</h3>
+        <p>Where the Mediterranean meets the Atlantic, and Europe meets Africa. Starting in Tangier allows you to trace the beautiful northern coasts, explore the blue city of Chefchaouen, and descend into the deep south.</p>
+        <div class="city-meta">
+          <span><i class="fa-solid fa-route"></i> Starts Northern Morocco &amp; Imperial Explorations</span>
+          <span><i class="fa-solid fa-anchor"></i> Maritime Gate of Africa</span>
+        </div>
+        <div class="city-footer"><a href="#tours" class="btn btn-secondary btn-sm">Explore Tangier Tours</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COST CALCULATOR -->
+<section class="calculator-section" id="planner">
+  <div class="section-header reveal active">
+    <span class="tag">Bespoke Planner</span>
+    <h2>Custom Itinerary Draft Designer</h2>
+    <p>Design your custom dream vacation. Adjust the duration, group size, stays, and experiences below, and prepare for a beautifully tailored hour-by-hour itinerary draft from our Marrakech travel experts.</p>
+  </div>
+  <div class="calculator-container reveal active"
+    x-data="{
+      days:7,people:2,tier:'premium',
+      addons:{camel:true,cooking:false,balloon:false,spa:false},
+      get tierText(){if(this.tier==='standard')return 'Authentic Riad';if(this.tier==='palace')return 'Royal Palace';return 'Boutique Luxury';},
+      get addonsText(){const l=[];if(this.addons.camel)l.push('Sahara Camel Trek');if(this.addons.cooking)l.push('Cooking Class');if(this.addons.balloon)l.push('Hot Air Balloon');if(this.addons.spa)l.push('Traditional Spa');return l.length>0?l.join(', '):'None';},
+      handleInquire(){const s=document.getElementById('contact');if(s){s.scrollIntoView({behavior:'smooth'});setTimeout(()=>{const n=document.getElementById('contact-name');if(n)n.focus();},800);}}
+    }"
+  >
+    <div class="calc-inputs">
+      <h3>Design Your Expedition</h3>
+      <div class="calc-group">
+        <div class="calc-label-row">
+          <label for="calc-days">Trip Duration</label>
+          <span class="calc-value"><span x-text="days"></span> Days</span>
+        </div>
+        <input type="range" id="calc-days" min="3" max="14" x-model="days" />
+      </div>
+      <div class="calc-group">
+        <div class="calc-label-row">
+          <label for="calc-people">Number of Travelers</label>
+          <span class="calc-value"><span x-text="people"></span> <span x-text="people==1?'Person':'People'"></span></span>
+        </div>
+        <input type="range" id="calc-people" min="1" max="10" x-model="people" />
+      </div>
+      <div class="calc-group">
+        <div class="calc-label-row"><label>Accommodation Tier</label></div>
+        <div class="tier-cards">
+          <div class="tier-card" :class="tier==='standard'?'active':''" @click="tier='standard'">
+            <i class="fa-solid fa-hotel"></i><span>Authentic Riad</span><small>Charming &amp; Local</small>
+          </div>
+          <div class="tier-card" :class="tier==='premium'?'active':''" @click="tier='premium'">
+            <i class="fa-solid fa-award"></i><span>Boutique Luxury</span><small>Highly Rated / Pools</small>
+          </div>
+          <div class="tier-card" :class="tier==='palace'?'active':''" @click="tier='palace'">
+            <i class="fa-solid fa-crown"></i><span>Royal Palace</span><small>Exclusive 5-Star</small>
+          </div>
+        </div>
+      </div>
+      <div class="calc-group">
+        <div class="calc-label-row"><label>Select Unique Activities</label></div>
+        <div class="addons-grid">
+          <div class="addon-item" :class="addons.camel?'active':''" @click="addons.camel=!addons.camel">
+            <input type="checkbox" :checked="addons.camel" @click.stop="addons.camel=!addons.camel" />
+            <div class="addon-details"><span class="addon-name">Sahara Camel Trek</span><span class="addon-price">Included Safari</span></div>
+          </div>
+          <div class="addon-item" :class="addons.cooking?'active':''" @click="addons.cooking=!addons.cooking">
+            <input type="checkbox" :checked="addons.cooking" @click.stop="addons.cooking=!addons.cooking" />
+            <div class="addon-details"><span class="addon-name">Riad Cooking Masterclass</span><span class="addon-price">Premium Experience</span></div>
+          </div>
+          <div class="addon-item" :class="addons.balloon?'active':''" @click="addons.balloon=!addons.balloon">
+            <input type="checkbox" :checked="addons.balloon" @click.stop="addons.balloon=!addons.balloon" />
+            <div class="addon-details"><span class="addon-name">Atlas Hot Air Balloon</span><span class="addon-price">Adventure Activity</span></div>
+          </div>
+          <div class="addon-item" :class="addons.spa?'active':''" @click="addons.spa=!addons.spa">
+            <input type="checkbox" :checked="addons.spa" @click.stop="addons.spa=!addons.spa" />
+            <div class="addon-details"><span class="addon-name">Traditional Spa &amp; Hammam</span><span class="addon-price">Luxury Wellness</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="calc-summary-wrapper">
+      <div class="calc-summary">
+        <h4>Bespoke Draft Configuration</h4>
+        <ul class="calc-summary-details">
+          <li><span>Trip Duration:</span><span x-text="days+' Days / '+(days-1)+' Nights'"></span></li>
+          <li><span>Total Travelers:</span><span x-text="people+' '+(people==1?'Traveler':'Travelers')"></span></li>
+          <li><span>Accommodation tier:</span><span x-text="tierText"></span></li>
+          <li><span>Selected Activities:</span><span style="display:inline-block;max-width:180px;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis" x-text="addonsText"></span></li>
+        </ul>
+        <div class="calc-total-box">
+          <span class="planner-status-badge">
+            <i class="fa-solid fa-wand-magic-sparkles" style="animation:pulse 1.5s infinite alternate"></i> Custom Proposal Ready
+          </span>
+          <p style="color:var(--text-muted);font-size:0.8rem;line-height:1.4;margin-top:4px;font-weight:300">
+            Ready to customize! Inquire now to receive a complete tailored hour-by-hour itinerary draft in under 24h.
+          </p>
+        </div>
+        <button class="btn btn-primary" style="width:100%" @click="handleInquire()">Inquire This Custom Plan</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CULTURE -->
+<section class="culture-section" id="culture">
+  <div class="section-header reveal active">
+    <span class="tag">Moroccan Heritage</span>
+    <h2>Immerse in Our Traditions</h2>
+    <p>Bespoke travel is not just about scenic locations; it is about connecting deep with ancient cultures. Discover the rituals that make Morocco unforgettable.</p>
+  </div>
+  <div class="culture-slider reveal active">
+    <div class="culture-card">
+      <div class="culture-img"><img src="assets/marrakech_riad_pool.png" alt="Moroccan Zellige Tiles Architecture" loading="lazy" /></div>
+      <div class="culture-info"><h3>The Geometric Art of Zellige</h3><p>Moroccan tilework or Zellige is a mastercraft of hand-cut enameled terra-cotta tiles, aligned into mind-bending geometric arrays that adorn beautiful palaces and quiet medina Riads.</p></div>
+    </div>
+    <div class="culture-card">
+      <div class="culture-img"><img src="assets/hero_sahara_sunset.png" alt="Berber Mint Tea Ceremony Morocco" loading="lazy" /></div>
+      <div class="culture-info"><h3>Mint Tea Welcoming Ritual</h3><p>Often termed Berber whiskey, Moroccan mint tea is poured gracefully from high heights to create a frothy crown. Sharing tea is the country's primary ritual of absolute hospitality.</p></div>
+    </div>
+    <div class="culture-card">
+      <div class="culture-img"><img src="assets/chefchaouen_street.png" alt="Moroccan Souk Spices and Aromatics" loading="lazy" /></div>
+      <div class="culture-info"><h3>Aromatic Spices &amp; Souks</h3><p>From warm orange saffron to clay-red ras el hanout, spice pyramids in the chaotic souks are a sensory treat. Spices are essential elements in slow-cooked tagine masterworks.</p></div>
+    </div>
+    <div class="culture-card">
+      <div class="culture-img"><img src="assets/camel_trek_dunes.png" alt="Sahara Desert Nomadic Customs" loading="lazy" /></div>
+      <div class="culture-info"><h3>Desert Nomadic Customs</h3><p>The Sahara is a place of deep silence and rich community. Sleep in custom woolen tents, gather around firewood, and trace celestial skies under the direct tutelage of native Sahara guides.</p></div>
+    </div>
+  </div>
+</section>
+<!-- REVIEWS -->
+<section class="reviews-section" id="reviews">
+  <div class="section-header reveal active">
+    <span class="tag">Traveler Stories</span>
+    <h2>Loved by Global Explorers</h2>
+  </div>
+  <div class="reviews-container reveal active"
+    x-data="{
+      current:0,timer:null,
+      reviews:[
+        {stars:5,quote:'The Sahara glamping trip was a spiritual experience. Standing on top of Merzouga dunes at sunset, then sleeping in absolute luxury. Sahara Star Tours organized everything flawlessly!',avatar:'assets/camel_trek_dunes.png',name:'Sarah Mitchell',location:'Vancouver, Canada'},
+        {stars:5,quote:'Traveling with kids is always stressful, but Sahara Star Tours made our Imperial Cities tour incredibly smooth. The local Fes and Marrakech guides were warm and highly informative.',avatar:'assets/marrakech_riad_pool.png',name:'David Laurent',location:'Paris, France'},
+        {stars:5,quote:'Atlas trekking with Sahara Star Tours was breathtaking. The green valleys, the red Berber houses, and climbing Mount Toubkal. The meals prepared by our host family were the best food we ate in Morocco.',avatar:'assets/atlas_mountains_valley.png',name:'Elena Rostova',location:'Munich, Germany'}
+      ],
+      init(){this.startTimer();},
+      startTimer(){this.stopTimer();this.timer=setInterval(()=>{this.current=(this.current+1)%this.reviews.length;},6000);},
+      stopTimer(){if(this.timer)clearInterval(this.timer);},
+      goTo(i){this.current=i;this.startTimer();}
+    }"
+  >
+    <div class="reviews-wrapper" :style="'transform:translateX(-'+current*100+'%)'">
+      <template x-for="(r,idx) in reviews" :key="idx">
+        <div class="review-slide">
+          <div class="review-stars">
+            <template x-for="i in r.stars" :key="i"><i class="fa-solid fa-star"></i></template>
+          </div>
+          <p class="review-quote" x-text="'&quot;'+r.quote+'&quot;'"></p>
+          <div class="review-user">
+            <img :src="r.avatar" :alt="r.name" class="review-avatar" loading="lazy" />
+            <div class="review-user-info">
+              <h5 x-text="r.name"></h5>
+              <span x-text="r.location"></span>
+            </div>
+          </div>
+        </div>
+      </template>
+    </div>
+    <div class="review-dots">
+      <template x-for="(r,idx) in reviews" :key="idx">
+        <span class="review-dot" :class="current===idx?'active':''" @click="goTo(idx)"></span>
+      </template>
+    </div>
+  </div>
+</section>
+
+<!-- SEO NARRATIVE -->
+<section class="agency-seo-showcase reveal active" id="seo-details">
+  <div class="seo-grid">
+    <div class="seo-text">
+      <span class="tag" style="color:var(--sand-gold);text-transform:uppercase;letter-spacing:2.5px;font-size:0.9rem;font-weight:600">Morocco Travel Experts</span>
+      <h3>Bespoke Journeys Crafted by <span>Sahara Star Tours</span></h3>
+      <p>As the premier locally-owned travel agency in Marrakech, <strong>Sahara Star Tours</strong> is dedicated to unlocking the deep visual splendor, historical medinas, and rich cultural traditions of Morocco in absolute comfort.</p>
+      <p>Our custom point-by-point route maps and day-by-day itineraries are designed by native guides who possess a deep, lifelong connection to the land. Whether you seek a romantic sunset camel safari in Erg Chebbi, an educational walking tour of ancient Fes, or a sunrise hot air balloon flight over the Jbilet desert, we guarantee absolute comfort, private VIP Mercedes transport, and luxurious Riad accommodation tiers.</p>
+      <p>At <strong>Sahara Star Tours</strong>, we specialize in crafting private and custom Morocco desert tours starting from major hubs like Casablanca, Marrakech, Fes, and Tangier. Our team organizes bespoke desert excursions to the golden sand dunes of Erg Chebbi in Merzouga and the rocky desert of Agafay, featuring luxury Sahara glamping, guided camel treks, and high-fidelity cultural encounters.</p>
+      <p>Book with confidence under the guidance of native nomadic hosts, directly supporting local Berber remote economies and sustainable tourism footprints across Morocco.</p>
+    </div>
+    <div class="seo-highlight-cards">
+      <div class="seo-card"><i class="fa-solid fa-compass"></i><h4>Local Nomad Guides</h4><p>Explore the Sahara under the direct tutelage of native desert hosts and certified medina historians.</p></div>
+      <div class="seo-card"><i class="fa-solid fa-car-side"></i><h4>VIP Mercedes Fleet</h4><p>Travel across panoramic mountain passes inside climate-controlled VIP leather-seated Mercedes transporters.</p></div>
+      <div class="seo-card"><i class="fa-solid fa-star"></i><h4>5-Star Riad Stays</h4><p>Settle inside prestigious boutique zellige Riads and high-end glamping camps featuring en-suite private bathrooms.</p></div>
+      <div class="seo-card"><i class="fa-solid fa-sliders"></i><h4>Point-by-Point Tailoring</h4><p>Completely customize your itineraries, dates, Riad pool options, and diet plans to match your exact wishes.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="section-header reveal active">
+    <span class="tag">Begin Your Journey</span>
+    <h2>Submit An Inquiry</h2>
+    <p>Ready to trace the red streets of Marrakech or watch Sahara night skies? Send us a message and our expert planning team will draft your custom plan within 24 hours.</p>
+  </div>
+  <div class="contact-container reveal active"
+    x-data="{
+      name:'',email:'',travelers:'',pkg:'none',message:'',
+      showModal:false,modalTitle:'',modalMsg:'',
+      handleSubmit(){
+        this.modalTitle='Shukran, '+this.name+'!';
+        this.modalMsg='Your custom trip inquiry proposal has been successfully registered with <strong>Sahara Star Tours</strong>. Our travel designers in Marrakech are analyzing your requests.<br><br>Expect a highly detailed bespoke travel itinerary draft in your email (<strong>'+this.email+'</strong>) within 24 hours.';
+        this.showModal=true;
+        document.body.style.overflow='hidden';
+        this.name='';this.email='';this.travelers='';this.pkg='none';this.message='';
+      },
+      closeModal(){this.showModal=false;document.body.style.overflow='';}
+    }"
+  >
+    <form class="contact-form" @submit.prevent="handleSubmit()">
+      <div class="form-group">
+        <input type="text" id="contact-name" x-model="name" placeholder=" " required />
+        <label for="contact-name">Your Full Name</label>
+      </div>
+      <div class="form-group">
+        <input type="email" id="contact-email" x-model="email" placeholder=" " required />
+        <label for="contact-email">Email Address</label>
+      </div>
+      <div class="form-grid-2">
+        <div class="form-group">
+          <select id="contact-travelers" x-model="travelers" style="width:100%">
+            <option value="">Select Travelers</option>
+            <option value="1 Traveler">1 Traveler</option>
+            <option value="2 Travelers">2 Travelers</option>
+            <option value="3-5 Travelers">3 - 5 Travelers</option>
+            <option value="6+ Travelers">6+ Travelers Group</option>
+          </select>
+          <label for="contact-travelers">Group Size</label>
+        </div>
+        <div class="form-group">
+          <select id="contact-package" x-model="pkg" style="width:100%">
+            <option value="none">Custom Expedition / Not Sure</option>
+            <option value="sahara">Sahara Dunes &amp; Desert Glamping (4 Days)</option>
+            <option value="imperial">Imperial Medinas &amp; Riad Retreat (7 Days)</option>
+            <option value="atlas">High Atlas &amp; Berber Villages Trek (5 Days)</option>
+            <option value="coast">Blue City &amp; Atlantic Coast Escape (5 Days)</option>
+          </select>
+          <label for="contact-package">Selected Tour Package</label>
+        </div>
+      </div>
+      <div class="form-group form-full">
+        <textarea id="contact-message" x-model="message" placeholder=" " rows="5" required></textarea>
+        <label for="contact-message">Tell us about your travel wishes (Preferred dates, special requirements, food allergies...)</label>
+      </div>
+      <button type="submit" class="btn btn-primary btn-submit">Send Inquiry Proposal</button>
+    </form>
+    <div class="success-overlay" :class="showModal?'active':''" id="success-modal">
+      <div class="success-card">
+        <div class="success-icon-box"><i class="fa-solid fa-circle-check"></i></div>
+        <h3 x-text="modalTitle"></h3>
+        <p x-html="modalMsg"></p>
+        <button class="btn btn-primary" @click="closeModal()">Return to Exploring</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <a href="#hero" class="logo" style="margin-bottom:20px;display:inline-block">
+        <img src="assets/logo.png" alt="Sahara Star Tours Logo" />
+      </a>
+      <p>Premium travel planning and bespoke itineraries crafted by local Moroccan guides. Making desert dreams and imperial medina secrets accessible in absolute comfort.</p>
+      <div class="footer-socials">
+        <a href="#" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="social-link" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+        <a href="#" class="social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Signature Tours</h4>
+      <ul class="footer-links">
+        <li><a href="#tours">Sahara Dunes &amp; Glamping</a></li>
+        <li><a href="#tours">Imperial Medinas Culture</a></li>
+        <li><a href="#tours">11 Days Classic Tour</a></li>
+        <li><a href="#tours">Atlantic Coast Day Trip</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Helpful Resources</h4>
+      <ul class="footer-links">
+        <li><a href="#culture">Moroccan Travel Guides</a></li>
+        <li><a href="#contact">COVID Travel Guidelines</a></li>
+        <li><a href="#planner">Cost Calculator FAQ</a></li>
+        <li><a href="#seo-details">Bespoke Story &amp; Team</a></li>
+      </ul>
+    </div>
+    <div class="footer-col" x-data="{nl_email:''}">
+      <h4>Weekly Travel Secrets</h4>
+      <p>Subscribe to receive beautiful boutique riad deals and local desert trek routes directly in your inbox.</p>
+      <form class="newsletter-form" @submit.prevent="alert('Shukran! You have successfully subscribed to Sahara Star Tours weekly travel secrets. Check your inbox soon!');nl_email=''">
+        <input type="email" placeholder="Your email address" required aria-label="Newsletter email" x-model="nl_email" />
+        <button type="submit" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i></button>
+      </form>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p id="footer-year">&copy; 2026 Sahara Star Tours. All Rights Reserved.</p>
+    <p>Crafted in Marrakech with local pride <i class="fa-solid fa-heart" style="color:var(--terracotta)"></i></p>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var y = document.getElementById('footer-year');
+    if(y) y.innerHTML = '&copy; ' + new Date().getFullYear() + ' Sahara Star Tours. All Rights Reserved.';
+    var els = document.querySelectorAll('.reveal');
+    els.forEach(function(el){
+      var r = el.getBoundingClientRect();
+      if(r.top>=0&&r.bottom<=(window.innerHeight||document.documentElement.clientHeight)){el.classList.add('active');}
+    });
+    var obs = new IntersectionObserver(function(entries,observer){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){entry.target.classList.add('active');observer.unobserve(entry.target);}
+      });
+    },{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el){obs.observe(el);});
+  });
+</script>
+</body>
+</html>
+
