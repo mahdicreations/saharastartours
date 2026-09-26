@@ -20,7 +20,6 @@ def parse_tour_txt(file_path):
         'images': []
     }
 
-    # Extract single-line fields
     title_match = re.search(r'Title:\s*(.+)', content)
     if title_match: data['title'] = title_match.group(1).strip()
 
@@ -39,7 +38,6 @@ def parse_tour_txt(file_path):
     source_match = re.search(r'Source URL:\s*(.+)', content)
     if source_match: data['source_url'] = source_match.group(1).strip()
 
-    # Extract multi-line fields
     sections = ['About this tour:', 'Highlights:', 'Included:', 'Excluded:', 'Itinerary:', 'Images:']
     
     def get_section(start_name, end_names):
@@ -68,7 +66,6 @@ def parse_tour_txt(file_path):
     images_raw = get_section('Images:', [])
     data['images'] = [line.strip('- ').strip() for line in images_raw.split('\n') if line.strip()]
 
-    # Parse Itinerary
     itinerary_raw = get_section('Itinerary:', ['Images:'])
     day_matches = list(re.finditer(r'(Day \d+.*?)(?=\nDay \d+|$)', itinerary_raw, re.DOTALL))
     
@@ -114,23 +111,31 @@ head_base = head_match.group(1)
 header_base = header_match.group(1)
 footer_base = footer_match.group(1)
 
+def format_text(text):
+    # Parse bold **text** -> <strong>text</strong>
+    text = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', text)
+    # Parse newlines -> <br><br>
+    text = text.replace('\n', '<br><br>')
+    return text
+
 def generate_tour_html(tour_data, category, slug, rel_prefix='../'):
-    # Replace title and description
     head = head_base
     head = re.sub(r'<title>.*?</title>', f'<title>{tour_data["title"]} | Sahara Star Tours</title>', head)
-    head = re.sub(r'<meta name="description" content=".*?">', f'<meta name="description" content="{tour_data["title"]} - {tour_data["about"]}" />', head)
     
-    # 16-day-casablanca already uses ../ for links so we can just use header_base directly!
+    clean_desc = tour_data["about"].replace('"', "'").replace('\n', ' ')[:150]
+    head = re.sub(r'<meta name="description" content=".*?">', f'<meta name="description" content="{tour_data["title"]} - {clean_desc}..." />', head)
+    
     h = header_base
     f_html = footer_base
 
     timeline_items_html = ""
     for item in tour_data['itinerary']:
+        desc_formatted = format_text(item['desc'])
         timeline_items_html += f'''
               <div class="timeline-item">
                 <div class="timeline-day-tag">{item['day']}</div>
                 <h4>{item['title']}</h4>
-                <p>{item['desc'].replace(chr(10), '<br>')}</p>
+                <p>{desc_formatted}</p>
               </div>'''
 
     inc_items_html = "\n".join([f'<li><i class="fa-solid fa-circle-check"></i> {item}</li>' for item in tour_data['included']])
@@ -143,13 +148,12 @@ def generate_tour_html(tour_data, category, slug, rel_prefix='../'):
     alpine_images = []
     
     base_img_path = f"{rel_prefix}sahara-star-tours/{category}/{slug}/images/"
-    # If there are no images in the txt file, maybe fallback to some default ones?
     if not tour_data['images']:
         tour_data['images'] = ["thumbnail.jpg"]
     
     for idx, img in enumerate(tour_data['images']):
         img_src = f"{base_img_path}{img}"
-        cap = tour_data['title']
+        cap = tour_data['title'].replace("'", "\\'")
         gallery_html += f'''
               <div class="gallery-item" @click="openLightbox({idx})">
                 <img src="{img_src}" alt="{cap}" loading="lazy" onerror="this.src='{rel_prefix}assets/hero_sahara_sunset.png'" />
@@ -163,10 +167,11 @@ def generate_tour_html(tour_data, category, slug, rel_prefix='../'):
 
     hero_img = f"{base_img_path}{tour_data['images'][0]}" if tour_data['images'] else f"{rel_prefix}assets/tour_16day_casablanca.png"
 
-    # Quick Meta info
     quick_meta_html = f'''<span><i class="fa-regular fa-clock"></i> <strong>{tour_data['duration']}</strong></span>'''
     if tour_data.get('from_city'):
         quick_meta_html += f'''<span><i class="fa-solid fa-location-dot"></i> From: <strong>{tour_data['from_city']}</strong></span>'''
+
+    about_formatted = format_text(tour_data['about'])
 
     body_content = f"""
   <div id="tour-detail-page" 
@@ -197,7 +202,7 @@ def generate_tour_html(tour_data, category, slug, rel_prefix='../'):
            this.activeIndex = (this.activeIndex + 1) % this.images.length;
          }},
          submitBooking() {{
-           this.successMsg = 'Shukran, ' + this.bookingData.name + '! Your inquiry for {tour_data["title"]} has been registered. Our travel designers in Marrakech will send your detailed personalized itinerary to ' + this.bookingData.email + ' within 24 hours.';
+           this.successMsg = 'Shukran, ' + this.bookingData.name + '! Your inquiry for {tour_data["title"].replace("'", "\\'")} has been registered. Our travel designers in Marrakech will send your detailed personalized itinerary to ' + this.bookingData.email + ' within 24 hours.';
            this.showSuccessModal = true;
            document.body.style.overflow = 'hidden';
          }},
@@ -235,9 +240,9 @@ def generate_tour_html(tour_data, category, slug, rel_prefix='../'):
         <!-- About Section -->
         <div class="timeline-card reveal active">
           <h3>About This Tour</h3>
-          <p style="margin-bottom: 20px;">{tour_data['about']}</p>
+          <p style="margin-bottom: 20px; line-height: 1.8;">{about_formatted}</p>
           <h5>Highlights:</h5>
-          <ul style="margin-top: 10px; padding-left: 20px; color: var(--text-muted);">
+          <ul style="margin-top: 10px; padding-left: 20px; color: var(--text-muted); line-height: 1.8;">
             {"".join([f'<li style="margin-bottom: 8px;">{h}</li>' for h in tour_data['highlights']])}
           </ul>
         </div>
@@ -422,14 +427,11 @@ def main():
                 html = generate_tour_html(data, cat, slug, rel_prefix='../')
                 
                 out_path = os.path.join(tours_out_dir, f"{slug}.html")
-                # Do not overwrite the master template!
                 if slug == "16-day-casablanca":
-                    print(f"Skipping master template {slug}")
                     continue
                 with open(out_path, 'w', encoding='utf-8') as f:
                     f.write(html)
                 
-                print(f"Generated {out_path}")
                 generated_count += 1
             except Exception as e:
                 print(f"Failed to generate {slug}: {str(e)}")
