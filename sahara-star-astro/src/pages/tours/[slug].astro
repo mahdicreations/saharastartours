@@ -55,11 +55,6 @@ const { tour, relatedTours } = Astro.props;
 >
   <!-- About slot: tour description paragraph -->
   <div slot="about">
-    <p style="margin-bottom: 20px; line-height: 1.8;">
-      Embark on the ultimate <strong>{tour.shortTitle}</strong>, a meticulously crafted journey designed to showcase the very best of Morocco. As a leading Moroccan travel agency, Sahara Star Tours invites you to experience an unforgettable expedition blending rich cultural heritage, breathtaking landscapes, and premium comfort.
-    </p>
-    <p style="line-height: 1.8;">
-      Whether you're traversing the dramatic peaks of the High Atlas Mountains, riding camels into the golden dunes of Merzouga at sunset, or resting in luxury desert camps and authentic riads, every moment is optimized for authentic immersion. Perfect for couples, families, and adventurous travelers, this tour offers a seamless, stress-free vacation with professional local guides and private air-conditioned transportation.
-    </p>
+    <p style="margin-bottom: 20px; line-height: 1.8;" set:html={tour.aboutHtml} />
   </div>
 </TourLayout>

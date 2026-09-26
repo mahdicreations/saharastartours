@@ -15,7 +15,7 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="14" height="14" fill="c
 ---
 
 <header id="main-header"
-  x-data="{isScrolled:false,isMobileOpen:false,activeDropdowns:{},currentLang:'en',init(){const s=()=>{this.isScrolled=window.scrollY>50;};s();window.addEventListener('scroll',s);},closeMobileMenu(){this.isMobileOpen=false;this.activeDropdowns={};},toggleDropdown(cat){if(window.innerWidth<=1024){this.activeDropdowns[cat]=!this.activeDropdowns[cat];this.activeDropdowns={...this.activeDropdowns};}}}"
+  x-data="{isScrolled:false,isMobileOpen:false,activeDropdowns:{},currentLang:'en',init(){const s=()=>{this.isScrolled=window.scrollY>50;};s();window.addEventListener('scroll',s);},closeMobileMenu(){this.isMobileOpen=false;this.activeDropdowns={};},toggleDropdown(event,cat){if(window.innerWidth<=1024){event.preventDefault();this.activeDropdowns[cat]=!this.activeDropdowns[cat];this.activeDropdowns={...this.activeDropdowns};}}}"
   :class="isScrolled?'scrolled':''"
 >
   <!-- TOP HEADER / ANNOUNCEMENT BAR -->
@@ -67,7 +67,7 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="14" height="14" fill="c
       <li><a href="/" class={currentPage === 'home' ? 'active' : ''} @click="closeMobileMenu()">Home</a></li>
 
       <li class="has-dropdown">
-        <a href="/desert-tours" @click.prevent="toggleDropdown('desert')">
+        <a href="/desert-tours" @click="toggleDropdown($event, 'desert')">
           Desert Tours <i class="fa-solid fa-chevron-down" :style="activeDropdowns['desert']?'transform:rotate(180deg);color:var(--sand-gold);':''"></i>
         </a>
         <ul class="dropdown-menu megamenu-two-col" :class="activeDropdowns['desert']?'open':''">
@@ -95,7 +95,7 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="14" height="14" fill="c
       </li>
 
       <li class="has-dropdown">
-        <a href="/imperial-cities" @click.prevent="toggleDropdown('imperial')">
+        <a href="/imperial-cities" @click="toggleDropdown($event, 'imperial')">
           Imperial Cities <i class="fa-solid fa-chevron-down" :style="activeDropdowns['imperial']?'transform:rotate(180deg);color:var(--sand-gold);':''"></i>
         </a>
         <ul class="dropdown-menu dropdown-standard" :class="activeDropdowns['imperial']?'open':''">
@@ -106,7 +106,7 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="14" height="14" fill="c
       </li>
 
       <li class="has-dropdown">
-        <a href="/day-trips" @click.prevent="toggleDropdown('daytrips')">
+        <a href="/day-trips" @click="toggleDropdown($event, 'daytrips')">
           Day Trips <i class="fa-solid fa-chevron-down" :style="activeDropdowns['daytrips']?'transform:rotate(180deg);color:var(--sand-gold);':''"></i>
         </a>
         <ul class="dropdown-menu dropdown-standard" :class="activeDropdowns['daytrips']?'open':''">
@@ -120,7 +120,7 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="14" height="14" fill="c
       </li>
 
       <li class="has-dropdown">
-        <a href="/activities" @click.prevent="toggleDropdown('activities')">
+        <a href="/activities" @click="toggleDropdown($event, 'activities')">
           Activities <i class="fa-solid fa-chevron-down" :style="activeDropdowns['activities']?'transform:rotate(180deg);color:var(--sand-gold);':''"></i>
         </a>
         <ul class="dropdown-menu dropdown-standard" :class="activeDropdowns['activities']?'open':''">
@@ -138,7 +138,7 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="14" height="14" fill="c
     </ul>
 
     <!-- Language Flags (Desktop) -->
-    <div class="lang-flags-wrap desktop-only" x-data>
+    <div class="lang-flags-wrap desktop-only">
       <button type="button" class="lang-flag-btn" :class="$root.currentLang==='en'?'active':''" @click="$root.currentLang='en'" title="English">
         <Fragment set:html={ukFlag} />
       </button>
@@ -151,7 +151,7 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="14" height="14" fill="c
     </div>
 
     <!-- Language Flags (Mobile - between hamburger area) -->
-    <div class="lang-flags-wrap mobile-only" x-data>
+    <div class="lang-flags-wrap mobile-only">
       <button type="button" class="lang-flag-btn" :class="$root.currentLang==='en'?'active':''" @click="$root.currentLang='en'" title="English">
         <Fragment set:html={ukFlag} />
       </button>
@@ -167,22 +167,21 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="14" height="14" fill="c
     <a href="/#contact" class="btn btn-primary desktop-only" id="nav-cta" @click="closeMobileMenu()">Plan a Trip</a>
 
     <!-- Hamburger -->
-    <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Toggle Menu" @click="isMobileOpen=!isMobileOpen">
+    <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Toggle Menu" :aria-expanded="isMobileOpen.toString()" @click="isMobileOpen=!isMobileOpen">
       <i :class="isMobileOpen?'fa-solid fa-xmark':'fa-solid fa-bars'"></i>
     </button>
   </div>
-</header>
 
-<!-- Mobile nav overlay backdrop -->
-<div 
-  x-data 
-  x-show="$root.isMobileOpen" 
-  @click="$root.closeMobileMenu()"
-  style="position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:998;backdrop-filter:blur(4px);"
-  x-transition:enter="transition ease-out duration-300"
-  x-transition:enter-start="opacity-0"
-  x-transition:enter-end="opacity-100"
-  x-transition:leave="transition ease-in duration-200"
-  x-transition:leave-start="opacity-100"
-  x-transition:leave-end="opacity-0"
-></div>
+  <!-- Mobile nav overlay backdrop -->
+  <div 
+    x-show="isMobileOpen" 
+    @click="closeMobileMenu()"
+    style="position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:998;backdrop-filter:blur(4px);"
+    x-transition:enter="transition ease-out duration-300"
+    x-transition:enter-start="opacity-0"
+    x-transition:enter-end="opacity-100"
+    x-transition:leave="transition ease-out duration-200"
+    x-transition:leave-start="opacity-100"
+    x-transition:leave-end="opacity-0"
+  ></div>
+</header>

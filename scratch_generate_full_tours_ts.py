@@ -21,6 +21,23 @@ def clean_str(s):
     s = re.sub(r'\s+', ' ', s)
     return s.strip()
 
+def extract_js_array(script_text, const_name):
+    """Read a source map array without executing the page script."""
+    match = re.search(
+        rf'const\s+{re.escape(const_name)}\s*=\s*(\[[\s\S]*?\]);',
+        script_text,
+    )
+    if not match:
+        return []
+
+    value = re.sub(r'//[^\r\n]*', '', match.group(1))
+    value = re.sub(r'([{,]\s*)([A-Za-z_$][\w$]*)\s*:', r'\1"\2":', value)
+    value = re.sub(r',\s*([}\]])', r'\1', value)
+    try:
+        return json.loads(value)
+    except json.JSONDecodeError:
+        return []
+
 def build_tour_obj(item):
     fpath = os.path.join(tours_dir, item['file'])
     with open(fpath, 'r', encoding='utf-8', errors='ignore') as f:
@@ -52,39 +69,43 @@ def build_tour_obj(item):
     if not meta_desc or len(meta_desc) < 30:
         meta_desc = f"Experience the unforgettable {short_title} with Sahara Star Tours. Professional local guides, private transportation, luxury camps, and bespoke Moroccan itineraries."
         
-    # Duration
-    duration_match = re.search(r'(\d+)\s*(?:Day|Jour)', item['file'] + " " + short_title, re.I)
+    # Duration: source titles consistently use formats such as "7-Day" and "12 Days".
+    duration_match = re.search(r'(\d+)\s*(?:[-â€“]\s*)?(?:Day|Days|Jour)', item['file'] + " " + short_title, re.I)
     days_count = int(duration_match.group(1)) if duration_match else 1
     if days_count == 1:
         duration_str = "1 Day / Full Day Trip" if item['category'] == 'day-trips' else "Half Day / 3-4 Hours"
     else:
         duration_str = f"{days_count} Days / {days_count - 1} Nights"
         
-    # Highlights
+    # Preserve the source About copy and highlight list rather than synthesizing either.
+    about_html = ''
+    about_heading = soup.find(lambda tag: tag.name in ['h2', 'h3', 'h4'] and clean_str(tag.get_text(" ", strip=True)).lower() == 'about this tour')
+    if about_heading:
+        about_paragraph = about_heading.find_next('p')
+        if about_paragraph:
+            about_html = about_paragraph.decode_contents().strip()
+
     highlights = []
-    hl_section = soup.find(id=re.compile(r'highlight', re.I)) or soup.find(class_=re.compile(r'highlight', re.I))
-    if hl_section:
-        for li in hl_section.find_all('li'):
-            txt = clean_str(li.get_text(" ", strip=True))
-            if txt and len(txt) > 3:
-                highlights.append(txt)
+    highlights_heading = soup.find(lambda tag: tag.name in ['h4', 'h5', 'h6'] and clean_str(tag.get_text(" ", strip=True)).lower().startswith('highlights'))
+    if highlights_heading:
+        highlights_list = highlights_heading.find_next('ul')
+        if highlights_list:
+            for li in highlights_list.find_all('li', recursive=False):
+                txt = clean_str(li.get_text(" ", strip=True))
+                if txt:
+                    highlights.append(txt)
                 
     # Inclusions & Exclusions
-    inclusions = []
-    exclusions = []
-    inc_section = soup.find(class_=re.compile(r'inclusions|included', re.I))
-    if inc_section:
-        for li in inc_section.find_all('li'):
-            txt = clean_str(li.get_text(" ", strip=True))
-            if txt:
-                inclusions.append(txt)
-                
-    exc_section = soup.find(class_=re.compile(r'exclusions|excluded|not-included', re.I))
-    if exc_section:
-        for li in exc_section.find_all('li'):
-            txt = clean_str(li.get_text(" ", strip=True))
-            if txt:
-                exclusions.append(txt)
+    inclusions = [
+        clean_str(li.get_text(" ", strip=True))
+        for li in soup.select('.modal-inc-col.included li')
+        if clean_str(li.get_text(" ", strip=True))
+    ]
+    exclusions = [
+        clean_str(li.get_text(" ", strip=True))
+        for li in soup.select('.modal-inc-col.excluded li')
+        if clean_str(li.get_text(" ", strip=True))
+    ]
                 
     # Fallback inclusions/exclusions if none in HTML
     if not inclusions:
@@ -172,25 +193,10 @@ def build_tour_obj(item):
     scripts = soup.find_all('script')
     for s in scripts:
         stext = s.string or ''
-        if 'TOUR_DESTINATIONS' in stext:
-            m_dest = re.search(r'const\s+TOUR_DESTINATIONS\s*=\s*(\[\s*\{.*?\}\s*\]);', stext, re.DOTALL)
-            if m_dest:
-                try:
-                    js_str = m_dest.group(1)
-                    js_str = re.sub(r',\s*\]', ']', js_str)
-                    js_str = re.sub(r',\s*\}', '}', js_str)
-                    destinations = json.loads(js_str)
-                except:
-                    pass
-        if 'ROUTE_COORDINATES' in stext:
-            m_route = re.search(r'const\s+ROUTE_COORDINATES\s*=\s*(\[\s*\[.*?\]\s*\]);', stext, re.DOTALL)
-            if m_route:
-                try:
-                    js_str = m_route.group(1)
-                    js_str = re.sub(r',\s*\]', ']', js_str)
-                    routes = json.loads(js_str)
-                except:
-                    pass
+        if not destinations and 'TOUR_DESTINATIONS' in stext:
+            destinations = extract_js_array(stext, 'TOUR_DESTINATIONS')
+        if not routes and 'ROUTE_COORDINATES' in stext:
+            routes = extract_js_array(stext, 'ROUTE_COORDINATES')
                     
     # Fallback from enhanced_tour_configs if script had no destinations or route
     if not destinations or not routes:
@@ -258,12 +264,13 @@ def build_tour_obj(item):
         'title': title,
         'shortTitle': short_title,
         'description': meta_desc,
+        'aboutHtml': about_html,
         'category': item['category'],
         'duration': duration_str,
         'durationDays': days_count,
         'startingFrom': item['startingFrom'],
         'price': item['price'],
-        'heroImage': item['heroAsset'],
+        'heroImage': gal_images[0]['src'] if gal_images else item['heroAsset'],
         'highlights': highlights,
         'inclusions': inclusions,
         'exclusions': exclusions,
@@ -298,6 +305,7 @@ export interface Tour {
   title: string;
   shortTitle: string;
   description: string;
+  aboutHtml: string;
   category: 'desert-tours' | 'imperial-cities' | 'day-trips' | 'activities';
   duration: string;
   durationDays: number;

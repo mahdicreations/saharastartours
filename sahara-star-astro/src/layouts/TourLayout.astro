@@ -2,6 +2,7 @@
 // TourLayout.astro — Layout for all tour detail pages
 // Adds Leaflet CSS + script, tour hero, sidebar booking form
 import BaseLayout from './BaseLayout.astro';
+import TourMap from '../components/TourMap.astro';
 
 interface TourStop {
   number: number;
@@ -73,17 +74,13 @@ const tourSchema = schemaData ?? {
     "name": "Sahara Star Tours",
     "url": "https://www.saharastartours.com"
   },
-  "offers": {
+  offers: {
     "@type": "Offer",
     "description": price,
     "availability": "https://schema.org/InStock"
   }
 };
 
-// Serialize JS data to pass to inline script
-const mapDestsJSON = JSON.stringify(mapDestinations);
-const mapRouteJSON = JSON.stringify(mapRouteCoordinates);
-const mapId = `tour-route-map-${tourSlug.replace(/[^a-z0-9]/g, '-')}`;
 const galleryJSON = JSON.stringify(galleryImages);
 ---
 
@@ -95,15 +92,6 @@ const galleryJSON = JSON.stringify(galleryImages);
   currentPage="tours"
   schemaData={tourSchema}
 >
-  <!-- Leaflet CSS -->
-  <link 
-    rel="stylesheet" 
-    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" 
-    crossorigin="" 
-    slot="head"
-  />
-
   <!-- Tour Hero Section -->
   <section class="tour-hero-section">
     <div class="tour-hero-bg">
@@ -245,47 +233,7 @@ const galleryJSON = JSON.stringify(galleryImages);
       </div>
 
       <!-- Interactive Leaflet Route Map -->
-      {mapDestinations.length > 0 && (
-        <div class="tour-map-card reveal active">
-          <div class="tour-map-header">
-            <h3><i class="fa-solid fa-map-location-dot" style="color:var(--terracotta);"></i> Interactive Route Map</h3>
-            <div class="tour-map-header-badges">
-              <span class="tour-map-badge"><strong>{mapDestinations.length}</strong> destinations</span>
-              <span class="tour-map-badge"><strong>{duration}</strong></span>
-              <button 
-                id="map-theme-toggle-btn" 
-                class="map-reset-btn" 
-                type="button" 
-                style="position:static;margin:0;"
-                title="Toggle map theme"
-              >
-                <i class="fa-solid fa-moon"></i>
-                <span id="map-theme-toggle-text">Mode Clair</span>
-              </button>
-            </div>
-          </div>
-          <p class="tour-map-desc">Explore your complete journey route on this interactive map — click any destination marker to discover what awaits you on each day.</p>
-          <div class="tour-map-wrapper">
-            <div id={mapId} style="width:100%;height:480px;"></div>
-            <button id="map-reset-btn" class="map-reset-btn" type="button">
-              <i class="fa-solid fa-arrows-to-dot"></i> Reset View
-            </button>
-          </div>
-          <div class="map-stops-nav" id="map-stops-nav"></div>
-          <div class="map-milestones-wrapper">
-            <h5>Route Milestones</h5>
-            <div class="map-milestones">
-              {mapDestinations.map((dest, idx) => (
-                <span class="milestone-node">
-                  <span class="milestone-num">{dest.number}</span>
-                  {dest.name}
-                  {idx < mapDestinations.length - 1 && <span class="milestone-arrow">›</span>}
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
+      {mapDestinations.length > 0 && <TourMap tourSlug={tourSlug} duration={duration} destinations={mapDestinations} routeCoordinates={mapRouteCoordinates} />}
 
       <!-- Frequently Asked Questions -->
       <div class="faq-card reveal active">
@@ -479,121 +427,6 @@ const galleryJSON = JSON.stringify(galleryImages);
     </button>
   </div>
 </BaseLayout>
-
-<!-- Leaflet JS + Map initialization -->
-<script is:inline src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-<script define:vars={{ mapId, mapDestsJSON, mapRouteJSON }}>
-(function() {
-  const TOUR_DESTINATIONS = JSON.parse(mapDestsJSON);
-  const ROUTE_COORDINATES = JSON.parse(mapRouteJSON);
-
-  if (!TOUR_DESTINATIONS.length || !ROUTE_COORDINATES.length) return;
-
-  function initTourMap() {
-    const mapElement = document.getElementById(mapId);
-    if (!mapElement || typeof L === 'undefined') return;
-    if (mapElement._leaflet_id) return;
-
-    const map = L.map(mapId, { zoomControl: true, scrollWheelZoom: false, attributionControl: true });
-
-    const tileLayer = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors',
-      className: 'osm-tile-layer clear-osm-tiles',
-      maxZoom: 18
-    }).addTo(map);
-
-    const routeGlow = L.polyline(ROUTE_COORDINATES, { color: '#d96b43', weight: 8, opacity: 0.45, lineCap: 'round', lineJoin: 'round' }).addTo(map);
-    const routeLine = L.polyline(ROUTE_COORDINATES, { color: '#c84e24', weight: 4.5, opacity: 1.0, lineCap: 'round', lineJoin: 'round' }).addTo(map);
-
-    // Theme toggle
-    const mapThemeBtn = document.getElementById('map-theme-toggle-btn');
-    let isClearMap = true;
-    if (mapThemeBtn) {
-      mapThemeBtn.addEventListener('click', () => {
-        isClearMap = !isClearMap;
-        const tileEls = document.querySelectorAll('.osm-tile-layer');
-        const toggleText = document.getElementById('map-theme-toggle-text');
-        const mapWrapper = document.querySelector('.tour-map-wrapper');
-        if (isClearMap) {
-          tileEls.forEach(el => { el.classList.remove('dark-osm-tiles'); el.classList.add('clear-osm-tiles'); });
-          if (mapWrapper) mapWrapper.style.background = '#f4f1ea';
-          routeGlow.setStyle({ color: '#d96b43', opacity: 0.45, weight: 8 });
-          routeLine.setStyle({ color: '#c84e24', opacity: 1.0, weight: 4.5 });
-          if (toggleText) toggleText.textContent = 'Mode Clair';
-        } else {
-          tileEls.forEach(el => { el.classList.remove('clear-osm-tiles'); el.classList.add('dark-osm-tiles'); });
-          if (mapWrapper) mapWrapper.style.background = '#141110';
-          routeGlow.setStyle({ color: '#d96b43', opacity: 0.4, weight: 7 });
-          routeLine.setStyle({ color: '#e8c39e', opacity: 0.95, weight: 3.5 });
-          if (toggleText) toggleText.textContent = 'Mode Sombre';
-        }
-      });
-    }
-
-    const routeBounds = L.latLngBounds(ROUTE_COORDINATES);
-    map.fitBounds(routeBounds, { padding: [35, 35] });
-    setTimeout(() => { map.invalidateSize(); }, 250);
-    setTimeout(() => { map.invalidateSize(); }, 750);
-    window.addEventListener('resize', () => { map.invalidateSize(); });
-
-    const markers = [];
-    const stopsNav = document.getElementById('map-stops-nav');
-
-    TOUR_DESTINATIONS.forEach((dest, idx) => {
-      const isStart = idx === 0;
-      const isDesert = dest.name.toLowerCase().includes('merzouga') || dest.name.toLowerCase().includes('erg chebbi');
-      const isEnd = idx === TOUR_DESTINATIONS.length - 1;
-      const extraClass = isStart ? 'is-start' : (isDesert ? 'is-desert' : (isEnd ? 'is-end' : ''));
-
-      const customIcon = L.divIcon({
-        className: `luxury-marker-container ${extraClass}`,
-        html: `<div class="luxury-marker-pin" title="${dest.name}">${dest.number}</div><div class="luxury-marker-pulse"></div>`,
-        iconSize: [32, 32], iconAnchor: [16, 16], popupAnchor: [0, -18]
-      });
-
-      const marker = L.marker(dest.coords, { icon: customIcon }).addTo(map);
-      const popupHtml = `<div class="map-popup-inner"><span class="popup-tag">${dest.day}</span><h4 class="popup-title">${dest.name}</h4><div class="popup-subtitle"><i class="fa-solid fa-location-dot"></i> ${dest.subtitle}</div><p class="popup-desc">${dest.desc}</p></div>`;
-      marker.bindPopup(popupHtml, { maxWidth: 300 });
-      markers.push({ marker, dest, idx });
-
-      if (stopsNav) {
-        const btn = document.createElement('button');
-        btn.type = 'button';
-        btn.className = 'map-stop-btn';
-        btn.innerHTML = `<span class="map-stop-badge">${dest.number}</span> <span>${dest.name}</span>`;
-        btn.addEventListener('click', () => focusDestination(idx));
-        stopsNav.appendChild(btn);
-      }
-    });
-
-    function focusDestination(index) {
-      const item = markers[index];
-      if (!item) return;
-      map.flyTo(item.dest.coords, 10, { duration: 1 });
-      setTimeout(() => { item.marker.openPopup(); }, 600);
-      if (stopsNav) {
-        const buttons = stopsNav.querySelectorAll('.map-stop-btn');
-        buttons.forEach((b, i) => b.classList.toggle('active', i === index));
-        if (buttons[index]) buttons[index].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-      }
-    }
-
-    const resetBtn = document.getElementById('map-reset-btn');
-    if (resetBtn) {
-      resetBtn.addEventListener('click', () => {
-        map.fitBounds(routeBounds, { padding: [35, 35] });
-        if (stopsNav) stopsNav.querySelectorAll('.map-stop-btn').forEach(b => b.classList.remove('active'));
-      });
-    }
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initTourMap);
-  } else {
-    initTourMap();
-  }
-})();
-</script>
 
 <style>
   .milestone-node {

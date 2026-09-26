@@ -18,6 +18,7 @@ export interface Tour {
   title: string;
   shortTitle: string;
   description: string;
+  aboutHtml: string;
   category: 'desert-tours' | 'imperial-cities' | 'day-trips' | 'activities';
   duration: string;
   durationDays: number;
@@ -49,21 +50,23 @@ export const tours: Tour[] = [
     "title": "MOROCCO ITINERARY 6 DAYS DESERT TOUR FROM CASABLANCA TO MARRAKECH | Sahara Star Tours",
     "shortTitle": "Morocco Itinerary 6 Days Desert Tour From Casablanca To Marrakech",
     "description": "Embark on the ultimate 16-day luxury tour across Morocco from Casablanca. Experience imperial cities, Chefchaouen, Sahara desert glamping, and Marrakech.",
+    "aboutHtml": "Embark on the ultimate MOROCCO ITINERARY 6 DAYS DESERT TOUR FROM CASABLANCA TO MARRAKECH, a meticulously crafted journey designed to showcase the very best of Morocco. As a leading Moroccan travel agency, Sahara Star Tours invites you to experience an unforgettable expedition blending rich cultural heritage, breathtaking landscapes, and premium comfort. From the bustling ancient medinas and vibrant souks of our imperial cities to the serene majesty of the Sahara Desert, this itinerary captures the soul of Morocco. <br/><br/> <br/><br/>Whether you're traversing the dramatic peaks of the High Atlas Mountains, riding camels into the golden dunes of Merzouga at sunset, or resting in luxury desert camps and authentic riads, every moment is optimized for authentic immersion. Perfect for couples, families, and adventurous travelers, this tour offers a seamless, stress-free vacation with professional local guides, private air-conditioned transportation, and exclusive access to hidden gems. Book your MOROCCO ITINERARY 6 DAYS DESERT TOUR FROM CASABLANCA TO MARRAKECH today and discover the magic of Morocco.",
     "category": "desert-tours",
     "duration": "6 Days / 5 Nights",
     "durationDays": 6,
     "startingFrom": "Casablanca",
     "price": "From $790/person",
-    "heroImage": "/assets/tour_6day_desert.png",
+    "heroImage": "/sahara-star-tours/desert-tours/itinerary-6-days-tour-from-casablanca/images/thumbnail.jpg",
     "highlights": [
-      "Explore Casablanca: Atlantic Gateway & Hassan II Mosque",
-      "Explore Rabat: Capital City & Kasbah of the Udayas",
-      "Explore Chefchaouen: The Blue Pearl of the Rif",
-      "Explore Fes Medina: Spiritual Capital & UNESCO Heart",
-      "Explore Merzouga Sahara: Erg Chebbi Dunes & Luxury Camp",
-      "Explore Todra & Dades Gorges: 300m Rock Canyons",
-      "Explore Ouarzazate & Ait Benhaddou: UNESCO Ksar & Film Studios",
-      "Explore Marrakech: The Red City Grand Finale"
+      "Visiting the Hassan II Mosque, an architectural masterpiece in Casablanca",
+      "Exploring the magnificent Hassan Tower in Rabat",
+      "Exploring the wonders of Chefchaouen: Discovering the charming secrets of Morocco’s blue city",
+      "Roaming the storied alleyways of Fes Medina, immersing yourself in its rich historical ambiance",
+      "Venturing into the desert’s beauty as you embark on a camel expedition, discovering its wonders firsthand",
+      "Watching the awe-inspiring spectacle of the sunset/sunrise casting its golden hues over the Erg Chebbi Dunes",
+      "Enjoying a stroll through the gorgeous Todra Gorge",
+      "Uncovering the Magic of the Ait Ben Haddou Kasbah as you wander through its ancient walls",
+      "Delighting in the breathtaking views of the High Atlas"
     ],
     "inclusions": [
       "Guided city tours and monument fees",
@@ -73,15 +76,7 @@ export const tours: Tour[] = [
       "Dinner at a local restaurant in Marrakech with Music and Moroccan dancing",
       "Half board during the tour",
       "Fuel",
-      "5 Breakfasts and 3 dinners in the desert",
-      "Airline taxes",
-      "Lunch",
-      "Drinks",
-      "Flights",
-      "Gratuities",
-      "Travel Insurance, medical emergency",
-      "Tips to guide and driver (optional)",
-      "Anything not stated in included part"
+      "5 Breakfasts and 3 dinners in the desert"
     ],
     "exclusions": [
       "Airline taxes",
@@ -339,20 +334,26 @@ export const tours: Tour[] = [
     "title": "BEST 7-DAY MOROCCO TOUR FROM CASABLANCA TO MARRAKECH | Sahara Star Tours",
     "shortTitle": "Best 7-Day Morocco Tour From Casablanca To Marrakech",
     "description": "Embark on the ultimate 16-day luxury tour across Morocco from Casablanca. Experience imperial cities, Chefchaouen, Sahara desert glamping, and Marrakech.",
+    "aboutHtml": "Embark on the ultimate BEST 7-DAY MOROCCO TOUR FROM CASABLANCA TO MARRAKECH, a meticulously crafted journey designed to showcase the very best of Morocco. As a leading Moroccan travel agency, Sahara Star Tours invites you to experience an unforgettable expedition blending rich cultural heritage, breathtaking landscapes, and premium comfort. From the bustling ancient medinas and vibrant souks of our imperial cities to the serene majesty of the Sahara Desert, this itinerary captures the soul of Morocco. <br/><br/> <br/><br/>Whether you're traversing the dramatic peaks of the High Atlas Mountains, riding camels into the golden dunes of Merzouga at sunset, or resting in luxury desert camps and authentic riads, every moment is optimized for authentic immersion. Perfect for couples, families, and adventurous travelers, this tour offers a seamless, stress-free vacation with professional local guides, private air-conditioned transportation, and exclusive access to hidden gems. Book your BEST 7-DAY MOROCCO TOUR FROM CASABLANCA TO MARRAKECH today and discover the magic of Morocco.",
     "category": "desert-tours",
-    "duration": "Half Day / 3-4 Hours",
-    "durationDays": 1,
+    "duration": "7 Days / 6 Nights",
+    "durationDays": 7,
     "startingFrom": "Casablanca",
     "price": "From $890/person",
-    "heroImage": "/assets/tour_7day_casablanca.png",
+    "heroImage": "/sahara-star-tours/desert-tours/7-day-morocco-tour-from-casablanca/images/thumbnail.jpg",
     "highlights": [
-      "Explore Casablanca: Atlantic Gateway",
-      "Explore Rabat & Meknes: Imperial Capitals",
-      "Explore Fes Medina: UNESCO Spiritual Heart",
-      "Explore Merzouga Sahara: Erg Chebbi Glamping",
-      "Explore Todra & Dades: Grand Atlas Canyons",
-      "Explore Ait Benhaddou: UNESCO Mudbrick Kasbah",
-      "Explore Marrakech: Red City Grand Finale"
+      "Visit the iconic Hassan II Mosque in Casablanca",
+      "Explore Rabat’s Kasbah of the Udayas, Hassan Tower, and Chellah Necropolis",
+      "Discover the imperial city of Meknes and the Roman ruins of Volubilis",
+      "Tour the sacred town of Moulay Idriss Zerhoun",
+      "Enjoy a full-day guided tour of Fes and its medieval medina",
+      "Drive through the Middle Atlas Mountains, stopping in Ifrane and Azrou",
+      "Ride camels into the Sahara Desert and sleep in a luxury tent in Merzouga",
+      "Visit Todra Gorges, Tinerhir, and the Valley of Roses",
+      "Walk through the palm groves of Skoura Oasis",
+      "Explore the UNESCO-listed Ait Benhaddou Kasbah",
+      "Visit the historic Telouet Kasbah and cross the High Atlas Mountains",
+      "End with a guided tour of Marrakech, including Jemaa El Fna, Bahia Palace, and Majorelle Gardens"
     ],
     "inclusions": [
       "Guided city tours and monument fees",
@@ -361,13 +362,7 @@ export const tours: Tour[] = [
       "Airport meet and greet service",
       "Dinner at a local restaurant in Marrakech with Music and Moroccan dancing",
       "Half board during the tour",
-      "Fuel",
-      "Airline taxes",
-      "Lunch",
-      "Drinks",
-      "Flights",
-      "Gratuities",
-      "Travel Insurance, medical emergency"
+      "Fuel"
     ],
     "exclusions": [
       "Airline taxes",
@@ -419,8 +414,8 @@ export const tours: Tour[] = [
         "number": 1,
         "name": "Casablanca",
         "day": "Day 1",
-        "subtitle": "Atlantic Gateway",
-        "desc": "Welcome greeting, Hassan II Mosque and overland to Rabat.",
+        "subtitle": "Arrival & Hassan II Mosque",
+        "desc": "Meet & greet on arrival, followed by an exploration of the iconic Hassan II Mosque perched majestically on the Atlantic shore.",
         "coords": [
           33.589882,
           -7.603869
@@ -428,10 +423,10 @@ export const tours: Tour[] = [
       },
       {
         "number": 2,
-        "name": "Rabat & Meknes",
-        "day": "Day 2",
-        "subtitle": "Imperial Capitals",
-        "desc": "Kasbah des Oudayas, Volubilis Roman ruins, and Bab Mansour.",
+        "name": "Rabat",
+        "day": "Day 1",
+        "subtitle": "Imperial Capital & Kasbah of the Udayas",
+        "desc": "Tranquil royal capital: 12th-century Hassan Tower, Kasbah of the Udayas with Andalusian Gardens, and the ancient Chellah royal tombs.",
         "coords": [
           34.020882,
           -6.84165
@@ -439,54 +434,87 @@ export const tours: Tour[] = [
       },
       {
         "number": 3,
-        "name": "Fes Medina",
-        "day": "Day 3 & 4",
-        "subtitle": "UNESCO Spiritual Heart",
-        "desc": "Guided exploration of medieval labyrinth medina and tanneries.",
+        "name": "Meknes & Volubilis",
+        "day": "Day 2",
+        "subtitle": "Imperial Gateways & Roman Antiquity",
+        "desc": "Monumental Bab El Mansour, Moulay Ismail Mausoleum, sacred Moulay Idriss Zerhoun, and intact Roman mosaics of Volubilis.",
+        "coords": [
+          34.072222,
+          -5.554167
+        ]
+      },
+      {
+        "number": 4,
+        "name": "Fes",
+        "day": "Days 2 & 3",
+        "subtitle": "Medieval Medina & Cultural Heart",
+        "desc": "Two nights in a luxury riad. Full-day guided exploration of Fes el-Bali: Bou Inania Medersa, Bab Boujloud, and ancient Chouara tanneries.",
         "coords": [
           34.033134,
           -5.00028
         ]
       },
       {
-        "number": 4,
-        "name": "Merzouga Sahara",
-        "day": "Day 4 & 5",
-        "subtitle": "Erg Chebbi Glamping",
-        "desc": "Atlas cedar forests, Ziz oasis, and sunset camel trek into dunes.",
+        "number": 5,
+        "name": "Ifrane & Midelt",
+        "day": "Day 4",
+        "subtitle": "Middle Atlas & Cedar Forests",
+        "desc": "Alpine Ifrane, Azrou cedar forests with wild Barbary macaques, and picturesque Berber rural landscapes approaching Midelt.",
         "coords": [
-          31.1444,
-          -4.0197
+          32.68532,
+          -4.73356
         ]
       },
       {
-        "number": 5,
-        "name": "Todra & Dades",
-        "day": "Day 5 & 6",
-        "subtitle": "Grand Atlas Canyons",
-        "desc": "Walk under 300m limestone cliffs and Valley of Roses.",
+        "number": 6,
+        "name": "Merzouga (Erg Chebbi)",
+        "day": "Days 4 & 5",
+        "subtitle": "Sunset Camel Trek & Luxury Sahara Camp",
+        "desc": "Ziz Valley palms, sunset camel ride over golden Erg Chebbi dunes, traditional Berber dinner, campfire stargazing, and private luxury tent.",
+        "coords": [
+          31.0994,
+          -4.0118
+        ]
+      },
+      {
+        "number": 7,
+        "name": "Todra Gorges & Tinghir",
+        "day": "Day 5",
+        "subtitle": "Caravan Markets & 300m Rock Canyons",
+        "desc": "Historic Rissani market, lush Tinghir palm oasis, and walking between the 300-meter vertical limestone cliff walls of Todra Canyon.",
         "coords": [
           31.5517,
           -5.5986
         ]
       },
       {
-        "number": 6,
-        "name": "Ait Benhaddou",
+        "number": 8,
+        "name": "Skoura & Rose Valley",
+        "day": "Day 5",
+        "subtitle": "Valley of the Roses & Thousand Kasbahs",
+        "desc": "Rose water distilleries in Kelaat M'Gouna and an overnight stay in a charming luxury kasbah overlooking Skoura's expansive palm grove.",
+        "coords": [
+          31.062,
+          -6.554
+        ]
+      },
+      {
+        "number": 9,
+        "name": "Ait Benhaddou & Ouarzazate",
         "day": "Day 6",
-        "subtitle": "UNESCO Mudbrick Kasbah",
-        "desc": "Legendary fortress filmed in Gladiator, crossing Tizi n'Tichka.",
+        "subtitle": "UNESCO Earthen Ksar & Film Studios",
+        "desc": "Atlas Cinema Film Studios in Ouarzazate, world-renowned UNESCO World Heritage Kasbah Ait Benhaddou, and historic Kasbah Telouet.",
         "coords": [
           31.047,
           -7.1317
         ]
       },
       {
-        "number": 7,
+        "number": 10,
         "name": "Marrakech",
-        "day": "Day 6 & 7",
-        "subtitle": "Red City Grand Finale",
-        "desc": "Jemaa El-Fna, Bahia Palace, and airport departure transfer.",
+        "day": "Days 6 & 7",
+        "subtitle": "Pearl of the South & Tour Finale",
+        "desc": "Crossing the dramatic High Atlas Tizi n'Tichka pass into Marrakech: Jemaa El Fna, Bahia Palace, Saadian Tombs, and Majorelle Gardens.",
         "coords": [
           31.629472,
           -7.981084
@@ -499,52 +527,152 @@ export const tours: Tour[] = [
         -7.603869
       ],
       [
+        33.7063,
+        -7.3888
+      ],
+      [
+        33.7892,
+        -7.1597
+      ],
+      [
         34.020882,
         -6.84165
       ],
       [
-        34.072222,
-        -5.554167
+        33.8942,
+        -6.3117
+      ],
+      [
+        33.824,
+        -6.0664
       ],
       [
         33.893791,
         -5.551624
       ],
       [
+        34.0536,
+        -5.5264
+      ],
+      [
+        34.072222,
+        -5.554167
+      ],
+      [
         34.033134,
         -5.00028
       ],
       [
-        33.5273,
-        -5.1054
+        33.7314,
+        -5.0117
       ],
       [
-        32.6828,
-        -4.7337
+        33.52281,
+        -5.110022
       ],
       [
-        31.1444,
-        -4.0197
+        33.4344,
+        -5.2213
+      ],
+      [
+        33.2355,
+        -5.0601
+      ],
+      [
+        33.0232,
+        -5.0682
+      ],
+      [
+        32.8252,
+        -4.9601
+      ],
+      [
+        32.68532,
+        -4.73356
+      ],
+      [
+        32.3789,
+        -4.5123
+      ],
+      [
+        32.2667,
+        -4.4833
+      ],
+      [
+        32.052,
+        -4.408
+      ],
+      [
+        31.9315,
+        -4.4266
+      ],
+      [
+        31.621,
+        -4.241
+      ],
+      [
+        31.4361,
+        -4.2333
+      ],
+      [
+        31.0994,
+        -4.0118
+      ],
+      [
+        31.2828,
+        -4.2694
+      ],
+      [
+        31.5284,
+        -5.0142
+      ],
+      [
+        31.5147,
+        -5.5328
       ],
       [
         31.5517,
         -5.5986
       ],
       [
-        31.59,
-        -5.99
+        31.3712,
+        -5.9928
       ],
       [
-        30.9335,
-        -6.937
+        31.2464,
+        -6.1306
+      ],
+      [
+        31.062,
+        -6.554
+      ],
+      [
+        30.9189,
+        -6.8936
       ],
       [
         31.047,
         -7.1317
       ],
       [
-        31.2847,
-        -7.3811
+        31.215,
+        -7.195
+      ],
+      [
+        31.2872,
+        -7.2378
+      ],
+      [
+        31.2869,
+        -7.3814
+      ],
+      [
+        31.3934,
+        -7.412
+      ],
+      [
+        31.5644,
+        -7.6698
       ],
       [
         31.629472,
@@ -609,21 +737,23 @@ export const tours: Tour[] = [
     "title": "IDEAL MOROCCO 8 DAYS ITINERARY TOUR FROM CASABLANCA | Sahara Star Tours",
     "shortTitle": "Ideal Morocco 8 Days Itinerary Tour From Casablanca",
     "description": "Embark on the ultimate 16-day luxury tour across Morocco from Casablanca. Experience imperial cities, Chefchaouen, Sahara desert glamping, and Marrakech.",
+    "aboutHtml": "Embark on the ultimate IDEAL MOROCCO 8 DAYS ITINERARY TOUR FROM CASABLANCA, a meticulously crafted journey designed to showcase the very best of Morocco. As a leading Moroccan travel agency, Sahara Star Tours invites you to experience an unforgettable expedition blending rich cultural heritage, breathtaking landscapes, and premium comfort. From the bustling ancient medinas and vibrant souks of our imperial cities to the serene majesty of the Sahara Desert, this itinerary captures the soul of Morocco. <br/><br/> <br/><br/>Whether you're traversing the dramatic peaks of the High Atlas Mountains, riding camels into the golden dunes of Merzouga at sunset, or resting in luxury desert camps and authentic riads, every moment is optimized for authentic immersion. Perfect for couples, families, and adventurous travelers, this tour offers a seamless, stress-free vacation with professional local guides, private air-conditioned transportation, and exclusive access to hidden gems. Book your IDEAL MOROCCO 8 DAYS ITINERARY TOUR FROM CASABLANCA today and discover the magic of Morocco.",
     "category": "desert-tours",
     "duration": "8 Days / 7 Nights",
     "durationDays": 8,
     "startingFrom": "Casablanca",
     "price": "From $990/person",
-    "heroImage": "/assets/tour_8day_casablanca.png",
+    "heroImage": "/sahara-star-tours/desert-tours/8-days-itinerary-tour-from-casablanca/images/thumbnail.jpg",
     "highlights": [
-      "Explore Casablanca: Atlantic Arrival",
-      "Explore Rabat: Imperial Capital",
-      "Explore Chefchaouen: The Blue Pearl",
-      "Explore Volubilis & Fes: Roman & Medieval Legacy",
-      "Explore Merzouga Sahara: Erg Chebbi Glamping",
-      "Explore Todra & Dades: Atlas Gorges & Canyons",
-      "Explore Ait Benhaddou: UNESCO Kasbah",
-      "Explore Marrakech: Red City Grand Finale"
+      "Immersing yourself in the architectural beauty of the Hassan I| Mosque in Casablanca, a stunning symbol of Morocco’s cultural richness.",
+      "Traversing the enchanting blue streets of Chefchaouen, revealing hidden gems, and soaking in the magical ambiance of this captivating city.",
+      "Marveling at the ancient ruins of Volubilis, where history comes alive, telling tales of Morocco’s rich past.",
+      "Wandering through the labyrinthine streets of the Fes Medina, exploring its historical nooks and crannies, each corner is steeped in cultural significance.",
+      "Discovering the serene beauty of the desert on a camel trek, a journey that promises a unique perspective on the vast landscapes.",
+      "Experiencing the ultimate tranquility by sleeping under the stars in the heart of the desert, creating memories that will last a lifetime.",
+      "Walking a scenic walk through the picturesque Todra Canyon, surrounded by towering cliffs that showcase nature’s grandeur.",
+      "Delighting in the stunning panoramic views of the High Atlas Mountains, a majestic backdrop that adds to the allure of your Moroccan adventure.",
+      "Exploring the vibrant city of Marrakech, where the bustling souks, historic palaces, and lively streets offer a perfect blend of tradition and modernity."
     ],
     "inclusions": [
       "Guided city tours and monument fees",
@@ -633,14 +763,7 @@ export const tours: Tour[] = [
       "Dinner at a local restaurant in Marrakech with Music and Moroccan dancing",
       "Half board during the tour",
       "Fuel",
-      "7 Breakfasts and 4 dinners in the desert",
-      "Airline taxes",
-      "Lunch",
-      "Drinks",
-      "Flights",
-      "Gratuities",
-      "Travel Insurance, medical emergency",
-      "Tips to guide and driver (optional)"
+      "7 Breakfasts and 4 dinners in the desert"
     ],
     "exclusions": [
       "Airline taxes",
@@ -891,21 +1014,22 @@ export const tours: Tour[] = [
     "title": "9 DAY AUTHENTIC MOROCCO TOUR | Sahara Star Tours",
     "shortTitle": "9 Day Authentic Morocco Tour",
     "description": "Embark on the ultimate 16-day luxury tour across Morocco from Casablanca. Experience imperial cities, Chefchaouen, Sahara desert glamping, and Marrakech.",
+    "aboutHtml": "Our 9 Day Authentic Morocco Tour journey provides a unique and authentic experience. Every moment is full of excitement and discovery, from the quiet of the Sahara Desert to the busy streets of Marrakech. Come along as we visit historic medinas, savor delectable regional food, and get a firsthand look at the diverse cultural fabric of Morocco. Don’t pass up this once-in-a-lifetime chance to be enchanted by Morocco. Set out on your 9 Day Authentic Morocco tour trip now, and let the voyage commence!",
     "category": "desert-tours",
     "duration": "9 Days / 8 Nights",
     "durationDays": 9,
     "startingFrom": "Casablanca",
     "price": "From $1,090/person",
-    "heroImage": "/assets/tour_9day_authentic.png",
+    "heroImage": "/sahara-star-tours/desert-tours/9-day-authentic-morocco-tour/images/thumbnail.jpg",
     "highlights": [
-      "Explore Casablanca: Arrival",
-      "Explore Rabat: Capital",
-      "Explore Chefchaouen: Blue Medina",
-      "Explore Fes: UNESCO City",
-      "Explore Merzouga Sahara: Golden Dunes",
-      "Explore Todra & Dades: Canyons",
-      "Explore Ouarzazate: Ait Benhaddou",
-      "Explore Marrakech: Red City Finale"
+      "Marrakech: Begin your journey in Marrakech, immersing yourself in the vibrant atmosphere of the Medina, visiting historic sites, and experiencing traditional Moroccan hospitality in a Riad.",
+      "High Atlas Mountains: Traverse through the majestic High Atlas Mountains, enjoying scenic views and stopping at the Tizi n’Tichka pass for panoramic vistas.",
+      "Ouarzazate: Explore the “Gateway to the Sahara,” visiting the UNESCO World Heritage site of Kasbah Ait Ben Haddou and witnessing a mesmerizing sunset over the desert.",
+      "Merzouga: Embark on a Sahara Desert adventure, including a camel ride through the dunes, an overnight stay in a Berber camp, and experiencing the magic of the desert night sky.",
+      "Fes: Discover the cultural and spiritual heart of Morocco in Fes, exploring its ancient Medina, visiting historical landmarks, and indulging in Moroccan cuisine with a cooking class.",
+      "Chefchaouen: Experience the charm of the “Blue Pearl” of Morocco, wandering through its blue-washed streets, hiking to the Cascades d’Akchour, and immersing yourself in the relaxed atmosphere of the Rif Mountains.",
+      "Rabat: Explore the capital city of Rabat, visiting its historic sites such as the Hassan Tower and the Kasbah of the Udayas, and enjoying traditional Moroccan mint tea.",
+      "Casablanca: Discover the modern metropolis of Casablanca, visiting the iconic Hassan II Mosque, strolling along the Corniche Boulevard, and experiencing the nostalgia of Casablanca."
     ],
     "inclusions": [
       "Guided city tours and monument fees",
@@ -915,15 +1039,7 @@ export const tours: Tour[] = [
       "Dinner at a local restaurant in Marrakech with Music and Moroccan dancing",
       "Half board during the tour",
       "Fuel",
-      "8 Breakfasts and 3 dinners in the desert",
-      "Airline taxes",
-      "Lunch",
-      "Drinks",
-      "Flights",
-      "Gratuities",
-      "Travel Insurance, medical emergency",
-      "Tips to guide and driver (optional)",
-      "Anything not stated in included part"
+      "8 Breakfasts and 3 dinners in the desert"
     ],
     "exclusions": [
       "Airline taxes",
@@ -1160,21 +1276,21 @@ export const tours: Tour[] = [
     "title": "MOROCCO ITINERARY 9 DAYS, DESERT & IMPERIAL CITIES | Sahara Star Tours",
     "shortTitle": "Morocco Itinerary 9 Days, Desert & Imperial Cities",
     "description": "Embark on the ultimate 16-day luxury tour across Morocco from Casablanca. Experience imperial cities, Chefchaouen, Sahara desert glamping, and Marrakech.",
+    "aboutHtml": "Morocco itinerary 9 days takes you on an adventure to discover the real treasures of Morocco. the tour includes the main top attractions of Morocco.<br/><br/>During this tour, you will discover the diverse geography of Morocco, the medieval kasbahs, and old cities that have stepped back in time and watch the world change. In addition, you will experience one thousand and one night in the desert.<br/><br/>The tour mixes culture with adventure and allows you to see the maximum of places in a short time.",
     "category": "desert-tours",
     "duration": "9 Days / 8 Nights",
     "durationDays": 9,
     "startingFrom": "Casablanca",
     "price": "From $1,150/person",
-    "heroImage": "/assets/tour_9day_imperial.png",
+    "heroImage": "/sahara-star-tours/desert-tours/morocco-itinerary-9-days-desert-imperial-cities/images/thumbnail.jpg",
     "highlights": [
-      "Explore Casablanca: Arrival",
-      "Explore Rabat: Capital",
-      "Explore Chefchaouen: Blue Medina",
-      "Explore Fes: UNESCO City",
-      "Explore Merzouga Sahara: Golden Dunes",
-      "Explore Todra & Dades: Canyons",
-      "Explore Ouarzazate: Ait Benhaddou",
-      "Explore Marrakech: Red City Finale"
+      "Ride camels and camp in the Desert",
+      "Wander in the blue-washed city of Chefchaouen",
+      "Discover the ancient Roman ruins in Volubilis",
+      "Feed and take pictures with wild monkeys",
+      "Discover the oldest surviving city in the world, Fez",
+      "Explore exotic markets and souks of Morocco",
+      "Wander in Marrakech and visit Jamaa El Fna"
     ],
     "inclusions": [
       "Guided city tours and monument fees",
@@ -1184,15 +1300,7 @@ export const tours: Tour[] = [
       "Dinner at a local restaurant in Marrakech with Music and Moroccan dancing",
       "Half board during the tour",
       "Fuel",
-      "8 Breakfasts and 4 dinners in the desert",
-      "Airline taxes",
-      "Lunch",
-      "Drinks",
-      "Flights",
-      "Gratuities",
-      "Travel Insurance, medical emergency",
-      "Tips to guide and driver (optional)",
-      "Anything not stated in included part"
+      "8 Breakfasts and 4 dinners in the desert"
     ],
     "exclusions": [
       "Airline taxes",
@@ -1429,21 +1537,17 @@ export const tours: Tour[] = [
     "title": "10 DAYS CASABLANCA TOUR: MOROCCO COUPLE TOUR PACKAGES | Sahara Star Tours",
     "shortTitle": "10 Days Casablanca Tour: Morocco Couple Tour Packages",
     "description": "Embark on the ultimate 16-day luxury tour across Morocco from Casablanca. Experience imperial cities, Chefchaouen, Sahara desert glamping, and Marrakech.",
+    "aboutHtml": "10 Days Morocco Honeymoon Tour takes you to explore the romantic luxury riad, beautiful and soothing sights in Morocco. An English-speaking driver guide with a private car will be available for your service",
     "category": "desert-tours",
     "duration": "10 Days / 9 Nights",
     "durationDays": 10,
     "startingFrom": "Casablanca",
     "price": "From $1,250/person",
-    "heroImage": "/assets/tour_10day_casablanca.png",
+    "heroImage": "/sahara-star-tours/desert-tours/10-days-morocco-couple-tour-packages/images/thumbnail.jpg",
     "highlights": [
-      "Explore Casablanca: Arrival & Hassan II Mosque",
-      "Explore Rabat: Imperial Capital",
-      "Explore Chefchaouen: Romantic Blue City",
-      "Explore Fes Medina: UNESCO World Heritage",
-      "Explore Merzouga Sahara: Erg Chebbi Romantic Glamping",
-      "Explore Dades & Todra Gorges: Grand Moroccan Canyons",
-      "Explore Ait Benhaddou: Historic Fortress Kasbah",
-      "Explore Marrakech: The Red City Grand Finale"
+      "Meeting Point: At your hotel or Airport.",
+      "Starting Location: Casablanca",
+      "Ending Location: Marrakech"
     ],
     "inclusions": [
       "Guided city tours and monument fees",
@@ -1452,13 +1556,7 @@ export const tours: Tour[] = [
       "Airport meet and greet service",
       "Dinner at a local restaurant in Marrakech with Music and Moroccan dancing",
       "Half board during the tour",
-      "Fuel",
-      "Airline taxes",
-      "Lunch",
-      "Drinks",
-      "Flights",
-      "Gratuities",
-      "Travel Insurance, medical emergency"
+      "Fuel"
     ],
     "exclusions": [
       "Airline taxes",
@@ -1710,21 +1808,21 @@ export const tours: Tour[] = [
     "title": "10 DAYS MOROCCO IMPERIAL CITIES TOUR FROM CASABLANCA | Sahara Star Tours",
     "shortTitle": "10 Days Morocco Imperial Cities Tour From Casablanca",
     "description": "Embark on the ultimate 16-day luxury tour across Morocco from Casablanca. Experience imperial cities, Chefchaouen, Sahara desert glamping, and Marrakech.",
+    "aboutHtml": "Embark on the ultimate 10 DAYS MOROCCO IMPERIAL CITIES TOUR FROM CASABLANCA, a meticulously crafted journey designed to showcase the very best of Morocco. As a leading Moroccan travel agency, Sahara Star Tours invites you to experience an unforgettable expedition blending rich cultural heritage, breathtaking landscapes, and premium comfort. From the bustling ancient medinas and vibrant souks of our imperial cities to the serene majesty of the Sahara Desert, this itinerary captures the soul of Morocco. <br/><br/> <br/><br/>Whether you're traversing the dramatic peaks of the High Atlas Mountains, riding camels into the golden dunes of Merzouga at sunset, or resting in luxury desert camps and authentic riads, every moment is optimized for authentic immersion. Perfect for couples, families, and adventurous travelers, this tour offers a seamless, stress-free vacation with professional local guides, private air-conditioned transportation, and exclusive access to hidden gems. Book your 10 DAYS MOROCCO IMPERIAL CITIES TOUR FROM CASABLANCA today and discover the magic of Morocco.",
     "category": "desert-tours",
     "duration": "10 Days / 9 Nights",
     "durationDays": 10,
     "startingFrom": "Casablanca",
     "price": "From $1,290/person",
-    "heroImage": "/assets/tour_10day_imperial.png",
+    "heroImage": "/sahara-star-tours/desert-tours/morocco-imperial-cities-tour-from-casablanca/images/thumbnail.webp",
     "highlights": [
-      "Explore Casablanca: Atlantic Metropole",
-      "Explore Rabat: Administrative Capital",
-      "Explore Chefchaouen: The Blue Pearl",
-      "Explore Volubilis & Meknes: Roman & Imperial Legacy",
-      "Explore Fes Medina: Spiritual Heartland",
-      "Explore Ifrane & Cedar Forest: Middle Atlas Mountains",
-      "Explore Beni Mellal: Olive & Citrus Plains",
-      "Explore Marrakech: Imperial Red City"
+      "Explore the UNESCO World Heritage ancient Medinas and vibrant souks",
+      "Traverse the majestic High Atlas Mountains via the scenic Tizi n'Tichka pass",
+      "Visit the legendary Kasbah Ait Ben Haddou, famous for Hollywood blockbusters",
+      "Experience an authentic sunset camel trek across the golden Sahara dunes",
+      "Spend a magical night glamping under the stars in a luxury desert camp",
+      "Discover breathtaking oases, dramatic gorges (Todra & Dades), and lush valleys",
+      "Indulge in authentic Moroccan cuisine and traditional Berber hospitality"
     ],
     "inclusions": [
       "Pick-up and drop-off at your airport, hotel, or riad",
@@ -1734,14 +1832,7 @@ export const tours: Tour[] = [
       "1 Night in a Luxury Desert Camp in the Sahara (private tent with ensuite bathroom)",
       "Sunset and sunrise camel trekking in the desert (one camel per person)",
       "Daily breakfasts and specified dinners (refer to itinerary)",
-      "Local taxes and fuel surcharges",
-      "International flight tickets",
-      "Travel and medical insurance",
-      "Lunches and mid-day snacks",
-      "Beverages and drinks during meals",
-      "Entrance fees to historical monuments and museums",
-      "Gratuities and tips for guides/drivers",
-      "Personal expenses and souvenirs"
+      "Local taxes and fuel surcharges"
     ],
     "exclusions": [
       "International flight tickets",
@@ -2002,21 +2093,17 @@ export const tours: Tour[] = [
     "title": "GRAND ITINERARY 12 DAYS MOROCCO TOUR FROM CASABLANCA | Sahara Star Tours",
     "shortTitle": "Grand Itinerary 12 Days Morocco Tour From Casablanca",
     "description": "Embark on the ultimate 16-day luxury tour across Morocco from Casablanca. Experience imperial cities, Chefchaouen, Sahara desert glamping, and Marrakech.",
+    "aboutHtml": "12 days Morocco tour from Casablanca will take you through the Imperial Cities to the desert, the imperial cities had been capitals of the Kingdom throughout the history of Morocco like Rabat, Fes, Meknes, Marrakech. Experience a camel ride and spend night in desert camp in Merzouga. This is a great opportunity to discover the real of morocco, the heritage, the Sahara desert the life style of the locals and their culture and traditions.<br/><br/>This trip is the most popular of all and ideal for a first contact! In which you can explore different facets of Morocco and admire its captivating contracts. Immerse yourself in the living culture and discover the art of living in the country of Morocco. Discover on trip the maximum of historical and cultural enclaves. (Chefchaouen, the blue city set in the Rif Mountains).",
     "category": "desert-tours",
     "duration": "12 Days / 11 Nights",
     "durationDays": 12,
     "startingFrom": "Casablanca",
     "price": "From $1,450/person",
-    "heroImage": "/assets/tour_12day_casablanca.png",
+    "heroImage": "/sahara-star-tours/desert-tours/12-days-morocco-tour-from-casablanca/images/thumbnail.jpg",
     "highlights": [
-      "Explore Casablanca: Arrival",
-      "Explore Rabat: Capital",
-      "Explore Tangier: Strait of Gibraltar",
-      "Explore Chefchaouen: Blue Mountain Town",
-      "Explore Fes: Medieval Medina",
-      "Explore Merzouga Desert: Erg Chebbi Camp",
-      "Explore Dades & Todra: Canyons",
-      "Explore Ouarzazate: Cinema City"
+      "Meeting Point: At your hotel or Airport.",
+      "Starting Location: Casablanca",
+      "Ending Location: Casablanca or Marrakech"
     ],
     "inclusions": [
       "Transportation by Air-conditioned 4WD or Minivan",
@@ -2024,11 +2111,7 @@ export const tours: Tour[] = [
       "Professional driver/guide during the tour",
       "11 nights Accommodation in Riads & Kasbah (Breakfast and dinner)",
       "One night in a Traditional Berber Tents (HB).",
-      "Camel Ride (Camel per each individual)",
-      "Lunch",
-      "Tips",
-      "Drinks and personal items",
-      "Airline tickets"
+      "Camel Ride (Camel per each individual)"
     ],
     "exclusions": [
       "Lunch",
@@ -2302,21 +2385,25 @@ export const tours: Tour[] = [
     "title": "BEST 12 DAYS MOROCCO TOUR FROM CASABLANCA | Sahara Star Tours",
     "shortTitle": "Best 12 Days Morocco Tour From Casablanca",
     "description": "Embark on the ultimate 16-day luxury tour across Morocco from Casablanca. Experience imperial cities, Chefchaouen, Sahara desert glamping, and Marrakech.",
+    "aboutHtml": "Embark on the ultimate BEST 12 DAYS MOROCCO TOUR FROM CASABLANCA, a meticulously crafted journey designed to showcase the very best of Morocco. As a leading Moroccan travel agency, Sahara Star Tours invites you to experience an unforgettable expedition blending rich cultural heritage, breathtaking landscapes, and premium comfort. From the bustling ancient medinas and vibrant souks of our imperial cities to the serene majesty of the Sahara Desert, this itinerary captures the soul of Morocco. <br/><br/> <br/><br/>Whether you're traversing the dramatic peaks of the High Atlas Mountains, riding camels into the golden dunes of Merzouga at sunset, or resting in luxury desert camps and authentic riads, every moment is optimized for authentic immersion. Perfect for couples, families, and adventurous travelers, this tour offers a seamless, stress-free vacation with professional local guides, private air-conditioned transportation, and exclusive access to hidden gems. Book your BEST 12 DAYS MOROCCO TOUR FROM CASABLANCA today and discover the magic of Morocco.",
     "category": "desert-tours",
     "duration": "12 Days / 11 Nights",
     "durationDays": 12,
     "startingFrom": "Casablanca",
     "price": "From $1,490/person",
-    "heroImage": "/assets/tour_12day_grand.png",
+    "heroImage": "/sahara-star-tours/desert-tours/12-days-morocco-tour/images/thumbnail.webp",
     "highlights": [
-      "Explore Casablanca: Arrival",
-      "Explore Rabat: Capital",
-      "Explore Tangier: Strait of Gibraltar",
-      "Explore Chefchaouen: Blue Mountain Town",
-      "Explore Fes: Medieval Medina",
-      "Explore Merzouga Desert: Erg Chebbi Camp",
-      "Explore Dades & Todra: Canyons",
-      "Explore Ouarzazate: Cinema City"
+      "Cultural Immersion",
+      "Historic Cities",
+      "Sahara Desert Adventure",
+      "Atlas Mountains Excursion",
+      "Blue Pearl of Chefchaouen",
+      "Coastal Charms of Essaouira",
+      "Traditional Cuisine",
+      "Local Interactions",
+      "UNESCO World Heritage Sites",
+      "Shopping in Souks",
+      "Leisure and Relaxation"
     ],
     "inclusions": [
       "Guided city tours and monument fees",
@@ -2326,15 +2413,7 @@ export const tours: Tour[] = [
       "Dinner at a local restaurant in Marrakech with Music and Moroccan dancing",
       "Half board during the tour",
       "Fuel",
-      "11 Breakfasts and 5 dinners in the desert",
-      "Airline taxes",
-      "Lunch",
-      "Drinks",
-      "Flights",
-      "Gratuities",
-      "Travel Insurance, medical emergency",
-      "Tips to guide and driver (optional)",
-      "Anything not stated in included part"
+      "11 Breakfasts and 5 dinners in the desert"
     ],
     "exclusions": [
       "Airline taxes",
@@ -2612,21 +2691,19 @@ export const tours: Tour[] = [
     "title": "PRIVATE 12 DAYS TRIP TO DESERT & MARRAKECH | Sahara Star Tours",
     "shortTitle": "Private 12 Days Trip To Desert & Marrakech",
     "description": "Embark on the ultimate 16-day luxury tour across Morocco from Casablanca. Experience imperial cities, Chefchaouen, Sahara desert glamping, and Marrakech.",
+    "aboutHtml": "Embark on a captivating 12-day adventure from Casablanca, exploring the stunning landscapes of northern Morocco and venturing into the magical Sahara Desert. 11 Nights from Casablanca Over Morocco",
     "category": "desert-tours",
     "duration": "12 Days / 11 Nights",
     "durationDays": 12,
     "startingFrom": "Casablanca",
     "price": "From $1,550/person",
-    "heroImage": "/assets/tour_12day_desert.png",
+    "heroImage": "/sahara-star-tours/desert-tours/private-12-days-trip-to-desert-marrakech/images/thumbnail.jpg",
     "highlights": [
-      "Explore Casablanca: Arrival",
-      "Explore Rabat: Capital",
-      "Explore Tangier: Strait of Gibraltar",
-      "Explore Chefchaouen: Blue Mountain Town",
-      "Explore Fes: Medieval Medina",
-      "Explore Merzouga Desert: Erg Chebbi Camp",
-      "Explore Dades & Todra: Canyons",
-      "Explore Ouarzazate: Cinema City"
+      "Immerse yourself in the unique culture & ambiance of Chefchaouen From Casablana",
+      "Experience the rich heritage of Fes, one of the world’s oldest cities",
+      "Travel from Midelt to Merzouga, passing through the picturesque Ziz Valley",
+      "Enjoy the luxury accommodations of Merzouga Dunes Luxury Camps With Camel ride",
+      "Explore the vibrant city of Marrakech, known for its rich history and culture"
     ],
     "inclusions": [
       "Guided city tours and monument fees",
@@ -2636,15 +2713,7 @@ export const tours: Tour[] = [
       "Dinner at a local restaurant in Marrakech with Music and Moroccan dancing",
       "Half board during the tour",
       "Fuel",
-      "11 Breakfasts and 5 dinners in the desert",
-      "Airline taxes",
-      "Lunch",
-      "Drinks",
-      "Flights",
-      "Gratuities",
-      "Travel Insurance, medical emergency",
-      "Tips to guide and driver (optional)",
-      "Anything not stated in included part"
+      "11 Breakfasts and 5 dinners in the desert"
     ],
     "exclusions": [
       "Airline taxes",
@@ -2918,31 +2987,23 @@ export const tours: Tour[] = [
     "title": "16 DAYS MOROCCO TOUR FROM CASABLANCA | Sahara Star Tours",
     "shortTitle": "16 Days Morocco Tour From Casablanca",
     "description": "Embark on the ultimate 16-day luxury tour across Morocco from Casablanca. Experience imperial cities, Chefchaouen, Sahara desert glamping, and Marrakech.",
+    "aboutHtml": "Book with us this complete 16 day Tour from Casablanca and travel with confidence. The itinerary will bring together many places and cultural aspects of Morocco.<br/><br/>You will experience the warmth of Moroccan people and different attractions with changing colors from North to Southern Morocco. This Moroccan itinerary mixes different areas of Morocco from the urban Northern Morocco to the mysterious Sahara Desert and the vibrant Markets of Fes &amp; Marrakech.<br/><br/>Walk in the impressive Todgha gorges at the high Atlas Mountains, take a camel trek in Merzouga desert, visit less frequented places and learn about the fortified villages.",
     "category": "desert-tours",
     "duration": "16 Days / 15 Nights",
     "durationDays": 16,
     "startingFrom": "Casablanca",
     "price": "From $1,890/person",
-    "heroImage": "/assets/tour_16day_casablanca.png",
+    "heroImage": "/sahara-star-tours/desert-tours/16-days-morocco-tour-from-casablanca/images/thumbnail.jpg",
     "highlights": [
-      "Explore Casablanca: Atlantic Start",
-      "Explore Rabat: Capital",
-      "Explore Tangier: Northern Gateway",
-      "Explore Chefchaouen: Blue Pearl",
-      "Explore Fes: Spiritual Capital",
-      "Explore Merzouga Sahara: Erg Chebbi Dunes",
-      "Explore Dades Gorges: Dramatic Canyons",
-      "Explore Ouarzazate: Kasbah Road"
+      "Visit main big cities of Morocco: Economical and political capitals, respectively Casablanca and Rabat.",
+      "Feel the magic of camel trekking through the breathtaking Sahara Dunes in Merzouga, immersing yourself in the awe-inspiring beauty of the desert.",
+      "Tour the North of Morocco and experience Tangier and Chefchaouen.",
+      "Stay in the desert and enjoy camping and the beautiful sand dunes of Sahara.",
+      "walk in Todgha gorges and visit Kasbah and villages and meet hospitable villagers.",
+      "Get lost in the medina of Marrakech, and enjoy its charms, colors, scents, alleys, souks and finest arts.",
+      "Refine your Morocco itinerary with a visit to Essaouira and learn its history and see its Unesco medina."
     ],
     "inclusions": [
-      "Airline taxes",
-      "Lunch",
-      "Drinks",
-      "Flights",
-      "Gratuities",
-      "Travel Insurance, medical emergency",
-      "Tips to guide and driver (optional)",
-      "Anything not stated in included part",
       "Airline taxes",
       "Lunch",
       "Drinks",
@@ -3270,20 +3331,17 @@ export const tours: Tour[] = [
     "title": "3 DAYS DESERT TOUR FROM MARRAKECH TO FES | Sahara Star Tours",
     "shortTitle": "3 Days Desert Tour From Marrakech To Fes",
     "description": "Embark on the ultimate 16-day luxury tour across Morocco from Casablanca. Experience imperial cities, Chefchaouen, Sahara desert glamping, and Marrakech.",
+    "aboutHtml": "Embark on the ultimate 3 DAYS DESERT TOUR FROM MARRAKECH TO FES, a meticulously crafted journey designed to showcase the very best of Morocco. As a leading Moroccan travel agency, Sahara Star Tours invites you to experience an unforgettable expedition blending rich cultural heritage, breathtaking landscapes, and premium comfort. From the bustling ancient medinas and vibrant souks of our imperial cities to the serene majesty of the Sahara Desert, this itinerary captures the soul of Morocco. <br/><br/> <br/><br/>Whether you're traversing the dramatic peaks of the High Atlas Mountains, riding camels into the golden dunes of Merzouga at sunset, or resting in luxury desert camps and authentic riads, every moment is optimized for authentic immersion. Perfect for couples, families, and adventurous travelers, this tour offers a seamless, stress-free vacation with professional local guides, private air-conditioned transportation, and exclusive access to hidden gems. Book your 3 DAYS DESERT TOUR FROM MARRAKECH TO FES today and discover the magic of Morocco.",
     "category": "desert-tours",
     "duration": "3 Days / 2 Nights",
     "durationDays": 3,
     "startingFrom": "Marrakech",
     "price": "From $420/person",
-    "heroImage": "/assets/tour_3day_marrakech.png",
+    "heroImage": "/sahara-star-tours/desert-tours/3-days-desert-tour-from-marrakech-to-fes/images/thumbnail.jpg",
     "highlights": [
-      "Explore Marrakech: Departure over High Atlas",
-      "Explore Ait Benhaddou: UNESCO World Heritage",
-      "Explore Dades Valley: Valley of Thousand Kasbahs",
-      "Explore Todra Gorges: Limestone Rock Canyon",
-      "Explore Merzouga Sahara: Erg Chebbi Luxury Camp",
-      "Explore Midelt & Cedar Forest: Middle Atlas Mountains",
-      "Explore Fes: Spiritual Capital Finale"
+      "Meeting Point: At your hotel or Airport.",
+      "Starting Location: Marrakech",
+      "Ending Location: Fes"
     ],
     "inclusions": [
       "Private Transport with A/C 4×4 or Van",
@@ -3292,11 +3350,7 @@ export const tours: Tour[] = [
       "2 Nights in Riad & Kasbah (Dinner & Breakfast)",
       "Camel Ride in Desert",
       "Sandboarding in Dunes (Free & Optional)",
-      "1 Night in Desert (Dinner & Breakfast)",
-      "Drinks",
-      "Lunches",
-      "Flight Tickets",
-      "Tips"
+      "1 Night in Desert (Dinner & Breakfast)"
     ],
     "exclusions": [
       "Drinks",
@@ -3496,20 +3550,19 @@ export const tours: Tour[] = [
     "title": "IDEAL 4 DAYS MARRAKECH DESERT TOUR TO MERZOUGA: MOROCCO TRIP | Sahara Star Tours",
     "shortTitle": "Ideal 4 Days Marrakech Desert Tour To Merzouga: Morocco Trip",
     "description": "Embark on the ultimate 16-day luxury tour across Morocco from Casablanca. Experience imperial cities, Chefchaouen, Sahara desert glamping, and Marrakech.",
+    "aboutHtml": "Embark on the ultimate IDEAL 4 DAYS MARRAKECH DESERT TOUR TO MERZOUGA: MOROCCO TRIP, a meticulously crafted journey designed to showcase the very best of Morocco. As a leading Moroccan travel agency, Sahara Star Tours invites you to experience an unforgettable expedition blending rich cultural heritage, breathtaking landscapes, and premium comfort. From the bustling ancient medinas and vibrant souks of our imperial cities to the serene majesty of the Sahara Desert, this itinerary captures the soul of Morocco. <br/><br/> <br/><br/>Whether you're traversing the dramatic peaks of the High Atlas Mountains, riding camels into the golden dunes of Merzouga at sunset, or resting in luxury desert camps and authentic riads, every moment is optimized for authentic immersion. Perfect for couples, families, and adventurous travelers, this tour offers a seamless, stress-free vacation with professional local guides, private air-conditioned transportation, and exclusive access to hidden gems. Book your IDEAL 4 DAYS MARRAKECH DESERT TOUR TO MERZOUGA: MOROCCO TRIP today and discover the magic of Morocco.",
     "category": "desert-tours",
     "duration": "4 Days / 3 Nights",
     "durationDays": 4,
     "startingFrom": "Marrakech",
     "price": "From $540/person",
-    "heroImage": "/assets/tour_4day_marrakech.png",
+    "heroImage": "/sahara-star-tours/desert-tours/4-days-marrakech-desert-tour/images/thumbnail.jpg",
     "highlights": [
-      "Explore Marrakech: Departure over High Atlas",
-      "Explore Ait Benhaddou: UNESCO World Heritage",
-      "Explore Dades Valley: Valley of Thousand Kasbahs",
-      "Explore Todra Gorges: Limestone Rock Canyon",
-      "Explore Merzouga Sahara: Erg Chebbi Luxury Camp",
-      "Explore Ouarzazate: Atlas Film Studios",
-      "Explore Marrakech: Return Transfer"
+      "Trek camels and camp in the Desert",
+      "Discover where popular Hollywood movies have been shot",
+      "Stroll in the cinema studio and take pictures",
+      "Taste Berber food and meet locals",
+      "Learn about Moroccan culture from our drivers along the way"
     ],
     "inclusions": [
       "Hotels & accommodation (3 nights)",
@@ -3519,15 +3572,7 @@ export const tours: Tour[] = [
       "Desert camping",
       "Fuel & parking, & all car’s related fees",
       "3 dinners in the desert, Boumaln and Ouarzazate",
-      "3 Breakfasts",
-      "Airline taxes",
-      "Lunch",
-      "Drinks",
-      "Flights",
-      "Gratuities",
-      "Travel Insurance, medical emergency",
-      "Tips to guide and driver (optional)",
-      "Anything not stated in included part"
+      "3 Breakfasts"
     ],
     "exclusions": [
       "Airline taxes",
@@ -3720,20 +3765,21 @@ export const tours: Tour[] = [
     "title": "5 DAYS TOUR FROM MARRAKECH TO MERZOUGA DESERT | Sahara Star Tours",
     "shortTitle": "5 Days Tour From Marrakech To Merzouga Desert",
     "description": "Embark on the ultimate 16-day luxury tour across Morocco from Casablanca. Experience imperial cities, Chefchaouen, Sahara desert glamping, and Marrakech.",
+    "aboutHtml": "Embark on the ultimate 5 DAYS TOUR FROM MARRAKECH TO MERZOUGA DESERT, a meticulously crafted journey designed to showcase the very best of Morocco. As a leading Moroccan travel agency, Sahara Star Tours invites you to experience an unforgettable expedition blending rich cultural heritage, breathtaking landscapes, and premium comfort. From the bustling ancient medinas and vibrant souks of our imperial cities to the serene majesty of the Sahara Desert, this itinerary captures the soul of Morocco. <br/><br/> <br/><br/>Whether you're traversing the dramatic peaks of the High Atlas Mountains, riding camels into the golden dunes of Merzouga at sunset, or resting in luxury desert camps and authentic riads, every moment is optimized for authentic immersion. Perfect for couples, families, and adventurous travelers, this tour offers a seamless, stress-free vacation with professional local guides, private air-conditioned transportation, and exclusive access to hidden gems. Book your 5 DAYS TOUR FROM MARRAKECH TO MERZOUGA DESERT today and discover the magic of Morocco.",
     "category": "desert-tours",
     "duration": "5 Days / 4 Nights",
     "durationDays": 5,
     "startingFrom": "Marrakech",
     "price": "From $680/person",
-    "heroImage": "/assets/tour_5day_merzouga.png",
+    "heroImage": "/sahara-star-tours/desert-tours/5-days-tour-from-marrakech-to-merzouga/images/thumbnail.jpg",
     "highlights": [
-      "Explore Marrakech: Departure over High Atlas",
-      "Explore Ait Benhaddou: UNESCO World Heritage",
-      "Explore Dades Valley: Valley of Thousand Kasbahs",
-      "Explore Todra Gorges: Limestone Rock Canyon",
-      "Explore Merzouga Sahara: Erg Chebbi Luxury Camp",
-      "Explore Ouarzazate: Atlas Film Studios",
-      "Explore Marrakech: Return Transfer"
+      "Explore the UNESCO World Heritage ancient Medinas and vibrant souks",
+      "Traverse the majestic High Atlas Mountains via the scenic Tizi n'Tichka pass",
+      "Visit the legendary Kasbah Ait Ben Haddou, famous for Hollywood blockbusters",
+      "Experience an authentic sunset camel trek across the golden Sahara dunes",
+      "Spend a magical night glamping under the stars in a luxury desert camp",
+      "Discover breathtaking oases, dramatic gorges (Todra & Dades), and lush valleys",
+      "Indulge in authentic Moroccan cuisine and traditional Berber hospitality"
     ],
     "inclusions": [
       "Pick-up and drop-off at your airport, hotel, or riad",
@@ -3743,14 +3789,7 @@ export const tours: Tour[] = [
       "1 Night in a Luxury Desert Camp in the Sahara (private tent with ensuite bathroom)",
       "Sunset and sunrise camel trekking in the desert (one camel per person)",
       "Daily breakfasts and specified dinners (refer to itinerary)",
-      "Local taxes and fuel surcharges",
-      "International flight tickets",
-      "Travel and medical insurance",
-      "Lunches and mid-day snacks",
-      "Beverages and drinks during meals",
-      "Entrance fees to historical monuments and museums",
-      "Gratuities and tips for guides/drivers",
-      "Personal expenses and souvenirs"
+      "Local taxes and fuel surcharges"
     ],
     "exclusions": [
       "International flight tickets",
@@ -3947,21 +3986,21 @@ export const tours: Tour[] = [
     "title": "11 DAYS MOROCCO CLASSIC TOUR – PRIVATE TOUR PACKAGE | Sahara Star Tours",
     "shortTitle": "11 Days Morocco Classic Tour – Private Tour Package",
     "description": "Embark on the ultimate 16-day luxury tour across Morocco from Casablanca. Experience imperial cities, Chefchaouen, Sahara desert glamping, and Marrakech.",
+    "aboutHtml": "Embark on the ultimate 11 DAYS MOROCCO CLASSIC TOUR – PRIVATE TOUR PACKAGE, a meticulously crafted journey designed to showcase the very best of Morocco. As a leading Moroccan travel agency, Sahara Star Tours invites you to experience an unforgettable expedition blending rich cultural heritage, breathtaking landscapes, and premium comfort. From the bustling ancient medinas and vibrant souks of our imperial cities to the serene majesty of the Sahara Desert, this itinerary captures the soul of Morocco. <br/><br/> <br/><br/>Whether you're traversing the dramatic peaks of the High Atlas Mountains, riding camels into the golden dunes of Merzouga at sunset, or resting in luxury desert camps and authentic riads, every moment is optimized for authentic immersion. Perfect for couples, families, and adventurous travelers, this tour offers a seamless, stress-free vacation with professional local guides, private air-conditioned transportation, and exclusive access to hidden gems. Book your 11 DAYS MOROCCO CLASSIC TOUR – PRIVATE TOUR PACKAGE today and discover the magic of Morocco.",
     "category": "imperial-cities",
     "duration": "11 Days / 10 Nights",
     "durationDays": 11,
     "startingFrom": "Casablanca",
     "price": "From $1,350/person",
-    "heroImage": "/assets/tour_10day_imperial.png",
+    "heroImage": "/sahara-star-tours/imperial-cities/11-days-morocco-classic-tour/images/thumbnail.jpg",
     "highlights": [
-      "Explore Casablanca: Hassan II Mosque",
-      "Explore Rabat: Historic Capital",
-      "Explore Chefchaouen: Blue City of the Rif",
-      "Explore Fes Medina: Spiritual Capital",
-      "Explore Merzouga Sahara: Erg Chebbi Dunes",
-      "Explore Dades Gorge: Atlas Canyons",
-      "Explore Marrakech: Imperial Red City",
-      "Explore Casablanca: Departure"
+      "Explore the UNESCO World Heritage ancient Medinas and vibrant souks",
+      "Traverse the majestic High Atlas Mountains via the scenic Tizi n'Tichka pass",
+      "Visit the legendary Kasbah Ait Ben Haddou, famous for Hollywood blockbusters",
+      "Experience an authentic sunset camel trek across the golden Sahara dunes",
+      "Spend a magical night glamping under the stars in a luxury desert camp",
+      "Discover breathtaking oases, dramatic gorges (Todra & Dades), and lush valleys",
+      "Indulge in authentic Moroccan cuisine and traditional Berber hospitality"
     ],
     "inclusions": [
       "Pick-up and drop-off at your airport, hotel, or riad",
@@ -3971,14 +4010,7 @@ export const tours: Tour[] = [
       "1 Night in a Luxury Desert Camp in the Sahara (private tent with ensuite bathroom)",
       "Sunset and sunrise camel trekking in the desert (one camel per person)",
       "Daily breakfasts and specified dinners (refer to itinerary)",
-      "Local taxes and fuel surcharges",
-      "International flight tickets",
-      "Travel and medical insurance",
-      "Lunches and mid-day snacks",
-      "Beverages and drinks during meals",
-      "Entrance fees to historical monuments and museums",
-      "Gratuities and tips for guides/drivers",
-      "Personal expenses and souvenirs"
+      "Local taxes and fuel surcharges"
     ],
     "exclusions": [
       "International flight tickets",
@@ -4228,21 +4260,21 @@ export const tours: Tour[] = [
     "title": "THE BEST MOROCCO ITINERARY 13 DAYS CASABLANCA TOUR | Sahara Star Tours",
     "shortTitle": "The Best Morocco Itinerary 13 Days Casablanca Tour",
     "description": "Embark on the ultimate 16-day luxury tour across Morocco from Casablanca. Experience imperial cities, Chefchaouen, Sahara desert glamping, and Marrakech.",
+    "aboutHtml": "Embark on the ultimate THE BEST MOROCCO ITINERARY 13 DAYS CASABLANCA TOUR, a meticulously crafted journey designed to showcase the very best of Morocco. As a leading Moroccan travel agency, Sahara Star Tours invites you to experience an unforgettable expedition blending rich cultural heritage, breathtaking landscapes, and premium comfort. From the bustling ancient medinas and vibrant souks of our imperial cities to the serene majesty of the Sahara Desert, this itinerary captures the soul of Morocco. <br/><br/> <br/><br/>Whether you're traversing the dramatic peaks of the High Atlas Mountains, riding camels into the golden dunes of Merzouga at sunset, or resting in luxury desert camps and authentic riads, every moment is optimized for authentic immersion. Perfect for couples, families, and adventurous travelers, this tour offers a seamless, stress-free vacation with professional local guides, private air-conditioned transportation, and exclusive access to hidden gems. Book your THE BEST MOROCCO ITINERARY 13 DAYS CASABLANCA TOUR today and discover the magic of Morocco.",
     "category": "imperial-cities",
     "duration": "13 Days / 12 Nights",
     "durationDays": 13,
     "startingFrom": "Casablanca",
     "price": "From $1,590/person",
-    "heroImage": "/assets/tour_12day_casablanca.png",
+    "heroImage": "/sahara-star-tours/imperial-cities/itinerary-13-days-casablanca-tour/images/thumbnail.jpg",
     "highlights": [
-      "Explore Casablanca: Arrival",
-      "Explore Rabat: Capital",
-      "Explore Tangier: Strait of Gibraltar",
-      "Explore Chefchaouen: Blue Mountain Town",
-      "Explore Fes: Medieval Medina",
-      "Explore Merzouga Desert: Erg Chebbi Camp",
-      "Explore Dades & Todra: Canyons",
-      "Explore Ouarzazate: Cinema City"
+      "Explore the UNESCO World Heritage ancient Medinas and vibrant souks",
+      "Traverse the majestic High Atlas Mountains via the scenic Tizi n'Tichka pass",
+      "Visit the legendary Kasbah Ait Ben Haddou, famous for Hollywood blockbusters",
+      "Experience an authentic sunset camel trek across the golden Sahara dunes",
+      "Spend a magical night glamping under the stars in a luxury desert camp",
+      "Discover breathtaking oases, dramatic gorges (Todra & Dades), and lush valleys",
+      "Indulge in authentic Moroccan cuisine and traditional Berber hospitality"
     ],
     "inclusions": [
       "Pick-up and drop-off at your airport, hotel, or riad",
@@ -4252,14 +4284,7 @@ export const tours: Tour[] = [
       "1 Night in a Luxury Desert Camp in the Sahara (private tent with ensuite bathroom)",
       "Sunset and sunrise camel trekking in the desert (one camel per person)",
       "Daily breakfasts and specified dinners (refer to itinerary)",
-      "Local taxes and fuel surcharges",
-      "International flight tickets",
-      "Travel and medical insurance",
-      "Lunches and mid-day snacks",
-      "Beverages and drinks during meals",
-      "Entrance fees to historical monuments and museums",
-      "Gratuities and tips for guides/drivers",
-      "Personal expenses and souvenirs"
+      "Local taxes and fuel surcharges"
     ],
     "exclusions": [
       "International flight tickets",
@@ -4557,21 +4582,27 @@ export const tours: Tour[] = [
     "title": "15 DAYS TOUR FROM CASABLANCA | Sahara Star Tours",
     "shortTitle": "15 Days Tour From Casablanca",
     "description": "Embark on the ultimate 16-day luxury tour across Morocco from Casablanca. Experience imperial cities, Chefchaouen, Sahara desert glamping, and Marrakech.",
+    "aboutHtml": "All of Morocco’s greatest sites are included in this 15-day tour from Casablanca. This tour combines authenticity and modernity as well as culture and exploration. You won’t miss anything during your fifteen days in Morocco.<br/><br/>Depending on your flight information, the journey starts and concludes in Casablanca or Marrakech. We will travel to a lot of different destinations like Merzouga; which is the most important and memorable stop on your journey to Morocco. We will take you on an exciting camel ride to the heart of the desert and spend a night with nomads.<br/><br/>Just after that, you will travel with us to the mythical city of salves, Yunkai (Ait Benhaddou), as reported in the Game of Thrones; to Pentos (Essaouira), the Free City located across the Sea of Westeros; and to Astapor (Ouarzazate), one of the three great city-states of Slaver’s Bay. The journey with us takes you back in time to the land of Dragons, and exotic Morocco.<br/><br/>If you are a fan of culture and history, Fes, Marrakech, Rabat, Volubilis, and Meknes have a lot to offer. You will lose the sense of time while strolling through the maze of old medinas formed by the narrow streets and aromatic shops. At some point, you may start to wonder how intact the city’s buildings still are. Amazingly, apart from electricity, only few indications show that life has changed in some places since ancient times.",
     "category": "imperial-cities",
     "duration": "15 Days / 14 Nights",
     "durationDays": 15,
     "startingFrom": "Casablanca",
     "price": "From $1,750/person",
-    "heroImage": "/assets/tour_16day_casablanca.png",
+    "heroImage": "/sahara-star-tours/imperial-cities/15-days-tour-from-casablanca/images/thumbnail.jpg",
     "highlights": [
-      "Explore Casablanca: Atlantic Start",
-      "Explore Rabat: Capital",
-      "Explore Tangier: Northern Gateway",
-      "Explore Chefchaouen: Blue Pearl",
-      "Explore Fes: Spiritual Capital",
-      "Explore Merzouga Sahara: Erg Chebbi Dunes",
-      "Explore Dades Gorges: Dramatic Canyons",
-      "Explore Ouarzazate: Kasbah Road"
+      "Experience a night the heart of the Desert",
+      "Trek camels and visit the nomad families",
+      "Take pictures with the Barbary monkeys in Azrou",
+      "Visit the Hassan 2 Mosque in Casablanca",
+      "Visit the historical sites in Rabat",
+      "Discover the blue city of Chefchaouen",
+      "Guided visit of the Roman ruins in Volubilis",
+      "Guided visit of Meknes, Fes, & Marrakech.",
+      "Watch Sunset over the sand dunes",
+      "Hearty dinner and party around the campfire (Berber Drums)",
+      "Visit one of the popular cinema studios in the world",
+      "Visit the UNESCO world heritage sites",
+      "Visit Essaouira, Taroudant, & Agadir"
     ],
     "inclusions": [
       "Guided city tours and monument fees",
@@ -4581,15 +4612,7 @@ export const tours: Tour[] = [
       "Dinner at a local restaurant in Marrakech with Music and Moroccan dancing",
       "Half board during the tour",
       "Fuel",
-      "14 Breakfasts and 4 dinners in the desert",
-      "Airline taxes",
-      "Lunch",
-      "Drinks",
-      "Flights",
-      "Gratuities",
-      "Travel Insurance, medical emergency",
-      "Tips to guide and driver (optional)",
-      "Anything not stated in included part"
+      "14 Breakfasts and 4 dinners in the desert"
     ],
     "exclusions": [
       "Airline taxes",
@@ -4908,26 +4931,25 @@ export const tours: Tour[] = [
     "title": "AGAFAY DESERT SUNSET CAMEL RIDE & DINNER UNDER THE STARS | Sahara Star Tours",
     "shortTitle": "Agafay Desert Sunset Camel Ride & Dinner Under The Stars",
     "description": "Embark on the ultimate 16-day luxury tour across Morocco from Casablanca. Experience imperial cities, Chefchaouen, Sahara desert glamping, and Marrakech.",
+    "aboutHtml": "Enjoy an unforgettable evening in the Agafay Desert with a sunset camel ride, traditional Moroccan dinner in a desert camp, and live Berber music around the campfire.",
     "category": "day-trips",
     "duration": "1 Day / Full Day Trip",
     "durationDays": 1,
     "startingFrom": "Marrakech",
     "price": "From $85/person",
-    "heroImage": "/assets/camel_trek_dunes.png",
+    "heroImage": "/sahara-star-tours/day-trips/agafay-desert-sunset-camel-ride-dinner-under-the-stars/images/thumbnail.jpg",
     "highlights": [
-      "Explore Marrakech: Departure",
-      "Explore Agafay Stone Desert: Camel Ride & White Dunes",
-      "Explore Luxury Desert Camp: Dinner Under the Stars"
+      "Magical sunset camel ride in the Agafay Desert with panoramic views of the Atlas Mountains.",
+      "Traditional Moroccan dinner (tajines, couscous, salads, dessert) served in a cozy desert camp under Berber tents.",
+      "Authentic cultural atmosphere with Berber music, drumming and live show around the campfire under the stars.",
+      "Small-group experience with hotel pick-up and drop-off from Marrakech in comfortable, air-conditioned transport.",
+      "Perfect evening for couples, families and friends who want a short desert escape without long driving hours."
     ],
     "inclusions": [
       "Private or small-group transfers from Marrakech",
       "Sunset camel ride across the Agafay Desert dunes",
       "Three-course traditional Moroccan dinner served in a luxury tent",
-      "Live campfire music and fire show",
-      "Personal expenses and souvenirs",
-      "Gratuities for your guide and driver (optional)",
-      "Extra meals and beverages not explicitly mentioned",
-      "Entrance fees to monuments (if any)"
+      "Live campfire music and fire show"
     ],
     "exclusions": [
       "Personal expenses and souvenirs",
@@ -5017,27 +5039,25 @@ export const tours: Tour[] = [
     "title": "ONE DAY TRIP FROM MARRAKECH TO ESSAOUIRA MOGADOR | Sahara Star Tours",
     "shortTitle": "One Day Trip From Marrakech To Essaouira Mogador",
     "description": "Embark on the ultimate 16-day luxury tour across Morocco from Casablanca. Experience imperial cities, Chefchaouen, Sahara desert glamping, and Marrakech.",
+    "aboutHtml": "One Day Trip from Marrakech to Essaouira Mogador<br/><br/>The day trip from Marrakech to Essaouira is a very interesting one, considering Essaouira itself is a very interesting coastal town.<br/><br/>We will begin this one day excursion at around 8 am by leaving Marrakech and going on a 3 hours long road trip to get to Essaouira city, which falls on the Atlantic coast.<br/><br/>We will enjoy a walk through the narrow streets of Essaouira’s Old Medina, which is a UNESCO world heritage site. Similarly, we will also enjoy a walk through the city ramparts along its golden beach. For lunch, we will try out of the many seafood dishes that the city specializes in.<br/><br/>Next, we will drive deep into Essaouira old Medina, exploring its small shops and artisanal crafts. We might visit one of the local women cooperatives that specialize in the production of Argan oil.<br/><br/>Finally, we will head back to the red city after a wonderful day of exploring the vibrant and charming city of Essaouira.",
     "category": "day-trips",
     "duration": "1 Day / Full Day Trip",
     "durationDays": 1,
     "startingFrom": "Marrakech",
     "price": "From $65/person",
-    "heroImage": "/assets/tangier_coast.png",
+    "heroImage": "/sahara-star-tours/day-trips/one-day-trip-from-marrakech-to-essaouira-mogador/images/thumbnail.jpeg",
     "highlights": [
-      "Explore Marrakech: Departure",
-      "Explore Argan Forest: Argan Oil Cooperative",
-      "Explore Essaouira Port: Historic Skala & Fishing Port",
-      "Explore Essaouira Medina: UNESCO Walled Medina"
+      "Coastal Road Trip: A beautiful drive along the Atlantic coast to Essaouira.",
+      "Essaouira Medina: Walk through the narrow streets of the Old Medina, a UNESCO World Heritage Site.",
+      "City Ramparts: Explore the fortified walls of the city overlooking its golden beach.",
+      "Seafood Lunch: Enjoy a fresh seafood meal in one of the local restaurants.",
+      "Artisanal Crafts: Browse the small shops for unique, handcrafted items, and visit a women’s cooperative producing Argan oil."
     ],
     "inclusions": [
       "Comfortable, air-conditioned transportation",
       "Visit to an Argan oil women's cooperative",
       "Free time to explore the Essaouira Medina and Ramparts",
-      "Stops for panoramic photos of the Atlantic coast",
-      "Personal expenses and souvenirs",
-      "Gratuities for your guide and driver (optional)",
-      "Extra meals and beverages not explicitly mentioned",
-      "Entrance fees to monuments (if any)"
+      "Stops for panoramic photos of the Atlantic coast"
     ],
     "exclusions": [
       "Personal expenses and souvenirs",
@@ -5150,27 +5170,24 @@ export const tours: Tour[] = [
     "title": "ONE DAY TRIP FROM MARRAKECH TO OUARZAZATE AND THE AIT BEN HADDOU KASBAH | Sahara Star Tours",
     "shortTitle": "One Day Trip From Marrakech To Ouarzazate And The Ait Ben Haddou Kasbah",
     "description": "Embark on the ultimate 16-day luxury tour across Morocco from Casablanca. Experience imperial cities, Chefchaouen, Sahara desert glamping, and Marrakech.",
+    "aboutHtml": "One Day Trip from Marrakech to Ouarzazate and the Ait Ben Haddou Kasbah<br/><br/>This day trip from Marrakech to Ouarzazate is one of the most popular ones among tourists in Morocco, since it includes a visit the famous Ait Ben Haddou Kasbah.<br/><br/>Our one day tour begins by leaving Marrakech and going on a road trip through the High Atlas Mountains, before getting to our first destination: the city of Ouarzazate. Ouarzazate, also called “The Hollywood of Morocco”, is home to Morocco’s largest film studios, which helped produce some important international movies.<br/><br/>Not far from the city of Ouarzazate is located one of Morocco’s most important historical monuments: the Kasbah of Ait Ben Haddou. This Kasbah holds great value in filmmaking history, since it is backdrop where many historical movies were made, such as Gladiator, Lawrence of Arabia and Kingdom of Heaven. The Ait Ben Haddou Kasbah is also a UNESCO world heritage site.<br/><br/>Finally, we will pay a short visit to the nearby Taourirt Kasbah, before heading back to Marrakech in the evening.",
     "category": "day-trips",
     "duration": "1 Day / Full Day Trip",
     "durationDays": 1,
     "startingFrom": "Marrakech",
     "price": "From $75/person",
-    "heroImage": "/assets/atlas_mountains_valley.png",
+    "heroImage": "/sahara-star-tours/day-trips/one-day-trip-from-marrakech-to-ouarzazate-and-the-ait-ben-haddou-/images/thumbnail.jpg",
     "highlights": [
-      "Explore Marrakech: Departure",
-      "Explore Tizi n'Tichka: High Atlas Pass (2,260m)",
-      "Explore Kasbah Ait Benhaddou: UNESCO World Heritage Fortress",
-      "Explore Ouarzazate Film Studios: Hollywood of Africa"
+      "High Atlas Mountains: A scenic drive through the mountains with stunning views.",
+      "Ouarzazate: Visit Morocco’s “Hollywood,” home to the largest film studios in the country.",
+      "Ait Ben Haddou Kasbah: Explore the UNESCO World Heritage Site, a historical marvel and iconic film location.",
+      "Taourirt Kasbah: A short visit to this nearby kasbah, rich in history and architecture."
     ],
     "inclusions": [
       "Scenic drive across the High Atlas Mountains via Tizi n'Tichka pass",
       "Guided visit to the UNESCO World Heritage Kasbah Ait Ben Haddou",
       "Stop at Ouarzazate (Hollywood of Africa) and Taourirt Kasbah",
-      "English-speaking driver and guide",
-      "Personal expenses and souvenirs",
-      "Gratuities for your guide and driver (optional)",
-      "Extra meals and beverages not explicitly mentioned",
-      "Entrance fees to monuments (if any)"
+      "English-speaking driver and guide"
     ],
     "exclusions": [
       "Personal expenses and souvenirs",
@@ -5279,26 +5296,26 @@ export const tours: Tour[] = [
     "title": "ONE DAY TRIP FROM MARRAKECH TO THE OUZOUD WATERFALLS AND BERBER VILLAGES | Sahara Star Tours",
     "shortTitle": "One Day Trip From Marrakech To The Ouzoud Waterfalls And Berber Villages",
     "description": "Embark on the ultimate 16-day luxury tour across Morocco from Casablanca. Experience imperial cities, Chefchaouen, Sahara desert glamping, and Marrakech.",
+    "aboutHtml": "One Day Trip from Marrakech to the Ouzoud Waterfalls and Berber Villages<br/><br/>This day trip from Marrakech to the Ouzoud waterfalls and Atlas Mountains is a fantastic way to discover the area and learn more about Morocco’s natural resources, without having to get too far away from Marrakech.<br/><br/>The tour will begin at around 8 in the morning, when we leave Marrakech in the direction of the Haouz region. Of course, you will be guided through this tour by an English speaking driver to facilitate communication with the locals. This exciting road trip is going to take us through many small Berber villages, where you can feel the simple and relaxed lifestyle of the locals. Through the Middle Atlas Mountains, we will finally get to our destination: the Ouzoud waterfalls.<br/><br/>Hiking through the surrounding area to the waterfall is a magical experience, since it allows you to witness up close the greatness of the 110 meters tall waterfalls. We might also see some wild Macaque monkeys since they inhabit the area. If you feel like it, you can totally go for a swim at the river, which is clean but cold (perfect for a hot summer day)!<br/><br/>We will have a traditional lunch at one of the restaurants in place run by Berber locals, then continue relaxing and enjoying our time at the waterfall before finally returning to Marrakech",
     "category": "day-trips",
     "duration": "1 Day / Full Day Trip",
     "durationDays": 1,
     "startingFrom": "Marrakech",
     "price": "From $60/person",
-    "heroImage": "/assets/atlas_mountains_valley.png",
+    "heroImage": "/sahara-star-tours/day-trips/one-day-trip-from-marrakech-to-the-ouzoud-waterfalls-and-berber-/images/thumbnail.jpg",
     "highlights": [
-      "Explore Marrakech: Departure",
-      "Explore Middle Atlas Foothills: Berber Villages",
-      "Explore Ouzoud Waterfalls: 110m Cascades & Barbary Apes"
+      "Scenic Road Trip: Enjoy picturesque views of Berber villages and the Middle Atlas Mountains.",
+      "Ouzoud Waterfalls: Experience the majesty of Morocco’s tallest waterfalls (110 meters).",
+      "Wildlife: Spot wild Macaque monkeys in their natural habitat.",
+      "Hiking: Take a scenic hike around the falls, offering breathtaking views.",
+      "Swimming: Refresh yourself in the river at the base of the waterfalls.",
+      "Traditional Berber Lunch: Savor a delicious meal prepared by locals at a nearby restaurant."
     ],
     "inclusions": [
       "Transportation in an air-conditioned vehicle",
       "Scenic drive through Berber villages and olive groves",
       "Guided hike down to the spectacular Ouzoud Waterfalls",
-      "Opportunity to see wild Barbary macaque monkeys",
-      "Personal expenses and souvenirs",
-      "Gratuities for your guide and driver (optional)",
-      "Extra meals and beverages not explicitly mentioned",
-      "Entrance fees to monuments (if any)"
+      "Opportunity to see wild Barbary macaque monkeys"
     ],
     "exclusions": [
       "Personal expenses and souvenirs",
@@ -5392,29 +5409,27 @@ export const tours: Tour[] = [
     "title": "ONE DAY GUIDED TOUR OF MARRAKECH CITY | Sahara Star Tours",
     "shortTitle": "One Day Guided Tour Of Marrakech City",
     "description": "Embark on the ultimate 16-day luxury tour across Morocco from Casablanca. Experience imperial cities, Chefchaouen, Sahara desert glamping, and Marrakech.",
+    "aboutHtml": "This exciting day tour is going to take us through Marrakech’s most important attractions and monuments. With the help of an experienced local guide, we will uncover all of this red city’s secret gems.<br/><br/>After we pick you up in the morning, we will start by discovering the Majorelle botanical garden and its founder Jacques Majorelle. After his death, the famous designer Yves Saint Laurent purchased the garden and opened it to the public. The Majorelle garden is the result of Jacques Majorelle’s life-long work, containing both exotic and native species of plants and flowers all over it. While we’re here, we can also visit the Berber museum located inside the property. Then, we will head to the Old Medina to have lunch at one of the traditional restaurants.<br/><br/>After lunch, we will continue our tour by visiting the famous Bahia palace, with its intricate designs and traditional architecture. Next on our schedule is the Jewish quarter, which has a special vibe on its own; and the Saadian Tombs, which are a remnant of the 15th century during the reign of the Sultan Ahmed El Mansour.<br/><br/>Finally, we will end our tour by a visit to the famous Jamaa El Fna square, where the heritage and different arts of Morocco are showcased.",
     "category": "day-trips",
     "duration": "1 Day / Full Day Trip",
     "durationDays": 1,
     "startingFrom": "Marrakech",
     "price": "From $55/person",
-    "heroImage": "/assets/marrakech_riad_pool.png",
+    "heroImage": "/sahara-star-tours/day-trips/one-day-guided-tour-of-marrakech-city/images/thumbnail.jpg",
     "highlights": [
-      "Explore Koutoubia Mosque: 12th Century Minaret",
-      "Explore Bahia Palace: Grand Vizier Residence",
-      "Explore Saadian Tombs: Mausoleum of the Dynasty",
-      "Explore Ben Youssef Medersa: Islamic College",
-      "Explore Jemaa El-Fna: UNESCO Square",
-      "Explore Majorelle Garden: Yves Saint Laurent Botanical Oasis"
+      "Majorelle Garden: Visit the stunning botanical garden created by Jacques Majorelle, later restored by Yves Saint Laurent.",
+      "Berber Museum: Discover the rich history and culture of Morocco’s Berber people.",
+      "Old Medina: Enjoy a traditional Moroccan lunch in the bustling heart of Marrakech.",
+      "Bahia Palace: Admire the beautiful architecture and intricate designs of this historic palace.",
+      "Jewish Quarter (Mellah): Experience the unique atmosphere of the Mellah district.",
+      "Saadian Tombs: Explore the royal tombs from the 15th century.",
+      "Jamaa El Fna Square: End your tour in the lively square, full of local artists, vendors, and street performers."
     ],
     "inclusions": [
       "Certified local Marrakech city guide",
       "Visit to Bahia Palace, Saadian Tombs, and Koutoubia Mosque",
       "Guided walking tour through the Medina and vibrant souks",
-      "Time for shopping and photography in Jemaa el-Fnaa square",
-      "Personal expenses and souvenirs",
-      "Gratuities for your guide and driver (optional)",
-      "Extra meals and beverages not explicitly mentioned",
-      "Entrance fees to monuments (if any)"
+      "Time for shopping and photography in Jemaa el-Fnaa square"
     ],
     "exclusions": [
       "Personal expenses and souvenirs",
@@ -5557,26 +5572,27 @@ export const tours: Tour[] = [
     "title": "OURIKA VALLEY NATURE & WILDLIFE TOUR | Sahara Star Tours",
     "shortTitle": "Ourika Valley Nature & Wildlife Tour",
     "description": "Embark on the ultimate 16-day luxury tour across Morocco from Casablanca. Experience imperial cities, Chefchaouen, Sahara desert glamping, and Marrakech.",
+    "aboutHtml": "Discover the natural beauty and diverse wildlife of the Ourika Valley on this day trip from Marrakech. Explore the Setti Fatma waterfalls, visit a traditional Berber house, and enjoy a riverside lunch. This program is ideal for nature lovers and those wishing to discover local Berber culture.",
     "category": "day-trips",
     "duration": "1 Day / Full Day Trip",
     "durationDays": 1,
     "startingFrom": "Marrakech",
     "price": "From $50/person",
-    "heroImage": "/assets/atlas_mountains_valley.png",
+    "heroImage": "/sahara-star-tours/day-trips/ourika-valley-nature-wildlife-tour/images/thumbnail.jpg",
     "highlights": [
-      "Explore Marrakech: Departure",
-      "Explore Berber Village: Traditional Family Home",
-      "Explore Setti Fatma Waterfalls: 7 Cascades Hike"
+      "Setti Fatma: Visit the traditional Berber village and discover its way of life.",
+      "Setti Fatma waterfalls: Hike to the picturesque waterfalls with swimming opportunities.",
+      "Berber House: Explore a traditional Berber house with mint tea tasting.",
+      "Traditional lunch: Enjoy a Moroccan meal on the banks of the Ourika River.",
+      "Argan cooperative: Visit a local cooperative to learn about the argan oil production process.",
+      "Jardin Bio-Aromatique de l’Ourika: Guided walk through the botanical gardens with explanations of medicinal plants.",
+      "Wildlife watching: Explore a nature reserve to observe Atlas monkeys and other native animals."
     ],
     "inclusions": [
       "Pick-up and drop-off at your Marrakech accommodation",
       "Drive through the lush Ourika Valley along the river",
       "Guided hike to the seven waterfalls of Setti Fatma",
-      "Visit to a traditional Berber home and Argan cooperative",
-      "Personal expenses and souvenirs",
-      "Gratuities for your guide and driver (optional)",
-      "Extra meals and beverages not explicitly mentioned",
-      "Entrance fees to monuments (if any)"
+      "Visit to a traditional Berber home and Argan cooperative"
     ],
     "exclusions": [
       "Personal expenses and souvenirs",
@@ -5678,26 +5694,24 @@ export const tours: Tour[] = [
     "title": "HOT AIR BALLOON IN MARRAKECH | Sahara Star Tours",
     "shortTitle": "Hot Air Balloon In Marrakech",
     "description": "Embark on the ultimate 16-day luxury tour across Morocco from Casablanca. Experience imperial cities, Chefchaouen, Sahara desert glamping, and Marrakech.",
+    "aboutHtml": "<strong>Desert Equestrian Escapades</strong><br/><br/>Dive into the serene beauty of the desert with an array of horseback riding experiences designed to captivate your senses and immerse you in the magic of Morocco’s landscapes.<br/><br/><strong>Enchanting Desert Rides</strong><br/><br/>Whether you’re seeking a brief escape for an hour or two, our Little Desert Ride offers a unique and easy way to explore the tranquil beauty of the desert. For those looking to experience the desert’s magic in a more dramatic light, our Sun Ride welcomes you to witness the awe-inspiring moments of sunrise or sunset. These magical times provide unparalleled views of the natural scenery, casting a spellbinding glow over the heart of the sand dunes.<br/><br/><strong>Cultural Journey to Gnawa Village</strong><br/><br/>Embark on a half-day tour that combines the thrill of horse riding with a cultural immersion into the heritage of a Gnawa village. This journey not only lets you enjoy the rhythmic melodies and historical significance of Gnaoua music but also includes a cultural picnic, enriching your experience with every beat and bite.<br/><br/><strong>Adventurous Day Tour to Desert Camp</strong><br/><br/>Set off on a beautiful day trip that traverses the dunes on horseback, leading to a serene layover and lunch at a traditional desert camp. This oasis amidst the vast desert landscape offers a picturesque setting that feels like a mirage come to life, providing a peaceful retreat from the world.<br/><br/><strong>Traditional Dress Riding Experience</strong><br/><br/>Enhance your desert adventure by donning traditional Moroccan attire for your horseback ride. This unique opportunity allows lovers of diverse Moroccan culture to fully embrace and celebrate its rich traditions. Capture this memorable experience through videos and pictures, taking a piece of Moroccan beauty with you.<br/><br/>Each of these experiences is designed to offer a different perspective of Morocco’s stunning desert landscapes, from the quiet beauty of a morning ride to the cultural richness of a Gnawa music session. Whether you’re a lover of nature, culture, or adventure, these equestrian escapades through the desert promise moments of beauty, tranquility, and unforgettable memories.",
     "category": "activities",
     "duration": "Half Day / 3-4 Hours",
     "durationDays": 1,
     "startingFrom": "Marrakech",
     "price": "From $190/person",
-    "heroImage": "/assets/hero_sahara_sunset.png",
+    "heroImage": "/sahara-star-tours/activities/hot-air-balloon-in-marrakech/images/thumbnail.jpg",
     "highlights": [
-      "Explore Marrakech: Hotel Pick-up",
-      "Explore Marrakech Palmeraie Oasis: Palm Grove & Trails",
-      "Explore Berber Oasis Camp: Hospitality & Mint Tea"
+      "Early Morning Pickup: Convenient pick-up from your accommodation in Marrakech at 5:00 AM.",
+      "Scenic Flight: Approximately 45 minutes of flying time with panoramic views of the Atlas Mountains and the picturesque Moroccan countryside.",
+      "Post-Flight Breakfast: Enjoy a delicious breakfast after your landing, making the experience even more delightful.",
+      "Unforgettable Memories: Capture stunning photographs and create lasting memories as you float above the breathtaking scenery."
     ],
     "inclusions": [
       "Early morning 4x4 transfers from your hotel",
       "45 to 60-minute hot air balloon flight over the Atlas foothills",
       "Authentic Berber breakfast in a traditional tent",
-      "Official flight certificate signed by the pilot",
-      "Personal expenses and souvenirs",
-      "Gratuities for your guide and driver (optional)",
-      "Extra meals and beverages not explicitly mentioned",
-      "Entrance fees to monuments (if any)"
+      "Official flight certificate signed by the pilot"
     ],
     "exclusions": [
       "Personal expenses and souvenirs",
@@ -5779,26 +5793,24 @@ export const tours: Tour[] = [
     "title": "HORSE RIDING IN MOROCCO | Sahara Star Tours",
     "shortTitle": "Horse Riding In Morocco",
     "description": "Embark on the ultimate 16-day luxury tour across Morocco from Casablanca. Experience imperial cities, Chefchaouen, Sahara desert glamping, and Marrakech.",
+    "aboutHtml": "<strong>Desert Equestrian Escapades</strong><br/><br/>Dive into the serene beauty of the desert with an array of horseback riding experiences designed to captivate your senses and immerse you in the magic of Morocco’s landscapes.<br/><br/><strong>Enchanting Desert Rides</strong><br/><br/>Whether you’re seeking a brief escape for an hour or two, our Little Desert Ride offers a unique and easy way to explore the tranquil beauty of the desert. For those looking to experience the desert’s magic in a more dramatic light, our Sun Ride welcomes you to witness the awe-inspiring moments of sunrise or sunset. These magical times provide unparalleled views of the natural scenery, casting a spellbinding glow over the heart of the sand dunes.<br/><br/><strong>Cultural Journey to Gnawa Village</strong><br/><br/>Embark on a half-day tour that combines the thrill of horse riding with a cultural immersion into the heritage of a Gnawa village. This journey not only lets you enjoy the rhythmic melodies and historical significance of Gnaoua music but also includes a cultural picnic, enriching your experience with every beat and bite.<br/><br/><strong>Adventurous Day Tour to Desert Camp</strong><br/><br/>Set off on a beautiful day trip that traverses the dunes on horseback, leading to a serene layover and lunch at a traditional desert camp. This oasis amidst the vast desert landscape offers a picturesque setting that feels like a mirage come to life, providing a peaceful retreat from the world.<br/><br/><strong>Traditional Dress Riding Experience</strong><br/><br/>Enhance your desert adventure by donning traditional Moroccan attire for your horseback ride. This unique opportunity allows lovers of diverse Moroccan culture to fully embrace and celebrate its rich traditions. Capture this memorable experience through videos and pictures, taking a piece of Moroccan beauty with you.<br/><br/>Each of these experiences is designed to offer a different perspective of Morocco’s stunning desert landscapes, from the quiet beauty of a morning ride to the cultural richness of a Gnawa music session. Whether you’re a lover of nature, culture, or adventure, these equestrian escapades through the desert promise moments of beauty, tranquility, and unforgettable memories.",
     "category": "activities",
     "duration": "Half Day / 3-4 Hours",
     "durationDays": 1,
     "startingFrom": "Marrakech",
     "price": "From $65/person",
-    "heroImage": "/assets/marrakech_riad_pool.png",
+    "heroImage": "/sahara-star-tours/activities/horse-riding-in-morocco/images/thumbnail.jpg",
     "highlights": [
-      "Explore Marrakech: Hotel Pick-up",
-      "Explore Marrakech Palmeraie Oasis: Palm Grove & Trails",
-      "Explore Berber Oasis Camp: Hospitality & Mint Tea"
+      "Enchanting Desert Rides: Choose between a brief escape or a dramatic sunrise/sunset ride to enjoy stunning views of the sand dunes.",
+      "Cultural Journey to Gnawa Village: Combine horseback riding with a cultural experience, enjoying Gnaoua music and a delightful picnic.",
+      "Adventurous Day Tour to Desert Camp: Ride through the dunes to a traditional desert camp for a scenic lunch in a tranquil oasis.",
+      "Traditional Dress Riding Experience: Wear traditional Moroccan attire during your ride, creating unforgettable memories and photo opportunities."
     ],
     "inclusions": [
       "Hotel pickup and drop-off in an AC vehicle",
       "High-quality saddlery and safety helmets",
       "2 hours guided horseback riding experience",
-      "Professional equestrian guide",
-      "Personal expenses and souvenirs",
-      "Gratuities for your guide and driver (optional)",
-      "Extra meals and beverages not explicitly mentioned",
-      "Entrance fees to monuments (if any)"
+      "Professional equestrian guide"
     ],
     "exclusions": [
       "Personal expenses and souvenirs",
@@ -5880,26 +5892,23 @@ export const tours: Tour[] = [
     "title": "FANTASIA CHEZ ALI MARRAKECH | Sahara Star Tours",
     "shortTitle": "Fantasia Chez Ali Marrakech",
     "description": "Embark on the ultimate 16-day luxury tour across Morocco from Casablanca. Experience imperial cities, Chefchaouen, Sahara desert glamping, and Marrakech.",
+    "aboutHtml": "Half-Day Moroccan Cultural Experience<br/><br/>Discover the enchanting world of Fantasia Chez Ali, a celebrated Marrakech event that offers a deep dive into Moroccan culture, showcasing traditions unlike anything you might find back home. Prepare to be captivated by the vibrant performances of folk groups, indulge in a sumptuous dinner, and immerse yourself in the unique sights and sounds of this spectacular venue.<br/><br/>Set in a vast arena reminiscent of a football stadium, the event features a dazzling array of performances. You’ll witness professional acrobatic horse riders, partake in the excitement of the fantasia—a traditional Moroccan equestrian performance—, and enjoy beautiful traditional songs and dances, all set to mesmerizing music that transports you to another world.<br/><br/>The Chez Ali show is an amalgamation of magic, beauty, and grandeur, offering a delightful and fairy-tale-like experience. Over the years, its fame has reached international shores, marking it as a highlight of any trip to Marrakech. Dancers, musicians, acrobats, horsemen, and magicians pour their passion into their performances, ensuring your evening at Chez Ali is unforgettable.<br/><br/>As the night concludes, your driver will ensure a smooth return to your accommodation in Marrakech, be it a hotel or a riad, capping off a truly magical Moroccan cultural experience.",
     "category": "activities",
     "duration": "Half Day / 3-4 Hours",
     "durationDays": 1,
     "startingFrom": "Marrakech",
     "price": "From $70/person",
-    "heroImage": "/assets/marrakech_riad_pool.png",
+    "heroImage": "/sahara-star-tours/activities/fantasia-chez-ali-marrakech/images/thumbnail.jpg",
     "highlights": [
-      "Explore Marrakech: Hotel Pick-up",
-      "Explore Marrakech Palmeraie Oasis: Palm Grove & Trails",
-      "Explore Berber Oasis Camp: Hospitality & Mint Tea"
+      "Traditional Moroccan dinner",
+      "Fantasia equestrian performance with acrobats and horsemen",
+      "Enjoy Moroccan music, songs, and folk dances"
     ],
     "inclusions": [
       "Round-trip transportation from your Marrakech hotel",
       "Lavish traditional Moroccan dinner (Mechoui, Couscous, Pastilla)",
       "Spectacular Fantasia show with horseback acrobatics",
-      "Live traditional music and belly dancing performances",
-      "Personal expenses and souvenirs",
-      "Gratuities for your guide and driver (optional)",
-      "Extra meals and beverages not explicitly mentioned",
-      "Entrance fees to monuments (if any)"
+      "Live traditional music and belly dancing performances"
     ],
     "exclusions": [
       "Personal expenses and souvenirs",
@@ -5981,26 +5990,24 @@ export const tours: Tour[] = [
     "title": "QUAD BIKING IN MARRAKECH | Sahara Star Tours",
     "shortTitle": "Quad Biking In Marrakech",
     "description": "Embark on the ultimate 16-day luxury tour across Morocco from Casablanca. Experience imperial cities, Chefchaouen, Sahara desert glamping, and Marrakech.",
+    "aboutHtml": "Quad Biking Adventure in Marrakech<br/><br/>Pricing for this exhilarating half-day quad biking adventure is per person and adjusts based on the size of your group. This adventure offers an incredible opportunity to discover the hidden oasis of the Marrakech palm grove and the stunning scenery of the Palmeraie.<br/><br/>About the Activity<br/><br/>Suitable for beginners and seasoned quad bikers alike, this experience is tailored to match your skill level. Experienced riders will have the chance to venture off the beaten path and dive into more challenging terrains for an adrenaline-packed journey. Meanwhile, novices or those with families and young children will enjoy a gentler route designed to highlight the beauty of the landscape and ensure a pleasant ride for all.<br/><br/>Your adventure begins with a pickup from your Marrakech accommodation, transporting you to the Palmeraie. Upon arrival at our activity base in Marrakech, you’ll be equipped with a quad and helmets. Our guide will provide a brief tutorial on operating your vehicle before leading you on an unforgettable journey through Berber villages, mountainous terrain, and sand dunes, unveiling Marrakech’s lesser-seen vistas.<br/><br/>During this adventure, you’ll pause at a traditional Moroccan guest house to savor some mint tea, allowing you to soak in the natural beauty and tranquility that surrounds you. The journey concludes back at our Marrakech base, where your driver will be waiting to return you to your accommodation, marking the end of a memorable half-day activity.",
     "category": "activities",
     "duration": "Half Day / 3-4 Hours",
     "durationDays": 1,
     "startingFrom": "Marrakech",
     "price": "From $60/person",
-    "heroImage": "/assets/camel_trek_dunes.png",
+    "heroImage": "/sahara-star-tours/activities/quad-biking-in-marrakech/images/thumbnail.jpeg",
     "highlights": [
-      "Explore Marrakech: Hotel Pick-up",
-      "Explore Marrakech Palmeraie Oasis: Palm Grove & Trails",
-      "Explore Berber Oasis Camp: Hospitality & Mint Tea"
+      "Explore the hidden oasis of the Marrakech Palm Grove",
+      "Suitable for beginners and experienced riders",
+      "Ride through Berber villages and sand dunes",
+      "Stop for mint tea in a traditional Moroccan guest house"
     ],
     "inclusions": [
       "Hotel pickup and drop-off",
       "High-quality quad bike (ATV) and safety gear (helmet, goggles, gloves)",
       "2-hour guided quad biking adventure through palm groves and desert trails",
-      "Mint tea break in a traditional Berber village",
-      "Personal expenses and souvenirs",
-      "Gratuities for your guide and driver (optional)",
-      "Extra meals and beverages not explicitly mentioned",
-      "Entrance fees to monuments (if any)"
+      "Mint tea break in a traditional Berber village"
     ],
     "exclusions": [
       "Personal expenses and souvenirs",
@@ -6082,26 +6089,24 @@ export const tours: Tour[] = [
     "title": "RAID BUGGY IN MARRAKECH | Sahara Star Tours",
     "shortTitle": "Raid Buggy In Marrakech",
     "description": "Embark on the ultimate 16-day luxury tour across Morocco from Casablanca. Experience imperial cities, Chefchaouen, Sahara desert glamping, and Marrakech.",
+    "aboutHtml": "Half-Day Adventures in Marrakech<br/><br/>The cost of these adventures varies with the group size. If you’re venturing to Morocco for the first time, or revisiting the enchanting city of Marrakech, we have curated several itinerary options to ensure you fully experience what this trip has to offer! Elevate your Moroccan journey with a thrilling buggy ride in some truly spectacular locations. We’ll transport you to either the lush Marrakech palm groves or the captivating Agafay desert, close to Marrakech. Embrace the exhilaration of navigating a buggy across the desert terrain, and afterwards, relax with a warm cup of mint tea in an idyllic setting amidst palm trees, under a brilliant blue sky, with views of the Atlas Mountains. This day promises to be an unforgettable adventure filled with lasting memories.<br/><br/>Embarking on a buggy ride in Marrakech promises an extraordinary and thrilling adventure! We will arrange pickup directly from your accommodation in Marrakech. You have the option to explore either Agafay or the Marrakech palm groves. The journey to Agafay takes approximately 25 minutes, while reaching the Marrakech palm groves is about a 45-minute ride. This Marrakech tour includes safety equipment, tea, and transportation. It stands out as our most sought-after activity, where you embark on a two-hour exploration of the desert and palm groves. This experience also offers a glimpse into Moroccan culture, inviting you to a local family’s home to enjoy mint tea and experience renowned Moroccan hospitality. At the conclusion of this memorable buggy adventure, we will ensure your safe return to your accommodation in Marrakech.",
     "category": "activities",
     "duration": "Half Day / 3-4 Hours",
     "durationDays": 1,
     "startingFrom": "Marrakech",
     "price": "From $110/person",
-    "heroImage": "/assets/camel_trek_dunes.png",
+    "heroImage": "/sahara-star-tours/activities/raid-buggy-in-marrakech/images/thumbnail.jpg",
     "highlights": [
-      "Explore Marrakech: Hotel Pick-up",
-      "Explore Marrakech Palmeraie Oasis: Palm Grove & Trails",
-      "Explore Berber Oasis Camp: Hospitality & Mint Tea"
+      "Exciting buggy ride through the Palmeraie or Agafay desert",
+      "Enjoy mint tea in a traditional Moroccan house",
+      "Visit local Berber villages",
+      "Panoramic views of the Atlas Mountains"
     ],
     "inclusions": [
       "Round-trip hotel transfers",
       "Premium 4WD Buggy and full safety equipment",
       "Professional off-road guide and briefing",
-      "Refreshments and mint tea with local villagers",
-      "Personal expenses and souvenirs",
-      "Gratuities for your guide and driver (optional)",
-      "Extra meals and beverages not explicitly mentioned",
-      "Entrance fees to monuments (if any)"
+      "Refreshments and mint tea with local villagers"
     ],
     "exclusions": [
       "Personal expenses and souvenirs",
@@ -6183,26 +6188,24 @@ export const tours: Tour[] = [
     "title": "CAMEL RIDING | Sahara Star Tours",
     "shortTitle": "Camel Riding",
     "description": "Embark on the ultimate 16-day luxury tour across Morocco from Casablanca. Experience imperial cities, Chefchaouen, Sahara desert glamping, and Marrakech.",
+    "aboutHtml": "<strong>Pricing and Details</strong><br/><br/>Starting at $20 per person, the cost adjusts with the group size. This adventure is available in the stunning Palmeraie of Marrakech at any time, offering half-day excursions with a pick-up at 9:00 am. This is a private tour, and we recommend wearing comfortable attire, shoes, a hat, a jacket, and sunscreen for your comfort. Payment is processed upon departure.<br/><br/><strong>Half-Day Camel Riding Experience in Marrakech</strong><br/><br/>Embarking on a camel ride through the Marrakech Palm Grove is an iconic and unforgettable experience during your visit to Morocco. Located to the north of Marrakech, the Palm Grove is an oasis featuring over 100,000 palm trees, providing a serene backdrop for a 1.5-hour camel trek. This journey offers an unparalleled opportunity to immerse yourself in the breathtaking landscapes and panoramic views of this exquisite region. The camel ride through this verdant oasis and its surrounding scenery is highly recommended for those looking to capture the essence of Marrakech in a truly unique way.a",
     "category": "activities",
     "duration": "Half Day / 3-4 Hours",
     "durationDays": 1,
     "startingFrom": "Marrakech",
     "price": "From $35/person",
-    "heroImage": "/assets/camel_trek_dunes.png",
+    "heroImage": "/sahara-star-tours/activities/camel-riding/images/thumbnail.jpg",
     "highlights": [
-      "Explore Marrakech: Hotel Pick-up",
-      "Explore Marrakech Palmeraie Oasis: Palm Grove & Trails",
-      "Explore Berber Oasis Camp: Hospitality & Mint Tea"
+      "Ride through the iconic Palm Grove of Marrakech",
+      "Experience Moroccan hospitality with mint tea",
+      "Serene landscapes with panoramic views of over 100,000 palm trees",
+      "Suitable for all ages, offering a cultural and natural immersion"
     ],
     "inclusions": [
       "Air-conditioned round-trip hotel transfers",
       "1 to 2 hours camel ride through the Palm Grove",
       "Traditional Touareg scarf and clothing for photos",
-      "Moroccan mint tea break at a local Berber house",
-      "Personal expenses and souvenirs",
-      "Gratuities for your guide and driver (optional)",
-      "Extra meals and beverages not explicitly mentioned",
-      "Entrance fees to monuments (if any)"
+      "Moroccan mint tea break at a local Berber house"
     ],
     "exclusions": [
       "Personal expenses and souvenirs",

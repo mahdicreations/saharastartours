@@ -1,0 +1,476 @@
+---
+// TourMap.astro — Interactive Leaflet Route Map Component
+// Powered by OpenStreetMap France (0 403 blocks, 100% stable, free)
+interface TourStop {
+  number: number;
+  name: string;
+  day: string;
+  subtitle: string;
+  desc: string;
+  coords: [number, number];
+}
+
+interface Props {
+  tourSlug: string;
+  duration: string;
+  destinations: TourStop[];
+  routeCoordinates: [number, number][];
+}
+
+const { tourSlug, duration, destinations, routeCoordinates } = Astro.props;
+const mapId = `tour-route-map-${tourSlug.replace(/[^a-z0-9]/g, '-')}`;
+const mapData = JSON.stringify(destinations);
+const routeData = JSON.stringify(routeCoordinates);
+---
+
+<div class="tour-map-card reveal active" data-tour-map={mapId}>
+  <div class="tour-map-header">
+    <div>
+      <span class="timeline-day-tag">
+        <i class="fa-solid fa-map-location-dot" style="margin-right:6px;"></i> Interactive Route Map
+      </span>
+      <h3>Interactive Route Map</h3>
+    </div>
+    <div class="tour-map-header-badges">
+      <span class="tour-map-badge">
+        <i class="fa-solid fa-location-dot" style="color:var(--sand-gold);"></i>
+        <strong>{destinations.length}</strong> destinations
+      </span>
+      <span class="tour-map-badge">
+        <i class="fa-regular fa-clock" style="color:var(--sand-gold);"></i>
+        <strong>{duration}</strong>
+      </span>
+      <button 
+        class="tour-map-badge map-theme-toggle-btn" 
+        type="button" 
+        title="Toggle map theme (Mode Clair / Mode Sombre)" 
+        data-map-theme-toggle
+      >
+        <i class="fa-solid fa-circle-half-stroke" style="color:var(--sand-gold);"></i>
+        <strong data-map-theme-text>Mode Clair</strong>
+      </button>
+    </div>
+  </div>
+
+  <p class="tour-map-desc">
+    Explore your complete journey route on this interactive map. Select any destination marker to discover what awaits you on each day.
+  </p>
+
+  <div class="tour-map-wrapper">
+    <div id={mapId} class="tour-route-map-canvas" style="width:100%;height:480px;background:#f4f1ea;"></div>
+    <button class="map-reset-btn" type="button" data-map-reset title="Reset map to full route view">
+      <i class="fa-solid fa-expand"></i> Reset View
+    </button>
+  </div>
+
+  <div class="map-waypoints-header">
+    <span><i class="fa-solid fa-location-crosshairs"></i> Tour Stops &amp; Highlights</span>
+    <span style="font-size:0.8rem;color:var(--sand-gold);">Select a destination to explore</span>
+  </div>
+
+  <div class="map-stops-nav" data-map-stops aria-label="Tour waypoints"></div>
+
+  {destinations.length > 0 && (
+    <div class="map-milestones-wrapper">
+      <h5>Route Milestones</h5>
+      <div class="map-milestones">
+        {destinations.map((destination, index) => (
+          <span class={`milestone-node ${index === 0 ? 'start-node' : ''}`}>
+            <span class="milestone-num">{destination.number}</span>
+            <span class="milestone-name">{destination.name}</span>
+            {index < destinations.length - 1 && <span class="milestone-arrow">&gt;</span>}
+          </span>
+        ))}
+      </div>
+    </div>
+  )}
+</div>
+
+<script is:inline define:vars={{ mapId, mapData, routeData }}>
+  (function() {
+    const destinations = JSON.parse(mapData || '[]');
+    const routeCoordinates = JSON.parse(routeData || '[]');
+
+    if (!destinations.length || !routeCoordinates.length) return;
+
+    function initTourMap() {
+      const root = document.querySelector(`[data-tour-map="${mapId}"]`);
+      const mapElement = document.getElementById(mapId);
+      if (!root || !mapElement || typeof L === 'undefined') return;
+      if (mapElement._leaflet_id) return; // Prevent duplicate initialization
+
+      const map = L.map(mapId, { 
+        zoomControl: true, 
+        scrollWheelZoom: false, 
+        attributionControl: true 
+      });
+
+      // OpenStreetMap France Tile Layer (0 Error 403, 100% reliable on localhost and production)
+      const osmFranceLayer = L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
+        subdomains: ['a', 'b', 'c'],
+        attribution: '&copy; OpenStreetMap France | &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors',
+        className: 'osm-tile-layer clear-osm-tiles',
+        maxZoom: 19
+      }).addTo(map);
+
+      // Fallback in case OSM France is slow or unavailable
+      osmFranceLayer.on('tileerror', function() {
+        if (!map._hasFallbackTiles) {
+          map._hasFallbackTiles = true;
+          console.warn('OSM France tile delayed, attaching CartoDB fallback');
+          L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+            subdomains: 'abcd',
+            maxZoom: 19
+          }).addTo(map);
+        }
+      });
+
+      // Warm glowing terracotta route polylines
+      const routeGlow = L.polyline(routeCoordinates, { 
+        color: '#d96b43', 
+        weight: 8, 
+        opacity: 0.45, 
+        lineCap: 'round', 
+        lineJoin: 'round' 
+      }).addTo(map);
+
+      const routeLine = L.polyline(routeCoordinates, { 
+        color: '#c84e24', 
+        weight: 4.5, 
+        opacity: 1.0, 
+        lineCap: 'round', 
+        lineJoin: 'round' 
+      }).addTo(map);
+
+      // Fit bounds to entire route
+      const routeBounds = L.latLngBounds(routeCoordinates);
+      map.fitBounds(routeBounds, { padding: [35, 35] });
+
+      // Layout settling size invalidation
+      setTimeout(() => { map.invalidateSize(); }, 150);
+      setTimeout(() => { map.invalidateSize(); }, 400);
+      setTimeout(() => { map.invalidateSize(); }, 900);
+      window.addEventListener('resize', () => { map.invalidateSize(); });
+
+      const stopsNav = root.querySelector('[data-map-stops]');
+      if (stopsNav) stopsNav.innerHTML = '';
+      const markers = [];
+
+      function focusDestination(index) {
+        const item = markers[index];
+        if (!item) return;
+        map.flyTo(item.dest.coords, 10, { duration: 1 });
+        setTimeout(() => { item.marker.openPopup(); }, 600);
+        if (stopsNav) {
+          const buttons = stopsNav.querySelectorAll('.map-stop-btn');
+          buttons.forEach((btn, idx) => btn.classList.toggle('active', idx === index));
+          if (buttons[index]) {
+            buttons[index].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+          }
+        }
+      }
+
+      destinations.forEach((dest, idx) => {
+        const isStart = idx === 0;
+        const nameLower = (dest.name || '').toLowerCase();
+        const isDesert = nameLower.includes('merzouga') || nameLower.includes('erg chebbi') || nameLower.includes('desert') || nameLower.includes('sahara');
+        const isEnd = idx === destinations.length - 1;
+        const extraClass = isStart ? 'is-start' : (isDesert ? 'is-desert' : (isEnd ? 'is-end' : ''));
+
+        const customIcon = L.divIcon({
+          className: `luxury-marker-container ${extraClass}`,
+          html: `<div class="luxury-marker-pin" title="${dest.name}">${dest.number}</div><div class="luxury-marker-pulse"></div>`,
+          iconSize: [32, 32],
+          iconAnchor: [16, 16],
+          popupAnchor: [0, -18]
+        });
+
+        const marker = L.marker(dest.coords, { 
+          icon: customIcon,
+          title: `${dest.number}. ${dest.name} (${dest.day || ''})`
+        }).addTo(map);
+
+        const popupHtml = `
+          <div class="map-popup-inner">
+            <span class="popup-tag">${dest.day || ('Stop ' + dest.number)}</span>
+            <h4 class="popup-title">${dest.name}</h4>
+            <div class="popup-subtitle"><i class="fa-solid fa-location-dot"></i> ${dest.subtitle || ''}</div>
+            <p class="popup-desc">${dest.desc || ''}</p>
+          </div>
+        `;
+        marker.bindPopup(popupHtml, { maxWidth: 300 });
+        markers.push({ marker, dest, idx });
+
+        if (stopsNav) {
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'map-stop-btn';
+          btn.innerHTML = `<span class="map-stop-badge">${dest.number}</span> <span>${dest.name}</span>`;
+          btn.addEventListener('click', () => focusDestination(idx));
+          stopsNav.appendChild(btn);
+        }
+      });
+
+      // Reset View Button
+      const resetBtn = root.querySelector('[data-map-reset]');
+      if (resetBtn) {
+        resetBtn.addEventListener('click', () => {
+          map.fitBounds(routeBounds, { padding: [35, 35] });
+          if (stopsNav) {
+            stopsNav.querySelectorAll('.map-stop-btn').forEach(btn => btn.classList.remove('active'));
+          }
+        });
+      }
+
+      // Theme toggle (Mode Clair vs Mode Sombre)
+      let isClearMap = true;
+      const themeToggleBtn = root.querySelector('[data-map-theme-toggle]');
+      const themeToggleText = root.querySelector('[data-map-theme-text]');
+      const mapWrapper = root.querySelector('.tour-map-wrapper');
+
+      if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+          isClearMap = !isClearMap;
+          const tileEls = root.querySelectorAll('.osm-tile-layer');
+          if (isClearMap) {
+            tileEls.forEach(el => {
+              el.classList.remove('dark-osm-tiles');
+              el.classList.add('clear-osm-tiles');
+            });
+            if (mapElement) mapElement.style.background = '#f4f1ea';
+            if (mapWrapper) mapWrapper.style.background = '#f4f1ea';
+            routeGlow.setStyle({ color: '#d96b43', opacity: 0.45, weight: 8 });
+            routeLine.setStyle({ color: '#c84e24', opacity: 1.0, weight: 4.5 });
+            if (themeToggleText) themeToggleText.textContent = 'Mode Clair';
+          } else {
+            tileEls.forEach(el => {
+              el.classList.remove('clear-osm-tiles');
+              el.classList.add('dark-osm-tiles');
+            });
+            if (mapElement) mapElement.style.background = '#141110';
+            if (mapWrapper) mapWrapper.style.background = '#141110';
+            routeGlow.setStyle({ color: '#d96b43', opacity: 0.4, weight: 7 });
+            routeLine.setStyle({ color: '#e8c39e', opacity: 0.95, weight: 3.5 });
+            if (themeToggleText) themeToggleText.textContent = 'Mode Sombre';
+          }
+        });
+      }
+    }
+
+    // Resilient initialization with polling for Leaflet script readiness
+    function startInit() {
+      function tryInit() {
+        const root = document.querySelector(`[data-tour-map="${mapId}"]`);
+        const mapElement = document.getElementById(mapId);
+        if (!root || !mapElement) return false;
+        if (typeof L === 'undefined') return false;
+        if (mapElement._leaflet_id) return true;
+        initTourMap();
+        return true;
+      }
+
+      if (!tryInit()) {
+        let attempts = 0;
+        const interval = setInterval(() => {
+          attempts++;
+          if (tryInit() || attempts > 60) {
+            clearInterval(interval);
+          }
+        }, 100);
+      }
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', startInit);
+    } else {
+      startInit();
+    }
+    window.addEventListener('load', startInit);
+  })();
+</script>
+
+<style>
+  .tour-map-card {
+    background: var(--night-surface);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+    margin-top: 30px;
+  }
+  .tour-map-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid var(--glass-border);
+    padding-bottom: 18px;
+  }
+  .tour-map-header h3 {
+    font-size: 1.6rem;
+    color: var(--sand-gold);
+    margin: 4px 0 0 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .tour-map-header-badges {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .tour-map-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    background: rgba(232, 195, 158, 0.08);
+    border: 1px solid rgba(232, 195, 158, 0.2);
+    color: var(--sand-gold);
+    font-family: inherit;
+  }
+  .map-theme-toggle-btn {
+    cursor: pointer;
+    background: rgba(232, 195, 158, 0.12);
+    border-color: rgba(232, 195, 158, 0.35);
+    transition: var(--transition-smooth);
+  }
+  .map-theme-toggle-btn:hover {
+    background: rgba(232, 195, 158, 0.22);
+    border-color: var(--sand-gold);
+    transform: translateY(-1px);
+  }
+  .tour-map-desc {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 22px;
+    line-height: 1.6;
+  }
+  .tour-map-wrapper {
+    position: relative;
+    width: 100%;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    border: 1px solid var(--glass-border);
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.6), 0 8px 24px rgba(0, 0, 0, 0.35);
+    background: #f4f1ea;
+    transition: background 0.3s ease;
+  }
+  .tour-route-map-canvas {
+    width: 100%;
+    height: 480px;
+    background: #f4f1ea;
+    z-index: 10;
+    transition: background 0.3s ease;
+  }
+  .map-reset-btn {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    z-index: 500;
+    background: rgba(22, 18, 16, 0.9);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(232, 195, 158, 0.3);
+    color: var(--sand-gold);
+    padding: 7px 14px;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    font-family: var(--font-sans);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    transition: var(--transition-smooth);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+  }
+  .map-reset-btn:hover {
+    background: var(--sand-gold);
+    color: var(--night-bg);
+    border-color: var(--sand-gold);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px var(--sand-gold-glow);
+  }
+  .map-waypoints-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 14px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--sand-gold);
+  }
+  .map-stops-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+  }
+  .map-milestones-wrapper {
+    margin-top: 24px;
+    border-top: 1px solid var(--glass-border);
+    padding-top: 20px;
+  }
+  .map-milestones-wrapper h5 {
+    font-size: 0.9rem;
+    color: var(--sand-gold);
+    margin-bottom: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+  }
+  .map-milestones {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 14px;
+  }
+  .milestone-node {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--glass-border);
+    border-radius: 30px;
+    padding: 6px 14px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-main);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition-smooth);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  .milestone-node.start-node {
+    border-color: var(--terracotta);
+    background: rgba(217, 107, 67, 0.08);
+  }
+  .milestone-node:hover {
+    border-color: var(--sand-gold);
+    box-shadow: 0 0 10px var(--sand-gold-glow);
+    transform: translateY(-1px);
+  }
+  .milestone-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--terracotta);
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 700;
+  }
+  .milestone-arrow {
+    color: var(--sand-gold);
+    font-weight: bold;
+    margin-left: 4px;
+  }
+</style>

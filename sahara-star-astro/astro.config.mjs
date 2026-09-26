@@ -26,6 +26,7 @@ export default defineConfig({
     '/tours/private-12-days-trip-to-desert-marrakech.html': '/tours/private-12-days-desert-marrakech',
     '/tours/16-days-morocco-tour-from-casablanca.html': '/tours/16-days-morocco-tour-from-casablanca',
     '/tours/16-day-casablanca.html': '/tours/16-days-morocco-tour-from-casablanca',
+    '/tours/16-day-casablanca': '/tours/16-days-morocco-tour-from-casablanca',
     '/tours/3-days-desert-tour-from-marrakech-to-fes.html': '/tours/3-days-desert-tour-marrakech-to-fes',
     '/tours/4-days-marrakech-desert-tour.html': '/tours/4-days-marrakech-desert-tour',
     '/tours/5-days-tour-from-marrakech-to-merzouga.html': '/tours/5-days-tour-marrakech-to-merzouga',
