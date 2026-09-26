@@ -661,19 +661,28 @@
   overflow: hidden;
   border: 1px solid var(--glass-border);
   box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.6), 0 8px 24px rgba(0, 0, 0, 0.35);
-  background: #141110;
+  background: #f4f1ea;
+  transition: background 0.3s ease;
 }
 
 #tour-route-map {
   width: 100%;
   height: 480px;
-  background: #141110;
+  background: #f4f1ea;
   z-index: 10;
+  transition: background 0.3s ease;
 }
 
-/* Official OpenStreetMap Dark Luxury Tiles Filter - 100% Free, NO API Key, NO Watermarks */
+/* Official OpenStreetMap Tiles - Light / Natural / Clear Map (Default) */
+.clear-osm-tiles {
+  filter: brightness(98%) contrast(98%) saturate(95%);
+  transition: filter 0.3s ease;
+}
+
+/* Optional Dark Luxury Map Mode */
 .dark-osm-tiles {
-  filter: invert(100%) hue-rotate(180deg) brightness(85%) contrast(92%);
+  filter: invert(90%) hue-rotate(185deg) brightness(120%) contrast(88%) saturate(115%);
+  transition: filter 0.3s ease;
 }
 
 /* Custom Numbered Marker Styling */
@@ -1777,6 +1786,7 @@
               <span class="tour-map-badge"><i class="fa-solid fa-road" style="color:var(--terracotta);"></i> Total Distance: <strong id="route-distance-val">~1,420 km</strong></span>
               <span class="tour-map-badge"><i class="fa-regular fa-clock" style="color:var(--sand-gold);"></i> <strong>7 Days</strong></span>
               <span class="tour-map-badge"><i class="fa-solid fa-compass" style="color:var(--sand-gold);"></i> <strong>Casablanca → Marrakech</strong></span>
+              <button class="tour-map-badge map-theme-toggle-btn" id="map-theme-toggle-btn" type="button" aria-label="Toggle map brightness theme" style="cursor: pointer; background: rgba(232, 195, 158, 0.12); border-color: rgba(232, 195, 158, 0.35); font-family: inherit;"><i class="fa-solid fa-circle-half-stroke" style="color:var(--sand-gold);"></i> <strong id="map-theme-toggle-text">Mode Clair</strong></button>
             </div>
           </div>
 
@@ -2095,28 +2105,63 @@
       });
 
       // Official OpenStreetMap tile layer (100% Free, NO API Key, NO Watermarks)
-      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      const tileLayer = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors',
-        className: 'dark-osm-tiles',
+        className: 'osm-tile-layer clear-osm-tiles',
         maxZoom: 18
       }).addTo(map);
 
-      // 1. Instantly draw warm orange/gold glowing route
+      // 1. Instantly draw warm orange/terracotta glowing route (high visibility on clear map)
       const currentGlow = L.polyline(ROUTE_COORDINATES, {
         color: '#d96b43',
-        weight: 7,
-        opacity: 0.35,
+        weight: 8,
+        opacity: 0.45,
         lineCap: 'round',
         lineJoin: 'round'
       }).addTo(map);
 
       const currentLine = L.polyline(ROUTE_COORDINATES, {
-        color: '#e8c39e',
-        weight: 3.5,
-        opacity: 0.95,
+        color: '#c84e24',
+        weight: 4.5,
+        opacity: 1.0,
         lineCap: 'round',
         lineJoin: 'round'
       }).addTo(map);
+
+      // Map Theme Toggle (Clear Natural Map by default vs Dark Luxury Map)
+      const mapThemeBtn = document.getElementById('map-theme-toggle-btn');
+      let isClearMap = true;
+      if (mapThemeBtn) {
+        mapThemeBtn.addEventListener('click', () => {
+          isClearMap = !isClearMap;
+          const tileElements = document.querySelectorAll('.osm-tile-layer');
+          const toggleText = document.getElementById('map-theme-toggle-text');
+          const mapContainer = document.getElementById('tour-route-map');
+          const mapWrapper = document.querySelector('.tour-map-wrapper');
+
+          if (isClearMap) {
+            tileElements.forEach(el => {
+              el.classList.remove('dark-osm-tiles');
+              el.classList.add('clear-osm-tiles');
+            });
+            if (mapContainer) mapContainer.style.background = '#f4f1ea';
+            if (mapWrapper) mapWrapper.style.background = '#f4f1ea';
+            currentGlow.setStyle({ color: '#d96b43', opacity: 0.45, weight: 8 });
+            currentLine.setStyle({ color: '#c84e24', opacity: 1.0, weight: 4.5 });
+            if (toggleText) toggleText.textContent = 'Mode Clair';
+          } else {
+            tileElements.forEach(el => {
+              el.classList.remove('clear-osm-tiles');
+              el.classList.add('dark-osm-tiles');
+            });
+            if (mapContainer) mapContainer.style.background = '#141110';
+            if (mapWrapper) mapWrapper.style.background = '#141110';
+            currentGlow.setStyle({ color: '#d96b43', opacity: 0.4, weight: 7 });
+            currentLine.setStyle({ color: '#e8c39e', opacity: 0.95, weight: 3.5 });
+            if (toggleText) toggleText.textContent = 'Mode Sombre';
+          }
+        });
+      }
 
       // Automatically fit complete tour route bounds inside the map
       const routeBounds = L.latLngBounds(ROUTE_COORDINATES);
