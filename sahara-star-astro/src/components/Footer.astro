@@ -1,5 +1,7 @@
 ---
 // Footer.astro — Single shared footer for ALL pages
+// Authentic TripAdvisor SVG
+const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" role="img" aria-label="Tripadvisor"><path d="M12.006 4.295c-2.67 0-5.338.784-7.645 2.353H0l1.963 2.135a5.997 5.997 0 0 0 4.04 10.43 5.976 5.976 0 0 0 4.075-1.6L12 19.705l1.922-2.09a5.972 5.972 0 0 0 4.072 1.598 6 6 0 0 0 6-5.998 5.982 5.982 0 0 0-1.957-4.432L24 6.648h-4.35a13.573 13.573 0 0 0-7.644-2.353zM12 6.255c1.531 0 3.063.303 4.504.903C13.943 8.138 12 10.43 12 13.1c0-2.671-1.942-4.962-4.504-5.942A11.72 11.72 0 0 1 12 6.256zM6.002 9.157a4.059 4.059 0 1 1 0 8.118 4.059 4.059 0 0 1 0-8.118zm11.992.002a4.057 4.057 0 1 1 .003 8.115 4.057 4.057 0 0 1-.003-8.115zm-11.992 1.93a2.128 2.128 0 0 0 0 4.256 2.128 2.128 0 0 0 0-4.256zm11.992 0a2.128 2.128 0 0 0 0 4.256 2.128 2.128 0 0 0 0-4.256z"/></svg>`;
 ---
 
 <footer>
@@ -14,9 +16,7 @@
         <a href="https://instagram.com/saharastartours" class="social-link" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
         <a href="https://tiktok.com/@saharastartours" class="social-link" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
         <a href="https://tripadvisor.com" class="social-link" target="_blank" rel="noopener" aria-label="TripAdvisor" title="TripAdvisor">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3.2c1.78 0 3.25.96 4.02 2.38.77-1.42 2.24-2.38 4.02-2.38 2.45 0 4.44 1.99 4.44 4.44 0 2.45-1.99 4.44-4.44 4.44-1.28 0-2.43-.54-3.24-1.41l-.78 1.19-.78-1.19c-.81.87-1.96 1.41-3.24 1.41-2.45 0-4.44-1.99-4.44-4.44 0-2.45 1.99-4.44 4.44-4.44zm-4.02 6.84c1.33 0 2.4-1.07 2.4-2.4s-1.07-2.4-2.4-2.4-2.4 1.07-2.4 2.4 1.07 2.4 2.4 2.4zm8.04 0c1.33 0 2.4-1.07 2.4-2.4s-1.07-2.4-2.4-2.4-2.4 1.07-2.4 2.4 1.07 2.4 2.4 2.4z"/>
-          </svg>
+          <Fragment set:html={tripadvisorIcon} />
         </a>
       </div>
     </div>
@@ -39,17 +39,41 @@
         <li><a href="/activities">Morocco Activities</a></li>
         <li><a href="/imperial-cities">Imperial Cities Tours</a></li>
         <li><a href="/about">About Sahara Star Tours</a></li>
-        <li><a href="/#contact">Contact &amp; Custom Inquiry</a></li>
+        <li><a href="/contact">Contact &amp; Custom Inquiry</a></li>
       </ul>
     </div>
 
-    <div class="footer-col" x-data="{nl_email:''}">
-      <h4>Weekly Travel Secrets</h4>
-      <p>Subscribe to receive beautiful boutique riad deals and local desert trek routes directly in your inbox.</p>
-      <form class="newsletter-form" @submit.prevent="alert('Shukran! You have successfully subscribed to Sahara Star Tours weekly travel secrets. Check your inbox soon!');nl_email=''">
-        <input type="email" placeholder="Your email address" required aria-label="Newsletter email" x-model="nl_email" />
-        <button type="submit" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i></button>
-      </form>
+    <div class="footer-col footer-concierge-col">
+      <h4>Plan Your Trip</h4>
+      <p>Ready to plan your Moroccan adventure? Talk directly with our licensed local tour designers in Marrakech.</p>
+
+      <div class="footer-contact-actions">
+        <a href="https://wa.me/212661234567" target="_blank" rel="noopener" class="footer-wa-card">
+          <div class="footer-wa-icon">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span class="live-dot"></span>
+          </div>
+          <div class="footer-wa-info">
+            <span class="wa-label">WhatsApp 24/7 Support</span>
+            <span class="wa-num">+212 661-234567</span>
+          </div>
+        </a>
+
+        <a href="/contact" class="btn btn-primary footer-plan-btn">
+          <i class="fa-solid fa-compass" style="margin-right:6px;"></i> Request Custom Itinerary
+        </a>
+
+        <div class="footer-trust-rating">
+          <div class="trust-stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <span class="trust-score"><strong>4.9 / 5.0</strong> on TripAdvisor &amp; Google</span>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -77,8 +101,7 @@
   </div>
 </footer>
 
-<script>
-  // Dynamic copyright year
-  const yearEl = document.getElementById('footer-year');
-  if (yearEl) yearEl.innerHTML = `&copy; ${new Date().getFullYear()} Sahara Star Tours. All Rights Reserved.`;
+<script is:inline>
+  const el = document.getElementById('footer-year');
+  if (el) el.innerHTML = `&copy; ${new Date().getFullYear()} Sahara Star Tours. All Rights Reserved.`;
 </script>

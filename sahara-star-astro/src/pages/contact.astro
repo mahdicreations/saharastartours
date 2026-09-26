@@ -1,0 +1,594 @@
+---
+// contact.astro — Contact & Custom Trip Planning Page
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const seoTitle = "Contact Us & Plan Your Custom Morocco Tour | Sahara Star Tours";
+const seoDescription = "Connect directly with our local travel designers in Marrakech. Let us craft your bespoke Sahara desert expedition, luxury riad journey, or private imperial cities adventure.";
+const canonicalUrl = "https://www.saharastartours.com/contact";
+
+const contactSchema = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": seoTitle,
+  "description": seoDescription,
+  "url": canonicalUrl,
+  "mainEntity": {
+    "@type": "TravelAgency",
+    "name": "Sahara Star Tours",
+    "telephone": "+212661234567",
+    "email": "contact@saharastartours.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Derb Dabachi, Medina",
+      "addressLocality": "Marrakech",
+      "addressCountry": "MA"
+    }
+  }
+};
+---
+
+<BaseLayout 
+  title={seoTitle}
+  description={seoDescription}
+  canonicalUrl={canonicalUrl}
+  currentPage="contact"
+  schemaData={contactSchema}
+>
+  <!-- HERO BANNER -->
+  <section class="contact-hero">
+    <div class="contact-hero-overlay"></div>
+    <div class="contact-hero-content reveal active">
+      <nav class="contact-breadcrumbs" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
+        <span class="current">Contact &amp; Custom Trip Planning</span>
+      </nav>
+      <span class="tag"><i class="fa-solid fa-compass"></i> Let's Craft Your Dream Journey</span>
+      <h1>Plan Your Tailor-Made Morocco Adventure</h1>
+      <p>Whether you crave sunrise over Erg Chebbi dunes, tranquil boutique riads, or high Atlas mountain passes, our local Moroccan travel designers craft every detail to perfection.</p>
+    </div>
+  </section>
+
+  <!-- MAIN CONTACT SECTION -->
+  <section class="contact-page-body">
+    <div class="contact-page-container">
+      
+      <!-- TOP CONTACT CARDS -->
+      <div class="contact-channels-grid reveal active">
+        <a href="https://wa.me/212661234567?text=Hello%20Sahara%20Star%20Tours%2C%20I%20would%20like%20to%20plan%20a%20trip%20to%20Morocco" target="_blank" rel="noopener" class="contact-card wa-card">
+          <div class="c-card-icon wa-icon">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span class="c-live-badge">Live</span>
+          </div>
+          <div class="c-card-details">
+            <span class="c-card-tag">Fastest Response</span>
+            <h3>WhatsApp Direct Chat</h3>
+            <p>Chat directly with our licensed tour coordinators in Marrakech.</p>
+            <span class="c-card-val">+212 661-234567</span>
+          </div>
+        </a>
+
+        <a href="mailto:contact@saharastartours.com" class="contact-card">
+          <div class="c-card-icon email-icon">
+            <i class="fa-regular fa-envelope"></i>
+          </div>
+          <div class="c-card-details">
+            <span class="c-card-tag">Official Inquiries</span>
+            <h3>Email Designers</h3>
+            <p>Send your detailed itinerary wishes, flight times, or group requests.</p>
+            <span class="c-card-val">contact@saharastartours.com</span>
+          </div>
+        </a>
+
+        <div class="contact-card">
+          <div class="c-card-icon location-icon">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <div class="c-card-details">
+            <span class="c-card-tag">Local Desks</span>
+            <h3>Headquarters</h3>
+            <p>Medina &amp; Guéliz, Marrakech | Casablanca Airport Welcome Desk.</p>
+            <span class="c-card-val">Marrakech &amp; Casablanca, Morocco</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- INTERACTIVE CUSTOM TRIP INQUIRY FORM -->
+      <div 
+        class="custom-inquiry-box reveal active"
+        id="inquiry-form"
+        x-data="{
+          formData: {
+            name: '',
+            email: '',
+            phone: '',
+            startCity: 'Marrakech',
+            travelers: '2 Adults',
+            travelMonth: '',
+            style: 'Comfort',
+            tourType: 'Desert & Imperial Cities',
+            message: ''
+          },
+          submitting: false,
+          showModal: false,
+          modalName: '',
+          modalEmail: '',
+          submitPlan() {
+            this.modalName = this.formData.name;
+            this.modalEmail = this.formData.email;
+            this.showModal = true;
+            document.body.style.overflow = 'hidden';
+            this.formData.name = '';
+            this.formData.email = '';
+            this.formData.phone = '';
+            this.formData.message = '';
+          },
+          closeModal() {
+            this.showModal = false;
+            document.body.style.overflow = '';
+          }
+        }"
+      >
+        <div class="inquiry-header">
+          <span class="tag"><i class="fa-solid fa-sliders"></i> Tailor-Made Itinerary</span>
+          <h2>Customize Your Morocco Expedition</h2>
+          <p>Fill out the preferences below. Our local experts will prepare a comprehensive proposal with transparent pricing and custom options within 24 hours.</p>
+        </div>
+
+        <form @submit.prevent="submitPlan()" class="inquiry-form-grid">
+          <!-- Row 1: Name & Email -->
+          <div class="form-group">
+            <input type="text" id="plan-name" x-model="formData.name" placeholder=" " required />
+            <label for="plan-name">Full Name *</label>
+          </div>
+
+          <div class="form-group">
+            <input type="email" id="plan-email" x-model="formData.email" placeholder=" " required />
+            <label for="plan-email">Email Address *</label>
+          </div>
+
+          <!-- Row 2: Phone/WhatsApp & Departure City -->
+          <div class="form-group">
+            <input type="tel" id="plan-phone" x-model="formData.phone" placeholder=" " />
+            <label for="plan-phone">WhatsApp / Phone (with country code)</label>
+          </div>
+
+          <div class="form-group">
+            <select id="plan-city" x-model="formData.startCity">
+              <option value="Marrakech">Marrakech</option>
+              <option value="Casablanca">Casablanca</option>
+              <option value="Fes">Fes</option>
+              <option value="Tangier">Tangier</option>
+              <option value="Agadir">Agadir / Taghazout</option>
+              <option value="Ouarzazate">Ouarzazate</option>
+              <option value="Other">Other / Multi-City</option>
+            </select>
+            <label for="plan-city">Preferred Starting City</label>
+          </div>
+
+          <!-- Row 3: Travelers & Travel Date/Month -->
+          <div class="form-group">
+            <select id="plan-travelers" x-model="formData.travelers">
+              <option value="Solo Traveler">Solo Traveler (1 Person)</option>
+              <option value="2 Adults" selected>2 Adults (Couple / Friends)</option>
+              <option value="Family with Kids">Family with Children</option>
+              <option value="Small Group (3-5)">Small Group (3 - 5 People)</option>
+              <option value="Large Group (6+)">Large Group (6+ People)</option>
+            </select>
+            <label for="plan-travelers">Group Size</label>
+          </div>
+
+          <div class="form-group">
+            <input type="text" id="plan-dates" x-model="formData.travelMonth" placeholder=" " />
+            <label for="plan-dates">Approximate Dates or Month of Travel</label>
+          </div>
+
+          <!-- Accommodation Style Preference -->
+          <div class="form-group form-col-full">
+            <div class="style-select-wrap">
+              <span class="style-legend"><i class="fa-solid fa-hotel"></i> Desired Accommodation Tier</span>
+              <div class="style-pills">
+                {['Standard Riads', 'Comfort Boutique', '5-Star Luxury Glamping'].map(st => (
+                  <button 
+                    type="button" 
+                    class="style-pill-btn"
+                    :class={`formData.style === '${st}' ? 'active' : ''`}
+                    @click={`formData.style = '${st}'`}
+                  >
+                    {st}
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <!-- Trip Vision / Special Requests -->
+          <div class="form-group form-col-full">
+            <textarea 
+              id="plan-message" 
+              x-model="formData.message" 
+              placeholder=" " 
+              rows="4" 
+              required
+            ></textarea>
+            <label for="plan-message">Tell us about your travel wishes (places you'd love to see, pace of trip, special dietary needs, celebrations...)</label>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="form-col-full" style="text-align: center; margin-top: 10px;">
+            <button type="submit" class="btn btn-primary inquiry-submit-btn">
+              <i class="fa-solid fa-paper-plane" style="margin-right: 8px;"></i> Request My Bespoke Itinerary
+            </button>
+            <p class="form-privacy-note">
+              <i class="fa-solid fa-shield-halved" style="color:var(--sand-gold);"></i> 
+              Zero obligations &bull; 100% Free custom quote &bull; Direct local support in Morocco
+            </p>
+          </div>
+        </form>
+
+        <!-- Success Modal Overlay -->
+        <div class="success-overlay" :class="showModal ? 'active' : ''" id="contact-success-modal">
+          <div class="success-card">
+            <div class="success-icon-box">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h3>Shukran, <span x-text="modalName"></span>!</h3>
+            <p>
+              Your custom Moroccan itinerary request has been submitted to <strong>Sahara Star Tours</strong>. 
+              Our senior travel designers in Marrakech are creating your personalized proposal.
+            </p>
+            <p class="modal-subtext">
+              Check your inbox (<strong x-text="modalEmail"></strong>) within 24 hours for the complete journey voucher.
+            </p>
+            <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:20px;">
+              <a href="https://wa.me/212661234567" target="_blank" rel="noopener" class="btn btn-secondary">
+                <i class="fa-brands fa-whatsapp" style="color:#25D366;margin-right:6px;"></i> Expedite on WhatsApp
+              </a>
+              <button type="button" class="btn btn-primary" @click="closeModal()">
+                Back to Site
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TRUST & GUARANTEE GRID -->
+      <div class="why-book-grid reveal active">
+        <div class="why-book-card">
+          <div class="wb-icon"><i class="fa-solid fa-compass"></i></div>
+          <h4>100% Private &amp; Bespoke</h4>
+          <p>Every schedule is customized around your personal pace, flight times, and hotel preferences.</p>
+        </div>
+        <div class="why-book-card">
+          <div class="wb-icon"><i class="fa-solid fa-id-card"></i></div>
+          <h4>Licensed Local Guides</h4>
+          <p>Native Berber and Moroccan professional drivers with comfortable air-conditioned 4x4s and minivans.</p>
+        </div>
+        <div class="why-book-card">
+          <div class="wb-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <h4>Transparent Pricing</h4>
+          <p>Clear inclusions and exclusions with no hidden local surcharges or surprise fees.</p>
+        </div>
+        <div class="why-book-card">
+          <div class="wb-icon"><i class="fa-solid fa-headset"></i></div>
+          <h4>24/7 On-Ground Support</h4>
+          <p>We are always reachable by phone and WhatsApp before, during, and after your trip across Morocco.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* CONTACT PAGE STYLING */
+  .contact-hero {
+    position: relative;
+    padding: 160px 5% 70px;
+    background: url('/assets/hero_sahara_sunset.png') center/cover no-repeat;
+    text-align: center;
+    border-bottom: 1px solid var(--glass-border);
+  }
+  .contact-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(13, 10, 9, 0.75) 0%, rgba(13, 10, 9, 0.95) 100%);
+    backdrop-filter: blur(4px);
+  }
+  .contact-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+  .contact-breadcrumbs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: var(--sand-gold);
+    margin-bottom: 20px;
+  }
+  .contact-breadcrumbs a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  .contact-breadcrumbs a:hover {
+    color: var(--sand-gold);
+  }
+  .contact-breadcrumbs .sep {
+    font-size: 0.65rem;
+    opacity: 0.6;
+  }
+  .contact-hero-content h1 {
+    font-size: 2.85rem;
+    color: var(--text-main);
+    margin: 14px 0 16px;
+    line-height: 1.2;
+    font-family: var(--font-serif);
+  }
+  .contact-hero-content p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  /* Body */
+  .contact-page-body {
+    padding: 60px 5% 100px;
+  }
+  .contact-page-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  /* Channels Grid */
+  .contact-channels-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .contact-card {
+    background: var(--night-surface);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    padding: 28px 24px;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .contact-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(232, 195, 158, 0.3);
+    box-shadow: var(--shadow-premium);
+  }
+  .contact-card.wa-card {
+    border-color: rgba(37, 211, 102, 0.35);
+    background: rgba(37, 211, 102, 0.03);
+  }
+  .contact-card.wa-card:hover {
+    border-color: #25D366;
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.2);
+  }
+  .c-card-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    position: relative;
+  }
+  .wa-icon {
+    background: #25D366;
+    color: #ffffff;
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+  }
+  .c-live-badge {
+    position: absolute;
+    top: -2px;
+    right: -4px;
+    background: #00ff73;
+    color: #0d0a09;
+    font-size: 0.62rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 2px 6px;
+    border-radius: 10px;
+    border: 1.5px solid #0d0a09;
+  }
+  .email-icon {
+    background: rgba(217, 107, 67, 0.15);
+    color: var(--terracotta);
+    border: 1px solid rgba(217, 107, 67, 0.3);
+  }
+  .location-icon {
+    background: rgba(232, 195, 158, 0.12);
+    color: var(--sand-gold);
+    border: 1px solid rgba(232, 195, 158, 0.3);
+  }
+  .c-card-tag {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--sand-gold);
+    font-weight: 700;
+  }
+  .c-card-details h3 {
+    font-size: 1.2rem;
+    color: var(--text-main);
+    margin: 4px 0 8px;
+  }
+  .c-card-details p {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-bottom: 12px;
+  }
+  .c-card-val {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-main);
+    font-family: var(--font-sans);
+  }
+
+  /* Custom Inquiry Box */
+  .custom-inquiry-box {
+    background: var(--night-surface);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    padding: 48px;
+    box-shadow: var(--shadow-premium);
+    position: relative;
+  }
+  .inquiry-header {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 36px;
+  }
+  .inquiry-header h2 {
+    font-size: 2.2rem;
+    margin: 12px 0 10px;
+    color: var(--text-main);
+  }
+  .inquiry-header p {
+    color: var(--text-muted);
+    font-size: 0.98rem;
+    line-height: 1.6;
+  }
+
+  .inquiry-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+  .form-col-full {
+    grid-column: span 2;
+  }
+
+  /* Style Selector Pills */
+  .style-select-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .style-legend {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-main);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .style-legend i { color: var(--terracotta); }
+  .style-pills {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  .style-pill-btn {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1.5px solid rgba(232, 195, 158, 0.2);
+    border-radius: 30px;
+    padding: 10px 16px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    text-align: center;
+  }
+  .style-pill-btn:hover {
+    border-color: var(--terracotta);
+    color: var(--text-main);
+    background: rgba(217, 107, 67, 0.05);
+  }
+  .style-pill-btn.active {
+    border-color: var(--terracotta);
+    background: rgba(217, 107, 67, 0.15);
+    color: #ffffff;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(217, 107, 67, 0.25);
+  }
+
+  .inquiry-submit-btn {
+    min-width: 280px;
+    height: 54px;
+    font-size: 1.05rem;
+    border-radius: 30px;
+    padding: 0 36px;
+  }
+  .form-privacy-note {
+    margin-top: 14px;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  /* Modal */
+  .modal-subtext {
+    font-size: 0.88rem;
+    color: var(--sand-gold);
+    margin-top: 8px;
+  }
+
+  /* Why Book Grid */
+  .why-book-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .why-book-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    padding: 24px 20px;
+    text-align: center;
+  }
+  .wb-icon {
+    font-size: 1.6rem;
+    color: var(--terracotta);
+    margin-bottom: 12px;
+  }
+  .why-book-card h4 {
+    font-size: 1rem;
+    color: var(--text-main);
+    margin-bottom: 8px;
+  }
+  .why-book-card p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  @media (max-width: 1024px) {
+    .contact-channels-grid { grid-template-columns: 1fr; }
+    .why-book-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 768px) {
+    .contact-hero { padding: 130px 5% 50px; }
+    .contact-hero-content h1 { font-size: 2.1rem; }
+    .custom-inquiry-box { padding: 28px 20px; }
+    .inquiry-form-grid { grid-template-columns: 1fr; gap: 16px; }
+    .form-col-full { grid-column: span 1; }
+    .style-pills { grid-template-columns: 1fr; }
+    .inquiry-submit-btn { width: 100%; min-width: auto; }
+    .why-book-grid { grid-template-columns: 1fr; }
+  }
+</style>

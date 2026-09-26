@@ -388,31 +388,39 @@ const galleryJSON = JSON.stringify(galleryImages);
         </a>
       </div>
     </aside>
-  </div>
 
-  <!-- Lightbox Modal (Alpine) -->
-  <div 
-    class="lightbox-overlay" 
-    :class="lightboxOpen ? 'active' : ''"
-    @click.self="lightboxOpen = false"
-  >
-    <div class="lightbox-content-box">
-      <button class="lightbox-close" @click="lightboxOpen = false" aria-label="Close lightbox">
-        <i class="fa-solid fa-xmark"></i>
-      </button>
-      <button class="lightbox-btn lightbox-prev" @click="prevImage()" aria-label="Previous image">
-        <i class="fa-solid fa-chevron-left"></i>
-      </button>
-      <img 
-        class="lightbox-img" 
-        :src="images[activeIndex]?.src" 
-        :alt="images[activeIndex]?.cap"
-        onerror="this.src='/assets/hero_sahara_sunset.png'" 
-      />
-      <button class="lightbox-btn lightbox-next" @click="nextImage()" aria-label="Next image">
-        <i class="fa-solid fa-chevron-right"></i>
-      </button>
-      <p class="lightbox-caption" x-text="images[activeIndex]?.cap"></p>
+    <!-- Lightbox Modal (Alpine Scope) -->
+    <div 
+      class="lightbox-overlay" 
+      :class="lightboxOpen ? 'active' : ''"
+      x-show="lightboxOpen"
+      style="display:none;"
+      @click.self="lightboxOpen = false"
+      x-transition:enter="transition ease-out duration-300"
+      x-transition:enter-start="opacity-0"
+      x-transition:enter-end="opacity-100"
+      x-transition:leave="transition ease-in duration-200"
+      x-transition:leave-start="opacity-100"
+      x-transition:leave-end="opacity-0"
+    >
+      <div class="lightbox-content-box">
+        <button class="lightbox-close" type="button" @click="lightboxOpen = false" aria-label="Close lightbox">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <button class="lightbox-btn lightbox-prev" type="button" @click="prevImage()" aria-label="Previous image">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <img 
+          class="lightbox-img" 
+          :src="images[activeIndex]?.src" 
+          :alt="images[activeIndex]?.cap"
+          onerror="this.src='/assets/hero_sahara_sunset.png'" 
+        />
+        <button class="lightbox-btn lightbox-next" type="button" @click="nextImage()" aria-label="Next image">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+        <p class="lightbox-caption" x-text="images[activeIndex]?.cap"></p>
+      </div>
     </div>
   </div>
 
