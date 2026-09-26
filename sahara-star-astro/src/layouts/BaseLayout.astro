@@ -1,0 +1,152 @@
+---
+// BaseLayout.astro — Master layout used by ALL pages
+// Handles: <head> SEO, global CSS, external scripts (AlpineJS, FontAwesome), Header, Footer
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  keywords?: string;
+  ogImage?: string;
+  canonicalUrl?: string;
+  currentPage?: string;
+  noIndex?: boolean;
+  // Schema.org structured data (JSON-LD)
+  schemaData?: Record<string, unknown>;
+}
+
+const {
+  title,
+  description,
+  keywords = 'sahara star tours, morocco travel agency, sahara desert tour, marrakech tours, moroccan travel',
+  ogImage = '/assets/hero_sahara_sunset.png',
+  canonicalUrl,
+  currentPage = '',
+  noIndex = false,
+  schemaData,
+} = Astro.props;
+
+const siteUrl = 'https://www.saharastartours.com';
+const canonical = canonicalUrl ?? `${siteUrl}${Astro.url.pathname}`;
+const ogImageAbsolute = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Primary SEO -->
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta name="keywords" content={keywords} />
+  {noIndex && <meta name="robots" content="noindex, nofollow" />}
+  <link rel="canonical" href={canonical} />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={ogImageAbsolute} />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Sahara Star Tours" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={ogImageAbsolute} />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/logo.png" />
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+
+  <!-- Google Fonts — preloaded -->
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" 
+    rel="stylesheet" 
+  />
+
+  <!-- Font Awesome Icons -->
+  <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+    crossorigin="anonymous"
+  />
+
+  <!-- Alpine.js — deferred for performance -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <!-- JSON-LD Structured Data -->
+  {schemaData && (
+    <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+  )}
+
+  <!-- Default Organization Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": "Sahara Star Tours",
+    "url": siteUrl,
+    "logo": `${siteUrl}/assets/logo.png`,
+    "description": "Premium Morocco travel agency specializing in bespoke Sahara desert tours, imperial city itineraries, and tailor-made Moroccan adventures.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Marrakech",
+      "addressCountry": "MA"
+    },
+    "telephone": "+212661234567",
+    "email": "contact@saharastartours.com",
+    "sameAs": [
+      "https://facebook.com/saharastartours",
+      "https://instagram.com/saharastartours"
+    ],
+    "areaServed": "Morocco",
+    "priceRange": "$$$"
+  })} />
+</head>
+<body>
+  <Header currentPage={currentPage} />
+
+  <main>
+    <slot />
+  </main>
+
+  <Footer />
+
+  <!-- Reveal-on-scroll animation observer -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const els = document.querySelectorAll('.reveal');
+      // Immediately activate anything already in viewport
+      els.forEach(el => {
+        const r = el.getBoundingClientRect();
+        if (r.top >= 0 && r.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
+          el.classList.add('active');
+        }
+      });
+      // Observe rest
+      const obs = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('active');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+      );
+      els.forEach(el => obs.observe(el));
+    });
+  </script>
+</body>
+</html>

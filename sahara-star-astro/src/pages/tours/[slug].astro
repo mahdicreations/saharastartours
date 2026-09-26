@@ -1,0 +1,65 @@
+---
+// src/pages/tours/[slug].astro
+// Dynamic route: renders any tour from tours.ts data
+import TourLayout from '../../layouts/TourLayout.astro';
+import { tours, getTourBySlug } from '../../data/tours';
+import type { GetStaticPaths } from 'astro';
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  return tours.map(tour => {
+    const related = tours
+      .filter(t => t.slug !== tour.slug)
+      .sort((a, b) => {
+        if (a.category === tour.category && b.category !== tour.category) return -1;
+        if (b.category === tour.category && a.category !== tour.category) return 1;
+        return 0;
+      })
+      .slice(0, 3)
+      .map(t => ({
+        slug: t.slug,
+        shortTitle: t.shortTitle,
+        duration: t.duration,
+        price: t.price,
+        heroImage: t.heroImage
+      }));
+
+    return {
+      params: { slug: tour.slug },
+      props: { tour, relatedTours: related },
+    };
+  });
+};
+
+const { tour, relatedTours } = Astro.props;
+---
+
+<TourLayout
+  title={tour.title}
+  description={tour.description}
+  ogImage={tour.heroImage}
+  tourName={tour.shortTitle}
+  tourSlug={tour.slug}
+  duration={tour.duration}
+  startingFrom={tour.startingFrom}
+  category={tour.category.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())}
+  price={tour.price}
+  heroImage={tour.heroImage}
+  highlights={tour.highlights}
+  inclusions={tour.inclusions}
+  exclusions={tour.exclusions}
+  itinerary={tour.itinerary}
+  mapDestinations={tour.mapDestinations}
+  mapRouteCoordinates={tour.mapRouteCoordinates}
+  galleryImages={tour.galleryImages}
+  relatedTours={relatedTours}
+>
+  <!-- About slot: tour description paragraph -->
+  <div slot="about">
+    <p style="margin-bottom: 20px; line-height: 1.8;">
+      Embark on the ultimate <strong>{tour.shortTitle}</strong>, a meticulously crafted journey designed to showcase the very best of Morocco. As a leading Moroccan travel agency, Sahara Star Tours invites you to experience an unforgettable expedition blending rich cultural heritage, breathtaking landscapes, and premium comfort.
+    </p>
+    <p style="line-height: 1.8;">
+      Whether you're traversing the dramatic peaks of the High Atlas Mountains, riding camels into the golden dunes of Merzouga at sunset, or resting in luxury desert camps and authentic riads, every moment is optimized for authentic immersion. Perfect for couples, families, and adventurous travelers, this tour offers a seamless, stress-free vacation with professional local guides and private air-conditioned transportation.
+    </p>
+  </div>
+</TourLayout>

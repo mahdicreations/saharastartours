@@ -1,0 +1,49 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getToursByCategory } from '../data/tours';
+
+const tours = getToursByCategory('day-trips');
+---
+
+<BaseLayout
+  title="Day Trips from Marrakech | Sahara Star Tours — Best Moroccan Day Excursions"
+  description="Discover the best day trips from Marrakech: Essaouira, Ait Benhaddou, Ouzoud Waterfalls, Ourika Valley, and more. Private guided day excursions from Morocco's Pearl of the South."
+  currentPage="day-trips"
+>
+<section style="padding: 180px 5% 80px; text-align: center; background: linear-gradient(180deg, var(--night-surface) 0%, var(--night-bg) 100%); border-bottom: 1px solid var(--glass-border);">
+  <span class="tag" style="display:inline-block;color:var(--sand-gold);text-transform:uppercase;letter-spacing:3px;font-size:0.9rem;font-weight:600;margin-bottom:12px;">Day Excursions</span>
+  <h1 style="font-size:3rem;max-width:700px;margin:0 auto 20px;background:linear-gradient(135deg,var(--text-main) 30%,var(--sand-gold) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Day Trips from Marrakech</h1>
+  <p style="max-width:650px;margin:0 auto;font-size:1.1rem;">Perfect one-day escapes from Marrakech to the Atlas Mountains, Essaouira Atlantic coast, Agafay desert, and Morocco's most photogenic villages.</p>
+</section>
+<section style="padding: 60px 5%; max-width: 1400px; margin: 0 auto;">
+  {tours.length > 0 ? (
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:32px;">
+      {tours.map(tour => (
+        <article class="tour-card reveal active">
+          <div class="tour-img-wrapper">
+            <img src={tour.heroImage} alt={tour.shortTitle} loading="lazy" onerror="this.src='/assets/hero_sahara_sunset.png'" />
+            {tour.badge && <span class="tour-badge">{tour.badge}</span>}
+          </div>
+          <div class="tour-info">
+            <div class="tour-meta">
+              <div><i class="fa-regular fa-clock"></i> {tour.duration}</div>
+              <div><i class="fa-solid fa-location-dot"></i> {tour.startingFrom}</div>
+            </div>
+            <h2 class="tour-title">{tour.shortTitle}</h2>
+            <p class="tour-desc">{tour.description}</p>
+            <div class="tour-footer">
+              <div class="tour-price">Starting from<span>{tour.price}</span></div>
+              <a href={`/tours/${tour.slug}`} class="btn btn-primary btn-sm">View Details <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+  ) : (
+    <div style="text-align:center;padding:60px;color:var(--text-muted);">
+      <i class="fa-solid fa-compass" style="font-size:3rem;color:var(--sand-gold);margin-bottom:20px;"></i>
+      <p>More day trips coming soon! In the meantime, <a href="/#contact" style="color:var(--sand-gold)">contact us</a> for custom day excursions.</p>
+    </div>
+  )}
+</section>
+</BaseLayout>

@@ -1,0 +1,649 @@
+---
+// src/pages/index.astro — Homepage
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getFeaturedTours, getToursByCategory, categoryLabels } from '../data/tours';
+
+const featuredTours = getFeaturedTours(9);
+
+// Stats for trust section
+const stats = [
+  { value: '2,400+', label: 'Happy Travelers' },
+  { value: '98%', label: 'Satisfaction Rate' },
+  { value: '15+', label: 'Years Experience' },
+  { value: '31', label: 'Unique Itineraries' },
+];
+
+// Culture cards
+const cultureItems = [
+  {
+    title: 'Sahara Desert Glamping',
+    desc: 'Sleep under a billion stars in a luxury Berber tent deep in the Erg Chebbi dunes. Wake to sunrise camel rides across the golden sea of sand.',
+    image: '/assets/camel_trek_dunes.png',
+  },
+  {
+    title: 'Imperial Medinas',
+    desc: 'Wander through the 1,200-year-old labyrinthine streets of Fes el-Bali, a living UNESCO World Heritage city where nothing has changed in centuries.',
+    image: '/assets/fes_medina_gate.png',
+  },
+  {
+    title: 'Chefchaouen Blue City',
+    desc: "Morocco's ethereal Blue Pearl — every surface washed in brilliant indigo and azure, perched in the Rif Mountain mist.",
+    image: '/assets/chefchaouen_street.png',
+  },
+  {
+    title: 'High Atlas Treks',
+    desc: "Cross the High Atlas range via the dramatic Tizi n'Tichka pass at 2260m, passing through Berber villages with breathtaking mountain views.",
+    image: '/assets/atlas_mountains_valley.png',
+  },
+];
+
+// Reviews
+const reviews = [
+  { stars: 5, quote: "The most magical travel experience of my life. The desert camp at Erg Chebbi was beyond anything I ever imagined — stars like I've never seen.", name: 'Sophie Laurent', location: 'Paris, France', avatar: '/assets/hero_sahara_sunset.png' },
+  { stars: 5, quote: "Our guide was phenomenal. He knew every hidden corner of Fes, every family story behind the tanneries. Authentic, not touristic. Absolutely recommend Sahara Star Tours.", name: 'Marco Rossi', location: 'Milan, Italy', avatar: '/assets/marrakech_riad_pool.png' },
+  { stars: 5, quote: "We custom-designed our 12-day trip with their team from scratch. They listened to every single wish. The VIP Mercedes transportation was a dream.", name: 'David & Emma Clark', location: 'London, UK', avatar: '/assets/chefchaouen_street.png' },
+  { stars: 5, quote: "The camel trek at sunset, the Berber music by the campfire, the Majorelle Gardens in morning light... Morocco through Sahara Star Tours is pure poetry.", name: 'Alejandro García', location: 'Madrid, Spain', avatar: '/assets/atlas_mountains_valley.png' },
+];
+
+// Category tabs configuration
+const categoryList = [
+  { id: 'all', label: 'All Tours', count: 31 },
+  { id: 'desert-tours', label: 'Desert Tours', count: 21 },
+  { id: 'imperial-cities', label: 'Imperial Cities', count: 3 },
+  { id: 'day-trips', label: 'Day Trips', count: 6 },
+  { id: 'activities', label: 'Activities', count: 6 },
+];
+
+const homeSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Sahara Star Tours",
+  "url": "https://www.saharastartours.com",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://www.saharastartours.com/tours/{search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+};
+---
+
+<BaseLayout
+  title="Sahara Star Tours | Bespoke Sahara Desert & Morocco Travel Agency"
+  description="Discover the magic of Morocco with Sahara Star Tours. From luxury Sahara Desert safaris to Marrakech medina tours and high Atlas treks, book your dream journey today."
+  keywords="sahara star tours, morocco travel agency, sahara desert tour, marrakech riad booking, moroccan tours, custom travel morocco"
+  currentPage="home"
+  schemaData={homeSchema}
+>
+
+<!-- HERO SECTION -->
+<section class="hero" id="hero">
+  <div class="hero-background">
+    <img src="/assets/hero_sahara_sunset.png" alt="Sahara Star Tours – Morocco's Premier Desert Travel Agency" />
+  </div>
+  <div class="hero-gradient"></div>
+  <div class="hero-content">
+    <span class="subtitle">Morocco's Premier Travel Agency</span>
+    <h1>Discover the <span>Magic of Morocco</span></h1>
+    <p>From the golden dunes of the Sahara to the blue streets of Chefchaouen — bespoke journeys crafted by local Moroccan desert experts.</p>
+    <div class="hero-btns">
+      <a href="#tours" class="btn btn-primary"><i class="fa-solid fa-compass"></i> Explore Tours</a>
+      <a href="#contact" class="btn btn-secondary"><i class="fa-solid fa-paper-plane"></i> Plan a Custom Trip</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS TRUST BAR -->
+<div class="stats-bar reveal active">
+  {stats.map(s => (
+    <div class="stat-item">
+      <span class="stat-value">{s.value}</span>
+      <span class="stat-label">{s.label}</span>
+    </div>
+  ))}
+</div>
+
+<!-- TOURS SECTION -->
+<section class="tours-section" id="tours">
+  <div class="section-header reveal active">
+    <span class="tag">Our Signature Experiences</span>
+    <h2>Handcrafted Morocco Tours</h2>
+    <p>Each journey is a bespoke masterpiece — privately guided, luxury-accommodated, and completely tailored to your dream vision of Morocco.</p>
+  </div>
+
+  <div class="category-showcase-container">
+    <!-- Category Filter Tabs -->
+    <ul class="category-tabs" x-data="{activeTab:'all'}" id="category-tabs">
+      {categoryList.map(cat => (
+        <li>
+          <button 
+            class="category-tab"
+            :class={`activeTab === '${cat.id}' ? 'active' : ''`}
+            @click={`activeTab = '${cat.id}'`}
+            type="button"
+          >
+            {cat.label} <span>({cat.count})</span>
+          </button>
+        </li>
+      ))}
+    </ul>
+
+    <!-- Tour Cards Grid -->
+    <div class="category-tours-wrapper">
+      <div class="category-tour-grid">
+        {featuredTours.map(tour => (
+          <article class="tour-card reveal active">
+            <div class="tour-img-wrapper">
+              <img 
+                src={tour.heroImage} 
+                alt={tour.shortTitle} 
+                loading="lazy"
+                onerror="this.src='/assets/hero_sahara_sunset.png'"
+              />
+              {tour.badge && <span class="tour-badge">{tour.badge}</span>}
+            </div>
+            <div class="tour-info">
+              <div class="tour-meta">
+                <div><i class="fa-regular fa-clock"></i> {tour.duration}</div>
+                <div><i class="fa-solid fa-location-dot"></i> {tour.startingFrom}</div>
+              </div>
+              <h3 class="tour-title">{tour.shortTitle}</h3>
+              <p class="tour-desc">{tour.description}</p>
+              <div class="tour-footer">
+                <div class="tour-price">
+                  Starting from
+                  <span>{tour.price}</span>
+                </div>
+                <a href={`/tours/${tour.slug}`} class="btn btn-primary btn-sm">
+                  View Tour <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:50px;">
+      <a href="/desert-tours" class="btn btn-secondary">
+        <i class="fa-solid fa-compass"></i> Browse All 31 Tours
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- STARTING CITIES SECTION -->
+<section class="starting-cities-section">
+  <div class="section-header reveal active">
+    <span class="tag">Departure Cities</span>
+    <h2>Where Will Your Journey Begin?</h2>
+    <p>We offer departures from Morocco's major international airports and cities — choose your gateway.</p>
+  </div>
+  <div class="starting-cities-grid">
+    {[
+      { city: 'Casablanca', badge: 'CMN Airport', desc: 'Morocco\'s largest international hub — most tour packages depart from Casablanca, with private transfers arranged to your first destination.', tours: '21 Departures', img: '/assets/casablanca_gateway.png' },
+      { city: 'Marrakech', badge: 'RAK Airport', desc: 'The Pearl of the South — a magical starting point for desert adventures, day trips, and activities. Perfect for shorter 3-5 day itineraries.', tours: '15 Departures', img: '/assets/marrakech_riad_pool.png' },
+      { city: 'Fes', badge: 'FEZ Airport', desc: 'Begin your Moroccan odyssey in the ancient imperial medina — one-way tours to Marrakech or round trips through the desert.', tours: '8 Departures', img: '/assets/fes_medina_gate.png' },
+      { city: 'Tangier', badge: 'TNG Port', desc: 'Cross from Spain by ferry and explore Morocco from the north — access to Chefchaouen, Tetouan, and imperial cities.', tours: '5 Departures', img: '/assets/tangier_coast.png' },
+    ].map(c => (
+      <div class="city-card reveal active">
+        <div class="city-img-wrapper">
+          <img src={c.img} alt={`Tours from ${c.city}`} loading="lazy" />
+          <span class="city-badge">{c.badge}</span>
+        </div>
+        <div class="city-content">
+          <h3>{c.city}</h3>
+          <p>{c.desc}</p>
+          <div class="city-meta">
+            <span><i class="fa-solid fa-plane-departure"></i> {c.tours}</span>
+          </div>
+          <div class="city-footer">
+            <a href="/desert-tours" class="btn btn-primary btn-sm">View Packages</a>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+<!-- CULTURE SECTION -->
+<section class="culture-section" id="culture">
+  <div class="section-header reveal active">
+    <span class="tag">Why Morocco?</span>
+    <h2>Experiences That Will Change You</h2>
+    <p>Morocco isn't a destination — it's a transformation. Here is a glimpse of what awaits.</p>
+  </div>
+  <div class="culture-slider">
+    {cultureItems.map(item => (
+      <div class="culture-card">
+        <div class="culture-img">
+          <img src={item.image} alt={item.title} loading="lazy" />
+        </div>
+        <div class="culture-info">
+          <h3>{item.title}</h3>
+          <p>{item.desc}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+<!-- COST CALCULATOR / PLANNER -->
+<section class="calculator-section" id="planner">
+  <div class="section-header reveal active">
+    <span class="tag">Plan Your Budget</span>
+    <h2>Morocco Trip Cost Calculator</h2>
+    <p>Get a personalized estimate for your Morocco dream journey — adjust your group size, duration, and travel style below.</p>
+  </div>
+  <div 
+    class="calculator-container"
+    x-data="{
+      days: 7,
+      people: 2,
+      tier: 'standard',
+      addons: { camel: false, balloon: false, private: false },
+      tiers: { standard: 120, comfort: 195, luxury: 320 },
+      get base() { return this.days * this.people * this.tiers[this.tier]; },
+      get addonTotal() {
+        return (this.addons.camel ? 45 * this.people : 0)
+          + (this.addons.balloon ? 180 * this.people : 0)
+          + (this.addons.private ? 80 * this.days : 0);
+      },
+      get total() { return this.base + this.addonTotal; },
+      get perPerson() { return Math.round(this.total / this.people); }
+    }"
+  >
+    <div class="calc-inputs">
+      <h3>Customize Your Journey</h3>
+      <div class="calc-group">
+        <div class="calc-label-row">
+          <label>Tour Duration</label>
+          <span class="calc-value" x-text="days + ' Days'"></span>
+        </div>
+        <input type="range" min="3" max="16" x-model.number="days" />
+      </div>
+      <div class="calc-group">
+        <div class="calc-label-row">
+          <label>Group Size</label>
+          <span class="calc-value" x-text="people + ' People'"></span>
+        </div>
+        <input type="range" min="1" max="12" x-model.number="people" />
+      </div>
+      <div class="calc-group">
+        <div class="calc-label-row"><label>Accommodation Tier</label></div>
+        <div class="tier-cards">
+          <div class="tier-card" :class="tier==='standard'?'active':''" @click="tier='standard'">
+            <i class="fa-solid fa-tent"></i>
+            <span>Standard</span>
+            <small>Guesthouses & riads</small>
+          </div>
+          <div class="tier-card" :class="tier==='comfort'?'active':''" @click="tier='comfort'">
+            <i class="fa-solid fa-hotel"></i>
+            <span>Comfort</span>
+            <small>4-star hotels</small>
+          </div>
+          <div class="tier-card" :class="tier==='luxury'?'active':''" @click="tier='luxury'">
+            <i class="fa-solid fa-star"></i>
+            <span>Luxury</span>
+            <small>5-star riads & camps</small>
+          </div>
+        </div>
+      </div>
+      <div class="calc-group">
+        <div class="calc-label-row"><label>Add-Ons</label></div>
+        <div class="addons-grid">
+          <div class="addon-item" :class="addons.camel?'active':''" @click="addons.camel=!addons.camel">
+            <input type="checkbox" :checked="addons.camel" />
+            <div class="addon-details">
+              <span class="addon-name">Camel Trek</span>
+              <span class="addon-price">+$45/person</span>
+            </div>
+          </div>
+          <div class="addon-item" :class="addons.balloon?'active':''" @click="addons.balloon=!addons.balloon">
+            <input type="checkbox" :checked="addons.balloon" />
+            <div class="addon-details">
+              <span class="addon-name">Hot Air Balloon</span>
+              <span class="addon-price">+$180/person</span>
+            </div>
+          </div>
+          <div class="addon-item" :class="addons.private?'active':''" @click="addons.private=!addons.private">
+            <input type="checkbox" :checked="addons.private" />
+            <div class="addon-details">
+              <span class="addon-name">Private Driver</span>
+              <span class="addon-price">+$80/day</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="calc-summary-wrapper">
+      <div class="calc-summary">
+        <h4>Your Estimate</h4>
+        <ul class="calc-summary-details">
+          <li><span>Duration</span><span x-text="days + ' days'"></span></li>
+          <li><span>Group size</span><span x-text="people + ' people'"></span></li>
+          <li><span>Accommodation</span><span x-text="tier.charAt(0).toUpperCase() + tier.slice(1)"></span></li>
+          <li><span>Base cost</span><span x-text="'$' + base.toLocaleString()"></span></li>
+          <li><span>Add-ons</span><span x-text="'$' + addonTotal.toLocaleString()"></span></li>
+        </ul>
+        <div class="calc-total-box">
+          <div class="planner-status-badge"><i class="fa-solid fa-compass"></i> Total Estimate</div>
+          <div style="font-size:2.8rem;font-family:var(--font-serif);color:var(--sand-gold);font-weight:700;line-height:1.1;" x-text="'$' + total.toLocaleString()"></div>
+          <div style="font-size:0.9rem;color:var(--text-muted);margin-top:6px;" x-text="'$' + perPerson + ' per person'"></div>
+        </div>
+        <div class="discount-badge-container">
+          <div class="discount-badge">
+            <i class="fa-solid fa-tag"></i>
+            Early booking saves up to 15%
+          </div>
+        </div>
+        <a href="#contact" class="btn btn-primary" style="width:100%;margin-top:20px;justify-content:center;">
+          <i class="fa-solid fa-paper-plane"></i> Get Exact Quote
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section 
+  class="reviews-section"
+  x-data="{
+    reviews: [
+      {stars:5,quote:'The most magical travel experience of my life. The desert camp at Erg Chebbi was beyond anything I ever imagined.',name:'Sophie Laurent',location:'Paris, France'},
+      {stars:5,quote:'Our guide was phenomenal. He knew every hidden corner of Fes. Authentic, not touristic. Absolutely recommend Sahara Star Tours.',name:'Marco Rossi',location:'Milan, Italy'},
+      {stars:5,quote:'We custom-designed our 12-day trip. They listened to every single wish. The VIP Mercedes transportation was a dream.',name:'David & Emma Clark',location:'London, UK'},
+      {stars:5,quote:'The camel trek at sunset, the Berber music by the campfire, the Majorelle Gardens in morning light... Morocco through Sahara Star Tours is pure poetry.',name:'Alejandro García',location:'Madrid, Spain'},
+    ],
+    current: 0,
+    interval: null,
+    init() {
+      this.interval = setInterval(() => { this.next(); }, 5500);
+    },
+    next() { this.current = (this.current + 1) % this.reviews.length; },
+    prev() { this.current = (this.current - 1 + this.reviews.length) % this.reviews.length; },
+    goTo(idx) { this.current = idx; clearInterval(this.interval); }
+  }"
+>
+  <div class="section-header reveal active">
+    <span class="tag">Testimonials</span>
+    <h2>Stories From Our Travelers</h2>
+    <p>Over 2,400 travelers have trusted Sahara Star Tours with their Moroccan dream. Here's what they say.</p>
+  </div>
+  <div class="reviews-container">
+    <div class="reviews-wrapper" :style="`transform: translateX(-${current * 100}%)`">
+      <template x-for="(r,idx) in reviews" :key="idx">
+        <div class="review-slide">
+          <div class="review-stars">
+            <template x-for="i in r.stars" :key="i"><i class="fa-solid fa-star"></i></template>
+          </div>
+          <p class="review-quote" x-text="'&ldquo;' + r.quote + '&rdquo;'"></p>
+          <div class="review-user">
+            <div class="review-user-info">
+              <h5 x-text="r.name"></h5>
+              <span x-text="r.location"></span>
+            </div>
+          </div>
+        </div>
+      </template>
+    </div>
+    <div class="review-dots">
+      <template x-for="(r,idx) in reviews" :key="idx">
+        <span class="review-dot" :class="current===idx?'active':''" @click="goTo(idx)"></span>
+      </template>
+    </div>
+  </div>
+</section>
+
+<!-- SEO NARRATIVE -->
+<section class="agency-seo-showcase reveal active" id="seo-details">
+  <div class="seo-grid">
+    <div class="seo-text">
+      <span class="tag" style="color:var(--sand-gold);text-transform:uppercase;letter-spacing:2.5px;font-size:0.9rem;font-weight:600">Morocco Travel Experts</span>
+      <h3>Bespoke Journeys Crafted by <span>Sahara Star Tours</span></h3>
+      <p>As the premier locally-owned travel agency in Marrakech, <strong>Sahara Star Tours</strong> is dedicated to unlocking the deep visual splendor, historical medinas, and rich cultural traditions of Morocco in absolute comfort.</p>
+      <p>Our custom point-by-point route maps and day-by-day itineraries are designed by native guides who possess a deep, lifelong connection to the land. Whether you seek a romantic sunset camel safari in Erg Chebbi, an educational walking tour of ancient Fes, or a sunrise hot air balloon flight over the Jbilet desert, we guarantee absolute comfort, private VIP Mercedes transport, and luxurious Riad accommodation tiers.</p>
+    </div>
+    <div class="seo-highlight-cards">
+      <div class="seo-card"><i class="fa-solid fa-compass"></i><h4>Local Nomad Guides</h4><p>Explore the Sahara under the direct tutelage of native desert hosts and certified medina historians.</p></div>
+      <div class="seo-card"><i class="fa-solid fa-car-side"></i><h4>VIP Mercedes Fleet</h4><p>Travel across panoramic mountain passes inside climate-controlled VIP leather-seated Mercedes transporters.</p></div>
+      <div class="seo-card"><i class="fa-solid fa-star"></i><h4>5-Star Riad Stays</h4><p>Settle inside prestigious boutique zellige Riads and high-end glamping camps featuring en-suite private bathrooms.</p></div>
+      <div class="seo-card"><i class="fa-solid fa-sliders"></i><h4>Point-by-Point Tailoring</h4><p>Completely customize your itineraries, dates, Riad pool options, and diet plans to match your exact wishes.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT FORM -->
+<section class="contact-section" id="contact">
+  <div class="section-header reveal active">
+    <span class="tag">Begin Your Journey</span>
+    <h2>Submit An Inquiry</h2>
+    <p>Ready to trace the red streets of Marrakech or watch Sahara night skies? Send us a message and our expert planning team will draft your custom plan within 24 hours.</p>
+  </div>
+  <div 
+    class="contact-container reveal active"
+    x-data="{
+      name:'',email:'',travelers:'',pkg:'none',message:'',
+      showModal:false,modalTitle:'',modalMsg:'',
+      handleSubmit(){
+        this.modalTitle='Shukran, '+this.name+'!';
+        this.modalMsg='Your custom trip inquiry has been successfully registered with <strong>Sahara Star Tours</strong>. Our travel designers in Marrakech are analyzing your requests.<br><br>Expect a highly detailed bespoke travel itinerary in your email (<strong>'+this.email+'</strong>) within 24 hours.';
+        this.showModal=true;
+        document.body.style.overflow='hidden';
+        this.name='';this.email='';this.travelers='';this.pkg='none';this.message='';
+      },
+      closeModal(){this.showModal=false;document.body.style.overflow='';}
+    }"
+  >
+    <form class="contact-form" @submit.prevent="handleSubmit()">
+      <div class="form-group">
+        <input type="text" id="contact-name" x-model="name" placeholder=" " required />
+        <label for="contact-name">Your Full Name</label>
+      </div>
+      <div class="form-group">
+        <input type="email" id="contact-email" x-model="email" placeholder=" " required />
+        <label for="contact-email">Email Address</label>
+      </div>
+      <div class="form-grid-2">
+        <div class="form-group">
+          <select id="contact-travelers" x-model="travelers" style="width:100%">
+            <option value="">Select Travelers</option>
+            <option value="1 Traveler">1 Traveler</option>
+            <option value="2 Travelers">2 Travelers</option>
+            <option value="3-5 Travelers">3 - 5 Travelers</option>
+            <option value="6+ Travelers">6+ Travelers Group</option>
+          </select>
+          <label for="contact-travelers">Group Size</label>
+        </div>
+        <div class="form-group">
+          <select id="contact-package" x-model="pkg" style="width:100%">
+            <option value="none">Custom Expedition / Not Sure</option>
+            <option value="sahara">Sahara Dunes &amp; Desert Glamping (4 Days)</option>
+            <option value="imperial">Imperial Medinas &amp; Riad Retreat (7 Days)</option>
+            <option value="atlas">High Atlas &amp; Berber Villages Trek (5 Days)</option>
+            <option value="coast">Blue City &amp; Atlantic Coast Escape (5 Days)</option>
+          </select>
+          <label for="contact-package">Selected Tour Package</label>
+        </div>
+      </div>
+      <div class="form-group form-full">
+        <textarea id="contact-message" x-model="message" placeholder=" " rows="5" required></textarea>
+        <label for="contact-message">Tell us about your travel wishes (Preferred dates, special requirements, food allergies...)</label>
+      </div>
+      <button type="submit" class="btn btn-primary btn-submit">Send Inquiry Proposal</button>
+    </form>
+    <div class="success-overlay" :class="showModal?'active':''" id="success-modal">
+      <div class="success-card">
+        <div class="success-icon-box"><i class="fa-solid fa-circle-check"></i></div>
+        <h3 x-text="modalTitle"></h3>
+        <p x-html="modalMsg"></p>
+        <button class="btn btn-primary" @click="closeModal()">Return to Exploring</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+</BaseLayout>
+
+<style>
+/* ---- Page-specific styles for index.astro ---- */
+.hero {
+  height: 100vh; display: flex; align-items: center; justify-content: center;
+  position: relative; padding: 0 5%; overflow: hidden;
+}
+.hero-background { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
+.hero-background img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.4) contrast(1.1); animation: slowZoom 25s infinite alternate ease-in-out; }
+.hero-gradient { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(17,14,13,0.2) 0%, rgba(17,14,13,0.4) 60%, var(--night-bg) 100%); z-index: 2; }
+.hero-content { position: relative; z-index: 3; text-align: center; max-width: 900px; margin-top: 50px; }
+.hero-content .subtitle { font-size: 1.1rem; text-transform: uppercase; letter-spacing: 4px; color: var(--sand-gold); font-weight: 600; margin-bottom: 20px; display: inline-block; opacity: 0; transform: translateY(20px); animation: slideUpFade 1s forwards 0.2s cubic-bezier(0.16,1,0.3,1); }
+.hero-content h1 { font-size: 4.8rem; line-height: 1.1; margin-bottom: 24px; color: var(--text-main); opacity: 0; transform: translateY(25px); animation: slideUpFade 1s forwards 0.4s cubic-bezier(0.16,1,0.3,1); }
+.hero-content h1 span { background: linear-gradient(135deg, var(--terracotta) 0%, var(--sand-gold) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero-content p { font-size: 1.2rem; max-width: 650px; margin: 0 auto 40px; opacity: 0; transform: translateY(20px); animation: slideUpFade 1s forwards 0.6s cubic-bezier(0.16,1,0.3,1); }
+.hero-btns { display: flex; gap: 16px; justify-content: center; opacity: 0; transform: translateY(20px); animation: slideUpFade 1s forwards 0.8s cubic-bezier(0.16,1,0.3,1); }
+
+/* Stats bar */
+.stats-bar { display: flex; justify-content: center; gap: 0; background: var(--night-surface); border: 1px solid var(--glass-border); max-width: 900px; margin: -20px auto 0; position: relative; z-index: 10; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-premium); }
+.stat-item { flex: 1; text-align: center; padding: 24px 20px; border-right: 1px solid var(--glass-border); }
+.stat-item:last-child { border-right: none; }
+.stat-value { display: block; font-size: 2rem; font-family: var(--font-serif); color: var(--sand-gold); font-weight: 700; }
+.stat-label { display: block; font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1.5px; margin-top: 4px; }
+
+/* Tours section */
+.tours-section { padding-top: 100px; }
+.category-showcase-container { max-width: 1400px; margin: 0 auto; padding: 0 5%; }
+.category-tabs { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px 18px; margin: 0 auto 50px; list-style: none; max-width: 800px; }
+.category-tab { background: rgba(255,255,255,0.03); border: 1px solid var(--glass-border); color: var(--text-muted); border-radius: 50px; padding: 12px 28px; font-family: var(--font-sans); font-size: 0.9rem; font-weight: 500; cursor: pointer; transition: var(--transition-smooth); box-shadow: 0 4px 15px rgba(0,0,0,0.15); }
+.category-tab:hover { border-color: var(--sand-gold); color: var(--text-main); transform: translateY(-2px); }
+.category-tab.active { background: linear-gradient(135deg, var(--terracotta) 0%, hsl(14,75%,45%) 100%); color: var(--text-main); border-color: var(--terracotta); box-shadow: 0 6px 20px var(--terracotta-glow); }
+.category-tab span { font-size: 0.8rem; opacity: 0.8; margin-left: 6px; }
+.category-tour-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); gap: 30px; }
+
+/* Starting cities */
+.starting-cities-section { padding: 100px 5% 80px; background: linear-gradient(180deg, var(--night-bg) 0%, var(--night-surface) 100%); border-top: 1px solid var(--glass-border); }
+.starting-cities-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1400px; margin: 0 auto; }
+.city-card { background: var(--night-surface); border: 1px solid var(--glass-border); border-radius: var(--radius-md); overflow: hidden; transition: var(--transition-smooth); box-shadow: 0 10px 30px rgba(0,0,0,0.2); display: flex; flex-direction: column; }
+.city-card:hover { transform: translateY(-10px); border-color: rgba(232,195,158,0.25); box-shadow: var(--shadow-premium); }
+.city-img-wrapper { height: 240px; position: relative; overflow: hidden; }
+.city-img-wrapper img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease; }
+.city-card:hover .city-img-wrapper img { transform: scale(1.08); }
+.city-badge { position: absolute; top: 20px; left: 20px; background: var(--terracotta); color: var(--text-main); padding: 6px 14px; border-radius: 30px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; z-index: 2; box-shadow: 0 4px 10px rgba(217,107,67,0.4); }
+.city-content { padding: 24px; display: flex; flex-direction: column; flex-grow: 1; }
+.city-content h3 { font-size: 1.45rem; margin-bottom: 12px; color: var(--text-main); font-family: var(--font-serif); transition: var(--transition-smooth); }
+.city-card:hover .city-content h3 { color: var(--sand-gold); }
+.city-content p { font-size: 0.9rem; margin-bottom: 20px; line-height: 1.6; }
+.city-meta { margin-top: auto; display: flex; flex-direction: column; gap: 8px; padding: 16px 0; border-top: 1px solid var(--glass-border); font-size: 0.85rem; color: var(--sand-gold); }
+.city-meta span { display: flex; align-items: center; gap: 8px; }
+.city-footer { padding-top: 20px; display: flex; justify-content: flex-end; }
+
+/* Culture section */
+.culture-section { overflow: hidden; }
+.culture-slider { display: flex; gap: 30px; overflow-x: auto; padding: 20px 5% 40px; scroll-snap-type: x mandatory; }
+.culture-slider::-webkit-scrollbar { height: 6px; }
+.culture-slider::-webkit-scrollbar-thumb { background: var(--glass-border); }
+.culture-card { flex: 0 0 350px; background: var(--night-surface); border: 1px solid var(--glass-border); border-radius: var(--radius-md); overflow: hidden; scroll-snap-align: start; transition: var(--transition-smooth); }
+.culture-card:hover { border-color: var(--sand-gold); transform: translateY(-5px); }
+.culture-img { height: 200px; overflow: hidden; }
+.culture-img img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition-smooth); }
+.culture-card:hover .culture-img img { transform: scale(1.06); }
+.culture-info { padding: 24px; }
+.culture-info h3 { font-size: 1.3rem; color: var(--sand-gold); margin-bottom: 10px; }
+.culture-info p { font-size: 0.88rem; }
+
+/* Calculator */
+.calculator-section { background: linear-gradient(180deg, var(--night-bg) 0%, var(--night-surface) 50%, var(--night-bg) 100%); }
+.calculator-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; background: var(--night-surface); border: 1px solid var(--glass-border); border-radius: var(--radius-lg); padding: 40px; box-shadow: var(--shadow-premium); position: relative; overflow: hidden; }
+.calculator-container::before { content: ''; position: absolute; top: -100px; right: -100px; width: 300px; height: 300px; background: radial-gradient(circle, var(--terracotta-glow) 0%, transparent 70%); z-index: 0; pointer-events: none; }
+.calc-inputs { position: relative; z-index: 1; }
+.calc-inputs h3 { font-size: 1.8rem; margin-bottom: 24px; color: var(--sand-gold); }
+.calc-group { margin-bottom: 30px; }
+.calc-label-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.calc-label-row label { font-size: 0.95rem; font-weight: 500; }
+.calc-value { color: var(--terracotta); font-weight: 600; font-size: 1.1rem; }
+input[type=range] { -webkit-appearance: none; width: 100%; background: transparent; }
+input[type=range]:focus { outline: none; }
+input[type=range]::-webkit-slider-runnable-track { width: 100%; height: 6px; cursor: pointer; background: rgba(255,255,255,0.1); border-radius: 3px; }
+input[type=range]::-webkit-slider-thumb { height: 20px; width: 20px; border-radius: 50%; background: var(--terracotta); cursor: pointer; -webkit-appearance: none; margin-top: -7px; box-shadow: 0 0 10px var(--terracotta-glow); }
+.tier-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.tier-card { background: rgba(255,255,255,0.03); border: 1px solid var(--glass-border); border-radius: var(--radius-sm); padding: 16px; cursor: pointer; transition: var(--transition-smooth); text-align: center; }
+.tier-card.active { background: rgba(217,107,67,0.08); border-color: var(--terracotta); box-shadow: 0 4px 15px rgba(217,107,67,0.15); }
+.tier-card i { font-size: 1.5rem; color: var(--sand-gold); margin-bottom: 8px; display: block; }
+.tier-card span { display: block; font-size: 0.9rem; font-weight: 500; }
+.tier-card small { color: var(--text-muted); font-size: 0.75rem; }
+.addons-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
+.addon-item { background: rgba(255,255,255,0.03); border: 1px solid var(--glass-border); border-radius: var(--radius-sm); padding: 12px 16px; display: flex; align-items: center; gap: 12px; cursor: pointer; transition: var(--transition-smooth); }
+.addon-item:hover { background: rgba(255,255,255,0.05); }
+.addon-item.active { border-color: var(--sand-gold); background: rgba(232,195,158,0.05); }
+.addon-item input[type=checkbox] { appearance: none; width: 18px; height: 18px; border: 1px solid var(--glass-border); border-radius: 4px; outline: none; cursor: pointer; transition: var(--transition-smooth); flex-shrink: 0; }
+.addon-item input[type=checkbox]:checked { background-color: var(--sand-gold); border-color: var(--sand-gold); }
+.addon-details { display: flex; flex-direction: column; }
+.addon-name { font-size: 0.85rem; font-weight: 500; }
+.addon-price { font-size: 0.75rem; color: var(--sand-gold); }
+.calc-summary-wrapper { position: relative; z-index: 1; }
+.calc-summary { background: var(--night-card); border: 1px solid rgba(232,195,158,0.15); border-radius: var(--radius-md); padding: 30px; position: sticky; top: 100px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+.calc-summary h4 { font-size: 1.5rem; margin-bottom: 20px; border-bottom: 1px solid var(--glass-border); padding-bottom: 15px; }
+.calc-summary-details { list-style: none; text-align: left; margin-bottom: 30px; }
+.calc-summary-details li { display: flex; justify-content: space-between; font-size: 0.9rem; margin-bottom: 12px; }
+.calc-summary-details li span:last-child { font-weight: 500; color: var(--text-main); }
+.calc-total-box { background: rgba(217,107,67,0.1); border: 1px dashed var(--terracotta); border-radius: var(--radius-sm); padding: 16px; margin: 20px 0; text-align: center; }
+.planner-status-badge { color: var(--sand-gold); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; display: inline-flex; align-items: center; gap: 6px; margin-bottom: 4px; }
+.discount-badge-container { display: flex; justify-content: center; margin-top: 20px; }
+.discount-badge { background: linear-gradient(135deg, hsla(14,62%,52%,0.15) 0%, hsla(38,72%,76%,0.15) 100%); border: 1px dashed var(--terracotta); color: var(--text-main); padding: 12px 28px; border-radius: 50px; font-size: 0.95rem; font-weight: 500; display: inline-flex; align-items: center; gap: 12px; box-shadow: 0 0 20px rgba(217,107,67,0.15); animation: glowPulse 2s infinite alternate; }
+.discount-badge i { color: var(--terracotta); font-size: 1.15rem; animation: wiggle 1s ease-in-out infinite alternate; }
+
+/* Reviews */
+.reviews-section { padding: 100px 5%; }
+.reviews-container { max-width: 800px; margin: 0 auto; position: relative; overflow: hidden; }
+.reviews-wrapper { display: flex; transition: transform 0.6s cubic-bezier(0.16,1,0.3,1); }
+.review-slide { flex: 0 0 100%; min-width: 100%; text-align: center; padding: 20px; }
+.review-stars { color: var(--sand-gold); font-size: 1.1rem; margin-bottom: 20px; }
+.review-quote { font-family: var(--font-serif); font-size: 1.6rem; line-height: 1.4; margin-bottom: 30px; color: var(--text-main); font-style: italic; }
+.review-user { display: flex; align-items: center; justify-content: center; gap: 14px; }
+.review-user-info h5 { font-size: 1rem; font-weight: 600; text-align: left; }
+.review-user-info span { font-size: 0.8rem; color: var(--text-muted); display: block; text-align: left; }
+.review-dots { display: flex; justify-content: center; gap: 8px; margin-top: 30px; }
+.review-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--glass-border); cursor: pointer; transition: var(--transition-smooth); }
+.review-dot.active { background: var(--terracotta); width: 24px; border-radius: 4px; }
+
+/* SEO Section */
+.agency-seo-showcase { background: linear-gradient(180deg, var(--night-bg) 0%, var(--night-surface) 100%); border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border); }
+.seo-grid { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+.seo-text h3 { font-size: 2.2rem; color: var(--text-main); margin-bottom: 20px; }
+.seo-text h3 span { color: var(--sand-gold); }
+.seo-text p { margin-bottom: 20px; font-size: 1.05rem; line-height: 1.7; }
+.seo-highlight-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.seo-card { background: var(--night-surface); border: 1px solid var(--glass-border); border-radius: var(--radius-md); padding: 24px; transition: var(--transition-smooth); }
+.seo-card i { color: var(--terracotta); font-size: 2rem; margin-bottom: 15px; display: block; }
+.seo-card h4 { font-size: 1.15rem; color: var(--sand-gold); margin-bottom: 10px; }
+.seo-card p { font-size: 0.88rem; margin-bottom: 0; }
+.seo-card:hover { border-color: rgba(232,195,158,0.2); box-shadow: var(--shadow-premium); transform: translateY(-5px); }
+
+/* Contact */
+.contact-section { }
+.contact-container { max-width: 900px; margin: 0 auto; background: var(--night-surface); border: 1px solid var(--glass-border); border-radius: var(--radius-lg); padding: 50px; box-shadow: var(--shadow-premium); }
+.contact-form { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.form-full { grid-column: span 2; }
+.form-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; grid-column: span 2; }
+.btn-submit { grid-column: span 2; height: 55px; font-size: 1.05rem; width: 100%; }
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .calculator-container { grid-template-columns: 1fr; }
+  .calc-summary { position: static; }
+  .seo-grid { grid-template-columns: 1fr; gap: 30px; }
+  .starting-cities-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .hero { padding-top: 155px !important; }
+  .hero-content h1 { font-size: 3rem; }
+  .hero-btns { flex-direction: column; align-items: center; }
+  .stats-bar { flex-wrap: wrap; border-radius: 0; margin: 0; }
+  .stat-item { border-right: none; border-bottom: 1px solid var(--glass-border); min-width: 50%; }
+  .contact-form { grid-template-columns: 1fr; }
+  .form-full, .form-grid-2, .btn-submit { grid-column: span 1; }
+  .form-grid-2 { grid-template-columns: 1fr; }
+  .seo-highlight-cards { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .hero-content h1 { font-size: 2.2rem; }
+  .review-quote { font-size: 1.2rem; }
+}
+</style>

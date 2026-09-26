@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getToursByCategory } from '../data/tours';
+
+const tours = getToursByCategory('activities');
+---
+
+<BaseLayout
+  title="Morocco Activities & Experiences | Sahara Star Tours"
+  description="Book unique Morocco activities: hot air balloon rides over Marrakech, camel treks, horse riding, quad biking, fantasia shows, and more adventure experiences."
+  currentPage="activities"
+>
+<section style="padding: 180px 5% 80px; text-align: center; background: linear-gradient(180deg, var(--night-surface) 0%, var(--night-bg) 100%); border-bottom: 1px solid var(--glass-border);">
+  <span class="tag" style="display:inline-block;color:var(--sand-gold);text-transform:uppercase;letter-spacing:3px;font-size:0.9rem;font-weight:600;margin-bottom:12px;">Morocco Activities</span>
+  <h1 style="font-size:3rem;max-width:700px;margin:0 auto 20px;background:linear-gradient(135deg,var(--text-main) 30%,var(--sand-gold) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Unique Morocco Experiences</h1>
+  <p style="max-width:650px;margin:0 auto;font-size:1.1rem;">From sunrise hot air balloon flights over the palmeraie to Sahara camel treks and Berber fantasia shows — add extraordinary moments to your Morocco adventure.</p>
+</section>
+<section style="padding: 60px 5%; max-width: 1400px; margin: 0 auto;">
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:32px;">
+    {tours.map(tour => (
+      <article class="tour-card reveal active">
+        <div class="tour-img-wrapper">
+          <img src={tour.heroImage} alt={tour.shortTitle} loading="lazy" onerror="this.src='/assets/hero_sahara_sunset.png'" />
+          {tour.badge && <span class="tour-badge">{tour.badge}</span>}
+        </div>
+        <div class="tour-info">
+          <div class="tour-meta">
+            <div><i class="fa-regular fa-clock"></i> {tour.duration}</div>
+            <div><i class="fa-solid fa-location-dot"></i> {tour.startingFrom}</div>
+          </div>
+          <h2 class="tour-title">{tour.shortTitle}</h2>
+          <p class="tour-desc">{tour.description}</p>
+          <div class="tour-footer">
+            <div class="tour-price">Starting from<span>{tour.price}</span></div>
+            <a href={`/tours/${tour.slug}`} class="btn btn-primary btn-sm">Book Activity <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </article>
+    ))}
+  </div>
+</section>
+</BaseLayout>

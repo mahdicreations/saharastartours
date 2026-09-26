@@ -1,0 +1,47 @@
+---
+// src/pages/imperial-cities.astro — Imperial Cities category page
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getToursByCategory } from '../data/tours';
+
+const imperialTours = getToursByCategory('imperial-cities');
+---
+
+<BaseLayout
+  title="Imperial Cities Tours Morocco | Sahara Star Tours — Fes, Marrakech, Rabat & Meknes"
+  description="Discover Morocco's four historic imperial capitals: Fes, Marrakech, Rabat, and Meknes. Grand heritage itineraries from 11 to 15 days with UNESCO medina tours and luxury riad stays."
+  keywords="morocco imperial cities, fes medina tour, marrakech imperial tour, rabat landmarks, meknes volubilis, 15 days morocco tour, 11 days morocco classic tour"
+  currentPage="imperial-cities"
+>
+
+<section class="cat-hero" style="padding: 180px 5% 80px; text-align: center; background: linear-gradient(180deg, var(--night-surface) 0%, var(--night-bg) 100%); border-bottom: 1px solid var(--glass-border);">
+  <span class="tag" style="display:inline-block;color:var(--sand-gold);text-transform:uppercase;letter-spacing:3px;font-size:0.9rem;font-weight:600;margin-bottom:12px;">Morocco Imperial Cities</span>
+  <h1 style="font-size:3rem;max-width:750px;margin:0 auto 20px;background:linear-gradient(135deg,var(--text-main) 30%,var(--sand-gold) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Imperial Cities &amp; Grand Heritage</h1>
+  <p style="max-width:680px;margin:0 auto;font-size:1.1rem;color:var(--text-muted);line-height:1.8;">Journey through centuries of Moroccan dynasties. Explore the labyrinthine medieval medinas of Fes, the vibrant palaces of Marrakech, the coastal ramparts of Rabat, and the royal gates of Meknes.</p>
+</section>
+
+<section style="padding: 60px 5%; max-width: 1400px; margin: 0 auto;">
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:32px;">
+    {imperialTours.map(tour => (
+      <article class="tour-card reveal active">
+        <div class="tour-img-wrapper">
+          <img src={tour.heroImage} alt={tour.shortTitle} loading="lazy" onerror="this.src='/assets/hero_sahara_sunset.png'" />
+          {tour.badge && <span class="tour-badge">{tour.badge}</span>}
+        </div>
+        <div class="tour-info">
+          <div class="tour-meta">
+            <div><i class="fa-regular fa-clock"></i> {tour.duration}</div>
+            <div><i class="fa-solid fa-location-dot"></i> {tour.startingFrom}</div>
+          </div>
+          <h2 class="tour-title">{tour.shortTitle}</h2>
+          <p class="tour-desc">{tour.description}</p>
+          <div class="tour-footer">
+            <div class="tour-price">Starting from<span>{tour.price}</span></div>
+            <a href={`/tours/${tour.slug}`} class="btn btn-primary btn-sm">View Tour <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </article>
+    ))}
+  </div>
+</section>
+
+</BaseLayout>

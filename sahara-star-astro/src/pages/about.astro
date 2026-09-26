@@ -1,0 +1,109 @@
+---
+// src/pages/about.astro — About Us page
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="About Sahara Star Tours | Expert Local Moroccan Travel Agency"
+  description="Learn about Sahara Star Tours — Marrakech-based local travel experts with 15+ years of experience crafting bespoke Morocco tours, Sahara desert safaris, and private cultural journeys."
+  keywords="about sahara star tours, morocco local travel agency, marrakech tour guides, moroccan experts"
+  currentPage="about"
+>
+
+<section class="about-hero">
+  <div class="about-hero-bg">
+    <img src="/assets/marrakech_riad_pool.png" alt="Sahara Star Tours Team" />
+  </div>
+  <div class="about-hero-gradient"></div>
+  <div class="about-hero-content">
+    <span class="tour-tag">Our Story</span>
+    <h1>We Are Sahara Star Tours</h1>
+    <p>Local Moroccan experts committed to crafting journeys that transcend ordinary tourism — one bespoke adventure at a time.</p>
+  </div>
+</section>
+
+<section class="about-story">
+  <div class="about-story-grid">
+    <div class="about-story-text">
+      <span class="tag">Since 2009</span>
+      <h2>Born in the Desert, Built on Passion</h2>
+      <p>Sahara Star Tours was founded in Marrakech by a team of native Moroccan travel enthusiasts who believed that authentic travel should be accessible to everyone — without sacrificing comfort, culture, or personalization.</p>
+      <p>Over 15 years and 2,400+ satisfied travelers later, we have grown into one of Morocco's most trusted privately-owned tour operators, specializing in bespoke desert safaris, imperial city immersions, and luxury high-atlas expeditions.</p>
+      <p>Our promise is simple: every journey is personally designed, locally guided, and flawlessly executed — with the intimate knowledge that only native desert experts can provide.</p>
+    </div>
+    <div class="about-story-visual">
+      <img src="/assets/hero_sahara_sunset.png" alt="Sahara Desert at Sunrise" />
+      <div class="about-story-badge">
+        <div class="story-badge-value">2,400+</div>
+        <div class="story-badge-label">Happy Travelers</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about-values">
+  <div class="section-header reveal active">
+    <span class="tag">Our Philosophy</span>
+    <h2>What We Stand For</h2>
+  </div>
+  <div class="values-grid">
+    {[
+      { icon: 'fa-solid fa-compass', title: 'Authentic Local Knowledge', desc: 'Our guides are native desert and medina experts — not just tour operators, but storytellers who carry centuries of Berber and Moroccan cultural wisdom.' },
+      { icon: 'fa-solid fa-sliders', title: '100% Tailor-Made', desc: 'Every itinerary is built from scratch around your exact preferences — no two Sahara Star journeys are ever identical.' },
+      { icon: 'fa-solid fa-shield-halved', title: 'Safety & Trust First', desc: 'We are fully licensed and insured. All vehicles are professionally maintained, and our guides are first-aid certified and ONMT-registered.' },
+      { icon: 'fa-solid fa-leaf', title: 'Sustainable Tourism', desc: 'We partner with Berber-owned camps, local guesthouses, and sustainable operators to directly support desert and mountain communities.' },
+    ].map(v => (
+      <div class="value-card reveal active">
+        <div class="value-icon"><i class={v.icon}></i></div>
+        <h3>{v.title}</h3>
+        <p>{v.desc}</p>
+      </div>
+    ))}
+  </div>
+</section>
+
+<section class="about-cta">
+  <h2>Ready to Begin Your Moroccan Journey?</h2>
+  <p>Our travel designers are waiting to craft your perfect itinerary — completely free, with no obligation.</p>
+  <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:30px;">
+    <a href="/#contact" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Plan My Trip</a>
+    <a href="/desert-tours" class="btn btn-secondary"><i class="fa-solid fa-compass"></i> Browse Tours</a>
+  </div>
+</section>
+
+</BaseLayout>
+
+<style>
+.about-hero { height: 70vh; min-height: 480px; position: relative; display: flex; align-items: flex-end; overflow: hidden; padding-bottom: 60px; }
+.about-hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.about-hero-bg img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.4) contrast(1.1); }
+.about-hero-gradient { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(10,8,7,0.1) 0%, rgba(10,8,7,0.55) 60%, var(--night-bg) 100%); }
+.about-hero-content { position: relative; z-index: 2; max-width: 1400px; margin: 0 auto; padding: 0 5%; width: 100%; }
+.about-hero-content h1 { font-size: 3.5rem; color: var(--text-main); margin: 12px 0 16px; }
+.about-hero-content p { font-size: 1.2rem; max-width: 600px; }
+.about-story { padding: 100px 5%; }
+.about-story-grid { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.about-story-text .tag { color: var(--sand-gold); text-transform: uppercase; letter-spacing: 3px; font-size: 0.85rem; font-weight: 600; display: inline-block; margin-bottom: 12px; }
+.about-story-text h2 { font-size: 2.5rem; margin-bottom: 24px; }
+.about-story-text p { margin-bottom: 20px; font-size: 1.05rem; line-height: 1.8; }
+.about-story-visual { position: relative; border-radius: var(--radius-md); overflow: hidden; height: 450px; }
+.about-story-visual img { width: 100%; height: 100%; object-fit: cover; }
+.about-story-badge { position: absolute; bottom: 25px; right: 25px; background: rgba(17,14,13,0.9); backdrop-filter: blur(10px); border: 1px solid rgba(232,195,158,0.2); border-radius: var(--radius-sm); padding: 16px 20px; text-align: center; }
+.story-badge-value { font-family: var(--font-serif); font-size: 2rem; color: var(--sand-gold); font-weight: 700; }
+.story-badge-label { font-size: 0.8rem; color: var(--text-muted); }
+.about-values { padding: 80px 5%; background: var(--night-surface); border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border); }
+.values-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+.value-card { background: var(--night-card); border: 1px solid var(--glass-border); border-radius: var(--radius-md); padding: 30px; text-align: center; transition: var(--transition-smooth); }
+.value-card:hover { border-color: rgba(232,195,158,0.25); transform: translateY(-8px); box-shadow: var(--shadow-premium); }
+.value-icon { width: 64px; height: 64px; background: rgba(217,107,67,0.1); border: 1px solid rgba(217,107,67,0.25); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; }
+.value-icon i { color: var(--sand-gold); font-size: 1.6rem; }
+.value-card h3 { font-size: 1.2rem; margin-bottom: 12px; }
+.about-cta { padding: 100px 5%; text-align: center; }
+.about-cta h2 { font-size: 2.5rem; margin-bottom: 16px; }
+.about-cta p { font-size: 1.1rem; }
+
+@media (max-width: 768px) {
+  .about-story-grid { grid-template-columns: 1fr; gap: 30px; }
+  .about-hero-content h1 { font-size: 2.2rem; }
+}
+</style>

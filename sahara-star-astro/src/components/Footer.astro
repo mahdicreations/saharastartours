@@ -1,0 +1,84 @@
+---
+// Footer.astro — Single shared footer for ALL pages
+---
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <a href="/" class="logo" style="margin-bottom:20px;display:inline-block">
+        <img src="/assets/logo.png" alt="Sahara Star Tours Logo" width="120" height="120" />
+      </a>
+      <p>Premium travel planning and bespoke itineraries crafted by local Moroccan guides. Making desert dreams and imperial medina secrets accessible in absolute comfort.</p>
+      <div class="footer-socials">
+        <a href="https://facebook.com/saharastartours" class="social-link" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://instagram.com/saharastartours" class="social-link" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://tiktok.com/@saharastartours" class="social-link" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="https://tripadvisor.com" class="social-link" target="_blank" rel="noopener" aria-label="TripAdvisor" title="TripAdvisor">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3.2c1.78 0 3.25.96 4.02 2.38.77-1.42 2.24-2.38 4.02-2.38 2.45 0 4.44 1.99 4.44 4.44 0 2.45-1.99 4.44-4.44 4.44-1.28 0-2.43-.54-3.24-1.41l-.78 1.19-.78-1.19c-.81.87-1.96 1.41-3.24 1.41-2.45 0-4.44-1.99-4.44-4.44 0-2.45 1.99-4.44 4.44-4.44zm-4.02 6.84c1.33 0 2.4-1.07 2.4-2.4s-1.07-2.4-2.4-2.4-2.4 1.07-2.4 2.4 1.07 2.4 2.4 2.4zm8.04 0c1.33 0 2.4-1.07 2.4-2.4s-1.07-2.4-2.4-2.4-2.4 1.07-2.4 2.4 1.07 2.4 2.4 2.4z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Signature Tours</h4>
+      <ul class="footer-links">
+        <li><a href="/tours/7-day-morocco-tour-from-casablanca">7 Day Morocco Tour</a></li>
+        <li><a href="/tours/12-days-morocco-tour">12 Days Classic Morocco</a></li>
+        <li><a href="/tours/3-days-desert-tour-marrakech-to-fes">3 Days Sahara from Marrakech</a></li>
+        <li><a href="/tours/agafay-desert-sunset-camel-ride">Agafay Desert Experience</a></li>
+        <li><a href="/desert-tours">All Desert Tours</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Helpful Resources</h4>
+      <ul class="footer-links">
+        <li><a href="/day-trips">Day Trips from Marrakech</a></li>
+        <li><a href="/activities">Morocco Activities</a></li>
+        <li><a href="/imperial-cities">Imperial Cities Tours</a></li>
+        <li><a href="/about">About Sahara Star Tours</a></li>
+        <li><a href="/#contact">Contact &amp; Custom Inquiry</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col" x-data="{nl_email:''}">
+      <h4>Weekly Travel Secrets</h4>
+      <p>Subscribe to receive beautiful boutique riad deals and local desert trek routes directly in your inbox.</p>
+      <form class="newsletter-form" @submit.prevent="alert('Shukran! You have successfully subscribed to Sahara Star Tours weekly travel secrets. Check your inbox soon!');nl_email=''">
+        <input type="email" placeholder="Your email address" required aria-label="Newsletter email" x-model="nl_email" />
+        <button type="submit" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i></button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Secure Payments Trust Bar -->
+  <div class="footer-payments-bar">
+    <div class="payments-title">
+      <i class="fa-solid fa-lock"></i> 100% Secure Bookings
+    </div>
+    <div class="payments-icons">
+      <span class="pay-badge" title="Visa"><i class="fa-brands fa-cc-visa"></i></span>
+      <span class="pay-badge" title="Mastercard"><i class="fa-brands fa-cc-mastercard"></i></span>
+      <span class="pay-badge" title="PayPal"><i class="fa-brands fa-cc-paypal"></i></span>
+      <span class="pay-badge" title="American Express"><i class="fa-brands fa-cc-amex"></i></span>
+      <span class="pay-badge" title="Apple Pay"><i class="fa-brands fa-cc-apple-pay"></i></span>
+      <span class="pay-badge" title="Bank Wire Transfer"><i class="fa-solid fa-building-columns"></i></span>
+    </div>
+    <div class="payments-guarantee">
+      <i class="fa-solid fa-shield-halved"></i> 256-Bit SSL Encrypted
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p id="footer-year">&copy; 2025 Sahara Star Tours. All Rights Reserved.</p>
+    <p>Crafted in Marrakech with local pride <i class="fa-solid fa-heart" style="color:var(--terracotta)"></i></p>
+  </div>
+</footer>
+
+<script>
+  // Dynamic copyright year
+  const yearEl = document.getElementById('footer-year');
+  if (yearEl) yearEl.innerHTML = `&copy; ${new Date().getFullYear()} Sahara Star Tours. All Rights Reserved.`;
+</script>

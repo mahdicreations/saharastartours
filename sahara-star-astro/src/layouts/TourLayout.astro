@@ -1,0 +1,733 @@
+---
+// TourLayout.astro — Layout for all tour detail pages
+// Adds Leaflet CSS + script, tour hero, sidebar booking form
+import BaseLayout from './BaseLayout.astro';
+
+interface TourStop {
+  number: number;
+  name: string;
+  day: string;
+  subtitle: string;
+  desc: string;
+  coords: [number, number];
+}
+
+interface Props {
+  title: string;
+  description: string;
+  keywords?: string;
+  ogImage?: string;
+  // Tour data
+  tourName: string;
+  tourSlug: string;
+  duration: string;
+  startingFrom: string;
+  category: string;
+  price?: string;
+  heroImage: string;
+  highlights?: string[];
+  inclusions?: string[];
+  exclusions?: string[];
+  itinerary?: Array<{ day: string; title: string; content: string }>;
+  mapDestinations?: TourStop[];
+  mapRouteCoordinates?: [number, number][];
+  galleryImages?: Array<{ src: string; cap: string }>;
+  relatedTours?: Array<{ slug: string; shortTitle: string; duration: string; price: string; heroImage: string }>;
+  schemaData?: Record<string, unknown>;
+}
+
+const {
+  title,
+  description,
+  keywords,
+  ogImage,
+  tourName,
+  tourSlug,
+  duration,
+  startingFrom,
+  category,
+  price = 'From $XXX/person',
+  heroImage,
+  highlights = [],
+  inclusions = [],
+  exclusions = [],
+  itinerary = [],
+  mapDestinations = [],
+  mapRouteCoordinates = [],
+  galleryImages = [],
+  relatedTours = [],
+  schemaData,
+} = Astro.props;
+
+// Build Tour schema
+const tourSchema = schemaData ?? {
+  "@context": "https://schema.org",
+  "@type": "TouristTrip",
+  "name": tourName,
+  "description": description,
+  "image": `https://www.saharastartours.com${heroImage}`,
+  "url": `https://www.saharastartours.com/tours/${tourSlug}`,
+  "touristType": "Adventure",
+  "provider": {
+    "@type": "TravelAgency",
+    "name": "Sahara Star Tours",
+    "url": "https://www.saharastartours.com"
+  },
+  "offers": {
+    "@type": "Offer",
+    "description": price,
+    "availability": "https://schema.org/InStock"
+  }
+};
+
+// Serialize JS data to pass to inline script
+const mapDestsJSON = JSON.stringify(mapDestinations);
+const mapRouteJSON = JSON.stringify(mapRouteCoordinates);
+const mapId = `tour-route-map-${tourSlug.replace(/[^a-z0-9]/g, '-')}`;
+const galleryJSON = JSON.stringify(galleryImages);
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  keywords={keywords}
+  ogImage={ogImage ?? heroImage}
+  currentPage="tours"
+  schemaData={tourSchema}
+>
+  <!-- Leaflet CSS -->
+  <link 
+    rel="stylesheet" 
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" 
+    crossorigin="" 
+    slot="head"
+  />
+
+  <!-- Tour Hero Section -->
+  <section class="tour-hero-section">
+    <div class="tour-hero-bg">
+      <img 
+        src={heroImage} 
+        alt={tourName} 
+        onerror="this.src='/assets/hero_sahara_sunset.png'"
+      />
+    </div>
+    <div class="tour-hero-gradient"></div>
+    <div class="tour-hero-content">
+      <span class="tour-tag">{category}</span>
+      <h1>{tourName}</h1>
+      <div class="tour-quick-meta">
+        <span><i class="fa-regular fa-clock"></i> <strong>{duration}</strong></span>
+        <span><i class="fa-solid fa-location-dot"></i> From: <strong>{startingFrom}</strong></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Page Content Slot + Sidebar Grid -->
+  <div 
+    class="tour-container" 
+    id="tour-detail-container"
+    x-data={`{
+      lightboxOpen: false,
+      activeIndex: 0,
+      images: ${galleryJSON},
+      bookingData: {
+        name: '',
+        email: '',
+        package: '${tourSlug}',
+        travelers: '2 Adults',
+        date: '',
+        style: 'Standard',
+        message: ''
+      },
+      showSuccessModal: false,
+      successMsg: '',
+      openLightbox(idx) {
+        this.activeIndex = idx;
+        this.lightboxOpen = true;
+      },
+      prevImage() {
+        this.activeIndex = (this.activeIndex - 1 + this.images.length) % this.images.length;
+      },
+      nextImage() {
+        this.activeIndex = (this.activeIndex + 1) % this.images.length;
+      },
+      submitBooking() {
+        this.successMsg = 'Shukran, ' + this.bookingData.name + '! Your inquiry for ${tourName} has been registered. Our travel designers in Marrakech will send your detailed personalized itinerary to ' + this.bookingData.email + ' within 24 hours.';
+        this.showSuccessModal = true;
+        document.body.style.overflow = 'hidden';
+      },
+      closeModal() {
+        this.showSuccessModal = false;
+        document.body.style.overflow = '';
+      }
+    }`}
+    @keydown.escape.window="if(lightboxOpen) lightboxOpen = false; if(showSuccessModal) closeModal();"
+    @keydown.left.window="if(lightboxOpen) prevImage();"
+    @keydown.right.window="if(lightboxOpen) nextImage();"
+  >
+    <!-- LEFT COLUMN -->
+    <div class="tour-main">
+      <!-- About + Highlights -->
+      <div class="timeline-card reveal active">
+        <h3>About This Tour</h3>
+        <slot name="about" />
+        {highlights.length > 0 && (
+          <>
+            <h5>Highlights:</h5>
+            <ul style="margin-top: 10px; padding-left: 20px; color: var(--text-muted); line-height: 1.8;">
+              {highlights.map(h => <li style="margin-bottom: 8px;">{h}</li>)}
+            </ul>
+          </>
+        )}
+      </div>
+
+      <!-- Day-by-Day Itinerary -->
+      {itinerary.length > 0 && (
+        <div class="timeline-card reveal active">
+          <h3>Program Itinerary</h3>
+          <div class="timeline-steps-wrapper" id="timeline-steps">
+            {itinerary.map(item => (
+              <div class="timeline-item">
+                <div class="timeline-day-tag">{item.day}</div>
+                <h4>{item.title}</h4>
+                <p set:html={item.content} />
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      <!-- Media Gallery -->
+      {galleryImages.length > 0 && (
+        <div class="gallery-card reveal active">
+          <h3>Expedition Media Gallery</h3>
+          <p>A visual glimpse of the spectacular landscapes awaiting you.</p>
+          <div class="gallery-grid" id="gallery-grid">
+            {galleryImages.map((img, idx) => (
+              <div class="gallery-item" @click={`openLightbox(${idx})`}>
+                <img 
+                  src={img.src} 
+                  alt={img.cap} 
+                  loading="lazy" 
+                  onerror="this.src='/assets/hero_sahara_sunset.png'" 
+                />
+                <div class="gallery-overlay"><i class="fa-solid fa-maximize"></i></div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      <!-- Inclusions & Exclusions -->
+      <div class="inclusions-card reveal active">
+        <h3>Inclusions &amp; Trip Details</h3>
+        <div class="inc-exc-split">
+          <div class="modal-inc-col included">
+            <h5><i class="fa-solid fa-circle-check" style="color:var(--sand-gold); margin-right:8px;"></i> What's Included</h5>
+            <ul class="modal-inc-list" style="list-style:none; display:flex; flex-direction:column; gap:12px; margin-top:16px;">
+              {inclusions.map(item => (
+                <li><i class="fa-solid fa-circle-check" style="color:var(--sand-gold);margin-right:8px;"></i>{item}</li>
+              ))}
+              <slot name="extra-inclusions" />
+            </ul>
+          </div>
+          <div class="modal-inc-col excluded">
+            <h5><i class="fa-solid fa-circle-xmark" style="color:var(--terracotta); margin-right:8px;"></i> Not Included</h5>
+            <ul class="modal-exc-list" style="list-style:none; display:flex; flex-direction:column; gap:12px; margin-top:16px;">
+              {exclusions.map(item => (
+                <li><i class="fa-solid fa-circle-xmark" style="color:var(--terracotta);margin-right:8px;"></i>{item}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Leaflet Route Map -->
+      {mapDestinations.length > 0 && (
+        <div class="tour-map-card reveal active">
+          <div class="tour-map-header">
+            <h3><i class="fa-solid fa-map-location-dot" style="color:var(--terracotta);"></i> Interactive Route Map</h3>
+            <div class="tour-map-header-badges">
+              <span class="tour-map-badge"><strong>{mapDestinations.length}</strong> destinations</span>
+              <span class="tour-map-badge"><strong>{duration}</strong></span>
+              <button 
+                id="map-theme-toggle-btn" 
+                class="map-reset-btn" 
+                type="button" 
+                style="position:static;margin:0;"
+                title="Toggle map theme"
+              >
+                <i class="fa-solid fa-moon"></i>
+                <span id="map-theme-toggle-text">Mode Clair</span>
+              </button>
+            </div>
+          </div>
+          <p class="tour-map-desc">Explore your complete journey route on this interactive map — click any destination marker to discover what awaits you on each day.</p>
+          <div class="tour-map-wrapper">
+            <div id={mapId} style="width:100%;height:480px;"></div>
+            <button id="map-reset-btn" class="map-reset-btn" type="button">
+              <i class="fa-solid fa-arrows-to-dot"></i> Reset View
+            </button>
+          </div>
+          <div class="map-stops-nav" id="map-stops-nav"></div>
+          <div class="map-milestones-wrapper">
+            <h5>Route Milestones</h5>
+            <div class="map-milestones">
+              {mapDestinations.map((dest, idx) => (
+                <span class="milestone-node">
+                  <span class="milestone-num">{dest.number}</span>
+                  {dest.name}
+                  {idx < mapDestinations.length - 1 && <span class="milestone-arrow">›</span>}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
+      <!-- Frequently Asked Questions -->
+      <div class="faq-card reveal active">
+        <h3><i class="fa-solid fa-circle-question" style="color:var(--sand-gold); margin-right:8px;"></i> Frequently Asked Questions</h3>
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary class="faq-question">What luggage and clothing should I pack for this trip? <i class="fa-solid fa-chevron-down"></i></summary>
+            <div class="faq-answer"><p>We recommend comfortable walking shoes for medina cobbles and dunes, loose breathable cotton layers for daytime exploration, and a warm fleece or jacket for crisp desert evenings and mountain passes. Sunglasses, sunscreen, a hat, and a camera are essential.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Can this itinerary and accommodation level be customized? <i class="fa-solid fa-chevron-down"></i></summary>
+            <div class="faq-answer"><p>Yes, absolutely! Every Sahara Star Tours package is 100% private and customizable. We can adjust the pacing, departure city, hotel tiers (Standard Riads, Comfort Boutique, or 5-Star Luxury Glamping), and add unique stops to match your travel dreams.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Where does pickup and drop-off take place? <i class="fa-solid fa-chevron-down"></i></summary>
+            <div class="faq-answer"><p>We provide seamless door-to-door pickup and drop-off directly from your hotel, riad, or airport in {startingFrom}. Your private English-speaking driver/guide will greet you warmly with personalized signage.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Are special dietary requirements catered for? <i class="fa-solid fa-chevron-down"></i></summary>
+            <div class="faq-answer"><p>Yes, all partner riads and our Sahara desert luxury camp chefs cater happily to vegetarian, vegan, halal, and gluten-free dietary requirements. Simply let us know your preferences during booking.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">How do reservations and deposits work? <i class="fa-solid fa-chevron-down"></i></summary>
+            <div class="faq-answer"><p>After submitting your inquiry, our local travel specialists in Marrakech will confirm availability and send your official itinerary voucher. A modest deposit secures your dates via credit card, PayPal, or wire transfer, with the balance paid safely upon arrival.</p></div>
+          </details>
+        </div>
+      </div>
+
+      <!-- Recommended Related Experiences -->
+      {relatedTours && relatedTours.length > 0 && (
+        <div class="related-tours-card reveal active">
+          <h3><i class="fa-solid fa-compass" style="color:var(--terracotta); margin-right:8px;"></i> Recommended Similar Journeys</h3>
+          <div class="related-tours-grid">
+            {relatedTours.map(rt => (
+              <a href={`/tours/${rt.slug}`} class="related-tour-item">
+                <div class="related-tour-img">
+                  <img src={rt.heroImage} alt={rt.shortTitle} loading="lazy" onerror="this.src='/assets/hero_sahara_sunset.png'" />
+                </div>
+                <div class="related-tour-content">
+                  <span class="related-tour-dur"><i class="fa-regular fa-clock"></i> {rt.duration}</span>
+                  <h4>{rt.shortTitle}</h4>
+                  <div class="related-tour-price">Starting <strong>{rt.price}</strong></div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
+
+      <!-- Extra content slot for page-specific additions -->
+      <slot name="extra-content" />
+    </div>
+
+    <!-- RIGHT SIDEBAR -->
+    <aside class="tour-sidebar">
+      <!-- Booking Form Card -->
+      <div class="booking-sidebar-card" id="booking-form">
+        <h3>Book This Tour</h3>
+        <p class="booking-price">Starting <span>{price}</span></p>
+
+        <!-- Travel Style Selector -->
+        <div class="travel-style-group">
+          <label class="travel-style-label"><i class="fa-solid fa-sliders"></i> Travel Style</label>
+          <div class="travel-style-grid">
+            {['Standard', 'Comfort', 'Luxury'].map(style => (
+              <div 
+                class="travel-style-card"
+                :class={`bookingData.style === '${style}' ? 'active' : ''`}
+                @click={`bookingData.style = '${style}'`}
+              >
+                <span class="ts-icon">
+                  {style === 'Standard' && <i class="fa-solid fa-tent"></i>}
+                  {style === 'Comfort' && <i class="fa-solid fa-hotel"></i>}
+                  {style === 'Luxury' && <i class="fa-solid fa-star"></i>}
+                </span>
+                <span class="ts-name">{style}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <form @submit.prevent="submitBooking()">
+          <div class="form-group">
+            <input type="text" id="booking-name" x-model="bookingData.name" placeholder=" " required />
+            <label for="booking-name">Your Full Name</label>
+          </div>
+          <div class="form-group">
+            <input type="email" id="booking-email" x-model="bookingData.email" placeholder=" " required />
+            <label for="booking-email">Email Address</label>
+          </div>
+          <div class="form-group">
+            <input type="date" id="booking-date" x-model="bookingData.date" placeholder=" " />
+            <label for="booking-date">Preferred Date</label>
+          </div>
+          <div class="form-group">
+            <select id="booking-travelers" x-model="bookingData.travelers" style="width:100%">
+              <option value="1 Adult">1 Adult</option>
+              <option value="2 Adults" selected>2 Adults</option>
+              <option value="3-4 People">3 - 4 People</option>
+              <option value="5+ Group">5+ Group</option>
+            </select>
+            <label for="booking-travelers">Group Size</label>
+          </div>
+          <div class="form-group">
+            <textarea id="booking-message" x-model="bookingData.message" placeholder=" " rows="3"></textarea>
+            <label for="booking-message">Special requests or questions...</label>
+          </div>
+          <button type="submit" class="btn btn-primary">
+            <i class="fa-solid fa-paper-plane"></i> Send My Inquiry
+          </button>
+        </form>
+
+        <!-- Success Modal -->
+        <div class="success-overlay" :class="showSuccessModal ? 'active' : ''" id="booking-success-modal">
+          <div class="success-card">
+            <div class="success-icon-box"><i class="fa-solid fa-circle-check"></i></div>
+            <h3>Request Received!</h3>
+            <p x-text="successMsg"></p>
+            <button class="btn btn-primary" @click="closeModal()">Return to Exploring</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Info Card -->
+      <div class="booking-sidebar-card" style="padding:20px;">
+        <h4 style="font-size:1.1rem;color:var(--sand-gold);margin-bottom:16px;">Quick Tour Info</h4>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:12px;font-size:0.9rem;">
+          <li style="display:flex;align-items:center;gap:10px;color:var(--text-muted);">
+            <i class="fa-regular fa-clock" style="color:var(--sand-gold);width:16px;"></i>
+            <span><strong style="color:var(--text-main);">Duration:</strong> {duration}</span>
+          </li>
+          <li style="display:flex;align-items:center;gap:10px;color:var(--text-muted);">
+            <i class="fa-solid fa-location-dot" style="color:var(--sand-gold);width:16px;"></i>
+            <span><strong style="color:var(--text-main);">Starting:</strong> {startingFrom}</span>
+          </li>
+          <li style="display:flex;align-items:center;gap:10px;color:var(--text-muted);">
+            <i class="fa-solid fa-users" style="color:var(--sand-gold);width:16px;"></i>
+            <span><strong style="color:var(--text-main);">Group:</strong> Private & Custom</span>
+          </li>
+          <li style="display:flex;align-items:center;gap:10px;color:var(--text-muted);">
+            <i class="fa-solid fa-language" style="color:var(--sand-gold);width:16px;"></i>
+            <span><strong style="color:var(--text-main);">Guide:</strong> EN / FR / ES / IT</span>
+          </li>
+          <li style="display:flex;align-items:center;gap:10px;color:var(--text-muted);">
+            <i class="fa-solid fa-car-side" style="color:var(--sand-gold);width:16px;"></i>
+            <span><strong style="color:var(--text-main);">Transport:</strong> Private A/C Vehicle</span>
+          </li>
+        </ul>
+        <hr style="border:none;border-top:1px solid var(--glass-border);margin:20px 0;" />
+        <a href="https://wa.me/212661234567" target="_blank" rel="noopener" class="btn btn-secondary" style="width:100%;justify-content:center;gap:10px;">
+          <i class="fa-brands fa-whatsapp" style="color:#25D366;font-size:1.2rem;"></i> WhatsApp Us
+        </a>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Lightbox Modal (Alpine) -->
+  <div 
+    class="lightbox-overlay" 
+    :class="lightboxOpen ? 'active' : ''"
+    @click.self="lightboxOpen = false"
+  >
+    <div class="lightbox-content-box">
+      <button class="lightbox-close" @click="lightboxOpen = false" aria-label="Close lightbox">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <button class="lightbox-btn lightbox-prev" @click="prevImage()" aria-label="Previous image">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <img 
+        class="lightbox-img" 
+        :src="images[activeIndex]?.src" 
+        :alt="images[activeIndex]?.cap"
+        onerror="this.src='/assets/hero_sahara_sunset.png'" 
+      />
+      <button class="lightbox-btn lightbox-next" @click="nextImage()" aria-label="Next image">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+      <p class="lightbox-caption" x-text="images[activeIndex]?.cap"></p>
+    </div>
+  </div>
+
+  <!-- Mobile Floating Action Bar -->
+  <div class="mobile-floating-booking-bar" id="mobile-booking-bar">
+    <div class="mf-left">
+      <span class="mf-tag"><i class="fa-solid fa-shield-halved"></i> INSTANT RESERVE</span>
+      <span class="mf-title">Book This Tour</span>
+    </div>
+    <button type="button" class="mf-btn" onclick="const f=document.getElementById('booking-form');if(f){f.scrollIntoView({behavior:'smooth'});}">
+      Book Now ↓
+    </button>
+  </div>
+</BaseLayout>
+
+<!-- Leaflet JS + Map initialization -->
+<script is:inline src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script define:vars={{ mapId, mapDestsJSON, mapRouteJSON }}>
+(function() {
+  const TOUR_DESTINATIONS = JSON.parse(mapDestsJSON);
+  const ROUTE_COORDINATES = JSON.parse(mapRouteJSON);
+
+  if (!TOUR_DESTINATIONS.length || !ROUTE_COORDINATES.length) return;
+
+  function initTourMap() {
+    const mapElement = document.getElementById(mapId);
+    if (!mapElement || typeof L === 'undefined') return;
+    if (mapElement._leaflet_id) return;
+
+    const map = L.map(mapId, { zoomControl: true, scrollWheelZoom: false, attributionControl: true });
+
+    const tileLayer = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors',
+      className: 'osm-tile-layer clear-osm-tiles',
+      maxZoom: 18
+    }).addTo(map);
+
+    const routeGlow = L.polyline(ROUTE_COORDINATES, { color: '#d96b43', weight: 8, opacity: 0.45, lineCap: 'round', lineJoin: 'round' }).addTo(map);
+    const routeLine = L.polyline(ROUTE_COORDINATES, { color: '#c84e24', weight: 4.5, opacity: 1.0, lineCap: 'round', lineJoin: 'round' }).addTo(map);
+
+    // Theme toggle
+    const mapThemeBtn = document.getElementById('map-theme-toggle-btn');
+    let isClearMap = true;
+    if (mapThemeBtn) {
+      mapThemeBtn.addEventListener('click', () => {
+        isClearMap = !isClearMap;
+        const tileEls = document.querySelectorAll('.osm-tile-layer');
+        const toggleText = document.getElementById('map-theme-toggle-text');
+        const mapWrapper = document.querySelector('.tour-map-wrapper');
+        if (isClearMap) {
+          tileEls.forEach(el => { el.classList.remove('dark-osm-tiles'); el.classList.add('clear-osm-tiles'); });
+          if (mapWrapper) mapWrapper.style.background = '#f4f1ea';
+          routeGlow.setStyle({ color: '#d96b43', opacity: 0.45, weight: 8 });
+          routeLine.setStyle({ color: '#c84e24', opacity: 1.0, weight: 4.5 });
+          if (toggleText) toggleText.textContent = 'Mode Clair';
+        } else {
+          tileEls.forEach(el => { el.classList.remove('clear-osm-tiles'); el.classList.add('dark-osm-tiles'); });
+          if (mapWrapper) mapWrapper.style.background = '#141110';
+          routeGlow.setStyle({ color: '#d96b43', opacity: 0.4, weight: 7 });
+          routeLine.setStyle({ color: '#e8c39e', opacity: 0.95, weight: 3.5 });
+          if (toggleText) toggleText.textContent = 'Mode Sombre';
+        }
+      });
+    }
+
+    const routeBounds = L.latLngBounds(ROUTE_COORDINATES);
+    map.fitBounds(routeBounds, { padding: [35, 35] });
+    setTimeout(() => { map.invalidateSize(); }, 250);
+    setTimeout(() => { map.invalidateSize(); }, 750);
+    window.addEventListener('resize', () => { map.invalidateSize(); });
+
+    const markers = [];
+    const stopsNav = document.getElementById('map-stops-nav');
+
+    TOUR_DESTINATIONS.forEach((dest, idx) => {
+      const isStart = idx === 0;
+      const isDesert = dest.name.toLowerCase().includes('merzouga') || dest.name.toLowerCase().includes('erg chebbi');
+      const isEnd = idx === TOUR_DESTINATIONS.length - 1;
+      const extraClass = isStart ? 'is-start' : (isDesert ? 'is-desert' : (isEnd ? 'is-end' : ''));
+
+      const customIcon = L.divIcon({
+        className: `luxury-marker-container ${extraClass}`,
+        html: `<div class="luxury-marker-pin" title="${dest.name}">${dest.number}</div><div class="luxury-marker-pulse"></div>`,
+        iconSize: [32, 32], iconAnchor: [16, 16], popupAnchor: [0, -18]
+      });
+
+      const marker = L.marker(dest.coords, { icon: customIcon }).addTo(map);
+      const popupHtml = `<div class="map-popup-inner"><span class="popup-tag">${dest.day}</span><h4 class="popup-title">${dest.name}</h4><div class="popup-subtitle"><i class="fa-solid fa-location-dot"></i> ${dest.subtitle}</div><p class="popup-desc">${dest.desc}</p></div>`;
+      marker.bindPopup(popupHtml, { maxWidth: 300 });
+      markers.push({ marker, dest, idx });
+
+      if (stopsNav) {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'map-stop-btn';
+        btn.innerHTML = `<span class="map-stop-badge">${dest.number}</span> <span>${dest.name}</span>`;
+        btn.addEventListener('click', () => focusDestination(idx));
+        stopsNav.appendChild(btn);
+      }
+    });
+
+    function focusDestination(index) {
+      const item = markers[index];
+      if (!item) return;
+      map.flyTo(item.dest.coords, 10, { duration: 1 });
+      setTimeout(() => { item.marker.openPopup(); }, 600);
+      if (stopsNav) {
+        const buttons = stopsNav.querySelectorAll('.map-stop-btn');
+        buttons.forEach((b, i) => b.classList.toggle('active', i === index));
+        if (buttons[index]) buttons[index].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      }
+    }
+
+    const resetBtn = document.getElementById('map-reset-btn');
+    if (resetBtn) {
+      resetBtn.addEventListener('click', () => {
+        map.fitBounds(routeBounds, { padding: [35, 35] });
+        if (stopsNav) stopsNav.querySelectorAll('.map-stop-btn').forEach(b => b.classList.remove('active'));
+      });
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initTourMap);
+  } else {
+    initTourMap();
+  }
+})();
+</script>
+
+<style>
+  .milestone-node {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--glass-border);
+    border-radius: 30px;
+    padding: 6px 14px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .milestone-num {
+    width: 22px; height: 22px; border-radius: 50%;
+    background: var(--terracotta); color: #fff;
+    font-size: 0.72rem; font-weight: 700;
+    display: inline-flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .milestone-arrow { color: var(--text-muted); font-size: 0.75rem; }
+  .map-milestones-wrapper { margin-top: 24px; border-top: 1px solid var(--glass-border); padding-top: 20px; }
+  .map-milestones-wrapper h5 { font-size: 0.9rem; color: var(--sand-gold); margin-bottom: 14px; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600; }
+  .map-milestones { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
+  .modal-inc-list li, .modal-exc-list li { color: var(--text-muted); font-size: 0.9rem; }
+  .modal-inc-list li i { color: var(--sand-gold); }
+  .modal-exc-list li i { color: var(--terracotta); }
+  .inc-exc-split h5 { font-size: 1rem; color: var(--text-main); margin-bottom: 4px; }
+
+  /* FAQ styling */
+  .faq-card {
+    background: var(--night-surface);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    margin-top: 32px;
+  }
+  .faq-card h3 { font-size: 1.35rem; margin-bottom: 20px; color: var(--text-main); }
+  .faq-list { display: flex; flex-direction: column; gap: 12px; }
+  .faq-item {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    padding: 16px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .faq-item[open] {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(217, 107, 67, 0.35);
+  }
+  .faq-question {
+    font-weight: 600;
+    color: var(--text-main);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    font-size: 0.98rem;
+  }
+  .faq-question::-webkit-details-marker { display: none; }
+  .faq-answer {
+    margin-top: 12px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    font-size: 0.92rem;
+  }
+
+  /* Related tours styling */
+  .related-tours-card {
+    background: var(--night-surface);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    margin-top: 32px;
+  }
+  .related-tours-card h3 { font-size: 1.35rem; margin-bottom: 20px; color: var(--text-main); }
+  .related-tours-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+  }
+  .related-tour-item {
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--glass-border);
+    overflow: hidden;
+    text-decoration: none;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+  }
+  .related-tour-item:hover {
+    transform: translateY(-4px);
+    border-color: var(--sand-gold);
+  }
+  .related-tour-img {
+    width: 100%;
+    height: 130px;
+    overflow: hidden;
+  }
+  .related-tour-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  .related-tour-item:hover .related-tour-img img {
+    transform: scale(1.08);
+  }
+  .related-tour-content {
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .related-tour-dur {
+    font-size: 0.78rem;
+    color: var(--sand-gold);
+    font-weight: 600;
+  }
+  .related-tour-content h4 {
+    font-size: 0.92rem;
+    color: var(--text-main);
+    line-height: 1.4;
+    margin: 0;
+  }
+  .related-tour-price {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 4px;
+  }
+  .related-tour-price strong {
+    color: var(--sand-gold);
+  }
+</style>
