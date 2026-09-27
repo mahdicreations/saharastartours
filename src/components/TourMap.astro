@@ -49,6 +49,15 @@ const routeData = JSON.stringify(routeCoordinates);
         <i class="fa-solid fa-circle-half-stroke" style="color:var(--sand-gold);"></i>
         <strong data-map-theme-text>Mode Clair</strong>
       </button>
+      <button 
+        class="tour-map-badge map-fullscreen-header-btn" 
+        type="button" 
+        title="Explore route in Fullscreen" 
+        data-map-fullscreen-toggle
+      >
+        <i class="fa-solid fa-expand" data-map-fs-icon style="color:var(--sand-gold);"></i>
+        <strong data-map-fs-text>Fullscreen</strong>
+      </button>
     </div>
   </div>
 
@@ -58,8 +67,23 @@ const routeData = JSON.stringify(routeCoordinates);
 
   <div class="tour-map-wrapper">
     <div id={mapId} class="tour-route-map-canvas" style="width:100%;height:480px;background:#f4f1ea;"></div>
-    <button class="map-reset-btn" type="button" data-map-reset title="Reset map to full route view">
-      <i class="fa-solid fa-expand"></i> Reset View
+    
+    <!-- Floating controls overlay inside map -->
+    <div class="map-floating-bar">
+      <button class="map-action-pill" type="button" data-map-fs-pill title="Plein Écran / Fullscreen Map">
+        <i class="fa-solid fa-maximize" data-fs-pill-icon></i>
+        <span data-fs-pill-text>Fullscreen</span>
+      </button>
+      <button class="map-action-pill" type="button" data-map-reset title="Reset map to full route view">
+        <i class="fa-solid fa-arrows-rotate"></i>
+        <span>Reset</span>
+      </button>
+    </div>
+
+    <!-- Exit Fullscreen Button (Shown only when fullscreen is active) -->
+    <button class="map-exit-fs-btn" type="button" data-map-exit-fs title="Close Fullscreen (or press Esc)">
+      <i class="fa-solid fa-xmark"></i>
+      <span>Exit Fullscreen</span>
     </button>
   </div>
 
@@ -198,7 +222,12 @@ const routeData = JSON.stringify(routeCoordinates);
             <p class="popup-desc">${dest.desc || ''}</p>
           </div>
         `;
-        marker.bindPopup(popupHtml, { maxWidth: 300 });
+        const isMobileScreen = typeof window !== 'undefined' && window.innerWidth <= 768;
+        marker.bindPopup(popupHtml, { 
+          maxWidth: isMobileScreen ? 230 : 300,
+          minWidth: isMobileScreen ? 180 : 220,
+          autoPanPadding: [15, 15]
+        });
         markers.push({ marker, dest, idx });
 
         if (stopsNav) {
@@ -255,6 +284,52 @@ const routeData = JSON.stringify(routeCoordinates);
           }
         });
       }
+
+      // Fullscreen Toggle Logic
+      let isFullscreen = false;
+      const fsToggleBtns = root.querySelectorAll('[data-map-fullscreen-toggle], [data-map-fs-pill]');
+      const exitFsBtn = root.querySelector('[data-map-exit-fs]');
+      const fsIcon = root.querySelector('[data-map-fs-icon]');
+      const fsText = root.querySelector('[data-map-fs-text]');
+      const pillIcon = root.querySelector('[data-fs-pill-icon]');
+      const pillText = root.querySelector('[data-fs-pill-text]');
+
+      function setFullscreen(active) {
+        isFullscreen = active;
+        if (isFullscreen) {
+          mapWrapper.classList.add('is-fullscreen');
+          document.body.style.overflow = 'hidden';
+          if (fsIcon) fsIcon.className = 'fa-solid fa-compress';
+          if (fsText) fsText.textContent = 'Exit';
+          if (pillIcon) pillIcon.className = 'fa-solid fa-compress';
+          if (pillText) pillText.textContent = 'Exit';
+        } else {
+          mapWrapper.classList.remove('is-fullscreen');
+          document.body.style.overflow = '';
+          if (fsIcon) fsIcon.className = 'fa-solid fa-expand';
+          if (fsText) fsText.textContent = 'Fullscreen';
+          if (pillIcon) pillIcon.className = 'fa-solid fa-maximize';
+          if (pillText) pillText.textContent = 'Fullscreen';
+        }
+
+        map.invalidateSize();
+        setTimeout(() => map.invalidateSize(), 150);
+        setTimeout(() => map.invalidateSize(), 350);
+      }
+
+      fsToggleBtns.forEach(btn => {
+        btn.addEventListener('click', () => setFullscreen(!isFullscreen));
+      });
+
+      if (exitFsBtn) {
+        exitFsBtn.addEventListener('click', () => setFullscreen(false));
+      }
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && isFullscreen) {
+          setFullscreen(false);
+        }
+      });
     }
 
     // Resilient initialization with polling for Leaflet script readiness
@@ -370,33 +445,101 @@ const routeData = JSON.stringify(routeCoordinates);
     z-index: 10;
     transition: background 0.3s ease;
   }
-  .map-reset-btn {
+  .map-floating-bar {
     position: absolute;
     top: 14px;
     right: 14px;
     z-index: 500;
-    background: rgba(22, 18, 16, 0.9);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(232, 195, 158, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .map-action-pill {
+    background: rgba(22, 18, 16, 0.92);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(232, 195, 158, 0.35);
     color: var(--sand-gold);
     padding: 7px 14px;
     border-radius: 30px;
     font-size: 0.8rem;
-    font-weight: 500;
+    font-weight: 600;
     font-family: var(--font-sans);
     cursor: pointer;
     display: inline-flex;
     align-items: center;
-    gap: 7px;
+    gap: 6px;
     transition: var(--transition-smooth);
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
   }
-  .map-reset-btn:hover {
+  .map-action-pill:hover,
+  .map-action-pill:active {
     background: var(--sand-gold);
     color: var(--night-bg);
     border-color: var(--sand-gold);
-    transform: translateY(-2px);
+    transform: translateY(-1px);
     box-shadow: 0 6px 18px var(--sand-gold-glow);
+  }
+  .map-fullscreen-header-btn {
+    cursor: pointer;
+    background: rgba(232, 195, 158, 0.12);
+    border-color: rgba(232, 195, 158, 0.35);
+    transition: var(--transition-smooth);
+  }
+  .map-fullscreen-header-btn:hover {
+    background: rgba(232, 195, 158, 0.22);
+    border-color: var(--sand-gold);
+    transform: translateY(-1px);
+  }
+  .map-exit-fs-btn {
+    display: none;
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    z-index: 501;
+    background: var(--terracotta);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    font-family: var(--font-sans);
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6), 0 0 15px var(--terracotta-glow);
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition-smooth);
+  }
+  .map-exit-fs-btn:hover {
+    background: hsl(14, 75%, 45%);
+    transform: scale(1.03);
+  }
+  .tour-map-wrapper.is-fullscreen {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    height: 100dvh !important;
+    z-index: 99999 !important;
+    border-radius: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+  }
+  .tour-map-wrapper.is-fullscreen .tour-route-map-canvas {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .tour-map-wrapper.is-fullscreen .map-exit-fs-btn {
+    display: inline-flex !important;
+  }
+  .tour-map-wrapper.is-fullscreen .map-floating-bar {
+    top: 16px;
+    right: 16px;
+    z-index: 501;
   }
   .map-waypoints-header {
     display: flex;
@@ -472,5 +615,57 @@ const routeData = JSON.stringify(routeCoordinates);
     color: var(--sand-gold);
     font-weight: bold;
     margin-left: 4px;
+  }
+
+  @media (max-width: 768px) {
+    .tour-map-card {
+      margin-left: -16px;
+      margin-right: -16px;
+      width: calc(100% + 32px);
+      border-radius: 0;
+      border-left: none;
+      border-right: none;
+      padding: 20px 16px;
+      box-sizing: border-box;
+    }
+    .tour-map-wrapper {
+      margin-left: -16px;
+      margin-right: -16px;
+      width: calc(100% + 32px);
+      border-radius: 0;
+      border-left: none;
+      border-right: none;
+    }
+    .tour-route-map-canvas {
+      height: 390px;
+    }
+    .tour-map-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .tour-map-header h3 {
+      font-size: 1.35rem;
+    }
+    .tour-map-header-badges {
+      width: 100%;
+      justify-content: flex-start;
+      gap: 8px;
+    }
+    .map-floating-bar {
+      top: 10px;
+      right: 10px;
+      gap: 6px;
+    }
+    .map-action-pill {
+      padding: 6px 11px;
+      font-size: 0.74rem;
+    }
+    .map-exit-fs-btn {
+      top: 10px;
+      left: 10px;
+      padding: 6px 12px;
+      font-size: 0.78rem;
+    }
   }
 </style>

@@ -260,7 +260,11 @@ const homeSchema = {
   <div class="section-header reveal active">
     <span class="tag"><i class="fa-solid fa-fire-flame-curved"></i> Our Most Popular Tours</span>
     <h2>Handcrafted Morocco Tours</h2>
-    <p>Each journey is a bespoke masterpiece — privately guided, luxury-accommodated, and completely tailored to your dream vision of Morocco. <span class="discount-pill-text"><i class="fa-solid fa-tag"></i> Special Season Offer: Save <strong>up to 30% OFF</strong> on all private tour packages!</span></p>
+    <p>Each journey is a bespoke masterpiece — privately guided, luxury-accommodated, and completely tailored to your dream vision of Morocco.</p>
+    <div class="special-offer-banner">
+      <span class="sob-icon"><i class="fa-solid fa-tag"></i></span>
+      <span class="sob-text">Special Season Offer: Save <strong>up to 30% OFF</strong> on all private tour packages!</span>
+    </div>
   </div>
 
   <div class="category-showcase-container" x-data="{ activeTab: 'all' }">
@@ -978,24 +982,37 @@ const homeSchema = {
 .category-tab span { font-size: 0.8rem; opacity: 0.8; margin-left: 6px; }
 .category-tour-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
 
-.discount-pill-text {
+.special-offer-banner {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  background: rgba(217, 107, 67, 0.15);
-  border: 1px dashed var(--terracotta);
+  gap: 10px;
+  background: rgba(217, 107, 67, 0.12);
+  border: 1px solid rgba(217, 107, 67, 0.35);
   color: var(--sand-gold);
-  padding: 4px 14px;
-  border-radius: 20px;
-  font-size: 0.88rem;
-  margin-top: 8px;
+  padding: 8px 22px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  margin-top: 18px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+  text-align: center;
 }
-.discount-pill-text strong {
+.sob-icon {
+  color: var(--terracotta);
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+}
+.sob-text {
+  line-height: 1.4;
+}
+.sob-text strong {
   color: #fff;
   background: var(--terracotta);
-  padding: 2px 8px;
+  padding: 2px 9px;
   border-radius: 12px;
   font-size: 0.82rem;
+  font-weight: 700;
+  margin: 0 4px;
 }
 
 .browse-all-wrapper {
@@ -1534,7 +1551,60 @@ const homeSchema = {
   .agency-intro-actions .btn { width: 100%; justify-content: center; }
   .agency-main-img { height: auto; aspect-ratio: 4 / 3; }
   .agency-img-caption { grid-template-columns: 1fr; gap: 8px; padding: 12px; }
-  .discount-pill-text { font-size: 0.8rem; flex-direction: column; text-align: center; gap: 4px; padding: 6px 12px; }
+  .tours-section { padding-top: 60px !important; }
+  .section-header { margin-bottom: 25px !important; }
+  .section-header h2 { font-size: 2rem !important; line-height: 1.2 !important; }
+  .section-header p { font-size: 0.92rem !important; line-height: 1.55 !important; margin-bottom: 0 !important; }
+
+  .special-offer-banner {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    padding: 8px 16px !important;
+    font-size: 0.8rem !important;
+    line-height: 1.4 !important;
+    margin: 16px auto 0 !important;
+    width: auto !important;
+    max-width: 95% !important;
+    border-radius: 30px !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+  }
+  .sob-icon { font-size: 0.85rem !important; }
+  .sob-text { font-size: 0.8rem !important; line-height: 1.4 !important; }
+  .sob-text strong {
+    font-size: 0.76rem !important;
+    padding: 1px 7px !important;
+    white-space: nowrap !important;
+  }
+
+  .category-tabs {
+    display: flex !important;
+    justify-content: flex-start !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    gap: 10px !important;
+    margin: 24px -5% 30px !important;
+    padding: 4px 5% 12px !important;
+    list-style: none !important;
+  }
+  .category-tabs::-webkit-scrollbar {
+    display: none !important;
+  }
+  .category-tabs li {
+    flex-shrink: 0 !important;
+    list-style: none !important;
+  }
+  .category-tab {
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    padding: 9px 18px !important;
+    font-size: 0.84rem !important;
+    border-radius: 50px !important;
+  }
   .category-tour-grid { grid-template-columns: 1fr !important; }
   .browse-all-wrapper { margin-top: 35px; }
   .browse-all-wrapper .btn { width: 100%; justify-content: center; }
