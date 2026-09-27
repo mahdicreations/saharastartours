@@ -717,6 +717,25 @@ footer {
   .tour-map-card { padding: 22px 16px; }
   .tour-map-header { flex-direction: column; align-items: flex-start; }
   .map-reset-btn { top: 10px; right: 10px; padding: 5px 10px; font-size: 0.75rem; }
+
+  /* Tour card mobile typography */
+  .tour-info { padding: 16px 14px !important; }
+  .tour-title { font-size: 1.05rem !important; line-height: 1.35 !important; margin-bottom: 8px !important; font-weight: 600 !important; }
+  .tour-meta { font-size: 0.78rem !important; margin-bottom: 8px !important; }
+  .tour-desc { font-size: 0.82rem !important; margin-bottom: 14px !important; line-height: 1.45 !important; }
+  .tour-footer { padding-top: 12px !important; }
+  .tour-price-label { font-size: 0.65rem !important; letter-spacing: 0.5px !important; }
+  .tour-price-value,
+  .tour-price span { font-size: 1rem !important; font-weight: 700 !important; line-height: 1.1 !important; }
+
+  /* Starting Departure Cities mobile layout (proportional, single column on phones) */
+  .starting-cities-grid { grid-template-columns: 1fr !important; max-width: 440px !important; margin: 0 auto !important; gap: 20px !important; }
+  .city-img-wrapper { height: 160px !important; }
+  .city-content { padding: 18px 16px !important; }
+  .city-content h3 { font-size: 1.25rem !important; margin-bottom: 6px !important; }
+  .city-content p { font-size: 0.85rem !important; line-height: 1.5 !important; margin-bottom: 12px !important; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .city-meta { padding: 10px 0 !important; font-size: 0.8rem !important; }
+  .city-footer { padding-top: 10px !important; }
 }
 
 @media (max-width: 480px) {
