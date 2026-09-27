@@ -52,6 +52,8 @@ html {
 
 body {
   line-height: 1.6;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 ::-webkit-scrollbar { width: 8px; }
@@ -821,6 +823,16 @@ footer {
 }
 
 @media (max-width: 768px) {
+  .timeline-card,
+  .inclusions-card,
+  .faq-card,
+  .gallery-card {
+    padding: 22px 16px !important;
+  }
+  .timeline-card p,
+  .timeline-item p {
+    text-align: left !important;
+  }
   .tour-hero-section { min-height: 420px; height: auto; padding-top: 100px; padding-bottom: 35px; }
   .tour-hero-content {
     padding-left: 58px !important;
