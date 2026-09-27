@@ -106,8 +106,19 @@ const homeSchema = {
     <h1>Discover the <span>Magic of Morocco</span></h1>
     <p>Explore unforgettable Morocco tours, from the golden dunes of the Sahara to the vibrant streets of Marrakech, Chefchaouen and beyond — with authentic journeys crafted by local experts.</p>
     <div class="hero-btns">
-      <a href="#tours" class="btn btn-primary"><i class="fa-solid fa-compass"></i> Explore Tours</a>
+      <a href="/tours" class="btn btn-primary"><i class="fa-solid fa-compass"></i> Explore Tours</a>
       <a href="/contact" class="btn btn-secondary"><i class="fa-solid fa-paper-plane"></i> Plan a Custom Trip</a>
+    </div>
+    <div class="hero-trust-row">
+      <span class="hero-trust-item">
+        <i class="fa-solid fa-star"></i> 5-Star Rated (500+ Reviews)
+      </span>
+      <span class="hero-trust-item">
+        <i class="fa-solid fa-certificate"></i> Licensed Local Agency
+      </span>
+      <span class="hero-trust-item">
+        <i class="fa-solid fa-headset"></i> 24/7 Dedicated Concierge
+      </span>
     </div>
   </div>
 </section>
@@ -191,7 +202,7 @@ const homeSchema = {
     </div>
 
     <div style="text-align:center;margin-top:50px;">
-      <a href="/desert-tours" class="btn btn-secondary">
+      <a href="/tours" class="btn btn-secondary">
         <i class="fa-solid fa-compass"></i> Browse All Tours
       </a>
     </div>
@@ -889,11 +900,135 @@ input[type=range]::-webkit-slider-thumb { height: 20px; width: 20px; border-radi
   font-weight: 700;
 }
 
+/* Hero Trust Badges Row */
+.hero-trust-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUpFade 1s forwards 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-trust-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-main);
+  letter-spacing: 0.2px;
+}
+
+.hero-trust-item i {
+  color: var(--sand-gold);
+  font-size: 1rem;
+}
+
+/* Morocco Travel Experts — SEO Showcase */
+.agency-seo-showcase {
+  padding: 100px 5%;
+  background: linear-gradient(180deg, var(--night-bg) 0%, var(--night-surface) 100%);
+  border-top: 1px solid var(--glass-border);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.seo-grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.seo-text h3 {
+  font-size: 2.4rem;
+  color: var(--text-main);
+  margin-bottom: 22px;
+  line-height: 1.25;
+}
+
+.seo-text h3 span {
+  background: linear-gradient(135deg, var(--terracotta) 0%, var(--sand-gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.seo-text p {
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--text-muted);
+}
+
+.seo-highlight-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.seo-card {
+  background: var(--night-surface);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  padding: 26px 24px;
+  transition: var(--transition-smooth);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.seo-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--terracotta) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.seo-card:hover {
+  border-color: rgba(232, 195, 158, 0.35);
+  box-shadow: var(--shadow-premium);
+  transform: translateY(-6px);
+}
+
+.seo-card:hover::before {
+  opacity: 1;
+}
+
+.seo-card i {
+  color: var(--terracotta);
+  font-size: 2rem;
+  margin-bottom: 14px;
+  display: block;
+}
+
+.seo-card h4 {
+  font-size: 1.15rem;
+  color: var(--sand-gold);
+  margin-bottom: 8px;
+}
+
+.seo-card p {
+  font-size: 0.88rem;
+  margin-bottom: 0;
+  line-height: 1.55;
+  color: var(--text-muted);
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
   .calculator-container { grid-template-columns: 1fr; }
   .calc-summary { position: static; }
-  .seo-grid { grid-template-columns: 1fr; gap: 30px; }
+  .seo-grid { grid-template-columns: 1fr; gap: 35px; }
   .starting-cities-grid { grid-template-columns: repeat(2, 1fr); }
   .carousel-arrow-prev { left: -10px; }
   .carousel-arrow-next { right: -10px; }
@@ -905,9 +1040,12 @@ input[type=range]::-webkit-slider-thumb { height: 20px; width: 20px; border-radi
   .hero-content h1 { font-size: 2.7rem; margin-bottom: 16px !important; }
   .hero-content p { margin-bottom: 28px !important; font-size: 1.05rem !important; }
   .hero-btns { flex-direction: column; align-items: center; }
+  .hero-trust-row { gap: 12px 18px; margin-top: 22px; }
+  .hero-trust-item { font-size: 0.82rem; }
   .stats-bar { flex-wrap: wrap; border-radius: 0; margin: 0; }
   .stat-item { border-right: none; border-bottom: 1px solid var(--glass-border); min-width: 50%; }
   .seo-highlight-cards { grid-template-columns: 1fr; }
+  .seo-text h3 { font-size: 1.85rem; }
   .luxury-review-card { padding: 30px 20px; border-radius: 18px; }
   .luxury-review-quote { font-size: 1.15rem; min-height: auto; margin-bottom: 24px; }
   .reviewer-avatar-img { width: 56px; height: 56px; }

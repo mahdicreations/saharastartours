@@ -1,0 +1,310 @@
+---
+// src/pages/tours/index.astro — All Tours & Itineraries Catalogue
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { tours } from '../../data/tours';
+
+const allTours = tours;
+
+const categoryList = [
+  { id: 'all', label: 'All Tours', count: allTours.length },
+  { id: 'desert-tours', label: 'Desert Tours', count: allTours.filter(t => t.category === 'desert-tours').length },
+  { id: 'imperial-cities', label: 'Imperial Cities', count: allTours.filter(t => t.category === 'imperial-cities').length },
+  { id: 'day-trips', label: 'Day Trips', count: allTours.filter(t => t.category === 'day-trips').length },
+  { id: 'activities', label: 'Activities', count: allTours.filter(t => t.category === 'activities').length },
+];
+
+const toursSchema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Morocco Tours & Travel Packages | Sahara Star Tours",
+  "description": "Discover all 29 handcrafted Morocco tours, luxury Sahara desert safaris, imperial city itineraries, day trips from Marrakech, and authentic adventures.",
+  "url": "https://www.saharastartours.com/tours"
+};
+---
+
+<BaseLayout
+  title="All Morocco Tours & Travel Packages | Sahara Star Tours"
+  description="Explore our full collection of 29 bespoke Morocco tours. Luxury Sahara desert safaris, imperial medina explorations, Atlas mountain treks, and day excursions."
+  keywords="morocco tours, sahara desert tours, marrakech tours, casablanca tours, morocco travel agency, luxury morocco tour"
+  currentPage="tours"
+  schemaData={toursSchema}
+>
+
+<!-- CATALOGUE HERO -->
+<section class="tours-cat-hero">
+  <div class="tours-cat-hero-overlay"></div>
+  <div class="tours-cat-hero-content">
+    <nav class="tours-breadcrumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
+      <span class="current">All Morocco Tours</span>
+    </nav>
+    <span class="tag"><i class="fa-solid fa-compass"></i> Handcrafted Moroccan Journeys</span>
+    <h1>Explore Our Morocco Tours &amp; Expeditions</h1>
+    <p>From the sweeping dunes of Erg Chebbi to the ancient medinas of Fes and Marrakech — discover all 29 private guided journeys crafted with luxury accommodations and local nomad expertise.</p>
+  </div>
+</section>
+
+<!-- TOURS SHOWCASE SECTION WITH FILTER -->
+<section class="tours-catalogue-body">
+  <div class="category-showcase-container" x-data="{ activeTab: 'all' }">
+    <!-- Category Filter Tabs -->
+    <ul class="category-tabs" id="category-tabs">
+      {categoryList.map(cat => (
+        <li>
+          <button 
+            class="category-tab"
+            :class={`activeTab === '${cat.id}' ? 'active' : ''`}
+            @click={`activeTab = '${cat.id}'`}
+            type="button"
+          >
+            {cat.label} <span>({cat.count})</span>
+          </button>
+        </li>
+      ))}
+    </ul>
+
+    <!-- Tour Cards Grid -->
+    <div class="category-tours-wrapper">
+      <div class="category-tour-grid">
+        {allTours.map(tour => (
+          <article 
+            class="tour-card reveal active"
+            data-category={tour.category}
+            x-show={`activeTab === 'all' || activeTab === '${tour.category}'`}
+            x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="opacity-0 scale-95"
+            x-transition:enter-end="opacity-100 scale-100"
+          >
+            <div class="tour-img-wrapper">
+              <img 
+                src={tour.heroImage} 
+                alt={tour.shortTitle} 
+                loading="lazy"
+                onerror="this.src='/assets/hero_sahara_sunset.png'"
+              />
+              {tour.badge && <span class="tour-badge">{tour.badge}</span>}
+            </div>
+            <div class="tour-info">
+              <div class="tour-meta">
+                <div><i class="fa-regular fa-clock"></i> {tour.duration}</div>
+                <div><i class="fa-solid fa-location-dot"></i> {tour.startingFrom}</div>
+              </div>
+              <h2 class="tour-title" style="font-size:1.35rem;">{tour.shortTitle}</h2>
+              <p class="tour-desc">{tour.description}</p>
+              <div class="tour-footer">
+                <div class="tour-price">
+                  <span class="tour-price-label">Starting from</span>
+                  <span class="tour-price-value">{tour.price.replace(/^From\s*/i, '').replace(/\/person\s*/i, '').trim()}</span>
+                </div>
+                <a href={`/tours/${tour.slug}`} class="btn btn-primary btn-sm">
+                  View Tour <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CUSTOM TRIP CTA BANNER -->
+<section class="custom-trip-cta">
+  <div class="custom-cta-card">
+    <div class="custom-cta-text">
+      <span class="tag"><i class="fa-solid fa-wand-magic-sparkles"></i> Need Something Tailor-Made?</span>
+      <h3>Can't Find Your Exact Dream Itinerary?</h3>
+      <p>Our Marrakech-based travel designers will craft a 100% custom itinerary with private Mercedes transport, luxury riad selections, and secret desert stops tailored to your schedule.</p>
+    </div>
+    <div class="custom-cta-btn">
+      <a href="/contact" class="btn btn-primary btn-lg">
+        <i class="fa-solid fa-paper-plane"></i> Request Custom Itinerary
+      </a>
+    </div>
+  </div>
+</section>
+
+</BaseLayout>
+
+<style>
+.tours-cat-hero {
+  position: relative;
+  padding: 160px 5% 80px;
+  text-align: center;
+  background: radial-gradient(circle at 50% 30%, rgba(217, 107, 67, 0.15) 0%, transparent 60%), linear-gradient(180deg, var(--night-surface) 0%, var(--night-bg) 100%);
+  border-bottom: 1px solid var(--glass-border);
+  overflow: hidden;
+}
+
+.tours-cat-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.tours-breadcrumbs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.tours-breadcrumbs a {
+  color: var(--text-muted);
+  transition: color 0.3s;
+}
+
+.tours-breadcrumbs a:hover {
+  color: var(--sand-gold);
+}
+
+.tours-breadcrumbs .sep {
+  font-size: 0.7rem;
+  opacity: 0.5;
+}
+
+.tours-breadcrumbs .current {
+  color: var(--sand-gold);
+  font-weight: 500;
+}
+
+.tours-cat-hero h1 {
+  font-size: 3.2rem;
+  line-height: 1.15;
+  margin: 16px 0 20px;
+  background: linear-gradient(135deg, var(--text-main) 30%, var(--sand-gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tours-cat-hero p {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.tours-catalogue-body {
+  padding: 60px 0 100px;
+}
+
+.category-showcase-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.category-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px 18px;
+  margin: 0 auto 50px;
+  list-style: none;
+  max-width: 850px;
+}
+
+.category-tab {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--glass-border);
+  color: var(--text-muted);
+  border-radius: 50px;
+  padding: 12px 28px;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.category-tab:hover {
+  border-color: var(--sand-gold);
+  color: var(--text-main);
+  transform: translateY(-2px);
+}
+
+.category-tab.active {
+  background: linear-gradient(135deg, var(--terracotta) 0%, hsl(14, 75%, 45%) 100%);
+  color: var(--text-main);
+  border-color: var(--terracotta);
+  box-shadow: 0 6px 20px var(--terracotta-glow);
+}
+
+.category-tab span {
+  font-size: 0.8rem;
+  opacity: 0.85;
+  margin-left: 6px;
+}
+
+.category-tour-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 32px;
+}
+
+/* Custom trip CTA */
+.custom-trip-cta {
+  padding: 0 5% 100px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.custom-cta-card {
+  background: linear-gradient(135deg, rgba(32, 25, 23, 0.9) 0%, rgba(20, 16, 15, 0.98) 100%);
+  border: 1px solid rgba(232, 195, 158, 0.25);
+  border-radius: var(--radius-lg);
+  padding: 50px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  box-shadow: var(--shadow-premium);
+  position: relative;
+  overflow: hidden;
+}
+
+.custom-cta-card::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, var(--terracotta-glow) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.custom-cta-text h3 {
+  font-size: 2rem;
+  margin: 12px 0 10px;
+  color: var(--text-main);
+}
+
+.custom-cta-text p {
+  font-size: 1rem;
+  color: var(--text-muted);
+  max-width: 650px;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.custom-cta-btn {
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .custom-cta-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 35px 25px;
+  }
+  .tours-cat-hero h1 {
+    font-size: 2.3rem;
+  }
+}
+</style>
