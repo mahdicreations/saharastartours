@@ -821,8 +821,13 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .tour-hero-section { height: 50vh; padding-bottom: 30px; }
-  .tour-hero-content h1 { font-size: 1.85rem !important; line-height: 1.25 !important; }
+  .tour-hero-section { min-height: 420px; height: auto; padding-top: 100px; padding-bottom: 35px; }
+  .tour-hero-content {
+    padding-left: 58px !important;
+    padding-right: 18px !important;
+    box-sizing: border-box !important;
+  }
+  .tour-hero-content h1 { font-size: 1.8rem !important; line-height: 1.25 !important; margin-bottom: 16px !important; }
   .tour-quick-meta { flex-direction: column; gap: 10px; font-size: 0.9rem; }
   .inc-exc-split { grid-template-columns: 1fr; gap: 20px; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
