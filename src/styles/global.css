@@ -46,6 +46,10 @@ html {
   overflow-x: hidden;
 }
 
+[x-cloak] {
+  display: none !important;
+}
+
 body {
   line-height: 1.6;
 }
@@ -437,8 +441,10 @@ footer {
 .tour-card:hover .tour-title { color: var(--sand-gold); }
 .tour-desc { font-size: 0.9rem; margin-bottom: 24px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .tour-footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--glass-border); padding-top: 20px; }
-.tour-price { font-size: 0.85rem; color: var(--text-muted); }
-.tour-price span { display: block; font-size: 1.4rem; font-family: var(--font-serif); color: var(--text-main); font-weight: 700; }
+.tour-price { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; }
+.tour-price-label { font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.6px; font-weight: 500; line-height: 1; }
+.tour-price-value,
+.tour-price span { display: block; font-size: 1.15rem; font-family: var(--font-serif); color: var(--sand-gold); font-weight: 700; line-height: 1.2; }
 
 /* ===========================
    9. FORM COMPONENTS

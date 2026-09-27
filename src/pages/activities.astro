@@ -31,7 +31,10 @@ const tours = getToursByCategory('activities');
           <h2 class="tour-title">{tour.shortTitle}</h2>
           <p class="tour-desc">{tour.description}</p>
           <div class="tour-footer">
-            <div class="tour-price">Starting from<span>{tour.price}</span></div>
+            <div class="tour-price">
+              <span class="tour-price-label">Starting from</span>
+              <span class="tour-price-value">{tour.price.replace(/^From\s*/i, '').replace(/\/person\s*/i, '').trim()}</span>
+            </div>
             <a href={`/tours/${tour.slug}`} class="btn btn-primary btn-sm">Book Activity <i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>

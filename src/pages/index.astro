@@ -1,9 +1,9 @@
 ---
 // src/pages/index.astro — Homepage
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { getFeaturedTours, getToursByCategory, categoryLabels } from '../data/tours';
+import { tours, categoryLabels } from '../data/tours';
 
-const featuredTours = getFeaturedTours(9);
+const allTours = tours;
 
 // Stats for trust section
 const stats = [
@@ -37,21 +37,41 @@ const cultureItems = [
   },
 ];
 
-// Reviews
+// Reviews with authentic generated traveler portraits
 const reviews = [
-  { stars: 5, quote: "The most magical travel experience of my life. The desert camp at Erg Chebbi was beyond anything I ever imagined — stars like I've never seen.", name: 'Sophie Laurent', location: 'Paris, France', avatar: '/assets/hero_sahara_sunset.png' },
-  { stars: 5, quote: "Our guide was phenomenal. He knew every hidden corner of Fes, every family story behind the tanneries. Authentic, not touristic. Absolutely recommend Sahara Star Tours.", name: 'Marco Rossi', location: 'Milan, Italy', avatar: '/assets/marrakech_riad_pool.png' },
-  { stars: 5, quote: "We custom-designed our 12-day trip with their team from scratch. They listened to every single wish. The VIP Mercedes transportation was a dream.", name: 'David & Emma Clark', location: 'London, UK', avatar: '/assets/chefchaouen_street.png' },
-  { stars: 5, quote: "The camel trek at sunset, the Berber music by the campfire, the Majorelle Gardens in morning light... Morocco through Sahara Star Tours is pure poetry.", name: 'Alejandro García', location: 'Madrid, Spain', avatar: '/assets/atlas_mountains_valley.png' },
+  { 
+    stars: 5, 
+    quote: "The most magical travel experience of my life. The desert camp at Erg Chebbi was beyond anything I ever imagined — the sunset camel trek, dinner under the Milky Way, and genuine Berber hospitality made it unforgettable.", 
+    name: 'Sophie Laurent', 
+    location: 'Paris, France', 
+    avatar: '/assets/reviews/sophie.jpg',
+    badge: 'Erg Chebbi Luxury Camp'
+  },
+  { 
+    stars: 5, 
+    quote: "Our private guide was phenomenal. He knew every hidden gem in the Fes medina and made our family feel like royalty. The VIP Mercedes transport was exceptionally comfortable throughout our week-long journey.", 
+    name: 'Marco Rossi', 
+    location: 'Milan, Italy', 
+    avatar: '/assets/reviews/marco.jpg',
+    badge: 'Imperial Cities & Riads'
+  },
+  { 
+    stars: 5, 
+    quote: "We custom-designed our 12-day honeymoon from scratch with their Marrakech team. Every single riad, sunset terrace, and mountain viewpoint exceeded our dreams. The best tour operator in Morocco hands down!", 
+    name: 'David & Emma Clark', 
+    location: 'London, UK', 
+    avatar: '/assets/reviews/david_emma.jpg',
+    badge: '12-Day Grand Morocco'
+  },
 ];
 
 // Category tabs configuration
 const categoryList = [
-  { id: 'all', label: 'All Tours', count: 31 },
-  { id: 'desert-tours', label: 'Desert Tours', count: 21 },
-  { id: 'imperial-cities', label: 'Imperial Cities', count: 3 },
-  { id: 'day-trips', label: 'Day Trips', count: 6 },
-  { id: 'activities', label: 'Activities', count: 6 },
+  { id: 'all', label: 'All Tours', count: allTours.length },
+  { id: 'desert-tours', label: 'Desert Tours', count: allTours.filter(t => t.category === 'desert-tours').length },
+  { id: 'imperial-cities', label: 'Imperial Cities', count: allTours.filter(t => t.category === 'imperial-cities').length },
+  { id: 'day-trips', label: 'Day Trips', count: allTours.filter(t => t.category === 'day-trips').length },
+  { id: 'activities', label: 'Activities', count: allTours.filter(t => t.category === 'activities').length },
 ];
 
 const homeSchema = {
@@ -87,7 +107,7 @@ const homeSchema = {
     <p>Explore unforgettable Morocco tours, from the golden dunes of the Sahara to the vibrant streets of Marrakech, Chefchaouen and beyond — with authentic journeys crafted by local experts.</p>
     <div class="hero-btns">
       <a href="#tours" class="btn btn-primary"><i class="fa-solid fa-compass"></i> Explore Tours</a>
-      <a href="#contact" class="btn btn-secondary"><i class="fa-solid fa-paper-plane"></i> Plan a Custom Trip</a>
+      <a href="/contact" class="btn btn-secondary"><i class="fa-solid fa-paper-plane"></i> Plan a Custom Trip</a>
     </div>
   </div>
 </section>
@@ -110,9 +130,9 @@ const homeSchema = {
     <p>Each journey is a bespoke masterpiece — privately guided, luxury-accommodated, and completely tailored to your dream vision of Morocco.</p>
   </div>
 
-  <div class="category-showcase-container">
+  <div class="category-showcase-container" x-data="{ activeTab: 'all' }">
     <!-- Category Filter Tabs -->
-    <ul class="category-tabs" x-data="{activeTab:'all'}" id="category-tabs">
+    <ul class="category-tabs" id="category-tabs">
       {categoryList.map(cat => (
         <li>
           <button 
@@ -130,8 +150,15 @@ const homeSchema = {
     <!-- Tour Cards Grid -->
     <div class="category-tours-wrapper">
       <div class="category-tour-grid">
-        {featuredTours.map(tour => (
-          <article class="tour-card reveal active">
+        {allTours.map(tour => (
+          <article 
+            class="tour-card reveal active"
+            data-category={tour.category}
+            x-show={`activeTab === 'all' || activeTab === '${tour.category}'`}
+            x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="opacity-0 scale-95"
+            x-transition:enter-end="opacity-100 scale-100"
+          >
             <div class="tour-img-wrapper">
               <img 
                 src={tour.heroImage} 
@@ -150,8 +177,8 @@ const homeSchema = {
               <p class="tour-desc">{tour.description}</p>
               <div class="tour-footer">
                 <div class="tour-price">
-                  Starting from
-                  <span>{tour.price}</span>
+                  <span class="tour-price-label">Starting from</span>
+                  <span class="tour-price-value">{tour.price.replace(/^From\s*/i, '').replace(/\/person\s*/i, '').trim()}</span>
                 </div>
                 <a href={`/tours/${tour.slug}`} class="btn btn-primary btn-sm">
                   View Tour <i class="fa-solid fa-arrow-right"></i>
@@ -165,7 +192,7 @@ const homeSchema = {
 
     <div style="text-align:center;margin-top:50px;">
       <a href="/desert-tours" class="btn btn-secondary">
-        <i class="fa-solid fa-compass"></i> Browse All 31 Tours
+        <i class="fa-solid fa-compass"></i> Browse All Tours
       </a>
     </div>
   </div>
@@ -336,7 +363,7 @@ const homeSchema = {
             Early booking saves up to 15%
           </div>
         </div>
-        <a href="#contact" class="btn btn-primary" style="width:100%;margin-top:20px;justify-content:center;">
+        <a href="/contact" class="btn btn-primary" style="width:100%;margin-top:20px;justify-content:center;">
           <i class="fa-solid fa-paper-plane"></i> Get Exact Quote
         </a>
       </div>
@@ -344,52 +371,131 @@ const homeSchema = {
   </div>
 </section>
 
-<!-- REVIEWS -->
+<!-- LUXURY TESTIMONIALS CAROUSEL -->
 <section 
-  class="reviews-section"
+  class="reviews-section" 
+  id="testimonials"
   x-data="{
-    reviews: [
-      {stars:5,quote:'The most magical travel experience of my life. The desert camp at Erg Chebbi was beyond anything I ever imagined.',name:'Sophie Laurent',location:'Paris, France'},
-      {stars:5,quote:'Our guide was phenomenal. He knew every hidden corner of Fes. Authentic, not touristic. Absolutely recommend Sahara Star Tours.',name:'Marco Rossi',location:'Milan, Italy'},
-      {stars:5,quote:'We custom-designed our 12-day trip. They listened to every single wish. The VIP Mercedes transportation was a dream.',name:'David & Emma Clark',location:'London, UK'},
-      {stars:5,quote:'The camel trek at sunset, the Berber music by the campfire, the Majorelle Gardens in morning light... Morocco through Sahara Star Tours is pure poetry.',name:'Alejandro García',location:'Madrid, Spain'},
-    ],
     current: 0,
-    interval: null,
-    init() {
-      this.interval = setInterval(() => { this.next(); }, 5500);
+    total: 3,
+    timer: null,
+    startTimer() {
+      this.timer = setInterval(() => { this.next(); }, 6000);
     },
-    next() { this.current = (this.current + 1) % this.reviews.length; },
-    prev() { this.current = (this.current - 1 + this.reviews.length) % this.reviews.length; },
-    goTo(idx) { this.current = idx; clearInterval(this.interval); }
+    stopTimer() {
+      if (this.timer) clearInterval(this.timer);
+    },
+    next() {
+      this.current = (this.current + 1) % this.total;
+    },
+    prev() {
+      this.current = (this.current - 1 + this.total) % this.total;
+    },
+    goTo(index) {
+      this.current = index;
+    }
   }"
+  x-init="startTimer()"
+  @mouseenter="stopTimer()"
+  @mouseleave="startTimer()"
 >
   <div class="section-header reveal active">
-    <span class="tag">Testimonials</span>
-    <h2>Stories From Our Travelers</h2>
-    <p>Over 2,400 travelers have trusted Sahara Star Tours with their Moroccan dream. Here's what they say.</p>
+    <span class="tag"><i class="fa-solid fa-quote-left"></i> Guest Stories</span>
+    <h2>Travelers Who Fell in Love With Morocco</h2>
+    <p>Over 2,400 travelers have trusted Sahara Star Tours with their once-in-a-lifetime journey. Here are their verified stories.</p>
   </div>
-  <div class="reviews-container">
-    <div class="reviews-wrapper" :style="`transform: translateX(-${current * 100}%)`">
-      <template x-for="(r,idx) in reviews" :key="idx">
-        <div class="review-slide">
-          <div class="review-stars">
-            <template x-for="i in r.stars" :key="i"><i class="fa-solid fa-star"></i></template>
-          </div>
-          <p class="review-quote" x-text="'&ldquo;' + r.quote + '&rdquo;'"></p>
-          <div class="review-user">
-            <div class="review-user-info">
-              <h5 x-text="r.name"></h5>
-              <span x-text="r.location"></span>
+
+  <div class="luxury-carousel-container">
+    <!-- Prev Arrow Button -->
+    <button 
+      class="carousel-arrow carousel-arrow-prev" 
+      @click="prev()" 
+      type="button"
+      aria-label="Previous review"
+    >
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+
+    <!-- Carousel Window -->
+    <div class="carousel-window">
+      <div 
+        class="carousel-track" 
+        :style="`transform: translateX(-${current * 100}%)`"
+      >
+        {reviews.map((r, idx) => (
+          <div class="carousel-slide">
+            <div class="luxury-review-card">
+              <!-- Top row with stars & quote mark -->
+              <div class="review-top-row">
+                <div class="review-stars-box">
+                  {Array.from({ length: r.stars }).map(() => (
+                    <i class="fa-solid fa-star"></i>
+                  ))}
+                  <span class="review-score">5.0 / 5.0</span>
+                </div>
+                <div class="review-quote-badge">
+                  <i class="fa-solid fa-quote-right"></i>
+                </div>
+              </div>
+
+              <!-- Quote Body -->
+              <p class="luxury-review-quote">
+                &ldquo;{r.quote}&rdquo;
+              </p>
+
+              <!-- Footer with Avatar & Info -->
+              <div class="luxury-review-footer">
+                <div class="reviewer-avatar-wrap">
+                  <img 
+                    src={r.avatar} 
+                    alt={r.name} 
+                    class="reviewer-avatar-img"
+                    loading="lazy" 
+                  />
+                  <span class="avatar-verified-tick"><i class="fa-solid fa-check"></i></span>
+                </div>
+                <div class="reviewer-meta">
+                  <h4 class="reviewer-name">{r.name}</h4>
+                  <div class="reviewer-sub">
+                    <span class="reviewer-loc"><i class="fa-solid fa-location-dot"></i> {r.location}</span>
+                    <span class="reviewer-tour-pill"><i class="fa-solid fa-compass"></i> {r.badge}</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </template>
+        ))}
+      </div>
     </div>
-    <div class="review-dots">
-      <template x-for="(r,idx) in reviews" :key="idx">
-        <span class="review-dot" :class="current===idx?'active':''" @click="goTo(idx)"></span>
-      </template>
+
+    <!-- Next Arrow Button -->
+    <button 
+      class="carousel-arrow carousel-arrow-next" 
+      @click="next()" 
+      type="button"
+      aria-label="Next review"
+    >
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+  </div>
+
+  <!-- Carousel Navigation Dots & Counter -->
+  <div class="carousel-controls-bottom">
+    <div class="carousel-dots">
+      {reviews.map((_, idx) => (
+        <button
+          type="button"
+          class="carousel-dot"
+          :class={`current === ${idx} ? 'active' : ''`}
+          @click={`goTo(${idx})`}
+          aria-label={`Go to slide ${idx + 1}`}
+        ></button>
+      ))}
+    </div>
+    <div class="carousel-counter">
+      <span class="counter-curr" x-text="String(current + 1).padStart(2, '0')"></span>
+      <span class="counter-sep">/</span>
+      <span class="counter-total">03</span>
     </div>
   </div>
 </section>
@@ -408,76 +514,6 @@ const homeSchema = {
       <div class="seo-card"><i class="fa-solid fa-car-side"></i><h4>VIP Mercedes Fleet</h4><p>Travel across panoramic mountain passes inside climate-controlled VIP leather-seated Mercedes transporters.</p></div>
       <div class="seo-card"><i class="fa-solid fa-star"></i><h4>5-Star Riad Stays</h4><p>Settle inside prestigious boutique zellige Riads and high-end glamping camps featuring en-suite private bathrooms.</p></div>
       <div class="seo-card"><i class="fa-solid fa-sliders"></i><h4>Point-by-Point Tailoring</h4><p>Completely customize your itineraries, dates, Riad pool options, and diet plans to match your exact wishes.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT FORM -->
-<section class="contact-section" id="contact">
-  <div class="section-header reveal active">
-    <span class="tag">Begin Your Journey</span>
-    <h2>Submit An Inquiry</h2>
-    <p>Ready to trace the red streets of Marrakech or watch Sahara night skies? Send us a message and our expert planning team will draft your custom plan within 24 hours.</p>
-  </div>
-  <div 
-    class="contact-container reveal active"
-    x-data="{
-      name:'',email:'',travelers:'',pkg:'none',message:'',
-      showModal:false,modalTitle:'',modalMsg:'',
-      handleSubmit(){
-        this.modalTitle='Shukran, '+this.name+'!';
-        this.modalMsg='Your custom trip inquiry has been successfully registered with <strong>Sahara Star Tours</strong>. Our travel designers in Marrakech are analyzing your requests.<br><br>Expect a highly detailed bespoke travel itinerary in your email (<strong>'+this.email+'</strong>) within 24 hours.';
-        this.showModal=true;
-        document.body.style.overflow='hidden';
-        this.name='';this.email='';this.travelers='';this.pkg='none';this.message='';
-      },
-      closeModal(){this.showModal=false;document.body.style.overflow='';}
-    }"
-  >
-    <form class="contact-form" @submit.prevent="handleSubmit()">
-      <div class="form-group">
-        <input type="text" id="contact-name" x-model="name" placeholder=" " required />
-        <label for="contact-name">Your Full Name</label>
-      </div>
-      <div class="form-group">
-        <input type="email" id="contact-email" x-model="email" placeholder=" " required />
-        <label for="contact-email">Email Address</label>
-      </div>
-      <div class="form-grid-2">
-        <div class="form-group">
-          <select id="contact-travelers" x-model="travelers" style="width:100%">
-            <option value="">Select Travelers</option>
-            <option value="1 Traveler">1 Traveler</option>
-            <option value="2 Travelers">2 Travelers</option>
-            <option value="3-5 Travelers">3 - 5 Travelers</option>
-            <option value="6+ Travelers">6+ Travelers Group</option>
-          </select>
-          <label for="contact-travelers">Group Size</label>
-        </div>
-        <div class="form-group">
-          <select id="contact-package" x-model="pkg" style="width:100%">
-            <option value="none">Custom Expedition / Not Sure</option>
-            <option value="sahara">Sahara Dunes &amp; Desert Glamping (4 Days)</option>
-            <option value="imperial">Imperial Medinas &amp; Riad Retreat (7 Days)</option>
-            <option value="atlas">High Atlas &amp; Berber Villages Trek (5 Days)</option>
-            <option value="coast">Blue City &amp; Atlantic Coast Escape (5 Days)</option>
-          </select>
-          <label for="contact-package">Selected Tour Package</label>
-        </div>
-      </div>
-      <div class="form-group form-full">
-        <textarea id="contact-message" x-model="message" placeholder=" " rows="5" required></textarea>
-        <label for="contact-message">Tell us about your travel wishes (Preferred dates, special requirements, food allergies...)</label>
-      </div>
-      <button type="submit" class="btn btn-primary btn-submit">Send Inquiry Proposal</button>
-    </form>
-    <div class="success-overlay" :class="showModal?'active':''" id="success-modal">
-      <div class="success-card">
-        <div class="success-icon-box"><i class="fa-solid fa-circle-check"></i></div>
-        <h3 x-text="modalTitle"></h3>
-        <p x-html="modalMsg"></p>
-        <button class="btn btn-primary" @click="closeModal()">Return to Exploring</button>
-      </div>
     </div>
   </div>
 </section>
@@ -589,40 +625,269 @@ input[type=range]::-webkit-slider-thumb { height: 20px; width: 20px; border-radi
 .discount-badge { background: linear-gradient(135deg, hsla(14,62%,52%,0.15) 0%, hsla(38,72%,76%,0.15) 100%); border: 1px dashed var(--terracotta); color: var(--text-main); padding: 12px 28px; border-radius: 50px; font-size: 0.95rem; font-weight: 500; display: inline-flex; align-items: center; gap: 12px; box-shadow: 0 0 20px rgba(217,107,67,0.15); animation: glowPulse 2s infinite alternate; }
 .discount-badge i { color: var(--terracotta); font-size: 1.15rem; animation: wiggle 1s ease-in-out infinite alternate; }
 
-/* Reviews */
-.reviews-section { padding: 100px 5%; }
-.reviews-container { max-width: 800px; margin: 0 auto; position: relative; overflow: hidden; }
-.reviews-wrapper { display: flex; transition: transform 0.6s cubic-bezier(0.16,1,0.3,1); }
-.review-slide { flex: 0 0 100%; min-width: 100%; text-align: center; padding: 20px; }
-.review-stars { color: var(--sand-gold); font-size: 1.1rem; margin-bottom: 20px; }
-.review-quote { font-family: var(--font-serif); font-size: 1.6rem; line-height: 1.4; margin-bottom: 30px; color: var(--text-main); font-style: italic; }
-.review-user { display: flex; align-items: center; justify-content: center; gap: 14px; }
-.review-user-info h5 { font-size: 1rem; font-weight: 600; text-align: left; }
-.review-user-info span { font-size: 0.8rem; color: var(--text-muted); display: block; text-align: left; }
-.review-dots { display: flex; justify-content: center; gap: 8px; margin-top: 30px; }
-.review-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--glass-border); cursor: pointer; transition: var(--transition-smooth); }
-.review-dot.active { background: var(--terracotta); width: 24px; border-radius: 4px; }
+/* Luxury Testimonials Carousel */
+.reviews-section {
+  padding: 100px 5%;
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(circle at 50% 50%, rgba(32, 25, 23, 0.45) 0%, transparent 70%);
+}
 
-/* SEO Section */
-.agency-seo-showcase { background: linear-gradient(180deg, var(--night-bg) 0%, var(--night-surface) 100%); border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border); }
-.seo-grid { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
-.seo-text h3 { font-size: 2.2rem; color: var(--text-main); margin-bottom: 20px; }
-.seo-text h3 span { color: var(--sand-gold); }
-.seo-text p { margin-bottom: 20px; font-size: 1.05rem; line-height: 1.7; }
-.seo-highlight-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
-.seo-card { background: var(--night-surface); border: 1px solid var(--glass-border); border-radius: var(--radius-md); padding: 24px; transition: var(--transition-smooth); }
-.seo-card i { color: var(--terracotta); font-size: 2rem; margin-bottom: 15px; display: block; }
-.seo-card h4 { font-size: 1.15rem; color: var(--sand-gold); margin-bottom: 10px; }
-.seo-card p { font-size: 0.88rem; margin-bottom: 0; }
-.seo-card:hover { border-color: rgba(232,195,158,0.2); box-shadow: var(--shadow-premium); transform: translateY(-5px); }
+.luxury-carousel-container {
+  max-width: 920px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
 
-/* Contact */
-.contact-section { }
-.contact-container { max-width: 900px; margin: 0 auto; background: var(--night-surface); border: 1px solid var(--glass-border); border-radius: var(--radius-lg); padding: 50px; box-shadow: var(--shadow-premium); }
-.contact-form { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
-.form-full { grid-column: span 2; }
-.form-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; grid-column: span 2; }
-.btn-submit { grid-column: span 2; height: 55px; font-size: 1.05rem; width: 100%; }
+.carousel-window {
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  padding: 10px 0;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.65s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+  min-width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.luxury-review-card {
+  background: linear-gradient(145deg, rgba(28, 22, 20, 0.9) 0%, rgba(18, 14, 13, 0.96) 100%);
+  border: 1px solid rgba(232, 195, 158, 0.22);
+  border-radius: 24px;
+  padding: 45px 50px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.55), 0 0 30px rgba(217, 107, 67, 0.08);
+  position: relative;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: border-color 0.4s ease, transform 0.4s ease;
+}
+
+.luxury-review-card:hover {
+  border-color: rgba(232, 195, 158, 0.45);
+}
+
+.review-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.review-stars-box {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--sand-gold);
+  font-size: 1.1rem;
+}
+
+.review-score {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-left: 8px;
+  letter-spacing: 0.5px;
+}
+
+.review-quote-badge {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(232, 195, 158, 0.08);
+  border: 1px solid rgba(232, 195, 158, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--sand-gold);
+  font-size: 1.1rem;
+}
+
+.luxury-review-quote {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  line-height: 1.6;
+  color: var(--text-main);
+  font-style: italic;
+  margin-bottom: 35px;
+  min-height: 100px;
+}
+
+.luxury-review-footer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-top: 24px;
+  border-top: 1px solid var(--glass-border);
+}
+
+.reviewer-avatar-wrap {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.reviewer-avatar-img {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2.5px solid var(--sand-gold);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), 0 0 15px rgba(232, 195, 158, 0.25);
+  display: block;
+}
+
+.avatar-verified-tick {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: #10b981;
+  color: #fff;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--night-surface);
+}
+
+.reviewer-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.reviewer-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin: 0;
+  font-family: var(--font-sans);
+}
+
+.reviewer-sub {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.reviewer-loc {
+  font-size: 0.88rem;
+  color: var(--sand-gold);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.reviewer-tour-pill {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--glass-border);
+  padding: 3px 10px;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Carousel Arrows */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(25, 20, 18, 0.9);
+  border: 1px solid rgba(232, 195, 158, 0.3);
+  color: var(--sand-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  cursor: pointer;
+  z-index: 5;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.carousel-arrow:hover {
+  background: var(--terracotta);
+  color: #fff;
+  border-color: var(--terracotta);
+  transform: translateY(-50%) scale(1.08);
+  box-shadow: 0 0 20px var(--terracotta-glow);
+}
+
+.carousel-arrow-prev {
+  left: -26px;
+}
+
+.carousel-arrow-next {
+  right: -26px;
+}
+
+/* Controls bottom */
+.carousel-controls-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.carousel-dots {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.carousel-dot:hover {
+  background: rgba(232, 195, 158, 0.5);
+}
+
+.carousel-dot.active {
+  width: 32px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, var(--terracotta) 0%, var(--sand-gold) 100%);
+  box-shadow: 0 0 12px var(--terracotta-glow);
+}
+
+.carousel-counter {
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.counter-curr {
+  color: var(--sand-gold);
+  font-weight: 700;
+}
 
 /* Responsive */
 @media (max-width: 1024px) {
@@ -630,6 +895,8 @@ input[type=range]::-webkit-slider-thumb { height: 20px; width: 20px; border-radi
   .calc-summary { position: static; }
   .seo-grid { grid-template-columns: 1fr; gap: 30px; }
   .starting-cities-grid { grid-template-columns: repeat(2, 1fr); }
+  .carousel-arrow-prev { left: -10px; }
+  .carousel-arrow-next { right: -10px; }
 }
 @media (max-width: 768px) {
   .hero { align-items: flex-start !important; padding-top: 118px !important; height: auto !important; min-height: 100vh !important; padding-bottom: 50px !important; }
@@ -640,13 +907,14 @@ input[type=range]::-webkit-slider-thumb { height: 20px; width: 20px; border-radi
   .hero-btns { flex-direction: column; align-items: center; }
   .stats-bar { flex-wrap: wrap; border-radius: 0; margin: 0; }
   .stat-item { border-right: none; border-bottom: 1px solid var(--glass-border); min-width: 50%; }
-  .contact-form { grid-template-columns: 1fr; }
-  .form-full, .form-grid-2, .btn-submit { grid-column: span 1; }
-  .form-grid-2 { grid-template-columns: 1fr; }
   .seo-highlight-cards { grid-template-columns: 1fr; }
+  .luxury-review-card { padding: 30px 20px; border-radius: 18px; }
+  .luxury-review-quote { font-size: 1.15rem; min-height: auto; margin-bottom: 24px; }
+  .reviewer-avatar-img { width: 56px; height: 56px; }
+  .reviewer-name { font-size: 1.1rem; }
+  .carousel-arrow { display: none; }
 }
 @media (max-width: 480px) {
   .hero-content h1 { font-size: 2.2rem; }
-  .review-quote { font-size: 1.2rem; }
 }
 </style>
