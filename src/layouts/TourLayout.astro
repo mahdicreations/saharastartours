@@ -112,6 +112,49 @@ const galleryJSON = JSON.stringify(galleryImages);
     </div>
   </section>
 
+  <!-- ==============================================
+       DESKTOP LUXURY STICKY SUB-NAV (OPTION 1)
+       ============================================== -->
+  <nav class="tour-subnav-desktop" id="tour-subnav-desktop" aria-label="Tour navigation">
+    <div class="tour-subnav-container">
+      <div class="tour-subnav-items">
+        <a href="#tour-about" class="subnav-link active" data-section="tour-about">
+          <i class="fa-solid fa-circle-info"></i> <span>Overview</span>
+        </a>
+        {itinerary.length > 0 && (
+          <a href="#tour-itinerary" class="subnav-link" data-section="tour-itinerary">
+            <i class="fa-solid fa-route"></i> <span>Itinerary</span>
+          </a>
+        )}
+        {galleryImages.length > 0 && (
+          <a href="#tour-gallery" class="subnav-link" data-section="tour-gallery">
+            <i class="fa-solid fa-images"></i> <span>Gallery</span>
+          </a>
+        )}
+        <a href="#tour-inclusions" class="subnav-link" data-section="tour-inclusions">
+          <i class="fa-solid fa-list-check"></i> <span>Included</span>
+        </a>
+        {mapDestinations.length > 0 && (
+          <a href="#tour-map" class="subnav-link" data-section="tour-map">
+            <i class="fa-solid fa-map-location-dot"></i> <span>Map</span>
+          </a>
+        )}
+        <a href="#tour-faq" class="subnav-link" data-section="tour-faq">
+          <i class="fa-solid fa-circle-question"></i> <span>FAQ</span>
+        </a>
+      </div>
+      <div class="tour-subnav-cta">
+        <div class="subnav-price-chip">
+          <span class="subnav-price-lbl">Starting from</span>
+          <strong class="subnav-price-val">{price}</strong>
+        </div>
+        <a href="#booking-form" class="subnav-book-btn">
+          <i class="fa-solid fa-calendar-check"></i> <span>Book This Tour</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
   <!-- Page Content Slot + Sidebar Grid -->
   <div 
     class="tour-container" 
@@ -158,7 +201,7 @@ const galleryJSON = JSON.stringify(galleryImages);
     <!-- LEFT COLUMN -->
     <div class="tour-main">
       <!-- About + Highlights -->
-      <div class="timeline-card reveal active">
+      <section class="timeline-card reveal active" id="tour-about">
         <h3>About This Tour</h3>
         <slot name="about" />
         {highlights.length > 0 && (
@@ -169,12 +212,12 @@ const galleryJSON = JSON.stringify(galleryImages);
             </ul>
           </>
         )}
-      </div>
+      </section>
 
       <!-- Day-by-Day Itinerary -->
       {itinerary.length > 0 && (
-        <div class="timeline-card reveal active">
-          <h3>Program Itinerary</h3>
+        <section class="timeline-card reveal active" id="tour-itinerary">
+          <h3><i class="fa-solid fa-route" style="color:var(--sand-gold);margin-right:8px;"></i> Program Itinerary</h3>
           <div class="timeline-steps-wrapper" id="timeline-steps">
             {itinerary.map(item => (
               <div class="timeline-item">
@@ -184,13 +227,13 @@ const galleryJSON = JSON.stringify(galleryImages);
               </div>
             ))}
           </div>
-        </div>
+        </section>
       )}
 
       <!-- Media Gallery -->
       {galleryImages.length > 0 && (
-        <div class="gallery-card reveal active">
-          <h3>Expedition Media Gallery</h3>
+        <section class="gallery-card reveal active" id="tour-gallery">
+          <h3><i class="fa-solid fa-images" style="color:var(--sand-gold);margin-right:8px;"></i> Expedition Media Gallery</h3>
           <p>A visual glimpse of the spectacular landscapes awaiting you.</p>
           <div class="gallery-grid" id="gallery-grid">
             {galleryImages.map((img, idx) => (
@@ -205,12 +248,12 @@ const galleryJSON = JSON.stringify(galleryImages);
               </div>
             ))}
           </div>
-        </div>
+        </section>
       )}
 
       <!-- Inclusions & Exclusions -->
-      <div class="inclusions-card reveal active">
-        <h3>Inclusions &amp; Trip Details</h3>
+      <section class="inclusions-card reveal active" id="tour-inclusions">
+        <h3><i class="fa-solid fa-list-check" style="color:var(--sand-gold);margin-right:8px;"></i> Inclusions &amp; Trip Details</h3>
         <div class="inc-exc-split">
           <div class="modal-inc-col included">
             <h5><i class="fa-solid fa-circle-check" style="color:var(--sand-gold); margin-right:8px;"></i> What's Included</h5>
@@ -230,13 +273,17 @@ const galleryJSON = JSON.stringify(galleryImages);
             </ul>
           </div>
         </div>
-      </div>
+      </section>
 
       <!-- Interactive Leaflet Route Map -->
-      {mapDestinations.length > 0 && <TourMap tourSlug={tourSlug} duration={duration} destinations={mapDestinations} routeCoordinates={mapRouteCoordinates} />}
+      {mapDestinations.length > 0 && (
+        <section class="map-section-wrap" id="tour-map">
+          <TourMap tourSlug={tourSlug} duration={duration} destinations={mapDestinations} routeCoordinates={mapRouteCoordinates} />
+        </section>
+      )}
 
       <!-- Frequently Asked Questions -->
-      <div class="faq-card reveal active">
+      <section class="faq-card reveal active" id="tour-faq">
         <h3><i class="fa-solid fa-circle-question" style="color:var(--sand-gold); margin-right:8px;"></i> Frequently Asked Questions</h3>
         <div class="faq-list">
           <details class="faq-item" open>
@@ -260,7 +307,7 @@ const galleryJSON = JSON.stringify(galleryImages);
             <div class="faq-answer"><p>After submitting your inquiry, our local travel specialists in Marrakech will confirm availability and send your official itinerary voucher. A modest deposit secures your dates via credit card, PayPal, or wire transfer, with the balance paid safely upon arrival.</p></div>
           </details>
         </div>
-      </div>
+      </section>
 
       <!-- Recommended Related Experiences -->
       {relatedTours && relatedTours.length > 0 && (
@@ -292,7 +339,10 @@ const galleryJSON = JSON.stringify(galleryImages);
       <!-- Booking Form Card -->
       <div class="booking-sidebar-card" id="booking-form">
         <h3>Book This Tour</h3>
-        <p class="booking-price">Starting <span>{price}</span></p>
+        <div class="booking-price-header">
+          <span class="booking-price-label">Starting from</span>
+          <span class="booking-price-val">{price}</span>
+        </div>
 
         <!-- Travel Style Selector -->
         <div class="travel-style-group">
@@ -434,6 +484,123 @@ const galleryJSON = JSON.stringify(galleryImages);
       Book Now ↓
     </button>
   </div>
+
+  <!-- ==============================================
+       MOBILE SLIM VERTICAL ICON STRIP (OPTION 3)
+       ============================================== -->
+  <aside class="tour-subnav-mobile-strip" id="tour-subnav-mobile-strip" aria-label="Tour quick navigation">
+    <div class="mobile-strip-inner">
+      <a href="#tour-about" class="mobile-strip-item active" data-section="tour-about" title="Overview" aria-label="Overview">
+        <i class="fa-solid fa-circle-info"></i>
+        <span class="mobile-strip-tooltip">Overview</span>
+      </a>
+      {itinerary.length > 0 && (
+        <a href="#tour-itinerary" class="mobile-strip-item" data-section="tour-itinerary" title="Itinerary" aria-label="Itinerary">
+          <i class="fa-solid fa-route"></i>
+          <span class="mobile-strip-tooltip">Itinerary</span>
+        </a>
+      )}
+      {galleryImages.length > 0 && (
+        <a href="#tour-gallery" class="mobile-strip-item" data-section="tour-gallery" title="Gallery" aria-label="Gallery">
+          <i class="fa-solid fa-images"></i>
+          <span class="mobile-strip-tooltip">Gallery</span>
+        </a>
+      )}
+      <a href="#tour-inclusions" class="mobile-strip-item" data-section="tour-inclusions" title="Inclusions" aria-label="Inclusions">
+        <i class="fa-solid fa-list-check"></i>
+        <span class="mobile-strip-tooltip">Included</span>
+      </a>
+      {mapDestinations.length > 0 && (
+        <a href="#tour-map" class="mobile-strip-item" data-section="tour-map" title="Route Map" aria-label="Route Map">
+          <i class="fa-solid fa-map-location-dot"></i>
+          <span class="mobile-strip-tooltip">Route Map</span>
+        </a>
+      )}
+      <a href="#tour-faq" class="mobile-strip-item" data-section="tour-faq" title="FAQ" aria-label="FAQ">
+        <i class="fa-solid fa-circle-question"></i>
+        <span class="mobile-strip-tooltip">FAQ</span>
+      </a>
+      <a href="#booking-form" class="mobile-strip-item mobile-strip-item-book" data-section="booking-form" title="Book Now" aria-label="Book Now">
+        <i class="fa-solid fa-calendar-check"></i>
+        <span class="mobile-strip-tooltip">Book Now</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- Interactive ScrollSpy & Smooth Scroll Script -->
+  <script>
+    function setupTourSubNav() {
+      const desktopLinks = document.querySelectorAll('.tour-subnav-desktop .subnav-link');
+      const mobileLinks = document.querySelectorAll('.tour-subnav-mobile-strip .mobile-strip-item');
+      const allNavLinks = [...desktopLinks, ...mobileLinks];
+
+      // Smooth click handler with custom header offset
+      allNavLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+          const href = link.getAttribute('href');
+          if (href && href.startsWith('#')) {
+            const target = document.querySelector(href);
+            if (target) {
+              e.preventDefault();
+              const isMobile = window.innerWidth <= 768;
+              const offset = isMobile ? 80 : 130;
+              const targetPos = target.getBoundingClientRect().top + window.pageYOffset - offset;
+              window.scrollTo({
+                top: targetPos,
+                behavior: 'smooth'
+              });
+            }
+          }
+        });
+      });
+
+      // ScrollSpy to highlight active link
+      const sectionIds = ['tour-about', 'tour-itinerary', 'tour-gallery', 'tour-inclusions', 'tour-map', 'tour-faq', 'booking-form'];
+      const sectionElements = sectionIds
+        .map(id => document.getElementById(id))
+        .filter((el): el is HTMLElement => el !== null);
+
+      function updateActiveNav() {
+        const isMobile = window.innerWidth <= 768;
+        const scrollPos = window.scrollY + (isMobile ? 120 : 180);
+        let currentId = '';
+
+        for (let i = 0; i < sectionElements.length; i++) {
+          const sec = sectionElements[i];
+          if (sec && sec.offsetTop <= scrollPos) {
+            currentId = sec.id;
+          }
+        }
+
+        if (currentId) {
+          desktopLinks.forEach(link => {
+            if (link.getAttribute('href') === `#${currentId}`) {
+              link.classList.add('active');
+            } else {
+              link.classList.remove('active');
+            }
+          });
+
+          mobileLinks.forEach(link => {
+            if (link.getAttribute('href') === `#${currentId}`) {
+              link.classList.add('active');
+            } else {
+              link.classList.remove('active');
+            }
+          });
+        }
+      }
+
+      window.addEventListener('scroll', updateActiveNav, { passive: true });
+      updateActiveNav();
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', setupTourSubNav);
+    } else {
+      setupTourSubNav();
+    }
+  </script>
 </BaseLayout>
 
 <style>
@@ -570,5 +737,287 @@ const galleryJSON = JSON.stringify(galleryImages);
   }
   .related-tour-price strong {
     color: var(--sand-gold);
+  }
+
+  /* Booking Sidebar Price Header */
+  .booking-price-header {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+  .booking-price-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+  .booking-price-val {
+    font-size: 1.45rem;
+    font-family: var(--font-serif);
+    font-weight: 700;
+    color: var(--sand-gold);
+  }
+
+  /* ===================================================
+     STICKY TOUR SUB-NAV — DESKTOP (OPTION 1)
+     =================================================== */
+  .tour-subnav-desktop {
+    position: sticky;
+    top: 72px; /* Directly below the fixed header when scrolled */
+    z-index: 95;
+    background: rgba(18, 14, 13, 0.95);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(232, 195, 158, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+    display: block;
+    transition: background 0.3s ease;
+  }
+
+  .tour-subnav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .tour-subnav-items {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .tour-subnav-items::-webkit-scrollbar {
+    display: none;
+  }
+
+  .subnav-link {
+    background: transparent;
+    border: 1px solid transparent;
+    color: var(--text-muted);
+    border-radius: 30px;
+    padding: 7px 16px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+    transition: all 0.25s ease;
+  }
+
+  .subnav-link:hover {
+    color: var(--text-main);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(232, 195, 158, 0.2);
+  }
+
+  .subnav-link.active {
+    color: var(--sand-gold);
+    background: rgba(232, 195, 158, 0.12);
+    border-color: var(--sand-gold);
+    font-weight: 600;
+  }
+
+  .subnav-link i {
+    color: var(--sand-gold);
+    font-size: 0.95rem;
+  }
+
+  .tour-subnav-cta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-shrink: 0;
+  }
+
+  .subnav-price-chip {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    line-height: 1.2;
+  }
+
+  .subnav-price-lbl {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--text-muted);
+  }
+
+  .subnav-price-val {
+    font-size: 1rem;
+    font-family: var(--font-serif);
+    color: var(--sand-gold);
+    font-weight: 700;
+  }
+
+  .subnav-book-btn {
+    background: linear-gradient(135deg, var(--terracotta) 0%, hsl(14, 75%, 45%) 100%);
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 8px 18px;
+    font-size: 0.86rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 15px var(--terracotta-glow);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  .subnav-book-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px var(--terracotta-glow);
+    color: #fff;
+  }
+
+  /* ===================================================
+     STICKY TOUR SUB-NAV — MOBILE STRIP (OPTION 3)
+     =================================================== */
+  .tour-subnav-mobile-strip {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 998;
+    display: none; /* hidden on desktop */
+  }
+
+  .mobile-strip-inner {
+    background: rgba(20, 15, 13, 0.96);
+    border: 1px solid rgba(232, 195, 158, 0.25);
+    border-left: none;
+    border-radius: 0 16px 16px 0;
+    padding: 8px 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    box-shadow: 4px 0 25px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .mobile-strip-item {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: transparent;
+    border: none;
+    color: var(--sand-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    transition: all 0.25s ease;
+  }
+
+  .mobile-strip-item:hover {
+    background: rgba(232, 195, 158, 0.18);
+    color: #fff;
+  }
+
+  .mobile-strip-item.active {
+    background: rgba(232, 195, 158, 0.25);
+    color: #fff;
+    box-shadow: 0 0 10px rgba(232, 195, 158, 0.4);
+  }
+
+  .mobile-strip-item-book {
+    background: var(--terracotta);
+    color: #fff;
+    margin-top: 4px;
+  }
+
+  .mobile-strip-item-book:hover,
+  .mobile-strip-item-book.active {
+    background: hsl(14, 75%, 45%);
+    box-shadow: 0 0 12px var(--terracotta-glow);
+    color: #fff;
+  }
+
+  .mobile-strip-tooltip {
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%) translateX(10px);
+    background: #181210;
+    color: var(--sand-gold);
+    border: 1px solid var(--sand-gold);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+
+  .mobile-strip-item:hover .mobile-strip-tooltip {
+    opacity: 1;
+    transform: translateY(-50%) translateX(12px);
+  }
+
+  /* Section scroll margins for smooth navigation offset */
+  #tour-about,
+  #tour-itinerary,
+  #tour-gallery,
+  #tour-inclusions,
+  #tour-map,
+  #tour-faq,
+  #booking-form {
+    scroll-margin-top: 135px;
+  }
+
+  /* Responsive visibility */
+  @media (max-width: 768px) {
+    .tour-subnav-desktop {
+      display: none !important;
+    }
+    .tour-subnav-mobile-strip {
+      display: flex !important;
+    }
+    #tour-about,
+    #tour-itinerary,
+    #tour-gallery,
+    #tour-inclusions,
+    #tour-map,
+    #tour-faq,
+    #booking-form {
+      scroll-margin-top: 85px;
+    }
+    .mobile-strip-item {
+      width: 34px;
+      height: 34px;
+      font-size: 0.92rem;
+    }
+  }
+
+  @media (min-width: 769px) {
+    .tour-subnav-desktop {
+      display: block;
+    }
+    .tour-subnav-mobile-strip {
+      display: none !important;
+    }
   }
 </style>
