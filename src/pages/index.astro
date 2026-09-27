@@ -226,12 +226,28 @@ const homeSchema = {
           loading="lazy"
         />
         <div class="agency-img-caption">
-          <div class="aic-left">
-            <i class="fa-solid fa-star"></i>
-            <span>Luxury Desert Camp &amp; Stargazing</span>
+          <!-- Badge 1: 5-Star Reviews -->
+          <div class="agency-caption-badge badge-reviews">
+            <div class="acb-rating-row">
+              <span class="acb-stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </span>
+              <strong class="acb-score">4.9/5</strong>
+            </div>
+            <div class="acb-subtext">Based on 2,400+ guest reviews</div>
           </div>
-          <div class="aic-right">
-            <span class="aic-badge"><i class="fa-solid fa-certificate"></i> Verified Tour Operator</span>
+
+          <!-- Badge 2: Trusted & Officially Licensed -->
+          <div class="agency-caption-badge badge-license">
+            <div class="acb-license-title">
+              <i class="fa-solid fa-shield-halved"></i>
+              <strong>Trusted Local Operator</strong>
+            </div>
+            <div class="acb-license-sub">Officially Licensed #48D/19</div>
           </div>
         </div>
       </div>
@@ -883,39 +899,73 @@ const homeSchema = {
   transform: scale(1.03);
 }
 .agency-img-caption {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 18px;
-  background: rgba(18, 14, 13, 0.95);
-  border-top: 1px solid var(--glass-border);
-  font-size: 0.85rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding: 14px 16px;
+  background: rgba(18, 14, 13, 0.98);
+  border-top: 1px solid rgba(232, 195, 158, 0.2);
 }
-.aic-left {
+.agency-caption-badge {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(232, 195, 158, 0.16);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  transition: var(--transition-smooth);
+}
+.agency-caption-badge:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(232, 195, 158, 0.35);
+  transform: translateY(-1px);
+}
+.acb-rating-row {
   display: flex;
   align-items: center;
   gap: 8px;
-  color: var(--sand-gold);
-  font-weight: 600;
 }
-.aic-left i {
+.acb-stars {
+  display: flex;
+  gap: 3px;
   color: #ffb703;
+  font-size: 0.85rem;
 }
-.aic-right {
+.acb-score {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--sand-gold);
+  line-height: 1;
+}
+.acb-subtext {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  line-height: 1.3;
+}
+.acb-license-title {
   display: flex;
   align-items: center;
+  gap: 7px;
+  color: var(--text-main);
+  font-size: 0.85rem;
+  line-height: 1.2;
 }
-.aic-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: rgba(16, 185, 129, 0.12);
+.acb-license-title i {
   color: #10b981;
-  border: 1px solid rgba(16, 185, 129, 0.25);
-  padding: 3px 10px;
-  border-radius: 20px;
-  font-size: 0.74rem;
+  font-size: 0.95rem;
+}
+.acb-license-title strong {
   font-weight: 600;
+}
+.acb-license-sub {
+  font-size: 0.74rem;
+  color: var(--sand-gold);
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  line-height: 1.3;
 }
 
 /* Tours section */
@@ -1483,6 +1533,7 @@ const homeSchema = {
   .agency-intro-actions { flex-direction: column; }
   .agency-intro-actions .btn { width: 100%; justify-content: center; }
   .agency-main-img { height: auto; aspect-ratio: 4 / 3; }
+  .agency-img-caption { grid-template-columns: 1fr; gap: 8px; padding: 12px; }
   .discount-pill-text { font-size: 0.8rem; flex-direction: column; text-align: center; gap: 4px; padding: 6px 12px; }
   .category-tour-grid { grid-template-columns: 1fr !important; }
   .browse-all-wrapper { margin-top: 35px; }
