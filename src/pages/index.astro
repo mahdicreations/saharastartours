@@ -41,7 +41,7 @@ const cultureItems = [
 const reviews = [
   { 
     stars: 5, 
-    quote: "The most magical travel experience of my life. The Erg Chebbi sunset camel trek and luxury desert camp were beyond our highest dreams.", 
+    quote: "The most magical travel experience of our lives — sunrise camel trek and luxury desert camp were beyond dreams.", 
     name: 'Sophie Laurent', 
     location: 'Paris, France', 
     avatar: '/assets/reviews/sophie.jpg',
@@ -49,7 +49,7 @@ const reviews = [
   },
   { 
     stars: 5, 
-    quote: "Phenomenal private guide through the Fes medina. The VIP Mercedes transport and boutique riads made our family feel like royalty.", 
+    quote: "Phenomenal private guide through the Fes medina. The VIP Mercedes transport and boutique riads made us feel like royalty.", 
     name: 'Marco Rossi', 
     location: 'Milan, Italy', 
     avatar: '/assets/reviews/marco.jpg',
@@ -63,19 +63,6 @@ const reviews = [
     avatar: '/assets/reviews/david_emma.jpg',
     badge: '12-Day Grand Morocco'
   },
-  { 
-    stars: 5, 
-    quote: "Unforgettable 5-day desert journey from Marrakech. Punctual, authentic Berber hospitality, and breathtaking stargazing over golden dunes.", 
-    name: 'Elena Morales', 
-    location: 'Madrid, Spain', 
-    avatar: '/assets/reviews/sophie.jpg',
-    badge: '5-Day Desert Expedition'
-  },
-];
-
-const reviewPairs = [
-  [reviews[0], reviews[1]],
-  [reviews[2], reviews[3]]
 ];
 
 // Category tabs configuration
@@ -278,64 +265,29 @@ const homeSchema = {
   </div>
 </section>
 
-<!-- TRIP COST CALCULATOR PROMO BANNER -->
-<section class="calculator-promo-section reveal active" id="planner-promo">
-  <div class="calculator-promo-card">
-    <div class="calculator-promo-content">
+<!-- TRIP COST CALCULATOR CTA -->
+<section class="calculator-cta-section reveal active" id="cost-calculator-cta">
+  <div class="calculator-cta-card">
+    <div class="calculator-cta-content">
       <span class="tag"><i class="fa-solid fa-calculator"></i> Transparent Budgeting</span>
       <h2>Calculate Your Custom <span>Morocco Trip Cost</span></h2>
-      <p>Estimate pricing for private transport, luxury desert camps, and boutique riad stays based on your dates, group size, and travel style with 100% transparent local pricing.</p>
-      <div class="promo-perks-row">
-        <span class="promo-perk"><i class="fa-solid fa-circle-check"></i> Instant Live Estimates</span>
-        <span class="promo-perk"><i class="fa-solid fa-circle-check"></i> Standard, Comfort &amp; Luxury Tiers</span>
-        <span class="promo-perk"><i class="fa-solid fa-circle-check"></i> 100% Free &amp; Zero Commitment</span>
-      </div>
-      <div class="calculator-promo-actions">
-        <a href="/trip-cost-calculator" class="btn btn-primary">
-          <i class="fa-solid fa-calculator"></i> Launch Trip Cost Calculator
-        </a>
-        <a href="/contact" class="btn btn-secondary">
-          <i class="fa-solid fa-paper-plane"></i> Request Custom Quote
-        </a>
-      </div>
+      <p>Estimate pricing for private transport, luxury desert camps, and boutique riad stays tailored to your dates and group size with 100% transparent local pricing.</p>
     </div>
-    <div class="calculator-promo-visual">
-      <div class="promo-preview-box">
-        <div class="ppb-header">
-          <i class="fa-solid fa-sliders"></i>
-          <span>Interactive Planner</span>
-        </div>
-        <div class="ppb-row">
-          <span>7 Days • 2 Travelers</span>
-          <strong>From $1,680</strong>
-        </div>
-        <div class="ppb-row">
-          <span>Private Mercedes &amp; Camp</span>
-          <span class="ppb-tag">Included</span>
-        </div>
-        <div class="ppb-footer">
-          <span class="ppb-live"><span class="live-dot"></span> Real-Time Rates</span>
-        </div>
-      </div>
-      <div class="promo-badge-float">
-        <span class="pbf-icon"><i class="fa-solid fa-tags"></i></span>
-        <div class="pbf-text">
-          <strong>Early Booking</strong>
-          <small>Save up to 15%</small>
-        </div>
-      </div>
+    <div class="calculator-cta-action">
+      <a href="/trip-cost-calculator" class="btn btn-primary btn-lg">
+        <i class="fa-solid fa-calculator"></i> Calculate Your Trip Cost <i class="fa-solid fa-arrow-right"></i>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- LUXURY TESTIMONIALS CAROUSEL -->
 <!-- LUXURY TESTIMONIALS CAROUSEL -->
 <section 
   class="reviews-section" 
   id="testimonials"
   x-data="{
     current: 0,
-    total: 2,
+    total: 3,
     timer: null,
     startTimer() {
       this.timer = setInterval(() => { this.next(); }, 6000);
@@ -369,7 +321,7 @@ const homeSchema = {
       class="carousel-arrow carousel-arrow-prev" 
       @click="prev()" 
       type="button"
-      aria-label="Previous reviews"
+      aria-label="Previous review"
     >
       <i class="fa-solid fa-chevron-left"></i>
     </button>
@@ -380,50 +332,46 @@ const homeSchema = {
         class="carousel-track" 
         :style="`transform: translateX(-${current * 100}%)`"
       >
-        {reviewPairs.map((pair, idx) => (
+        {reviews.map((r, idx) => (
           <div class="carousel-slide">
-            <div class="reviews-grid-pair">
-              {pair.map(r => (
-                <div class="luxury-review-card">
-                  <!-- Top row with stars & quote mark -->
-                  <div class="review-top-row">
-                    <div class="review-stars-box">
-                      {Array.from({ length: r.stars }).map(() => (
-                        <i class="fa-solid fa-star"></i>
-                      ))}
-                      <span class="review-score">5.0</span>
-                    </div>
-                    <div class="review-quote-badge">
-                      <i class="fa-solid fa-quote-right"></i>
-                    </div>
-                  </div>
+            <div class="luxury-review-card">
+              <!-- Top row with stars & quote mark -->
+              <div class="review-top-row">
+                <div class="review-stars-box">
+                  {Array.from({ length: r.stars }).map(() => (
+                    <i class="fa-solid fa-star"></i>
+                  ))}
+                  <span class="review-score">5.0</span>
+                </div>
+                <div class="review-quote-badge">
+                  <i class="fa-solid fa-quote-right"></i>
+                </div>
+              </div>
 
-                  <!-- Quote Body (strictly 2 lines) -->
-                  <p class="luxury-review-quote">
-                    &ldquo;{r.quote}&rdquo;
-                  </p>
+              <!-- Quote Body (strictly 2 lines) -->
+              <p class="luxury-review-quote">
+                &ldquo;{r.quote}&rdquo;
+              </p>
 
-                  <!-- Footer with Avatar & Info -->
-                  <div class="luxury-review-footer">
-                    <div class="reviewer-avatar-wrap">
-                      <img 
-                        src={r.avatar} 
-                        alt={r.name} 
-                        class="reviewer-avatar-img"
-                        loading="lazy" 
-                      />
-                      <span class="avatar-verified-tick"><i class="fa-solid fa-check"></i></span>
-                    </div>
-                    <div class="reviewer-meta">
-                      <h4 class="reviewer-name">{r.name}</h4>
-                      <div class="reviewer-sub">
-                        <span class="reviewer-loc"><i class="fa-solid fa-location-dot"></i> {r.location}</span>
-                        <span class="reviewer-tour-pill"><i class="fa-solid fa-compass"></i> {r.badge}</span>
-                      </div>
-                    </div>
+              <!-- Footer with Avatar & Info -->
+              <div class="luxury-review-footer">
+                <div class="reviewer-avatar-wrap">
+                  <img 
+                    src={r.avatar} 
+                    alt={r.name} 
+                    class="reviewer-avatar-img"
+                    loading="lazy" 
+                  />
+                  <span class="avatar-verified-tick"><i class="fa-solid fa-check"></i></span>
+                </div>
+                <div class="reviewer-meta">
+                  <h4 class="reviewer-name">{r.name}</h4>
+                  <div class="reviewer-sub">
+                    <span class="reviewer-loc"><i class="fa-solid fa-location-dot"></i> {r.location}</span>
+                    <span class="reviewer-tour-pill"><i class="fa-solid fa-compass"></i> {r.badge}</span>
                   </div>
                 </div>
-              ))}
+              </div>
             </div>
           </div>
         ))}
@@ -435,7 +383,7 @@ const homeSchema = {
       class="carousel-arrow carousel-arrow-next" 
       @click="next()" 
       type="button"
-      aria-label="Next reviews"
+      aria-label="Next review"
     >
       <i class="fa-solid fa-chevron-right"></i>
     </button>
@@ -444,7 +392,7 @@ const homeSchema = {
   <!-- Carousel Navigation Dots & Counter -->
   <div class="carousel-controls-bottom">
     <div class="carousel-dots">
-      {reviewPairs.map((_, idx) => (
+      {reviews.map((_, idx) => (
         <button
           type="button"
           class="carousel-dot"
@@ -457,7 +405,7 @@ const homeSchema = {
     <div class="carousel-counter">
       <span class="counter-curr" x-text="String(current + 1).padStart(2, '0')"></span>
       <span class="counter-sep">/</span>
-      <span class="counter-total">02</span>
+      <span class="counter-total">03</span>
     </div>
   </div>
 </section>
@@ -547,165 +495,77 @@ const homeSchema = {
 .culture-info p { font-size: 0.88rem; }
 
 /* Calculator Promo Section on Home */
-.calculator-promo-section {
+/* Calculator CTA Section on Home */
+.calculator-cta-section {
   padding: 80px 5%;
   background: linear-gradient(180deg, var(--night-bg) 0%, var(--night-surface) 50%, var(--night-bg) 100%);
 }
-.calculator-promo-card {
-  max-width: 1200px;
+.calculator-cta-card {
+  max-width: 1000px;
   margin: 0 auto;
   background: linear-gradient(135deg, rgba(32, 25, 23, 0.95) 0%, rgba(20, 16, 14, 0.98) 100%);
   border: 1px solid rgba(232, 195, 158, 0.25);
   border-radius: var(--radius-lg);
-  padding: 48px 50px;
-  display: grid;
-  grid-template-columns: 1.25fr 0.75fr;
-  gap: 40px;
+  padding: 44px 50px;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 36px;
   box-shadow: var(--shadow-premium);
   position: relative;
   overflow: hidden;
 }
-.calculator-promo-card::before {
+.calculator-cta-card::before {
   content: '';
   position: absolute;
-  top: -100px;
-  right: -100px;
-  width: 300px;
-  height: 300px;
+  top: -80px;
+  right: -80px;
+  width: 250px;
+  height: 250px;
   background: radial-gradient(circle, var(--terracotta-glow) 0%, transparent 70%);
   pointer-events: none;
 }
-.calculator-promo-content h2 {
-  font-size: 2.3rem;
-  color: var(--text-main);
-  margin-bottom: 16px;
-  line-height: 1.2;
+.calculator-cta-content {
+  max-width: 580px;
+  position: relative;
+  z-index: 1;
 }
-.calculator-promo-content h2 span {
+.calculator-cta-content .tag {
+  color: var(--sand-gold);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.calculator-cta-content h2 {
+  font-size: 2.2rem;
+  color: var(--text-main);
+  margin-bottom: 12px;
+  line-height: 1.25;
+}
+.calculator-cta-content h2 span {
   background: linear-gradient(135deg, var(--terracotta) 0%, var(--sand-gold) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.calculator-promo-content p {
-  font-size: 1.05rem;
+.calculator-cta-content p {
+  font-size: 1rem;
   color: var(--text-muted);
-  line-height: 1.7;
-  margin-bottom: 24px;
+  line-height: 1.6;
 }
-.promo-perks-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px 20px;
-  margin-bottom: 30px;
-}
-.promo-perk {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.88rem;
-  color: var(--text-main);
-}
-.promo-perk i {
-  color: var(--sand-gold);
-}
-.calculator-promo-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-}
-.calculator-promo-visual {
+.calculator-cta-action {
+  flex-shrink: 0;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  justify-content: center;
-  align-items: center;
+  z-index: 1;
 }
-.promo-preview-box {
-  width: 100%;
-  max-width: 340px;
-  background: rgba(14, 11, 10, 0.9);
-  border: 1px solid rgba(232, 195, 158, 0.3);
-  border-radius: var(--radius-md);
-  padding: 22px 20px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
-}
-.ppb-header {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: var(--sand-gold);
-  border-bottom: 1px solid var(--glass-border);
-  padding-bottom: 12px;
-  margin-bottom: 14px;
-}
-.ppb-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 0.92rem;
-  margin-bottom: 10px;
-  color: var(--text-muted);
-}
-.ppb-row strong {
-  color: var(--sand-gold);
-  font-family: var(--font-serif);
-  font-size: 1.15rem;
-}
-.ppb-tag {
-  background: rgba(16, 185, 129, 0.15);
-  color: #10b981;
-  font-size: 0.72rem;
-  padding: 2px 8px;
-  border-radius: 12px;
-  font-weight: 600;
-}
-.ppb-footer {
-  border-top: 1px solid var(--glass-border);
-  padding-top: 12px;
-  margin-top: 12px;
-  font-size: 0.78rem;
-  color: var(--text-muted);
-}
-.ppb-live {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-.live-dot {
-  width: 6px;
-  height: 6px;
-  background: #10b981;
-  border-radius: 50%;
-  animation: blinkDot 1.5s infinite;
-}
-.promo-badge-float {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  background: rgba(217, 107, 67, 0.15);
-  border: 1px dashed var(--terracotta);
-  border-radius: 30px;
-  padding: 8px 18px;
-}
-.pbf-icon i {
-  color: var(--terracotta);
-  font-size: 1.1rem;
-}
-.pbf-text strong {
-  display: block;
-  font-size: 0.85rem;
-  color: var(--text-main);
-  line-height: 1.2;
-}
-.pbf-text small {
-  font-size: 0.75rem;
-  color: var(--sand-gold);
+.calculator-cta-action .btn {
+  padding: 16px 32px;
+  font-size: 1rem;
+  white-space: nowrap;
 }
 
 /* Luxury Testimonials Carousel */
@@ -717,7 +577,7 @@ const homeSchema = {
 }
 
 .luxury-carousel-container {
-  max-width: 1200px;
+  max-width: 860px;
   margin: 0 auto;
   position: relative;
   display: flex;
@@ -744,17 +604,11 @@ const homeSchema = {
   box-sizing: border-box;
 }
 
-.reviews-grid-pair {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-}
-
 .luxury-review-card {
-  background: linear-gradient(145deg, rgba(28, 22, 20, 0.9) 0%, rgba(18, 14, 13, 0.96) 100%);
+  background: linear-gradient(145deg, rgba(28, 22, 20, 0.95) 0%, rgba(18, 14, 13, 0.98) 100%);
   border: 1px solid rgba(232, 195, 158, 0.22);
   border-radius: 20px;
-  padding: 28px 26px;
+  padding: 36px 40px;
   box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.55), 0 0 25px rgba(217, 107, 67, 0.08);
   position: relative;
   backdrop-filter: blur(12px);
@@ -766,14 +620,14 @@ const homeSchema = {
 
 .luxury-review-card:hover {
   border-color: rgba(232, 195, 158, 0.45);
-  transform: translateY(-4px);
+  transform: translateY(-3px);
 }
 
 .review-top-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
 .review-stars-box {
@@ -781,19 +635,20 @@ const homeSchema = {
   align-items: center;
   gap: 5px;
   color: var(--sand-gold);
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .review-score {
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   color: var(--text-muted);
   font-weight: 600;
   margin-left: 6px;
+  letter-spacing: 0.5px;
 }
 
 .review-quote-badge {
-  width: 36px;
-  height: 36px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   background: rgba(232, 195, 158, 0.08);
   border: 1px solid rgba(232, 195, 158, 0.2);
@@ -807,16 +662,16 @@ const homeSchema = {
 /* Review Quote strictly clamped to 2 lines */
 .luxury-review-quote {
   font-family: var(--font-serif);
-  font-size: 1.05rem;
+  font-size: 1.25rem;
   line-height: 1.55;
   color: var(--text-main);
   font-style: italic;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  min-height: 3.2em;
+  min-height: 3.1em;
 }
 
 .luxury-review-footer {
@@ -834,8 +689,8 @@ const homeSchema = {
 }
 
 .reviewer-avatar-img {
-  width: 54px;
-  height: 54px;
+  width: 58px;
+  height: 58px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--sand-gold);
@@ -866,7 +721,7 @@ const homeSchema = {
 }
 
 .reviewer-name {
-  font-size: 1.08rem;
+  font-size: 1.12rem;
   font-weight: 700;
   color: var(--text-main);
   margin: 0;
@@ -1112,7 +967,9 @@ const homeSchema = {
 
 /* Responsive */
 @media (max-width: 1024px) {
-  .calculator-promo-card { grid-template-columns: 1fr; padding: 36px 30px; }
+  .calculator-cta-card { flex-direction: column; text-align: center; padding: 36px 30px; }
+  .calculator-cta-action { width: 100%; }
+  .calculator-cta-action .btn { width: 100%; justify-content: center; }
   .seo-grid { grid-template-columns: 1fr; gap: 35px; }
   .starting-cities-grid { grid-template-columns: repeat(2, 1fr); }
   .carousel-arrow-prev { left: -10px; }
@@ -1132,38 +989,105 @@ const homeSchema = {
   .stat-item { border-right: none; border-bottom: 1px solid var(--glass-border); min-width: 50%; }
   
   /* Tour card mobile typography */
-  .tour-info { padding: 16px 14px !important; }
-  .tour-title { font-size: 1.05rem !important; line-height: 1.35 !important; margin-bottom: 8px !important; font-weight: 600 !important; }
-  .tour-meta { font-size: 0.78rem !important; margin-bottom: 8px !important; }
-  .tour-desc { font-size: 0.82rem !important; margin-bottom: 14px !important; line-height: 1.45 !important; }
-  .tour-footer { padding-top: 12px !important; }
-  .tour-price-label { font-size: 0.65rem !important; letter-spacing: 0.5px !important; }
+  .tour-info { padding: 14px 12px !important; }
+  .tour-title { font-size: 1.05rem !important; line-height: 1.35 !important; margin-bottom: 6px !important; font-weight: 600 !important; }
+  .tour-meta { font-size: 0.76rem !important; margin-bottom: 8px !important; }
+  .tour-desc { font-size: 0.82rem !important; margin-bottom: 12px !important; line-height: 1.4 !important; }
+  .tour-footer { padding-top: 10px !important; }
+  .tour-price-label { font-size: 0.62rem !important; letter-spacing: 0.5px !important; text-transform: uppercase !important; }
   .tour-price-value,
-  .tour-price span { font-size: 1rem !important; font-weight: 700 !important; line-height: 1.1 !important; }
+  .tour-price span { font-size: 1rem !important; font-weight: 700 !important; line-height: 1.1 !important; color: var(--sand-gold) !important; }
 
-  /* Starting cities on mobile: single column, proportional, not stretched */
-  .starting-cities-grid { grid-template-columns: 1fr !important; max-width: 440px !important; margin: 0 auto !important; gap: 20px !important; }
-  .city-img-wrapper { height: 160px !important; }
-  .city-content { padding: 18px 16px !important; }
-  .city-content h3 { font-size: 1.25rem !important; margin-bottom: 6px !important; }
-  .city-content p { font-size: 0.85rem !important; line-height: 1.5 !important; margin-bottom: 12px !important; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-  .city-meta { padding: 10px 0 !important; font-size: 0.8rem !important; }
-  .city-footer { padding-top: 10px !important; }
+  /* Starting cities on mobile: exactly 2 in a row (joj f str), compact height */
+  .starting-cities-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+  }
+  .city-card {
+    border-radius: var(--radius-sm) !important;
+  }
+  .city-img-wrapper {
+    height: 110px !important;
+  }
+  .city-badge {
+    top: 6px !important;
+    left: 6px !important;
+    font-size: 0.62rem !important;
+    padding: 2px 7px !important;
+    letter-spacing: 0.5px !important;
+  }
+  .city-content {
+    padding: 10px 8px !important;
+  }
+  .city-content h3 {
+    font-size: 1rem !important;
+    margin-bottom: 2px !important;
+    line-height: 1.2 !important;
+  }
+  .city-content p {
+    display: none !important;
+  }
+  .city-meta {
+    padding: 4px 0 !important;
+    margin-top: 2px !important;
+    font-size: 0.72rem !important;
+    border-top: none !important;
+    gap: 4px !important;
+  }
+  .city-footer {
+    padding-top: 6px !important;
+  }
+  .city-footer .btn {
+    width: 100% !important;
+    padding: 6px 4px !important;
+    font-size: 0.72rem !important;
+    justify-content: center !important;
+    border-radius: 20px !important;
+  }
 
-  /* Calculator Promo Mobile */
-  .calculator-promo-card { padding: 28px 20px; gap: 26px; }
-  .calculator-promo-content h2 { font-size: 1.75rem; }
-  .calculator-promo-content p { font-size: 0.95rem; margin-bottom: 20px; }
-  .calculator-promo-actions { flex-direction: column; }
-  .calculator-promo-actions .btn { width: 100%; justify-content: center; }
+  /* Calculator CTA Mobile */
+  .calculator-cta-card {
+    flex-direction: column !important;
+    padding: 30px 20px !important;
+    text-align: center !important;
+    gap: 22px !important;
+  }
+  .calculator-cta-content h2 {
+    font-size: 1.7rem !important;
+  }
+  .calculator-cta-content p {
+    font-size: 0.95rem !important;
+  }
+  .calculator-cta-action {
+    width: 100% !important;
+  }
+  .calculator-cta-action .btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
 
   /* Reviews on Mobile */
-  .reviews-grid-pair { grid-template-columns: 1fr !important; gap: 16px !important; }
-  .luxury-review-card { padding: 22px 18px !important; border-radius: 16px !important; }
-  .luxury-review-quote { font-size: 0.98rem !important; min-height: auto !important; margin-bottom: 16px !important; }
-  .reviewer-avatar-img { width: 50px !important; height: 50px !important; }
-  .reviewer-name { font-size: 1.02rem !important; }
-  .carousel-arrow { display: none; }
+  .luxury-review-card {
+    padding: 24px 18px !important;
+    border-radius: 16px !important;
+  }
+  .luxury-review-quote {
+    font-size: 1.05rem !important;
+    min-height: auto !important;
+    margin-bottom: 18px !important;
+  }
+  .reviewer-avatar-img {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  .reviewer-name {
+    font-size: 1.05rem !important;
+  }
+  .carousel-arrow {
+    display: none !important;
+  }
 
   .seo-highlight-cards { grid-template-columns: 1fr; }
   .seo-text h3 { font-size: 1.85rem; }
