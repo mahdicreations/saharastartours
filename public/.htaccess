@@ -1,0 +1,25 @@
+# Sahara Star Tours — Canonical Redirections & SEO Rules
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Force HTTPS
+  RewriteCond %{HTTPS} !=on
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+  # Redirect non-www to www (canonical)
+  RewriteCond %{HTTP_HOST} ^saharastartours\.com$ [NC]
+  RewriteRule ^(.*)$ https://www.saharastartours.com/$1 [R=301,L]
+</IfModule>
+
+# Caching headers for static performance
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+</IfModule>

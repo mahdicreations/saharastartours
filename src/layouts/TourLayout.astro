@@ -463,7 +463,8 @@ const galleryJSON = JSON.stringify(galleryImages);
         <img 
           class="lightbox-img" 
           :src="images[activeIndex]?.src" 
-          :alt="images[activeIndex]?.cap"
+          alt="Tour photo gallery preview"
+          :alt="images[activeIndex]?.cap || 'Tour photo gallery preview'"
           onerror="this.src='/assets/hero_sahara_sunset.png'" 
         />
         <button class="lightbox-btn lightbox-next" type="button" @click="nextImage()" aria-label="Next image">
