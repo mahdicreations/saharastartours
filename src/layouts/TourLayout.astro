@@ -146,7 +146,7 @@ const galleryJSON = JSON.stringify(galleryImages);
       <div class="tour-subnav-cta">
         <div class="subnav-price-chip">
           <span class="subnav-price-lbl">Starting from</span>
-          <strong class="subnav-price-val">{price}</strong>
+          <strong class="subnav-price-val">{price.replace(/^From\s*/i, '').trim()}</strong>
         </div>
         <a href="#booking-form" class="subnav-book-btn">
           <i class="fa-solid fa-calendar-check"></i> <span>Book This Tour</span>
@@ -341,7 +341,7 @@ const galleryJSON = JSON.stringify(galleryImages);
         <h3>Book This Tour</h3>
         <div class="booking-price-header">
           <span class="booking-price-label">Starting from</span>
-          <span class="booking-price-val">{price}</span>
+          <span class="booking-price-val">{price.replace(/^From\s*/i, '').trim()}</span>
         </div>
 
         <!-- Travel Style Selector -->
