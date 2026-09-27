@@ -5,6 +5,22 @@ import { tours, categoryLabels } from '../data/tours';
 
 const allTours = tours;
 
+// Curated 6 most popular flagship tours for homepage "All Tours" tab (2 rows of 3)
+const popularAllTours = [
+  allTours.find(t => t.slug === '3-days-desert-tour-marrakech-to-fes') || allTours[0],
+  allTours.find(t => t.slug === '7-day-morocco-tour-from-casablanca') || allTours[1],
+  allTours.find(t => t.slug === '11-days-morocco-classic-tour') || allTours[2],
+  allTours.find(t => t.slug === 'day-trip-essaouira-mogador') || allTours[3],
+  allTours.find(t => t.slug === 'hot-air-balloon-marrakech') || allTours[4],
+  allTours.find(t => t.slug === '12-days-morocco-tour') || allTours[5],
+];
+
+// Top 6 per category (2 rows of 3)
+const popularDesertTours = allTours.filter(t => t.category === 'desert-tours').slice(0, 6);
+const popularImperialTours = allTours.filter(t => t.category === 'imperial-cities').slice(0, 6);
+const popularDayTrips = allTours.filter(t => t.category === 'day-trips').slice(0, 6);
+const popularActivities = allTours.filter(t => t.category === 'activities').slice(0, 6);
+
 // Stats for trust section
 const stats = [
   { value: '2,400+', label: 'Happy Travelers' },
@@ -133,12 +149,118 @@ const homeSchema = {
   ))}
 </div>
 
+<!-- AGENCY PRESENTATION / ABOUT INTRO SECTION -->
+<section class="agency-intro-section reveal active" id="about-sahara-star">
+  <div class="agency-intro-container">
+    <div class="agency-intro-content">
+      <div class="agency-trust-pill">
+        <i class="fa-solid fa-shield-halved"></i>
+        <span>Trusted Local Tour Operator | Officially Licensed</span>
+      </div>
+      
+      <div class="agency-header-row">
+        <div class="agency-logo-wrap">
+          <img src="/assets/logo.png" alt="Sahara Star Tours Logo" class="agency-intro-logo" width="75" height="75" />
+        </div>
+        <div class="agency-header-text">
+          <span class="agency-subtag">Marrakech • Sahara Desert • Imperial Cities</span>
+          <h2 class="agency-title">Welcome to <span>Sahara Star Tours</span></h2>
+        </div>
+      </div>
+
+      <p class="agency-lead-text">
+        Based in Marrakech and operating nationwide, <strong>Sahara Star Tours</strong> is a certified, officially licensed Moroccan tour operator. Born from generations of desert knowledge and Berber hospitality, we curate authentic private expeditions that connect you with the real spirit of Morocco.
+      </p>
+
+      <p class="agency-body-text">
+        From sleeping under a billion stars in our luxury Erg Chebbi desert camps to traversing the High Atlas passes in climate-controlled Mercedes transporters and exploring ancient imperial medinas with certified historians — every journey is custom-tailored with 5-star comfort and transparent local pricing.
+      </p>
+
+      <div class="agency-highlights-grid">
+        <div class="agency-hl-item">
+          <div class="agency-hl-icon"><i class="fa-solid fa-certificate"></i></div>
+          <div class="agency-hl-text">
+            <strong>Ministry Licensed &amp; Insured</strong>
+            <span>Official tourism authorization &amp; passenger liability insurance</span>
+          </div>
+        </div>
+        <div class="agency-hl-item">
+          <div class="agency-hl-icon"><i class="fa-solid fa-compass"></i></div>
+          <div class="agency-hl-text">
+            <strong>Native Nomad Guides</strong>
+            <span>Generations of Sahara knowledge &amp; certified medina historians</span>
+          </div>
+        </div>
+        <div class="agency-hl-item">
+          <div class="agency-hl-icon"><i class="fa-solid fa-car-side"></i></div>
+          <div class="agency-hl-text">
+            <strong>VIP Private Fleet</strong>
+            <span>Air-conditioned Mercedes transporters with Wi-Fi &amp; leather seats</span>
+          </div>
+        </div>
+        <div class="agency-hl-item">
+          <div class="agency-hl-icon"><i class="fa-solid fa-sliders"></i></div>
+          <div class="agency-hl-text">
+            <strong>100% Tailor-Made</strong>
+            <span>Custom dates, luxury riad selections &amp; 24/7 dedicated concierge</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="agency-intro-actions">
+        <a href="/about" class="btn btn-secondary">
+          <i class="fa-solid fa-circle-info"></i> Discover Our Story
+        </a>
+        <a href="/contact" class="btn btn-primary">
+          <i class="fa-solid fa-paper-plane"></i> Plan Your Custom Trip
+        </a>
+      </div>
+    </div>
+
+    <div class="agency-intro-visual">
+      <div class="agency-image-card">
+        <img 
+          src="/assets/marrakech_riad_pool.png" 
+          alt="Sahara Star Tours Morocco Experience" 
+          class="agency-main-img"
+          loading="lazy"
+        />
+        <div class="agency-img-overlay"></div>
+        
+        <!-- Floating Trust Seal -->
+        <div class="agency-trust-seal">
+          <div class="seal-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <div class="seal-details">
+            <strong>Trusted Local Operator</strong>
+            <span>Officially Licensed #48D/19</span>
+          </div>
+        </div>
+
+        <!-- Floating Stats Badge -->
+        <div class="agency-stats-pill">
+          <div class="asp-stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <div class="asp-info">
+            <strong>2,400+ Happy Guests</strong>
+            <span>98% Satisfaction Rate</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- TOURS SECTION -->
 <section class="tours-section" id="tours">
   <div class="section-header reveal active">
-    <span class="tag">Our Signature Experiences</span>
+    <span class="tag"><i class="fa-solid fa-fire-flame-curved"></i> Our Most Popular Tours</span>
     <h2>Handcrafted Morocco Tours</h2>
-    <p>Each journey is a bespoke masterpiece — privately guided, luxury-accommodated, and completely tailored to your dream vision of Morocco.</p>
+    <p>Each journey is a bespoke masterpiece — privately guided, luxury-accommodated, and completely tailored to your dream vision of Morocco. <span class="discount-pill-text"><i class="fa-solid fa-tag"></i> Special Season Offer: Save <strong>up to 30% OFF</strong> on all private tour packages!</span></p>
   </div>
 
   <div class="category-showcase-container" x-data="{ activeTab: 'all' }">
@@ -158,18 +280,182 @@ const homeSchema = {
       ))}
     </ul>
 
-    <!-- Tour Cards Grid -->
+    <!-- Tour Cards Grid (Exactly 2 rows = 6 tours per tab) -->
     <div class="category-tours-wrapper">
-      <div class="category-tour-grid">
-        {allTours.map(tour => (
-          <article 
-            class="tour-card reveal active"
-            data-category={tour.category}
-            x-show={`activeTab === 'all' || activeTab === '${tour.category}'`}
-            x-transition:enter="transition ease-out duration-300"
-            x-transition:enter-start="opacity-0 scale-95"
-            x-transition:enter-end="opacity-100 scale-100"
-          >
+      <!-- ALL TOURS TAB (Top 6 Popular Flagship Tours) -->
+      <div 
+        class="category-tour-grid" 
+        x-show="activeTab === 'all'" 
+        x-transition:enter="transition ease-out duration-300"
+        x-transition:enter-start="opacity-0 scale-95"
+        x-transition:enter-end="opacity-100 scale-100"
+      >
+        {popularAllTours.map(tour => (
+          <article class="tour-card reveal active">
+            <div class="tour-img-wrapper">
+              <img 
+                src={tour.heroImage} 
+                alt={tour.shortTitle} 
+                loading="lazy"
+                onerror="this.src='/assets/hero_sahara_sunset.png'"
+              />
+              {tour.badge && <span class="tour-badge">{tour.badge}</span>}
+            </div>
+            <div class="tour-info">
+              <div class="tour-meta">
+                <div><i class="fa-regular fa-clock"></i> {tour.duration}</div>
+                <div><i class="fa-solid fa-location-dot"></i> {tour.startingFrom}</div>
+              </div>
+              <h3 class="tour-title">{tour.shortTitle}</h3>
+              <p class="tour-desc">{tour.description}</p>
+              <div class="tour-footer">
+                <div class="tour-price">
+                  <span class="tour-price-label">Starting from</span>
+                  <span class="tour-price-value">{tour.price.replace(/^From\s*/i, '').replace(/\/person\s*/i, '').trim()}</span>
+                </div>
+                <a href={`/tours/${tour.slug}`} class="btn btn-primary btn-sm">
+                  View Tour <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <!-- DESERT TOURS TAB (Top 6 Desert Tours) -->
+      <div 
+        class="category-tour-grid" 
+        x-show="activeTab === 'desert-tours'" 
+        x-transition:enter="transition ease-out duration-300"
+        x-transition:enter-start="opacity-0 scale-95"
+        x-transition:enter-end="opacity-100 scale-100"
+        style="display: none;"
+      >
+        {popularDesertTours.map(tour => (
+          <article class="tour-card reveal active">
+            <div class="tour-img-wrapper">
+              <img 
+                src={tour.heroImage} 
+                alt={tour.shortTitle} 
+                loading="lazy"
+                onerror="this.src='/assets/hero_sahara_sunset.png'"
+              />
+              {tour.badge && <span class="tour-badge">{tour.badge}</span>}
+            </div>
+            <div class="tour-info">
+              <div class="tour-meta">
+                <div><i class="fa-regular fa-clock"></i> {tour.duration}</div>
+                <div><i class="fa-solid fa-location-dot"></i> {tour.startingFrom}</div>
+              </div>
+              <h3 class="tour-title">{tour.shortTitle}</h3>
+              <p class="tour-desc">{tour.description}</p>
+              <div class="tour-footer">
+                <div class="tour-price">
+                  <span class="tour-price-label">Starting from</span>
+                  <span class="tour-price-value">{tour.price.replace(/^From\s*/i, '').replace(/\/person\s*/i, '').trim()}</span>
+                </div>
+                <a href={`/tours/${tour.slug}`} class="btn btn-primary btn-sm">
+                  View Tour <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <!-- IMPERIAL CITIES TAB (Imperial Cities Tours) -->
+      <div 
+        class="category-tour-grid" 
+        x-show="activeTab === 'imperial-cities'" 
+        x-transition:enter="transition ease-out duration-300"
+        x-transition:enter-start="opacity-0 scale-95"
+        x-transition:enter-end="opacity-100 scale-100"
+        style="display: none;"
+      >
+        {popularImperialTours.map(tour => (
+          <article class="tour-card reveal active">
+            <div class="tour-img-wrapper">
+              <img 
+                src={tour.heroImage} 
+                alt={tour.shortTitle} 
+                loading="lazy"
+                onerror="this.src='/assets/hero_sahara_sunset.png'"
+              />
+              {tour.badge && <span class="tour-badge">{tour.badge}</span>}
+            </div>
+            <div class="tour-info">
+              <div class="tour-meta">
+                <div><i class="fa-regular fa-clock"></i> {tour.duration}</div>
+                <div><i class="fa-solid fa-location-dot"></i> {tour.startingFrom}</div>
+              </div>
+              <h3 class="tour-title">{tour.shortTitle}</h3>
+              <p class="tour-desc">{tour.description}</p>
+              <div class="tour-footer">
+                <div class="tour-price">
+                  <span class="tour-price-label">Starting from</span>
+                  <span class="tour-price-value">{tour.price.replace(/^From\s*/i, '').replace(/\/person\s*/i, '').trim()}</span>
+                </div>
+                <a href={`/tours/${tour.slug}`} class="btn btn-primary btn-sm">
+                  View Tour <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <!-- DAY TRIPS TAB (6 Day Trips) -->
+      <div 
+        class="category-tour-grid" 
+        x-show="activeTab === 'day-trips'" 
+        x-transition:enter="transition ease-out duration-300"
+        x-transition:enter-start="opacity-0 scale-95"
+        x-transition:enter-end="opacity-100 scale-100"
+        style="display: none;"
+      >
+        {popularDayTrips.map(tour => (
+          <article class="tour-card reveal active">
+            <div class="tour-img-wrapper">
+              <img 
+                src={tour.heroImage} 
+                alt={tour.shortTitle} 
+                loading="lazy"
+                onerror="this.src='/assets/hero_sahara_sunset.png'"
+              />
+              {tour.badge && <span class="tour-badge">{tour.badge}</span>}
+            </div>
+            <div class="tour-info">
+              <div class="tour-meta">
+                <div><i class="fa-regular fa-clock"></i> {tour.duration}</div>
+                <div><i class="fa-solid fa-location-dot"></i> {tour.startingFrom}</div>
+              </div>
+              <h3 class="tour-title">{tour.shortTitle}</h3>
+              <p class="tour-desc">{tour.description}</p>
+              <div class="tour-footer">
+                <div class="tour-price">
+                  <span class="tour-price-label">Starting from</span>
+                  <span class="tour-price-value">{tour.price.replace(/^From\s*/i, '').replace(/\/person\s*/i, '').trim()}</span>
+                </div>
+                <a href={`/tours/${tour.slug}`} class="btn btn-primary btn-sm">
+                  View Tour <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <!-- ACTIVITIES TAB (6 Activities) -->
+      <div 
+        class="category-tour-grid" 
+        x-show="activeTab === 'activities'" 
+        x-transition:enter="transition ease-out duration-300"
+        x-transition:enter-start="opacity-0 scale-95"
+        x-transition:enter-end="opacity-100 scale-100"
+        style="display: none;"
+      >
+        {popularActivities.map(tour => (
+          <article class="tour-card reveal active">
             <div class="tour-img-wrapper">
               <img 
                 src={tour.heroImage} 
@@ -201,9 +487,10 @@ const homeSchema = {
       </div>
     </div>
 
-    <div style="text-align:center;margin-top:50px;">
-      <a href="/tours" class="btn btn-secondary">
-        <i class="fa-solid fa-compass"></i> Browse All Tours
+    <!-- Prominent "Explore All Tours" Button right below the 6 tours -->
+    <div class="browse-all-wrapper reveal active">
+      <a href="/tours" class="btn btn-primary btn-lg">
+        <i class="fa-solid fa-compass"></i> Explore All Morocco Tours ({allTours.length}) <i class="fa-solid fa-arrow-right"></i>
       </a>
     </div>
   </div>
@@ -453,6 +740,230 @@ const homeSchema = {
 .stat-value { display: block; font-size: 2rem; font-family: var(--font-serif); color: var(--sand-gold); font-weight: 700; }
 .stat-label { display: block; font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1.5px; margin-top: 4px; }
 
+/* Agency Introduction Presentation Section */
+.agency-intro-section {
+  padding: 90px 5% 70px;
+  background: linear-gradient(180deg, var(--night-bg) 0%, var(--night-surface) 100%);
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid var(--glass-border);
+}
+.agency-intro-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 50px;
+  align-items: center;
+}
+.agency-trust-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(232, 195, 158, 0.08);
+  border: 1px solid rgba(232, 195, 158, 0.25);
+  color: var(--sand-gold);
+  padding: 6px 16px;
+  border-radius: 30px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.agency-trust-pill i {
+  color: #10b981;
+  font-size: 0.95rem;
+}
+.agency-header-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.agency-logo-wrap {
+  flex-shrink: 0;
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: var(--night-surface);
+  border: 2px solid var(--sand-gold);
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4), 0 0 15px rgba(232, 195, 158, 0.2);
+}
+.agency-intro-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.agency-subtag {
+  display: block;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--sand-gold);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.agency-title {
+  font-size: 2.3rem;
+  color: var(--text-main);
+  line-height: 1.2;
+}
+.agency-title span {
+  background: linear-gradient(135deg, var(--terracotta) 0%, var(--sand-gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.agency-lead-text {
+  font-size: 1.05rem;
+  color: var(--text-main);
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+.agency-lead-text strong {
+  color: var(--sand-gold);
+}
+.agency-body-text {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin-bottom: 26px;
+}
+.agency-highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 30px;
+}
+.agency-hl-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--glass-border);
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  transition: var(--transition-smooth);
+}
+.agency-hl-item:hover {
+  border-color: rgba(232, 195, 158, 0.3);
+  transform: translateY(-2px);
+}
+.agency-hl-icon {
+  font-size: 1.2rem;
+  color: var(--terracotta);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.agency-hl-text strong {
+  display: block;
+  font-size: 0.88rem;
+  color: var(--text-main);
+  margin-bottom: 2px;
+}
+.agency-hl-text span {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  line-height: 1.35;
+  display: block;
+}
+.agency-intro-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.agency-intro-visual {
+  position: relative;
+}
+.agency-image-card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid rgba(232, 195, 158, 0.25);
+  box-shadow: var(--shadow-premium);
+}
+.agency-main-img {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.8s ease;
+}
+.agency-image-card:hover .agency-main-img {
+  transform: scale(1.04);
+}
+.agency-img-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(14, 11, 10, 0.85) 0%, rgba(14, 11, 10, 0.1) 60%);
+  pointer-events: none;
+}
+.agency-trust-seal {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(14, 11, 10, 0.88);
+  border: 1px solid var(--sand-gold);
+  backdrop-filter: blur(10px);
+  padding: 10px 16px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+.seal-icon i {
+  color: var(--sand-gold);
+  font-size: 1.2rem;
+}
+.seal-details strong {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-main);
+  line-height: 1.2;
+}
+.seal-details span {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+.agency-stats-pill {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  left: 20px;
+  background: rgba(14, 11, 10, 0.88);
+  border: 1px solid rgba(232, 195, 158, 0.25);
+  backdrop-filter: blur(10px);
+  padding: 12px 18px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+.asp-stars {
+  color: #ffb703;
+  font-size: 0.88rem;
+  display: flex;
+  gap: 3px;
+}
+.asp-info {
+  text-align: right;
+}
+.asp-info strong {
+  display: block;
+  font-size: 0.88rem;
+  color: var(--text-main);
+}
+.asp-info span {
+  font-size: 0.72rem;
+  color: var(--sand-gold);
+}
+
 /* Tours section */
 .tours-section { padding-top: 100px; }
 .category-showcase-container { max-width: 1400px; margin: 0 auto; padding: 0 5%; }
@@ -461,7 +972,36 @@ const homeSchema = {
 .category-tab:hover { border-color: var(--sand-gold); color: var(--text-main); transform: translateY(-2px); }
 .category-tab.active { background: linear-gradient(135deg, var(--terracotta) 0%, hsl(14,75%,45%) 100%); color: var(--text-main); border-color: var(--terracotta); box-shadow: 0 6px 20px var(--terracotta-glow); }
 .category-tab span { font-size: 0.8rem; opacity: 0.8; margin-left: 6px; }
-.category-tour-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); gap: 30px; }
+.category-tour-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+
+.discount-pill-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(217, 107, 67, 0.15);
+  border: 1px dashed var(--terracotta);
+  color: var(--sand-gold);
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 0.88rem;
+  margin-top: 8px;
+}
+.discount-pill-text strong {
+  color: #fff;
+  background: var(--terracotta);
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.82rem;
+}
+
+.browse-all-wrapper {
+  text-align: center;
+  margin-top: 48px;
+}
+.browse-all-wrapper .btn {
+  padding: 16px 36px;
+  font-size: 1.05rem;
+}
 
 /* Starting cities */
 .starting-cities-section { padding: 100px 5% 80px; background: linear-gradient(180deg, var(--night-bg) 0%, var(--night-surface) 100%); border-top: 1px solid var(--glass-border); }
@@ -967,6 +1507,9 @@ const homeSchema = {
 
 /* Responsive */
 @media (max-width: 1024px) {
+  .agency-intro-container { grid-template-columns: 1fr; gap: 40px; }
+  .agency-main-img { height: 340px; }
+  .category-tour-grid { grid-template-columns: repeat(2, 1fr); }
   .calculator-cta-card { flex-direction: column; text-align: center; padding: 36px 30px; }
   .calculator-cta-action { width: 100%; }
   .calculator-cta-action .btn { width: 100%; justify-content: center; }
@@ -977,6 +1520,20 @@ const homeSchema = {
 }
 
 @media (max-width: 768px) {
+  .agency-intro-section { padding: 60px 5% 50px; }
+  .agency-header-row { gap: 14px; }
+  .agency-logo-wrap { width: 62px; height: 62px; }
+  .agency-title { font-size: 1.8rem; }
+  .agency-lead-text { font-size: 0.95rem; }
+  .agency-highlights-grid { grid-template-columns: 1fr; gap: 10px; }
+  .agency-intro-actions { flex-direction: column; }
+  .agency-intro-actions .btn { width: 100%; justify-content: center; }
+  .agency-main-img { height: 250px; }
+  .discount-pill-text { font-size: 0.8rem; flex-direction: column; text-align: center; gap: 4px; padding: 6px 12px; }
+  .category-tour-grid { grid-template-columns: 1fr !important; }
+  .browse-all-wrapper { margin-top: 35px; }
+  .browse-all-wrapper .btn { width: 100%; justify-content: center; }
+
   .hero { align-items: flex-start !important; padding-top: 118px !important; height: auto !important; min-height: 100vh !important; padding-bottom: 50px !important; }
   .hero-content { margin-top: 0 !important; }
   .hero-content .subtitle { margin-bottom: 14px !important; }
