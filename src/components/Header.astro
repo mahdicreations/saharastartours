@@ -4,7 +4,7 @@
 interface Props {
   currentPage?: string;
 }
-const { currentPage = '' } = Astro.props;
+const { currentPage = "" } = Astro.props;
 
 // Flag SVGs as inline strings (no external requests, no errors)
 const ukFlag = `<svg class="lang-flag-svg" viewBox="0 0 640 480"><path fill="#012169" d="M0 0h640v480H0z"/><path fill="#FFF" d="m75 0 244 181L562 0h78v62L400 241l240 178v61h-80L320 301 81 480H0v-60l239-178L0 64V0h75z"/><path fill="#C8102E" d="m424 288 216 153v39H584L368 320h56zm-208-96L0 39V0h56l216 152h-56zm264-192h160v114L480 0zm-360 0L0 86V0h120zm0 480L0 394v86h120zm400 0h120v-86L520 480z"/><path fill="#FFF" d="M240 0h160v480H240zM0 160h640v160H0z"/><path fill="#C8102E" d="M267 0h106v480H267zM0 187h640v106H0z"/></svg>`;
@@ -15,7 +15,8 @@ const itFlag = `<svg class="lang-flag-svg" viewBox="0 0 1500 1000"><path fill="#
 const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="display:inline-block;vertical-align:middle;" role="img" aria-label="Tripadvisor"><path d="M12.006 4.295c-2.67 0-5.338.784-7.645 2.353H0l1.963 2.135a5.997 5.997 0 0 0 4.04 10.43 5.976 5.976 0 0 0 4.075-1.6L12 19.705l1.922-2.09a5.972 5.972 0 0 0 4.072 1.598 6 6 0 0 0 6-5.998 5.982 5.982 0 0 0-1.957-4.432L24 6.648h-4.35a13.573 13.573 0 0 0-7.644-2.353zM12 6.255c1.531 0 3.063.303 4.504.903C13.943 8.138 12 10.43 12 13.1c0-2.671-1.942-4.962-4.504-5.942A11.72 11.72 0 0 1 12 6.256zM6.002 9.157a4.059 4.059 0 1 1 0 8.118 4.059 4.059 0 0 1 0-8.118zm11.992.002a4.057 4.057 0 1 1 .003 8.115 4.057 4.057 0 0 1-.003-8.115zm-11.992 1.93a2.128 2.128 0 0 0 0 4.256 2.128 2.128 0 0 0 0-4.256zm11.992 0a2.128 2.128 0 0 0 0 4.256 2.128 2.128 0 0 0 0-4.256z"/></svg>`;
 ---
 
-<header id="main-header"
+<header
+  id="main-header"
   class="night-sky-header"
   x-data="{
     isScrolled: false,
@@ -50,27 +51,60 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="c
   <div class="top-bar">
     <div class="top-bar-container">
       <div class="top-bar-left">
-        <a href="https://wa.me/212678317015" class="top-bar-item" target="_blank" rel="noopener">
-          <i class="fa-brands fa-whatsapp"></i> <span>+212 678-317015</span>
+        <a
+          href="https://wa.me/212678317015"
+          class="top-bar-item"
+          target="_blank"
+          rel="noopener"
+        >
+          <i class="fa-brands fa-whatsapp"></i>
+          <span>+212 678-317015</span>
         </a>
         <span class="top-bar-divider">|</span>
-        <a href="mailto:contact@saharastartours.com" class="top-bar-item hide-mobile">
-          <i class="fa-regular fa-envelope"></i> <span>contact@saharastartours.com</span>
+        <a
+          href="mailto:contact@saharastartours.com"
+          class="top-bar-item hide-mobile"
+        >
+          <i class="fa-regular fa-envelope"></i>
+          <span>contact@saharastartours.com</span>
         </a>
         <span class="top-bar-divider hide-mobile">|</span>
         <span class="top-bar-item hide-mobile">
-          <i class="fa-solid fa-location-dot"></i> <span>Marrakech &amp; Casablanca</span>
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Marrakech &amp; Casablanca</span>
         </span>
       </div>
       <div class="top-bar-right">
         <span class="top-bar-badge">
-          <i class="fa-solid fa-compass" style="color:var(--sand-gold);"></i> Authentic Sahara &amp; Morocco Tours
+          <i class="fa-solid fa-compass" style="color:var(--sand-gold);"></i> Authentic
+          Sahara &amp; Morocco Tours
         </span>
         <div class="top-bar-socials">
-          <a href="https://facebook.com/saharastartours" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="https://instagram.com/saharastartours" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://tiktok.com/@saharastartours" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-          <a href="https://tripadvisor.com" target="_blank" rel="noopener" aria-label="TripAdvisor" title="TripAdvisor">
+          <a
+            href="https://facebook.com/saharastartours"
+            target="_blank"
+            rel="noopener"
+            aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a
+          >
+          <a
+            href="https://instagram.com/saharastartours"
+            target="_blank"
+            rel="noopener"
+            aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a
+          >
+          <a
+            href="https://tiktok.com/@saharastartours"
+            target="_blank"
+            rel="noopener"
+            aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a
+          >
+          <a
+            href="https://tripadvisor.com"
+            target="_blank"
+            rel="noopener"
+            aria-label="TripAdvisor"
+            title="TripAdvisor"
+          >
             <Fragment set:html={tripadvisorIcon} />
           </a>
         </div>
@@ -81,150 +115,319 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="c
   <!-- MAIN NAVBAR -->
   <div class="navbar">
     <a href="/" class="logo" @click="closeMobileMenu()">
-      <img src="/assets/logo.png" alt="Sahara Star Tours Logo" width="70" height="70" />
+      <img
+        src="/assets/logo.png"
+        alt="Sahara Star Tours Logo"
+        width="70"
+        height="70"
+      />
     </a>
 
     <ul class="nav-links" :class="isMobileOpen ? 'open' : ''" id="nav-links">
       <!-- Mobile Drawer Top Header -->
       <li class="mobile-drawer-header mobile-only">
         <div class="drawer-header-brand">
-          <img src="/assets/logo.png" alt="Sahara Star Tours" width="42" height="42" />
+          <img
+            src="/assets/logo.png"
+            alt="Sahara Star Tours"
+            width="42"
+            height="42"
+          />
           <span>Sahara Star Tours</span>
         </div>
-        <button type="button" class="drawer-close-btn" @click="closeMobileMenu()" aria-label="Close navigation menu">
+        <button
+          type="button"
+          class="drawer-close-btn"
+          @click="closeMobileMenu()"
+          aria-label="Close navigation menu"
+        >
           <i class="fa-solid fa-xmark"></i>
         </button>
       </li>
 
       <li>
-        <a href="/" class={`nav-link-main ${currentPage === 'home' ? 'active' : ''}`} @click="closeMobileMenu()">Home</a>
+        <a
+          href="/"
+          class={`nav-link-main ${currentPage === "home" ? "active" : ""}`}
+          @click="closeMobileMenu()">Home</a
+        >
       </li>
 
       <li class="has-dropdown">
         <div class="nav-item-row">
-          <a href="/desert-tours" class={`nav-link-main ${currentPage === 'desert-tours' ? 'active' : ''}`} @click="closeMobileMenu()">
-            Desert Tours <i class="fa-solid fa-chevron-down desktop-chevron"></i>
+          <a
+            href="/desert-tours"
+            class={`nav-link-main ${currentPage === "desert-tours" ? "active" : ""}`}
+            @click="closeMobileMenu()"
+          >
+            Desert Tours <i class="fa-solid fa-chevron-down desktop-chevron"
+            ></i>
           </a>
-          <button 
-            type="button" 
-            class="mobile-submenu-toggle mobile-only" 
+          <button
+            type="button"
+            class="mobile-submenu-toggle mobile-only"
             @click.stop="toggleDropdown('desert')"
             :class="activeDropdowns['desert'] ? 'active' : ''"
             :aria-expanded="activeDropdowns['desert'] ? 'true' : 'false'"
             aria-label="Toggle Desert Tours submenu"
           >
-            <i class="fa-solid fa-chevron-down" :class="activeDropdowns['desert'] ? 'rotated' : ''"></i>
+            <i
+              class="fa-solid fa-chevron-down"
+              :class="activeDropdowns['desert'] ? 'rotated' : ''"></i>
           </button>
         </div>
-        <ul class="dropdown-menu megamenu-two-col" :class="activeDropdowns['desert'] ? 'open' : ''">
+        <ul
+          class="dropdown-menu megamenu-two-col"
+          :class="activeDropdowns['desert'] ? 'open' : ''"
+        >
           <li class="megamenu-col">
-            <span class="megamenu-title-badge"><i class="fa-solid fa-plane-departure"></i> From Casablanca</span>
-            <a href="/tours/6-days-desert-tour-from-casablanca" @click="closeMobileMenu()">6 Days Desert Tour from Casablanca</a>
-            <a href="/tours/7-day-morocco-tour-from-casablanca" @click="closeMobileMenu()">Best 7-Day Morocco Tour (7 Days)</a>
-            <a href="/tours/8-days-itinerary-tour-from-casablanca" @click="closeMobileMenu()">Ideal Morocco 8 Days Itinerary</a>
-            <a href="/tours/9-day-authentic-morocco-tour" @click="closeMobileMenu()">9 Day Authentic Morocco Tour</a>
-            <a href="/tours/9-days-desert-imperial-cities" @click="closeMobileMenu()">9 Days Desert &amp; Imperial Cities</a>
-            <a href="/tours/10-days-morocco-couple-tour" @click="closeMobileMenu()">10 Days Morocco Tour from Casablanca</a>
-            <a href="/tours/10-days-imperial-cities-tour" @click="closeMobileMenu()">10 Days Desert Tour from Casablanca</a>
-            <a href="/tours/12-days-tour-from-casablanca" @click="closeMobileMenu()">12 Days Tour from Casablanca</a>
-            <a href="/tours/private-12-days-desert-marrakech" @click="closeMobileMenu()">Private 12 Days Desert &amp; Marrakech</a>
-            <a href="/tours/12-days-morocco-tour" @click="closeMobileMenu()">Best 12 Days Morocco Tour</a>
-            <a href="/tours/16-days-morocco-tour-from-casablanca" @click="closeMobileMenu()">16 Days Morocco Tour from Casablanca</a>
+            <span class="megamenu-title-badge"
+              ><i class="fa-solid fa-plane-departure"></i> From Casablanca</span
+            >
+            <a
+              href="/tours/6-days-desert-tour-from-casablanca"
+              @click="closeMobileMenu()">6 Days Desert Tour from Casablanca</a
+            >
+            <a
+              href="/tours/7-day-morocco-tour-from-casablanca"
+              @click="closeMobileMenu()">Best 7-Day Morocco Tour (7 Days)</a
+            >
+            <a
+              href="/tours/8-days-itinerary-tour-from-casablanca"
+              @click="closeMobileMenu()">Ideal Morocco 8 Days Itinerary</a
+            >
+            <a
+              href="/tours/9-day-authentic-morocco-tour"
+              @click="closeMobileMenu()">9 Day Authentic Morocco Tour</a
+            >
+            <a
+              href="/tours/9-days-desert-imperial-cities"
+              @click="closeMobileMenu()">9 Days Desert &amp; Imperial Cities</a
+            >
+            <a
+              href="/tours/10-days-morocco-couple-tour"
+              @click="closeMobileMenu()">10 Days Morocco Tour from Casablanca</a
+            >
+            <a
+              href="/tours/10-days-imperial-cities-tour"
+              @click="closeMobileMenu()">10 Days Desert Tour from Casablanca</a
+            >
+            <a
+              href="/tours/12-days-tour-from-casablanca"
+              @click="closeMobileMenu()">12 Days Tour from Casablanca</a
+            >
+            <a
+              href="/tours/private-12-days-desert-marrakech"
+              @click="closeMobileMenu()"
+              >Private 12 Days Desert &amp; Marrakech</a
+            >
+            <a href="/tours/12-days-morocco-tour" @click="closeMobileMenu()"
+              >Best 12 Days Morocco Tour</a
+            >
+            <a
+              href="/tours/16-days-morocco-tour-from-casablanca"
+              @click="closeMobileMenu()">16 Days Morocco Tour from Casablanca</a
+            >
           </li>
           <li class="megamenu-col">
-            <span class="megamenu-title-badge"><i class="fa-solid fa-plane-departure"></i> From Marrakech</span>
-            <a href="/tours/3-days-desert-tour-marrakech-to-fes" @click="closeMobileMenu()">3 Days Tour Marrakech to Merzouga</a>
-            <a href="/tours/4-days-marrakech-desert-tour" @click="closeMobileMenu()">Ideal 4 Days Marrakech Desert Tour</a>
-            <a href="/tours/5-days-tour-marrakech-to-merzouga" @click="closeMobileMenu()">5 Days Tour Marrakech to Merzouga</a>
+            <span class="megamenu-title-badge"
+              ><i class="fa-solid fa-plane-departure"></i> From Marrakech</span
+            >
+            <a
+              href="/tours/3-days-desert-tour-marrakech-to-fes"
+              @click="closeMobileMenu()">3 Days Tour Marrakech to Merzouga</a
+            >
+            <a
+              href="/tours/4-days-marrakech-desert-tour"
+              @click="closeMobileMenu()">Ideal 4 Days Marrakech Desert Tour</a
+            >
+            <a
+              href="/tours/5-days-tour-marrakech-to-merzouga"
+              @click="closeMobileMenu()">5 Days Tour Marrakech to Merzouga</a
+            >
           </li>
         </ul>
       </li>
 
       <li class="has-dropdown">
         <div class="nav-item-row">
-          <a href="/imperial-cities" class={`nav-link-main ${currentPage === 'imperial-cities' ? 'active' : ''}`} @click="closeMobileMenu()">
-            Imperial Cities <i class="fa-solid fa-chevron-down desktop-chevron"></i>
+          <a
+            href="/imperial-cities"
+            class={`nav-link-main ${currentPage === "imperial-cities" ? "active" : ""}`}
+            @click="closeMobileMenu()"
+          >
+            Imperial Cities <i class="fa-solid fa-chevron-down desktop-chevron"
+            ></i>
           </a>
-          <button 
-            type="button" 
-            class="mobile-submenu-toggle mobile-only" 
+          <button
+            type="button"
+            class="mobile-submenu-toggle mobile-only"
             @click.stop="toggleDropdown('imperial')"
             :class="activeDropdowns['imperial'] ? 'active' : ''"
             :aria-expanded="activeDropdowns['imperial'] ? 'true' : 'false'"
             aria-label="Toggle Imperial Cities submenu"
           >
-            <i class="fa-solid fa-chevron-down" :class="activeDropdowns['imperial'] ? 'rotated' : ''"></i>
+            <i
+              class="fa-solid fa-chevron-down"
+              :class="activeDropdowns['imperial'] ? 'rotated' : ''"></i>
           </button>
         </div>
-        <ul class="dropdown-menu dropdown-standard" :class="activeDropdowns['imperial'] ? 'open' : ''">
-          <li><a href="/tours/15-days-tour-from-casablanca" @click="closeMobileMenu()">15 Days Tour from Casablanca</a></li>
-          <li><a href="/tours/13-days-casablanca-tour" @click="closeMobileMenu()">Best 13 Days Casablanca Tour</a></li>
-          <li><a href="/tours/11-days-morocco-classic-tour" @click="closeMobileMenu()">11 Days Morocco Classic Tour</a></li>
+        <ul
+          class="dropdown-menu dropdown-standard"
+          :class="activeDropdowns['imperial'] ? 'open' : ''"
+        >
+          <li>
+            <a
+              href="/tours/15-days-tour-from-casablanca"
+              @click="closeMobileMenu()">15 Days Tour from Casablanca</a>
+          </li>
+          <li>
+            <a href="/tours/13-days-casablanca-tour" @click="closeMobileMenu()"
+              >Best 13 Days Casablanca Tour</a>
+          </li>
+          <li>
+            <a
+              href="/tours/11-days-morocco-classic-tour"
+              @click="closeMobileMenu()">11 Days Morocco Classic Tour</a>
+          </li>
         </ul>
       </li>
 
       <li class="has-dropdown">
         <div class="nav-item-row">
-          <a href="/day-trips" class={`nav-link-main ${currentPage === 'day-trips' ? 'active' : ''}`} @click="closeMobileMenu()">
+          <a
+            href="/day-trips"
+            class={`nav-link-main ${currentPage === "day-trips" ? "active" : ""}`}
+            @click="closeMobileMenu()"
+          >
             Day Trips <i class="fa-solid fa-chevron-down desktop-chevron"></i>
           </a>
-          <button 
-            type="button" 
-            class="mobile-submenu-toggle mobile-only" 
+          <button
+            type="button"
+            class="mobile-submenu-toggle mobile-only"
             @click.stop="toggleDropdown('daytrips')"
             :class="activeDropdowns['daytrips'] ? 'active' : ''"
             :aria-expanded="activeDropdowns['daytrips'] ? 'true' : 'false'"
             aria-label="Toggle Day Trips submenu"
           >
-            <i class="fa-solid fa-chevron-down" :class="activeDropdowns['daytrips'] ? 'rotated' : ''"></i>
+            <i
+              class="fa-solid fa-chevron-down"
+              :class="activeDropdowns['daytrips'] ? 'rotated' : ''"></i>
           </button>
         </div>
-        <ul class="dropdown-menu dropdown-standard" :class="activeDropdowns['daytrips'] ? 'open' : ''">
-          <li><a href="/tours/agafay-desert-sunset-camel-ride" @click="closeMobileMenu()">Agafay Desert Dinner &amp; Ride</a></li>
-          <li><a href="/tours/day-trip-essaouira-mogador" @click="closeMobileMenu()">Day Trip Essaouira Mogador</a></li>
-          <li><a href="/tours/day-trip-ait-ben-haddou" @click="closeMobileMenu()">Day Trip Ait Ben Haddou</a></li>
-          <li><a href="/tours/day-trip-ouzoud-waterfalls" @click="closeMobileMenu()">Day Trip Ouzoud Waterfalls</a></li>
-          <li><a href="/tours/one-day-marrakech-city-tour" @click="closeMobileMenu()">One Day Marrakech City Tour</a></li>
-          <li><a href="/tours/ourika-valley-nature-tour" @click="closeMobileMenu()">Ourika Valley Nature Tour</a></li>
+        <ul
+          class="dropdown-menu dropdown-standard"
+          :class="activeDropdowns['daytrips'] ? 'open' : ''"
+        >
+          <li>
+            <a
+              href="/tours/agafay-desert-sunset-camel-ride"
+              @click="closeMobileMenu()">Agafay Desert Dinner &amp; Ride</a>
+          </li>
+          <li>
+            <a
+              href="/tours/day-trip-essaouira-mogador"
+              @click="closeMobileMenu()">Day Trip Essaouira Mogador</a>
+          </li>
+          <li>
+            <a href="/tours/day-trip-ait-ben-haddou" @click="closeMobileMenu()"
+              >Day Trip Ait Ben Haddou</a>
+          </li>
+          <li>
+            <a
+              href="/tours/day-trip-ouzoud-waterfalls"
+              @click="closeMobileMenu()">Day Trip Ouzoud Waterfalls</a>
+          </li>
+          <li>
+            <a
+              href="/tours/one-day-marrakech-city-tour"
+              @click="closeMobileMenu()">One Day Marrakech City Tour</a>
+          </li>
+          <li>
+            <a
+              href="/tours/ourika-valley-nature-tour"
+              @click="closeMobileMenu()">Ourika Valley Nature Tour</a>
+          </li>
         </ul>
       </li>
 
       <li class="has-dropdown">
         <div class="nav-item-row">
-          <a href="/activities" class={`nav-link-main ${currentPage === 'activities' ? 'active' : ''}`} @click="closeMobileMenu()">
+          <a
+            href="/activities"
+            class={`nav-link-main ${currentPage === "activities" ? "active" : ""}`}
+            @click="closeMobileMenu()"
+          >
             Activities <i class="fa-solid fa-chevron-down desktop-chevron"></i>
           </a>
-          <button 
-            type="button" 
-            class="mobile-submenu-toggle mobile-only" 
+          <button
+            type="button"
+            class="mobile-submenu-toggle mobile-only"
             @click.stop="toggleDropdown('activities')"
             :class="activeDropdowns['activities'] ? 'active' : ''"
             :aria-expanded="activeDropdowns['activities'] ? 'true' : 'false'"
             aria-label="Toggle Activities submenu"
           >
-            <i class="fa-solid fa-chevron-down" :class="activeDropdowns['activities'] ? 'rotated' : ''"></i>
+            <i
+              class="fa-solid fa-chevron-down"
+              :class="activeDropdowns['activities'] ? 'rotated' : ''"></i>
           </button>
         </div>
-        <ul class="dropdown-menu dropdown-standard" :class="activeDropdowns['activities'] ? 'open' : ''">
-          <li><a href="/tours/hot-air-balloon-marrakech" @click="closeMobileMenu()">Hot Air Balloon in Marrakech</a></li>
-          <li><a href="/tours/horse-riding-morocco" @click="closeMobileMenu()">Horse Riding in Morocco</a></li>
-          <li><a href="/tours/fantasia-chez-ali-marrakech" @click="closeMobileMenu()">Fantasia Chez Ali Marrakech</a></li>
-          <li><a href="/tours/quad-biking-marrakech" @click="closeMobileMenu()">Quad Biking In Marrakech</a></li>
-          <li><a href="/tours/raid-buggy-marrakech" @click="closeMobileMenu()">Raid Buggy In Marrakech</a></li>
-          <li><a href="/tours/camel-riding" @click="closeMobileMenu()">Camel Riding Palm Groves</a></li>
+        <ul
+          class="dropdown-menu dropdown-standard"
+          :class="activeDropdowns['activities'] ? 'open' : ''"
+        >
+          <li>
+            <a
+              href="/tours/hot-air-balloon-marrakech"
+              @click="closeMobileMenu()">Hot Air Balloon in Marrakech</a>
+          </li>
+          <li>
+            <a href="/tours/horse-riding-morocco" @click="closeMobileMenu()"
+              >Horse Riding in Morocco</a>
+          </li>
+          <li>
+            <a
+              href="/tours/fantasia-chez-ali-marrakech"
+              @click="closeMobileMenu()">Fantasia Chez Ali Marrakech</a>
+          </li>
+          <li>
+            <a href="/tours/quad-biking-marrakech" @click="closeMobileMenu()"
+              >Quad Biking In Marrakech</a>
+          </li>
+          <li>
+            <a href="/tours/raid-buggy-marrakech" @click="closeMobileMenu()"
+              >Raid Buggy In Marrakech</a>
+          </li>
+          <li>
+            <a href="/tours/camel-riding" @click="closeMobileMenu()"
+              >Camel Riding Palm Groves</a>
+          </li>
         </ul>
       </li>
 
       <li>
-        <a href="/about" class={`nav-link-main ${currentPage === 'about' ? 'active' : ''}`} @click="closeMobileMenu()">About Us</a>
+        <a
+          href="/about"
+          class={`nav-link-main ${currentPage === "about" ? "active" : ""}`}
+          @click="closeMobileMenu()">About Us</a
+        >
       </li>
       <li>
-        <a href="/contact" class={`nav-link-main ${currentPage === 'contact' ? 'active' : ''}`} @click="closeMobileMenu()">Contact Us</a>
+        <a
+          href="/contact"
+          class={`nav-link-main ${currentPage === "contact" ? "active" : ""}`}
+          @click="closeMobileMenu()">Contact Us</a
+        >
       </li>
 
       <!-- Mobile: Plan a Trip CTA (at the bottom of mobile menu) -->
       <li class="mobile-cta-li">
-        <a href="/contact" class="btn btn-primary mobile-menu-cta" @click="closeMobileMenu()">
+        <a
+          href="/contact"
+          class="btn btn-primary mobile-menu-cta"
+          @click="closeMobileMenu()"
+        >
           <i class="fa-solid fa-compass" style="margin-right:8px;"></i> Plan a Trip
         </a>
       </li>
@@ -232,42 +435,89 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="c
 
     <!-- Language Flags (Desktop) -->
     <div class="lang-flags-wrap desktop-only">
-      <button type="button" class="lang-flag-btn" :class="$root.currentLang==='en'?'active':''" @click="$root.currentLang='en'" title="English">
+      <button
+        type="button"
+        class="lang-flag-btn"
+        :class="$root.currentLang==='en'?'active':''"
+        @click="$root.currentLang='en'"
+        title="English"
+      >
         <Fragment set:html={ukFlag} />
       </button>
-      <button type="button" class="lang-flag-btn" :class="$root.currentLang==='es'?'active':''" @click="$root.currentLang='es'" title="Español">
+      <button
+        type="button"
+        class="lang-flag-btn"
+        :class="$root.currentLang==='es'?'active':''"
+        @click="$root.currentLang='es'"
+        title="Español"
+      >
         <Fragment set:html={esFlag} />
       </button>
-      <button type="button" class="lang-flag-btn" :class="$root.currentLang==='it'?'active':''" @click="$root.currentLang='it'" title="Italiano">
+      <button
+        type="button"
+        class="lang-flag-btn"
+        :class="$root.currentLang==='it'?'active':''"
+        @click="$root.currentLang='it'"
+        title="Italiano"
+      >
         <Fragment set:html={itFlag} />
       </button>
     </div>
 
     <!-- Language Flags (Mobile - between hamburger area) -->
     <div class="lang-flags-wrap mobile-only">
-      <button type="button" class="lang-flag-btn" :class="$root.currentLang==='en'?'active':''" @click="$root.currentLang='en'" title="English">
+      <button
+        type="button"
+        class="lang-flag-btn"
+        :class="$root.currentLang==='en'?'active':''"
+        @click="$root.currentLang='en'"
+        title="English"
+      >
         <Fragment set:html={ukFlag} />
       </button>
-      <button type="button" class="lang-flag-btn" :class="$root.currentLang==='es'?'active':''" @click="$root.currentLang='es'" title="Español">
+      <button
+        type="button"
+        class="lang-flag-btn"
+        :class="$root.currentLang==='es'?'active':''"
+        @click="$root.currentLang='es'"
+        title="Español"
+      >
         <Fragment set:html={esFlag} />
       </button>
-      <button type="button" class="lang-flag-btn" :class="$root.currentLang==='it'?'active':''" @click="$root.currentLang='it'" title="Italiano">
+      <button
+        type="button"
+        class="lang-flag-btn"
+        :class="$root.currentLang==='it'?'active':''"
+        @click="$root.currentLang='it'"
+        title="Italiano"
+      >
         <Fragment set:html={itFlag} />
       </button>
     </div>
 
     <!-- CTA Button (Desktop) -->
-    <a href="/contact" class="btn btn-primary desktop-only" id="nav-cta" @click="closeMobileMenu()">Plan a Trip</a>
+    <a
+      href="/contact"
+      class="btn btn-primary desktop-only"
+      id="nav-cta"
+      @click="closeMobileMenu()">Plan a Trip</a
+    >
 
     <!-- Hamburger -->
-    <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Toggle Menu" :aria-expanded="isMobileOpen.toString()" @click="isMobileOpen=!isMobileOpen">
+    <button
+      class="mobile-nav-toggle"
+      id="mobile-toggle"
+      aria-label="Toggle Menu"
+      :aria-expanded="isMobileOpen.toString()"
+      @click="isMobileOpen=!isMobileOpen"
+    >
       <i :class="isMobileOpen?'fa-solid fa-xmark':'fa-solid fa-bars'"></i>
     </button>
   </div>
 
   <!-- Mobile nav overlay backdrop -->
-  <div 
-    x-show="isMobileOpen" 
+  <div
+    x-show="isMobileOpen"
     @click="closeMobileMenu()"
     style="position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:998;backdrop-filter:blur(4px);"
     x-transition:enter="transition ease-out duration-300"
@@ -276,5 +526,6 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="c
     x-transition:leave="transition ease-out duration-200"
     x-transition:leave-start="opacity-100"
     x-transition:leave-end="opacity-0"
-  ></div>
+  >
+  </div>
 </header>
