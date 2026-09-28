@@ -506,9 +506,29 @@ footer {
   background: var(--night-surface); border: 1px solid var(--glass-border);
   border-radius: var(--radius-md); overflow: hidden; position: relative;
   transition: var(--transition-smooth); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  display: flex; flex-direction: column;
+}
+.tour-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 65%;
+  background-image: url('/assets/zellij_pattern.svg');
+  background-repeat: repeat;
+  background-size: 160px 160px;
+  background-position: bottom right;
+  opacity: 0.09;
+  -webkit-mask-image: radial-gradient(circle at bottom right, rgba(0, 0, 0, 1) 15%, rgba(0, 0, 0, 0) 75%);
+  mask-image: radial-gradient(circle at bottom right, rgba(0, 0, 0, 1) 15%, rgba(0, 0, 0, 0) 75%);
+  pointer-events: none;
+  z-index: 0;
+  transition: opacity 0.5s ease;
 }
 .tour-card:hover { transform: translateY(-10px); border-color: rgba(232, 195, 158, 0.25); box-shadow: var(--shadow-premium); }
-.tour-img-wrapper { height: 240px; position: relative; overflow: hidden; }
+.tour-card:hover::after { opacity: 0.17; }
+.tour-img-wrapper { height: 240px; position: relative; overflow: hidden; z-index: 1; }
 .tour-img-wrapper img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease; }
 .tour-card:hover .tour-img-wrapper img { transform: scale(1.08); }
 .tour-badge {
@@ -517,7 +537,7 @@ footer {
   font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;
   z-index: 2; box-shadow: 0 4px 10px rgba(217, 107, 67, 0.4);
 }
-.tour-info { padding: 24px; }
+.tour-info { padding: 24px; position: relative; z-index: 1; display: flex; flex-direction: column; flex-grow: 1; }
 .tour-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-size: 0.85rem; color: var(--sand-gold); }
 .tour-meta div { display: flex; align-items: center; gap: 6px; }
 .tour-title { font-size: 1.4rem; margin-bottom: 12px; transition: var(--transition-smooth); }
