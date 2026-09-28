@@ -43,7 +43,7 @@ html {
   font-family: var(--font-sans);
   background-color: var(--night-bg);
   color: var(--text-main);
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 [x-cloak] {
@@ -52,7 +52,7 @@ html {
 
 body {
   line-height: 1.6;
-  overflow-x: hidden;
+  overflow-x: clip;
   width: 100%;
 }
 
@@ -671,7 +671,7 @@ footer {
   max-width: 1400px; margin: 40px auto 80px; padding: 0 5%; align-items: start;
 }
 .tour-main { display: flex; flex-direction: column; gap: 40px; min-width: 0; max-width: 100%; }
-.tour-sidebar { position: sticky; top: 90px; display: flex; flex-direction: column; gap: 30px; min-width: 0; max-width: 370px; }
+.tour-sidebar { position: sticky; top: 138px; z-index: 80; display: flex; flex-direction: column; gap: 30px; min-width: 0; max-width: 370px; }
 
 /* Timeline Cards */
 .timeline-card {
@@ -703,7 +703,25 @@ footer {
 .inc-exc-split { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
 
 /* Interactive Map */
-.tour-map-card { background: var(--night-surface); border: 1px solid var(--glass-border); border-radius: var(--radius-md); padding: 30px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); position: relative; }
+.map-section-wrap {
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  background: transparent !important;
+  border: none !important;
+}
+.tour-map-card {
+  background: var(--night-surface);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+}
 .tour-map-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-bottom: 16px; border-bottom: 1px solid var(--glass-border); padding-bottom: 18px; }
 .tour-map-header h3 { font-size: 1.6rem; color: var(--sand-gold); margin: 0; display: flex; align-items: center; gap: 10px; }
 .tour-map-header-badges { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
@@ -868,9 +886,20 @@ footer {
 /* ===========================
    12. RESPONSIVE BREAKPOINTS
    =========================== */
-@media (max-width: 1024px) {
-  .tour-container { grid-template-columns: 1fr; }
-  .tour-sidebar { position: static; max-width: 100%; }
+@media (max-width: 1200px) and (min-width: 993px) {
+  .tour-container {
+    grid-template-columns: minmax(0, 1fr) 330px;
+    gap: 28px;
+    padding: 0 4%;
+  }
+  .tour-sidebar {
+    max-width: 330px;
+  }
+}
+
+@media (max-width: 992px) {
+  .tour-container { grid-template-columns: 1fr; gap: 32px; }
+  .tour-sidebar { position: static; max-width: 100%; width: 100%; }
   .footer-grid { grid-template-columns: repeat(2, 1fr); }
   #tour-route-map { height: 380px; }
 }
