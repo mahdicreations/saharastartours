@@ -500,6 +500,39 @@ footer {
 }
 
 /* ===========================
+   7b. CATEGORY HERO (ZELLIJ BACKGROUND)
+   =========================== */
+.cat-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 180px 5% 80px;
+  text-align: center;
+  background: radial-gradient(circle at 50% 30%, rgba(232, 195, 158, 0.08) 0%, transparent 65%), linear-gradient(180deg, var(--night-surface) 0%, var(--night-bg) 100%);
+  border-bottom: 1px solid var(--glass-border);
+}
+.cat-hero > * {
+  position: relative;
+  z-index: 2;
+}
+.cat-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('/assets/zellij_pattern.svg');
+  background-repeat: repeat;
+  background-size: 180px 180px;
+  background-position: center;
+  opacity: 0.16;
+  -webkit-mask-image: radial-gradient(ellipse at 50% 45%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 75%);
+  mask-image: radial-gradient(ellipse at 50% 45%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 75%);
+  pointer-events: none;
+  z-index: 1;
+}
+@media (max-width: 768px) {
+  .cat-hero { padding: 140px 5% 60px; }
+}
+
+/* ===========================
    8. COMMON CARD COMPONENTS
    =========================== */
 .tour-card {
