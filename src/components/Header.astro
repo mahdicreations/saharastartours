@@ -16,6 +16,7 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="c
 ---
 
 <header id="main-header"
+  class="night-sky-header"
   x-data="{
     isScrolled: false,
     isMobileOpen: false,
@@ -42,6 +43,9 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="c
   }"
   :class="isScrolled ? 'scrolled' : ''"
 >
+  <!-- Dedicated Night Sky & Stars Backdrop Layer -->
+  <div class="header-sky-bg" aria-hidden="true"></div>
+
   <!-- TOP HEADER / ANNOUNCEMENT BAR -->
   <div class="top-bar">
     <div class="top-bar-container">
