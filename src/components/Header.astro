@@ -3,6 +3,7 @@ import {
   getImperialCitiesTours,
   getDayTrips,
   getActivities,
+  getMultiDayToursByCity,
   type Tour,
 } from "../data/tours.ts";
 
@@ -10,6 +11,13 @@ interface Props {
   currentPage?: string;
 }
 const { currentPage = "" } = Astro.props;
+
+// Multi-Day Tours by Departure City (Submenus)
+const marrakechTours = getMultiDayToursByCity("Marrakech");
+const casablancaTours = getMultiDayToursByCity("Casablanca");
+const fesTours = getMultiDayToursByCity("Fes");
+const tangierTours = getMultiDayToursByCity("Tangier");
+const ouarzazateTours = getMultiDayToursByCity("Ouarzazate");
 
 // Curated Imperial Cities Tours (4 featured)
 const allImperial = getImperialCitiesTours();
@@ -70,6 +78,8 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="c
     isMobileOpen: false,
     activeDropdowns: {},
     activeDesktopDropdown: null,
+    activeCityFlyout: null,
+    activeCities: {},
     currentLang: 'en',
     init() {
       const s = () => { this.isScrolled = window.scrollY > 50; };
@@ -79,6 +89,7 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="c
     closeMobileMenu() {
       this.isMobileOpen = false;
       this.activeDropdowns = {};
+      this.activeCities = {};
       document.body.style.overflow = '';
     },
     toggleMobileMenu() {
@@ -89,8 +100,13 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="c
       this.activeDropdowns[cat] = !this.activeDropdowns[cat];
       this.activeDropdowns = { ...this.activeDropdowns };
     },
+    toggleCity(city) {
+      this.activeCities[city] = !this.activeCities[city];
+      this.activeCities = { ...this.activeCities };
+    },
     closeDesktopDropdown() {
       this.activeDesktopDropdown = null;
+      this.activeCityFlyout = null;
     }
   }"
   @click.outside="closeDesktopDropdown()"
@@ -234,33 +250,128 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="c
           </button>
         </div>
 
-        <!-- 1. DESKTOP DROPDOWN (Compact & Elegant Hubs) -->
+        <!-- 1. DESKTOP DROPDOWN (Compact & Elegant Hubs with City Submenus) -->
         <ul class="dropdown-menu dropdown-standard compact-dropdown tours-dropdown desktop-only" aria-label="Tours Navigation">
-          <li>
-            <a href="/tours-from-marrakech" class="dropdown-item">
-              <i class="fa-solid fa-location-dot"></i> Tours from Marrakech
+          <!-- Marrakech -->
+          <li
+            class="has-flyout"
+            :class="activeCityFlyout === 'marrakech' ? 'flyout-open' : ''"
+            @mouseenter="activeCityFlyout = 'marrakech'"
+            @mouseleave="activeCityFlyout = null"
+          >
+            <a href="/tours-from-marrakech" class="dropdown-item dropdown-item-has-flyout">
+              <span class="dropdown-item-label">
+                <i class="fa-solid fa-location-dot"></i> Tours from Marrakech
+              </span>
+              <i class="fa-solid fa-chevron-right flyout-arrow"></i>
             </a>
+            <ul class="dropdown-flyout" aria-label="Tours from Marrakech Submenu">
+              {marrakechTours.map((tour) => (
+                <li>
+                  <a href={`/tours/${tour.slug}`} class="dropdown-item">
+                    <span>{tour.shortTitle || tour.title}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
           </li>
-          <li>
-            <a href="/tours-from-casablanca" class="dropdown-item">
-              <i class="fa-solid fa-location-dot"></i> Tours from Casablanca
+
+          <!-- Casablanca -->
+          <li
+            class="has-flyout"
+            :class="activeCityFlyout === 'casablanca' ? 'flyout-open' : ''"
+            @mouseenter="activeCityFlyout = 'casablanca'"
+            @mouseleave="activeCityFlyout = null"
+          >
+            <a href="/tours-from-casablanca" class="dropdown-item dropdown-item-has-flyout">
+              <span class="dropdown-item-label">
+                <i class="fa-solid fa-location-dot"></i> Tours from Casablanca
+              </span>
+              <i class="fa-solid fa-chevron-right flyout-arrow"></i>
             </a>
+            <ul class="dropdown-flyout" aria-label="Tours from Casablanca Submenu">
+              {casablancaTours.map((tour) => (
+                <li>
+                  <a href={`/tours/${tour.slug}`} class="dropdown-item">
+                    <span>{tour.shortTitle || tour.title}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
           </li>
-          <li>
-            <a href="/tours-from-fes" class="dropdown-item">
-              <i class="fa-solid fa-location-dot"></i> Tours from Fes
+
+          <!-- Fes -->
+          <li
+            class="has-flyout"
+            :class="activeCityFlyout === 'fes' ? 'flyout-open' : ''"
+            @mouseenter="activeCityFlyout = 'fes'"
+            @mouseleave="activeCityFlyout = null"
+          >
+            <a href="/tours-from-fes" class="dropdown-item dropdown-item-has-flyout">
+              <span class="dropdown-item-label">
+                <i class="fa-solid fa-location-dot"></i> Tours from Fes
+              </span>
+              <i class="fa-solid fa-chevron-right flyout-arrow"></i>
             </a>
+            <ul class="dropdown-flyout" aria-label="Tours from Fes Submenu">
+              {fesTours.map((tour) => (
+                <li>
+                  <a href={`/tours/${tour.slug}`} class="dropdown-item">
+                    <span>{tour.shortTitle || tour.title}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
           </li>
-          <li>
-            <a href="/tours-from-tangier" class="dropdown-item">
-              <i class="fa-solid fa-location-dot"></i> Tours from Tangier
+
+          <!-- Tangier -->
+          <li
+            class="has-flyout"
+            :class="activeCityFlyout === 'tangier' ? 'flyout-open' : ''"
+            @mouseenter="activeCityFlyout = 'tangier'"
+            @mouseleave="activeCityFlyout = null"
+          >
+            <a href="/tours-from-tangier" class="dropdown-item dropdown-item-has-flyout">
+              <span class="dropdown-item-label">
+                <i class="fa-solid fa-location-dot"></i> Tours from Tangier
+              </span>
+              <i class="fa-solid fa-chevron-right flyout-arrow"></i>
             </a>
+            <ul class="dropdown-flyout" aria-label="Tours from Tangier Submenu">
+              {tangierTours.map((tour) => (
+                <li>
+                  <a href={`/tours/${tour.slug}`} class="dropdown-item">
+                    <span>{tour.shortTitle || tour.title}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
           </li>
-          <li>
-            <a href="/tours-from-ouarzazate" class="dropdown-item">
-              <i class="fa-solid fa-location-dot"></i> Tours from Ouarzazate
+
+          <!-- Ouarzazate -->
+          <li
+            class="has-flyout"
+            :class="activeCityFlyout === 'ouarzazate' ? 'flyout-open' : ''"
+            @mouseenter="activeCityFlyout = 'ouarzazate'"
+            @mouseleave="activeCityFlyout = null"
+          >
+            <a href="/tours-from-ouarzazate" class="dropdown-item dropdown-item-has-flyout">
+              <span class="dropdown-item-label">
+                <i class="fa-solid fa-location-dot"></i> Tours from Ouarzazate
+              </span>
+              <i class="fa-solid fa-chevron-right flyout-arrow"></i>
             </a>
+            <ul class="dropdown-flyout" aria-label="Tours from Ouarzazate Submenu">
+              {ouarzazateTours.map((tour) => (
+                <li>
+                  <a href={`/tours/${tour.slug}`} class="dropdown-item">
+                    <span>{tour.shortTitle || tour.title}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
           </li>
+
           <li class="dropdown-divider"></li>
           <li>
             <a href="/tours" class="dropdown-item dropdown-item-all">
@@ -270,23 +381,138 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="c
           </li>
         </ul>
 
-        <!-- 2. MOBILE TOURS SUBMENU (Compact Hubs) -->
+        <!-- 2. MOBILE TOURS SUBMENU (City Accordions & Tours) -->
         <div class="mobile-submenu mobile-tours-submenu mobile-only" :class="activeDropdowns['tours'] ? 'open' : ''">
-          <a href="/tours-from-marrakech" @click="closeMobileMenu()" class="mobile-sub-link">
-            <i class="fa-solid fa-location-dot"></i> Tours from Marrakech
-          </a>
-          <a href="/tours-from-casablanca" @click="closeMobileMenu()" class="mobile-sub-link">
-            <i class="fa-solid fa-location-dot"></i> Tours from Casablanca
-          </a>
-          <a href="/tours-from-fes" @click="closeMobileMenu()" class="mobile-sub-link">
-            <i class="fa-solid fa-location-dot"></i> Tours from Fes
-          </a>
-          <a href="/tours-from-tangier" @click="closeMobileMenu()" class="mobile-sub-link">
-            <i class="fa-solid fa-location-dot"></i> Tours from Tangier
-          </a>
-          <a href="/tours-from-ouarzazate" @click="closeMobileMenu()" class="mobile-sub-link">
-            <i class="fa-solid fa-location-dot"></i> Tours from Ouarzazate
-          </a>
+          <!-- Marrakech -->
+          <div class="mobile-city-group">
+            <div class="mobile-city-row">
+              <a href="/tours-from-marrakech" @click="closeMobileMenu()" class="mobile-sub-link mobile-city-link">
+                <i class="fa-solid fa-location-dot"></i> <span>Tours from Marrakech</span>
+              </a>
+              <button
+                type="button"
+                class="mobile-city-toggle"
+                @click.stop="toggleCity('marrakech')"
+                :class="activeCities['marrakech'] ? 'active' : ''"
+                :aria-expanded="activeCities['marrakech'] ? 'true' : 'false'"
+                aria-label="Toggle Marrakech tours"
+              >
+                <i class="fa-solid fa-chevron-down" :class="activeCities['marrakech'] ? 'rotated' : ''"></i>
+              </button>
+            </div>
+            <div class="mobile-city-tours" :class="activeCities['marrakech'] ? 'open' : ''">
+              {marrakechTours.map((tour) => (
+                <a href={`/tours/${tour.slug}`} @click="closeMobileMenu()" class="mobile-tour-item-link">
+                  <i class="fa-solid fa-angle-right"></i> {tour.shortTitle || tour.title}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <!-- Casablanca -->
+          <div class="mobile-city-group">
+            <div class="mobile-city-row">
+              <a href="/tours-from-casablanca" @click="closeMobileMenu()" class="mobile-sub-link mobile-city-link">
+                <i class="fa-solid fa-location-dot"></i> <span>Tours from Casablanca</span>
+              </a>
+              <button
+                type="button"
+                class="mobile-city-toggle"
+                @click.stop="toggleCity('casablanca')"
+                :class="activeCities['casablanca'] ? 'active' : ''"
+                :aria-expanded="activeCities['casablanca'] ? 'true' : 'false'"
+                aria-label="Toggle Casablanca tours"
+              >
+                <i class="fa-solid fa-chevron-down" :class="activeCities['casablanca'] ? 'rotated' : ''"></i>
+              </button>
+            </div>
+            <div class="mobile-city-tours" :class="activeCities['casablanca'] ? 'open' : ''">
+              {casablancaTours.map((tour) => (
+                <a href={`/tours/${tour.slug}`} @click="closeMobileMenu()" class="mobile-tour-item-link">
+                  <i class="fa-solid fa-angle-right"></i> {tour.shortTitle || tour.title}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <!-- Fes -->
+          <div class="mobile-city-group">
+            <div class="mobile-city-row">
+              <a href="/tours-from-fes" @click="closeMobileMenu()" class="mobile-sub-link mobile-city-link">
+                <i class="fa-solid fa-location-dot"></i> <span>Tours from Fes</span>
+              </a>
+              <button
+                type="button"
+                class="mobile-city-toggle"
+                @click.stop="toggleCity('fes')"
+                :class="activeCities['fes'] ? 'active' : ''"
+                :aria-expanded="activeCities['fes'] ? 'true' : 'false'"
+                aria-label="Toggle Fes tours"
+              >
+                <i class="fa-solid fa-chevron-down" :class="activeCities['fes'] ? 'rotated' : ''"></i>
+              </button>
+            </div>
+            <div class="mobile-city-tours" :class="activeCities['fes'] ? 'open' : ''">
+              {fesTours.map((tour) => (
+                <a href={`/tours/${tour.slug}`} @click="closeMobileMenu()" class="mobile-tour-item-link">
+                  <i class="fa-solid fa-angle-right"></i> {tour.shortTitle || tour.title}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <!-- Tangier -->
+          <div class="mobile-city-group">
+            <div class="mobile-city-row">
+              <a href="/tours-from-tangier" @click="closeMobileMenu()" class="mobile-sub-link mobile-city-link">
+                <i class="fa-solid fa-location-dot"></i> <span>Tours from Tangier</span>
+              </a>
+              <button
+                type="button"
+                class="mobile-city-toggle"
+                @click.stop="toggleCity('tangier')"
+                :class="activeCities['tangier'] ? 'active' : ''"
+                :aria-expanded="activeCities['tangier'] ? 'true' : 'false'"
+                aria-label="Toggle Tangier tours"
+              >
+                <i class="fa-solid fa-chevron-down" :class="activeCities['tangier'] ? 'rotated' : ''"></i>
+              </button>
+            </div>
+            <div class="mobile-city-tours" :class="activeCities['tangier'] ? 'open' : ''">
+              {tangierTours.map((tour) => (
+                <a href={`/tours/${tour.slug}`} @click="closeMobileMenu()" class="mobile-tour-item-link">
+                  <i class="fa-solid fa-angle-right"></i> {tour.shortTitle || tour.title}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <!-- Ouarzazate -->
+          <div class="mobile-city-group">
+            <div class="mobile-city-row">
+              <a href="/tours-from-ouarzazate" @click="closeMobileMenu()" class="mobile-sub-link mobile-city-link">
+                <i class="fa-solid fa-location-dot"></i> <span>Tours from Ouarzazate</span>
+              </a>
+              <button
+                type="button"
+                class="mobile-city-toggle"
+                @click.stop="toggleCity('ouarzazate')"
+                :class="activeCities['ouarzazate'] ? 'active' : ''"
+                :aria-expanded="activeCities['ouarzazate'] ? 'true' : 'false'"
+                aria-label="Toggle Ouarzazate tours"
+              >
+                <i class="fa-solid fa-chevron-down" :class="activeCities['ouarzazate'] ? 'rotated' : ''"></i>
+              </button>
+            </div>
+            <div class="mobile-city-tours" :class="activeCities['ouarzazate'] ? 'open' : ''">
+              {ouarzazateTours.map((tour) => (
+                <a href={`/tours/${tour.slug}`} @click="closeMobileMenu()" class="mobile-tour-item-link">
+                  <i class="fa-solid fa-angle-right"></i> {tour.shortTitle || tour.title}
+                </a>
+              ))}
+            </div>
+          </div>
+
           <a href="/tours" @click="closeMobileMenu()" class="mobile-sub-link mobile-sub-link-all">
             <span>View All Multi-Day Tours</span>
             <i class="fa-solid fa-arrow-right"></i>
