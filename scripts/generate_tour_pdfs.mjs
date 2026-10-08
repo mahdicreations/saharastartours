@@ -1,8 +1,9 @@
 import PDFDocument from 'pdfkit';
 import fs from 'fs';
 import path from 'path';
+import sharp from 'sharp';
 
-// Load tours directly from TypeScript data file
+// Load tours directly from TypeScript data file (Single Source of Truth)
 const { tours } = await import('../src/data/tours.ts');
 
 const OUTPUT_DIR = path.resolve('public/pdfs/tours');
@@ -27,19 +28,41 @@ function cleanText(str) {
 }
 
 /**
- * Generate a luxury branded PDF for a single tour
+ * Pre-process and optimize hero image for PDF cover
  */
-function generateTourPDF(tour) {
+async function getHeroImageBuffer(heroPath) {
+  try {
+    if (!heroPath) return null;
+    const clean = heroPath.startsWith('/') ? heroPath.slice(1) : heroPath;
+    const fullPath = path.resolve('public', clean);
+    if (!fs.existsSync(fullPath)) return null;
+
+    return await sharp(fullPath)
+      .resize({ width: 1040, height: 500, fit: 'cover', position: 'center' })
+      .jpeg({ quality: 86, progressive: true })
+      .toBuffer();
+  } catch (err) {
+    console.warn(`[PDF Warning] Could not process image ${heroPath}:`, err.message);
+    return null;
+  }
+}
+
+/**
+ * Generate a luxury editorial PDF travel brochure for a single tour
+ */
+async function generateTourPDF(tour) {
+  const imageBuffer = await getHeroImageBuffer(tour.heroImage);
+
   return new Promise((resolve, reject) => {
     const outPath = path.join(OUTPUT_DIR, `${tour.slug}.pdf`);
     const writeStream = fs.createWriteStream(outPath);
 
     const doc = new PDFDocument({
       size: 'A4',
-      margin: 40,
+      margin: 44,
       bufferPages: true,
-      userPassword: '', // user needs no password to open/view/print
-      ownerPassword: 'SST_SECURE_BUILD_KEY_2026', // restricts editing & copying
+      userPassword: '', // Visitors open normally without entering a password
+      ownerPassword: 'SST_SECURE_BUILD_KEY_2026', // Prevents modifying & unauthorized copying
       permissions: {
         modifying: false,
         copying: false,
@@ -50,10 +73,10 @@ function generateTourPDF(tour) {
         printing: 'highResolution'
       },
       info: {
-        Title: `${tour.shortTitle || tour.title} - Itinerary`,
+        Title: `${tour.shortTitle || tour.title} — Sahara Star Tours`,
         Author: 'Sahara Star Tours',
-        Subject: `Detailed Itinerary for ${tour.title}`,
-        Keywords: `Morocco, Sahara Star Tours, ${tour.departureCity}, ${tour.duration}`
+        Subject: `Private Morocco Travel Itinerary: ${tour.title}`,
+        Keywords: `Morocco, Desert Tour, Sahara Star Tours, ${tour.departureCity}, ${tour.duration}`
       }
     });
 
@@ -61,207 +84,315 @@ function generateTourPDF(tour) {
 
     const pageWidth = 595.28;
     const pageHeight = 841.89;
-    const margin = 40;
+    const margin = 44;
     const contentWidth = pageWidth - (margin * 2);
 
-    // BRAND PALETTE
-    const COLOR_GOLD = '#C8924B';
-    const COLOR_NAVY = '#0A0F1D';
-    const COLOR_DARK = '#16213E';
-    const COLOR_TEXT = '#222222';
-    const COLOR_MUTED = '#555555';
+    // MOROCCAN LUXURY PALETTE (Editorial, Printable, Elegant)
+    const COLOR_GOLD = '#B8863A';
+    const COLOR_NAVY = '#0E131F';
+    const COLOR_TEXT = '#22262F';
+    const COLOR_MUTED = '#636A79';
     const COLOR_BORDER = '#E5DFD5';
-    const COLOR_BG_LIGHT = '#F9F6F0';
+    const COLOR_BG_LIGHT = '#F9F7F2';
+    const COLOR_CHECK = '#2A7048';
+    const COLOR_CROSS = '#A03B32';
 
-    // 1. BRAND HEADER
-    const headerTop = 35;
+    // Taxonomy badge label
+    const catLabel = tour.productType === 'day-trip' ? 'PRIVATE DAY EXCURSION' : 
+                     tour.productType === 'activity' ? 'DESERT ADVENTURE EXPERIENCE' : 
+                     (tour.themes && tour.themes.includes('imperial-cities')) ? 'IMPERIAL CITIES CIRCUIT' :
+                     'PRIVATE MULTI-DAY ITINERARY';
+
+    const tourStyle = tour.productType === 'activity' ? 'Guided Experience' :
+                      tour.productType === 'day-trip' ? 'Private Day Trip' : 
+                      '100% Private Tour';
+
+    // ==========================================
+    // PAGE 1: EDITORIAL COVER
+    // ==========================================
+    const topY = 40;
     if (fs.existsSync(LOGO_PATH)) {
-      doc.image(LOGO_PATH, margin, headerTop, { width: 50 });
+      doc.image(LOGO_PATH, margin, topY, { width: 42 });
     }
 
-    doc.fontSize(16).fillColor(COLOR_NAVY).font('Helvetica-Bold')
-       .text('SAHARA STAR TOURS', margin + 60, headerTop + 5);
-    doc.fontSize(9).fillColor(COLOR_GOLD).font('Helvetica')
-       .text('PRIVATE MOROCCO EXPEDITIONS & BESPOKE TRAVEL', margin + 60, headerTop + 24);
-    doc.fontSize(8).fillColor(COLOR_MUTED)
-       .text('www.saharastartours.com  •  contact@saharastartours.com  •  +212 678-317015', margin + 60, headerTop + 37);
+    doc.fontSize(13.5).fillColor(COLOR_NAVY).font('Helvetica-Bold')
+       .text('SAHARA STAR TOURS', margin + 50, topY + 3, { characterSpacing: 1.2 });
+    doc.fontSize(7.5).fillColor(COLOR_GOLD).font('Helvetica-Bold')
+       .text('PRIVATE MOROCCO EXPEDITIONS & BESPOKE TRAVEL', margin + 50, topY + 19, { characterSpacing: 0.8 });
+    doc.fontSize(7).fillColor(COLOR_MUTED).font('Helvetica')
+       .text('MARRAKECH • CASABLANCA • SAHARA DESERT • FES • TANGIER', margin + 50, topY + 30, { characterSpacing: 0.5 });
 
-    // Decorative divider line
-    doc.moveTo(margin, headerTop + 58).lineTo(margin + contentWidth, headerTop + 58)
-       .strokeColor(COLOR_GOLD).lineWidth(1.5).stroke();
+    doc.moveTo(margin, topY + 46).lineTo(margin + contentWidth, topY + 46)
+       .strokeColor(COLOR_BORDER).lineWidth(0.8).stroke();
 
-    doc.y = headerTop + 70;
+    // Cover Hero Image
+    const heroY = topY + 56;
+    const heroHeight = 225;
 
-    // 2. TOUR TITLE & META BANNER
-    // Category pill
-    const catLabel = tour.productType === 'day-trip' ? 'Day Excursion' : 
-                     tour.productType === 'activity' ? 'Desert Experience' : 
-                     'Private Multi-Day Tour';
-    
-    doc.rect(margin, doc.y, 110, 16).fillColor(COLOR_GOLD).fill();
-    doc.fontSize(8).fillColor('#FFFFFF').font('Helvetica-Bold')
-       .text(catLabel.toUpperCase(), margin + 6, doc.y - 13, { width: 100, align: 'center' });
+    if (imageBuffer) {
+      doc.save();
+      doc.roundedRect(margin, heroY, contentWidth, heroHeight, 4).clip();
+      doc.image(imageBuffer, margin, heroY, { width: contentWidth, height: heroHeight });
+      doc.restore();
+      doc.roundedRect(margin, heroY, contentWidth, heroHeight, 4)
+         .strokeColor(COLOR_BORDER).lineWidth(0.8).stroke();
+    }
 
-    doc.moveDown(0.6);
-    doc.fontSize(17).fillColor(COLOR_DARK).font('Helvetica-Bold')
-       .text(tour.title, margin, doc.y, { width: contentWidth });
+    doc.y = heroY + heroHeight + 16;
 
+    // Display Title without redundant branding suffix
+    const displayTitle = (tour.shortTitle || tour.title)
+      .replace(/\s*[|\-–—]\s*Sahara Star Tours.*$/i, '')
+      .trim();
+
+    // Tour Product Category Badge
+    doc.fontSize(8).fillColor(COLOR_GOLD).font('Helvetica-Bold')
+       .text(catLabel, margin, doc.y, { characterSpacing: 1.5 });
+    doc.moveDown(0.3);
+
+    // Tour Title
+    doc.fontSize(18).fillColor(COLOR_NAVY).font('Helvetica-Bold')
+       .text(displayTitle, margin, doc.y, { width: contentWidth, lineGap: 3 });
     doc.moveDown(0.4);
 
-    // Meta box
-    const metaY = doc.y;
-    doc.rect(margin, metaY, contentWidth, 34).fillColor(COLOR_BG_LIGHT).fill();
-    doc.rect(margin, metaY, contentWidth, 34).strokeColor(COLOR_BORDER).lineWidth(0.8).stroke();
+    // Quick Facts Box
+    const factsY = doc.y;
+    const factsHeight = 42;
+    doc.roundedRect(margin, factsY, contentWidth, factsHeight, 3)
+       .fillColor(COLOR_BG_LIGHT).fill();
+    doc.roundedRect(margin, factsY, contentWidth, factsHeight, 3)
+       .strokeColor(COLOR_BORDER).lineWidth(0.8).stroke();
 
-    const colW = contentWidth / 4;
-    const printMetaItem = (label, val, x) => {
-      doc.fontSize(7.5).fillColor(COLOR_MUTED).font('Helvetica')
-         .text(label.toUpperCase(), x, metaY + 6, { width: colW - 10, align: 'center' });
-      doc.fontSize(8.5).fillColor(COLOR_NAVY).font('Helvetica-Bold')
-         .text(val, x, metaY + 18, { width: colW - 10, align: 'center' });
+    const colWidth = contentWidth / 4;
+    const printFact = (idx, label, value) => {
+      const colX = margin + (idx * colWidth);
+      doc.fontSize(6.8).fillColor(COLOR_MUTED).font('Helvetica')
+         .text(label.toUpperCase(), colX, factsY + 7, { width: colWidth, align: 'center', characterSpacing: 0.8 });
+      doc.fontSize(9).fillColor(COLOR_NAVY).font('Helvetica-Bold')
+         .text(value, colX, factsY + 20, { width: colWidth, align: 'center' });
     };
 
-    printMetaItem('Duration', tour.duration, margin);
-    printMetaItem('Departure', tour.startingFrom || tour.departureCity, margin + colW);
-    printMetaItem('Tour Style', '100% Private', margin + colW * 2);
-    const priceDisplay = tour.price.replace(/^From\s*/i, '').trim();
-    printMetaItem('Starting Price', priceDisplay, margin + colW * 3);
+    printFact(0, 'Duration', tour.duration);
+    printFact(1, 'Departure', tour.startingFrom || tour.departureCity || 'Marrakech');
+    printFact(2, 'Finish', tour.arrivalCity || 'Marrakech');
+    printFact(3, 'Tour Style', tourStyle);
 
-    doc.y = metaY + 44;
+    doc.y = factsY + factsHeight + 14;
 
-    // Helper: Section Title
-    const printSectionHeader = (title) => {
-      if (doc.y > pageHeight - 120) doc.addPage();
+    // Introduction / Overview
+    doc.fontSize(8).fillColor(COLOR_GOLD).font('Helvetica-Bold')
+       .text('ABOUT THIS JOURNEY', margin, doc.y, { characterSpacing: 1.2 });
+    doc.moveDown(0.25);
+
+    const descText = cleanText(tour.description);
+    doc.fontSize(9).fillColor(COLOR_TEXT).font('Helvetica')
+       .text(descText, margin, doc.y, { width: contentWidth, lineGap: 3.2, maxLines: 5, ellipsis: true });
+
+    // Cover Page Footer Block (Prevent auto page break)
+    doc.page.margins.bottom = 0;
+    const coverFooterY = pageHeight - 55;
+    doc.moveTo(margin, coverFooterY).lineTo(margin + contentWidth, coverFooterY)
+       .strokeColor(COLOR_BORDER).lineWidth(0.8).stroke();
+
+    doc.fontSize(7.5).fillColor(COLOR_NAVY).font('Helvetica-Bold')
+       .text('Sahara Star Tours — Fully Licensed Moroccan Tour Operator', margin, coverFooterY + 6, { lineBreak: false });
+    doc.fontSize(7).fillColor(COLOR_MUTED).font('Helvetica')
+       .text('www.saharastartours.com  •  WhatsApp: +212 678-317015  •  contact@saharastartours.com', margin, coverFooterY + 18, { lineBreak: false });
+    doc.page.margins.bottom = margin;
+
+    // ==========================================
+    // PAGE 2+: TOUR INFORMATION & ITINERARY
+    // ==========================================
+    doc.addPage();
+
+    const printSectionHeader = (title, subtitle = '') => {
+      if (doc.y > pageHeight - 80) doc.addPage();
       doc.moveDown(0.5);
-      const titleY = doc.y;
-      doc.rect(margin, titleY, 4, 15).fillColor(COLOR_GOLD).fill();
-      doc.fontSize(12).fillColor(COLOR_DARK).font('Helvetica-Bold')
-         .text(title, margin + 10, titleY + 1);
-      doc.moveDown(0.4);
+      const headerY = doc.y;
+
+      doc.rect(margin, headerY + 1, 3, 13).fillColor(COLOR_GOLD).fill();
+      doc.fontSize(11).fillColor(COLOR_NAVY).font('Helvetica-Bold')
+         .text(title.toUpperCase(), margin + 9, headerY + 1, { characterSpacing: 1.1 });
+
+      if (subtitle) {
+        doc.fontSize(8).fillColor(COLOR_MUTED).font('Helvetica')
+           .text(subtitle, margin + 9, headerY + 16);
+        doc.y = headerY + 26;
+      } else {
+        doc.y = headerY + 18;
+      }
     };
 
-    // 3. OVERVIEW
-    printSectionHeader('Tour Overview');
-    const overviewText = cleanText(tour.description);
-    doc.fontSize(9.5).fillColor(COLOR_TEXT).font('Helvetica')
-       .text(overviewText, margin, doc.y, { width: contentWidth, lineGap: 3 });
+    // Page 2 Top: Quick Facts Recap Strip
+    const p2FactsY = doc.y;
+    doc.roundedRect(margin, p2FactsY, contentWidth, 30, 2).fillColor(COLOR_BG_LIGHT).fill();
+    doc.roundedRect(margin, p2FactsY, contentWidth, 30, 2).strokeColor(COLOR_BORDER).lineWidth(0.6).stroke();
 
-    // 4. HIGHLIGHTS
+    const p2ColW = contentWidth / 4;
+    const printP2Fact = (idx, label, val) => {
+      const colX = margin + (idx * p2ColW);
+      doc.fontSize(6.5).fillColor(COLOR_MUTED).font('Helvetica')
+         .text(label.toUpperCase(), colX, p2FactsY + 5, { width: p2ColW, align: 'center' });
+      doc.fontSize(8.2).fillColor(COLOR_NAVY).font('Helvetica-Bold')
+         .text(val, colX, p2FactsY + 15, { width: p2ColW, align: 'center' });
+    };
+
+    printP2Fact(0, 'Duration', tour.duration);
+    printP2Fact(1, 'Departure', tour.startingFrom || tour.departureCity || 'Marrakech');
+    printP2Fact(2, 'Finish', tour.arrivalCity || 'Marrakech');
+    printP2Fact(3, 'Tour Style', tourStyle);
+
+    doc.y = p2FactsY + 36;
+
+    // 1. HIGHLIGHTS
     if (tour.highlights && tour.highlights.length > 0) {
       printSectionHeader('Key Highlights');
+      doc.moveDown(0.25);
+
       tour.highlights.forEach(h => {
-        if (doc.y > pageHeight - 60) doc.addPage();
+        if (doc.y > pageHeight - 50) doc.addPage();
         const bulletY = doc.y;
-        doc.circle(margin + 4, bulletY + 5, 2.5).fillColor(COLOR_GOLD).fill();
-        doc.fontSize(9).fillColor(COLOR_TEXT).font('Helvetica')
-           .text(cleanText(h), margin + 14, bulletY, { width: contentWidth - 14, lineGap: 2 });
-        doc.moveDown(0.2);
+        doc.circle(margin + 5, bulletY + 5, 2).fillColor(COLOR_GOLD).fill();
+        doc.fontSize(8.8).fillColor(COLOR_TEXT).font('Helvetica')
+           .text(cleanText(h), margin + 15, bulletY, { width: contentWidth - 15, lineGap: 2 });
+        doc.moveDown(0.18);
       });
+      doc.moveDown(0.4);
     }
 
-    // 5. DAY-BY-DAY ITINERARY
+    // 2. DAY-BY-DAY ITINERARY
     if (tour.itinerary && tour.itinerary.length > 0) {
-      printSectionHeader('Detailed Day-by-Day Itinerary');
+      printSectionHeader('Detailed Program Itinerary');
+      doc.moveDown(0.3);
 
       tour.itinerary.forEach((item) => {
-        if (doc.y > pageHeight - 110) doc.addPage();
-        
-        doc.moveDown(0.4);
-        const dayBoxY = doc.y;
-        
-        // Day Header Box
-        doc.rect(margin, dayBoxY, contentWidth, 18).fillColor(COLOR_BG_LIGHT).fill();
-        doc.rect(margin, dayBoxY, contentWidth, 18).strokeColor(COLOR_BORDER).lineWidth(0.5).stroke();
+        const itemContent = cleanText(item.content);
+        const itemTitle = cleanText(item.title);
 
-        doc.fontSize(8.5).fillColor(COLOR_GOLD).font('Helvetica-Bold')
-           .text(item.day.toUpperCase(), margin + 8, dayBoxY + 4);
-        
-        const dayTitleX = margin + 65;
-        doc.fontSize(8.5).fillColor(COLOR_NAVY).font('Helvetica-Bold')
-           .text(cleanText(item.title), dayTitleX, dayBoxY + 4, { width: contentWidth - 75 });
+        const dayTagHeight = 16;
+        const titleHeight = doc.heightOfString(itemTitle, { width: contentWidth - 72, font: 'Helvetica-Bold', size: 9.5 });
+        const contentHeight = doc.heightOfString(itemContent, { width: contentWidth - 16, font: 'Helvetica', size: 8.8, lineGap: 3 });
+        const totalBlockHeight = Math.max(dayTagHeight, titleHeight) + contentHeight + 20;
 
-        doc.y = dayBoxY + 24;
+        if (doc.y + Math.min(totalBlockHeight, 120) > pageHeight - 55) {
+          doc.addPage();
+        }
 
-        // Day Content
-        const content = cleanText(item.content);
-        doc.fontSize(9).fillColor(COLOR_TEXT).font('Helvetica')
-           .text(content, margin + 6, doc.y, { width: contentWidth - 12, lineGap: 2.5 });
+        const startY = doc.y;
 
-        doc.moveDown(0.3);
+        // Day Number Pill
+        const dayLabel = item.day.toUpperCase();
+        doc.roundedRect(margin, startY, 52, 15, 2).fillColor(COLOR_BG_LIGHT).fill();
+        doc.roundedRect(margin, startY, 52, 15, 2).strokeColor(COLOR_BORDER).lineWidth(0.5).stroke();
+        doc.fontSize(7.8).fillColor(COLOR_GOLD).font('Helvetica-Bold')
+           .text(dayLabel, margin, startY + 3.5, { width: 52, align: 'center', characterSpacing: 0.8 });
+
+        // Day Title
+        const titleX = margin + 60;
+        doc.fontSize(9.5).fillColor(COLOR_NAVY).font('Helvetica-Bold')
+           .text(itemTitle, titleX, startY + 2.5, { width: contentWidth - 64, lineGap: 2 });
+
+        doc.y = Math.max(startY + 20, doc.y + 4);
+
+        // Day Description
+        const descStartY = doc.y;
+        doc.fontSize(8.8).fillColor(COLOR_TEXT).font('Helvetica')
+           .text(itemContent, margin + 12, descStartY, { width: contentWidth - 12, lineGap: 3 });
+
+        const descEndY = doc.y;
+        doc.moveTo(margin + 4, descStartY - 2).lineTo(margin + 4, descEndY)
+           .strokeColor(COLOR_BORDER).lineWidth(0.8).stroke();
+
+        doc.y = descEndY + 10;
       });
     }
 
-    // 6. INCLUSIONS & EXCLUSIONS
-    if (doc.y > pageHeight - 150) doc.addPage();
+    // ==========================================
+    // FINAL SECTION: INCLUSIONS & BOOKING
+    // ==========================================
+    if (doc.y > pageHeight - 200) {
+      doc.addPage();
+    }
+
     printSectionHeader('Inclusions & Trip Details');
+    doc.moveDown(0.25);
 
     const halfW = (contentWidth - 16) / 2;
-    const incStartY = doc.y;
+    const startTableY = doc.y;
 
     // What's Included (Left Column)
-    doc.fontSize(10).fillColor(COLOR_DARK).font('Helvetica-Bold')
-       .text("What's Included", margin, incStartY);
-    doc.moveDown(0.3);
+    doc.fontSize(9).fillColor(COLOR_CHECK).font('Helvetica-Bold')
+       .text("What's Included", margin, startTableY);
+    doc.moveDown(0.25);
 
     if (tour.inclusions && tour.inclusions.length > 0) {
       tour.inclusions.forEach(inc => {
         if (doc.y > pageHeight - 50) doc.addPage();
-        doc.fontSize(8.5).fillColor(COLOR_GOLD).font('Helvetica-Bold').text('✓ ', margin, doc.y, { continued: true });
-        doc.fillColor(COLOR_TEXT).font('Helvetica').text(cleanText(inc), { width: halfW - 12, lineGap: 2 });
-        doc.moveDown(0.15);
+        const bulletY = doc.y;
+        doc.circle(margin + 4, bulletY + 4.5, 2).fillColor(COLOR_CHECK).fill();
+        doc.fontSize(8.4).fillColor(COLOR_TEXT).font('Helvetica')
+           .text(cleanText(inc), margin + 12, bulletY, { width: halfW - 14, lineGap: 2 });
+        doc.moveDown(0.18);
       });
     }
-
     const incEndY = doc.y;
 
-    // Not Included (Right Column)
+    // What's Not Included (Right Column)
     const rightColX = margin + halfW + 16;
-    doc.y = incStartY;
-    doc.fontSize(10).fillColor(COLOR_DARK).font('Helvetica-Bold')
-       .text('Not Included', rightColX, incStartY);
-    doc.moveDown(0.3);
+    doc.y = startTableY;
+    doc.fontSize(9).fillColor(COLOR_CROSS).font('Helvetica-Bold')
+       .text('Not Included', rightColX, startTableY);
+    doc.moveDown(0.25);
 
     if (tour.exclusions && tour.exclusions.length > 0) {
       tour.exclusions.forEach(exc => {
         if (doc.y > pageHeight - 50) doc.addPage();
-        doc.fontSize(8.5).fillColor('#A24936').font('Helvetica-Bold').text('✗ ', rightColX, doc.y, { continued: true });
-        doc.fillColor(COLOR_TEXT).font('Helvetica').text(cleanText(exc), { width: halfW - 12, lineGap: 2 });
-        doc.moveDown(0.15);
+        const bulletY = doc.y;
+        doc.circle(rightColX + 4, bulletY + 4.5, 2).fillColor(COLOR_CROSS).fill();
+        doc.fontSize(8.4).fillColor(COLOR_TEXT).font('Helvetica')
+           .text(cleanText(exc), rightColX + 12, bulletY, { width: halfW - 14, lineGap: 2 });
+        doc.moveDown(0.18);
       });
     }
-
     const excEndY = doc.y;
-    doc.y = Math.max(incEndY, excEndY) + 10;
 
-    // 7. IMPORTANT INFORMATION & PACKING
-    if (doc.y > pageHeight - 140) doc.addPage();
-    printSectionHeader('Important Travel Information');
-    const infoPoints = [
-      'Transport: Luxury air-conditioned 4x4 or minivan with experienced English/French/Spanish-speaking professional driver.',
-      'Accommodation: Hand-selected traditional boutique riads and deluxe Sahara desert camp with private en-suite tent.',
-      'Luggage: We recommend medium soft bags or duffels for easier transport in desert vehicles.',
-      'Customization: 100% tailor-made. Timing, stops, and accommodations can be adjusted to your exact preferences.'
+    doc.y = Math.max(incEndY, excEndY) + 12;
+
+    // Important Travel Information
+    if (doc.y > pageHeight - 120) doc.addPage();
+    doc.fontSize(8.2).fillColor(COLOR_NAVY).font('Helvetica-Bold')
+       .text('IMPORTANT TRAVEL INFORMATION', margin, doc.y, { characterSpacing: 0.8 });
+    doc.moveDown(0.25);
+
+    const notes = [
+      'Transport: Private air-conditioned luxury 4x4 or Mercedes minivan with experienced licensed chauffeur.',
+      'Accommodation: Handpicked authentic boutique riads and deluxe Sahara desert camp with private en-suite tent.',
+      'Tailor-Made Flexibility: 100% customizable. Timing, stops, and accommodations can be modified to your exact preferences.'
     ];
-    infoPoints.forEach(pt => {
-      if (doc.y > pageHeight - 40) doc.addPage();
-      doc.fontSize(8.5).fillColor(COLOR_TEXT).font('Helvetica')
-         .text(`• ${pt}`, margin + 6, doc.y, { width: contentWidth - 12, lineGap: 2 });
-      doc.moveDown(0.2);
+    notes.forEach(note => {
+      doc.fontSize(7.8).fillColor(COLOR_MUTED).font('Helvetica')
+         .text(`•  ${note}`, margin + 6, doc.y, { width: contentWidth - 6, lineGap: 1.8 });
+      doc.moveDown(0.15);
     });
 
-    // 8. CONTACT & RESERVATION BOX
-    if (doc.y > pageHeight - 100) doc.addPage();
-    doc.moveDown(0.6);
-    const contactBoxY = doc.y;
-    doc.rect(margin, contactBoxY, contentWidth, 52).fillColor(COLOR_NAVY).fill();
-    doc.rect(margin, contactBoxY, contentWidth, 52).strokeColor(COLOR_GOLD).lineWidth(1).stroke();
+    // Booking & Direct Contact Card
+    if (doc.y > pageHeight - 95) doc.addPage();
+    doc.moveDown(0.4);
 
-    doc.fontSize(10).fillColor(COLOR_GOLD).font('Helvetica-Bold')
-       .text('RESERVATIONS & TAILOR-MADE INQUIRIES', margin + 12, contactBoxY + 8);
-    doc.fontSize(8.5).fillColor('#FFFFFF').font('Helvetica')
-       .text('To book or customize this tour, contact our Marrakech travel designers directly:', margin + 12, contactBoxY + 22);
-    doc.fontSize(8.5).fillColor(COLOR_GOLD).font('Helvetica-Bold')
-       .text('WhatsApp: +212 678-317015  |  Email: contact@saharastartours.com  |  Web: www.saharastartours.com', margin + 12, contactBoxY + 35);
+    const contactY = doc.y;
+    const contactHeight = 52;
+    doc.roundedRect(margin, contactY, contentWidth, contactHeight, 3)
+       .fillColor(COLOR_BG_LIGHT).fill();
+    doc.rect(margin, contactY, 4, contactHeight).fillColor(COLOR_GOLD).fill();
+    doc.roundedRect(margin, contactY, contentWidth, contactHeight, 3)
+       .strokeColor(COLOR_BORDER).lineWidth(0.8).stroke();
+
+    doc.fontSize(9).fillColor(COLOR_NAVY).font('Helvetica-Bold')
+       .text('READY TO BOOK OR CUSTOMIZE THIS EXPEDITION?', margin + 12, contactY + 8, { characterSpacing: 0.6 });
+    doc.fontSize(7.8).fillColor(COLOR_MUTED).font('Helvetica')
+       .text('Contact our Marrakech travel designers directly for instant assistance, route customizations, or booking inquiries:', margin + 12, contactY + 21);
+    doc.fontSize(8.2).fillColor(COLOR_GOLD).font('Helvetica-Bold')
+       .text('WhatsApp: +212 678-317015   •   Email: contact@saharastartours.com   •   Web: www.saharastartours.com', margin + 12, contactY + 34);
 
     // ==========================================
     // TWO-PASS: RUNNING HEADERS, FOOTERS & WATERMARK
@@ -269,26 +400,35 @@ function generateTourPDF(tour) {
     const range = doc.bufferedPageRange();
     for (let i = range.start; i < range.start + range.count; i++) {
       doc.switchToPage(i);
+      // Temporarily disable margins to completely prevent accidental page creation in second pass
+      doc.page.margins.bottom = 0;
+      doc.page.margins.top = 0;
 
-      // A. SUBTLE VISUAL WATERMARK (EVERY PAGE)
+      // A. SUBTLE ANTI-COPY WATERMARK (EVERY PAGE)
       doc.save();
-      doc.fontSize(38);
+      doc.fontSize(34);
       doc.fillColor(COLOR_GOLD);
-      doc.opacity(0.10);
+      doc.opacity(0.08); // Subtle anti-copy deterrent, elegant and does not obstruct text
       doc.rotate(-35, { origin: [pageWidth / 2, pageHeight / 2] });
       doc.text('SAHARA STAR TOURS\nwww.saharastartours.com', 50, (pageHeight / 2) - 40, {
         align: 'center',
-        lineGap: 8
+        lineGap: 10,
+        lineBreak: false
       });
       doc.restore();
 
       // B. RUNNING HEADER (PAGES 2+)
       if (i > 0) {
         doc.save();
-        doc.fontSize(7.5).fillColor(COLOR_MUTED).font('Helvetica');
-        doc.text(`Sahara Star Tours  |  ${tour.shortTitle || tour.title}`, margin, 18, { width: contentWidth - 100 });
-        doc.text(tour.duration, margin + contentWidth - 90, 18, { width: 90, align: 'right' });
-        doc.moveTo(margin, 28).lineTo(margin + contentWidth, 28)
+        const headerY = 22;
+        doc.fontSize(7.2).fillColor(COLOR_NAVY).font('Helvetica-Bold')
+           .text('SAHARA STAR TOURS', margin, headerY, { lineBreak: false });
+        doc.fontSize(7.2).fillColor(COLOR_MUTED).font('Helvetica')
+           .text(displayTitle, margin + 105, headerY, { width: contentWidth - 185, ellipsis: true, lineBreak: false });
+        doc.fontSize(7.2).fillColor(COLOR_GOLD).font('Helvetica-Bold')
+           .text(tour.duration, margin + contentWidth - 80, headerY, { width: 80, align: 'right', lineBreak: false });
+
+        doc.moveTo(margin, headerY + 11).lineTo(margin + contentWidth, headerY + 11)
            .strokeColor(COLOR_BORDER).lineWidth(0.5).stroke();
         doc.restore();
       }
@@ -296,12 +436,17 @@ function generateTourPDF(tour) {
       // C. RUNNING FOOTER (EVERY PAGE)
       doc.save();
       const footerY = pageHeight - 30;
-      doc.moveTo(margin, footerY - 5).lineTo(margin + contentWidth, footerY - 5)
+      doc.moveTo(margin, footerY - 4).lineTo(margin + contentWidth, footerY - 4)
          .strokeColor(COLOR_BORDER).lineWidth(0.5).stroke();
-      doc.fontSize(7.5).fillColor(COLOR_MUTED).font('Helvetica');
-      doc.text('© Sahara Star Tours — Private Itinerary | For Personal Use Only | www.saharastartours.com', margin, footerY, { width: contentWidth - 80 });
-      doc.text(`Page ${i + 1} of ${range.count}`, margin + contentWidth - 70, footerY, { width: 70, align: 'right' });
+
+      doc.fontSize(7).fillColor(COLOR_MUTED).font('Helvetica')
+         .text('© Sahara Star Tours • Private Tailor-Made Morocco Expeditions • www.saharastartours.com', margin, footerY, { lineBreak: false });
+      doc.fontSize(7.2).fillColor(COLOR_MUTED).font('Helvetica')
+         .text(`Page ${i + 1} of ${range.count}`, margin + contentWidth - 60, footerY, { width: 60, align: 'right', lineBreak: false });
       doc.restore();
+
+      doc.page.margins.bottom = margin;
+      doc.page.margins.top = margin;
     }
 
     doc.end();
@@ -312,7 +457,7 @@ function generateTourPDF(tour) {
 }
 
 async function run() {
-  console.log(`Generating PDFs for ${tours.length} tours...`);
+  console.log(`Generating luxury PDFs for ${tours.length} products...`);
   const startTime = Date.now();
   let generated = 0;
 

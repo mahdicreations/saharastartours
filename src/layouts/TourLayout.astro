@@ -209,27 +209,6 @@ const galleryJSON = JSON.stringify(galleryImages);
             </ul>
           </>
         )}
-
-        <!-- Download Detailed Itinerary PDF Bar -->
-        <div class="tour-pdf-download-bar">
-          <div class="tour-pdf-info">
-            <i class="fa-solid fa-file-pdf"></i>
-            <div>
-              <strong>Download Tour Itinerary (PDF)</strong>
-              <span>Complete day-by-day program, inclusions & route details</span>
-            </div>
-          </div>
-          <a 
-            href={`/pdfs/tours/${tourSlug}.pdf`} 
-            download={`${tourSlug}.pdf`}
-            target="_blank" 
-            rel="noopener"
-            class="btn btn-sm btn-primary"
-            title={`Download ${tourName} itinerary PDF`}
-          >
-            <i class="fa-solid fa-download"></i> Download Tour PDF
-          </a>
-        </div>
       </section>
 
       <!-- Day-by-Day Itinerary -->
@@ -646,52 +625,6 @@ const galleryJSON = JSON.stringify(galleryImages);
 </BaseLayout>
 
 <style>
-  /* Tour PDF Download Bar */
-  .tour-pdf-download-bar {
-    margin-top: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    background: linear-gradient(135deg, rgba(200, 146, 75, 0.08) 0%, rgba(10, 15, 29, 0.45) 100%);
-    border: 1px solid rgba(200, 146, 75, 0.28);
-    border-radius: var(--radius-md);
-    padding: 16px 20px;
-    box-sizing: border-box;
-  }
-  .tour-pdf-info {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-  }
-  .tour-pdf-info i {
-    font-size: 1.8rem;
-    color: var(--sand-gold);
-    flex-shrink: 0;
-  }
-  .tour-pdf-info strong {
-    display: block;
-    font-size: 0.98rem;
-    color: var(--text-main);
-    font-weight: 600;
-  }
-  .tour-pdf-info span {
-    font-size: 0.82rem;
-    color: var(--text-muted);
-    line-height: 1.35;
-  }
-  @media (max-width: 640px) {
-    .tour-pdf-download-bar {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 14px;
-      padding: 14px 16px;
-    }
-    .tour-pdf-download-bar .btn {
-      width: 100%;
-      justify-content: center;
-    }
-  }
 
   .milestone-node {
     background: rgba(255, 255, 255, 0.02);
