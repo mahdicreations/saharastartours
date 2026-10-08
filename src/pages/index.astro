@@ -26,7 +26,7 @@ const stats = [
   { value: '2,400+', label: 'Happy Travelers' },
   { value: '98%', label: 'Satisfaction Rate' },
   { value: '15+', label: 'Years Experience' },
-  { value: '31', label: 'Unique Itineraries' },
+  { value: `${allTours.length}`, label: 'Unique Itineraries' },
 ];
 
 // Culture cards
@@ -509,10 +509,11 @@ const homeSchema = {
   </div>
   <div class="starting-cities-grid">
     {[
-      { city: 'Casablanca', badge: 'CMN Airport', desc: 'Morocco\'s largest international hub — most tour packages depart from Casablanca, with private transfers arranged to your first destination.', tours: '21 Departures', img: '/assets/casablanca_gateway.png' },
-      { city: 'Marrakech', badge: 'RAK Airport', desc: 'The Pearl of the South — a magical starting point for desert adventures, day trips, and activities. Perfect for shorter 3-5 day itineraries.', tours: '15 Departures', img: '/assets/marrakech_riad_pool.png' },
-      { city: 'Fes', badge: 'FEZ Airport', desc: 'Begin your Moroccan odyssey in the ancient imperial medina — one-way tours to Marrakech or round trips through the desert.', tours: '8 Departures', img: '/assets/fes_medina_gate.png' },
-      { city: 'Tangier', badge: 'TNG Port', desc: 'Cross from Spain by ferry and explore Morocco from the north — access to Chefchaouen, Tetouan, and imperial cities.', tours: '5 Departures', img: '/assets/tangier_coast.png' },
+      { city: 'Casablanca', badge: 'CMN Airport', desc: 'Morocco\'s primary international hub — grand loop tours and desert expeditions departing directly from Casablanca.', tours: `${allTours.filter(t => t.productType === 'multi-day' && t.departureCity === 'Casablanca').length} Itineraries`, url: '/tours-from-casablanca', img: '/assets/casablanca_gateway.png' },
+      { city: 'Marrakech', badge: 'RAK Airport', desc: 'The Pearl of the South — private multi-day itineraries crossing the High Atlas via Tizi n\'Tichka to Merzouga and Fes.', tours: `${allTours.filter(t => t.productType === 'multi-day' && t.departureCity === 'Marrakech').length} Itineraries`, url: '/tours-from-marrakech', img: '/assets/marrakech_riad_pool.png' },
+      { city: 'Fes', badge: 'FEZ Airport', desc: 'Morocco\'s cultural heart — routes through Middle Atlas cedar forests and Ziz Valley to Erg Chebbi and Marrakech.', tours: `${allTours.filter(t => t.productType === 'multi-day' && t.departureCity === 'Fes').length} Itineraries`, url: '/tours-from-fes', img: '/assets/fes_medina_gate.png' },
+      { city: 'Tangier', badge: 'TNG Port', desc: 'Northern European ferry and flight gateway — journeys through Chefchaouen, Rif mountains, and southward traverses.', tours: `${allTours.filter(t => t.productType === 'multi-day' && t.departureCity === 'Tangier').length} Itineraries`, url: '/tours-from-tangier', img: '/assets/tangier_coast.png' },
+      { city: 'Ouarzazate', badge: 'OZZ Airport', desc: 'The Door of the Desert — direct Sahara threshold routes through Todra Gorge, Skoura, and Merzouga dunes.', tours: `${allTours.filter(t => t.productType === 'multi-day' && t.departureCity === 'Ouarzazate').length} Itineraries`, url: '/tours-from-ouarzazate', img: '/assets/atlas_mountains_valley.png' },
     ].map(c => (
       <div class="city-card reveal active">
         <div class="city-img-wrapper">
@@ -526,7 +527,7 @@ const homeSchema = {
             <span><i class="fa-solid fa-plane-departure"></i> {c.tours}</span>
           </div>
           <div class="city-footer">
-            <a href="/desert-tours" class="btn btn-primary btn-sm">View Packages</a>
+            <a href={c.url} class="btn btn-primary btn-sm">Explore {c.city} Tours</a>
           </div>
         </div>
       </div>

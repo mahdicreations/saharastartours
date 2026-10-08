@@ -34,6 +34,7 @@ interface Props {
   mapRouteCoordinates?: [number, number][];
   galleryImages?: Array<{ src: string; cap: string }>;
   relatedTours?: Array<{ slug: string; shortTitle: string; duration: string; price: string; heroImage: string }>;
+  faqs?: Array<{ question: string; answer: string }>;
   schemaData?: Record<string, unknown>;
 }
 
@@ -57,10 +58,11 @@ const {
   mapRouteCoordinates = [],
   galleryImages = [],
   relatedTours = [],
+  faqs = [],
   schemaData,
 } = Astro.props;
 
-// Build Tour schema
+// Build Tour schema (TouristTrip with authentic page data only)
 const tourSchema = schemaData ?? {
   "@context": "https://schema.org",
   "@type": "TouristTrip",
@@ -73,11 +75,6 @@ const tourSchema = schemaData ?? {
     "@type": "TravelAgency",
     "name": "Sahara Star Tours",
     "url": "https://www.saharastartours.com"
-  },
-  offers: {
-    "@type": "Offer",
-    "description": price,
-    "availability": "https://schema.org/InStock"
   }
 };
 
@@ -98,7 +95,7 @@ const galleryJSON = JSON.stringify(galleryImages);
       <img 
         src={heroImage} 
         alt={tourName} 
-        onerror="this.src='/assets/hero_sahara_sunset.png'"
+        onerror="this.src='/assets/placeholder-morocco.svg'"
       />
     </div>
     <div class="tour-hero-gradient"></div>
@@ -212,6 +209,27 @@ const galleryJSON = JSON.stringify(galleryImages);
             </ul>
           </>
         )}
+
+        <!-- Download Detailed Itinerary PDF Bar -->
+        <div class="tour-pdf-download-bar">
+          <div class="tour-pdf-info">
+            <i class="fa-solid fa-file-pdf"></i>
+            <div>
+              <strong>Download Tour Itinerary (PDF)</strong>
+              <span>Complete day-by-day program, inclusions & route details</span>
+            </div>
+          </div>
+          <a 
+            href={`/pdfs/tours/${tourSlug}.pdf`} 
+            download={`${tourSlug}.pdf`}
+            target="_blank" 
+            rel="noopener"
+            class="btn btn-sm btn-primary"
+            title={`Download ${tourName} itinerary PDF`}
+          >
+            <i class="fa-solid fa-download"></i> Download Tour PDF
+          </a>
+        </div>
       </section>
 
       <!-- Day-by-Day Itinerary -->
@@ -242,7 +260,7 @@ const galleryJSON = JSON.stringify(galleryImages);
                   src={img.src} 
                   alt={img.cap} 
                   loading="lazy" 
-                  onerror="this.src='/assets/hero_sahara_sunset.png'" 
+                  onerror="this.src='/assets/placeholder-morocco.svg'" 
                 />
                 <div class="gallery-overlay"><i class="fa-solid fa-maximize"></i></div>
               </div>
@@ -286,26 +304,37 @@ const galleryJSON = JSON.stringify(galleryImages);
       <section class="faq-card reveal active" id="tour-faq">
         <h3><i class="fa-solid fa-circle-question" style="color:var(--sand-gold); margin-right:8px;"></i> Frequently Asked Questions</h3>
         <div class="faq-list">
-          <details class="faq-item" open>
-            <summary class="faq-question">What luggage and clothing should I pack for this trip? <i class="fa-solid fa-chevron-down"></i></summary>
-            <div class="faq-answer"><p>We recommend comfortable walking shoes for medina cobbles and dunes, loose breathable cotton layers for daytime exploration, and a warm fleece or jacket for crisp desert evenings and mountain passes. Sunglasses, sunscreen, a hat, and a camera are essential.</p></div>
-          </details>
-          <details class="faq-item">
-            <summary class="faq-question">Can this itinerary and accommodation level be customized? <i class="fa-solid fa-chevron-down"></i></summary>
-            <div class="faq-answer"><p>Yes, absolutely! Every Sahara Star Tours package is 100% private and customizable. We can adjust the pacing, departure city, hotel tiers (Standard Riads, Comfort Boutique, or 5-Star Luxury Glamping), and add unique stops to match your travel dreams.</p></div>
-          </details>
-          <details class="faq-item">
-            <summary class="faq-question">Where does pickup and drop-off take place? <i class="fa-solid fa-chevron-down"></i></summary>
-            <div class="faq-answer"><p>We provide seamless door-to-door pickup and drop-off directly from your hotel, riad, or airport in {startingFrom}. Your private English-speaking driver/guide will greet you warmly with personalized signage.</p></div>
-          </details>
-          <details class="faq-item">
-            <summary class="faq-question">Are special dietary requirements catered for? <i class="fa-solid fa-chevron-down"></i></summary>
-            <div class="faq-answer"><p>Yes, all partner riads and our Sahara desert luxury camp chefs cater happily to vegetarian, vegan, halal, and gluten-free dietary requirements. Simply let us know your preferences during booking.</p></div>
-          </details>
-          <details class="faq-item">
-            <summary class="faq-question">How do reservations and deposits work? <i class="fa-solid fa-chevron-down"></i></summary>
-            <div class="faq-answer"><p>After submitting your inquiry, our local travel specialists in Marrakech will confirm availability and send your official itinerary voucher. A modest deposit secures your dates via credit card, PayPal, or wire transfer, with the balance paid safely upon arrival.</p></div>
-          </details>
+          {faqs && faqs.length > 0 ? (
+            faqs.map((f, idx) => (
+              <details class="faq-item" open={idx === 0}>
+                <summary class="faq-question">{f.question} <i class="fa-solid fa-chevron-down"></i></summary>
+                <div class="faq-answer"><p>{f.answer}</p></div>
+              </details>
+            ))
+          ) : (
+            <>
+              <details class="faq-item" open>
+                <summary class="faq-question">What luggage and clothing should I pack for this trip? <i class="fa-solid fa-chevron-down"></i></summary>
+                <div class="faq-answer"><p>We recommend comfortable walking shoes for medina cobbles and dunes, loose breathable cotton layers for daytime exploration, and a warm fleece or jacket for crisp desert evenings and mountain passes. Sunglasses, sunscreen, a hat, and a camera are essential.</p></div>
+              </details>
+              <details class="faq-item">
+                <summary class="faq-question">Can this itinerary and accommodation level be customized? <i class="fa-solid fa-chevron-down"></i></summary>
+                <div class="faq-answer"><p>Yes, absolutely! Every Sahara Star Tours package is 100% private and customizable. We can adjust the pacing, departure city, hotel tiers (Standard Riads, Comfort Boutique, or 5-Star Luxury Glamping), and add unique stops to match your travel dreams.</p></div>
+              </details>
+              <details class="faq-item">
+                <summary class="faq-question">Where does pickup and drop-off take place? <i class="fa-solid fa-chevron-down"></i></summary>
+                <div class="faq-answer"><p>We provide seamless door-to-door pickup and drop-off directly from your hotel, riad, or airport in {startingFrom}. Your private English-speaking driver/guide will greet you warmly with personalized signage.</p></div>
+              </details>
+              <details class="faq-item">
+                <summary class="faq-question">Are special dietary requirements catered for? <i class="fa-solid fa-chevron-down"></i></summary>
+                <div class="faq-answer"><p>Yes, all partner riads and our Sahara desert luxury camp chefs cater happily to vegetarian, vegan, halal, and gluten-free dietary requirements. Simply let us know your preferences during booking.</p></div>
+              </details>
+              <details class="faq-item">
+                <summary class="faq-question">How do reservations and deposits work? <i class="fa-solid fa-chevron-down"></i></summary>
+                <div class="faq-answer"><p>After submitting your inquiry, our local travel specialists in Marrakech will confirm availability and send your official itinerary voucher. A modest deposit secures your dates via credit card, PayPal, or wire transfer, with the balance paid safely upon arrival.</p></div>
+              </details>
+            </>
+          )}
         </div>
       </section>
 
@@ -317,7 +346,7 @@ const galleryJSON = JSON.stringify(galleryImages);
             {relatedTours.map(rt => (
               <a href={`/tours/${rt.slug}`} class="related-tour-item">
                 <div class="related-tour-img">
-                  <img src={rt.heroImage} alt={rt.shortTitle} loading="lazy" onerror="this.src='/assets/hero_sahara_sunset.png'" />
+                  <img src={rt.heroImage} alt={rt.shortTitle} loading="lazy" onerror="this.src='/assets/placeholder-morocco.svg'" />
                 </div>
                 <div class="related-tour-content">
                   <span class="related-tour-dur"><i class="fa-regular fa-clock"></i> {rt.duration}</span>
@@ -433,6 +462,18 @@ const galleryJSON = JSON.stringify(galleryImages);
           </li>
         </ul>
         <hr style="border:none;border-top:1px solid var(--glass-border);margin:20px 0;" />
+        <a 
+          href={`/pdfs/tours/${tourSlug}.pdf`} 
+          download={`${tourSlug}.pdf`}
+          target="_blank" 
+          rel="noopener"
+          class="btn btn-secondary" 
+          style="width:100%;justify-content:center;gap:10px;margin-bottom:10px;border-color:rgba(212,163,115,0.4);"
+          title={`Download ${tourName} itinerary PDF`}
+        >
+          <i class="fa-solid fa-file-pdf" style="color:var(--sand-gold);font-size:1.1rem;"></i>
+          <span>Download Tour PDF</span>
+        </a>
         <a href="https://wa.me/212678317015" target="_blank" rel="noopener" class="btn btn-secondary" style="width:100%;justify-content:center;gap:10px;">
           <i class="fa-brands fa-whatsapp" style="color:#25D366;font-size:1.2rem;"></i> WhatsApp Us
         </a>
@@ -605,6 +646,53 @@ const galleryJSON = JSON.stringify(galleryImages);
 </BaseLayout>
 
 <style>
+  /* Tour PDF Download Bar */
+  .tour-pdf-download-bar {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    background: linear-gradient(135deg, rgba(200, 146, 75, 0.08) 0%, rgba(10, 15, 29, 0.45) 100%);
+    border: 1px solid rgba(200, 146, 75, 0.28);
+    border-radius: var(--radius-md);
+    padding: 16px 20px;
+    box-sizing: border-box;
+  }
+  .tour-pdf-info {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .tour-pdf-info i {
+    font-size: 1.8rem;
+    color: var(--sand-gold);
+    flex-shrink: 0;
+  }
+  .tour-pdf-info strong {
+    display: block;
+    font-size: 0.98rem;
+    color: var(--text-main);
+    font-weight: 600;
+  }
+  .tour-pdf-info span {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.35;
+  }
+  @media (max-width: 640px) {
+    .tour-pdf-download-bar {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 14px 16px;
+    }
+    .tour-pdf-download-bar .btn {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
   .milestone-node {
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid var(--glass-border);

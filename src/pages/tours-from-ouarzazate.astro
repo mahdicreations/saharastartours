@@ -1,0 +1,348 @@
+---
+// src/pages/tours-from-ouarzazate.astro — Dedicated Ouarzazate Departure Hub
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getMultiDayToursByCity } from '../data/tours';
+
+const tours = getMultiDayToursByCity('Ouarzazate');
+
+const ouarzazateSchema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Private Morocco Tours from Ouarzazate | Sahara Star Tours",
+  "description": `Browse our complete collection of ${tours.length} private multi-day Morocco desert tours departing from Ouarzazate. Gateway to Erg Chebbi, Draa Valley, Todra Gorge, and scenic desert traverses to Fes and Marrakech.`,
+  "url": "https://www.saharastartours.com/tours-from-ouarzazate"
+};
+---
+
+<BaseLayout
+  title={`Tours from Ouarzazate (${tours.length} Private Sahara Desert Traverses) | Sahara Star Tours`}
+  description={`Book authentic private desert tours from Ouarzazate to Fes and Marrakech. Explore Taourirt Kasbah, Dades and Todra gorges, ride camels in Erg Chebbi, and sleep under desert stars.`}
+  keywords="tours from ouarzazate, ouarzazate desert tour, ouarzazate to fes tour, ouarzazate to marrakech tour, merzouga from ouarzazate"
+  currentPage="tours"
+  schemaData={ouarzazateSchema}
+>
+
+<!-- CITY HERO SECTION -->
+<section class="city-hero">
+  <div class="city-hero-overlay"></div>
+  <div class="city-hero-content">
+    <nav class="city-breadcrumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
+      <a href="/tours">Multi-Day Tours</a>
+      <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
+      <span class="current">Tours from Ouarzazate</span>
+    </nav>
+    <span class="tag"><i class="fa-solid fa-video"></i> The Door of the Sahara Desert</span>
+    <h1>Private Morocco Tours from Ouarzazate</h1>
+    <p>Ouarzazate is Morocco's legendary desert threshold and cinematic capital. Situated directly between the High Atlas mountains and the Sahara sands, starting your tour here eliminates mountain transit time and plunges you immediately into the valley of a thousand kasbahs, the sheer walls of Todra Gorge, and the golden dunes of Merzouga before continuing onward to Fes or Marrakech.</p>
+  </div>
+</section>
+
+<!-- LOCAL EDITORIAL / ROUTE INSIGHTS -->
+<section class="city-editorial-section">
+  <div class="city-editorial-container">
+    <div class="city-editorial-grid">
+      <div class="editorial-card">
+        <div class="editorial-icon"><i class="fa-solid fa-clapperboard"></i></div>
+        <h3>Hollywood of Morocco</h3>
+        <p>Home to the Atlas Film Studios and historic Taourirt Kasbah, Ouarzazate offers a fascinating glimpse into cinematic history where films like Gladiator, Kingdom of Heaven, and The Mummy were shot.</p>
+      </div>
+      <div class="editorial-card">
+        <div class="editorial-icon"><i class="fa-solid fa-gem"></i></div>
+        <h3>Direct Valley &amp; Gorge Transit</h3>
+        <p>Departing from Ouarzazate allows immediate access to the Skoura palm oasis, the fragrant Valley of Roses, and the dramatic 300-meter limestone cliffs of Todra Gorge without long highway detours.</p>
+      </div>
+      <div class="editorial-card">
+        <div class="editorial-icon"><i class="fa-solid fa-campground"></i></div>
+        <h3>Erg Chebbi Merzouga Glamping</h3>
+        <p>Experience camel trekking and sunset photography across the highest sea of dunes in Morocco, followed by Berber storytelling and live drum music at a private luxury camp.</p>
+      </div>
+      <div class="editorial-card">
+        <div class="editorial-icon"><i class="fa-solid fa-arrows-turn-to-dots"></i></div>
+        <h3>Strategic Traverse Endpoints</h3>
+        <p>Our Ouarzazate itineraries are designed as high-value traverses: travel through the desert and conclude in the ancient medina of Fes, or loop westward across the Atlas to Marrakech.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOURS CATALOGUE BODY -->
+<section class="city-catalog-body">
+  <div class="city-catalog-container">
+    
+    <!-- Header -->
+    <div class="city-filter-panel">
+      <div class="filter-header-left">
+        <h2>{tours.length} Private Desert Traverses Departing Ouarzazate</h2>
+        <p>Door-to-door hotel/airport pickup in Ouarzazate with private 4x4 vehicle and desert driver</p>
+      </div>
+    </div>
+
+    <!-- Tours Grid -->
+    <div class="city-tours-grid">
+      {tours.map(tour => (
+        <article class="tour-card reveal active">
+          <div class="tour-img-wrapper">
+            <img 
+              src={tour.heroImage} 
+              alt={tour.shortTitle} 
+              loading="lazy"
+              onerror="this.src='/assets/placeholder-morocco.svg'"
+            />
+            {tour.badge && <span class="tour-badge">{tour.badge}</span>}
+          </div>
+          <div class="tour-info">
+            <div class="tour-meta">
+              <div><i class="fa-regular fa-clock"></i> {tour.duration}</div>
+              <div><i class="fa-solid fa-location-dot"></i> To: {tour.arrivalCity}</div>
+            </div>
+            <h3 class="tour-title" style="font-size:1.35rem;">{tour.shortTitle}</h3>
+            <p class="tour-desc">{tour.description}</p>
+            <div class="tour-footer">
+              <div class="tour-price">
+                <span class="tour-price-label">Starting from</span>
+                <span class="tour-price-value">{tour.price.replace(/^From\s*/i, '').replace(/\/person\s*/i, '').trim()}</span>
+              </div>
+              <a href={`/tours/${tour.slug}`} class="btn btn-primary btn-sm">
+                View Itinerary <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+
+  </div>
+</section>
+
+<!-- OTHER DEPARTURE HUBS NAVIGATION -->
+<section class="other-hubs-nav">
+  <div class="other-hubs-container">
+    <h3>Explore Multi-Day Tours from Other Departure Cities</h3>
+    <div class="other-hubs-pills">
+      <a href="/tours-from-marrakech" class="hub-pill"><i class="fa-solid fa-sun"></i> Tours from Marrakech</a>
+      <a href="/tours-from-casablanca" class="hub-pill"><i class="fa-solid fa-plane-arrival"></i> Tours from Casablanca</a>
+      <a href="/tours-from-fes" class="hub-pill"><i class="fa-solid fa-landmark"></i> Tours from Fes</a>
+      <a href="/tours-from-tangier" class="hub-pill"><i class="fa-solid fa-ship"></i> Tours from Tangier</a>
+      <a href="/tours" class="hub-pill active"><i class="fa-solid fa-compass"></i> View All Multi-Day Tours</a>
+    </div>
+  </div>
+</section>
+
+</BaseLayout>
+
+<style>
+.city-hero {
+  position: relative;
+  padding: 160px 5% 70px;
+  text-align: center;
+  background: radial-gradient(circle at 50% 30%, rgba(217, 107, 67, 0.18) 0%, transparent 60%), linear-gradient(180deg, var(--night-surface) 0%, var(--night-bg) 100%);
+  border-bottom: 1px solid var(--glass-border);
+  overflow: hidden;
+}
+
+.city-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('/assets/zellij_pattern.svg');
+  background-repeat: repeat;
+  background-size: 180px 180px;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.city-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.city-breadcrumbs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.city-breadcrumbs a {
+  color: var(--text-muted);
+  transition: color 0.3s;
+}
+
+.city-breadcrumbs a:hover {
+  color: var(--sand-gold);
+}
+
+.city-breadcrumbs .sep {
+  font-size: 0.7rem;
+  opacity: 0.5;
+}
+
+.city-breadcrumbs .current {
+  color: var(--sand-gold);
+  font-weight: 500;
+}
+
+.city-hero h1 {
+  font-size: 3rem;
+  line-height: 1.15;
+  margin: 16px 0 20px;
+  background: linear-gradient(135deg, var(--text-main) 30%, var(--sand-gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.city-hero p {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* Editorial cards */
+.city-editorial-section {
+  padding: 50px 5% 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.city-editorial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+}
+
+.editorial-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  padding: 26px 22px;
+  transition: all 0.3s ease;
+}
+
+.editorial-card:hover {
+  border-color: var(--sand-gold);
+  transform: translateY(-2px);
+}
+
+.editorial-icon {
+  font-size: 1.6rem;
+  color: var(--sand-gold);
+  margin-bottom: 14px;
+}
+
+.editorial-card h3 {
+  font-size: 1.15rem;
+  color: var(--text-main);
+  margin: 0 0 8px;
+}
+
+.editorial-card p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Catalog Body */
+.city-catalog-body {
+  padding: 40px 0 80px;
+}
+
+.city-catalog-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.city-filter-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 40px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.filter-header-left h2 {
+  font-size: 1.6rem;
+  color: var(--text-main);
+  margin: 0 0 6px;
+}
+
+.filter-header-left p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.city-tours-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 32px;
+}
+
+/* Other Hubs Navigation */
+.other-hubs-nav {
+  padding: 30px 5% 90px;
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.other-hubs-nav h3 {
+  font-size: 1.25rem;
+  color: var(--text-main);
+  margin-bottom: 20px;
+}
+
+.other-hubs-pills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.hub-pill {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--glass-border);
+  color: var(--text-muted);
+  border-radius: 30px;
+  padding: 8px 20px;
+  font-size: 0.85rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s;
+}
+
+.hub-pill:hover {
+  color: var(--sand-gold);
+  border-color: var(--sand-gold);
+  transform: translateY(-2px);
+}
+
+.hub-pill.active {
+  border-color: var(--sand-gold);
+  color: var(--sand-gold);
+}
+
+@media (max-width: 900px) {
+  .city-filter-panel {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .city-hero h1 {
+    font-size: 2.2rem;
+  }
+}
+</style>

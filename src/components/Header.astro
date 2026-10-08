@@ -1,10 +1,25 @@
 ---
-// Header.astro — Single shared header for ALL pages
-// Props: currentPage helps set .active class on nav links
+import { 
+  getMultiDayToursByCity, 
+  getImperialCitiesTours, 
+  getDayTrips, 
+  getActivities 
+} from '../data/tours';
+
 interface Props {
   currentPage?: string;
 }
 const { currentPage = "" } = Astro.props;
+
+// Dynamic Tour Data for Mega Menu
+const marrakechTours = getMultiDayToursByCity('Marrakech');
+const casablancaTours = getMultiDayToursByCity('Casablanca');
+const fesTours = getMultiDayToursByCity('Fes');
+const tangierTours = getMultiDayToursByCity('Tangier');
+const ouarzazateTours = getMultiDayToursByCity('Ouarzazate');
+const imperialTours = getImperialCitiesTours();
+const dayTrips = getDayTrips();
+const activities = getActivities();
 
 // Flag SVGs as inline strings (no external requests, no errors)
 const ukFlag = `<svg class="lang-flag-svg" viewBox="0 0 640 480"><path fill="#012169" d="M0 0h640v480H0z"/><path fill="#FFF" d="m75 0 244 181L562 0h78v62L400 241l240 178v61h-80L320 301 81 480H0v-60l239-178L0 64V0h75z"/><path fill="#C8102E" d="m424 288 216 153v39H584L368 320h56zm-208-96L0 39V0h56l216 152h-56zm264-192h160v114L480 0zm-360 0L0 86V0h120zm0 480L0 394v86h120zm400 0h120v-86L520 480z"/><path fill="#FFF" d="M240 0h160v480H240zM0 160h640v160H0z"/><path fill="#C8102E" d="M267 0h106v480H267zM0 187h640v106H0z"/></svg>`;
@@ -153,257 +168,361 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="c
         >
       </li>
 
-      <li class="has-dropdown">
+      <li class="has-dropdown has-megamenu">
         <div class="nav-item-row">
           <a
-            href="/desert-tours"
-            class={`nav-link-main ${currentPage === "desert-tours" ? "active" : ""}`}
+            href="/tours"
+            class={`nav-link-main ${currentPage === "tours" ? "active" : ""}`}
             @click="closeMobileMenu()"
           >
-            Desert Tours <i class="fa-solid fa-chevron-down desktop-chevron"
-            ></i>
+            Tours <i class="fa-solid fa-chevron-down desktop-chevron"></i>
           </a>
           <button
             type="button"
             class="mobile-submenu-toggle mobile-only"
-            @click.stop="toggleDropdown('desert')"
-            :class="activeDropdowns['desert'] ? 'active' : ''"
-            :aria-expanded="activeDropdowns['desert'] ? 'true' : 'false'"
-            aria-label="Toggle Desert Tours submenu"
+            @click.stop="toggleDropdown('tours')"
+            :class="activeDropdowns['tours'] ? 'active' : ''"
+            :aria-expanded="activeDropdowns['tours'] ? 'true' : 'false'"
+            aria-label="Toggle Tours submenu"
           >
             <i
               class="fa-solid fa-chevron-down"
-              :class="activeDropdowns['desert'] ? 'rotated' : ''"></i>
+              :class="activeDropdowns['tours'] ? 'rotated' : ''"></i>
           </button>
         </div>
-        <ul
-          class="dropdown-menu megamenu-two-col"
-          :class="activeDropdowns['desert'] ? 'open' : ''"
-        >
-          <li class="megamenu-col">
-            <span class="megamenu-title-badge"
-              ><i class="fa-solid fa-plane-departure"></i> From Casablanca</span
-            >
-            <a
-              href="/tours/6-days-desert-tour-from-casablanca"
-              @click="closeMobileMenu()">6 Days Desert Tour from Casablanca</a
-            >
-            <a
-              href="/tours/7-day-morocco-tour-from-casablanca"
-              @click="closeMobileMenu()">Best 7-Day Morocco Tour (7 Days)</a
-            >
-            <a
-              href="/tours/8-days-itinerary-tour-from-casablanca"
-              @click="closeMobileMenu()">Ideal Morocco 8 Days Itinerary</a
-            >
-            <a
-              href="/tours/9-day-authentic-morocco-tour"
-              @click="closeMobileMenu()">9 Day Authentic Morocco Tour</a
-            >
-            <a
-              href="/tours/9-days-desert-imperial-cities"
-              @click="closeMobileMenu()">9 Days Desert &amp; Imperial Cities</a
-            >
-            <a
-              href="/tours/10-days-morocco-couple-tour"
-              @click="closeMobileMenu()">10 Days Morocco Tour from Casablanca</a
-            >
-            <a
-              href="/tours/10-days-imperial-cities-tour"
-              @click="closeMobileMenu()">10 Days Desert Tour from Casablanca</a
-            >
-            <a
-              href="/tours/12-days-tour-from-casablanca"
-              @click="closeMobileMenu()">12 Days Tour from Casablanca</a
-            >
-            <a
-              href="/tours/private-12-days-desert-marrakech"
-              @click="closeMobileMenu()"
-              >Private 12 Days Desert &amp; Marrakech</a
-            >
-            <a href="/tours/12-days-morocco-tour" @click="closeMobileMenu()"
-              >Best 12 Days Morocco Tour</a
-            >
-            <a
-              href="/tours/16-days-morocco-tour-from-casablanca"
-              @click="closeMobileMenu()">16 Days Morocco Tour from Casablanca</a
-            >
-          </li>
-          <li class="megamenu-col">
-            <span class="megamenu-title-badge"
-              ><i class="fa-solid fa-plane-departure"></i> From Marrakech</span
-            >
-            <a
-              href="/tours/3-days-desert-tour-marrakech-to-fes"
-              @click="closeMobileMenu()">3 Days Tour Marrakech to Merzouga</a
-            >
-            <a
-              href="/tours/4-days-marrakech-desert-tour"
-              @click="closeMobileMenu()">Ideal 4 Days Marrakech Desert Tour</a
-            >
-            <a
-              href="/tours/5-days-tour-marrakech-to-merzouga"
-              @click="closeMobileMenu()">5 Days Tour Marrakech to Merzouga</a
-            >
-          </li>
-        </ul>
+
+        <!-- 1. DESKTOP MEGA MENU (5 City Columns + Category Strip) -->
+        <div class="tours-megamenu desktop-only" aria-label="Tours Navigation">
+          <div class="megamenu-cities-grid">
+            <!-- Marrakech Column -->
+            <div class="megamenu-col">
+              <div class="megamenu-col-header">
+                <a href="/tours-from-marrakech" class="megamenu-city-title">
+                  <i class="fa-solid fa-location-dot"></i> Tours from Marrakech
+                </a>
+              </div>
+              <ul class="megamenu-tour-list">
+                {marrakechTours.slice(0, 4).map(tour => (
+                  <li>
+                    <a href={`/tours/${tour.slug}`} class="megamenu-tour-link">
+                      <span class="megamenu-tour-name">{tour.shortTitle}</span>
+                      <span class="megamenu-tour-dur">{tour.duration}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              <a href="/tours-from-marrakech" class="megamenu-view-all">
+                <span>View All ({marrakechTours.length})</span> <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+
+            <!-- Casablanca Column -->
+            <div class="megamenu-col">
+              <div class="megamenu-col-header">
+                <a href="/tours-from-casablanca" class="megamenu-city-title">
+                  <i class="fa-solid fa-location-dot"></i> Tours from Casablanca
+                </a>
+              </div>
+              <ul class="megamenu-tour-list">
+                {casablancaTours.slice(0, 4).map(tour => (
+                  <li>
+                    <a href={`/tours/${tour.slug}`} class="megamenu-tour-link">
+                      <span class="megamenu-tour-name">{tour.shortTitle}</span>
+                      <span class="megamenu-tour-dur">{tour.duration}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              <a href="/tours-from-casablanca" class="megamenu-view-all">
+                <span>View All ({casablancaTours.length})</span> <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+
+            <!-- Fes Column -->
+            <div class="megamenu-col">
+              <div class="megamenu-col-header">
+                <a href="/tours-from-fes" class="megamenu-city-title">
+                  <i class="fa-solid fa-location-dot"></i> Tours from Fes
+                </a>
+              </div>
+              <ul class="megamenu-tour-list">
+                {fesTours.slice(0, 4).map(tour => (
+                  <li>
+                    <a href={`/tours/${tour.slug}`} class="megamenu-tour-link">
+                      <span class="megamenu-tour-name">{tour.shortTitle}</span>
+                      <span class="megamenu-tour-dur">{tour.duration}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              <a href="/tours-from-fes" class="megamenu-view-all">
+                <span>View All ({fesTours.length})</span> <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+
+            <!-- Tangier Column -->
+            <div class="megamenu-col">
+              <div class="megamenu-col-header">
+                <a href="/tours-from-tangier" class="megamenu-city-title">
+                  <i class="fa-solid fa-location-dot"></i> Tours from Tangier
+                </a>
+              </div>
+              <ul class="megamenu-tour-list">
+                {tangierTours.slice(0, 4).map(tour => (
+                  <li>
+                    <a href={`/tours/${tour.slug}`} class="megamenu-tour-link">
+                      <span class="megamenu-tour-name">{tour.shortTitle}</span>
+                      <span class="megamenu-tour-dur">{tour.duration}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              <a href="/tours-from-tangier" class="megamenu-view-all">
+                <span>View All ({tangierTours.length})</span> <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+
+            <!-- Ouarzazate Column -->
+            <div class="megamenu-col">
+              <div class="megamenu-col-header">
+                <a href="/tours-from-ouarzazate" class="megamenu-city-title">
+                  <i class="fa-solid fa-location-dot"></i> Tours from Ouarzazate
+                </a>
+              </div>
+              <ul class="megamenu-tour-list">
+                {ouarzazateTours.map(tour => (
+                  <li>
+                    <a href={`/tours/${tour.slug}`} class="megamenu-tour-link">
+                      <span class="megamenu-tour-name">{tour.shortTitle}</span>
+                      <span class="megamenu-tour-dur">{tour.duration}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              <a href="/tours-from-ouarzazate" class="megamenu-view-all">
+                <span>View All ({ouarzazateTours.length})</span> <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Bottom Strip: Thematic Categories & View All Multi-Day Tours -->
+          <div class="megamenu-bottom-strip">
+            <div class="megamenu-thematic-items">
+              <a href="/imperial-cities" class="megamenu-thematic-card">
+                <i class="fa-solid fa-landmark-dome"></i>
+                <div>
+                  <strong>Imperial Cities</strong>
+                  <span>8 Cultural Circuits</span>
+                </div>
+              </a>
+              <a href="/day-trips" class="megamenu-thematic-card">
+                <i class="fa-solid fa-sun"></i>
+                <div>
+                  <strong>Day Trips</strong>
+                  <span>6 Marrakech Excursions</span>
+                </div>
+              </a>
+              <a href="/activities" class="megamenu-thematic-card">
+                <i class="fa-solid fa-person-hiking"></i>
+                <div>
+                  <strong>Activities</strong>
+                  <span>6 Desert Experiences</span>
+                </div>
+              </a>
+            </div>
+            <div class="megamenu-all-cta">
+              <a href="/tours" class="btn btn-primary btn-sm">
+                <i class="fa-solid fa-compass"></i> View All Multi-Day Tours (45) <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. MOBILE NESTED DRAWER ACCORDION -->
+        <div class="mobile-tours-accordion mobile-only" :class="activeDropdowns['tours'] ? 'open' : ''">
+          <!-- Marrakech -->
+          <div class="mobile-sub-group">
+            <div class="mobile-sub-header" @click.stop="toggleDropdown('m_marrakech')">
+              <span class="mobile-sub-title"><i class="fa-solid fa-location-dot"></i> Tours from Marrakech ({marrakechTours.length})</span>
+              <i class="fa-solid fa-chevron-down mobile-sub-chevron" :class="activeDropdowns['m_marrakech'] ? 'rotated' : ''"></i>
+            </div>
+            <div class="mobile-sub-body" :class="activeDropdowns['m_marrakech'] ? 'open' : ''">
+              {marrakechTours.slice(0, 4).map(tour => (
+                <a href={`/tours/${tour.slug}`} @click="closeMobileMenu()" class="mobile-sub-tour-link">
+                  <span>{tour.shortTitle}</span>
+                  <small>{tour.duration}</small>
+                </a>
+              ))}
+              <a href="/tours-from-marrakech" @click="closeMobileMenu()" class="mobile-sub-view-all">
+                View All Marrakech Tours ({marrakechTours.length}) →
+              </a>
+            </div>
+          </div>
+
+          <!-- Casablanca -->
+          <div class="mobile-sub-group">
+            <div class="mobile-sub-header" @click.stop="toggleDropdown('m_casablanca')">
+              <span class="mobile-sub-title"><i class="fa-solid fa-location-dot"></i> Tours from Casablanca ({casablancaTours.length})</span>
+              <i class="fa-solid fa-chevron-down mobile-sub-chevron" :class="activeDropdowns['m_casablanca'] ? 'rotated' : ''"></i>
+            </div>
+            <div class="mobile-sub-body" :class="activeDropdowns['m_casablanca'] ? 'open' : ''">
+              {casablancaTours.slice(0, 4).map(tour => (
+                <a href={`/tours/${tour.slug}`} @click="closeMobileMenu()" class="mobile-sub-tour-link">
+                  <span>{tour.shortTitle}</span>
+                  <small>{tour.duration}</small>
+                </a>
+              ))}
+              <a href="/tours-from-casablanca" @click="closeMobileMenu()" class="mobile-sub-view-all">
+                View All Casablanca Tours ({casablancaTours.length}) →
+              </a>
+            </div>
+          </div>
+
+          <!-- Fes -->
+          <div class="mobile-sub-group">
+            <div class="mobile-sub-header" @click.stop="toggleDropdown('m_fes')">
+              <span class="mobile-sub-title"><i class="fa-solid fa-location-dot"></i> Tours from Fes ({fesTours.length})</span>
+              <i class="fa-solid fa-chevron-down mobile-sub-chevron" :class="activeDropdowns['m_fes'] ? 'rotated' : ''"></i>
+            </div>
+            <div class="mobile-sub-body" :class="activeDropdowns['m_fes'] ? 'open' : ''">
+              {fesTours.slice(0, 4).map(tour => (
+                <a href={`/tours/${tour.slug}`} @click="closeMobileMenu()" class="mobile-sub-tour-link">
+                  <span>{tour.shortTitle}</span>
+                  <small>{tour.duration}</small>
+                </a>
+              ))}
+              <a href="/tours-from-fes" @click="closeMobileMenu()" class="mobile-sub-view-all">
+                View All Fes Tours ({fesTours.length}) →
+              </a>
+            </div>
+          </div>
+
+          <!-- Tangier -->
+          <div class="mobile-sub-group">
+            <div class="mobile-sub-header" @click.stop="toggleDropdown('m_tangier')">
+              <span class="mobile-sub-title"><i class="fa-solid fa-location-dot"></i> Tours from Tangier ({tangierTours.length})</span>
+              <i class="fa-solid fa-chevron-down mobile-sub-chevron" :class="activeDropdowns['m_tangier'] ? 'rotated' : ''"></i>
+            </div>
+            <div class="mobile-sub-body" :class="activeDropdowns['m_tangier'] ? 'open' : ''">
+              {tangierTours.slice(0, 4).map(tour => (
+                <a href={`/tours/${tour.slug}`} @click="closeMobileMenu()" class="mobile-sub-tour-link">
+                  <span>{tour.shortTitle}</span>
+                  <small>{tour.duration}</small>
+                </a>
+              ))}
+              <a href="/tours-from-tangier" @click="closeMobileMenu()" class="mobile-sub-view-all">
+                View All Tangier Tours ({tangierTours.length}) →
+              </a>
+            </div>
+          </div>
+
+          <!-- Ouarzazate -->
+          <div class="mobile-sub-group">
+            <div class="mobile-sub-header" @click.stop="toggleDropdown('m_ouarzazate')">
+              <span class="mobile-sub-title"><i class="fa-solid fa-location-dot"></i> Tours from Ouarzazate ({ouarzazateTours.length})</span>
+              <i class="fa-solid fa-chevron-down mobile-sub-chevron" :class="activeDropdowns['m_ouarzazate'] ? 'rotated' : ''"></i>
+            </div>
+            <div class="mobile-sub-body" :class="activeDropdowns['m_ouarzazate'] ? 'open' : ''">
+              {ouarzazateTours.map(tour => (
+                <a href={`/tours/${tour.slug}`} @click="closeMobileMenu()" class="mobile-sub-tour-link">
+                  <span>{tour.shortTitle}</span>
+                  <small>{tour.duration}</small>
+                </a>
+              ))}
+              <a href="/tours-from-ouarzazate" @click="closeMobileMenu()" class="mobile-sub-view-all">
+                View All Ouarzazate Tours ({ouarzazateTours.length}) →
+              </a>
+            </div>
+          </div>
+
+          <!-- Imperial Cities -->
+          <div class="mobile-sub-group">
+            <div class="mobile-sub-header" @click.stop="toggleDropdown('m_imperial')">
+              <span class="mobile-sub-title"><i class="fa-solid fa-landmark-dome"></i> Imperial Cities ({imperialTours.length})</span>
+              <i class="fa-solid fa-chevron-down mobile-sub-chevron" :class="activeDropdowns['m_imperial'] ? 'rotated' : ''"></i>
+            </div>
+            <div class="mobile-sub-body" :class="activeDropdowns['m_imperial'] ? 'open' : ''">
+              {imperialTours.slice(0, 4).map(tour => (
+                <a href={`/tours/${tour.slug}`} @click="closeMobileMenu()" class="mobile-sub-tour-link">
+                  <span>{tour.shortTitle}</span>
+                  <small>{tour.duration}</small>
+                </a>
+              ))}
+              <a href="/imperial-cities" @click="closeMobileMenu()" class="mobile-sub-view-all">
+                View All Imperial Cities ({imperialTours.length}) →
+              </a>
+            </div>
+          </div>
+
+          <!-- Day Trips -->
+          <div class="mobile-sub-group">
+            <div class="mobile-sub-header" @click.stop="toggleDropdown('m_daytrips')">
+              <span class="mobile-sub-title"><i class="fa-solid fa-sun"></i> Day Trips ({dayTrips.length})</span>
+              <i class="fa-solid fa-chevron-down mobile-sub-chevron" :class="activeDropdowns['m_daytrips'] ? 'rotated' : ''"></i>
+            </div>
+            <div class="mobile-sub-body" :class="activeDropdowns['m_daytrips'] ? 'open' : ''">
+              {dayTrips.slice(0, 4).map(tour => (
+                <a href={`/tours/${tour.slug}`} @click="closeMobileMenu()" class="mobile-sub-tour-link">
+                  <span>{tour.shortTitle}</span>
+                  <small>{tour.duration}</small>
+                </a>
+              ))}
+              <a href="/day-trips" @click="closeMobileMenu()" class="mobile-sub-view-all">
+                View All Day Trips ({dayTrips.length}) →
+              </a>
+            </div>
+          </div>
+
+          <!-- Activities -->
+          <div class="mobile-sub-group">
+            <div class="mobile-sub-header" @click.stop="toggleDropdown('m_activities')">
+              <span class="mobile-sub-title"><i class="fa-solid fa-person-hiking"></i> Activities ({activities.length})</span>
+              <i class="fa-solid fa-chevron-down mobile-sub-chevron" :class="activeDropdowns['m_activities'] ? 'rotated' : ''"></i>
+            </div>
+            <div class="mobile-sub-body" :class="activeDropdowns['m_activities'] ? 'open' : ''">
+              {activities.slice(0, 4).map(tour => (
+                <a href={`/tours/${tour.slug}`} @click="closeMobileMenu()" class="mobile-sub-tour-link">
+                  <span>{tour.shortTitle}</span>
+                  <small>{tour.duration}</small>
+                </a>
+              ))}
+              <a href="/activities" @click="closeMobileMenu()" class="mobile-sub-view-all">
+                View All Activities ({activities.length}) →
+              </a>
+            </div>
+          </div>
+
+          <!-- All Tours CTA -->
+          <div class="mobile-sub-all-cta">
+            <a href="/tours" @click="closeMobileMenu()" class="btn btn-primary btn-sm" style="width:100%;justify-content:center;">
+              <i class="fa-solid fa-compass"></i> View All Multi-Day Tours (45)
+            </a>
+          </div>
+        </div>
       </li>
 
-      <li class="has-dropdown">
-        <div class="nav-item-row">
-          <a
-            href="/imperial-cities"
-            class={`nav-link-main ${currentPage === "imperial-cities" ? "active" : ""}`}
-            @click="closeMobileMenu()"
-          >
-            Imperial Cities <i class="fa-solid fa-chevron-down desktop-chevron"
-            ></i>
-          </a>
-          <button
-            type="button"
-            class="mobile-submenu-toggle mobile-only"
-            @click.stop="toggleDropdown('imperial')"
-            :class="activeDropdowns['imperial'] ? 'active' : ''"
-            :aria-expanded="activeDropdowns['imperial'] ? 'true' : 'false'"
-            aria-label="Toggle Imperial Cities submenu"
-          >
-            <i
-              class="fa-solid fa-chevron-down"
-              :class="activeDropdowns['imperial'] ? 'rotated' : ''"></i>
-          </button>
-        </div>
-        <ul
-          class="dropdown-menu dropdown-standard"
-          :class="activeDropdowns['imperial'] ? 'open' : ''"
+      <li>
+        <a
+          href="/imperial-cities"
+          class={`nav-link-main ${currentPage === "imperial-cities" ? "active" : ""}`}
+          @click="closeMobileMenu()">Imperial Cities</a
         >
-          <li>
-            <a
-              href="/tours/15-days-tour-from-casablanca"
-              @click="closeMobileMenu()">15 Days Tour from Casablanca</a>
-          </li>
-          <li>
-            <a href="/tours/13-days-casablanca-tour" @click="closeMobileMenu()"
-              >Best 13 Days Casablanca Tour</a>
-          </li>
-          <li>
-            <a
-              href="/tours/11-days-morocco-classic-tour"
-              @click="closeMobileMenu()">11 Days Morocco Classic Tour</a>
-          </li>
-        </ul>
       </li>
 
-      <li class="has-dropdown">
-        <div class="nav-item-row">
-          <a
-            href="/day-trips"
-            class={`nav-link-main ${currentPage === "day-trips" ? "active" : ""}`}
-            @click="closeMobileMenu()"
-          >
-            Day Trips <i class="fa-solid fa-chevron-down desktop-chevron"></i>
-          </a>
-          <button
-            type="button"
-            class="mobile-submenu-toggle mobile-only"
-            @click.stop="toggleDropdown('daytrips')"
-            :class="activeDropdowns['daytrips'] ? 'active' : ''"
-            :aria-expanded="activeDropdowns['daytrips'] ? 'true' : 'false'"
-            aria-label="Toggle Day Trips submenu"
-          >
-            <i
-              class="fa-solid fa-chevron-down"
-              :class="activeDropdowns['daytrips'] ? 'rotated' : ''"></i>
-          </button>
-        </div>
-        <ul
-          class="dropdown-menu dropdown-standard"
-          :class="activeDropdowns['daytrips'] ? 'open' : ''"
+      <li>
+        <a
+          href="/day-trips"
+          class={`nav-link-main ${currentPage === "day-trips" ? "active" : ""}`}
+          @click="closeMobileMenu()">Day Trips</a
         >
-          <li>
-            <a
-              href="/tours/agafay-desert-sunset-camel-ride"
-              @click="closeMobileMenu()">Agafay Desert Dinner &amp; Ride</a>
-          </li>
-          <li>
-            <a
-              href="/tours/day-trip-essaouira-mogador"
-              @click="closeMobileMenu()">Day Trip Essaouira Mogador</a>
-          </li>
-          <li>
-            <a href="/tours/day-trip-ait-ben-haddou" @click="closeMobileMenu()"
-              >Day Trip Ait Ben Haddou</a>
-          </li>
-          <li>
-            <a
-              href="/tours/day-trip-ouzoud-waterfalls"
-              @click="closeMobileMenu()">Day Trip Ouzoud Waterfalls</a>
-          </li>
-          <li>
-            <a
-              href="/tours/one-day-marrakech-city-tour"
-              @click="closeMobileMenu()">One Day Marrakech City Tour</a>
-          </li>
-          <li>
-            <a
-              href="/tours/ourika-valley-nature-tour"
-              @click="closeMobileMenu()">Ourika Valley Nature Tour</a>
-          </li>
-        </ul>
       </li>
 
-      <li class="has-dropdown">
-        <div class="nav-item-row">
-          <a
-            href="/activities"
-            class={`nav-link-main ${currentPage === "activities" ? "active" : ""}`}
-            @click="closeMobileMenu()"
-          >
-            Activities <i class="fa-solid fa-chevron-down desktop-chevron"></i>
-          </a>
-          <button
-            type="button"
-            class="mobile-submenu-toggle mobile-only"
-            @click.stop="toggleDropdown('activities')"
-            :class="activeDropdowns['activities'] ? 'active' : ''"
-            :aria-expanded="activeDropdowns['activities'] ? 'true' : 'false'"
-            aria-label="Toggle Activities submenu"
-          >
-            <i
-              class="fa-solid fa-chevron-down"
-              :class="activeDropdowns['activities'] ? 'rotated' : ''"></i>
-          </button>
-        </div>
-        <ul
-          class="dropdown-menu dropdown-standard"
-          :class="activeDropdowns['activities'] ? 'open' : ''"
+      <li>
+        <a
+          href="/activities"
+          class={`nav-link-main ${currentPage === "activities" ? "active" : ""}`}
+          @click="closeMobileMenu()">Activities</a
         >
-          <li>
-            <a
-              href="/tours/hot-air-balloon-marrakech"
-              @click="closeMobileMenu()">Hot Air Balloon in Marrakech</a>
-          </li>
-          <li>
-            <a href="/tours/horse-riding-morocco" @click="closeMobileMenu()"
-              >Horse Riding in Morocco</a>
-          </li>
-          <li>
-            <a
-              href="/tours/fantasia-chez-ali-marrakech"
-              @click="closeMobileMenu()">Fantasia Chez Ali Marrakech</a>
-          </li>
-          <li>
-            <a href="/tours/quad-biking-marrakech" @click="closeMobileMenu()"
-              >Quad Biking In Marrakech</a>
-          </li>
-          <li>
-            <a href="/tours/raid-buggy-marrakech" @click="closeMobileMenu()"
-              >Raid Buggy In Marrakech</a>
-          </li>
-          <li>
-            <a href="/tours/camel-riding" @click="closeMobileMenu()"
-              >Camel Riding Palm Groves</a>
-          </li>
-        </ul>
       </li>
 
       <li>

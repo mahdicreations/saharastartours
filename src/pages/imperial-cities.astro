@@ -1,9 +1,9 @@
 ---
 // src/pages/imperial-cities.astro — Imperial Cities category page
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { getToursByCategory } from '../data/tours';
+import { getImperialCitiesTours } from '../data/tours';
 
-const imperialTours = getToursByCategory('imperial-cities');
+const imperialTours = getImperialCitiesTours();
 ---
 
 <BaseLayout
@@ -24,7 +24,7 @@ const imperialTours = getToursByCategory('imperial-cities');
     {imperialTours.map(tour => (
       <article class="tour-card reveal active">
         <div class="tour-img-wrapper">
-          <img src={tour.heroImage} alt={tour.shortTitle} loading="lazy" onerror="this.src='/assets/hero_sahara_sunset.png'" />
+          <img src={tour.heroImage} alt={tour.shortTitle} loading="lazy" onerror="this.src='/assets/placeholder-morocco.svg'" />
           {tour.badge && <span class="tour-badge">{tour.badge}</span>}
         </div>
         <div class="tour-info">

@@ -1,31 +1,38 @@
 ---
-// src/pages/tours/index.astro — All Tours & Itineraries Catalogue
+// src/pages/tours/index.astro — Multi-Day Tours Catalogue Hub
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { tours } from '../../data/tours';
+import { getMultiDayTours } from '../../data/tours';
 
-const allTours = tours;
+const multiDayTours = getMultiDayTours();
 
-const categoryList = [
-  { id: 'all', label: 'All Tours', count: allTours.length },
-  { id: 'desert-tours', label: 'Desert Tours', count: allTours.filter(t => t.category === 'desert-tours').length },
-  { id: 'imperial-cities', label: 'Imperial Cities', count: allTours.filter(t => t.category === 'imperial-cities').length },
-  { id: 'day-trips', label: 'Day Trips', count: allTours.filter(t => t.category === 'day-trips').length },
-  { id: 'activities', label: 'Activities', count: allTours.filter(t => t.category === 'activities').length },
-];
+// Departure city counts
+const marrakechCount = multiDayTours.filter(t => t.departureCity === 'Marrakech').length;
+const casablancaCount = multiDayTours.filter(t => t.departureCity === 'Casablanca').length;
+const fesCount = multiDayTours.filter(t => t.departureCity === 'Fes').length;
+const tangierCount = multiDayTours.filter(t => t.departureCity === 'Tangier').length;
+const ouarzazateCount = multiDayTours.filter(t => t.departureCity === 'Ouarzazate').length;
+
+// Duration tier helper
+function getDurationTier(days: number): string {
+  if (days <= 4) return '2-4';
+  if (days <= 7) return '5-7';
+  if (days <= 10) return '8-10';
+  return '11+';
+}
 
 const toursSchema = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  "name": "Morocco Tours & Travel Packages | Sahara Star Tours",
-  "description": "Discover all 29 handcrafted Morocco tours, luxury Sahara desert safaris, imperial city itineraries, day trips from Marrakech, and authentic adventures.",
+  "name": "Multi-Day Morocco Tours & Private Expeditions | Sahara Star Tours",
+  "description": `Discover our collection of ${multiDayTours.length} private multi-day Morocco tours. Luxury Sahara desert safaris, Imperial Cities circuits, and grand mountain odysseys from Marrakech, Casablanca, Fes, Tangier, and Ouarzazate.`,
   "url": "https://www.saharastartours.com/tours"
 };
 ---
 
 <BaseLayout
-  title="All Morocco Tours & Travel Packages | Sahara Star Tours"
-  description="Explore our full collection of 29 bespoke Morocco tours. Luxury Sahara desert safaris, imperial medina explorations, Atlas mountain treks, and day excursions."
-  keywords="morocco tours, sahara desert tours, marrakech tours, casablanca tours, morocco travel agency, luxury morocco tour"
+  title={`Multi-Day Morocco Tours (${multiDayTours.length} Private Itineraries) | Sahara Star Tours`}
+  description={`Explore ${multiDayTours.length} bespoke multi-day Morocco tours from 2 to 16 days. Sahara desert safaris, imperial medina explorations, High Atlas crossings, and nomad heritage routes with private transport and licensed guides.`}
+  keywords="morocco multi day tours, sahara desert tours, tours from marrakech, tours from casablanca, tours from fes, tours from tangier, private morocco itineraries"
   currentPage="tours"
   schemaData={toursSchema}
 >
@@ -37,73 +44,241 @@ const toursSchema = {
     <nav class="tours-breadcrumbs" aria-label="Breadcrumb">
       <a href="/">Home</a>
       <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
-      <span class="current">All Morocco Tours</span>
+      <span class="current">Multi-Day Tours</span>
     </nav>
-    <span class="tag"><i class="fa-solid fa-compass"></i> Handcrafted Moroccan Journeys</span>
-    <h1>Explore Our Morocco Tours &amp; Expeditions</h1>
-    <p>From the sweeping dunes of Erg Chebbi to the ancient medinas of Fes and Marrakech — discover all 29 private guided journeys crafted with luxury accommodations and local nomad expertise.</p>
+    <span class="tag"><i class="fa-solid fa-compass"></i> Handcrafted Private Expeditions</span>
+    <h1>Multi-Day Morocco Tours &amp; Expeditions</h1>
+    <p>From 2-day Sahara dunes escapes to 16-day grand Moroccan odysseys — discover all {multiDayTours.length} private multi-day itineraries crafted with licensed local guides, air-conditioned luxury 4x4 transport, and handpicked boutique riads and desert glamping camps.</p>
   </div>
 </section>
 
-<!-- TOURS SHOWCASE SECTION WITH FILTER -->
+<!-- DEPARTURE CITY HUBS QUICK JUMP CARDS -->
+<section class="city-hubs-section">
+  <div class="city-hubs-container">
+    <div class="section-badge-center">
+      <span class="tag"><i class="fa-solid fa-map-location-dot"></i> Browse by Departure Hub</span>
+    </div>
+    <div class="city-hubs-grid">
+      <a href="/tours-from-marrakech" class="city-hub-card">
+        <div class="city-hub-info">
+          <h3>Tours from Marrakech</h3>
+          <p>Desert dunes, High Atlas passes &amp; Fes traverses</p>
+        </div>
+        <span class="city-hub-count">{marrakechCount} Tours <i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+
+      <a href="/tours-from-casablanca" class="city-hub-card">
+        <div class="city-hub-info">
+          <h3>Tours from Casablanca</h3>
+          <p>Grand loops, Imperial Cities &amp; airport arrivals</p>
+        </div>
+        <span class="city-hub-count">{casablancaCount} Tours <i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+
+      <a href="/tours-from-fes" class="city-hub-card">
+        <div class="city-hub-info">
+          <h3>Tours from Fes</h3>
+          <p>Middle Atlas cedar forests &amp; Merzouga routes</p>
+        </div>
+        <span class="city-hub-count">{fesCount} Tours <i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+
+      <a href="/tours-from-tangier" class="city-hub-card">
+        <div class="city-hub-info">
+          <h3>Tours from Tangier</h3>
+          <p>Chefchaouen, Rif mountains &amp; North-to-South circuits</p>
+        </div>
+        <span class="city-hub-count">{tangierCount} Tours <i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+
+      <a href="/tours-from-ouarzazate" class="city-hub-card">
+        <div class="city-hub-info">
+          <h3>Tours from Ouarzazate</h3>
+          <p>Direct Sahara gateways, Draa Valley &amp; Kasbah trails</p>
+        </div>
+        <span class="city-hub-count">{ouarzazateCount} Tours <i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- TOURS SHOWCASE SECTION WITH DUAL FILTERS -->
 <section class="tours-catalogue-body">
-  <div class="category-showcase-container" x-data="{ activeTab: 'all' }">
-    <!-- Category Filter Tabs -->
-    <ul class="category-tabs" id="category-tabs">
-      {categoryList.map(cat => (
-        <li>
-          <button 
-            class="category-tab"
-            :class={`activeTab === '${cat.id}' ? 'active' : ''`}
-            @click={`activeTab = '${cat.id}'`}
+  <div class="category-showcase-container" x-data="{ activeCity: 'all', activeDuration: 'all' }">
+    
+    <!-- Filter Controls Bar -->
+    <div class="filters-master-panel">
+      <!-- Departure City Filter Pills -->
+      <div class="filter-row">
+        <span class="filter-row-label"><i class="fa-solid fa-location-dot" style="color:var(--sand-gold);margin-right:6px;"></i> Departure City:</span>
+        <div class="filter-pills-group">
+          <button
+            class="filter-pill"
+            :class="activeCity === 'all' ? 'active' : ''"
+            @click="activeCity = 'all'"
             type="button"
           >
-            {cat.label} <span>({cat.count})</span>
+            All Cities ({multiDayTours.length})
           </button>
-        </li>
-      ))}
-    </ul>
+          <button
+            class="filter-pill"
+            :class="activeCity === 'marrakech' ? 'active' : ''"
+            @click="activeCity = 'marrakech'"
+            type="button"
+          >
+            Marrakech ({marrakechCount})
+          </button>
+          <button
+            class="filter-pill"
+            :class="activeCity === 'casablanca' ? 'active' : ''"
+            @click="activeCity = 'casablanca'"
+            type="button"
+          >
+            Casablanca ({casablancaCount})
+          </button>
+          <button
+            class="filter-pill"
+            :class="activeCity === 'fes' ? 'active' : ''"
+            @click="activeCity = 'fes'"
+            type="button"
+          >
+            Fes ({fesCount})
+          </button>
+          <button
+            class="filter-pill"
+            :class="activeCity === 'tangier' ? 'active' : ''"
+            @click="activeCity = 'tangier'"
+            type="button"
+          >
+            Tangier ({tangierCount})
+          </button>
+          <button
+            class="filter-pill"
+            :class="activeCity === 'ouarzazate' ? 'active' : ''"
+            @click="activeCity = 'ouarzazate'"
+            type="button"
+          >
+            Ouarzazate ({ouarzazateCount})
+          </button>
+        </div>
+      </div>
 
-    <!-- Tour Cards Grid -->
+      <!-- Duration Filter Pills -->
+      <div class="filter-row" style="margin-top: 14px;">
+        <span class="filter-row-label"><i class="fa-regular fa-clock" style="color:var(--sand-gold);margin-right:6px;"></i> Duration:</span>
+        <div class="filter-pills-group">
+          <button
+            class="filter-pill"
+            :class="activeDuration === 'all' ? 'active' : ''"
+            @click="activeDuration = 'all'"
+            type="button"
+          >
+            All Durations
+          </button>
+          <button
+            class="filter-pill"
+            :class="activeDuration === '2-4' ? 'active' : ''"
+            @click="activeDuration = '2-4'"
+            type="button"
+          >
+            2–4 Days
+          </button>
+          <button
+            class="filter-pill"
+            :class="activeDuration === '5-7' ? 'active' : ''"
+            @click="activeDuration = '5-7'"
+            type="button"
+          >
+            5–7 Days
+          </button>
+          <button
+            class="filter-pill"
+            :class="activeDuration === '8-10' ? 'active' : ''"
+            @click="activeDuration = '8-10'"
+            type="button"
+          >
+            8–10 Days
+          </button>
+          <button
+            class="filter-pill"
+            :class="activeDuration === '11+' ? 'active' : ''"
+            @click="activeDuration = '11+'"
+            type="button"
+          >
+            11+ Days
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Multi-Day Tour Cards Grid -->
     <div class="category-tours-wrapper">
       <div class="category-tour-grid">
-        {allTours.map(tour => (
-          <article 
-            class="tour-card reveal active"
-            data-category={tour.category}
-            x-show={`activeTab === 'all' || activeTab === '${tour.category}'`}
-            x-transition:enter="transition ease-out duration-300"
-            x-transition:enter-start="opacity-0 scale-95"
-            x-transition:enter-end="opacity-100 scale-100"
-          >
-            <div class="tour-img-wrapper">
-              <img 
-                src={tour.heroImage} 
-                alt={tour.shortTitle} 
-                loading="lazy"
-                onerror="this.src='/assets/hero_sahara_sunset.png'"
-              />
-              {tour.badge && <span class="tour-badge">{tour.badge}</span>}
-            </div>
-            <div class="tour-info">
-              <div class="tour-meta">
-                <div><i class="fa-regular fa-clock"></i> {tour.duration}</div>
-                <div><i class="fa-solid fa-location-dot"></i> {tour.startingFrom}</div>
+        {multiDayTours.map(tour => {
+          const tier = getDurationTier(tour.durationDays);
+          return (
+            <article 
+              class="tour-card reveal active"
+              data-city={tour.departureCity.toLowerCase()}
+              data-duration-tier={tier}
+              x-show={`(activeCity === 'all' || activeCity === '${tour.departureCity.toLowerCase()}') && (activeDuration === 'all' || activeDuration === '${tier}')`}
+              x-transition:enter="transition ease-out duration-300"
+              x-transition:enter-start="opacity-0 scale-95"
+              x-transition:enter-end="opacity-100 scale-100"
+            >
+              <div class="tour-img-wrapper">
+                <img 
+                  src={tour.heroImage} 
+                  alt={tour.shortTitle} 
+                  loading="lazy"
+                  onerror="this.src='/assets/placeholder-morocco.svg'"
+                />
+                {tour.badge && <span class="tour-badge">{tour.badge}</span>}
               </div>
-              <h2 class="tour-title" style="font-size:1.35rem;">{tour.shortTitle}</h2>
-              <p class="tour-desc">{tour.description}</p>
-              <div class="tour-footer">
-                <div class="tour-price">
-                  <span class="tour-price-label">Starting from</span>
-                  <span class="tour-price-value">{tour.price.replace(/^From\s*/i, '').replace(/\/person\s*/i, '').trim()}</span>
+              <div class="tour-info">
+                <div class="tour-meta">
+                  <div><i class="fa-regular fa-clock"></i> {tour.duration}</div>
+                  <div><i class="fa-solid fa-location-dot"></i> {tour.startingFrom}</div>
                 </div>
-                <a href={`/tours/${tour.slug}`} class="btn btn-primary btn-sm">
-                  View Tour <i class="fa-solid fa-arrow-right"></i>
-                </a>
+                <h2 class="tour-title" style="font-size:1.35rem;">{tour.shortTitle}</h2>
+                <p class="tour-desc">{tour.description}</p>
+                <div class="tour-footer">
+                  <div class="tour-price">
+                    <span class="tour-price-label">Starting from</span>
+                    <span class="tour-price-value">{tour.price.replace(/^From\s*/i, '').replace(/\/person\s*/i, '').trim()}</span>
+                  </div>
+                  <a href={`/tours/${tour.slug}`} class="btn btn-primary btn-sm">
+                    View Tour <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </div>
               </div>
-            </div>
-          </article>
-        ))}
+            </article>
+          );
+        })}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEPARATE PRODUCT FAMILIES CONTEXTUAL CROSS-LINK -->
+<section class="cross-silo-banner">
+  <div class="cross-silo-container">
+    <div class="cross-silo-box">
+      <div class="cross-silo-text">
+        <span class="tag"><i class="fa-solid fa-compass"></i> Other Travel Experiences</span>
+        <h3>Looking for Single-Day Excursions or Outdoor Adventures?</h3>
+        <p>In addition to our {multiDayTours.length} multi-day tours, we offer dedicated day trips and authentic desert activities departing from Marrakech:</p>
+      </div>
+      <div class="cross-silo-links">
+        <a href="/imperial-cities" class="btn btn-secondary">
+          <i class="fa-solid fa-landmark"></i> Imperial Cities Circuits
+        </a>
+        <a href="/day-trips" class="btn btn-secondary">
+          <i class="fa-solid fa-mountain-sun"></i> Marrakech Day Trips
+        </a>
+        <a href="/activities" class="btn btn-secondary">
+          <i class="fa-solid fa-star"></i> Outdoor Activities &amp; Shows
+        </a>
       </div>
     </div>
   </div>
@@ -203,8 +378,70 @@ const toursSchema = {
   line-height: 1.7;
 }
 
+/* Departure Hub Quick Cards */
+.city-hubs-section {
+  padding: 40px 5% 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.section-badge-center {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.city-hubs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+.city-hub-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.city-hub-card:hover {
+  background: rgba(212, 175, 55, 0.05);
+  border-color: var(--sand-gold);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.city-hub-info h3 {
+  font-size: 1.15rem;
+  color: var(--text-main);
+  margin: 0 0 6px;
+  font-weight: 600;
+}
+
+.city-hub-info p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.city-hub-count {
+  font-size: 0.85rem;
+  color: var(--sand-gold);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Master Filter Panel */
 .tours-catalogue-body {
-  padding: 60px 0 100px;
+  padding: 40px 0 80px;
 }
 
 .category-showcase-container {
@@ -213,53 +450,104 @@ const toursSchema = {
   padding: 0 5%;
 }
 
-.category-tabs {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 12px 18px;
+.filters-master-panel {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 24px 30px;
   margin: 0 auto 50px;
-  list-style: none;
-  max-width: 850px;
+  max-width: 1100px;
 }
 
-.category-tab {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid var(--glass-border);
+.filter-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.filter-row-label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
   color: var(--text-muted);
-  border-radius: 50px;
-  padding: 12px 28px;
+  font-weight: 600;
+  min-width: 160px;
+}
+
+.filter-pills-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filter-pill {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--text-muted);
+  border-radius: 30px;
+  padding: 6px 16px;
   font-family: var(--font-sans);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 500;
   cursor: pointer;
   transition: var(--transition-smooth);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
-.category-tab:hover {
+.filter-pill:hover {
+  color: var(--sand-gold);
   border-color: var(--sand-gold);
-  color: var(--text-main);
-  transform: translateY(-2px);
 }
 
-.category-tab.active {
+.filter-pill.active {
   background: linear-gradient(135deg, var(--terracotta) 0%, hsl(14, 75%, 45%) 100%);
-  color: var(--text-main);
   border-color: var(--terracotta);
-  box-shadow: 0 6px 20px var(--terracotta-glow);
-}
-
-.category-tab span {
-  font-size: 0.8rem;
-  opacity: 0.85;
-  margin-left: 6px;
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 4px 14px var(--terracotta-glow);
 }
 
 .category-tour-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 32px;
+}
+
+/* Cross-Silo Cross Links */
+.cross-silo-banner {
+  padding: 20px 5% 60px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.cross-silo-box {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 35px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.cross-silo-text h3 {
+  font-size: 1.4rem;
+  margin: 8px 0 6px;
+  color: var(--text-main);
+}
+
+.cross-silo-text p {
+  color: var(--text-muted);
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.cross-silo-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 /* Custom trip CTA */
@@ -317,6 +605,17 @@ const toursSchema = {
     flex-direction: column;
     text-align: center;
     padding: 35px 25px;
+  }
+  .cross-silo-box {
+    flex-direction: column;
+    text-align: center;
+  }
+  .cross-silo-links {
+    justify-content: center;
+  }
+  .filter-row-label {
+    min-width: 100%;
+    margin-bottom: 6px;
   }
   .tours-cat-hero h1 {
     font-size: 2.3rem;
