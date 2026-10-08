@@ -1,8 +1,57 @@
 ---
+import {
+  getImperialCitiesTours,
+  getDayTrips,
+  getActivities,
+  type Tour,
+} from "../data/tours.ts";
+
 interface Props {
   currentPage?: string;
 }
 const { currentPage = "" } = Astro.props;
+
+// Curated Imperial Cities Tours (4 featured)
+const allImperial = getImperialCitiesTours();
+const curatedImperialSlugs = [
+  "11-days-morocco-classic-tour",
+  "10-days-imperial-cities-tour",
+  "15-days-tour-from-casablanca",
+  "5-days-in-northern-morocco-from-tangier",
+];
+const featuredImperialTours: Tour[] = curatedImperialSlugs
+  .map((slug) => allImperial.find((t) => t.slug === slug))
+  .filter((t): t is Tour => Boolean(t));
+
+// Dynamic Day Trips (6 items)
+const dayTripsList: Tour[] = getDayTrips();
+
+// Dynamic Activities (6 items)
+const activitiesList: Tour[] = getActivities();
+
+// Compact, elegant navigation labels
+const navLabels: Record<string, string> = {
+  "11-days-morocco-classic-tour": "11-Day Morocco Classic Tour",
+  "10-days-imperial-cities-tour": "10-Day Imperial Cities Tour",
+  "15-days-tour-from-casablanca": "15-Day Imperial Cities Morocco",
+  "5-days-in-northern-morocco-from-tangier": "5-Day Northern Morocco Tour",
+  "day-trip-essaouira-mogador": "Essaouira Day Trip",
+  "day-trip-ait-ben-haddou": "Ait Ben Haddou Day Trip",
+  "day-trip-ouzoud-waterfalls": "Ouzoud Waterfalls Day Trip",
+  "ourika-valley-nature-tour": "Ourika Valley Day Trip",
+  "one-day-marrakech-city-tour": "Marrakech City Tour",
+  "agafay-desert-sunset-camel-ride": "Agafay Sunset Experience",
+  "hot-air-balloon-marrakech": "Hot Air Balloon",
+  "horse-riding-morocco": "Horse Riding",
+  "fantasia-chez-ali-marrakech": "Fantasia Chez Ali",
+  "quad-biking-marrakech": "Quad Biking",
+  "raid-buggy-marrakech": "Buggy Adventure",
+  "camel-riding": "Camel Riding",
+};
+
+function getNavLabel(tour: Tour): string {
+  return navLabels[tour.slug] || tour.shortTitle || tour.title;
+}
 
 // Flag SVGs as inline strings (no external requests, no errors)
 const ukFlag = `<svg class="lang-flag-svg" viewBox="0 0 640 480"><path fill="#012169" d="M0 0h640v480H0z"/><path fill="#FFF" d="m75 0 244 181L562 0h78v62L400 241l240 178v61h-80L320 301 81 480H0v-60l239-178L0 64V0h75z"/><path fill="#C8102E" d="m424 288 216 153v39H584L368 320h56zm-208-96L0 39V0h56l216 152h-56zm264-192h160v114L480 0zm-360 0L0 86V0h120zm0 480L0 394v86h120zm400 0h120v-86L520 480z"/><path fill="#FFF" d="M240 0h160v480H240zM0 160h640v160H0z"/><path fill="#C8102E" d="M267 0h106v480H267zM0 187h640v106H0z"/></svg>`;
@@ -20,6 +69,7 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="c
     isScrolled: false,
     isMobileOpen: false,
     activeDropdowns: {},
+    activeDesktopDropdown: null,
     currentLang: 'en',
     init() {
       const s = () => { this.isScrolled = window.scrollY > 50; };
@@ -38,8 +88,13 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="c
     toggleDropdown(cat) {
       this.activeDropdowns[cat] = !this.activeDropdowns[cat];
       this.activeDropdowns = { ...this.activeDropdowns };
+    },
+    closeDesktopDropdown() {
+      this.activeDesktopDropdown = null;
     }
   }"
+  @click.outside="closeDesktopDropdown()"
+  @keydown.escape.window="closeDesktopDropdown()"
   :class="isScrolled ? 'scrolled' : ''"
 >
   <!-- Dedicated Night Sky & Stars Backdrop Layer -->
@@ -151,7 +206,12 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="c
         >
       </li>
 
-      <li class="has-dropdown">
+      <li
+        class="has-dropdown"
+        :class="activeDesktopDropdown === 'tours' ? 'desktop-open' : ''"
+        @mouseenter="activeDesktopDropdown = 'tours'"
+        @mouseleave="activeDesktopDropdown = null"
+      >
         <div class="nav-item-row">
           <a
             href="/tours"
@@ -175,7 +235,7 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="c
         </div>
 
         <!-- 1. DESKTOP DROPDOWN (Compact & Elegant Hubs) -->
-        <ul class="dropdown-menu dropdown-standard tours-dropdown desktop-only" aria-label="Tours Navigation">
+        <ul class="dropdown-menu dropdown-standard compact-dropdown tours-dropdown desktop-only" aria-label="Tours Navigation">
           <li>
             <a href="/tours-from-marrakech" class="dropdown-item">
               <i class="fa-solid fa-location-dot"></i> Tours from Marrakech
@@ -211,7 +271,7 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="c
         </ul>
 
         <!-- 2. MOBILE TOURS SUBMENU (Compact Hubs) -->
-        <div class="mobile-tours-submenu mobile-only" :class="activeDropdowns['tours'] ? 'open' : ''">
+        <div class="mobile-submenu mobile-tours-submenu mobile-only" :class="activeDropdowns['tours'] ? 'open' : ''">
           <a href="/tours-from-marrakech" @click="closeMobileMenu()" class="mobile-sub-link">
             <i class="fa-solid fa-location-dot"></i> Tours from Marrakech
           </a>
@@ -228,34 +288,190 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="c
             <i class="fa-solid fa-location-dot"></i> Tours from Ouarzazate
           </a>
           <a href="/tours" @click="closeMobileMenu()" class="mobile-sub-link mobile-sub-link-all">
-            <span>View All Tours</span>
+            <span>View All Multi-Day Tours</span>
             <i class="fa-solid fa-arrow-right"></i>
           </a>
         </div>
       </li>
 
-      <li>
-        <a
-          href="/imperial-cities"
-          class={`nav-link-main ${currentPage === "imperial-cities" ? "active" : ""}`}
-          @click="closeMobileMenu()">Imperial Cities</a
-        >
+      <li
+        class="has-dropdown"
+        :class="activeDesktopDropdown === 'imperial' ? 'desktop-open' : ''"
+        @mouseenter="activeDesktopDropdown = 'imperial'"
+        @mouseleave="activeDesktopDropdown = null"
+      >
+        <div class="nav-item-row">
+          <a
+            href="/imperial-cities"
+            class={`nav-link-main ${currentPage === "imperial-cities" ? "active" : ""}`}
+            @click="closeMobileMenu()"
+          >
+            Imperial Cities <i class="fa-solid fa-chevron-down desktop-chevron"></i>
+          </a>
+          <button
+            type="button"
+            class="mobile-submenu-toggle mobile-only"
+            @click.stop="toggleDropdown('imperial')"
+            :class="activeDropdowns['imperial'] ? 'active' : ''"
+            :aria-expanded="activeDropdowns['imperial'] ? 'true' : 'false'"
+            aria-label="Toggle Imperial Cities submenu"
+          >
+            <i
+              class="fa-solid fa-chevron-down"
+              :class="activeDropdowns['imperial'] ? 'rotated' : ''"></i>
+          </button>
+        </div>
+
+        <!-- 1. DESKTOP DROPDOWN -->
+        <ul class="dropdown-menu dropdown-standard compact-dropdown desktop-only" aria-label="Imperial Cities Navigation">
+          {featuredImperialTours.map((tour) => (
+            <li>
+              <a href={`/tours/${tour.slug}`} class="dropdown-item">
+                <i class="fa-solid fa-landmark"></i> {getNavLabel(tour)}
+              </a>
+            </li>
+          ))}
+          <li class="dropdown-divider"></li>
+          <li>
+            <a href="/imperial-cities" class="dropdown-item dropdown-item-all">
+              <span>View All Imperial Cities</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </li>
+        </ul>
+
+        <!-- 2. MOBILE SUBMENU -->
+        <div class="mobile-submenu mobile-only" :class="activeDropdowns['imperial'] ? 'open' : ''">
+          {featuredImperialTours.map((tour) => (
+            <a href={`/tours/${tour.slug}`} @click="closeMobileMenu()" class="mobile-sub-link">
+              <i class="fa-solid fa-landmark"></i> {getNavLabel(tour)}
+            </a>
+          ))}
+          <a href="/imperial-cities" @click="closeMobileMenu()" class="mobile-sub-link mobile-sub-link-all">
+            <span>View All Imperial Cities</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
       </li>
 
-      <li>
-        <a
-          href="/day-trips"
-          class={`nav-link-main ${currentPage === "day-trips" ? "active" : ""}`}
-          @click="closeMobileMenu()">Day Trips</a
-        >
+      <li
+        class="has-dropdown"
+        :class="activeDesktopDropdown === 'daytrips' ? 'desktop-open' : ''"
+        @mouseenter="activeDesktopDropdown = 'daytrips'"
+        @mouseleave="activeDesktopDropdown = null"
+      >
+        <div class="nav-item-row">
+          <a
+            href="/day-trips"
+            class={`nav-link-main ${currentPage === "day-trips" ? "active" : ""}`}
+            @click="closeMobileMenu()"
+          >
+            Day Trips <i class="fa-solid fa-chevron-down desktop-chevron"></i>
+          </a>
+          <button
+            type="button"
+            class="mobile-submenu-toggle mobile-only"
+            @click.stop="toggleDropdown('daytrips')"
+            :class="activeDropdowns['daytrips'] ? 'active' : ''"
+            :aria-expanded="activeDropdowns['daytrips'] ? 'true' : 'false'"
+            aria-label="Toggle Day Trips submenu"
+          >
+            <i
+              class="fa-solid fa-chevron-down"
+              :class="activeDropdowns['daytrips'] ? 'rotated' : ''"></i>
+          </button>
+        </div>
+
+        <!-- 1. DESKTOP DROPDOWN -->
+        <ul class="dropdown-menu dropdown-standard compact-dropdown desktop-only" aria-label="Day Trips Navigation">
+          {dayTripsList.map((tour) => (
+            <li>
+              <a href={`/tours/${tour.slug}`} class="dropdown-item">
+                <i class="fa-solid fa-sun"></i> {getNavLabel(tour)}
+              </a>
+            </li>
+          ))}
+          <li class="dropdown-divider"></li>
+          <li>
+            <a href="/day-trips" class="dropdown-item dropdown-item-all">
+              <span>View All Day Trips</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </li>
+        </ul>
+
+        <!-- 2. MOBILE SUBMENU -->
+        <div class="mobile-submenu mobile-only" :class="activeDropdowns['daytrips'] ? 'open' : ''">
+          {dayTripsList.map((tour) => (
+            <a href={`/tours/${tour.slug}`} @click="closeMobileMenu()" class="mobile-sub-link">
+              <i class="fa-solid fa-sun"></i> {getNavLabel(tour)}
+            </a>
+          ))}
+          <a href="/day-trips" @click="closeMobileMenu()" class="mobile-sub-link mobile-sub-link-all">
+            <span>View All Day Trips</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
       </li>
 
-      <li>
-        <a
-          href="/activities"
-          class={`nav-link-main ${currentPage === "activities" ? "active" : ""}`}
-          @click="closeMobileMenu()">Activities</a
-        >
+      <li
+        class="has-dropdown"
+        :class="activeDesktopDropdown === 'activities' ? 'desktop-open' : ''"
+        @mouseenter="activeDesktopDropdown = 'activities'"
+        @mouseleave="activeDesktopDropdown = null"
+      >
+        <div class="nav-item-row">
+          <a
+            href="/activities"
+            class={`nav-link-main ${currentPage === "activities" ? "active" : ""}`}
+            @click="closeMobileMenu()"
+          >
+            Activities <i class="fa-solid fa-chevron-down desktop-chevron"></i>
+          </a>
+          <button
+            type="button"
+            class="mobile-submenu-toggle mobile-only"
+            @click.stop="toggleDropdown('activities')"
+            :class="activeDropdowns['activities'] ? 'active' : ''"
+            :aria-expanded="activeDropdowns['activities'] ? 'true' : 'false'"
+            aria-label="Toggle Activities submenu"
+          >
+            <i
+              class="fa-solid fa-chevron-down"
+              :class="activeDropdowns['activities'] ? 'rotated' : ''"></i>
+          </button>
+        </div>
+
+        <!-- 1. DESKTOP DROPDOWN -->
+        <ul class="dropdown-menu dropdown-standard compact-dropdown desktop-only" aria-label="Activities Navigation">
+          {activitiesList.map((tour) => (
+            <li>
+              <a href={`/tours/${tour.slug}`} class="dropdown-item">
+                <i class="fa-solid fa-compass"></i> {getNavLabel(tour)}
+              </a>
+            </li>
+          ))}
+          <li class="dropdown-divider"></li>
+          <li>
+            <a href="/activities" class="dropdown-item dropdown-item-all">
+              <span>View All Activities</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </li>
+        </ul>
+
+        <!-- 2. MOBILE SUBMENU -->
+        <div class="mobile-submenu mobile-only" :class="activeDropdowns['activities'] ? 'open' : ''">
+          {activitiesList.map((tour) => (
+            <a href={`/tours/${tour.slug}`} @click="closeMobileMenu()" class="mobile-sub-link">
+              <i class="fa-solid fa-compass"></i> {getNavLabel(tour)}
+            </a>
+          ))}
+          <a href="/activities" @click="closeMobileMenu()" class="mobile-sub-link mobile-sub-link-all">
+            <span>View All Activities</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
       </li>
 
       <li>
