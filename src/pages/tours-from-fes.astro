@@ -2,8 +2,10 @@
 // src/pages/tours-from-fes.astro — Dedicated Fes Departure Hub
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getMultiDayToursByCity } from '../data/tours';
+import { getAlternateUrls } from '../data/i18n';
 
 const tours = getMultiDayToursByCity('Fes');
+const alternateUrls = getAlternateUrls('/tours-from-fes');
 
 function getDurationTier(days: number): string {
   if (days <= 3) return '2-3';
@@ -18,7 +20,7 @@ const fesSchema = {
       "@type": "CollectionPage",
       "name": "Private Morocco Tours from Fes | Sahara Star Tours",
       "description": `Browse our complete collection of ${tours.length} private multi-day Morocco tours departing from Fes. Explore Middle Atlas cedar forests, Ziz Valley, luxury Erg Chebbi desert glamping, and desert traverses to Marrakech.`,
-      "url": "https://www.saharastartours.com/tours-from-fes"
+      "url": alternateUrls.en
     },
     {
       "@type": "BreadcrumbList",
@@ -39,7 +41,7 @@ const fesSchema = {
           "@type": "ListItem",
           "position": 3,
           "name": "Tours from Fes",
-          "item": "https://www.saharastartours.com/tours-from-fes"
+          "item": alternateUrls.en
         }
       ]
     }
@@ -52,6 +54,7 @@ const fesSchema = {
   description={`Book authentic private tours from Fes from 2 to 10 days. Cross the Middle Atlas cedar forests, meet Barbary macaques in Azrou, trek into Erg Chebbi dunes by camel, and journey onward to Marrakech.`}
   keywords="tours from fes, fes desert tour, fes to marrakech desert tour, fes to merzouga 3 days, private tours from fes"
   currentPage="tours"
+  alternateUrls={alternateUrls}
   schemaData={fesSchema}
 >
 

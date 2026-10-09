@@ -1,0 +1,151 @@
+{
+  "slug": "morocco-2-day-desert-fes-tour-from-ouarzazate",
+  "title": "Tour de 2 Días por el Desierto de Ouarzazate a Fez | Sahara Star Tours",
+  "shortTitle": "Tour de 2 Días de Ouarzazate a Fez",
+  "description": "Ruta exprés de 2 días desde Ouarzazate a Fez pasando por las Gargantas del Todra, paseo en camello al atardecer en Merzouga y noche en campamento de lujo.",
+  "aboutHtml": "<p>Este tour privado de 2 días de Ouarzazate a Fez es la forma más rápida y auténtica de cruzar el gran sur marroquí hasta la capital cultural del norte. Partiendo de Ouarzazate, recorrerá el Valle del Todra y sus colosales gargantas antes de alcanzar las doradas dunas de Erg Chebbi en Merzouga. Tras un inolvidable paseo en camello al atardecer y una noche bajo las estrellas en un campamento de lujo, viajará rumbo a Fez a través del cañón del Ziz, Midelt y los bosques de cedros del Medio Atlas.</p>",
+  "duration": "2 Días / 1 Noche",
+  "price": "Desde $320/persona",
+  "startingFrom": "Ouarzazate",
+  "highlights": [
+    "Dunas de Merzouga y desierto de Erg Chebbi",
+    "Paseo en camello por el desierto al atardecer",
+    "Noche en campamento en el desierto con cena y desayuno",
+    "Medina de Fez y lugares culturales históricos",
+    "Ouarzazate, la puerta del desierto",
+    "Gargantas del Todra y sus colosales acantilados"
+  ],
+  "inclusions": [
+    "Vehículo privado 4×4 o monovolumen con aire acondicionado",
+    "Chófer/guía local profesional de habla hispana",
+    "Combustible, peajes y gastos de funcionamiento del vehículo",
+    "Alojamiento en campamento de lujo en Erg Chebbi",
+    "Desayunos diarios y cenas según el itinerario",
+    "Paseo en camello por las dunas con asistencia completa"
+  ],
+  "exclusions": [
+    "Almuerzos y bebidas",
+    "Vuelos y traslados no especificados",
+    "Gastos personales y compras de recuerdos",
+    "Propinas y gratificaciones"
+  ],
+  "itinerary": [
+    {
+      "day": "Día 1",
+      "title": "Ouarzazate – Gargantas del Todra – Dunas de Merzouga – Campamento de lujo",
+      "content": "Su chófer le recogerá temprano en su alojamiento o en el aeropuerto de Ouarzazate. Conducirá hacia el este a través del Valle del Todra, donde el río ha excavado un cañón monumental entre montañas de roca caliza roja. Podrá pasear por las gargantas y apreciar la grandeza del paisaje. Continuará atravesando los palmerales de Touroug y Tinjdad con tiempo libre para almorzar. Por la tarde llegará a las doradas arenas de Merzouga para montar en camello, disfrutar de la puesta de sol sobre una alta duna de Erg Chebbi y llegar a su campamento de lujo con cena tradicional y tambores bereberes bajo el cielo estrellado."
+    },
+    {
+      "day": "Día 2",
+      "title": "Dunas de Merzouga – Erfoud – Midelt – Bosque de Cedros – Ifrane – Fez",
+      "content": "Madrugará para contemplar el amanecer sobre las dunas y desayunará en el campamento. Regresará en camello a Merzouga para reencontrarse con su chófer. Visitará Rissani con su animado zoco tradicional y continuará por Erfoud hacia los talleres de fósiles. Luego ascenderá por el cañón del Valle del Ziz hacia Midelt, donde disfrutará de tiempo para almorzar. Atravesará el Bosque de Cedros de Azrou para observar a los macacos de Berbería y visitará Ifrane, conocida como 'la Suiza de Marruecos'. Finalmente llegará a Fez por la tarde con traslado directo a su riad o al aeropuerto."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Ouarzazate",
+      "day": "Día 1",
+      "subtitle": "Ouarzazate – Todra – Merzouga – Campamento de lujo",
+      "desc": "Salida de Ouarzazate pasando por las Gargantas del Todra hacia Erg Chebbi y campamento."
+    },
+    {
+      "number": 2,
+      "name": "Merzouga Dunes a Fez",
+      "day": "Día 2",
+      "subtitle": "Merzouga – Erfoud – Midelt – Ifrane – Fez",
+      "desc": "Amanecer en las dunas, zoco de Rissani, bosque de cedros y llegada a Fez."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/morocco-2-day-desert-fes-tour-from-ouarzazate/images/gallery_1.webp",
+      "cap": "Kasbah Taourirt",
+      "alt": "Muros de tierra fortificados de la Kasbah Taourirt bajo el cielo azul en Ouarzazate"
+    },
+    {
+      "src": "/sahara-star-tours/morocco-2-day-desert-fes-tour-from-ouarzazate/images/gallery_10.webp",
+      "cap": "Medina de Fez",
+      "alt": "Arquitectura histórica de la medina y alminares sobre los tejados de Fez"
+    },
+    {
+      "src": "/sahara-star-tours/morocco-2-day-desert-fes-tour-from-ouarzazate/images/gallery_2.webp",
+      "cap": "Gargantas del Todra",
+      "alt": "Fondo del cañón de las Gargantas del Todra flanqueado por altos acantilados de caliza"
+    },
+    {
+      "src": "/sahara-star-tours/morocco-2-day-desert-fes-tour-from-ouarzazate/images/gallery_3.webp",
+      "cap": "Atardecer en Erg Chebbi",
+      "alt": "Excursión en camello por las altas dunas naranjas de Erg Chebbi al atardecer"
+    },
+    {
+      "src": "/sahara-star-tours/morocco-2-day-desert-fes-tour-from-ouarzazate/images/gallery_4.webp",
+      "cap": "Campamento de lujo",
+      "alt": "Jaimas blancas de lujo en un campamento del desierto en Merzouga bajo la noche estrellada"
+    },
+    {
+      "src": "/sahara-star-tours/morocco-2-day-desert-fes-tour-from-ouarzazate/images/gallery_5.webp",
+      "cap": "Talleres de fósiles",
+      "alt": "Talleres de fósiles y exposiciones artesanales de mármol en la ciudad de Erfoud"
+    },
+    {
+      "src": "/sahara-star-tours/morocco-2-day-desert-fes-tour-from-ouarzazate/images/gallery_6.webp",
+      "cap": "Valle del Ziz",
+      "alt": "Ruta panorámica a través del verde oasis de palmeras y acantilados del Valle del Ziz"
+    },
+    {
+      "src": "/sahara-star-tours/morocco-2-day-desert-fes-tour-from-ouarzazate/images/gallery_7.webp",
+      "cap": "Montañas de Midelt",
+      "alt": "Paisaje de alta montaña y manzanos alrededor de Midelt en el Atlas"
+    },
+    {
+      "src": "/sahara-star-tours/morocco-2-day-desert-fes-tour-from-ouarzazate/images/gallery_8.webp",
+      "cap": "Macaco de Berbería",
+      "alt": "Mono macaco de Berbería en el bosque de cedros de Azrou cerca de Ifrane"
+    },
+    {
+      "src": "/sahara-star-tours/morocco-2-day-desert-fes-tour-from-ouarzazate/images/gallery_9.webp",
+      "cap": "Panorámica de Fez",
+      "alt": "Vista panorámica de la extensa ciudad medieval de Fez el-Bali"
+    },
+    {
+      "src": "/sahara-star-tours/morocco-2-day-desert-fes-tour-from-ouarzazate/images/hero_2.webp",
+      "cap": "Amanecer en Merzouga",
+      "alt": "Amanecer sobre las crestas de dunas de arena dorada de Erg Chebbi en Merzouga"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "¿Es este un tour privado o compartido?",
+      "answer": "Esta es una experiencia completamente privada: el vehículo, conductor e itinerario están reservados en exclusiva para su grupo."
+    },
+    {
+      "question": "¿Cuánto tiempo dura el paseo en camello y qué alternativas existen?",
+      "answer": "El paseo en camello suele durar entre 40 minutos y 1,5 horas. Como alternativa, se puede organizar el traslado directo en vehículo 4×4 sin coste adicional."
+    },
+    {
+      "question": "¿La tienda del campamento en el desierto es privada?",
+      "answer": "Sí, el campamento en el desierto cuenta con tiendas de campaña privadas de lujo con baño incorporado, agua caliente, camas de verdad y electricidad."
+    },
+    {
+      "question": "¿Dónde se realiza la recogida y el regreso?",
+      "answer": "Le recogeremos en su alojamiento o en el aeropuerto de Ouarzazate y el tour concluirá en Fez con traslado a su riad o al aeropuerto de Fez Sais."
+    },
+    {
+      "question": "¿Qué tipo de vehículo se utiliza?",
+      "answer": "El viaje se realiza en un cómodo vehículo privado 4×4 o monovolumen con aire acondicionado. Para grupos más numerosos disponemos de minibuses adaptados."
+    },
+    {
+      "question": "¿Se pueden atender requerimientos dietéticos particulares?",
+      "answer": "Sí. Infórmenos sobre sus preferencias o restricciones dietéticas al reservar para que los alojamientos y el campamento preparen comidas adecuadas (vegetariano, vegano, sin gluten, etc.)."
+    },
+    {
+      "question": "¿Es este itinerario adecuado para todas las edades?",
+      "answer": "Sí, es perfectamente adecuado para todas las edades, con paradas regulares para descansar a lo largo de las rutas escénicas."
+    },
+    {
+      "question": "¿Cuál es la mejor época del año para realizar este tour?",
+      "answer": "La primavera y el otoño brindan temperaturas suaves y cielos despejados muy recomendables para disfrutar del desierto del Sahara y cruzar el Atlas."
+    }
+  ]
+}

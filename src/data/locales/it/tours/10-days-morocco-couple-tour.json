@@ -1,0 +1,190 @@
+{
+  "slug": "10-days-morocco-couple-tour",
+  "title": "Pacchetto Romantico di 10 Giorni in Marocco per Coppie | Sahara Star Tours",
+  "shortTitle": "Tour Romantico di 10 Giorni per Coppie",
+  "description": "Viaggio privato e romantico di 10 giorni per coppie in Marocco: Casablanca, Chefchaouen, Fes, notte magica in campo di lusso a Merzouga e Marrakech.",
+  "aboutHtml": "Ideato su misura per coppie in cerca di un viaggio intimo e ricco di fascino, questo itinerario privato di 10 giorni tocca i luoghi più romantici e suggestivi del Marocco. Dalle quiete viuzze dipinte d'azzurro di Chefchaouen alle atmosfere senza tempo delle medine di Fes e Marrakech, ogni giornata è pensata per garantire privacy, comfort ed eccellenza. Vivi l'emozione di un tramonto a dorso di dromedario sulle dune di Erg Chebbi, una cena a lume di candela sotto la volta stellata del Sahara e il calore di riad tradizionali di grande charme.",
+  "duration": "10 Giorni / 9 Notti",
+  "startingFrom": "Casablanca",
+  "price": "Da $1,250/persona",
+  "highlights": [
+    "Punto di incontro: Presso il tuo hotel o aeroporto a Casablanca.",
+    "Luogo di partenza: Casablanca",
+    "Luogo di arrivo: Marrakech"
+  ],
+  "inclusions": [
+    "Visite guidate private nelle città e ingressi ai monumenti principali",
+    "Trasporto privato confortevole e climatizzato con autista professionale",
+    "Trekking a dorso di dromedario e notte in campo tendato di lusso nel deserto",
+    "Servizio personalizzato di accoglienza e assistenza aeroportuale",
+    "Cena romantica in ristorante tipico a Marrakech con musica tradizionale",
+    "Trattamento di mezza pensione durante il circuito come da programma",
+    "Carburante e pedaggi autostradali inclusi"
+  ],
+  "exclusions": [
+    "Tasse aeroportuali e voli internazionali",
+    "Pranzi non menzionati nel programma",
+    "Bevande durante i pasti",
+    "Voli di collegamento",
+    "Mance e gratifiche a discrezione personale",
+    "Assicurazione sanitaria e di viaggio personale"
+  ],
+  "itinerary": [
+    {
+      "day": "Giorno 1",
+      "title": "Arrivo a Casablanca – Rabat",
+      "content": "Accoglienza personalizzata all'aeroporto di Casablanca. Visita alla spettacolare Moschea Hassan II sull'oceano e trasferimento nella capitale Rabat per ammirare la Torre Hassan e la Kasbah degli Oudaïa. Pernottamento in un romantico riad tradizionale."
+    },
+    {
+      "day": "Giorno 2",
+      "title": "Da Rabat a Chefchaouen – La Città Blu del Marocco",
+      "content": "Viaggio tra le verdi vallate verso le montagne del Rif fino a Chefchaouen. Pomeriggio libero per passeggiare mano nella mano tra i vicoli blu indaco e sorseggiare un tè alla menta al tramonto in piazza Uta el-Hammam."
+    },
+    {
+      "day": "Giorno 3",
+      "title": "Chefchaouen – Meknes – Volubilis – Fes",
+      "content": "Visita ai resti archeologici romani di Volubilis (UNESCO) con i loro raffinati mosaici. Sosta a Meknes davanti alla porta Bab El Mansour e arrivo pomeridiano a Fes per una cena romantica in riad."
+    },
+    {
+      "day": "Giorno 4",
+      "title": "Visita Guidata della Medina Storica di Fes",
+      "content": "Intera giornata dedicata a Fes El Bali con guida privata: Università Al Quaraouiyine, madrase intarsiate, le storiche concerie Chouara e le botteghe tradizionali degli artigiani."
+    },
+    {
+      "day": "Giorno 5",
+      "title": "Fes – Ifrane – Medio Atlante – Midelt – Errachidia – Erfoud – Merzouga",
+      "content": "Viaggio verso sud oltre l'Atlante, con soste a Ifrane e nella foresta di cedri di Azrou. Discesa lungo il palmeto dello Ziz fino alle dune dorate di Erg Chebbi a Merzouga. Sistemazione con vista sulle dune."
+    },
+    {
+      "day": "Giorno 6",
+      "title": "Merzouga – Khamlia – Tour del Deserto – Merzouga",
+      "content": "Esplorazione del deserto in 4x4, incontro con i musicisti Gnawa di Khamlia e villaggi nomadi. Nel pomeriggio, passeggiata sui dromedari al tramonto verso il campo tendato di lusso per una magica cena a lume di candela."
+    },
+    {
+      "day": "Giorno 7",
+      "title": "Merzouga – Rissani – Gole del Todra – Valle del Dades",
+      "content": "Alba indimenticabile tra le dune dorate e colazione. Visita al mercato di Rissani e passeggiata tra le pareti rocciose del Todra. Notte in hotel di charme nella Valle del Dades."
+    },
+    {
+      "day": "Giorno 8",
+      "title": "Valle del Dades – Skoura – Ouarzazate – Kasbah Ait Ben Haddou – Alto Atlante – Marrakech",
+      "content": "Strada delle Mille Kasbah e visita alla maestosa fortezza di Ait Ben Haddou (Patrimonio UNESCO). Valico montano di Tizi n'Tichka e arrivo nel tardo pomeriggio a Marrakech."
+    },
+    {
+      "day": "Giorno 9",
+      "title": "Alla Scoperta di Marrakech – Tour Guidato della Città",
+      "content": "Visita privata ai palazzi e ai giardini di Marrakech: Palazzo Bahia, Tombe Saadiane, Giardini Majorelle e la celebre piazza Jemaa el-Fna, con cena speciale conclusiva."
+    },
+    {
+      "day": "Giorno 10",
+      "title": "Trasferimento all'Aeroporto di Marrakech o Casablanca",
+      "content": "Colazione in riad e trasferimento privato all'aeroporto di Marrakech Menara o Casablanca Mohammed V in base al volo di partenza, a conclusione di una fuga romantica indimenticabile."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Casablanca",
+      "day": "Giorno 1",
+      "subtitle": "Arrivo",
+      "desc": "Accoglienza e Moschea Hassan II."
+    },
+    {
+      "number": 2,
+      "name": "Rabat",
+      "day": "Giorno 2",
+      "subtitle": "Capitale",
+      "desc": "Torre Hassan e Kasbah degli Oudaïa."
+    },
+    {
+      "number": 3,
+      "name": "Chefchaouen",
+      "day": "Giorno 3",
+      "subtitle": "Città Blu",
+      "desc": "Atmosfera romantica tra i monti del Rif."
+    },
+    {
+      "number": 4,
+      "name": "Fes",
+      "day": "Giorni 4 e 5",
+      "subtitle": "Medina Storica",
+      "desc": "Tour culturale guidato a Fes El Bali."
+    },
+    {
+      "number": 5,
+      "name": "Merzouga Sahara",
+      "day": "Giorno 6",
+      "subtitle": "Dune Dorate",
+      "desc": "Campo di lusso e musica sotto le stelle."
+    },
+    {
+      "number": 6,
+      "name": "Todra e Dades",
+      "day": "Giorno 7",
+      "subtitle": "Gole e Canyon",
+      "desc": "Falesie del Todra e Valle del Dades."
+    },
+    {
+      "number": 7,
+      "name": "Ouarzazate",
+      "day": "Giorno 8",
+      "subtitle": "Ait Ben Haddou",
+      "desc": "Antica fortezza in terra cruda (UNESCO)."
+    },
+    {
+      "number": 8,
+      "name": "Marrakech",
+      "day": "Giorni 9 e 10",
+      "subtitle": "Finale Romantico",
+      "desc": "Palazzi, souk e cena speciale di commiato."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/desert-tours/10-days-morocco-couple-tour-packages/images/thumbnail.jpg",
+      "cap": "Pacchetto Romantico di 10 Giorni in Marocco per Coppie",
+      "alt": "Pacchetto Romantico di 10 Giorni in Marocco per Coppie – Sahara Star Tours"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/10-days-morocco-couple-tour-packages/images/image-01.jpg",
+      "cap": "Architettura romantica di un riad tradizionale marocchino",
+      "alt": "Corte interna di riad con piscina e lanterne marocchine"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/10-days-morocco-couple-tour-packages/images/image-02.jpg",
+      "cap": "Chefchaouen, vicoli azzurri per passeggiate di coppia",
+      "alt": "Angolo romantico dipinto di blu indaco a Chefchaouen"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/10-days-morocco-couple-tour-packages/images/image-03.jpg",
+      "cap": "Tramonto di coppia sulle dune di Merzouga",
+      "alt": "Cielo dorato e ombre lunghe sulle dune di Erg Chebbi"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/10-days-morocco-couple-tour-packages/images/image-04.jpg",
+      "cap": "Campo tendato berbero di lusso sotto le stelle",
+      "alt": "Tenda di lusso con salottino e atmosfera a lume di candela"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/10-days-morocco-couple-tour-packages/images/image-05.jpg",
+      "cap": "Pareti verticali nelle Gole del Todra",
+      "alt": "Canyon roccioso e palmeto nelle Gole del Todra"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/10-days-morocco-couple-tour-packages/images/image-06.jpg",
+      "cap": "Ksar fortificato di Ait Ben Haddou",
+      "alt": "Veduta panoramica della Kasbah di Ait Ben Haddou"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/10-days-morocco-couple-tour-packages/images/image-07.jpg",
+      "cap": "Giardini Majorelle e architettura art déco a Marrakech",
+      "alt": "Padiglione blu cobalto e piante esotiche ai Giardini Majorelle"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/10-days-morocco-couple-tour-packages/images/image-08.jpg",
+      "cap": "Atmosfera serale in piazza Jemaa el-Fna a Marrakech",
+      "alt": "Luci serali e folla vivace nella piazza Jemaa el-Fna"
+    }
+  ],
+  "faqs": []
+}

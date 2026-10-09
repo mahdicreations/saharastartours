@@ -1,0 +1,151 @@
+{
+  "slug": "morocco-2-day-desert-fes-tour-from-ouarzazate",
+  "title": "Tour di 2 Giorni da Ouarzazate a Fes nel Deserto | Sahara Star Tours",
+  "shortTitle": "Tour di 2 Giorni da Ouarzazate a Fes",
+  "description": "Circuito espresso privato di 2 giorni da Ouarzazate a Fes via Gole del Todra, escursione in dromedario a Merzouga e notte in accampamento di lusso.",
+  "aboutHtml": "<p>Questo tour privato di 2 giorni da Ouarzazate a Fes è l'opzione perfetta per collegare rapidamente il grande sud alle città imperiali del nord attraversando le magnifiche dune del Sahara. Da Ouarzazate attraverserai le imponenti Gole del Todra fino alle dorate dune dell'Erg Chebbi a Merzouga per un tramonto in dromedario e una notte indimenticabile sotto le stelle in un campo tendato di lusso, per poi raggiungere Fes attraverso la Valle dello Ziz e il Medio Atlante.</p>",
+  "duration": "2 Giorni / 1 Notte",
+  "price": "Da $320/persona",
+  "startingFrom": "Ouarzazate",
+  "highlights": [
+    "Dune dorate di Merzouga ed Erg Chebbi",
+    "Trekking a dorso di dromedario nel deserto al tramonto",
+    "Notte in campo tendato di lusso con cena e colazione berbera",
+    "Medina di Fes e tesori culturali storici",
+    "Ouarzazate, la porta d'accesso al deserto",
+    "Gole del Todra e colossali falesie rocciose"
+  ],
+  "inclusions": [
+    "Veicolo privato 4×4 o minivan con aria condizionata",
+    "Autista/guida locale professionista per l'intero viaggio",
+    "Carburante, pedaggi e spese operative del veicolo",
+    "Sistemazione in campo tendato di lusso a Merzouga",
+    "Colazioni e cene incluse come da itinerario",
+    "Trekking in dromedario tra le dune con assistenza completa"
+  ],
+  "exclusions": [
+    "Pranzi e bevande",
+    "Voli aerei nazionali e internazionali",
+    "Biglietti d'ingresso per monumenti facoltativi",
+    "Mance e spese personali"
+  ],
+  "itinerary": [
+    {
+      "day": "Giorno 1",
+      "title": "Ouarzazate – Gole del Todra – Dune di Merzouga – Campo di lusso",
+      "content": "Il tuo autista ti accoglierà al mattino presto presso il tuo alloggio o all'aeroporto di Ouarzazate. Viaggerai verso est attraverso la Valle del Todra, dove il fiume ha scavato un grandioso canyon con falesie verticali di roccia calcarea rossa alte più di 300 metri. Passeggiata e pranzo in ristorante locale. Nel pomeriggio proseguirai verso Merzouga: salirai a dorso di dromedario per assistere al tramonto tra le dune dell'Erg Chebbi e raggiungere l'accampamento di lusso con cena berbera e canti attorno al falò sotto le stelle."
+    },
+    {
+      "day": "Giorno 2",
+      "title": "Dune di Merzouga – Erfoud – Midelt – Foresta di Cedri – Ifrane – Fes",
+      "content": "Sveglia all'alba per assistere allo straordinario sorgere del sole sulle dune, seguita dalla prima colazione. Rientro in dromedario a Merzouga per ritrovare l'autista. Visiterai Rissani con il suo tradizionale mercato e proseguirai per Erfoud alla scoperta dei laboratori di marmo fossile. Risalirai la scenografica Valle dello Ziz verso Midelt per il pranzo libero e attraverserai la Foresta di Cedri di Azrou con le scimmie barbaresche. Dopo una sosta nella cittadina alpina di Ifrane, giungerai a Fes nel tardo pomeriggio con trasferimento al tuo riad o all'aeroporto."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Ouarzazate",
+      "day": "Giorno 1",
+      "subtitle": "Ouarzazate – Todra – Merzouga – Campo di lusso",
+      "desc": "Partenza da Ouarzazate passando per le Gole del Todra verso l'Erg Chebbi e campo tendato."
+    },
+    {
+      "number": 2,
+      "name": "Dune di Merzouga a Fes",
+      "day": "Giorno 2",
+      "subtitle": "Merzouga – Erfoud – Midelt – Ifrane – Fes",
+      "desc": "Alba sulle dune, souk di Rissani, foresta dei cedri e arrivo a Fes."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/morocco-2-day-desert-fes-tour-from-ouarzazate/images/gallery_1.webp",
+      "cap": "Kasbah Taourirt",
+      "alt": "Mura fortificate in terra cruda della Kasbah Taourirt sotto il cielo blu a Ouarzazate"
+    },
+    {
+      "src": "/sahara-star-tours/morocco-2-day-desert-fes-tour-from-ouarzazate/images/gallery_10.webp",
+      "cap": "Medina di Fes",
+      "alt": "Architettura storica della medina e minareti sui tetti di Fes"
+    },
+    {
+      "src": "/sahara-star-tours/morocco-2-day-desert-fes-tour-from-ouarzazate/images/gallery_2.webp",
+      "cap": "Gole del Todra",
+      "alt": "Fondo del canyon delle Gole del Todra affiancato da alte falesie calcaree"
+    },
+    {
+      "src": "/sahara-star-tours/morocco-2-day-desert-fes-tour-from-ouarzazate/images/gallery_3.webp",
+      "cap": "Tramonto a Erg Chebbi",
+      "alt": "Escursione in dromedario sulle alte dune arancioni dell'Erg Chebbi al tramonto"
+    },
+    {
+      "src": "/sahara-star-tours/morocco-2-day-desert-fes-tour-from-ouarzazate/images/gallery_4.webp",
+      "cap": "Campo tendato di lusso",
+      "alt": "Tende bianche di lusso in un campo nel deserto a Merzouga sotto la notte stellata"
+    },
+    {
+      "src": "/sahara-star-tours/morocco-2-day-desert-fes-tour-from-ouarzazate/images/gallery_5.webp",
+      "cap": "Laboratori di fossili",
+      "alt": "Laboratori di fossili ed esposizioni artigianali di marmo nella città di Erfoud"
+    },
+    {
+      "src": "/sahara-star-tours/morocco-2-day-desert-fes-tour-from-ouarzazate/images/gallery_6.webp",
+      "cap": "Valle dello Ziz",
+      "alt": "Strada panoramica attraverso la verde oasi di palme e falesie della Valle dello Ziz"
+    },
+    {
+      "src": "/sahara-star-tours/morocco-2-day-desert-fes-tour-from-ouarzazate/images/gallery_7.webp",
+      "cap": "Montagne di Midelt",
+      "alt": "Paesaggio di alta montagna e meleti intorno a Midelt nell'Atlante"
+    },
+    {
+      "src": "/sahara-star-tours/morocco-2-day-desert-fes-tour-from-ouarzazate/images/gallery_8.webp",
+      "cap": "Scimmia barbaresca",
+      "alt": "Scimmia barbaresca nella foresta di cedri di Azrou vicino a Ifrane"
+    },
+    {
+      "src": "/sahara-star-tours/morocco-2-day-desert-fes-tour-from-ouarzazate/images/gallery_9.webp",
+      "cap": "Panorama di Fes",
+      "alt": "Veduta panoramica della vasta città medievale di Fes el-Bali"
+    },
+    {
+      "src": "/sahara-star-tours/morocco-2-day-desert-fes-tour-from-ouarzazate/images/hero_2.webp",
+      "cap": "Alba a Merzouga",
+      "alt": "Alba sulle creste delle dune di sabbia dorata dell'Erg Chebbi a Merzouga"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Questo tour è privato o condiviso?",
+      "answer": "È un tour completamente privato: auto, conducente e programma sono a uso esclusivo del tuo gruppo con la massima flessibilità."
+    },
+    {
+      "question": "Quanto dura il percorso in dromedario e ci sono alternative?",
+      "answer": "La passeggiata in dromedario dura circa 40-90 minuti. Se preferisci non cavalcare, è possibile organizzare il trasferimento diretto al campo in 4×4 senza alcun costo extra."
+    },
+    {
+      "question": "La tenda nell'accampamento nel deserto è privata?",
+      "answer": "Sì, l'accampamento di lusso dispone di ampie tende private con veri letti, bagno privato interno con wc e doccia calda."
+    },
+    {
+      "question": "Dove avvengono la partenza e il termine del tour?",
+      "answer": "Verremo a prenderti al tuo alloggio o aeroporto a Ouarzazate e ti riaccompagneremo al tuo alloggio o all'aeroporto a Fes."
+    },
+    {
+      "question": "Quale mezzo di trasporto viene impiegato?",
+      "answer": "Il viaggio viene effettuato con veicoli fuoristrada 4×4 o moderni minivan con aria condizionata e capiente vano bagagli."
+    },
+    {
+      "question": "È possibile soddisfare particolari esigenze dietetiche?",
+      "answer": "Certamente: piatti vegetariani, vegani o senza glutine possono essere preparati senza problemi segnalandolo alla prenotazione."
+    },
+    {
+      "question": "Il viaggio è comodo per viaggiatori di ogni età?",
+      "answer": "Sì, l'itinerario è adatto a tutti i viaggiatori, con frequenti soste panoramiche per riposare lungo il percorso."
+    },
+    {
+      "question": "Qual è il periodo migliore dell'anno per partire?",
+      "answer": "La primavera e l'autunno offrono un clima meraviglioso sia sulle montagne che nel deserto del Sahara."
+    }
+  ]
+}

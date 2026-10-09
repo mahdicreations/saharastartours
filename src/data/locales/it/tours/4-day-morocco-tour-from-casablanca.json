@@ -1,0 +1,175 @@
+{
+  "slug": "4-day-morocco-tour-from-casablanca",
+  "title": "Tour di 4 Giorni in Marocco da Casablanca a Marrakech | Sahara Star Tours",
+  "shortTitle": "Tour di 4 Giorni da Casablanca a Marrakech",
+  "description": "Circuito privato di 4 giorni da Casablanca a Marrakech via Fes e il deserto di Merzouga. Ammira la Moschea Hassan II, l'Erg Chebbi e Ait Ben Haddou.",
+  "aboutHtml": "<p>Questo straordinario viaggio privato di 4 giorni collega i tesori più famosi del Marocco partendo da Casablanca fino a Marrakech attraverso il deserto del Sahara. Dalla monumentale Moschea Hassan II sulla costa atlantica, raggiungerai la città imperiale di Fes, attraverserai le montagne dell'Atlante fino alle maestose dune dorate dell'Erg Chebbi a Merzouga con passeggiata in dromedario e notte in accampamento di lusso, per poi proseguire attraverso le Gole del Todra e la leggendaria Kasbah di Ait Ben Haddou fino a Marrakech.</p>",
+  "duration": "4 Giorni / 3 Notti",
+  "startingFrom": "Casablanca",
+  "price": "Da $520/persona",
+  "highlights": [
+    "Dune dorate di Merzouga ed Erg Chebbi",
+    "Trekking a dorso di dromedario nel deserto al tramonto",
+    "Notte in campo tendato di lusso con cena e colazione berbera",
+    "Kasbah di Ait Ben Haddou, sito UNESCO leggendario",
+    "Itinerario panoramico attraverso le montagne dell'Alto Atlante",
+    "Medina di Fes e tesori culturali storici"
+  ],
+  "inclusions": [
+    "Veicolo privato 4×4 o minivan con aria condizionata",
+    "Autista/guida locale professionista per l'intero viaggio",
+    "Carburante, pedaggi e spese operative del veicolo",
+    "Sistemazione in riad selezionati e campo tendato di lusso",
+    "Colazioni e cene incluse come da itinerario",
+    "Trekking in dromedario tra le dune con assistenza completa"
+  ],
+  "exclusions": [
+    "Pranzi e bevande",
+    "Voli aerei nazionali e internazionali",
+    "Biglietti d'ingresso per monumenti facoltativi",
+    "Mance e spese personali"
+  ],
+  "itinerary": [
+    {
+      "day": "Giorno 1",
+      "title": "Arrivo a Casablanca – Viaggio verso Fes",
+      "content": "Il tuo tour di 4 giorni inizia con il prelievo all'aeroporto o al tuo alloggio a Casablanca, capitale economica del Marocco. Visiterai l'imponente Moschea Hassan II, una delle più maestose al mondo, affacciata sulle acque dell'Atlantico. Proseguirai quindi il viaggio verso la storica città imperiale di Fes attraverso fertili pianure agricole. Arrivo a Fes nel tardo pomeriggio con tempo a disposizione per rilassarsi. Cena e pernottamento in un caratteristico riad nella medina."
+    },
+    {
+      "day": "Giorno 2",
+      "title": "Fes – Ifrane – Foresta di Cedri – Midelt – Valle dello Ziz – Deserto di Merzouga",
+      "content": "Dopo la prima colazione in riad partirai verso sud attraversando Imouzzer e Ifrane, la 'Svizzera del Marocco'. Sosterai nella secolare foresta di cedri di Azrou per ammirare le simpatiche scimmie barbaresche. Dopo il pranzo a Midelt, scenderai lungo le gole e i palmeti infiniti della Valle dello Ziz ed Errachidia. Nel pomeriggio raggiungerai le spettacolari dune dell'Erg Chebbi a Merzouga: salirai a dorso di dromedario per assistere al tramonto sul deserto e raggiungere l'accampamento di lusso per una cena tipica berbera con musica attorno al falò."
+    },
+    {
+      "day": "Giorno 3",
+      "title": "Merzouga – Rissani – Erfoud – Gole del Todra – Valle del Dades",
+      "content": "Sveglia all'alba per ammirare il sorgere del sole sulle dune, seguita dalla colazione. Lascerai il deserto per visitare Rissani, antica capitale del Tafilalet, con il suo vivace mercato locale. Proseguirai per Erfoud alla scoperta dei laboratori di marmo fossile e attraverserai i palmeti di Touroug e Tinjdad fino alle impressionanti Gole del Todra, un gigantesco canyon con pareti verticali alte oltre 300 metri. Passeggiata e pranzo in ristorante locale. Nel pomeriggio proseguirai verso la Valle del Dades, ammirando le particolari formazioni rocciose delle 'dita di scimmia'. Cena e pernottamento in riad nel Dades."
+    },
+    {
+      "day": "Giorno 4",
+      "title": "Valle del Dades – Valle delle Rose – Skoura – Ouarzazate – Ait Ben Haddou – Marrakech",
+      "content": "Dopo la prima colazione viaggerai verso Kalaat M'Gouna nella rinomata Valle delle Rose e attraverso l'oasi di Skoura fino a Ouarzazate, la capitale del cinema marocchino. Visiterai la famosa Kasbah di Ait Ben Haddou, villaggio fortificato patrimonio UNESCO celebre per aver ospitato film leggendari come Il Gladiatore e La Mummia. Nel pomeriggio valicherai l'Alto Atlante attraverso il suggestivo passo Tizi N'Tichka (2.260 m) con soste fotografiche panoramiche, arrivando a Marrakech nel tardo pomeriggio con trasferimento al tuo riad o in aeroporto."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Arrivo a Casablanca",
+      "day": "Giorno 1",
+      "subtitle": "Casablanca – Visita Moschea Hassan II – Viaggio a Fes",
+      "desc": "Pick-up a Casablanca, visita alla Moschea Hassan II e trasferimento panoramico a Fes."
+    },
+    {
+      "number": 2,
+      "name": "Fes a Merzouga",
+      "day": "Giorno 2",
+      "subtitle": "Fes – Ifrane – Foresta di Cedri – Midelt – Valle dello Ziz – Merzouga",
+      "desc": "Passaggio per Ifrane e Valle dello Ziz verso il campo tendato di lusso a Merzouga."
+    },
+    {
+      "number": 3,
+      "name": "Merzouga al Dades",
+      "day": "Giorno 3",
+      "subtitle": "Merzouga – Rissani – Erfoud – Gole del Todra – Valle del Dades",
+      "desc": "Visita di Rissani, laboratori di fossili e passeggiata nelle maestose Gole del Todra."
+    },
+    {
+      "number": 4,
+      "name": "Valle del Dades a Marrakech",
+      "day": "Giorno 4",
+      "subtitle": "Dades – Valle delle Rose – Skoura – Ouarzazate – Ait Ben Haddou – Marrakech",
+      "desc": "Visita di Ait Ben Haddou e rientro a Marrakech attraverso l'Alto Atlante."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/4-day-morocco-tour-from-casablanca/images/gallery_1.webp",
+      "cap": "Moschea Hassan II",
+      "alt": "Veduta del lungomare e della Moschea Hassan II affacciata sull'oceano a Casablanca"
+    },
+    {
+      "src": "/sahara-star-tours/4-day-morocco-tour-from-casablanca/images/gallery_10.webp",
+      "cap": "Piazza Jemaa el-Fna",
+      "alt": "Vivace atmosfera serale con bancarelle di cibo nella piazza Jemaa el-Fna di Marrakech"
+    },
+    {
+      "src": "/sahara-star-tours/4-day-morocco-tour-from-casablanca/images/gallery_2.webp",
+      "cap": "Fontana zellij",
+      "alt": "Fontana decorata con intricati mosaici tradizionali in zellij a Casablanca"
+    },
+    {
+      "src": "/sahara-star-tours/4-day-morocco-tour-from-casablanca/images/gallery_3.webp",
+      "cap": "Rovine di Volubilis",
+      "alt": "Antiche rovine romane e uliveti nel sito archeologico UNESCO di Volubilis"
+    },
+    {
+      "src": "/sahara-star-tours/4-day-morocco-tour-from-casablanca/images/gallery_4.webp",
+      "cap": "Bab Mansour",
+      "alt": "Maestosa porta monumentale di Bab Mansour nella città imperiale di Meknes"
+    },
+    {
+      "src": "/sahara-star-tours/4-day-morocco-tour-from-casablanca/images/gallery_5.webp",
+      "cap": "Conceria Chouara",
+      "alt": "Conciatori di pellami al lavoro presso la conceria Chouara nella medina di Fes"
+    },
+    {
+      "src": "/sahara-star-tours/4-day-morocco-tour-from-casablanca/images/gallery_6.webp",
+      "cap": "Cime del Medio Atlante",
+      "alt": "Vette innevate delle montagne del Medio Atlante sulla strada verso il deserto"
+    },
+    {
+      "src": "/sahara-star-tours/4-day-morocco-tour-from-casablanca/images/gallery_7.webp",
+      "cap": "Escursione in dromedario",
+      "alt": "Escursione a dorso di dromedario tra le alte dune di Erg Chebbi a Merzouga"
+    },
+    {
+      "src": "/sahara-star-tours/4-day-morocco-tour-from-casablanca/images/gallery_8.webp",
+      "cap": "Corte di riad",
+      "alt": "Tradizionale corte interna di un riad marocchino con fontana e ceramiche smaltate"
+    },
+    {
+      "src": "/sahara-star-tours/4-day-morocco-tour-from-casablanca/images/gallery_9.webp",
+      "cap": "Ait Ben Haddou",
+      "alt": "Kasbah fortificata in argilla di Ait Ben Haddou illuminata al tramonto"
+    },
+    {
+      "src": "/sahara-star-tours/4-day-morocco-tour-from-casablanca/images/hero_2.webp",
+      "cap": "Moschea Koutoubia",
+      "alt": "Classica veduta del minareto della Moschea Koutoubia a Marrakech all'imbrunire"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Questo tour è privato o condiviso?",
+      "answer": "È un tour interamente privato: il veicolo, l'autista e il programma sono riservati esclusivamente al vostro gruppo con la massima flessibilità."
+    },
+    {
+      "question": "Quanto dura il giro in dromedario e ci sono alternative?",
+      "answer": "La passeggiata in dromedario dura circa 40-90 minuti. Se preferite, è possibile organizzare il trasferimento diretto al campo in 4×4 senza alcun costo aggiuntivo."
+    },
+    {
+      "question": "Come sono attrezzate le tende dell'accampamento nel deserto?",
+      "answer": "Le tende dell'accampamento di lusso dispongono di comodi letti veri, bagno privato con wc e doccia calda ed elettricità."
+    },
+    {
+      "question": "Dove avvengono il prelievo e il rientro?",
+      "answer": "Il tour inizia all'aeroporto Mohammed V o presso il vostro alloggio a Casablanca e termina a Marrakech con rientro al vostro riad o in aeroporto."
+    },
+    {
+      "question": "Quale veicolo viene impiegato per il tour?",
+      "answer": "Utilizziamo veicoli fuoristrada 4×4 o minivan privati spaziosi, moderni e climatizzati, ideali per garantire comfort durante i trasferimenti."
+    },
+    {
+      "question": "È possibile soddisfare esigenze alimentari particolari?",
+      "answer": "Certamente: piatti vegetariani, senza glutine o altre preferenze possono essere concordati segnalandolo al momento della prenotazione."
+    },
+    {
+      "question": "L'itinerario è adatto a famiglie con bambini o anziani?",
+      "answer": "Sì, è un tour ideale per viaggiatori di ogni età grazie a soste regolari e ritmi ben bilanciati."
+    },
+    {
+      "question": "Qual è il periodo migliore dell'anno per questa escursione?",
+      "answer": "La primavera e l'autunno offrono condizioni meteo ideali con temperature miti sia sulla costa che nelle montagne e nel deserto."
+    }
+  ]
+}

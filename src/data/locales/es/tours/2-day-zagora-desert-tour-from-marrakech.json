@@ -1,0 +1,151 @@
+{
+  "slug": "2-day-zagora-desert-tour-from-marrakech",
+  "title": "Tour de 2 Días al Desierto de Zagora desde Marrakech | Sahara Star Tours",
+  "shortTitle": "Tour de 2 Días al Desierto de Zagora desde Marrakech",
+  "description": "Disfrute de una escapada express de 2 días al desierto de Zagora desde Marrakech. Cruce el Alto Atlas, explore la Kasbah Ait Ben Haddou y pase una noche bajo las estrellas en un campamento bereber.",
+  "aboutHtml": "<p>Esta excursión privada de 2 días al desierto de Zagora desde Marrakech es perfecta para viajeros con tiempo limitado que desean vivir la magia del desierto marroquí. Atravesará las majestuosas montañas del Alto Atlas por el paso de Tizi N'Tichka, visitará la famosa Kasbah de Ait Ben Haddou (Patrimonio de la Humanidad por la UNESCO) y recorrerá el exuberante valle del Draa antes de disfrutar de un paseo en camello al atardecer y una inolvidable noche en campamento tradicional en Zagora.</p>",
+  "duration": "2 Días / 1 Noche",
+  "startingFrom": "Marrakech",
+  "price": "Desde $250/persona",
+  "highlights": [
+    "Paseo en camello por el desierto al atardecer",
+    "Kasbah de Ait Ben Haddou, declarada Patrimonio de la Humanidad por la UNESCO",
+    "Ruta panorámica a través de las montañas del Alto Atlas",
+    "Medina histórica y lugares emblemáticos de Marrakech",
+    "Ouarzazate, la puerta del desierto",
+    "Zagora y el palmeral del Valle del Draa"
+  ],
+  "inclusions": [
+    "Vehículo privado 4×4 o monovolumen con aire acondicionado",
+    "Chófer/guía local experimentado y traslados privados",
+    "Combustible, peajes y gastos operativos del vehículo",
+    "Alojamiento en riads/hoteles seleccionados según el itinerario",
+    "Desayunos y cenas incluidas según el itinerario",
+    "Paseo en camello por el desierto y acceso al campamento del desierto"
+  ],
+  "exclusions": [
+    "Almuerzos y bebidas",
+    "Vuelos y servicios de aeropuerto no especificados",
+    "Gastos personales y actividades opcionales",
+    "Propinas y gratificaciones"
+  ],
+  "itinerary": [
+    {
+      "day": "Día 1",
+      "title": "Marrakech – Kasbah Ait Ben Haddou – Ouarzazate – Agdez – Desierto de Zagora",
+      "content": "Comenzará su tour de 2 días al desierto de Zagora temprano por la mañana con la recogida en su alojamiento o en el aeropuerto de Marrakech. Cruzará el paso montañoso de Tizi N'Tichka (2.260 m de altitud), serpenteando entre aldeas bereberes con paradas panorámicas. Llegará a la Kasbah de Ait Ben Haddou, donde disfrutará de una caminata por este extraordinario sitio de la UNESCO, famoso por películas como Gladiator y Lawrence de Arabia, y series como Juego de Tronos. Tras el almuerzo en Ait Ben Haddou o en Ouarzazate, continuará por las montañas del Anti-Atlas y a lo largo del Valle del Draa, el mayor palmeral y río más largo de Marruecos. Por la tarde llegará a Zagora, montará en camello al atardecer y llegará a su campamento en el desierto para disfrutar de una cena marroquí con música de tambores bereberes bajo un cielo estrellado."
+    },
+    {
+      "day": "Día 2",
+      "title": "Desierto de Zagora a Marrakech",
+      "content": "Despierte temprano para admirar el amanecer en camello sobre las dunas y disfrutar de un reconfortante desayuno marroquí. Saldrá rumbo a Ouarzazate, la puerta de entrada al desierto, donde podrá visitar la Kasbah Taourirt y los renombrados estudios cinematográficos. Luego emprenderá el regreso hacia Marrakech cruzando el paso de Tizi N'Tichka y las cumbres del Alto Atlas. Finalmente, su tour de 2 días al desierto de Zagora concluirá con el traslado a su alojamiento o al aeropuerto en Marrakech."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Marrakech",
+      "day": "Día 1",
+      "subtitle": "Marrakech – Kasbah Ait Ben Haddou – Ouarzazate – Agdez – Desierto de Zagora",
+      "desc": "Salida matinal desde Marrakech cruzando el paso de Tizi N'Tichka hacia Ait Ben Haddou, Ouarzazate y el Valle del Draa hasta el campamento de Zagora."
+    },
+    {
+      "number": 2,
+      "name": "Desierto de Zagora a Marrakech",
+      "day": "Día 2",
+      "subtitle": "Desierto de Zagora a Marrakech",
+      "desc": "Amanecer sobre las dunas, visita a Ouarzazate y regreso a Marrakech a través del Alto Atlas."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/2-day-zagora-desert-tour-from-marrakech/images/gallery_1.webp",
+      "cap": "Dunas de Zagora",
+      "alt": "Ondulaciones de arena esculpidas por el viento en una duna del desierto contra un cielo azul brillante"
+    },
+    {
+      "src": "/sahara-star-tours/2-day-zagora-desert-tour-from-marrakech/images/gallery_10.webp",
+      "cap": "Ait Ben Haddou",
+      "alt": "Puerta de arcilla fortificada de Ait Ben Haddou con camellos descansando en el lecho del río"
+    },
+    {
+      "src": "/sahara-star-tours/2-day-zagora-desert-tour-from-marrakech/images/gallery_2.webp",
+      "cap": "Valle del Draa",
+      "alt": "Carretera de montaña serpenteando a través de palmerales en el Valle del Draa"
+    },
+    {
+      "src": "/sahara-star-tours/2-day-zagora-desert-tour-from-marrakech/images/gallery_3.webp",
+      "cap": "Oasis del Draa",
+      "alt": "Altas palmeras datileras contra el cielo azul en un exuberante oasis marroquí"
+    },
+    {
+      "src": "/sahara-star-tours/2-day-zagora-desert-tour-from-marrakech/images/gallery_4.webp",
+      "cap": "Pueblo del Alto Atlas",
+      "alt": "Viviendas de adobe de una kasbah en una ladera rocosa del Alto Atlas"
+    },
+    {
+      "src": "/sahara-star-tours/2-day-zagora-desert-tour-from-marrakech/images/gallery_5.webp",
+      "cap": "Torre fortificada",
+      "alt": "Torre de kasbah fortificada de adobe con patrones geométricos contra el cielo"
+    },
+    {
+      "src": "/sahara-star-tours/2-day-zagora-desert-tour-from-marrakech/images/gallery_6.webp",
+      "cap": "Aeropuerto de Marrakech",
+      "alt": "Moderna arquitectura curva de la terminal del aeropuerto Menara de Marrakech"
+    },
+    {
+      "src": "/sahara-star-tours/2-day-zagora-desert-tour-from-marrakech/images/gallery_7.webp",
+      "cap": "Cumbres del Atlas",
+      "alt": "Valle verde y arroyo de montaña con picos nevados del Alto Atlas al fondo"
+    },
+    {
+      "src": "/sahara-star-tours/2-day-zagora-desert-tour-from-marrakech/images/gallery_8.webp",
+      "cap": "Ksar al anochecer",
+      "alt": "Ksar fortificado de Ait Ben Haddou al atardecer con su granero en la cima"
+    },
+    {
+      "src": "/sahara-star-tours/2-day-zagora-desert-tour-from-marrakech/images/gallery_9.webp",
+      "cap": "Kasbah y palmeral",
+      "alt": "Torres de kasbah de tierra enmarcadas por palmeras y olivos"
+    },
+    {
+      "src": "/sahara-star-tours/2-day-zagora-desert-tour-from-marrakech/images/hero_2.webp",
+      "cap": "Paisaje de Ait Ben Haddou",
+      "alt": "Paisaje panorámico del ksar de adobe de Ait Ben Haddou"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "¿Es este un tour privado o compartido?",
+      "answer": "Esta es una experiencia completamente privada: el vehículo, chófer e itinerario están reservados en exclusiva para su grupo. La ruta y el ritmo pueden adaptarse a sus preferencias personales."
+    },
+    {
+      "question": "¿Cuánto dura el paseo en camello y hay alternativas disponibles?",
+      "answer": "El paseo en camello suele durar entre 40 minutos y 1,5 horas, según el campamento y el día. Se puede coordinar un traslado en vehículo 4×4 como alternativa, y suele haber quads disponibles con coste adicional."
+    },
+    {
+      "question": "¿La tienda del campamento en el desierto es privada?",
+      "answer": "Sí, el alojamiento en campamento en el desierto descrito cuenta con tiendas privadas equipadas con baño privado y ducha con agua caliente, sujeto a la categoría reservada."
+    },
+    {
+      "question": "¿Dónde se realiza la recogida y el regreso?",
+      "answer": "La recogida se organiza en su alojamiento, aeropuerto o punto de encuentro acordado en Marrakech. El tour finaliza en Marrakech; el lugar exacto de regreso se confirma al momento de la reserva."
+    },
+    {
+      "question": "¿Qué tipo de vehículo se utiliza?",
+      "answer": "El transporte se realiza en un cómodo vehículo privado 4×4 o monovolumen con aire acondicionado. Para grupos más grandes se organiza un minibús. La capacidad y tipo de vehículo se confirman antes del viaje."
+    },
+    {
+      "question": "¿Se pueden adaptar menús para requerimientos dietéticos especiales?",
+      "answer": "Sí. Infórmenos sobre sus preferencias o restricciones dietéticas al reservar para que los riads, hoteles y el campamento preparen comidas adecuadas (opciones vegetarianas, veganas, halal, sin gluten, etc.)."
+    },
+    {
+      "question": "¿Es este itinerario adecuado para todas las edades?",
+      "answer": "Sí, aunque incluye trayectos por carretera de hasta 6 horas. Se programan paradas periódicas para descansar y estirar las piernas, y es posible diseñar una ruta personalizada si prefiere jornadas más cortas."
+    },
+    {
+      "question": "¿Cuál es la mejor época del año para realizar este tour?",
+      "answer": "La primavera y el otoño ofrecen temperaturas muy agradables en todo Marruecos. El invierno también es ideal para disfrutar del desierto del sur, aunque las noches en la montaña pueden ser frías."
+    }
+  ]
+}

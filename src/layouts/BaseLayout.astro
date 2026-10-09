@@ -15,6 +15,17 @@ interface Props {
   noIndex?: boolean;
   lang?: string;
   locale?: string;
+  alternateUrls?: {
+    en?: string;
+    es?: string;
+    it?: string;
+    xDefault?: string;
+  };
+  langUrls?: {
+    en?: string;
+    es?: string;
+    it?: string;
+  };
   // Schema.org structured data (JSON-LD)
   schemaData?: Record<string, unknown>;
 }
@@ -28,12 +39,16 @@ const {
   currentPage = '',
   noIndex = false,
   lang = 'en',
-  locale = 'en_US',
+  locale,
+  alternateUrls,
+  langUrls,
   schemaData,
 } = Astro.props;
 
 const siteUrl = 'https://www.saharastartours.com';
-const canonical = canonicalUrl ?? `${siteUrl}${Astro.url.pathname}`;
+const canonical = canonicalUrl ?? (alternateUrls && alternateUrls[lang as 'en' | 'es' | 'it']) ?? `${siteUrl}${Astro.url.pathname}`;
+const defaultLocale = lang === 'es' ? 'es_ES' : (lang === 'it' ? 'it_IT' : 'en_US');
+const activeLocale = locale ?? defaultLocale;
 const ogImageAbsolute = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
 ---
 
@@ -49,6 +64,10 @@ const ogImageAbsolute = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogIm
   <meta name="keywords" content={keywords} />
   {noIndex && <meta name="robots" content="noindex, nofollow" />}
   <link rel="canonical" href={canonical} />
+  {alternateUrls?.en && <link rel="alternate" hreflang="en" href={alternateUrls.en} />}
+  {alternateUrls?.es && <link rel="alternate" hreflang="es" href={alternateUrls.es} />}
+  {alternateUrls?.it && <link rel="alternate" hreflang="it" href={alternateUrls.it} />}
+  {alternateUrls?.xDefault && <link rel="alternate" hreflang="x-default" href={alternateUrls.xDefault} />}
 
   <!-- Open Graph -->
   <meta property="og:title" content={title} />
@@ -57,7 +76,7 @@ const ogImageAbsolute = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogIm
   <meta property="og:url" content={canonical} />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Sahara Star Tours" />
-  <meta property="og:locale" content={locale} />
+  <meta property="og:locale" content={activeLocale} />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -101,7 +120,11 @@ const ogImageAbsolute = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogIm
     "name": "Sahara Star Tours",
     "url": siteUrl,
     "logo": `${siteUrl}/assets/logo.png`,
-    "description": "Premium Morocco travel agency specializing in bespoke Sahara desert tours, imperial city itineraries, and tailor-made Moroccan adventures.",
+    "description": lang === 'es'
+      ? 'Agencia de viajes prémium en Marruecos especializada en rutas por el desierto del Sáhara, circuitos de ciudades imperiales y expediciones privadas a medida.'
+      : (lang === 'it'
+        ? 'Agenzia di viaggi premium in Marocco specializzata in tour nel deserto del Sahara, circuiti delle città imperiali e itinerari privati su misura.'
+        : 'Premium Morocco travel agency specializing in bespoke Sahara desert tours, imperial city itineraries, and tailor-made Moroccan adventures.'),
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Marrakech",
@@ -129,13 +152,20 @@ const ogImageAbsolute = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogIm
   <slot name="head" />
 </head>
 <body>
-  <Header currentPage={currentPage} />
+  {(() => {
+    const activeLangUrls = langUrls ?? (alternateUrls ? {
+      en: alternateUrls.en ? (new URL(alternateUrls.en, siteUrl).pathname === '/' ? '/' : new URL(alternateUrls.en, siteUrl).pathname) : undefined,
+      es: alternateUrls.es ? new URL(alternateUrls.es, siteUrl).pathname : undefined,
+      it: alternateUrls.it ? new URL(alternateUrls.it, siteUrl).pathname : undefined,
+    } : undefined);
+    return <Header currentPage={currentPage} lang={lang} langUrls={activeLangUrls} />;
+  })()}
 
   <main>
     <slot />
   </main>
 
-  <Footer />
+  <Footer lang={lang} />
 
   <!-- Floating WhatsApp VIP Button -->
   <a 
@@ -143,11 +173,11 @@ const ogImageAbsolute = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogIm
     target="_blank" 
     rel="noopener" 
     class="floating-wa-btn" 
-    aria-label="Chat with Sahara Star Tours on WhatsApp"
+    aria-label={lang === 'es' ? 'Contactar con Sahara Star Tours por WhatsApp' : (lang === 'it' ? 'Contatta Sahara Star Tours su WhatsApp' : 'Chat with Sahara Star Tours on WhatsApp')}
   >
     <div class="floating-wa-pulse"></div>
     <i class="fa-brands fa-whatsapp floating-wa-icon"></i>
-    <span class="floating-wa-tooltip">Chat with us on WhatsApp</span>
+    <span class="floating-wa-tooltip">{lang === 'es' ? 'Habla con nosotros por WhatsApp' : (lang === 'it' ? 'Contattaci su WhatsApp' : 'Chat with us on WhatsApp')}</span>
   </a>
 
   <!-- Reveal-on-scroll animation observer -->

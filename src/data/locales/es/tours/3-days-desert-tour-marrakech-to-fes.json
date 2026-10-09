@@ -1,0 +1,136 @@
+{
+  "slug": "3-days-desert-tour-marrakech-to-fes",
+  "title": "Circuito de 3 Días por el Desierto de Marrakech a Fez | Sahara Star Tours",
+  "shortTitle": "Circuito de 3 Días Marrakech a Fez",
+  "description": "El circuito más popular de 3 días conectando Marrakech con Fez: Alto Atlas, Kasbah Ait Ben Haddou, Valle del Dades, dunas de Merzouga en jaima de lujo y Valle del Ziz.",
+  "aboutHtml": "Conecta dos de las ciudades imperiales más emblemáticas de Marruecos con este legendario circuito por el desierto de 3 días de Marrakech a Fez. Cruza el sobrecogedor puerto de Tizi n'Tichka en el Alto Atlas, explora la famosa Kasbah de Ait Ben Haddou (Patrimonio de la Humanidad por la UNESCO) y admira las imponentes formaciones geológicas de los cañones del Todra y Dades. Vive la experiencia cumbre de montar en dromedario sobre las dunas doradas de Erg Chebbi al atardecer y pasar la noche en un campamento bereber de lujo antes de continuar hacia el norte a través del Valle del Ziz y el bosque de cedros de Ifrane hasta llegar a Fez.",
+  "duration": "3 Días / 2 Noches",
+  "startingFrom": "Marrakech",
+  "price": "Desde $420/persona",
+  "highlights": [
+    "Punto de encuentro: En tu hotel o aeropuerto en Marrakech.",
+    "Lugar de inicio: Marrakech",
+    "Lugar de finalización: Fez"
+  ],
+  "inclusions": [
+    "Transporte privado con aire acondicionado en 4x4 o monovolumen",
+    "Chófer/guía profesional multilingüe durante todo el recorrido",
+    "Combustible y peajes de carretera incluidos",
+    "Alojamiento de 1 noche en riad/kasbah en Dades (cena y desayuno)",
+    "Paseo en dromedario al atardecer en las dunas de Merzouga",
+    "Práctica de sandboard en las dunas (gratuita y opcional)",
+    "1 noche en campamento de lujo en el desierto (cena y desayuno)"
+  ],
+  "exclusions": [
+    "Bebidas durante las comidas",
+    "Almuerzos diarios",
+    "Billetes de avión",
+    "Propinas y gratificaciones"
+  ],
+  "itinerary": [
+    {
+      "day": "Día 1",
+      "title": "Marrakech – Aldeas Bereberes – Alto Atlas – Kasbah Ait Ben Haddou – Valle de las Rosas – Gargantas del Dades",
+      "content": "Salida temprano desde tu riad en Marrakech cruzando el puerto de montaña de Tizi n'Tichka (2.260 m) con vistas panorámicas de las aldeas bereberes del Alto Atlas. Visita guiada a la célebre Kasbah de Ait Ben Haddou (UNESCO). Almuerzo en Ouarzazate y continuación por el palmeral de Skoura y el Valle de las Rosas hasta las espectaculares formaciones rocosas del Dades para cenar y pasar la noche."
+    },
+    {
+      "day": "Día 2",
+      "title": "Gargantas del Dades – Valle del Dades – Gargantas del Todra – Dunas del Desierto de Merzouga",
+      "content": "Tras el desayuno nos dirigiremos hacia Tinghir para caminar entre las colosales paredes de 300 metros de las Gargantas del Todra. Parada en Erfoud y llegada por la tarde a Merzouga. Cambio al dromedario para cruzar las dunas doradas de Erg Chebbi, contemplar un atardecer mágico y llegar al campamento de lujo para cenar junto al fuego con tambores bereberes."
+    },
+    {
+      "day": "Día 3",
+      "title": "Dunas de Merzouga – Valle del Ziz – Bosque de Cedros – Ifrane – Fez",
+      "content": "Amanecer sobre las dunas y desayuno en el campamento. Salida hacia el norte a través del cañón y palmeral del Valle del Ziz. Almuerzo en Midelt y parada en el bosque de cedros de Azrou para ver a los macacos salvajes del Atlas. Breve parada en la ciudad alpina de Ifrane y llegada a Fez al atardecer para el traslado a tu riad."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Marrakech",
+      "day": "Día 1",
+      "subtitle": "Salida",
+      "desc": "Recogida y cruce del Alto Atlas."
+    },
+    {
+      "number": 2,
+      "name": "Ait Ben Haddou",
+      "day": "Día 1",
+      "subtitle": "Kasbah UNESCO",
+      "desc": "Fortaleza histórica de barro y cine."
+    },
+    {
+      "number": 3,
+      "name": "Gargantas del Dades",
+      "day": "Día 1",
+      "subtitle": "Cañón del Dades",
+      "desc": "Noche en hotel con encanto."
+    },
+    {
+      "number": 4,
+      "name": "Gargantas del Todra",
+      "day": "Día 2",
+      "subtitle": "Acantilados",
+      "desc": "Paredes verticales de caliza."
+    },
+    {
+      "number": 5,
+      "name": "Merzouga Sáhara",
+      "day": "Día 2",
+      "subtitle": "Erg Chebbi",
+      "desc": "Dromedarios y campamento de lujo."
+    },
+    {
+      "number": 6,
+      "name": "Valle del Ziz e Ifrane",
+      "day": "Día 3",
+      "subtitle": "Palmeral y Bosque",
+      "desc": "Macacos del Atlas y paisajes alpinos."
+    },
+    {
+      "number": 7,
+      "name": "Fez",
+      "day": "Día 3",
+      "subtitle": "Llegada",
+      "desc": "Traslado a tu riad en Fez."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/desert-tours/3-days-desert-tour-from-marrakech-to-fes/images/thumbnail.jpg",
+      "cap": "Circuito de 3 Días por el Desierto de Marrakech a Fez",
+      "alt": "Circuito de 3 Días por el Desierto de Marrakech a Fez – Sahara Star Tours"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/3-days-desert-tour-from-marrakech-to-fes/images/image-01.jpg",
+      "cap": "Cumbres del Alto Atlas y puerto de Tizi n'Tichka",
+      "alt": "Ruta panorámica a través del Alto Atlas"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/3-days-desert-tour-from-marrakech-to-fes/images/image-02.jpg",
+      "cap": "Kasbah de Ait Ben Haddou declarada por la UNESCO",
+      "alt": "Arquitectura bereber de adobe en Ait Ben Haddou"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/3-days-desert-tour-from-marrakech-to-fes/images/image-03.jpg",
+      "cap": "Desfiladero rocoso de las Gargantas del Todra",
+      "alt": "Acantilados verticales de caliza en las Gargantas del Todra"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/3-days-desert-tour-from-marrakech-to-fes/images/image-04.jpg",
+      "cap": "Caravana de dromedarios sobre las dunas de Merzouga",
+      "alt": "Paseo en dromedario al atardecer en Erg Chebbi"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/3-days-desert-tour-from-marrakech-to-fes/images/image-05.jpg",
+      "cap": "Campamento bereber de lujo en las dunas de Erg Chebbi",
+      "alt": "Jaimas de lujo iluminadas bajo el cielo estrellado del Sáhara"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/3-days-desert-tour-from-marrakech-to-fes/images/image-06.jpg",
+      "cap": "Palmerales del Valle del Ziz de camino a Fez",
+      "alt": "Oasis verde y cañón del Valle del Ziz"
+    }
+  ],
+  "faqs": []
+}

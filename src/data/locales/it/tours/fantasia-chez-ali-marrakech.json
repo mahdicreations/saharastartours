@@ -1,0 +1,65 @@
+{
+  "slug": "fantasia-chez-ali-marrakech",
+  "title": "Cena Spettacolo Fantasia Chez Ali a Marrakech | Sahara Star Tours",
+  "shortTitle": "Cena Spettacolo Fantasia Chez Ali",
+  "description": "Vivete una magica serata da Mille e una Notte a Marrakech. Banchetto tradizionale marocchino, danze folkloristiche, acrobati ed emozionante carica a cavallo.",
+  "aboutHtml": "Esperienza culturale serale marocchina.<br/><br/>Entrate nel magico mondo di Fantasia Chez Ali, la più famosa serata di gala e folklore a Marrakech, che celebra la storia, le usanze e la cucina del Marocco in un'atmosfera fiabesca.<br/><br/>All'interno di una grande arena fortificata, gusterete una sontuosa cena sotto ampie tende kaidali tradizionali, allietati da musicisti e ballerini folkloristici provenienti da tutte le regioni del paese.<br/><br/>Il momento clou della serata è la leggendaria carica equestre della 'Fantasia': una dimostrazione spettacolare in cui abili cavalieri berberi galoppano a tutta velocità sparando salviette a salve all'unisono con i loro antichi fucili, tra acrobazie e giochi di luce.<br/><br/>Al termine della serata il vostro autista privato vi riaccompagnerà comodamente al vostro alloggio a Marrakech.",
+  "duration": "Mezza Giornata / 3-4 Ore",
+  "startingFrom": "Marrakech",
+  "price": "Da 70 €/persona",
+  "highlights": [
+    "Cena tradizionale marocchina completa (harira, agnello mechoui, couscous e dessert pastilla).",
+    "Spettacolo equestre della Fantasia con abili cavalieri berberi e acrobati in sella.",
+    "Musica dal vivo, canti tribali e danze folkloristiche tradizionali di diverse tribù del Marocco."
+  ],
+  "inclusions": [
+    "Transfer andata e ritorno con veicolo climatizzato dal vostro alloggio a Marrakech",
+    "Sontuosa cena tradizionale marocchina servita sotto tenda caidale",
+    "Grande spettacolo equestre della Fantasia con cariche e acrobazie",
+    "Esibizioni folkloristiche musicali dal vivo e danza del ventre"
+  ],
+  "exclusions": [
+    "Spese personali e souvenir",
+    "Bevande alcoliche o extra non incluse nel menu",
+    "Mance facoltative per il personale",
+    "Servizi fotografici personalizzati"
+  ],
+  "itinerary": [
+    {
+      "day": "Giorno 1",
+      "title": "Fantasia Chez Ali Marrakech",
+      "content": "Intorno alle 19:30 o 20:00, pick-up dal vostro alloggio a Marrakech e trasferimento al celebre complesso Chez Ali. Sarete accolti da una corte di cavalieri e gruppi musicali in abiti d'epoca. All'interno della suggestiva tenda kaidale vi verrà servito un banchetto con piatti tradizionali tra cui la tipica zuppa harira, agnello mechoui arrosto, couscous imperiale e frutta fresca, accompagnati da sfilate musicali tra i tavoli. A seguire, vi sposterete nell'arena all'aperto per assistere all'emozionante spettacolo equestre della Fantasia, con cariche di cavalieri, acrobati e fuochi d'artificio. Rientro in hotel a Marrakech intorno a mezzanotte."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Marrakech",
+      "day": "Partenza",
+      "subtitle": "Pick-up in Hotel",
+      "desc": "Transfer privato serale dal vostro alloggio a Marrakech."
+    },
+    {
+      "number": 2,
+      "name": "Arena Chez Ali",
+      "day": "Serata",
+      "subtitle": "Cena in Tenda Kaidale",
+      "desc": "Banchetto tipico marocchino e gruppi folcloristici in costume."
+    },
+    {
+      "number": 3,
+      "name": "Stadio della Fantasia",
+      "day": "Spettacolo",
+      "subtitle": "Carica a Cavallo e Fuochi",
+      "desc": "Carica equestre dei cavalieri berberi, acrobazie e fuochi d'artificio."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/activities/fantasia-chez-ali-marrakech/images/thumbnail.jpg",
+      "cap": "Cena Spettacolo Fantasia Chez Ali a Marrakech",
+      "alt": "Cavalieri berberi in sella ai loro destrieri durante la carica della Fantasia Chez Ali"
+    }
+  ],
+  "faqs": []
+}

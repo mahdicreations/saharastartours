@@ -2,15 +2,17 @@
 // src/pages/desert-tours.astro — Desert tours category page
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getToursByCategory } from '../data/tours';
+import { getAlternateUrls } from '../data/i18n';
 
 const desertTours = getToursByCategory('desert-tours');
+const alternateUrls = getAlternateUrls('/desert-tours');
 
 const schemaData = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
   "name": "Morocco Sahara Desert Tours & Safaris | Sahara Star Tours",
   "description": "Explore Morocco desert tours from Casablanca and Marrakech. Erg Chebbi glamping, camel treks, High Atlas passes, and custom Sahara safaris from 3 to 16 days.",
-  "url": "https://www.saharastartours.com/desert-tours",
+  "url": alternateUrls.en,
   "mainEntity": {
     "@type": "ItemList",
     "numberOfItems": desertTours.length,
@@ -29,6 +31,7 @@ const schemaData = {
   description="Explore Morocco desert tours from Casablanca and Marrakech. Erg Chebbi glamping, camel treks, High Atlas passes, and custom Sahara safaris from 3 to 16 days."
   keywords="morocco desert tours, sahara camel trek, erg chebbi tour, merzouga tour, casablanca desert tour, marrakech desert tour"
   currentPage="desert-tours"
+  alternateUrls={alternateUrls}
   schemaData={schemaData}
 >
 

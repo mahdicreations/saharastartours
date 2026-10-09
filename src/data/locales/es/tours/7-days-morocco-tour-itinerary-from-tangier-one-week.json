@@ -1,0 +1,211 @@
+{
+  "slug": "7-days-morocco-tour-itinerary-from-tangier-one-week",
+  "title": "Tour de 7 Días por Marruecos de Tánger a Marrakech | Sahara Star Tours",
+  "shortTitle": "Tour de 7 Días de Tánger a Marrakech",
+  "description": "Circuito privado de 7 días de una semana desde Tánger a Marrakech visitando Chefchaouen, Volubilis, Fez con guía local, dos días en Merzouga y Ait Ben Haddou.",
+  "aboutHtml": "<p>Este circuito privado de una semana desde Tánger hasta Marrakech es una experiencia magistral que conecta el norte mediterráneo con las dunas saharianas y la mágica Marrakech. Explorará Chefchaouen en las montañas del Rif, las ruinas romanas de Volubilis, y disfrutará de una visita guiada privada por la medina de Fez. Cruzará el Atlas hacia el desierto de Merzouga donde pasará dos días inolvidables (con paseo en camello, noche en campamento de lujo y encuentro con nómadas) antes de recorrer las Gargantas del Todra y la Kasbah de Ait Ben Haddou hacia Marrakech.</p>",
+  "duration": "7 Días / 6 Noches",
+  "price": "Desde $920/persona",
+  "startingFrom": "Tánger",
+  "highlights": [
+    "Chefchaouen, la ciudad azul en las montañas del Rif",
+    "Dunas de Merzouga y desierto de Erg Chebbi",
+    "Paseo en camello por el desierto al atardecer",
+    "Kasbah de Ait Ben Haddou, Patrimonio de la Humanidad por la UNESCO",
+    "Ruta panorámica a través de las montañas del Alto Atlas",
+    "Medina de Fez y lugares culturales históricos"
+  ],
+  "inclusions": [
+    "Vehículo privado 4×4 o monovolumen con aire acondicionado",
+    "Chófer/guía local profesional de habla hispana",
+    "Combustible, peajes y gastos de funcionamiento del vehículo",
+    "Alojamiento en riads seleccionados y campamento de lujo",
+    "Desayunos diarios y cenas según el itinerario",
+    "Paseo en camello por las dunas con asistencia completa"
+  ],
+  "exclusions": [
+    "Almuerzos y bebidas",
+    "Vuelos y gastos portuarios/aeroportuarios no especificados",
+    "Entradas a monumentos o estudios opcionales",
+    "Propinas y gastos personales"
+  ],
+  "itinerary": [
+    {
+      "day": "Día 1",
+      "title": "Llegada a Tánger – Chefchaouen",
+      "content": "Su viaje de una semana comienza con la recogida en su alojamiento, en el aeropuerto o en el puerto de Tánger. Viajará hacia el sureste a través de los verdes valles de las montañas del Rif hasta llegar a la mágica Chefchaouen. Dispondrá de tiempo libre para pasear por sus callejuelas azuladas, admirar la plaza Outa el-Hammam y contemplar el atardecer. Cena y alojamiento en un riad tradicional."
+    },
+    {
+      "day": "Día 2",
+      "title": "Chefchaouen – Ruinas Romanas de Volubilis – Mequinez – Fez",
+      "content": "Tras el desayuno en Chefchaouen, continuará hacia las ruinas romanas de Volubilis (Patrimonio de la Humanidad por la UNESCO), reconocidas por sus mosaicos bien conservados. Proseguirá hacia Mequinez para admirar la puerta de Bab Mansour y el mausoleo de Moulay Ismail. Por la tarde llegará a Fez, la capital espiritual de Marruecos. Cena y noche en un riad en la medina."
+    },
+    {
+      "day": "Día 3",
+      "title": "Visita guiada de Fez con guía local",
+      "content": "Día completo dedicado a explorar la fascinante medina de Fez el-Bali con un guía oficial local. Visitará el Palacio Real, el barrio judío (Mellah), la histórica Madrasa Al Attarine, la Universidad Al Quaraouiyine y las famosas curtidurías de Chouara. Tarde libre para relajarse en su riad."
+    },
+    {
+      "day": "Día 4",
+      "title": "Fez – Ifrane – Bosque de Cedros – Midelt – Valle del Ziz – Desierto de Merzouga",
+      "content": "Partirá hacia el sur cruzando Ifrane, la 'Suiza de Marruecos', y el Bosque de Cedros de Azrou para observar a los macacos de Berbería en libertad. Tras el almuerzo en Midelt, descenderá por las impresionantes gargantas y palmerales del Valle del Ziz y Errachidia. Por la tarde alcanzará las doradas dunas de Erg Chebbi en Merzouga, donde montará en camello para presenciar el atardecer sobre las dunas y llegar a su campamento de lujo con cena tradicional y música de tambores bereberes bajo las estrellas."
+    },
+    {
+      "day": "Día 5",
+      "title": "Exploración de Merzouga – Familias Nómadas – Khamlia – Lago de Merzouga – Erg Chebbi – Palmeral",
+      "content": "Despertará al amanecer para contemplar la salida del sol sobre el mar de arena. Tras el desayuno regresará en camello a Merzouga para una jornada en todoterreno 4×4 por el desierto: visitará antiguas minas de kohl, compartirá un té con familias nómadas bereberes en sus tiendas artesanales y asistirá a una actuación de música y danza gnawa en el pueblo de Khamlia. Tras un almuerzo tradicional, paseará por el palmeral y contemplará el lago estacional de Merzouga. Cena y alojamiento en un confortable hotel frente a las dunas."
+    },
+    {
+      "day": "Día 6",
+      "title": "Desierto de Merzouga – Rissani – Erfoud – Gargantas del Todra – Valle del Dades",
+      "content": "Tras el desayuno en el hotel, visitará la histórica Rissani con su animado zoco tradicional. Continuará hacia Erfoud para conocer talleres de mármol fosilizado y seguirá por los palmerales de Touroug y Tinjdad hasta las colosales Gargantas del Todra, donde disfrutará de tiempo para pasear y almorzar. Luego continuará hacia el Valle del Dades, deteniéndose ante las formaciones de los 'dedos de mono'. Cena y noche en un riad en Dades."
+    },
+    {
+      "day": "Día 7",
+      "title": "Valle del Dades – Valle de las Rosas – Palmeral de Skoura – Ouarzazate – Ait Ben Haddou – Alto Atlas – Marrakech",
+      "content": "En la última jornada viajará a través del Valle de las Rosas en Kalaat M'Gouna y el palmeral de Skoura hasta Ouarzazate, donde podrá visitar los estudios cinematográficos. Proseguirá hacia la famosa Kasbah de Ait Ben Haddou, pueblo fortificado de adobe declarado Patrimonio de la Humanidad por la UNESCO y escenario de grandes películas como Gladiator y La Momia. Por la tarde cruzará el Alto Atlas a través del puerto de Tizi N'Tichka (2.260 m) con paradas panorámicas, llegando a Marrakech donde concluirá su semana en Marruecos."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Llegada a Tánger",
+      "day": "Día 1",
+      "subtitle": "Tánger – Chefchaouen",
+      "desc": "Recogida en Tánger y traslado a través de las montañas del Rif a Chefchaouen."
+    },
+    {
+      "number": 2,
+      "name": "Chefchaouen a Fez",
+      "day": "Día 2",
+      "subtitle": "Chefchaouen – Volubilis – Mequinez – Fez",
+      "desc": "Ruinas romanas de Volubilis, puerta Bab Mansour en Mequinez y llegada a Fez."
+    },
+    {
+      "number": 3,
+      "name": "Visita de Fez",
+      "day": "Día 3",
+      "subtitle": "Visita guiada por la medina de Fez",
+      "desc": "Recorrido guiado privado por palacios, madrasas y curtidurías de Fez."
+    },
+    {
+      "number": 4,
+      "name": "Fez a Merzouga",
+      "day": "Día 4",
+      "subtitle": "Fez – Ifrane – Bosque de Cedros – Valle del Ziz – Merzouga",
+      "desc": "Medio Atlas, bosque de cedros, palmerales del Ziz y campamento en Erg Chebbi."
+    },
+    {
+      "number": 5,
+      "name": "Región de Merzouga",
+      "day": "Día 5",
+      "subtitle": "Exploración de Merzouga – Nómadas – Khamlia – Oasis",
+      "desc": "Día en 4×4 conociendo nómadas, música gnawa y dunas del Sahara."
+    },
+    {
+      "number": 6,
+      "name": "Merzouga al Dades",
+      "day": "Día 6",
+      "subtitle": "Merzouga – Rissani – Erfoud – Todra – Valle del Dades",
+      "desc": "Zoco de Rissani, paseo por las Gargantas del Todra y noche en Dades."
+    },
+    {
+      "number": 7,
+      "name": "Valle del Dades a Marrakech",
+      "day": "Día 7",
+      "subtitle": "Dades – Valle de las Rosas – Ait Ben Haddou – Marrakech",
+      "desc": "Kasbah Ait Ben Haddou, cruce del Alto Atlas y despedida en Marrakech."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/7-days-morocco-tour-itinerary-from-tangier-one-week/images/gallery_1.webp",
+      "cap": "Medina de Tánger",
+      "alt": "Casas blancas mediterráneas de la medina de Tánger con vistas a la bahía"
+    },
+    {
+      "src": "/sahara-star-tours/7-days-morocco-tour-itinerary-from-tangier-one-week/images/gallery_10.webp",
+      "cap": "Zoco de Marrakech",
+      "alt": "Bulliciosos callejones del zoco de Marrakech llenos de especias, alfombras y farolillos"
+    },
+    {
+      "src": "/sahara-star-tours/7-days-morocco-tour-itinerary-from-tangier-one-week/images/gallery_2.webp",
+      "cap": "Chefchaouen azul",
+      "alt": "Sendero de la medina azul con vibrantes macetas de flores en Chefchaouen"
+    },
+    {
+      "src": "/sahara-star-tours/7-days-morocco-tour-itinerary-from-tangier-one-week/images/gallery_3.webp",
+      "cap": "Arco de Volubilis",
+      "alt": "Antiguo arco de triunfo y columnas de piedra en el sitio de Volubilis de la UNESCO"
+    },
+    {
+      "src": "/sahara-star-tours/7-days-morocco-tour-itinerary-from-tangier-one-week/images/gallery_4.webp",
+      "cap": "Bab Mansour",
+      "alt": "Gran puerta de Bab Mansour que conduce a la medina imperial de Mequinez"
+    },
+    {
+      "src": "/sahara-star-tours/7-days-morocco-tour-itinerary-from-tangier-one-week/images/gallery_5.webp",
+      "cap": "Curtidores de Fez",
+      "alt": "Curtidores trabajando con tintes naturales en cubas de piedra en la curtiduría de Chouara, Fez"
+    },
+    {
+      "src": "/sahara-star-tours/7-days-morocco-tour-itinerary-from-tangier-one-week/images/gallery_6.webp",
+      "cap": "Bosque de Azrou",
+      "alt": "Bosque de cedros de Azrou en el Medio Atlas con macacos de Berbería"
+    },
+    {
+      "src": "/sahara-star-tours/7-days-morocco-tour-itinerary-from-tangier-one-week/images/gallery_7.webp",
+      "cap": "Dunas de Erg Chebbi",
+      "alt": "Caravana de camellos guiada sobre las onduladas dunas de arena de Erg Chebbi"
+    },
+    {
+      "src": "/sahara-star-tours/7-days-morocco-tour-itinerary-from-tangier-one-week/images/gallery_8.webp",
+      "cap": "Gargantas del Todra",
+      "alt": "Paredes de cañón de piedra caliza roja de las Gargantas del Todra con arroyo abajo"
+    },
+    {
+      "src": "/sahara-star-tours/7-days-morocco-tour-itinerary-from-tangier-one-week/images/gallery_9.webp",
+      "cap": "Ait Ben Haddou",
+      "alt": "Ksar fortificado de arcilla de Ait Ben Haddou brillando a la luz del atardecer"
+    },
+    {
+      "src": "/sahara-star-tours/7-days-morocco-tour-itinerary-from-tangier-one-week/images/hero_2.webp",
+      "cap": "Valle de Chefchaouen",
+      "alt": "Chefchaouen enclavada en el valle entre los picos rocosos de las montañas del Rif"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "¿Es este un tour privado o compartido?",
+      "answer": "Esta es una experiencia totalmente privada: el vehículo, conductor y programa están reservados en exclusiva para su grupo."
+    },
+    {
+      "question": "¿Cuánto tiempo dura el paseo en camello y qué opciones existen?",
+      "answer": "El paseo en camello suele durar entre 40 minutos y 1,5 horas. Como alternativa, se puede organizar el traslado directo en vehículo 4×4 sin coste adicional."
+    },
+    {
+      "question": "¿La tienda del campamento en el desierto es privada?",
+      "answer": "Sí, el campamento en el desierto cuenta con tiendas de campaña privadas de lujo con baño incorporado, agua caliente, camas de verdad y electricidad."
+    },
+    {
+      "question": "¿Dónde se realiza la recogida y el regreso?",
+      "answer": "La recogida se realiza en su alojamiento, puerto o aeropuerto de Tánger y el circuito concluye en Marrakech con traslado a su riad o al aeropuerto."
+    },
+    {
+      "question": "¿Qué tipo de vehículo se utiliza?",
+      "answer": "El viaje se realiza en un cómodo vehículo privado 4×4 o monovolumen con aire acondicionado. Para grupos más numerosos disponemos de minibuses adaptados."
+    },
+    {
+      "question": "¿Se pueden atender requerimientos dietéticos particulares?",
+      "answer": "Sí. Infórmenos sobre sus preferencias o restricciones dietéticas al reservar para que los riads, hoteles y el campamento preparen comidas adecuadas (vegetariano, vegano, sin gluten, etc.)."
+    },
+    {
+      "question": "¿Es este itinerario adecuado para todas las edades?",
+      "answer": "Sí, es perfectamente adecuado para todas las edades gracias al ritmo equilibrado de las etapas y a las paradas frecuentes para descansar."
+    },
+    {
+      "question": "¿Cuál es la mejor época del año para realizar este tour?",
+      "answer": "La primavera y el otoño brindan temperaturas suaves y cielos despejados muy recomendables para combinar el norte montañoso, las ciudades históricas y el desierto."
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+---
+// src/pages/it/desert-tours.astro — Italian Desert Tours category page
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getLocalizedToursByCategory } from '../../data/toursI18n';
+import { getAlternateUrls } from '../../data/i18n';
+
+const desertTours = getLocalizedToursByCategory('desert-tours', 'it');
+const alternateUrls = getAlternateUrls('/desert-tours');
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Tour nel Deserto del Sahara in Marocco | Sahara Star Tours",
+  "description": "Scopri i tour nel deserto del Sahara da Marrakech e Casablanca. Glamping di lusso a Erg Chebbi, trekking in cammello ed escursioni private da 3 a 16 giorni.",
+  "url": alternateUrls.it
+};
+---
+
+<BaseLayout
+  title="Tour nel Deserto del Sahara in Marocco | Sahara Star Tours"
+  description="Scopri i tour nel deserto del Sahara da Marrakech e Casablanca. Glamping di lusso a Erg Chebbi, trekking in cammello ed escursioni private da 3 a 16 giorni."
+  keywords="tour deserto sahara, viaggi deserto marocco, escursioni erg chebbi merzouga, dormire nel deserto marocco"
+  currentPage="desert-tours"
+  lang="it"
+  alternateUrls={alternateUrls}
+  schemaData={schemaData}
+>
+
+<section class="cat-hero">
+  <span class="tag" style="display:inline-block;color:var(--sand-gold);text-transform:uppercase;letter-spacing:3px;font-size:0.9rem;font-weight:600;margin-bottom:12px;">Tour nel Deserto</span>
+  <h1 style="font-size:3rem;max-width:700px;margin:0 auto 20px;background:linear-gradient(135deg,var(--text-main) 30%,var(--sand-gold) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Tour &amp; Safari nel Deserto del Sahara</h1>
+  <p style="max-width:650px;margin:0 auto;font-size:1.1rem;">Dalle maestose dune dorate dell'Erg Chebbi alle antiche kasbah della Valle del Draa: itinerari su misura per vivere la vera essenza del Marocco.</p>
+</section>
+
+<section style="padding: 60px 5%; max-width: 1400px; margin: 0 auto;">
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:32px;">
+    {desertTours.map(tour => (
+      <article class="tour-card reveal active">
+        <div class="tour-img-wrapper">
+          <img src={tour.heroImage} alt={tour.shortTitle} loading="lazy" onerror="this.src='/assets/placeholder-morocco.svg'" />
+          {tour.badge && <span class="tour-badge">{tour.badge}</span>}
+        </div>
+        <div class="tour-info">
+          <div class="tour-meta">
+            <div><i class="fa-regular fa-clock"></i> {tour.duration}</div>
+            <div><i class="fa-solid fa-location-dot"></i> {tour.startingFrom}</div>
+          </div>
+          <h2 class="tour-title">{tour.shortTitle}</h2>
+          <p class="tour-desc">{tour.description}</p>
+          <div class="tour-footer">
+            <div class="tour-price">
+              <span class="tour-price-label">A partire da</span>
+              <span class="tour-price-value">{tour.price.replace(/^(From|Desde|Da|A partire da)\s*/i, '').replace(/\/(persona|person)\s*/i, '').trim()}</span>
+            </div>
+            <a href={`/it/tours/${tour.slug}`} class="btn btn-primary btn-sm">Vedi Tour <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </article>
+    ))}
+  </div>
+</section>
+
+</BaseLayout>

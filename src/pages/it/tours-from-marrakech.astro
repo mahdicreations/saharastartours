@@ -1,0 +1,526 @@
+---
+// src/pages/it/tours-from-marrakech.astro — Dedicated Italian Marrakech Departure Hub
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getLocalizedMultiDayToursByCity } from '../../data/toursI18n';
+import { getAlternateUrls } from '../../data/i18n';
+
+const tours = getLocalizedMultiDayToursByCity('Marrakech', 'it');
+const alternateUrls = getAlternateUrls('/tours-from-marrakech');
+
+function getDurationTier(days: number): string {
+  if (days <= 4) return '2-4';
+  if (days <= 7) return '5-7';
+  return '8+';
+}
+
+const marrakechSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "name": "Tour Privati in Marocco da Marrakech | Sahara Star Tours",
+      "description": `Scopri la nostra collezione completa di ${tours.length} tour privati di più giorni con partenza da Marrakech. Valichi dell'Alto Atlante, kasbah di Ait Ben Haddou, glamping a Erg Chebbi e traversate verso Fes.`,
+      "url": alternateUrls.it
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": alternateUrls.it.replace('/tours-from-marrakech', '')
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tour di Più Giorni",
+          "item": "https://www.saharastartours.com/it/tours"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Tour da Marrakech",
+          "item": alternateUrls.it
+        }
+      ]
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title={`Tour da Marrakech (${tours.length} Itinerari Privati tra Deserto e Montagne) | Sahara Star Tours`}
+  description={`Prenota tour privati da Marrakech da 2 a 10 giorni. Attraversa l'Alto Atlante via Tizi n'Tichka, esplora le kasbah di Ait Ben Haddou, dormi sotto le stelle a Erg Chebbi o prosegui verso Fes.`}
+  keywords="tour da marrakech, tour deserto marrakech, marrakech a merzouga 3 giorni, marrakech fes deserto, tour privati marrakech"
+  currentPage="tours"
+  lang="it"
+  alternateUrls={alternateUrls}
+  schemaData={marrakechSchema}
+>
+
+<!-- CITY HERO SECTION -->
+<section class="city-hero">
+  <div class="city-hero-overlay"></div>
+  <div class="city-hero-content">
+    <nav class="city-breadcrumbs" aria-label="Percorso">
+      <a href="/it">Home</a>
+      <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
+      <a href="/it/tours">Tour di Più Giorni</a>
+      <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
+      <span class="current">Tour da Marrakech</span>
+    </nav>
+    <span class="tag"><i class="fa-solid fa-location-dot"></i> Hub di Partenza per il Sud del Marocco</span>
+    <h1>Tour Privati in Marocco da Marrakech</h1>
+    <p>Marrakech è la rampa di lancio storica verso il Grande Sud marocchino. Partendo direttamente dal tuo hotel o riad, i nostri itinerari privati attraversano le spettacolari vette dell'Alto Atlante attraverso il passo Tizi n'Tichka, scendendo tra valli di antiche kasbah, lussureggianti palmeti e le maestose dune dorate del deserto del Sahara.</p>
+  </div>
+</section>
+
+<!-- LOCAL EDITORIAL / ROUTE INSIGHTS -->
+<section class="city-editorial-section">
+  <div class="city-editorial-container">
+    <div class="city-editorial-grid">
+      <div class="editorial-card">
+        <div class="editorial-icon"><i class="fa-solid fa-mountain"></i></div>
+        <h3>Alto Atlante e Passo del Tichka</h3>
+        <p>Ogni tour verso sud si snoda attraverso lo spettacolare passo Tizi n'Tichka a 2.260 metri, regalando scorci panoramici di villaggi berberi aggrappati alle pareti del canyon.</p>
+      </div>
+      <div class="editorial-card">
+        <div class="editorial-icon"><i class="fa-solid fa-monument"></i></div>
+        <h3>Ksar Ait Ben Haddou (UNESCO)</h3>
+        <p>Visita la più celebre fortezza d'argilla del Marocco, antico crocevia carovaniero sulle rotte del sale transahariane e set cinematografico di capolavori come Il Gladiatore e Game of Thrones.</p>
+      </div>
+      <div class="editorial-card">
+        <div class="editorial-icon"><i class="fa-solid fa-campground"></i></div>
+        <h3>Glamping di Lusso a Erg Chebbi</h3>
+        <p>Raggiungi Merzouga a dorso di dromedario al tramonto, gusta la raffinata cucina marocchina e riposa in tende berbere private di lusso sotto la splendida Via Lattea del deserto.</p>
+      </div>
+      <div class="editorial-card">
+        <div class="editorial-icon"><i class="fa-solid fa-route"></i></div>
+        <h3>Traversate verso Fes</h3>
+        <p>Scegli tra itinerari circolari con ritorno a Marrakech o traversate che attraversano la Valle dello Ziz e le foreste di cedri del Medio Atlante per concludersi nell'antica capitale imperiale di Fes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOURS CATALOGUE BODY -->
+<section class="city-catalog-body">
+  <div class="city-catalog-container" x-data="{ activeDuration: 'all' }">
+    
+    <!-- Filter bar -->
+    <div class="city-filter-panel">
+      <div class="filter-header-left">
+        <h2>{tours.length} Itinerari di Più Giorni con Partenza da Marrakech</h2>
+        <p>Veicolo 4x4 o minivan Mercedes privato con autista professionista e aria condizionata</p>
+      </div>
+      <div class="duration-pills-wrap">
+        <button
+          class="duration-pill"
+          :class="activeDuration === 'all' ? 'active' : ''"
+          @click="activeDuration = 'all'"
+          type="button"
+        >
+          Tutte le durate ({tours.length})
+        </button>
+        <button
+          class="duration-pill"
+          :class="activeDuration === '2-4' ? 'active' : ''"
+          @click="activeDuration = '2-4'"
+          type="button"
+        >
+          2–4 Giorni ({tours.filter(t => t.durationDays <= 4).length})
+        </button>
+        <button
+          class="duration-pill"
+          :class="activeDuration === '5-7' ? 'active' : ''"
+          @click="activeDuration = '5-7'"
+          type="button"
+        >
+          5–7 Giorni ({tours.filter(t => t.durationDays >= 5 && t.durationDays <= 7).length})
+        </button>
+        <button
+          class="duration-pill"
+          :class="activeDuration === '8+' ? 'active' : ''"
+          @click="activeDuration = '8+'"
+          type="button"
+        >
+          8+ Giorni ({tours.filter(t => t.durationDays >= 8).length})
+        </button>
+      </div>
+    </div>
+
+    <!-- Tours Grid -->
+    <div class="city-tours-grid">
+      {tours.map(tour => {
+        const tier = getDurationTier(tour.durationDays);
+        return (
+          <article 
+            class="tour-card reveal active"
+            data-duration-tier={tier}
+            x-show={`activeDuration === 'all' || activeDuration === '${tier}'`}
+            x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="opacity-0 scale-95"
+            x-transition:enter-end="opacity-100 scale-100"
+          >
+            <div class="tour-img-wrapper">
+              <img 
+                src={tour.heroImage} 
+                alt={tour.shortTitle} 
+                loading="lazy"
+                onerror="this.src='/assets/placeholder-morocco.svg'"
+              />
+              {tour.badge && <span class="tour-badge">{tour.badge}</span>}
+            </div>
+            <div class="tour-info">
+              <div class="tour-meta">
+                <div><i class="fa-regular fa-clock"></i> {tour.duration}</div>
+                <div><i class="fa-solid fa-location-dot"></i> A: {tour.arrivalCity}</div>
+              </div>
+              <h3 class="tour-title" style="font-size:1.35rem;">{tour.shortTitle}</h3>
+              <p class="tour-desc">{tour.description}</p>
+              <div class="tour-footer">
+                <div class="tour-price">
+                  <span class="tour-price-label">Da</span>
+                  <span class="tour-price-value">{tour.price.replace(/^(From|Desde|Da|A partire da)\s*/i, '').replace(/\/(persona|person)\s*/i, '').trim()}</span>
+                </div>
+                <a href={`/it/tours/${tour.slug}`} class="btn btn-primary btn-sm">
+                  Vedi Tour <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+        );
+      })}
+    </div>
+
+  </div>
+</section>
+
+<!-- MARRAKECH SHORT EXCURSIONS CROSS-LINK -->
+<section class="city-silo-nav">
+  <div class="city-silo-container">
+    <div class="silo-callout">
+      <div class="silo-callout-text">
+        <span class="tag"><i class="fa-solid fa-compass"></i> Sei già a Marrakech?</span>
+        <h3>Scopri le Escursioni Giornaliere e le Avventure Locali</h3>
+        <p>Se non hai abbastanza giorni per un lungo viaggio nel deserto, scopri il nostro catalogo dedicato di escursioni giornaliere e attività tipiche:</p>
+      </div>
+      <div class="silo-callout-btns">
+        <a href="/it/day-trips" class="btn btn-secondary">
+          <i class="fa-solid fa-sun"></i> Escursioni in Giornata (6 Tour)
+        </a>
+        <a href="/it/activities" class="btn btn-secondary">
+          <i class="fa-solid fa-bolt"></i> Attività all'Aperto (6 Attività)
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OTHER DEPARTURE HUBS NAVIGATION -->
+<section class="other-hubs-nav">
+  <div class="other-hubs-container">
+    <h3>Scopri Tour di Più Giorni da Altre Città di Partenza</h3>
+    <div class="other-hubs-pills">
+      <a href="/it/tours-from-casablanca" class="hub-pill"><i class="fa-solid fa-plane-arrival"></i> Tour da Casablanca</a>
+      <a href="/it/tours-from-fes" class="hub-pill"><i class="fa-solid fa-landmark"></i> Tour da Fes</a>
+      <a href="/it/tours-from-tangier" class="hub-pill"><i class="fa-solid fa-ship"></i> Tour da Tangeri</a>
+      <a href="/it/tours-from-ouarzazate" class="hub-pill"><i class="fa-solid fa-camera"></i> Tour da Ouarzazate</a>
+      <a href="/it/tours" class="hub-pill active"><i class="fa-solid fa-compass"></i> Tutti i Tour di Più Giorni</a>
+    </div>
+  </div>
+</section>
+
+</BaseLayout>
+
+<style>
+.city-hero {
+  position: relative;
+  padding: 160px 5% 70px;
+  text-align: center;
+  background: radial-gradient(circle at 50% 30%, rgba(217, 107, 67, 0.18) 0%, transparent 60%), linear-gradient(180deg, var(--night-surface) 0%, var(--night-bg) 100%);
+  border-bottom: 1px solid var(--glass-border);
+  overflow: hidden;
+}
+
+.city-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('/assets/zellij_pattern.svg');
+  background-repeat: repeat;
+  background-size: 180px 180px;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.city-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.city-breadcrumbs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.city-breadcrumbs a {
+  color: var(--text-muted);
+  transition: color 0.3s;
+}
+
+.city-breadcrumbs a:hover {
+  color: var(--sand-gold);
+}
+
+.city-breadcrumbs .sep {
+  font-size: 0.7rem;
+  opacity: 0.5;
+}
+
+.city-breadcrumbs .current {
+  color: var(--sand-gold);
+  font-weight: 500;
+}
+
+.city-hero h1 {
+  font-size: 3rem;
+  line-height: 1.15;
+  margin: 16px 0 20px;
+  background: linear-gradient(135deg, var(--text-main) 30%, var(--sand-gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.city-hero p {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* Editorial cards */
+.city-editorial-section {
+  padding: 50px 5% 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.city-editorial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+}
+
+.editorial-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  padding: 26px 22px;
+  transition: all 0.3s ease;
+}
+
+.editorial-card:hover {
+  border-color: var(--sand-gold);
+  transform: translateY(-2px);
+}
+
+.editorial-icon {
+  font-size: 1.6rem;
+  color: var(--sand-gold);
+  margin-bottom: 14px;
+}
+
+.editorial-card h3 {
+  font-size: 1.15rem;
+  color: var(--text-main);
+  margin: 0 0 8px;
+}
+
+.editorial-card p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Catalog Body */
+.city-catalog-body {
+  padding: 40px 0 80px;
+}
+
+.city-catalog-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.city-filter-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 40px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.filter-header-left h2 {
+  font-size: 1.6rem;
+  color: var(--text-main);
+  margin: 0 0 6px;
+}
+
+.filter-header-left p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.duration-pills-wrap {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.duration-pill {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--text-muted);
+  border-radius: 30px;
+  padding: 7px 18px;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.duration-pill:hover {
+  color: var(--sand-gold);
+  border-color: var(--sand-gold);
+}
+
+.duration-pill.active {
+  background: linear-gradient(135deg, var(--terracotta) 0%, hsl(14, 75%, 45%) 100%);
+  border-color: var(--terracotta);
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 4px 14px var(--terracotta-glow);
+}
+
+.city-tours-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 32px;
+}
+
+/* Silo callout */
+.city-silo-nav {
+  padding: 20px 5% 50px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.silo-callout {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 35px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.silo-callout-text h3 {
+  font-size: 1.35rem;
+  color: var(--text-main);
+  margin: 8px 0 6px;
+}
+
+.silo-callout-text p {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.silo-callout-btns {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* Other Hubs Navigation */
+.other-hubs-nav {
+  padding: 30px 5% 90px;
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.other-hubs-nav h3 {
+  font-size: 1.25rem;
+  color: var(--text-main);
+  margin-bottom: 20px;
+}
+
+.other-hubs-pills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.hub-pill {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--glass-border);
+  color: var(--text-muted);
+  border-radius: 30px;
+  padding: 8px 20px;
+  font-size: 0.85rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s;
+}
+
+.hub-pill:hover {
+  color: var(--sand-gold);
+  border-color: var(--sand-gold);
+  transform: translateY(-2px);
+}
+
+.hub-pill.active {
+  border-color: var(--sand-gold);
+  color: var(--sand-gold);
+}
+
+@media (max-width: 900px) {
+  .city-filter-panel {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .silo-callout {
+    flex-direction: column;
+    text-align: center;
+  }
+  .silo-callout-btns {
+    justify-content: center;
+  }
+  .city-hero h1 {
+    font-size: 2.2rem;
+  }
+}
+</style>

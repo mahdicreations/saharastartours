@@ -1,0 +1,66 @@
+{
+  "slug": "camel-riding",
+  "title": "Passeggiata in Cammello nel Palmeto di Marrakech | Sahara Star Tours",
+  "shortTitle": "Passeggiata in Cammello nel Palmeto",
+  "description": "Classico giro di 1 ora in cammello nel suggestivo palmeto di Marrakech con abiti tradizionali nomadi. Conclusione con tè alla menta fresca sotto una tenda berbera.",
+  "aboutHtml": "<strong>Passeggiata in Cammello nel Palmeto di Marrakech</strong><br/><br/>Una passeggiata in cammello nell'iconico Palmeto di Marrakech è una delle esperienze più caratteristiche e indimenticabili durante un soggiorno in Marocco.<br/><br/>Situato a nord della medina, il palmeto è un'oasi che conta oltre 100.000 palme e offre una splendida cornice tranquilla per una carovana di dromedari di circa 1-1,5 ore.<br/><br/>Accompagnati da cammellieri locali e indossando la tradizionale djellaba con turbante berbero, vivrete la pace dell'oasi con vista sull'Alto Atlante prima di gustare un rinfrescante tè alla menta in una casa tradizionale.",
+  "duration": "Mezza Giornata / 3-4 Ore",
+  "startingFrom": "Marrakech",
+  "price": "Da 35 €/persona",
+  "highlights": [
+    "Passeggiata a dorso di cammello nell'iconico Palmeto di Marrakech.",
+    "Vivete l'autentica ospitalità marocchina gustando un fresco tè alla menta.",
+    "Paesaggi rilassanti e scorci suggestivi tra oltre 100.000 palme.",
+    "Adatto a tutte le età, perfetto per famiglie con bambini e coppie."
+  ],
+  "inclusions": [
+    "Transfer andata e ritorno climatizzato dal vostro hotel a Marrakech",
+    "Passeggiata guidata in cammello da 1 a 2 ore nel Palmeto",
+    "Tunica e turbante tuareg tradizionali per le foto e per proteggersi dal sole",
+    "Pausa con tè alla menta marocchino presso una dimora berbera locale"
+  ],
+  "exclusions": [
+    "Spese personali e souvenir",
+    "Mance per i cammellieri e l'autista (facoltative)",
+    "Pasti o bevande supplementari",
+    "Biglietti d'ingresso a monumenti o attrazioni"
+  ],
+  "itinerary": [
+    {
+      "day": "Giorno 1",
+      "title": "Passeggiata in Cammello a Marrakech",
+      "content": "Pick-up alle 9:00 dal vostro hotel o riad a Marrakech e transfer verso il verdeggiante Palmeto. Incontro con i cammellieri e vestizione con l'abito tradizionale (scialle e cheich). Inizio della tranquilla passeggiata guidata a dorso di dromedario di circa un'ora e mezza tra sentieri sabbiosi e palme centenarie. Sosta presso una casa berbera per assaporare un ottimo tè alla menta e conversare con la gente del posto. Rientro alla base e transfer di ritorno al vostro alloggio nel primo pomeriggio."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Marrakech",
+      "day": "Partenza",
+      "subtitle": "Pick-up in Hotel",
+      "desc": "Transfer privato dal vostro alloggio a Marrakech."
+    },
+    {
+      "number": 2,
+      "name": "Oasi del Palmeto di Marrakech",
+      "day": "Attività",
+      "subtitle": "Piste nel Palmeto",
+      "desc": "Tranquilla carovana in dromedario tra le palme secolari."
+    },
+    {
+      "number": 3,
+      "name": "Accampamento Berbero",
+      "day": "Pausa Tè",
+      "subtitle": "Ospitalità e Tè alla Menta",
+      "desc": "Pausa accogliente con tè alla menta in dimora berbera."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/activities/camel-riding/images/thumbnail.jpg",
+      "cap": "Passeggiata in Cammello nel Palmeto di Marrakech",
+      "alt": "Carovana di dromedari che avanza tra le palme dell'oasi di Marrakech"
+    }
+  ],
+  "faqs": []
+}

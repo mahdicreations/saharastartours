@@ -1,0 +1,88 @@
+{
+  "slug": "day-trip-ait-ben-haddou",
+  "title": "Escursione di un Giorno ad Ait Ben Haddou e Ouarzazate | Sahara Star Tours",
+  "shortTitle": "Escursione ad Ait Ben Haddou e Ouarzazate",
+  "description": "Escursione di una giornata intera da Marrakech attraverso il passo Tizi n'Tichka verso la Kasbah UNESCO di Ait Ben Haddou e la capitale del cinema Ouarzazate.",
+  "aboutHtml": "Escursione di una giornata da Marrakech a Ouarzazate e alla Kasbah di Ait Ben Haddou.<br/><br/>Questa gita giornaliera da Marrakech è una delle esperienze culturali più celebri in Marocco, comprendendo la visita al favoloso ksar fortificato di Ait Ben Haddou attraverso le vette dell'Alto Atlante.<br/><br/>Il viaggio inizia attraversando la catena montuosa dell'Atlante attraverso il leggendario valico del Tizi n'Tichka (2.260 m), ammirando villaggi berberi arroccati sulle scogliere e vallate sconfinate.<br/><br/>Arriveremo alla Kasbah di Ait Ben Haddou, capolavoro di architettura in terra cruda dichiarato Patrimonio Mondiale dell'Umanità UNESCO e set iconico di kolossal come Il Gladiatore, Lawrence d'Arabia e Il Trono di Spade.<br/><br/>Proseguiremo per Ouarzazate, la 'Hollywood del Marocco', per ammirare i suoi celebri studi cinematografici e la Kasbah di Taourirt prima del rientro serale a Marrakech.",
+  "duration": "1 Giorno / Escursione di una Giornata",
+  "startingFrom": "Marrakech",
+  "price": "Da 75 €/persona",
+  "highlights": [
+    "Montagne dell'Alto Atlante: Spettacolare percorso panoramico tra tornanti mozzafiato e scorci montani.",
+    "Ouarzazate: Visita alla capitale del cinema marocchino, sede dei più grandi studi cinematografici d'Africa.",
+    "Kasbah di Ait Ben Haddou: Esplorate il sito Patrimonio Mondiale dell'Umanità UNESCO e iconico set cinematografico.",
+    "Kasbah di Taourirt: Visita a questa splendida fortezza residenziale berbera ricca di fascino storico."
+  ],
+  "inclusions": [
+    "Viaggio panoramico attraverso l'Alto Atlante attraverso il valico del Tizi n'Tichka",
+    "Visita guidata alla Kasbah di Ait Ben Haddou, Patrimonio Mondiale dell'Umanità UNESCO",
+    "Sosta a Ouarzazate (la Hollywood d'Africa) e vista sulla Kasbah di Taourirt",
+    "Autista e guida professionale parlante inglese o spagnolo"
+  ],
+  "exclusions": [
+    "Spese personali e souvenir",
+    "Mance per guida e autista (facoltative)",
+    "Pranzo e bevande extra non specificati",
+    "Biglietti d'ingresso agli studi cinematografici o sale interne"
+  ],
+  "itinerary": [
+    {
+      "day": "Giorno 1",
+      "title": "Marrakech – Alto Atlante (Tizi n'Tichka) – Kasbah Ait Ben Haddou – Ouarzazate – Kasbah Taourirt",
+      "content": "Partenza di primo mattino da Marrakech in veicolo confortevole verso l'Alto Atlante. Salita panoramica attraverso il valico di Tizi n'Tichka a 2.260 metri, con soste fotografiche sui villaggi berberi abbarbicati e sui rilievi montuosi. Discesa verso la splendida Kasbah fortificata di Ait Ben Haddou, dove farete una visita a piedi tra torri merlate e vicoli d'argilla, rivivendo le atmosfere di capolavori come Il Gladiatore. Pranzo tipico in ristorante locale con terrazza panoramica. Proseguimento per Ouarzazate con sosta agli Atlas Film Studios e alla Kasbah di Taourirt, antica dimora dei signori dell'Atlante. Nel pomeriggio rientro verso Marrakech attraverso i passi montani, con arrivo in riad in serata."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Marrakech",
+      "day": "Mattina",
+      "subtitle": "Partenza",
+      "desc": "Pick-up in riad e viaggio verso l'Alto Atlante."
+    },
+    {
+      "number": 2,
+      "name": "Tizi n'Tichka",
+      "day": "Lungo la Via",
+      "subtitle": "Passo dell'Alto Atlante (2.260 m)",
+      "desc": "Punti panoramici spettacolari sui tornanti di montagna."
+    },
+    {
+      "number": 3,
+      "name": "Kasbah Ait Ben Haddou",
+      "day": "Pranzo",
+      "subtitle": "Fortezza Patrimonio UNESCO",
+      "desc": "Salita attraverso l'antico ksar in terra cruda del Gladiatore."
+    },
+    {
+      "number": 4,
+      "name": "Studi Cinematografici di Ouarzazate",
+      "day": "Pomeriggio",
+      "subtitle": "Hollywood d'Africa",
+      "desc": "Atlas Film Studios e facciata della Kasbah Taourirt."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/day-trips/one-day-trip-from-marrakech-to-ouarzazate-and-the-ait-ben-haddou-/images/thumbnail.jpg",
+      "cap": "Escursione di un Giorno a Ouarzazate e alla Kasbah di Ait Ben Haddou",
+      "alt": "Scorcio panoramico del maestoso ksar di Ait Ben Haddou nell'Alto Atlante"
+    },
+    {
+      "src": "/sahara-star-tours/day-trips/one-day-trip-from-marrakech-to-ouarzazate-and-the-ait-ben-haddou-/images/image-01.jpg",
+      "cap": "Escursione di un Giorno a Ouarzazate e alla Kasbah di Ait Ben Haddou",
+      "alt": "Torri in argilla e mura fortificate della Kasbah di Ait Ben Haddou"
+    },
+    {
+      "src": "/sahara-star-tours/day-trips/one-day-trip-from-marrakech-to-ouarzazate-and-the-ait-ben-haddou-/images/image-02.jpg",
+      "cap": "Escursione di un Giorno a Ouarzazate e alla Kasbah di Ait Ben Haddou",
+      "alt": "Veduta dei tornanti spettacolari sul passo montano del Tizi n'Tichka"
+    },
+    {
+      "src": "/sahara-star-tours/day-trips/one-day-trip-from-marrakech-to-ouarzazate-and-the-ait-ben-haddou-/images/image-03.jpg",
+      "cap": "Escursione di un Giorno a Ouarzazate e alla Kasbah di Ait Ben Haddou",
+      "alt": "Antica facciata decorata della Kasbah di Taourirt a Ouarzazate"
+    }
+  ],
+  "faqs": []
+}

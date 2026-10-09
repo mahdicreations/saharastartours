@@ -1,0 +1,221 @@
+{
+  "slug": "10-days-imperial-cities-tour",
+  "title": "Expedición de 10 Días por las Ciudades Imperiales y el Sáhara | Sahara Star Tours",
+  "shortTitle": "Expedición de 10 Días Ciudades Imperiales y Sáhara",
+  "description": "Gran circuito de 10 días desde Casablanca: Rabat, Chefchaouen, Volubilis, Fez, dunas de Erg Chebbi con noche en jaima de lujo, Todra, Marrakech y Essaouira.",
+  "aboutHtml": "Nuestra expedición de 10 días por las Ciudades Imperiales y el Desierto del Sáhara es el itinerario definitivo para quienes desean explorar Marruecos en profundidad. Descubre los monumentos de Casablanca y Rabat, piérdete en el encanto azul de Chefchaouen y viaja en el tiempo en Volubilis y la medina de Fez. Cruza el Atlas hacia el mar de dunas doradas de Erg Chebbi para dormir en un campamento de lujo bajo el cielo estrellado. La ruta prosigue por los cañones del Todra y Dades, la fortaleza de Ait Ben Haddou, los palacios de Marrakech y concluye junto a la brisa marina y las murallas de Essaouira.",
+  "duration": "10 Días / 9 Noches",
+  "startingFrom": "Casablanca",
+  "price": "Desde $1,290/persona",
+  "highlights": [
+    "Explora las antiguas medinas declaradas Patrimonio de la Humanidad por la UNESCO y sus zocos",
+    "Cruza las majestuosas montañas del Alto Atlas a través del puerto panorámico de Tizi n'Tichka",
+    "Visita la legendaria Kasbah de Ait Ben Haddou, escenario de grandes superproducciones de cine",
+    "Disfruta de un auténtico paseo en dromedario al atardecer sobre las dunas doradas del Sáhara",
+    "Pasa una noche mágica en campamento de lujo bajo las estrellas en el desierto de Erg Chebbi",
+    "Descubre oasis sobrecogedores, espectaculares gargantas (Todra y Dades) y valles fértiles",
+    "Saborea la auténtica gastronomía marroquí y la hospitalidad tradicional bereber"
+  ],
+  "inclusions": [
+    "Recogida y regreso en tu aeropuerto, hotel o riad",
+    "Transporte privado en moderno 4x4 o monovolumen con aire acondicionado",
+    "Chófer profesional y guías locales oficiales acreditados",
+    "Alojamiento en riads y hoteles tradicionales de alta valoración",
+    "1 noche en campamento de lujo en el desierto del Sáhara (jaima privada con baño ensuite)",
+    "Paseos en dromedario al atardecer y amanecer en el desierto (un dromedario por persona)",
+    "Desayunos diarios y cenas especificadas en el itinerario",
+    "Impuestos locales y suplementos de combustible incluidos"
+  ],
+  "exclusions": [
+    "Billetes de avión internacionales",
+    "Seguro médico y de viaje personal",
+    "Almuerzos y refrigerios de mediodía",
+    "Bebidas y consumiciones durante las comidas",
+    "Entradas a monumentos históricos y museos",
+    "Propinas y gratificaciones para guías y chóferes",
+    "Gastos personales y compras de recuerdos"
+  ],
+  "itinerary": [
+    {
+      "day": "Día 1",
+      "title": "Llegada – Casablanca / Rabat",
+      "content": "Llegada a Casablanca y visita a la majestuosa Mezquita Hassan II frente al Atlántico. Continuación hacia la capital, Rabat, para admirar la Torre Hassan y la Kasbah de los Oudayas. Alojamiento en riad."
+    },
+    {
+      "day": "Día 2",
+      "title": "Rabat – Chefchaouen (La Ciudad Azul de Marruecos)",
+      "content": "Viaje a través de los paisajes del Rif hacia Chefchaouen. Tarde libre para recorrer sus encantadoras calles azules, plazas pintorescas y disfrutar de la tranquilidad de la montaña. Noche en Chefchaouen."
+    },
+    {
+      "day": "Día 3",
+      "title": "Chefchaouen – Meknes – Volubilis – Fez",
+      "content": "Exploración de las ruinas romanas de Volubilis (UNESCO) y sus mosaicos. Parada en Meknes para contemplar la puerta monumental Bab El Mansour y traslado vespertino a Fez. Alojamiento en riad."
+    },
+    {
+      "day": "Día 4",
+      "title": "Fez – Ifrane – Azrou – Midelt – Gargantas del Ziz – Erfoud – Desierto de Merzouga",
+      "content": "Ruta hacia el sur atravesando Ifrane, los bosques de cedros de Azrou y el Valle del Ziz. Por la tarde llegaremos a Erg Chebbi para montar en dromedario y cenar en nuestro campamento de lujo bajo las estrellas."
+    },
+    {
+      "day": "Día 5",
+      "title": "Merzouga – Excursión por el Desierto en 4x4",
+      "content": "Día completo de exploración del desierto en vehículo 4x4: visita al pueblo de Khamlia para escuchar música tradicional Gnawa, minas de M'Fis, oasis y familias nómadas. Segunda noche mágica en el desierto."
+    },
+    {
+      "day": "Día 6",
+      "title": "Merzouga – Erfoud – Gargantas del Todra – Boumalne Dades",
+      "content": "Amanecer sobre las dunas y salida hacia los talleres de fósiles de Erfoud. Paseo entre los colosales cañones de las Gargantas del Todra y continuación hasta el Valle del Dades para cenar y descansar."
+    },
+    {
+      "day": "Día 7",
+      "title": "Boumalne Dades – Ouarzazate – Ait Ben Haddou – Marrakech",
+      "content": "Ruta de las Mil Kasbahs pasando por el Valle de las Rosas y Ouarzazate. Visita al emblemático ksar de Ait Ben Haddou (UNESCO). Travesía del Alto Atlas por el puerto de Tizi n'Tichka y llegada a Marrakech."
+    },
+    {
+      "day": "Día 8",
+      "title": "Marrakech – Visita de la Ciudad Roja",
+      "content": "Jornada dedicada a explorar los monumentos de Marrakech con guía local: la Mezquita Koutoubia, el Palacio de la Bahía, las Tumbas Saadíes y los zocos, culminando en la vibrante plaza Jemaa el-Fna."
+    },
+    {
+      "day": "Día 9",
+      "title": "Marrakech – Essaouira",
+      "content": "Excursión hacia la costa atlántica hasta la ciudad fortificada de Essaouira (antigua Mogador). Tiempo para pasear por su medina marinera, puerto pesquero y murallas históricas con cañones de bronce."
+    },
+    {
+      "day": "Día 10",
+      "title": "Essaouira – Aeropuerto de Casablanca",
+      "content": "Desayuno junto al mar y traslado panorámico por la costa hacia el aeropuerto internacional Mohammed V de Casablanca para tu vuelo de regreso, culminando un viaje excepcional."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Casablanca",
+      "day": "Día 1",
+      "subtitle": "Llegada",
+      "desc": "Mezquita Hassan II y traslado costero."
+    },
+    {
+      "number": 2,
+      "name": "Rabat",
+      "day": "Día 2",
+      "subtitle": "Capital",
+      "desc": "Torre Hassan y Kasbah de los Oudayas."
+    },
+    {
+      "number": 3,
+      "name": "Chefchaouen",
+      "day": "Día 3",
+      "subtitle": "Ciudad Azul",
+      "desc": "Callejuelas del Rif y ambiente relajado."
+    },
+    {
+      "number": 4,
+      "name": "Fez",
+      "day": "Día 4",
+      "subtitle": "Medina UNESCO",
+      "desc": "Visita cultural histórica en Fes El Bali."
+    },
+    {
+      "number": 5,
+      "name": "Merzouga Sáhara",
+      "day": "Días 5 y 6",
+      "subtitle": "Dunas y Campamento de Lujo",
+      "desc": "Erg Chebbi, música Gnawa y noche estrellada."
+    },
+    {
+      "number": 6,
+      "name": "Todra y Dades",
+      "day": "Día 7",
+      "subtitle": "Cañones",
+      "desc": "Gargantas del Todra y formaciones del Dades."
+    },
+    {
+      "number": 7,
+      "name": "Ait Ben Haddou",
+      "day": "Día 8",
+      "subtitle": "Fortaleza de Cine",
+      "desc": "Kasbah fortificada y travesía del Atlas."
+    },
+    {
+      "number": 8,
+      "name": "Essaouira y Marrakech",
+      "day": "Días 9 y 10",
+      "subtitle": "Atlántico y Despedida",
+      "desc": "Marrakech, murallas de Essaouira y aeropuerto."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/desert-tours/morocco-imperial-cities-tour-from-casablanca/images/thumbnail.webp",
+      "cap": "Circuito de 10 Días Ciudades Imperiales y Desierto de Marruecos",
+      "alt": "Circuito de 10 Días Ciudades Imperiales y Desierto de Marruecos – Sahara Star Tours"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/morocco-imperial-cities-tour-from-casablanca/images/image-01.jpg",
+      "cap": "Mezquita Hassan II en la costa atlántica de Casablanca",
+      "alt": "Explanada y minarete de la Mezquita Hassan II de Casablanca"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/morocco-imperial-cities-tour-from-casablanca/images/image-02.jpg",
+      "cap": "Torre Hassan y columnas históricas en Rabat",
+      "alt": "Alminar de la Torre Hassan y restos de columnas en Rabat"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/morocco-imperial-cities-tour-from-casablanca/images/image-03.png",
+      "cap": "Medina azul de Chefchaouen en las montañas del Rif",
+      "alt": "Fachadas y puertas azules en una callejuela de Chefchaouen"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/morocco-imperial-cities-tour-from-casablanca/images/image-04.jpg",
+      "cap": "Ruinas romanas y arco monumental de Volubilis",
+      "alt": "Columnas romanas y arco triunfal en el yacimiento de Volubilis"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/morocco-imperial-cities-tour-from-casablanca/images/image-05.jpg",
+      "cap": "Arquitectura y mosaicos en una madraza histórica de Fez",
+      "alt": "Patio con fuentes y azulejos zellige en la medina de Fez"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/morocco-imperial-cities-tour-from-casablanca/images/image-06.jpg",
+      "cap": "Caravana de dromedarios cruzando las dunas de Erg Chebbi",
+      "alt": "Paseo en dromedario al atardecer sobre las dunas de Merzouga"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/morocco-imperial-cities-tour-from-casablanca/images/image-07.jpg",
+      "cap": "Campamento bereber prémium bajo el cielo nocturno del desierto",
+      "alt": "Jaimas de lujo iluminadas entre las dunas de Erg Chebbi"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/morocco-imperial-cities-tour-from-casablanca/images/image-08.jpg",
+      "cap": "Paredes verticales de roca caliza en las Gargantas del Todra",
+      "alt": "Cañón rocoso con río fluyendo en las Gargantas del Todra"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/morocco-imperial-cities-tour-from-casablanca/images/image-09.jpg",
+      "cap": "Kasbah fortificada de Ait Ben Haddou declarada por la UNESCO",
+      "alt": "Fortaleza tradicional de adobe y torres almenadas en Ait Ben Haddou"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/morocco-imperial-cities-tour-from-casablanca/images/image-10.jpg",
+      "cap": "Puerto montañoso de Tizi n'Tichka en el Alto Atlas",
+      "alt": "Carretera sinuosa y cordilleras del Alto Atlas marroquí"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/morocco-imperial-cities-tour-from-casablanca/images/image-11.png",
+      "cap": "Palacio de la Bahía con patios ajardinados en Marrakech",
+      "alt": "Salón con artesonado de madera y azulejos en el Palacio de la Bahía"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/morocco-imperial-cities-tour-from-casablanca/images/image-12.jpg",
+      "cap": "Murallas marítimas y cañones de bronce en Essaouira",
+      "alt": "Skala de la medina de Essaouira con vista a las olas del océano"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/morocco-imperial-cities-tour-from-casablanca/images/image-13.jpg",
+      "cap": "Puerto pesquero tradicional con barcas azules en Essaouira",
+      "alt": "Barcas de madera azul en el histórico puerto de Essaouira"
+    }
+  ],
+  "faqs": []
+}

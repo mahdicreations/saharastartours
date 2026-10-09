@@ -1,0 +1,115 @@
+{
+  "slug": "one-day-marrakech-city-tour",
+  "title": "Tour Guidato di un Giorno della Città di Marrakech | Sahara Star Tours",
+  "shortTitle": "Tour Guidato di un Giorno a Marrakech",
+  "description": "Scoprite il cuore della Città Rossa con una guida locale autorizzata. Visitate il Palazzo della Bahia, la Moschea Koutoubia, le Tombe Saadiane e Jemaa el-Fna.",
+  "aboutHtml": "Questo emozionante tour guidato di un'intera giornata vi porterà alla scoperta dei monumenti più prestigiosi di Marrakech. Insieme a una guida locale esperta, svelerete le meraviglie e i tesori nascosti della Città Rossa.<br/><br/>Al mattino visiteremo i rinomati Giardini Majorelle creati da Jacques Majorelle e riportati a splendore da Yves Saint Laurent, con la loro collezione di piante esotiche e il Museo Berbero. A seguire entreremo nella medina per un pranzo tradizionale in un tipico riad marocchino.<br/><br/>Nel pomeriggio scopriremo i capolavori architettonici del Palazzo della Bahia con le sue splendide corti in zellij e soffitti in cedro intagliato, il quartiere ebraico del Mellah e le suggestive Tombe Saadiane del XVI secolo.<br/><br/>Concluderemo il tour nella celebre Piazza Jemaa el-Fna, palcoscenico a cielo aperto dichiarato Patrimonio dell'Umanità UNESCO.",
+  "duration": "1 Giorno / Escursione di una Giornata",
+  "startingFrom": "Marrakech",
+  "price": "Da 55 €/persona",
+  "highlights": [
+    "Giardini Majorelle: Visitate lo straordinario giardino botanico creato da Jacques Majorelle e salvato da Yves Saint Laurent.",
+    "Museo Berbero: Scoprite la ricca storia, i costumi e i gioielli delle popolazioni berbere del Marocco.",
+    "Antica Medina: Gustate un pranzo tipico marocchino nel cuore pulsante di Marrakech.",
+    "Palazzo della Bahia: Ammirate i cortili e gli stucchi di questo sfarzoso palazzo ottocentesco.",
+    "Quartiere Ebraico (Mellah): Esplorate le viuzze storiche e l'atmosfera suggestiva del Mellah.",
+    "Tombe Saadiane: Esplorate il grandioso mausoleo dinastico del XVI secolo con colonne in marmo di Carrara.",
+    "Piazza Jemaa el-Fna: Concludete nella vivace piazza tra artisti di strada, musicisti e cantastorie."
+  ],
+  "inclusions": [
+    "Guida ufficiale locale autorizzata di Marrakech",
+    "Visita guidata del Palazzo della Bahia, Tombe Saadiane ed esterno della Moschea Koutoubia",
+    "Passeggiata guidata tra i souk degli artigiani e i vicoli della medina",
+    "Tempo a disposizione per foto e acquisti nella celebre Piazza Jemaa el-Fna"
+  ],
+  "exclusions": [
+    "Spese personali e acquisti privati",
+    "Mance per guida turistica e autista (facoltative)",
+    "Pranzo e bevande extra non specificati",
+    "Biglietti d'ingresso a palazzi, musei e giardini"
+  ],
+  "itinerary": [
+    {
+      "day": "Giorno 1",
+      "title": "Marrakech – Giardini Majorelle – Antica Medina – Palazzo della Bahia – Mellah – Tombe Saadiane – Jemaa el-Fna",
+      "content": "Incontro con la vostra guida ufficiale per dare inizio alla scoperta di Marrakech. Prima sosta ai celebri Giardini Majorelle, celebri per le palme esotiche, i cactus monumentali e la villa dipinta nel caratteristico blu oltremare, sede del Museo Berbero. A seguire entreremo a piedi nella medina storica di Marrakech per esplorare i souk specializzati in spezie, tessuti, babucce in cuoio e lanterne in ferro battuto. Sosta per un autentico pranzo marocchino in un riad della medina. Nel pomeriggio visita guidata al Palazzo della Bahia, straordinario esempio di arte moresca con cortili in marmo, fontane e soffitti dipinti in legno di cedro. Passeggiata nel Mellah (l'antico quartiere ebraico) e ingresso alle magnifiche Tombe Saadiane, con la celebre Sala delle Dodici Colonne in marmo di Carrara. Per finire, approderemo nella vibrante Piazza Jemaa el-Fna sotto l'imponente minareto della Koutoubia, tra incantatori di serpenti, acrobati e musicisti gnaoua. Rientro in hotel in serata."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Moschea Koutoubia",
+      "day": "Mattina",
+      "subtitle": "Minareto del XII Secolo",
+      "desc": "Simbolo storico della città e giardini andalusi."
+    },
+    {
+      "number": 2,
+      "name": "Palazzo della Bahia",
+      "day": "Mattina",
+      "subtitle": "Residenza del Gran Visir",
+      "desc": "Mosaici zellij e soffitti intagliati in legno di cedro."
+    },
+    {
+      "number": 3,
+      "name": "Tombe Saadiane",
+      "day": "Mezzogiorno",
+      "subtitle": "Mausoleo Reale",
+      "desc": "Sala delle Dodici Colonne in pregiato marmo di Carrara."
+    },
+    {
+      "number": 4,
+      "name": "Madrasa Ben Youssef",
+      "day": "Pomeriggio",
+      "subtitle": "Antico Collegio Coranico",
+      "desc": "Corte monumentale con raffinati stucchi e iscrizioni arabe."
+    },
+    {
+      "number": 5,
+      "name": "Piazza Jemaa el-Fna",
+      "day": "Tardo Pomeriggio",
+      "subtitle": "Piazza Patrimonio UNESCO",
+      "desc": "Cantastorie, musici tradizionali e bancarelle gastronomiche."
+    },
+    {
+      "number": 6,
+      "name": "Giardini Majorelle",
+      "day": "Pomeriggio",
+      "subtitle": "Oasi Botanica Yves Saint Laurent",
+      "desc": "Villa color blu cobalto e rigogliosa vegetazione esotica."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/day-trips/one-day-guided-tour-of-marrakech-city/images/thumbnail.jpg",
+      "cap": "Tour Guidato di un Giorno della Città di Marrakech",
+      "alt": "Cortili e architettura moresca del Palazzo della Bahia a Marrakech"
+    },
+    {
+      "src": "/sahara-star-tours/day-trips/one-day-guided-tour-of-marrakech-city/images/image-01.jpg",
+      "cap": "Tour Guidato di un Giorno della Città di Marrakech",
+      "alt": "Minareto della Moschea Koutoubia svettante sui giardini di Marrakech"
+    },
+    {
+      "src": "/sahara-star-tours/day-trips/one-day-guided-tour-of-marrakech-city/images/image-02.jpg",
+      "cap": "Tour Guidato di un Giorno della Città di Marrakech",
+      "alt": "Dettaglio di colonne in marmo e stucchi arabeschi alle Tombe Saadiane"
+    },
+    {
+      "src": "/sahara-star-tours/day-trips/one-day-guided-tour-of-marrakech-city/images/image-03.jpg",
+      "cap": "Tour Guidato di un Giorno della Città di Marrakech",
+      "alt": "Villa dipinta in blu cobalto e piante grasse ai Giardini Majorelle"
+    },
+    {
+      "src": "/sahara-star-tours/day-trips/one-day-guided-tour-of-marrakech-city/images/image-04.jpeg",
+      "cap": "Tour Guidato di un Giorno della Città di Marrakech",
+      "alt": "Bancarelle colorate e botteghe artigiane nei souk di Marrakech"
+    },
+    {
+      "src": "/sahara-star-tours/day-trips/one-day-guided-tour-of-marrakech-city/images/image-05.jpeg",
+      "cap": "Tour Guidato di un Giorno della Città di Marrakech",
+      "alt": "Artisti di strada e animazione serale in Piazza Jemaa el-Fna"
+    }
+  ],
+  "faqs": []
+}

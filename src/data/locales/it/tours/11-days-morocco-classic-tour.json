@@ -1,0 +1,206 @@
+{
+  "slug": "11-days-morocco-classic-tour",
+  "title": "Tour Classico di 11 Giorni delle Città Imperiali del Marocco | Sahara Star Tours",
+  "shortTitle": "Tour Classico di 11 Giorni delle Città Imperiali",
+  "description": "Pacchetto vacanza classico di 11 giorni in Marocco. Scoprite Rabat, Chefchaouen, l'antica medina di Fes, glamping di lusso nel Sahara e l'incantevole Marrakech.",
+  "aboutHtml": "Un viaggio privato classico di 11 giorni in Marocco, curato nei minimi dettagli per i viaggiatori che desiderano vivere l'intera epopea marocchina. Dalla costa di Casablanca e dai grandiosi monumenti di Rabat, salirete sui monti del Rif per ammirare i suggestivi vicoli blu di Chefchaouen. Proseguirete attraverso Volubilis verso la città spirituale di Fes, per poi vivere l'indimenticabile emozione del deserto del Sahara con escursione a dorso di cammello al tramonto e notte in accampamento di lusso. Attraverserete le vette dell'Atlante passando per Ait Ben Haddou fino ai vivaci souk e giardini di Marrakech.",
+  "duration": "11 Giorni / 10 Notti",
+  "startingFrom": "Casablanca",
+  "price": "Da 1.350 €/persona",
+  "highlights": [
+    "Esplorate le antiche medine Patrimonio dell'Umanità UNESCO e i loro vivaci souk",
+    "Attraversate le maestose montagne dell'Alto Atlante attraverso il panoramico passo Tizi n'Tichka",
+    "Visitate la leggendaria Kasbah di Ait Ben Haddou, celebre set cinematografico internazionale",
+    "Vivete un autentico trekking a dorso di cammello al tramonto tra le dune dorate del Sahara",
+    "Trascorrete una notte magica in glamping sotto il cielo stellato in un campo tendato di lusso",
+    "Ammirate oasi spettacolari, gole suggestive (Todra e Dades) e valli verdeggianti",
+    "Gustate l'autentica cucina tradizionale marocchina e la calorosa ospitalità berbera"
+  ],
+  "inclusions": [
+    "Servizio di accoglienza e transfer da/per aeroporto, hotel o riad",
+    "Trasporto privato in moderno fuoristrada 4x4 o minivan con aria condizionata",
+    "Autista professionista parlante inglese/spagnolo e guide locali autorizzate",
+    "Pernottamenti in riad e hotel autentici di alto livello selezionati",
+    "1 notte in accampamento di lusso nel Sahara (tenda privata con bagno interno ensuite)",
+    "Escursione in cammello al tramonto e all'alba nel deserto (un dromedario per persona)",
+    "Colazioni giornaliere e cene specificate secondo l'itinerario dettagliato",
+    "Tasse locali e carburante per l'intero itinerario inclusi"
+  ],
+  "exclusions": [
+    "Biglietti aerei per voli internazionali",
+    "Assicurazione medica e di viaggio personale",
+    "Pranzi e snack a metà giornata",
+    "Bevande durante i pasti",
+    "Biglietti d'ingresso a monumenti storici e musei",
+    "Mance per autista e guide locali",
+    "Spese personali e souvenir"
+  ],
+  "itinerary": [
+    {
+      "day": "Giorno 1",
+      "title": "Arrivo e Accoglienza a Casablanca",
+      "content": "Incontro con la vostra guida e autista privato all'aeroporto di Casablanca all'arrivo del vostro volo per iniziare il tour. Trasferimento in comodo veicolo climatizzato verso la città per ammirare la monumentale Moschea di Hassan II, capolavoro architettonico costruito sull'Oceano Atlantico grazie al lavoro di oltre 6.000 abili artigiani. Sistemazione e pernottamento in hotel a Casablanca."
+    },
+    {
+      "day": "Giorno 2",
+      "title": "Casablanca – Rabat – Chefchaouen",
+      "content": "Dopo colazione, partenza per Rabat, capitale amministrativa del Marocco. Visita della suggestiva Kasbah degli Oudaïa, della medina e della Torre di Hassan. Dopo pranzo, si prosegue verso nord-est attraversando le montagne del Rif fino a raggiungere Chefchaouen, la celebre città blu. Tempo a disposizione per passeggiare nei suoi vicoli acciottolati dal fascino andaluso. Pernottamento in riad tradizionale."
+    },
+    {
+      "day": "Giorno 3",
+      "title": "Chefchaouen – Volubilis – Fes",
+      "content": "Mattinata dedicata alla magica atmosfera di Chefchaouen prima di raggiungere le rovine romane di Volubilis, rinomate per i loro mosaici perfettamente conservati e le antiche vie imperiali. Nel tardo pomeriggio arrivo a Fes, cuore spirituale e culturale del Marocco, con sistemazione in riad tipico nella medina."
+    },
+    {
+      "day": "Giorno 4",
+      "title": "Visita Guidata dell'Antica Medina di Fes",
+      "content": "Intera giornata dedicata all'esplorazione guidata di Fes el-Bali con guida ufficiale locale. Visita dell'Università Al Quaraouiyine (la più antica al mondo tuttora attiva), della Madrasa Bou Inania, delle famose concerie di Chouara con le loro vasche multicolori medievali, della fontana Nejjarine e della maestosa porta Bab Boujloud. Pomeriggio dedicato ai souk artigianali e pernottamento in riad."
+    },
+    {
+      "day": "Giorno 5",
+      "title": "Fes – Ifrane – Foreste di Cedri – Deserto del Sahara di Merzouga",
+      "content": "Partenza da Fes verso sud attraverso il Medio Atlante: sosta a Ifrane, la 'Svizzera del Marocco', e nelle millenarie foreste di cedri di Azrou popolate dai macachi di Barberia. Attraversata la lussureggiante Valle dello Ziz, si giunge a Merzouga nel pomeriggio. Inizio della carovana a dorso di cammello sulle dune dorate dell'Erg Chebbi per ammirare il tramonto, prima di raggiungere il lussuoso campo tendato. Cena tradizionale berbera attorno al fuoco sotto le stelle."
+    },
+    {
+      "day": "Giorno 6",
+      "title": "Esplorazione del Deserto di Merzouga e Tradizioni Nomadi",
+      "content": "Alba spettacolare sulle dune seguita da una ricca colazione all'accampamento. Giornata dedicata alla scoperta del Sahara: visita agli antichi canali d'irrigazione fossili (khettaras), spettacolo musicale nel villaggio Gnawa di Khamlia e incontro con le famiglie nomadi del deserto per conoscere il loro stile di vita millenario. Pernottamento in hotel o riad ai piedi delle dune con cena inclusa."
+    },
+    {
+      "day": "Giorno 7",
+      "title": "Merzouga – Rissani – Gole del Todra – Valle del Dades",
+      "content": "Lasciato il deserto, visita al souk storico di Rissani e proseguimento verso Tinghir per ammirare le monumentali Gole del Todra, uno spettacolare canyon roccioso con pareti verticali alte oltre 300 metri. Nel pomeriggio proseguimento verso la Valle del Dades e le celebri conformazioni rocciose dette 'dita di scimmia'. Cena e pernottamento in hotel nella valle."
+    },
+    {
+      "day": "Giorno 8",
+      "title": "Valle del Dades – Ouarzazate – Kasbah Ait Ben Haddou – Marrakech",
+      "content": "Colazione e viaggio lungo la Strada delle Mille Kasbah attraverso Kelaat M'Gouna (la Valle delle Rose) e Ouarzazate. Visita alla splendida Kasbah fortificata di Ait Ben Haddou, Patrimonio Mondiale dell'Umanità UNESCO e set di kolossal come Il Gladiatore. Valico panoramico dell'Alto Atlante attraverso il passo Tizi n'Tichka (2.260 m) e arrivo a Marrakech in serata. Pernottamento in riad."
+    },
+    {
+      "day": "Giorno 9",
+      "title": "Visita Guidata dei Monumenti e dei Souk di Marrakech",
+      "content": "Tour guidato alla scoperta della Città Rossa: i Giardini Majorelle, il sontuoso Palazzo della Bahia, la Moschea Koutoubia e l'intricato labirinto dei souk cittadini. Nel tardo pomeriggio, immergetevi nell'energia travolgente della celebre Piazza Jemaa el-Fna tra cantastorie, acrobati e profumi speziati. Pernottamento in riad."
+    },
+    {
+      "day": "Giorno 10",
+      "title": "Marrakech – Escursione sulla Costa di Essaouira",
+      "content": "Viaggio verso la costa atlantica in direzione della pittoresca Essaouira (l'antica Mogador). Lungo il tragitto osserverete le caratteristiche capre che si arrampicano sugli alberi di argan. A Essaouira visiterete i bastioni della Skala, il porto peschereccio e la candida medina fortificata UNESCO celebre per le botteghe d'artigianato in legno di radica di tuia. Pernottamento in riad sul mare."
+    },
+    {
+      "day": "Giorno 11",
+      "title": "Essaouira – Trasferimento all'Aeroporto di Casablanca e Fine del Tour",
+      "content": "Dopo colazione, comodo rientro via autostrada verso l'Aeroporto Internazionale Mohammed V di Casablanca in tempo utile per il vostro volo di rientro, a conclusione di questo straordinario tour classico di 11 giorni in Marocco."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Casablanca",
+      "day": "Giorno 1",
+      "subtitle": "Moschea Hassan II",
+      "desc": "Arrivo e tour monumentale."
+    },
+    {
+      "number": 2,
+      "name": "Rabat",
+      "day": "Giorno 2",
+      "subtitle": "Capitale Storica",
+      "desc": "Patrimonio reale e panorami atlantici."
+    },
+    {
+      "number": 3,
+      "name": "Chefchaouen",
+      "day": "Giorno 3",
+      "subtitle": "Città Blu del Rif",
+      "desc": "Magici vicoli dipinti di blu."
+    },
+    {
+      "number": 4,
+      "name": "Medina di Fes",
+      "day": "Giorni 4 e 5",
+      "subtitle": "Capitale Spirituale",
+      "desc": "Passeggiata guidata tra vicoli medievali."
+    },
+    {
+      "number": 5,
+      "name": "Sahara di Merzouga",
+      "day": "Giorni 6 e 7",
+      "subtitle": "Dune dell'Erg Chebbi",
+      "desc": "Trekking in cammello e accampamento di lusso."
+    },
+    {
+      "number": 6,
+      "name": "Gole del Dades",
+      "day": "Giorno 8",
+      "subtitle": "Canyon dell'Atlante",
+      "desc": "Gole spettacolari e Valle delle Rose."
+    },
+    {
+      "number": 7,
+      "name": "Marrakech",
+      "day": "Giorni 9 e 10",
+      "subtitle": "Città Rossa Imperiale",
+      "desc": "Souk, palazzi e giardini storici."
+    },
+    {
+      "number": 8,
+      "name": "Casablanca",
+      "day": "Giorno 11",
+      "subtitle": "Partenza",
+      "desc": "Viaggio di ritorno e transfer all'aeroporto."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/imperial-cities/11-days-morocco-classic-tour/images/thumbnail.jpg",
+      "cap": "Tour Classico di 11 Giorni in Marocco – Pacchetto Privato",
+      "alt": "Scorcio panoramico del tour classico di 11 giorni in Marocco"
+    },
+    {
+      "src": "/sahara-star-tours/imperial-cities/11-days-morocco-classic-tour/images/image-01.jpg",
+      "cap": "Tour Classico di 11 Giorni in Marocco – Pacchetto Privato",
+      "alt": "Architettura tradizionale e monumenti storici in Marocco"
+    },
+    {
+      "src": "/sahara-star-tours/imperial-cities/11-days-morocco-classic-tour/images/image-02.jpg",
+      "cap": "Tour Classico di 11 Giorni in Marocco – Pacchetto Privato",
+      "alt": "Scorcio dei vicoli blu tradizionali di Chefchaouen"
+    },
+    {
+      "src": "/sahara-star-tours/imperial-cities/11-days-morocco-classic-tour/images/image-03.jpg",
+      "cap": "Tour Classico di 11 Giorni in Marocco – Pacchetto Privato",
+      "alt": "Veduta panoramica della medina antica di Fes"
+    },
+    {
+      "src": "/sahara-star-tours/imperial-cities/11-days-morocco-classic-tour/images/image-04.jpg",
+      "cap": "Tour Classico di 11 Giorni in Marocco – Pacchetto Privato",
+      "alt": "Carovana di dromedari al tramonto sulle dune di Merzouga"
+    },
+    {
+      "src": "/sahara-star-tours/imperial-cities/11-days-morocco-classic-tour/images/image-05.jpg",
+      "cap": "Tour Classico di 11 Giorni in Marocco – Pacchetto Privato",
+      "alt": "Accampamento tendato di lusso nel deserto del Sahara"
+    },
+    {
+      "src": "/sahara-star-tours/imperial-cities/11-days-morocco-classic-tour/images/image-06.jpg",
+      "cap": "Tour Classico di 11 Giorni in Marocco – Pacchetto Privato",
+      "alt": "Alte pareti rocciose delle Gole del Todra"
+    },
+    {
+      "src": "/sahara-star-tours/imperial-cities/11-days-morocco-classic-tour/images/image-07.jpg",
+      "cap": "Tour Classico di 11 Giorni in Marocco – Pacchetto Privato",
+      "alt": "Famosa Kasbah di Ait Ben Haddou nell'Alto Atlante"
+    },
+    {
+      "src": "/sahara-star-tours/imperial-cities/11-days-morocco-classic-tour/images/image-08.jpg",
+      "cap": "Tour Classico di 11 Giorni in Marocco – Pacchetto Privato",
+      "alt": "Vivaci bancarelle artigianali nei souk di Marrakech"
+    },
+    {
+      "src": "/sahara-star-tours/imperial-cities/11-days-morocco-classic-tour/images/image-09.jpg",
+      "cap": "Tour Classico di 11 Giorni in Marocco – Pacchetto Privato",
+      "alt": "Bastioni affacciati sull'Atlantico nella medina di Essaouira"
+    }
+  ],
+  "faqs": []
+}

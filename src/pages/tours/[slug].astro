@@ -1,53 +1,29 @@
 ---
 // src/pages/tours/[slug].astro
-// Dynamic route: renders any tour from tours.ts data
+// Dynamic route: renders any tour from tours.ts data with reciprocal i18n
 import TourLayout from '../../layouts/TourLayout.astro';
-import { tours, getTourBySlug } from '../../data/tours';
+import { tours } from '../../data/tours';
+import { getLocalizedRelatedTours } from '../../data/toursI18n';
+import { getAlternateUrls } from '../../data/i18n';
 import type { GetStaticPaths } from 'astro';
 
 export const getStaticPaths: GetStaticPaths = async () => {
   return tours.map(tour => {
-    // 1. Resolve explicit curated relatedTours if provided
-    let relatedSlugs: string[] = tour.relatedTours && tour.relatedTours.length > 0 ? [...tour.relatedTours] : [];
-
-    // 2. Sensible fallback matching departure city and productType
-    if (relatedSlugs.length < 3) {
-      const fallbackCandidates = tours
-        .filter(t => t.slug !== tour.slug && t.productType === tour.productType && !relatedSlugs.includes(t.slug))
-        .sort((a, b) => {
-          if (a.departureCity === tour.departureCity && b.departureCity !== tour.departureCity) return -1;
-          if (b.departureCity === tour.departureCity && a.departureCity !== tour.departureCity) return 1;
-          if (a.category === tour.category && b.category !== tour.category) return -1;
-          if (b.category === tour.category && a.category !== tour.category) return 1;
-          return 0;
-        })
-        .map(t => t.slug);
-      relatedSlugs.push(...fallbackCandidates);
-    }
-
-    const related = relatedSlugs
-      .slice(0, 3)
-      .map(slug => getTourBySlug(slug))
-      .filter((t): t is typeof tours[0] => Boolean(t))
-      .map(t => ({
-        slug: t.slug,
-        shortTitle: t.shortTitle,
-        duration: t.duration,
-        price: t.price,
-        heroImage: t.heroImage
-      }));
+    const related = getLocalizedRelatedTours(tour, 'en');
+    const alternateUrls = getAlternateUrls(`/tours/${tour.slug}`);
 
     return {
       params: { slug: tour.slug },
-      props: { tour, relatedTours: related },
+      props: { tour, relatedTours: related, alternateUrls },
     };
   });
 };
 
-const { tour, relatedTours } = Astro.props;
+const { tour, relatedTours, alternateUrls } = Astro.props;
 ---
 
 <TourLayout
+  lang="en"
   title={tour.title}
   description={tour.description}
   ogImage={tour.heroImage}
@@ -55,7 +31,7 @@ const { tour, relatedTours } = Astro.props;
   tourSlug={tour.slug}
   duration={tour.duration}
   startingFrom={tour.startingFrom}
-  category={tour.category.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())}
+  category={tour.category}
   productType={tour.productType}
   departureCity={tour.departureCity}
   price={tour.price}
@@ -69,6 +45,7 @@ const { tour, relatedTours } = Astro.props;
   galleryImages={tour.galleryImages}
   relatedTours={relatedTours}
   faqs={tour.faqs}
+  alternateUrls={alternateUrls}
 >
   <!-- About slot: tour description paragraph -->
   <div slot="about">

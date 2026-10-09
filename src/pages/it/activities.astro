@@ -1,0 +1,60 @@
+---
+// src/pages/it/activities.astro — Italian Activities category page
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getLocalizedActivities } from '../../data/toursI18n';
+import { getAlternateUrls } from '../../data/i18n';
+
+const tours = getLocalizedActivities('it');
+const alternateUrls = getAlternateUrls('/activities');
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Attività ed Esperienze in Marocco | Sahara Star Tours",
+  "description": "Prenota attività esclusive in Marocco: voli in mongolfiera all'alba su Marrakech, escursioni a dorso di dromedario, passeggiate a cavallo, quad nel deserto e spettacoli fantasia berberi.",
+  "url": alternateUrls.it
+};
+---
+
+<BaseLayout
+  title="Attività ed Esperienze in Marocco | Sahara Star Tours"
+  description="Prenota attività esclusive in Marocco: voli in mongolfiera all'alba su Marrakech, escursioni a dorso di dromedario, passeggiate a cavallo, quad nel deserto e spettacoli fantasia berberi."
+  keywords="attività marocco, mongolfiera marrakech, giro dromedario deserto, quad marrakech palmeto, spettacolo fantasia marrakech"
+  currentPage="activities"
+  lang="it"
+  alternateUrls={alternateUrls}
+  schemaData={schemaData}
+>
+<section class="cat-hero">
+  <span class="tag" style="display:inline-block;color:var(--sand-gold);text-transform:uppercase;letter-spacing:3px;font-size:0.9rem;font-weight:600;margin-bottom:12px;">Attività in Marocco</span>
+  <h1 style="font-size:3rem;max-width:700px;margin:0 auto 20px;background:linear-gradient(135deg,var(--text-main) 30%,var(--sand-gold) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Esperienze Uniche in Marocco</h1>
+  <p style="max-width:650px;margin:0 auto;font-size:1.1rem;">Dai voli in mongolfiera all'alba sul palmeto alle passeggiate a dorso di dromedario nel Sahara fino agli spettacoli di fantasia berbera: aggiungi momenti straordinari alla tua avventura in Marocco.</p>
+</section>
+<section style="padding: 60px 5%; max-width: 1400px; margin: 0 auto;">
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:32px;">
+    {tours.map(tour => (
+      <article class="tour-card reveal active">
+        <div class="tour-img-wrapper">
+          <img src={tour.heroImage} alt={tour.shortTitle} loading="lazy" onerror="this.src='/assets/placeholder-morocco.svg'" />
+          {tour.badge && <span class="tour-badge">{tour.badge}</span>}
+        </div>
+        <div class="tour-info">
+          <div class="tour-meta">
+            <div><i class="fa-regular fa-clock"></i> {tour.duration}</div>
+            <div><i class="fa-solid fa-location-dot"></i> {tour.startingFrom}</div>
+          </div>
+          <h2 class="tour-title">{tour.shortTitle}</h2>
+          <p class="tour-desc">{tour.description}</p>
+          <div class="tour-footer">
+            <div class="tour-price">
+              <span class="tour-price-label">Da</span>
+              <span class="tour-price-value">{tour.price.replace(/^(From|Desde|Da|A partire da)\s*/i, '').replace(/\/(persona|person)\s*/i, '').trim()}</span>
+            </div>
+            <a href={`/it/tours/${tour.slug}`} class="btn btn-primary btn-sm">Vedi Attività <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </article>
+    ))}
+  </div>
+</section>
+</BaseLayout>

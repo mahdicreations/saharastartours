@@ -1,0 +1,182 @@
+{
+  "slug": "5-days-in-northern-morocco-from-tangier",
+  "title": "Tour de 5 Días por el Norte de Marruecos desde Tánger | Sahara Star Tours",
+  "shortTitle": "Tour de 5 Días por el Norte de Marruecos",
+  "description": "Circuito privado de 5 días desde Tánger hasta Casablanca visitando Chefchaouen, Volubilis, Mequinez, Fez y Rabat. Explore la ciudad azul y las capitales imperiales.",
+  "aboutHtml": "<p>Este tour privado de 5 días por el norte de Marruecos es un itinerario cultural inolvidable que comienza en la cosmopolita Tánger, cruza los paisajes del Rif hacia la pintoresca 'ciudad azul' de Chefchaouen, explora las ruinas romanas de Volubilis y la histórica Mequinez, se sumerge en el corazón espiritual de Fez con guía local y visita los monumentos de Rabat antes de concluir frente al océano en Casablanca.</p>",
+  "duration": "5 Días / 4 Noches",
+  "startingFrom": "Tánger",
+  "price": "Desde $650/persona",
+  "highlights": [
+    "Chefchaouen, la ciudad azul en las montañas del Rif",
+    "Medina de Fez y lugares culturales históricos",
+    "Tánger, la puerta cosmopolita de África",
+    "Volubilis y sus mosaicos romanos de la UNESCO",
+    "Mequinez y la monumental Bab Mansour",
+    "Rabat, la capital del reino y la Kasbah de los Udayas"
+  ],
+  "inclusions": [
+    "Vehículo privado 4×4 o monovolumen con aire acondicionado",
+    "Chófer/guía local experimentado y traslados privados",
+    "Combustible, peajes y gastos de funcionamiento del vehículo",
+    "Alojamiento en riads/hoteles seleccionados según el itinerario",
+    "Desayunos y cenas incluidas según el itinerario"
+  ],
+  "exclusions": [
+    "Almuerzos y bebidas",
+    "Vuelos y gastos portuarios/aeroportuarios no especificados",
+    "Entradas a monumentos o visitas opcionales",
+    "Propinas y gratificaciones"
+  ],
+  "itinerary": [
+    {
+      "day": "Día 1",
+      "title": "Llegada a Tánger – Chefchaouen",
+      "content": "Comenzará su viaje en Tánger con la recogida en su alojamiento, en el aeropuerto o en el puerto. Conocida como 'la novia del norte', explorará los puntos emblemáticos de Tánger: las Cuevas de Hércules y Cabo Espartel, donde se unen las aguas del Atlántico y el Mediterráneo. A continuación viajará hacia el este cruzando los paisajes de las montañas del Rif hasta llegar a la encantadora Chefchaouen. Alojamiento y cena en un riad tradicional."
+    },
+    {
+      "day": "Día 2",
+      "title": "Visita de Chefchaouen, la perla azul",
+      "content": "Tras el desayuno, disfrutará de un día completo descubriendo Chefchaouen, la famosa ciudad azul marroquí. Paseará a su propio ritmo por sus laberínticas callejuelas encaladas en infinitas tonalidades de añil y cobalto, fotografiando puertas rústicas de madera y macetas coloridas. Visitará la plaza Outa el-Hammam, la histórica Kasbah de adobe y el manantial de Ras el-Maa, pudiendo ascender a la Mezquita Española para admirar una panorámica inolvidable al atardecer."
+    },
+    {
+      "day": "Día 3",
+      "title": "Chefchaouen – Ruinas Romanas de Volubilis – Mequinez – Fez",
+      "content": "Tras el desayuno viajará hacia las ruinas romanas de Volubilis, declaradas Patrimonio de la Humanidad por la UNESCO, donde admirará asombrosos mosaicos, basílicas y columnas. Continuará hacia la vecina Mequinez para admirar la monumental puerta de Bab Mansour, los antiguos graneros reales y el mausoleo de Moulay Ismail. Por la tarde llegará a Fez, la capital cultural de Marruecos, para cenar y descansar en su riad."
+    },
+    {
+      "day": "Día 4",
+      "title": "Visita guiada de Fez con guía local",
+      "content": "Día dedicado a descubrir la milenaria medina de Fez el-Bali con un guía oficial local. Comenzará con una visita panorámica al Palacio Real y sus puertas doradas, el barrio judío (Mellah) y el mirador del Borj Sud con vistas impresionantes. A continuación se adentrará a pie en el laberinto peatonal de la medina de la UNESCO: visitará la Madrasa Al Attarine, la Universidad Al Quaraouiyine (la más antigua en funcionamiento del mundo), fuentes ornamentadas y las famosas curtidurías de Chouara. Tarde libre para relajarse en el riad."
+    },
+    {
+      "day": "Día 5",
+      "title": "Fez – Rabat – Casablanca",
+      "content": "En la última jornada viajará hacia Rabat, capital política de Marruecos, donde visitará la Torre Hassan, el Mausoleo de Mohammed V y la pintoresca Kasbah de los Udayas con vistas al océano. Tras tiempo libre para almorzar, continuará hacia Casablanca para admirar el exterior de la monumental Mezquita Hassan II. El circuito finalizará con el traslado al aeropuerto o a su alojamiento en Casablanca."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Llegada a Tánger",
+      "day": "Día 1",
+      "subtitle": "Tánger – Cuevas de Hércules – Chefchaouen",
+      "desc": "Recogida en Tánger, visita a Cabo Espartel y traslado panorámico a Chefchaouen."
+    },
+    {
+      "number": 2,
+      "name": "Chefchaouen la ciudad azul",
+      "day": "Día 2",
+      "subtitle": "Exploración de la medina azul de Chefchaouen",
+      "desc": "Día completo descubriendo las callejuelas azules, la Kasbah y miradores de Chefchaouen."
+    },
+    {
+      "number": 3,
+      "name": "Chefchaouen a Fez",
+      "day": "Día 3",
+      "subtitle": "Chefchaouen – Volubilis – Mequinez – Fez",
+      "desc": "Visita a las ruinas romanas de Volubilis y la imperial Mequinez con llegada a Fez."
+    },
+    {
+      "number": 4,
+      "name": "Visita de Fez",
+      "day": "Día 4",
+      "subtitle": "Visita guiada de la medina histórica de Fez",
+      "desc": "Recorrido cultural por el Palacio Real, Mellah, madrasas y curtidurías de Fez."
+    },
+    {
+      "number": 5,
+      "name": "Fez a Casablanca",
+      "day": "Día 5",
+      "subtitle": "Fez – Rabat – Casablanca",
+      "desc": "Monumentos de Rabat, Mezquita Hassan II en Casablanca y despedida del tour."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/5-days-in-northern-morocco-from-tangier/images/gallery_1.webp",
+      "cap": "Cuevas de Hércules",
+      "alt": "Ventana marítima de las Cuevas de Hércules tallada en el acantilado calizo en Tánger"
+    },
+    {
+      "src": "/sahara-star-tours/5-days-in-northern-morocco-from-tangier/images/gallery_10.webp",
+      "cap": "Torre Hassan",
+      "alt": "Explanada de la Torre Hassan y el Mausoleo de Mohammed V en Rabat"
+    },
+    {
+      "src": "/sahara-star-tours/5-days-in-northern-morocco-from-tangier/images/gallery_2.webp",
+      "cap": "Cabo Espartel",
+      "alt": "Promontorio de Cabo Espartel donde el Océano Atlántico se encuentra con el Mediterráneo"
+    },
+    {
+      "src": "/sahara-star-tours/5-days-in-northern-morocco-from-tangier/images/gallery_3.webp",
+      "cap": "Callejones de Chefchaouen",
+      "alt": "Sinuosa escalera azul bordeada de macetas con flores en Chefchaouen"
+    },
+    {
+      "src": "/sahara-star-tours/5-days-in-northern-morocco-from-tangier/images/gallery_4.webp",
+      "cap": "Puertas de Chefchaouen",
+      "alt": "Calles de la medina pintadas de azul y rústicas puertas de madera en Chefchaouen"
+    },
+    {
+      "src": "/sahara-star-tours/5-days-in-northern-morocco-from-tangier/images/gallery_5.webp",
+      "cap": "Mosaicos de Volubilis",
+      "alt": "Suelos de mosaico romanos antiguos conservados entre las ruinas de Volubilis"
+    },
+    {
+      "src": "/sahara-star-tours/5-days-in-northern-morocco-from-tangier/images/gallery_6.webp",
+      "cap": "Bab Mansour",
+      "alt": "Histórica puerta imperial de Bab Mansour en el casco antiguo de Mequinez"
+    },
+    {
+      "src": "/sahara-star-tours/5-days-in-northern-morocco-from-tangier/images/gallery_7.webp",
+      "cap": "Mirador de Fez",
+      "alt": "Vista panorámica de los tejados de la antigua medina amurallada de Fez el-Bali"
+    },
+    {
+      "src": "/sahara-star-tours/5-days-in-northern-morocco-from-tangier/images/gallery_8.webp",
+      "cap": "Mezquita Al Quaraouiyine",
+      "alt": "Arquitectura de la mezquita y biblioteca de Al Quaraouiyine en la Fez medieval"
+    },
+    {
+      "src": "/sahara-star-tours/5-days-in-northern-morocco-from-tangier/images/gallery_9.webp",
+      "cap": "Kasbah de los Udayas",
+      "alt": "Muros de piedra de la Kasbah de los Udayas y jardines andalusíes en Rabat"
+    },
+    {
+      "src": "/sahara-star-tours/5-days-in-northern-morocco-from-tangier/images/hero_2.webp",
+      "cap": "Panorámica de Chefchaouen",
+      "alt": "Vista panorámica de la pintoresca ciudad azul de Chefchaouen"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "¿Es este un tour privado o compartido?",
+      "answer": "Esta es una experiencia totalmente privada: el vehículo, conductor e itinerario están reservados exclusivamente para usted y sus acompañantes."
+    },
+    {
+      "question": "¿Dónde se realiza la recogida y el regreso?",
+      "answer": "La recogida se realiza en su alojamiento, puerto o aeropuerto de Tánger y el circuito concluye en Casablanca con traslado a su hotel o al aeropuerto Mohammed V."
+    },
+    {
+      "question": "¿Qué tipo de vehículo se utiliza?",
+      "answer": "Viajará a bordo de un moderno vehículo 4×4 o monovolumen con aire acondicionado, asientos cómodos y amplio maletero para equipajes."
+    },
+    {
+      "question": "¿Se pueden preparar opciones para dietas especiales?",
+      "answer": "Sí, podemos organizar opciones vegetarianas, veganas o menús sin gluten notificándolo al confirmar su reserva."
+    },
+    {
+      "question": "¿Es un circuito adecuado para todas las edades?",
+      "answer": "Sí, es idóneo para familias con niños y personas mayores. Las etapas están bien equilibradas con frecuentes descansos."
+    },
+    {
+      "question": "¿Cuál es la mejor temporada para realizar este viaje?",
+      "answer": "La primavera y el otoño brindan temperaturas suaves ideales para recorrer el norte, las montañas del Rif y las ciudades imperiales."
+    },
+    {
+      "question": "¿Cómo puedo realizar la reserva del tour?",
+      "answer": "Envíenos un mensaje con sus fechas deseadas, número de viajeros y preferencias. Nuestro equipo le enviará la confirmación y propuesta detallada."
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "slug": "3-day-sahara-desert-tour-from-fes",
+  "title": "Tour di 3 Giorni da Fes al Deserto di Merzouga | Sahara Star Tours",
+  "shortTitle": "Tour di 3 Giorni nel Deserto da Fes",
+  "description": "Vivi la magia del deserto del Sahara con un tour privato di 3 giorni da Fes. Visita Ifrane, la foresta dei cedri, i nomadi a Merzouga e pernotta in un campo tendato di lusso a Erg Chebbi.",
+  "aboutHtml": "<p>Questo tour privato di 3 giorni da Fes al deserto del Sahara ti permetterà di scoprire i contrasti più spettacolari del Marocco. Attraversando le montagne del Medio Atlante incontrerai Ifrane e le scimmie barbaresche nella foresta di cedri di Azrou, scenderai attraverso la rigogliosa gola della Valle dello Ziz e ti immergerai tra le magnifiche dune dell'Erg Chebbi con un'indimenticabile notte in un accampamento berbero di lusso.</p>",
+  "duration": "3 Giorni / 2 Notti",
+  "startingFrom": "Fes",
+  "price": "Da $350/persona",
+  "highlights": [
+    "Trekking a dorso di dromedario sulle dune dorate dell'Erg Chebbi al tramonto",
+    "Notte in accampamento di lusso con musica e tamburi berberi sotto le stelle",
+    "Incontro culturale con le famiglie nomadi e musica gnawa a Khamlia",
+    "Visita di Ifrane e della foresta di cedri di Azrou con le scimmie barbaresche",
+    "Splendidi panorami sull'oasi e sui canyon della Valle dello Ziz"
+  ],
+  "inclusions": [
+    "Veicolo privato 4×4 o minivan con aria condizionata",
+    "Autista/guida professionale locale per l'intero viaggio",
+    "Carburante, pedaggi e spese operative del veicolo",
+    "1 notte in hotel a Merzouga e 1 notte in campo tendato berbero di lusso",
+    "Colazioni e cene incluse a Merzouga e all'accampamento",
+    "Trekking in dromedario tra le dune di Merzouga con assistenza completa"
+  ],
+  "exclusions": [
+    "Pranzi e bevande",
+    "Voli aerei nazionali e internazionali",
+    "Spese personali e souvenir",
+    "Mance e gratifiche"
+  ],
+  "itinerary": [
+    {
+      "day": "Giorno 1",
+      "title": "Fes – Ifrane – Foresta di Cedri – Midelt – Valle dello Ziz – Deserto di Merzouga",
+      "content": "Il tuo tour di 3 giorni nel Sahara inizia con il prelievo al mattino presto presso il tuo alloggio o l'aeroporto di Fes. Viaggerai verso sud attraverso Imouzzer fino a Ifrane, rinomata per l'architettura alpina e il clima fresco montano, tanto da essere definita la 'Svizzera del Marocco'. Raggiungerai poi la maestosa Foresta di Cedri di Azrou, dove potrai osservare da vicino le simpatiche scimmie barbaresche. Proseguirai attraverso il Medio Atlante con sosta per il pranzo a Midelt, per poi ammirare lo spettacolare mutare del paesaggio lungo le gole e i palmeti infiniti della Valle dello Ziz. Nel pomeriggio giungerai a Merzouga per salire a dorso di dromedario verso il cuore delle dune dell'Erg Chebbi: ti godrai un tramonto memorabile prima di raggiungere l'accampamento di lusso per una tipica cena berbera con musica attorno al falò."
+    },
+    {
+      "day": "Giorno 2",
+      "title": "Esplorazione di Merzouga – Famiglie Nomadi – Khamlia – Lago di Merzouga – Erg Chebbi – Oasi",
+      "content": "Sveglia all'alba per contemplare lo spettacolo del sole che sorge sulle dune di sabbia dorata. Dopo la prima colazione, rientrerai a Merzouga per iniziare un'intera giornata in fuoristrada alla scoperta della regione desertica. Visiterai un'antica miniera di kohl, incontrerai famiglie di nomadi berberi nelle loro tradizionali tende tessute a mano per gustare un tè alla menta e raggiungerai il villaggio di Khamlia per assistere a un'emozionante esibizione di musica gnawa. Pranzo libero (consigliata la deliziosa pizza berbera 'madfouna'). Nel pomeriggio passeggerai nell'oasi di Hassi Labied e visiterai il lago stagionale di Merzouga, spesso popolato da fenicotteri rosa. Cena e pernottamento in hotel ai piedi delle dune."
+    },
+    {
+      "day": "Giorno 3",
+      "title": "Merzouga – Rissani – Erfoud – Valle dello Ziz – Ifrane – Fes",
+      "content": "Dopo la colazione in hotel lascerai il deserto per visitare la storica cittadina di Rissani, antica culla della dinastia Alawita, dove passeggerai nel vivace mercato tradizionale. Proseguirai verso Erfoud per scoprire i laboratori artigianali specializzati nella lavorazione del marmo fossile. Risalirai quindi il corso del fiume Ziz e la suggestiva Valle dello Ziz con soste panoramiche, attraversando nuovamente la foresta di cedri e Ifrane prima di giungere a Fes nel tardo pomeriggio con trasferimento al tuo riad o in aeroporto."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Fes",
+      "day": "Giorno 1",
+      "subtitle": "Fes – Ifrane – Foresta di Cedri – Midelt – Valle dello Ziz – Merzouga",
+      "desc": "Partenza da Fes attraverso Ifrane, la foresta dei cedri e la Valle dello Ziz verso il campo di Erg Chebbi."
+    },
+    {
+      "number": 2,
+      "name": "Esplorazione di Merzouga",
+      "day": "Giorno 2",
+      "subtitle": "Regione di Merzouga – Nomadi – Khamlia – Lago – Oasi",
+      "desc": "Giornata intera in 4×4 alla scoperta di Merzouga: miniere storiche, nomadi, villaggio Gnawa e oasi."
+    },
+    {
+      "number": 3,
+      "name": "Merzouga a Fes",
+      "day": "Giorno 3",
+      "subtitle": "Merzouga – Rissani – Erfoud – Valle dello Ziz – Ifrane – Fes",
+      "desc": "Visita del souk di Rissani, laboratori di fossili a Erfoud e rientro a Fes attraverso il Medio Atlante."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/3-day-sahara-desert-tour-from-fes/images/gallery_1.webp",
+      "cap": "Concerie Chouara",
+      "alt": "Vasche di tintura del cuoio e lavatoi in pietra presso la conceria Chouara a Fes"
+    },
+    {
+      "src": "/sahara-star-tours/3-day-sahara-desert-tour-from-fes/images/gallery_10.webp",
+      "cap": "Dune dell'Erg Chebbi",
+      "alt": "Vista panoramica delle dune arancioni che si estendono verso l'orizzonte nell'Erg Chebbi"
+    },
+    {
+      "src": "/sahara-star-tours/3-day-sahara-desert-tour-from-fes/images/gallery_2.webp",
+      "cap": "Scimmia barbaresca",
+      "alt": "Scimmia barbaresca che riposa su un ramo di cedro nella foresta del Medio Atlante"
+    },
+    {
+      "src": "/sahara-star-tours/3-day-sahara-desert-tour-from-fes/images/gallery_4.webp",
+      "cap": "Madrasa storica di Fes",
+      "alt": "Dettagli scolpiti in legno di cedro e stucchi in una madrasa medievale di Fes"
+    },
+    {
+      "src": "/sahara-star-tours/3-day-sahara-desert-tour-from-fes/images/gallery_5.webp",
+      "cap": "Dune di Merzouga",
+      "alt": "Dune dorate ondulate e cielo azzurro nel deserto di Merzouga"
+    },
+    {
+      "src": "/sahara-star-tours/3-day-sahara-desert-tour-from-fes/images/gallery_6.webp",
+      "cap": "Tramonto a Erg Chebbi",
+      "alt": "Tramonto che proietta calde ombre dorate sulle dune dell'Erg Chebbi"
+    },
+    {
+      "src": "/sahara-star-tours/3-day-sahara-desert-tour-from-fes/images/gallery_8.webp",
+      "cap": "Paesaggio della Valle dello Ziz",
+      "alt": "Paesaggio desertico con acacie e montagne sullo sfondo lungo la Valle dello Ziz"
+    },
+    {
+      "src": "/sahara-star-tours/3-day-sahara-desert-tour-from-fes/images/gallery_9.webp",
+      "cap": "Campo tendato berbero",
+      "alt": "Tradizionale accampamento nomade berbero nel deserto del Sahara nella luce del crepuscolo"
+    },
+    {
+      "src": "/sahara-star-tours/3-day-sahara-desert-tour-from-fes/images/hero_2.webp",
+      "cap": "Alba a Merzouga",
+      "alt": "Vaste dune desertiche di Merzouga illuminate dalla luce dorata del mattino"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Questo tour è privato o condiviso?",
+      "answer": "È un tour completamente privato: auto, autista ed escursioni sono a vostra disposizione esclusiva, con la libertà di concordare pause e soste fotografiche."
+    },
+    {
+      "question": "Quanto dura il trekking in dromedario e quali alternative ci sono?",
+      "answer": "La cavalcata dura circa 45-75 minuti. Chi preferisce può raggiungere comodamente il campo tendato a bordo di un 4×4 o noleggiare quad con piccolo supplemento."
+    },
+    {
+      "question": "Quali sono i servizi inclusi nell'accampamento nel deserto?",
+      "answer": "L'accampamento di lusso dispone di tende private provviste di bagno con wc, doccia con acqua calda, veri letti ed elettricità."
+    },
+    {
+      "question": "Dove avvengono il prelievo e il rientro a Fes?",
+      "answer": "Verremo a prenderti direttamente al tuo hotel o riad a Fes o all'aeroporto, riaccompagnandoti nello stesso luogo alla fine del viaggio."
+    },
+    {
+      "question": "Quale mezzo di trasporto viene impiegato?",
+      "answer": "Utilizziamo veicoli 4×4 moderni e climatizzati oppure minivan spaziosi e confortevoli, ideali per i lunghi tragitti in totale relax."
+    },
+    {
+      "question": "È possibile soddisfare esigenze alimentari particolari?",
+      "answer": "Certamente: piatti vegetariani, senza glutine o adatti ad altre allergie possono essere predisposti segnalandocelo in anticipo al momento della prenotazione."
+    },
+    {
+      "question": "Il tour è indicato per bambini e anziani?",
+      "answer": "Sì, è un itinerario adatto a tutte le fasce d'età. Il tragitto tra Fes e Merzouga dura circa 7 ore complessive ed è scandito da diverse soste panoramiche."
+    },
+    {
+      "question": "Qual è il periodo dell'anno migliore per partire?",
+      "answer": "I mesi primaverili e autunnali offrono le condizioni climatiche più piacevoli sia sulle montagne che nel deserto. Anche l'inverno è splendido per visitare le dune."
+    }
+  ]
+}

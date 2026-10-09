@@ -1,0 +1,66 @@
+{
+  "slug": "raid-buggy-marrakech",
+  "title": "Safari in Buggy nel Deserto e Palmeto di Marrakech | Sahara Star Tours",
+  "shortTitle": "Safari in Buggy a Marrakech",
+  "description": "Guidate potenti buggy fuoristrada tra i sentieri del deserto di Marrakech, villaggi berberi e oasi di palme. Avventura guidata con attrezzatura di sicurezza di alto livello.",
+  "aboutHtml": "Avventura in buggy di mezza giornata a Marrakech.<br/><br/>Provate l'emozione di guidare un potente buggy fuoristrada attraverso i paesaggi più spettacolari nei dintorni di Marrakech. Potrete scegliere tra le colline del deserto di Agafay o le piste alberate del palmeto.<br/><br/>Sentite l'adrenalina scorrere mentre affrontate sterrati polverosi, avvallamenti e sentieri panoramici sotto il cielo limpido del Marocco con le montagne dell'Atlante sullo sfondo.<br/><br/>Il tour comprende attrezzatura di sicurezza completa, guide fuoristrada professioniste e una sosta rilassante per condividere un tradizionale tè alla menta con una famiglia locale prima del rientro a Marrakech.",
+  "duration": "Mezza Giornata / 3-4 Ore",
+  "startingFrom": "Marrakech",
+  "price": "Da 110 €/persona",
+  "highlights": [
+    "Emozionante itinerario in buggy fuoristrada nel palmeto o nel deserto di Agafay.",
+    "Degustazione di tè alla menta in una casa tradizionale berbera.",
+    "Visita a villaggi rurali locali e piste panoramiche lontane dalla folla.",
+    "Viste spettacolari sulle maestose cime dell'Alto Atlante."
+  ],
+  "inclusions": [
+    "Transfer privati andata e ritorno dal vostro alloggio",
+    "Buggy 4x4 di alta qualità e attrezzatura di protezione omologata completa",
+    "Guida off-road esperta e spiegazione tecnica iniziale",
+    "Pausa rinfrescante con tè alla menta tradizionale insieme ai residenti"
+  ],
+  "exclusions": [
+    "Spese personali e souvenir",
+    "Mance per istruttore e autista (facoltative)",
+    "Pasti o bevande supplementari",
+    "Assicurazioni accessorie facoltative"
+  ],
+  "itinerary": [
+    {
+      "day": "Giorno 1",
+      "title": "Raid Buggy a Marrakech",
+      "content": "Pick-up dal vostro hotel a Marrakech e trasferimento alla base dei buggy. Briefing iniziale sul funzionamento dei comandi e norme di sicurezza prima di allacciare le cinture. Partenza per un'emozionante escursione di 2 ore tra dossi sabbiosi, piste in terra battuta e paesaggi montani. Sosta a metà percorso presso un'abitazione berbera per assaporare il tè alla menta e scoprire la genuina accoglienza locale. Rientro alla base e transfer di ritorno al vostro riad."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Marrakech",
+      "day": "Partenza",
+      "subtitle": "Pick-up in Hotel",
+      "desc": "Transfer privato dal vostro alloggio a Marrakech."
+    },
+    {
+      "number": 2,
+      "name": "Oasi del Palmeto di Marrakech",
+      "day": "Attività",
+      "subtitle": "Piste nel Palmeto",
+      "desc": "Percorsi sterrati in buggy con scorci sulle montagne dell'Atlante."
+    },
+    {
+      "number": 3,
+      "name": "Accampamento Berbero",
+      "day": "Pausa Tè",
+      "subtitle": "Ospitalità e Tè alla Menta",
+      "desc": "Sosta accogliente in una casa berbera tradizionale con tè caldo."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/activities/raid-buggy-in-marrakech/images/thumbnail.jpg",
+      "cap": "Safari in Buggy nel Deserto e Palmeto di Marrakech",
+      "alt": "Buggy fuoristrada su sentieri desertici con sfondo montuoso a Marrakech"
+    }
+  ],
+  "faqs": []
+}

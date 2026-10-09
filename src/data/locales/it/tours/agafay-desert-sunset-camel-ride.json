@@ -1,0 +1,77 @@
+{
+  "slug": "agafay-desert-sunset-camel-ride",
+  "title": "Passeggiata in Cammello al Tramonto e Cena nel Deserto di Agafay | Sahara Star",
+  "shortTitle": "Passeggiata in Cammello al Tramonto e Cena ad Agafay",
+  "description": "Fuggite da Marrakech per una magica passeggiata in cammello al tramonto nel deserto pietroso di Agafay. Cena tradizionale berbera sotto le stelle con musica dal vivo.",
+  "aboutHtml": "Godetevi una serata indimenticabile nel deserto di Agafay con una passeggiata in cammello al tramonto, cena tradizionale marocchina in un campo tendato e musica berbera dal vivo attorno al fuoco.",
+  "duration": "1 Giorno / Escursione di una Giornata",
+  "startingFrom": "Marrakech",
+  "price": "Da 85 €/persona",
+  "highlights": [
+    "Magica passeggiata in cammello al tramonto nel deserto di Agafay con vista panoramica sulle montagne dell'Atlante.",
+    "Cena tradizionale marocchina (tajine, couscous, insalate, dessert) servita in un accogliente campo tendato berbero.",
+    "Atmosfera culturale autentica con musica berbera, percussioni e spettacolo dal vivo attorno al fuoco sotto le stelle.",
+    "Esperienza per piccoli gruppi con transfer andata e ritorno da Marrakech in comodo veicolo climatizzato.",
+    "Serata ideale per coppie, famiglie e amici che desiderano assaporare il deserto senza affrontare lunghi viaggi in auto."
+  ],
+  "inclusions": [
+    "Transfer privati o per piccoli gruppi con partenza da Marrakech",
+    "Passeggiata a dorso di cammello al tramonto tra le colline del deserto di Agafay",
+    "Cena tradizionale marocchina di tre portate servita in tenda di lusso",
+    "Musica tradizionale dal vivo attorno al fuoco e spettacolo serale"
+  ],
+  "exclusions": [
+    "Spese personali e souvenir",
+    "Mance per guida e autista (facoltative)",
+    "Pasti e bevande extra non specificati",
+    "Ingressi a monumenti o attrazioni opzionali"
+  ],
+  "itinerary": [
+    {
+      "day": "Giorno 1",
+      "title": "Itinerario Dettagliato",
+      "content": "16:30–17:00 – Pick-up dal vostro hotel o riad a Marrakech e transfer verso il deserto di Agafay (circa 40–50 minuti). 17:30 – Arrivo all'accampamento, benvenuto con tè alla menta e dolci tradizionali, e incontro con i cammellieri. 18:00 – Passeggiata a dorso di dromedario al tramonto (circa 45–60 minuti) attraverso il deserto pietroso con soste fotografiche con abiti tradizionali del deserto. 19:00 – Rientro all'accampamento e tempo libero per ammirare il crepuscolo sulle vette dell'Alto Atlante. 19:30 – Cena marocchina servita sotto la tenda berbera o a cielo aperto: insalate miste, tajine o couscous, frutta fresca o dolci e tè alla menta (opzioni vegetariane disponibili). 20:30–21:00 – Spettacolo con musica berbera dal vivo e danze attorno al falò. 21:30–22:00 – Rientro a Marrakech e accompagnamento al vostro riad."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Marrakech",
+      "day": "Pomeriggio",
+      "subtitle": "Partenza",
+      "desc": "Pick-up in hotel o riad nel centro di Marrakech."
+    },
+    {
+      "number": 2,
+      "name": "Deserto di Pietra di Agafay",
+      "day": "Tramonto",
+      "subtitle": "Cammellata e Colline Ondulate",
+      "desc": "Trekking in cammello in abiti tradizionali mentre il sole tramonta sull'Atlante."
+    },
+    {
+      "number": 3,
+      "name": "Accampamento nel Deserto",
+      "day": "Sera",
+      "subtitle": "Cena Sotto le Stelle",
+      "desc": "Banchetto tradizionale marocchino a lume di candela e musica attorno al fuoco."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/day-trips/agafay-desert-sunset-camel-ride-dinner-under-the-stars/images/thumbnail.jpg",
+      "cap": "Passeggiata in Cammello al Tramonto e Cena Sotto le Stelle ad Agafay",
+      "alt": "Passeggiata in dromedario al tramonto tra le colline del deserto di Agafay"
+    },
+    {
+      "src": "/sahara-star-tours/day-trips/agafay-desert-sunset-camel-ride-dinner-under-the-stars/images/image-01.jpg",
+      "cap": "Passeggiata in Cammello al Tramonto e Cena Sotto le Stelle ad Agafay",
+      "alt": "Campo tendato illuminato da lanterne nel deserto roccioso di Agafay"
+    },
+    {
+      "src": "/sahara-star-tours/day-trips/agafay-desert-sunset-camel-ride-dinner-under-the-stars/images/image-02.png",
+      "cap": "Passeggiata in Cammello al Tramonto e Cena Sotto le Stelle ad Agafay",
+      "alt": "Spettacolo musicale berbero attorno al falò sotto le stelle ad Agafay"
+    }
+  ],
+  "faqs": []
+}

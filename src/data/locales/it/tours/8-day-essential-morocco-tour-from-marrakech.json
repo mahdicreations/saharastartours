@@ -1,0 +1,208 @@
+{
+  "slug": "8-day-essential-morocco-tour-from-marrakech",
+  "title": "Tour di 8 Giorni da Marrakech a Tangeri | Sahara Star Tours",
+  "shortTitle": "Tour di 8 Giorni da Marrakech a Tangeri",
+  "description": "Circuito privato di 8 giorni da Marrakech a Tangeri attraverso Ait Ben Haddou, Valle del Dades, due giornate a Merzouga, Fes con guida locale e Chefchaouen.",
+  "aboutHtml": "<p>Questo tour privato di 8 giorni da Marrakech a Tangeri è una delle traversate più affascinanti del Marocco, creata per esplorare il paese senza tralasciare nulla. Partendo da Marrakech, valicherai l'Alto Atlante visitando le storiche Kasbah di Telouet e Ait Ben Haddou. Attraverserai le gole del Dades e del Todra fino al deserto di Merzouga con due notti magiche (in campo tendato di lusso e con le famiglie nomadi), per poi scoprire la medina millenaria di Fes con guida locale, le rovine romane di Volubilis e i vicoli azzurri di Chefchaouen prima di raggiungere Tangeri.</p>",
+  "duration": "8 Giorni / 7 Notti",
+  "price": "Da $990/persona",
+  "startingFrom": "Marrakech",
+  "highlights": [
+    "Dune dorate di Merzouga ed Erg Chebbi",
+    "Trekking a dorso di dromedario nel deserto al tramonto",
+    "Kasbah di Ait Ben Haddou, sito UNESCO leggendario",
+    "Itinerario panoramico attraverso le montagne dell'Alto Atlante",
+    "Medina di Fes e tesori culturali storici",
+    "Chefchaouen, la città blu tra le montagne del Rif"
+  ],
+  "inclusions": [
+    "Veicolo privato 4×4 o minivan con aria condizionata",
+    "Autista/guida locale professionista per l'intero viaggio",
+    "Carburante, pedaggi e spese operative del veicolo",
+    "Sistemazione in riad selezionati e campo tendato di lusso",
+    "Colazioni e cene incluse come da itinerario",
+    "Trekking in dromedario tra le dune con assistenza completa"
+  ],
+  "exclusions": [
+    "Pranzi e bevande",
+    "Voli aerei e trasferimenti marittimi/aeroportuali non specificati",
+    "Biglietti d'ingresso per monumenti facoltativi",
+    "Mance e spese personali"
+  ],
+  "itinerary": [
+    {
+      "day": "Giorno 1",
+      "title": "Marrakech – Alto Atlante – Kasbah di Telouet – Kasbah Ait Ben Haddou – Ouarzazate",
+      "content": "Partenza al mattino presto dal tuo alloggio o dall'aeroporto di Marrakech. Attraverserai l'Alto Atlante lungo il panoramico valico del Tizi N'Tichka (2.260 m). Visiterai la storica Kasbah di Telouet e la celebre Kasbah di Ait Ben Haddou, patrimonio UNESCO set di film come Il Gladiatore e La Mummia. Nel tardo pomeriggio arriverai a Ouarzazate, la 'porta del deserto'. Cena e pernottamento in hotel."
+    },
+    {
+      "day": "Giorno 2",
+      "title": "Ouarzazate – Palmeto di Skoura – Kasbah Amridil – Valle delle Rose – Valle del Dades",
+      "content": "Dopo la prima colazione visiterai gli studi cinematografici e la Kasbah Taourirt a Ouarzazate. Proseguirai verso est visitando la Kasbah Amridil nel palmeto di Skoura e attraverserai Kalaat M'Gouna nella profumata Valle delle Rose. Raggiungerai infine la Valle del Dades, ammirando le singolari rocce delle 'dita di scimmia'. Cena e pernottamento in riad a Boumalne Dades."
+    },
+    {
+      "day": "Giorno 3",
+      "title": "Boumalne Dades – Gole del Todra – Erfoud – Deserto di Merzouga – Campo di lusso",
+      "content": "Dopo la prima colazione ammirerai le imponenti Gole del Todra, passeggiando tra gigantesche falesie rocciose verticali. Tempo per il pranzo. Proseguirai attraverso i palmeti di Touroug e Tinjdad fino a Merzouga. Nel tardo pomeriggio salirai a dorso di dromedario per ammirare il tramonto tra le dune dell'Erg Chebbi e raggiungere il campo tendato di lusso con cena tipica berbera e canti attorno al falò."
+    },
+    {
+      "day": "Giorno 4",
+      "title": "Esplorazione di Merzouga – Famiglie Nomadi – Khamlia – Lago di Merzouga – Erg Chebbi – Palmeraie",
+      "content": "Sveglia all'alba per contemplare lo spettacolo del sole che sorge sulle dune, seguita dalla prima colazione. Rientro in dromedario o in 4×4 per una giornata in fuoristrada: visiterai antiche miniere di kohl, sosterai presso una famiglia nomade berbera per un tè alla menta e assisterai a una performance di musica gnawa a Khamlia. Nel pomeriggio passeggerai nell'oasi e ammirerai il lago di Merzouga. Cena e pernottamento in hotel ai piedi delle dune."
+    },
+    {
+      "day": "Giorno 5",
+      "title": "Dune di Merzouga – Erfoud – Midelt – Foresta di Cedri – Ifrane – Fes",
+      "content": "Dopo la prima colazione visiterai la storica Rissani e il suo vivace mercato tradizionale. Risalirai la Valle dello Ziz verso Midelt per il pranzo libero e attraverserai la Foresta di Cedri di Azrou con le scimmie barbaresche. Dopo una sosta nella cittadina alpina di Ifrane, giungerai a Fes nel tardo pomeriggio con trasferimento al tuo riad."
+    },
+    {
+      "day": "Giorno 6",
+      "title": "Visita guidata di Fes con guida locale",
+      "content": "Intera giornata dedicata alla visita guidata dell'antica medina di Fes el-Bali con una guida ufficiale locale. Visiterai il Palazzo Reale, il quartiere ebraico del Mellah, la Madrasa Al Attarine, l'Università Al Quaraouiyine e le celebri concerie di Chouara. Pomeriggio libero per rilassarsi in riad."
+    },
+    {
+      "day": "Giorno 7",
+      "title": "Fes – Meknes – Rovine di Volubilis – Chefchaouen",
+      "content": "Dopo la prima colazione partirai per Meknes per ammirare Bab Mansour e i granai reali. Proseguirai per il sito archeologico di Volubilis (patrimonio UNESCO) per ammirare i suoi raffinati mosaici romani. Attraverserai poi i rilievi del Rif fino a raggiungere la splendida Chefchaouen, la città blu. Cena e pernottamento in un caratteristico riad."
+    },
+    {
+      "day": "Giorno 8",
+      "title": "Chefchaouen – Trasferimento all'aeroporto di Tangeri",
+      "content": "Dopo la prima colazione avrai tempo a disposizione per passeggiare tra i vicoli azzurri di Chefchaouen prima di viaggiare verso Tangeri, dove l'autista ti accompagnerà all'aeroporto o al porto. Conclusione del tour di 8 giorni da Marrakech a Tangeri."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Marrakech",
+      "day": "Giorno 1",
+      "subtitle": "Marrakech – Alto Atlante – Telouet – Ait Ben Haddou – Ouarzazate",
+      "desc": "Partenza da Marrakech attraverso il Tizi N'Tichka, Telouet e Ait Ben Haddou verso Ouarzazate."
+    },
+    {
+      "number": 2,
+      "name": "Ouarzazate",
+      "day": "Giorno 2",
+      "subtitle": "Ouarzazate – Skoura – Kasbah Amridil – Valle del Dades",
+      "desc": "Studi cinematografici, palmeto di Skoura, Kasbah Amridil e notte nel Dades."
+    },
+    {
+      "number": 3,
+      "name": "Boumalne Dades",
+      "day": "Giorno 3",
+      "subtitle": "Dades – Gole del Todra – Merzouga – Campo di lusso",
+      "desc": "Passeggiata nelle Gole del Todra, arrivo all'Erg Chebbi e notte in campo tendato di lusso."
+    },
+    {
+      "number": 4,
+      "name": "Regione di Merzouga",
+      "day": "Giorno 4",
+      "subtitle": "Esplorazione di Merzouga – Nomadi – Khamlia – Oasi",
+      "desc": "Tour in 4×4 alla scoperta di famiglie nomadi, cultura Gnawa e dune di Merzouga."
+    },
+    {
+      "number": 5,
+      "name": "Merzouga a Fes",
+      "day": "Giorno 5",
+      "subtitle": "Merzouga – Erfoud – Valle dello Ziz – Ifrane – Fes",
+      "desc": "Viaggio attraverso la Valle dello Ziz, foresta di cedri e Ifrane con arrivo a Fes."
+    },
+    {
+      "number": 6,
+      "name": "Visita di Fes",
+      "day": "Giorno 6",
+      "subtitle": "Tour guidato della medina storica di Fes",
+      "desc": "Visita con guida ufficiale a monumenti storici, madrasse e concerie di Fes."
+    },
+    {
+      "number": 7,
+      "name": "Fes a Chefchaouen",
+      "day": "Giorno 7",
+      "subtitle": "Fes – Meknes – Volubilis – Chefchaouen",
+      "desc": "Meknes imperiale, rovine romane di Volubilis e arrivo a Chefchaouen."
+    },
+    {
+      "number": 8,
+      "name": "Chefchaouen a Tangeri",
+      "day": "Giorno 8",
+      "subtitle": "Chefchaouen – Trasferimento a Tangeri",
+      "desc": "Passeggiata a Chefchaouen e trasferimento al porto o aeroporto di Tangeri."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/8-day-essential-morocco-tour-from-marrakech/images/gallery_3.webp",
+      "cap": "Passo Tizi N'Tichka",
+      "alt": "Strada panoramica dell'Alto Atlante che sale verso il passo Tizi n'Tichka"
+    },
+    {
+      "src": "/sahara-star-tours/8-day-essential-morocco-tour-from-marrakech/images/gallery_4.webp",
+      "cap": "Kasbah di Telouet",
+      "alt": "Storica Kasbah di Telouet con intricati mosaici moreschi in zellij e stucchi"
+    },
+    {
+      "src": "/sahara-star-tours/8-day-essential-morocco-tour-from-marrakech/images/gallery_5.webp",
+      "cap": "Ait Ben Haddou",
+      "alt": "Villaggio fortificato in argilla di Ait Ben Haddou accanto al fiume bordato di palme"
+    },
+    {
+      "src": "/sahara-star-tours/8-day-essential-morocco-tour-from-marrakech/images/gallery_6.webp",
+      "cap": "Kasbah Taourirt",
+      "alt": "Mura fortificate in argilla e finestre decorative della Kasbah Taourirt a Ouarzazate"
+    },
+    {
+      "src": "/sahara-star-tours/8-day-essential-morocco-tour-from-marrakech/images/gallery_7.webp",
+      "cap": "Carovana all'Erg Chebbi",
+      "alt": "Viaggio in carovana di dromedari attraverso le vaste sabbie dorate dell'Erg Chebbi"
+    },
+    {
+      "src": "/sahara-star-tours/8-day-essential-morocco-tour-from-marrakech/images/gallery_8.webp",
+      "cap": "Conceria Chouara",
+      "alt": "Vasche in pietra e conciatori della conceria Chouara nella storica medina di Fes"
+    },
+    {
+      "src": "/sahara-star-tours/8-day-essential-morocco-tour-from-marrakech/images/gallery_9.webp",
+      "cap": "Chefchaouen blu",
+      "alt": "Stretto vicolo blu con gradini in pietra nella cittadina montana di Chefchaouen"
+    },
+    {
+      "src": "/sahara-star-tours/8-day-essential-morocco-tour-from-marrakech/images/hero_2.webp",
+      "cap": "Alba a Merzouga",
+      "alt": "Alba panoramica sulle alte dune di sabbia di Merzouga nel Sahara"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Questo tour è privato o condiviso?",
+      "answer": "È un tour completamente privato: auto, conducente e programma sono a uso esclusivo del tuo gruppo per offrirti la massima serenità."
+    },
+    {
+      "question": "Quanto dura il percorso in dromedario e ci sono alternative?",
+      "answer": "La passeggiata in dromedario dura circa 40-90 minuti. È possibile richiedere il trasferimento diretto al campo in 4×4 senza alcun costo aggiuntivo."
+    },
+    {
+      "question": "La tenda nell'accampamento nel deserto è privata?",
+      "answer": "Sì, l'accampamento di lusso dispone di ampie tende private con veri letti, bagno privato interno con wc e doccia calda."
+    },
+    {
+      "question": "Dove avvengono il prelievo e il rientro?",
+      "answer": "Il viaggio inizia al tuo riad o aeroporto a Marrakech e termina a Tangeri con trasferimento al porto o all'aeroporto."
+    },
+    {
+      "question": "Quale mezzo di trasporto viene impiegato?",
+      "answer": "Utilizziamo veicoli fuoristrada 4×4 o moderni minivan privati con aria condizionata e capiente bagagliaio per viaggiare in assoluto comfort."
+    },
+    {
+      "question": "È possibile soddisfare particolari esigenze dietetiche?",
+      "answer": "Certamente: piatti vegetariani, senza glutine o altre preferenze possono essere concordati segnalandolo al momento della prenotazione."
+    },
+    {
+      "question": "Questo tour è indicato per ogni fascia d'età?",
+      "answer": "Sì, è un tour perfetto per famiglie con bambini, coppie e viaggiatori maturi grazie a un ritmo di viaggio ben dosato e soste regolari."
+    },
+    {
+      "question": "Qual è il periodo migliore dell'anno per partire?",
+      "answer": "La primavera e l'autunno offrono un clima meraviglioso per visitare le regioni del sud, le città storiche e il nord montuoso."
+    }
+  ]
+}

@@ -1,0 +1,295 @@
+{
+  "slug": "14-days-grand-morocco-tour-itinerary-from-casablanca",
+  "title": "Gran Circuito de 14 Días por Marruecos desde Casablanca | Sahara Star Tours",
+  "shortTitle": "Gran Circuito de 14 Días por Marruecos desde Casablanca",
+  "description": "Épico gran circuito de 14 días por Marruecos desde Casablanca. Costa norte, Chefchaouen, Fez medieval, dunas de Erg Chebbi, Marrakech y Essaouira.",
+  "aboutHtml": "Este gran circuito privado de 14 días comienza en Casablanca y concluye en Marrakech o Casablanca. A lo largo del recorrido vivirá la majestuosidad de Casablanca, la capital Rabat, el puerto atlántico de Tánger, la perla azul de Chefchaouen, las ruinas de Volubilis, Meknes, la medina imperial de Fez, las dunas doradas de Erg Chebbi con acampada de lujo en el Sahara, las espectaculares gargantas de Todra y Dades, Ouarzazate, Marrakech y la costera Essaouira.",
+  "duration": "14 Días / 13 Noches",
+  "startingFrom": "Casablanca",
+  "price": "Desde 1.690 $/persona",
+  "highlights": [
+    "Desierto del Sahara en Merzouga y las dunas de Erg Chebbi",
+    "Paseo en camello por el desierto al atardecer",
+    "Kasbah de Ait Ben Haddou declarada Patrimonio de la Humanidad por la UNESCO",
+    "Paso panorámico a través de las altas cumbres del Alto Atlas",
+    "Chefchaouen, la mágica ciudad azul en las montañas del Rif",
+    "Medina histórica de Fez y sus tesoros culturales milenarios"
+  ],
+  "inclusions": [
+    "Vehículo privado 4x4 o monovolumen moderno con aire acondicionado",
+    "Chófer y guía local profesional con traslados privados",
+    "Combustible, peajes y todos los gastos operativos del vehículo",
+    "Alojamiento en riads y hoteles con encanto especificados en el itinerario",
+    "Desayunos diarios y cenas incluidas según el programa detallado",
+    "Paseo en camello por el desierto y estancia en campamento de jaimas de lujo"
+  ],
+  "exclusions": [
+    "Almuerzos y bebidas durante el viaje",
+    "Billetes de avión internacionales y servicios no especificados",
+    "Gastos personales y actividades opcionales",
+    "Propinas para guías y chófer"
+  ],
+  "itinerary": [
+    {
+      "day": "Día 1",
+      "title": "Llegada a Casablanca – Visita de la Mayor Ciudad de Marruecos",
+      "content": "Bienvenida en el aeropuerto o alojamiento en Casablanca. Visita guiada a la monumental Mezquita Hassan II levantada sobre el Atlántico, la Plaza Mohamed V con su arquitectura art déco y parada fotográfica en Rick's Café. Noche en hotel."
+    },
+    {
+      "day": "Día 2",
+      "title": "Casablanca – Rabat – Arcila",
+      "content": "Salida por la costa hacia Rabat para visitar la Torre Hassan, el Mausoleo de Mohamed V y la Kasbah de los Oudayas. Almuerzo y continuación rumbo norte hacia la pintoresca y artística villa costera de Arcila (Asilah). Noche en riad tradicional."
+    },
+    {
+      "day": "Día 3",
+      "title": "Arcila – Tánger – Montañas del Rif – Chefchaouen",
+      "content": "Viaje a Tánger para descubrir el Cabo Espartel y las Grutas de Hércules. Almuerzo y travesía a través de Tetuán y las montañas del Rif hasta llegar a la cautivadora Chefchaouen. Noche en riad de la medina azul."
+    },
+    {
+      "day": "Día 4",
+      "title": "Visita Guiada de Chefchaouen, la Ciudad Azul",
+      "content": "Jornada para recorrer Chefchaouen con guía local: callejuelas de azul cobalto, la Plaza Uta el-Hammam y la Kasbah. Por la tarde, paseo panorámico hasta la Mezquita Española sobre la colina. Noche en el mismo riad."
+    },
+    {
+      "day": "Día 5",
+      "title": "Chefchaouen – Ruinas Romanas de Volubilis – Meknes – Fez",
+      "content": "Visita a las ruinas romanas de Volubilis (Patrimonio UNESCO) y continuación hacia la imperial Meknes (puerta Bab Mansour y Mausoleo de Moulay Ismail). Por la tarde, llegada a Fez y alojamiento en riad tradicional."
+    },
+    {
+      "day": "Día 6",
+      "title": "Visita Guiada Monumental de Fez",
+      "content": "Día completo de visita guiada oficial en Fez el-Bali: el Palacio Real, el barrio judío del Mellah, la vista desde Borj Sud, la Madraza Al Attarine, la mezquita Al Quaraouiyine y las tenerías de Chouara. Tarde libre en el riad."
+    },
+    {
+      "day": "Día 7",
+      "title": "Fez – Ifrane – Bosque de Cedros – Midelt – Valle del Ziz – Desierto de Merzouga",
+      "content": "Travesía del Medio Atlas visitando Ifrane y el bosque de cedros de Azrou para observar macacos salvajes. Almuerzo en Midelt y descenso por las gargantas del Valle del Ziz. Por la tarde, paseo en camello por las dunas de Erg Chebbi en Merzouga. Puesta de sol y noche en jaima de lujo con cena tradicional y tambores."
+    },
+    {
+      "day": "Día 8",
+      "title": "Exploración de Merzouga – Familias Nómadas – Música Gnawa de Khamlia",
+      "content": "Amanecer en las dunas y desayuno. Excursión en 4x4 por el desierto: antiguas minas de kohl, encuentro con nómadas en sus tiendas y música tradicional Gnawa en Khamlia. Palmerales y lago estacional de los flamencos. Cena y noche en riad junto a las dunas."
+    },
+    {
+      "day": "Día 9",
+      "title": "Merzouga – Rissani – Erfoud – Gargantas del Todra – Valle del Dades",
+      "content": "Visita al mercado tradicional de Rissani y talleres de mármol fosilizado en Erfoud. Paseo por las colosales Gargantas del Todra y viaje al Valle del Dades con paradas en las formaciones de los dedos de mono. Cena y noche en riad."
+    },
+    {
+      "day": "Día 10",
+      "title": "Valle del Dades – Valle de las Rosas – Ouarzazate – Ait Ben Haddou – Alto Atlas – Marrakech",
+      "content": "Paso por el Valle de las Rosas y los estudios de cine de Ouarzazate. Visita a la Kasbah de Ait Ben Haddou (Patrimonio UNESCO). Travesía panorámica del Alto Atlas por el puerto de Tizi n'Tichka y llegada a Marrakech. Noche en riad."
+    },
+    {
+      "day": "Día 11",
+      "title": "Visita Monumental Guiada de Marrakech",
+      "content": "Visita con guía oficial: el Palacio de la Bahía, la Madraza Ben Youssef, la mezquita Koutoubia y los animados zocos gremiales. Tiempo libre en la Plaza Jemaa el-Fna y visita opcional a los Jardines Majorelle. Noche en riad."
+    },
+    {
+      "day": "Día 12",
+      "title": "Marrakech – Excursión Costera a Essaouira",
+      "content": "Viaje a la costa de Essaouira con paradas en cooperativas de aceite de argán. Tiempo libre para explorar las murallas de la Skala, el puerto pesquero artesanal y la medina blanca. Noche en hotel de Essaouira."
+    },
+    {
+      "day": "Día 13",
+      "title": "Essaouira – Marrakech",
+      "content": "Mañana tranquila en Essaouira y regreso por carretera hacia Marrakech disfrutando del paisaje campestre. Tarde libre para compras o descansar en una terraza de Jemaa el-Fna. Noche en riad."
+    },
+    {
+      "day": "Día 14",
+      "title": "Aeropuerto de Marrakech o Casablanca y Fin del Tour",
+      "content": "Desayuno y traslado privado al aeropuerto de Marrakech o Casablanca según su plan de vuelos, concluyendo este gran circuito de 14 días."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Llegada a Casablanca",
+      "day": "Día 1",
+      "subtitle": "Bienvenida",
+      "desc": "Mezquita Hassan II y cornisa atlántica."
+    },
+    {
+      "number": 2,
+      "name": "Casablanca a Arcila",
+      "day": "Día 2",
+      "subtitle": "Rabat y Costa",
+      "desc": "Torre Hassan en Rabat y murallas marítimas de Arcila."
+    },
+    {
+      "number": 3,
+      "name": "Arcila a Chefchaouen",
+      "day": "Día 3",
+      "subtitle": "Tánger y el Rif",
+      "desc": "Cabo Espartel, Grutas de Hércules y llegada a Chefchaouen."
+    },
+    {
+      "number": 4,
+      "name": "Chefchaouen",
+      "day": "Día 4",
+      "subtitle": "Ciudad Azul",
+      "desc": "Callejones azules y vistas desde la Mezquita Española."
+    },
+    {
+      "number": 5,
+      "name": "Chefchaouen a Fez",
+      "day": "Día 5",
+      "subtitle": "Volubilis y Meknes",
+      "desc": "Ruinas romanas de Volubilis y puerta Bab Mansour."
+    },
+    {
+      "number": 6,
+      "name": "Visita de Fez",
+      "day": "Día 6",
+      "subtitle": "Medina Imperial",
+      "desc": "Medina medieval, madrazas históricas y tenerías."
+    },
+    {
+      "number": 7,
+      "name": "Fez a Merzouga",
+      "day": "Día 7",
+      "subtitle": "Medio Atlas y Sahara",
+      "desc": "Ifrane, bosque de cedros, dunas y campamento de lujo."
+    },
+    {
+      "number": 8,
+      "name": "Región de Merzouga",
+      "day": "Día 8",
+      "subtitle": "Cultura Nómada",
+      "desc": "Música Gnawa en Khamlia y té con nómadas."
+    },
+    {
+      "number": 9,
+      "name": "Merzouga a Dades",
+      "day": "Día 9",
+      "subtitle": "Gargantas del Todra",
+      "desc": "Mercado de Rissani y cañón rocoso del Todra."
+    },
+    {
+      "number": 10,
+      "name": "Dades a Marrakech",
+      "day": "Día 10",
+      "subtitle": "Kasbahs y Atlas",
+      "desc": "Kasbah de Ait Ben Haddou y paso Tizi n'Tichka."
+    },
+    {
+      "number": 11,
+      "name": "Marrakech",
+      "day": "Día 11",
+      "subtitle": "Ciudad Roja",
+      "desc": "Palacio de la Bahía, zocos y Plaza Jemaa el-Fna."
+    },
+    {
+      "number": 12,
+      "name": "Marrakech a Essaouira",
+      "day": "Día 12",
+      "subtitle": "Costa de Mogador",
+      "desc": "Arganes, puerto pesquero y murallas de la Skala."
+    },
+    {
+      "number": 13,
+      "name": "Essaouira a Marrakech",
+      "day": "Día 13",
+      "subtitle": "Retorno a Marrakech",
+      "desc": "Regreso a Marrakech y tarde libre."
+    },
+    {
+      "number": 14,
+      "name": "Salida",
+      "day": "Día 14",
+      "subtitle": "Fin del Viaje",
+      "desc": "Traslado al aeropuerto de Marrakech o Casablanca."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/14-days-grand-morocco-tour-itinerary-from-casablanca/images/gallery_1.webp",
+      "cap": "Galería 1",
+      "alt": "Ciclista pasando por un animado zoco de artesanos en la medina de Marrakech"
+    },
+    {
+      "src": "/sahara-star-tours/14-days-grand-morocco-tour-itinerary-from-casablanca/images/gallery_10.webp",
+      "cap": "Galería 10",
+      "alt": "Arbusto del desierto brotando en la arena ondulada por el viento en el Sahara"
+    },
+    {
+      "src": "/sahara-star-tours/14-days-grand-morocco-tour-itinerary-from-casablanca/images/gallery_2.webp",
+      "cap": "Galería 2",
+      "alt": "Caravana de dromedarios siguiendo la cresta ondulada de las dunas de Erg Chebbi"
+    },
+    {
+      "src": "/sahara-star-tours/14-days-grand-morocco-tour-itinerary-from-casablanca/images/gallery_3.webp",
+      "cap": "Galería 3",
+      "alt": "Mujer marroquí sentada con un gato frente a una tienda tradicional de la medina"
+    },
+    {
+      "src": "/sahara-star-tours/14-days-grand-morocco-tour-itinerary-from-casablanca/images/gallery_4.webp",
+      "cap": "Galería 4",
+      "alt": "Bastión marítimo de piedra de la Skala del Puerto y gaviotas en Essaouira"
+    },
+    {
+      "src": "/sahara-star-tours/14-days-grand-morocco-tour-itinerary-from-casablanca/images/gallery_5.webp",
+      "cap": "Galería 5",
+      "alt": "Minarete de la Mezquita Hassan II en Casablanca recortado contra el cielo azul"
+    },
+    {
+      "src": "/sahara-star-tours/14-days-grand-morocco-tour-itinerary-from-casablanca/images/gallery_6.webp",
+      "cap": "Galería 6",
+      "alt": "Resplandor del atardecer tras los arcos moriscos de la Mezquita Hassan II"
+    },
+    {
+      "src": "/sahara-star-tours/14-days-grand-morocco-tour-itinerary-from-casablanca/images/gallery_7.webp",
+      "cap": "Galería 7",
+      "alt": "Arco de piedra tallada y puertas de bronce del Mausoleo de Mohamed V en Rabat"
+    },
+    {
+      "src": "/sahara-star-tours/14-days-grand-morocco-tour-itinerary-from-casablanca/images/gallery_8.webp",
+      "cap": "Galería 8",
+      "alt": "Gato pelirrojo sentado en un escalón encalado junto a una puerta azul en Chefchaouen"
+    },
+    {
+      "src": "/sahara-star-tours/14-days-grand-morocco-tour-itinerary-from-casablanca/images/gallery_9.webp",
+      "cap": "Galería 9",
+      "alt": "Bolsos de paja tejidos y artesanías colgadas en una pared de terracota en Marrakech"
+    },
+    {
+      "src": "/sahara-star-tours/14-days-grand-morocco-tour-itinerary-from-casablanca/images/hero_2.webp",
+      "cap": "Hero 2",
+      "alt": "Amanecer sobre las casas escalonadas y las montañas del Rif en Chefchaouen"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "¿Es este un tour privado o compartido?",
+      "answer": "Es una experiencia totalmente privada: el vehículo, chófer y guía están a su exclusiva disposición con horarios flexibles."
+    },
+    {
+      "question": "¿Cuánto dura el paseo en camello y qué alternativa existe?",
+      "answer": "El paseo en camello dura entre 45 minutos y una hora y media. Si lo desea, el traslado al campamento se realiza en 4x4 sin coste añadido."
+    },
+    {
+      "question": "¿Las tiendas en el campamento cuentan con comodidades privadas?",
+      "answer": "Sí, se alojará en tiendas privadas de lujo con baño ensuite privado, ducha y agua caliente."
+    },
+    {
+      "question": "¿Qué tipo de vehículo se emplea durante el viaje?",
+      "answer": "Un moderno todoterreno 4x4 o monovolumen con aire acondicionado. Para grupos se reservan minibuses prémium."
+    },
+    {
+      "question": "¿Se pueden preparar comidas para dietas específicas?",
+      "answer": "Sí, infórmenos al reservar para garantizar menús adaptados (vegetarianos, veganos, sin gluten, etc.)."
+    },
+    {
+      "question": "¿Es un circuito apto para todas las edades?",
+      "answer": "Sí, el itinerario está pensado para viajeros de cualquier edad, con descansos regulares y ritmo relajado."
+    },
+    {
+      "question": "¿Cuál es la época más favorable para este tour?",
+      "answer": "La primavera y el otoño ofrecen temperaturas ideales. El invierno es excelente para la región desértica del sur."
+    },
+    {
+      "question": "¿Cómo se confirma la reserva del circuito?",
+      "answer": "Envíenos una consulta con sus fechas, número de viajeros y preferencias para recibir la confirmación y propuesta final."
+    }
+  ]
+}

@@ -1,0 +1,163 @@
+{
+  "slug": "morocco-3-day-desert-tour-ouarzazate-marrakech",
+  "title": "Tour de 3 Días por el Desierto de Ouarzazate a Marrakech | Sahara Star Tours",
+  "shortTitle": "Tour de 3 Días de Ouarzazate a Marrakech",
+  "description": "Circuito privado de 3 días desde Ouarzazate a Marrakech explorando las dunas de Merzouga, cultura nómada, Ait Ben Haddou y el Alto Atlas.",
+  "aboutHtml": "<p>Este tour privado de 3 días desde Ouarzazate hasta Marrakech es la escapada perfecta al desierto comenzando en las puertas del Sahara. Cruzará las majestuosas Gargantas del Todra hacia las dunas de Erg Chebbi en Merzouga, donde disfrutará de dos días de inmersión en el desierto con noche en campamento de lujo, música gnawa en Khamlia y paseos en camello. Culminará cruzando el Valle del Draa, visitando la legendaria Kasbah de Ait Ben Haddou y superando el Alto Atlas hacia Marrakech.</p>",
+  "duration": "3 Días / 2 Noches",
+  "price": "Desde $420/persona",
+  "startingFrom": "Ouarzazate",
+  "highlights": [
+    "Dunas de Merzouga y desierto de Erg Chebbi",
+    "Paseo en camello por el desierto al atardecer",
+    "Noche en campamento en el desierto con cena y desayuno",
+    "Ruta panorámica a través de las montañas del Alto Atlas",
+    "Medina histórica y lugares emblemáticos de Marrakech",
+    "Ouarzazate, la puerta del desierto"
+  ],
+  "inclusions": [
+    "Vehículo privado 4×4 o monovolumen con aire acondicionado",
+    "Chófer/guía local profesional de habla hispana",
+    "Combustible, peajes y gastos de funcionamiento del vehículo",
+    "Alojamiento en riads seleccionados y campamento de lujo",
+    "Desayunos diarios y cenas según el itinerario",
+    "Paseo en camello por las dunas con asistencia completa"
+  ],
+  "exclusions": [
+    "Almuerzos y bebidas",
+    "Vuelos y traslados no especificados",
+    "Entradas opcionales a monumentos",
+    "Propinas y gastos personales"
+  ],
+  "itinerary": [
+    {
+      "day": "Día 1",
+      "title": "Ouarzazate – Gargantas del Todra – Dunas de Merzouga – Campamento de lujo",
+      "content": "Su chófer le recogerá temprano en su alojamiento o en el aeropuerto de Ouarzazate. Conducirá hacia el este a través del Valle del Todra, donde el río ha excavado un cañón monumental entre montañas de roca caliza roja. Podrá pasear por las gargantas y apreciar la grandeza del paisaje. Continuará atravesando los palmerales de Touroug y Tinjdad con tiempo libre para almorzar. Por la tarde llegará a las doradas arenas de Merzouga para montar en camello, disfrutar de la puesta de sol sobre una alta duna de Erg Chebbi y llegar a su campamento de lujo con cena tradicional y tambores bereberes bajo el cielo estrellado."
+    },
+    {
+      "day": "Día 2",
+      "title": "Exploración de Merzouga – Familias Nómadas – Khamlia – Lago de Merzouga – Erg Chebbi – Palmeral",
+      "content": "Día completo dedicado a explorar la región desértica de Merzouga en 4×4. Comenzará visitando antiguas minas de kohl, luego visitará a nómadas en sus tiendas de lana para conocer su estilo de vida tradicional mientras degusta un té bereber. Continuará al pueblo de Khamlia para presenciar música y danzas tradicionales gnawa. Tiempo libre para almorzar en un restaurante local. Por la tarde paseará por un oasis de palmeras y visitará el lago estacional de Merzouga. Más tarde montará en camello sobre las dunas y descansará en campamento de lujo con cena y tambores alrededor de la fogata."
+    },
+    {
+      "day": "Día 3",
+      "title": "Desierto de Merzouga – Kasbah Ait Ben Haddou – Alto Atlas – Marrakech",
+      "content": "Madrugará para presenciar el amanecer sobre las dunas doradas seguido del desayuno. Regresará en camello o 4×4 a Merzouga para reencontrarse con su conductor e iniciar el viaje hacia el oeste. Parará en miradores escénicos antes de alcanzar Ouarzazate con tiempo libre para almorzar. Tras el almuerzo continuará hacia la famosa Kasbah de Ait Ben Haddou, pueblo fortificado de adobe declarado Patrimonio de la Humanidad por la UNESCO y plató de películas como Gladiator, La Momia y Juego de Tronos. Por la tarde cruzará el Alto Atlas a través del puerto de Tizi N'Tichka (2.260 m) con paradas panorámicas, llegando a Marrakech donde concluirá el circuito."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Ouarzazate",
+      "day": "Día 1",
+      "subtitle": "Ouarzazate – Todra – Merzouga – Campamento de lujo",
+      "desc": "Salida de Ouarzazate pasando por las Gargantas del Todra hacia Erg Chebbi."
+    },
+    {
+      "number": 2,
+      "name": "Exploración de Merzouga",
+      "day": "Día 2",
+      "subtitle": "Merzouga – Nómadas – Khamlia – Lago – Palmeral",
+      "desc": "Día en 4×4 conociendo familias nómadas, música gnawa y oasis en Erg Chebbi."
+    },
+    {
+      "number": 3,
+      "name": "Merzouga a Marrakech",
+      "day": "Día 3",
+      "subtitle": "Merzouga – Ait Ben Haddou – Alto Atlas – Marrakech",
+      "desc": "Amanecer en las dunas, visita de Ait Ben Haddou y cruce del Alto Atlas hasta Marrakech."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/morocco-3-day-desert-tour-ouarzazate-marrakech/images/gallery_1.webp",
+      "cap": "Kasbah Taourirt",
+      "alt": "Torres fortificadas de tierra de la Kasbah Taourirt contra el cielo azul en Ouarzazate"
+    },
+    {
+      "src": "/sahara-star-tours/morocco-3-day-desert-tour-ouarzazate-marrakech/images/gallery_10.webp",
+      "cap": "Mezquita Koutoubia",
+      "alt": "Alminar de la mezquita Koutoubia y jardines de palmeras en el centro de Marrakech"
+    },
+    {
+      "src": "/sahara-star-tours/morocco-3-day-desert-tour-ouarzazate-marrakech/images/gallery_2.webp",
+      "cap": "Gargantas del Todra",
+      "alt": "Masivos acantilados verticales de roca en las Gargantas del Todra con arroyo de montaña"
+    },
+    {
+      "src": "/sahara-star-tours/morocco-3-day-desert-tour-ouarzazate-marrakech/images/gallery_3.webp",
+      "cap": "Paseo en camello",
+      "alt": "Excursión en camello a través de las dunas doradas de Erg Chebbi durante la puesta de sol"
+    },
+    {
+      "src": "/sahara-star-tours/morocco-3-day-desert-tour-ouarzazate-marrakech/images/gallery_4.webp",
+      "cap": "Campamento de lujo",
+      "alt": "Campamento de glamping en el desierto con tiendas de lujo rodeadas de dunas en Merzouga"
+    },
+    {
+      "src": "/sahara-star-tours/morocco-3-day-desert-tour-ouarzazate-marrakech/images/gallery_5.webp",
+      "cap": "Música gnawa",
+      "alt": "Músicos del pueblo de Khamlia tocando castañuelas tradicionales de metal y tambores"
+    },
+    {
+      "src": "/sahara-star-tours/morocco-3-day-desert-tour-ouarzazate-marrakech/images/gallery_6.webp",
+      "cap": "Valle del Draa",
+      "alt": "Ruta panorámica a través del exuberante oasis de palmeras datileras del Valle del Draa"
+    },
+    {
+      "src": "/sahara-star-tours/morocco-3-day-desert-tour-ouarzazate-marrakech/images/gallery_7.webp",
+      "cap": "Ait Ben Haddou",
+      "alt": "Pueblo fortificado de arcilla de Ait Ben Haddou, Patrimonio de la Humanidad por la UNESCO"
+    },
+    {
+      "src": "/sahara-star-tours/morocco-3-day-desert-tour-ouarzazate-marrakech/images/gallery_8.webp",
+      "cap": "Paso Tizi N'Tichka",
+      "alt": "Carretera de montaña del Alto Atlas serpenteando a través del paso Tizi n'Tichka"
+    },
+    {
+      "src": "/sahara-star-tours/morocco-3-day-desert-tour-ouarzazate-marrakech/images/gallery_9.webp",
+      "cap": "Plaza Jemaa el-Fna",
+      "alt": "Bulliciosa plaza Jemaa el-Fna en Marrakech con encantadores de serpientes y puestos"
+    },
+    {
+      "src": "/sahara-star-tours/morocco-3-day-desert-tour-ouarzazate-marrakech/images/hero_2.webp",
+      "cap": "Atardecer en Erg Chebbi",
+      "alt": "Puesta de sol proyectando un cálido brillo naranja sobre las dunas de arena de Erg Chebbi"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "¿Es este un tour privado o compartido?",
+      "answer": "Esta es una experiencia completamente privada: el vehículo, conductor e itinerario están reservados en exclusiva para su grupo."
+    },
+    {
+      "question": "¿Cuánto tiempo dura el paseo en camello y qué alternativas existen?",
+      "answer": "El paseo en camello suele durar entre 40 minutos y 1,5 horas. Como alternativa, se puede organizar el traslado directo en vehículo 4×4 sin coste adicional."
+    },
+    {
+      "question": "¿La tienda del campamento en el desierto es privada?",
+      "answer": "Sí, el campamento en el desierto cuenta con tiendas de campaña privadas de lujo con baño incorporado, agua caliente, camas de verdad y electricidad."
+    },
+    {
+      "question": "¿Dónde se realiza la recogida y el regreso?",
+      "answer": "Le recogeremos en su alojamiento o en el aeropuerto de Ouarzazate y el circuito concluirá en Marrakech con traslado a su riad o al aeropuerto."
+    },
+    {
+      "question": "¿Qué tipo de vehículo se utiliza?",
+      "answer": "El viaje se realiza en un cómodo vehículo privado 4×4 o monovolumen con aire acondicionado. Para grupos más numerosos disponemos de minibuses adaptados."
+    },
+    {
+      "question": "¿Se pueden atender requerimientos dietéticos particulares?",
+      "answer": "Sí. Infórmenos sobre sus preferencias o restricciones dietéticas al reservar para que los riads, hoteles y el campamento preparen comidas adecuadas (vegetariano, vegano, sin gluten, etc.)."
+    },
+    {
+      "question": "¿Es este itinerario adecuado para todas las edades?",
+      "answer": "Sí, es perfectamente adecuado para todas las edades gracias al ritmo equilibrado de las etapas y a las paradas frecuentes para descansar."
+    },
+    {
+      "question": "¿Cuál es la mejor época del año para realizar este tour?",
+      "answer": "La primavera y el otoño brindan temperaturas suaves y cielos despejados muy recomendables para combinar el desierto del Sahara y el Alto Atlas."
+    }
+  ]
+}

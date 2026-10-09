@@ -1,0 +1,170 @@
+{
+  "slug": "4-day-morocco-itinerary-desert-tour-from-fes",
+  "title": "Tour di 4 Giorni da Fes a Merzouga e Gole del Dades | Sahara Star Tours",
+  "shortTitle": "Tour di 4 Giorni da Fes a Merzouga e Dades",
+  "description": "Circuito circolare privato di 4 giorni da Fes al deserto di Merzouga e alle Gole del Todra e del Dades. Vivi l'emozione del deserto in totale relax.",
+  "aboutHtml": "<p>Questo circuito privato di 4 giorni con partenza e arrivo a Fes è studiato per chi desidera vivere appieno l'esperienza del Sahara e delle valli del sud senza fretta. Dalla verdeggiante Ifrane e dalla foresta dei cedri, attraverserai le spettacolari gole del Todra e del Dades fino alle maestose dune dell'Erg Chebbi, con due notti speciali a Merzouga: una in campo tendato di lusso sotto le stelle e una in confortevole hotel ai piedi delle dune per scoprire le tradizioni berbere e gnawa.</p>",
+  "duration": "4 Giorni / 3 Notti",
+  "startingFrom": "Fes",
+  "price": "Da $520/persona",
+  "highlights": [
+    "Dune dorate di Merzouga ed Erg Chebbi",
+    "Trekking a dorso di dromedario nel deserto al tramonto",
+    "Notte in campo tendato di lusso con cena e colazione berbera",
+    "Medina di Fes e tesori culturali storici",
+    "Ifrane, la 'Svizzera del Marocco'",
+    "Foresta di Cedri e scimmie barbaresche"
+  ],
+  "inclusions": [
+    "Veicolo privato 4×4 o minivan con aria condizionata",
+    "Autista/guida locale esperto per l'intero viaggio",
+    "Carburante, pedaggi e spese operative del veicolo",
+    "Sistemazione in riad selezionati e campo tendato di lusso",
+    "Colazioni e cene incluse come da itinerario",
+    "Trekking in dromedario tra le dune con assistenza completa"
+  ],
+  "exclusions": [
+    "Pranzi e bevande",
+    "Voli aerei nazionali e internazionali",
+    "Spese personali e souvenir",
+    "Mance e gratifiche"
+  ],
+  "itinerary": [
+    {
+      "day": "Giorno 1",
+      "title": "Fes – Ifrane – Foresta di Cedri – Midelt – Valle dello Ziz – Errachidia – Gole del Dades",
+      "content": "Partenza mattutina dal tuo alloggio a Fes in direzione sud attraverso Imouzzer e Ifrane, celebre per le sue graziose casette alpine. Sosta nella foresta di cedri per incontrare le scimmie barbaresche e proseguimento verso Midelt per il pranzo. Nel pomeriggio ammirerai le spettacolari gole della Valle dello Ziz e i vasti palmeti di Errachidia, giungendo infine nella suggestiva Valle del Dades per la cena e il pernottamento in riad."
+    },
+    {
+      "day": "Giorno 2",
+      "title": "Gole del Dades – Gole del Todra – Erfoud – Deserto di Merzouga – Campo di lusso",
+      "content": "Dopo la prima colazione visiterai le imponenti Gole del Todra, passeggiando sul fondo del canyon tra gigantesche pareti di roccia calcarea rossa alte più di 300 metri. Pranzo in ristorante locale. Proseguirai poi attraverso Erfoud e i palmeti del Tafilalet per giungere alle leggendarie dune di Merzouga. Salirai in sella ai dromedari per un tramonto indimenticabile prima di raggiungere l'accampamento di lusso a Erg Chebbi, dove ti attende una cena tipica berbera con musica attorno al fuoco."
+    },
+    {
+      "day": "Giorno 3",
+      "title": "Esplorazione di Merzouga – Famiglie Nomadi – Khamlia – Lago di Merzouga – Erg Chebbi – Palmeraie",
+      "content": "Sveglia all'alba per contemplare lo spettacolo del sole che sorge sulle dune dorate. Rientro in dromedario a Merzouga per dedicare l'intera giornata all'esplorazione della regione in 4×4: sosterai presso antiche miniere di kohl, berrai il tradizionale tè alla menta con i nomadi berberi e ti lascerai trasportare dalla musica gnawa nel villaggio di Khamlia. Nel pomeriggio passeggerai nell'oasi e ammirerai il lago di Merzouga. Cena e pernottamento in hotel ai piedi delle dune."
+    },
+    {
+      "day": "Giorno 4",
+      "title": "Merzouga – Rissani – Erfoud – Valle dello Ziz – Errachidia – Ifrane – Fes",
+      "content": "Dopo la colazione in hotel visiterai la storica Rissani e il suo vivace mercato tradizionale, fulcro commerciale secolare del Tafilalet. Risalirai la Valle dello Ziz con suggestive soste fotografiche, pranzerai a Midelt e attraverserai nuovamente il Medio Atlante fino a raggiungere Fes nel tardo pomeriggio con trasferimento al tuo riad o in aeroporto."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Fes",
+      "day": "Giorno 1",
+      "subtitle": "Fes – Ifrane – Foresta di Cedri – Midelt – Valle dello Ziz – Gole del Dades",
+      "desc": "Partenza da Fes attraverso il Medio Atlante e la Valle dello Ziz verso le Gole del Dades."
+    },
+    {
+      "number": 2,
+      "name": "Gole del Dades",
+      "day": "Giorno 2",
+      "subtitle": "Dades – Gole del Todra – Erfoud – Merzouga – Campo di lusso",
+      "desc": "Passeggiata nelle Gole del Todra, arrivo a Merzouga e notte in campo tendato di lusso."
+    },
+    {
+      "number": 3,
+      "name": "Regione di Merzouga",
+      "day": "Giorno 3",
+      "subtitle": "Esplorazione di Merzouga – Nomadi – Khamlia – Lago – Palmeraie",
+      "desc": "Tour in 4×4 con incontro con famiglie nomadi berbere, villaggio Gnawa e oasi."
+    },
+    {
+      "number": 4,
+      "name": "Merzouga a Fes",
+      "day": "Giorno 4",
+      "subtitle": "Merzouga – Rissani – Erfoud – Valle dello Ziz – Errachidia – Ifrane – Fes",
+      "desc": "Visita di Rissani e rientro a Fes attraverso le montagne del Medio Atlante."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/4-day-morocco-itinerary-desert-tour-from-fes/images/gallery_1.webp",
+      "cap": "Medina di Fes",
+      "alt": "Stretta via acciottolata nella medina medievale di Fes el-Bali"
+    },
+    {
+      "src": "/sahara-star-tours/4-day-morocco-itinerary-desert-tour-from-fes/images/gallery_10.webp",
+      "cap": "Gole del Todra",
+      "alt": "Tramonto sulle spettacolari gole in pietra calcarea della Valle del Todra"
+    },
+    {
+      "src": "/sahara-star-tours/4-day-morocco-itinerary-desert-tour-from-fes/images/gallery_2.webp",
+      "cap": "Cittadina di Ifrane",
+      "alt": "Architettura in stile alpino e giardini curati nella cittadina montana di Ifrane"
+    },
+    {
+      "src": "/sahara-star-tours/4-day-morocco-itinerary-desert-tour-from-fes/images/gallery_3.webp",
+      "cap": "Oasi dello Ziz",
+      "alt": "Lussureggiante oasi di palme da dattero lungo il canyon arido della Valle dello Ziz"
+    },
+    {
+      "src": "/sahara-star-tours/4-day-morocco-itinerary-desert-tour-from-fes/images/gallery_4.webp",
+      "cap": "Accampamento nomade",
+      "alt": "Tende nomadi e dromedari sulla sabbia del deserto nei pressi di Merzouga"
+    },
+    {
+      "src": "/sahara-star-tours/4-day-morocco-itinerary-desert-tour-from-fes/images/gallery_5.webp",
+      "cap": "Tramonto a Erg Chebbi",
+      "alt": "Tramonto dorato sulle maestose dune dell'Erg Chebbi"
+    },
+    {
+      "src": "/sahara-star-tours/4-day-morocco-itinerary-desert-tour-from-fes/images/gallery_7.webp",
+      "cap": "Musica berbera",
+      "alt": "Musicisti berberi che suonano tamburi tradizionali attorno a un falò nel deserto"
+    },
+    {
+      "src": "/sahara-star-tours/4-day-morocco-itinerary-desert-tour-from-fes/images/gallery_8.webp",
+      "cap": "Dita di scimmia a Dades",
+      "alt": "Suggestiva formazione rocciosa nota come le dita di scimmia nella Valle del Dades"
+    },
+    {
+      "src": "/sahara-star-tours/4-day-morocco-itinerary-desert-tour-from-fes/images/gallery_9.webp",
+      "cap": "Falesie del Dades",
+      "alt": "Abitazioni in terra cruda arroccate lungo le falesie rosse delle Gole del Dades"
+    },
+    {
+      "src": "/sahara-star-tours/4-day-morocco-itinerary-desert-tour-from-fes/images/hero_2.webp",
+      "cap": "Dune di Merzouga",
+      "alt": "Vasta distesa di dune del deserto del Sahara sotto un cielo limpido mattutino"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Questo tour è privato o condiviso?",
+      "answer": "È un tour interamente privato: l'auto, l'autista e le tappe sono a uso esclusivo del tuo gruppo per offrirti la massima serenità."
+    },
+    {
+      "question": "Quanto dura il percorso in dromedario e quali alternative ci sono?",
+      "answer": "La passeggiata in dromedario dura dai 45 agli 80 minuti. Su richiesta, è possibile raggiungere l'accampamento direttamente in 4×4 senza alcun costo extra."
+    },
+    {
+      "question": "Quali comodità offre l'accampamento nel deserto?",
+      "answer": "L'accampamento di lusso dispone di tende private con veri letti, bagno interno con wc e doccia calda ed elettricità."
+    },
+    {
+      "question": "Da dove si parte e dove termina il viaggio?",
+      "answer": "Il tour comincia e si conclude comodamente presso il tuo riad, hotel o all'aeroporto di Fes Sais."
+    },
+    {
+      "question": "Quale mezzo di trasporto viene impiegato?",
+      "answer": "Si viaggia in un moderno veicolo fuoristrada 4×4 o comodo minivan con aria condizionata e capiente bagagliaio."
+    },
+    {
+      "question": "È possibile richiedere menu vegetariani o senza glutine?",
+      "answer": "Certamente: piatti vegetariani, vegani o senza glutine possono essere preparati senza problemi segnalandolo alla prenotazione."
+    },
+    {
+      "question": "L'itinerario è consigliato anche a bambini o viaggiatori anziani?",
+      "answer": "Sì, la durata di 4 giorni rende il ritmo di viaggio rilassato e ideale per tutte le età, con frequenti soste panoramiche."
+    },
+    {
+      "question": "Qual è il periodo migliore per questa vacanza?",
+      "answer": "Da ottobre a maggio le temperature sono ideali per viaggiare nel deserto. Durante i mesi estivi si preferiscono le prime ore del mattino per le attività all'aperto."
+    }
+  ]
+}

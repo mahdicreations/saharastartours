@@ -1,0 +1,65 @@
+{
+  "slug": "fantasia-chez-ali-marrakech",
+  "title": "Cena Espectáculo Fantasia Chez Ali en Marrakech | Sahara Star Tours",
+  "shortTitle": "Cena Espectáculo Fantasia Chez Ali",
+  "description": "Viva una noche mágica de las Mil y Una Noches en Marrakech. Banquete tradicional marroquí, bailarines folclóricos, acróbatas y espectacular carrera de caballería.",
+  "aboutHtml": "Experiencia cultural marroquí nocturna.<br/><br/>Descubra el fascinante mundo de Fantasia Chez Ali, el evento festivo nocturno más célebre de Marrakech que ofrece una inmersión completa en el folclore, las leyendas y la gastronomía del reino.<br/><br/>En una inmensa arena tradicional al estilo de una fortaleza de las Mil y Una Noches, disfrutará de una suculenta cena bajo jaimas caidales mientras grupos folclóricos de todas las regiones de Marruecos interpretan cantos y danzas tradicionales.<br/><br/>El momento culminante de la noche es la mítica 'Fantasia' ecuestre: una vibrante demostración de destreza a caballo con jinetes bereberes a todo galope, acrobacias y salvas de pólvora al unísono, seguida de alfombra voladora y espectáculos de fuegos artificiales.<br/><br/>Al finalizar la velada, su chófer privado le llevará de regreso a su hotel o riad en Marrakech.",
+  "duration": "Media Jornada / 3-4 Horas",
+  "startingFrom": "Marrakech",
+  "price": "Desde 70 $/persona",
+  "highlights": [
+    "Cena tradicional marroquí completa (harira, cordero mechoui, cuscús y pastilla de leche).",
+    "Espectacular exhibición ecuestre de Fantasia con jinetes bereberes y acróbatas a caballo.",
+    "Actuaciones en directo de música, cantos y danzas folclóricas de las diversas tribus de Marruecos."
+  ],
+  "inclusions": [
+    "Transporte de ida y vuelta en vehículo climatizado desde su hotel en Marrakech",
+    "Generoso banquete tradicional marroquí servido en jaima caidal típica",
+    "Espectáculo ecuestre completo de Fantasia con carreras y acrobacias",
+    "Actuaciones de folclore tradicional en vivo y danza oriental"
+  ],
+  "exclusions": [
+    "Gastos personales y propinas voluntarias",
+    "Bebidas alcohólicas o refrescos fuera del menú cerrado",
+    "Fotografías con artistas o recuerdos personales",
+    "Cualquier servicio no mencionado explícitamente"
+  ],
+  "itinerary": [
+    {
+      "day": "Día 1",
+      "title": "Fantasia Chez Ali Marrakech",
+      "content": "Hacia las 19:30 o 20:00 h, su chófer le recogerá en su hotel de Marrakech para trasladarle al complejo Chez Ali en las afueras de la ciudad. A su llegada, será recibido por jinetes a caballo y músicos tradicionales. Se acomodará en una tienda caidal tradicional decorada con alfombras orientales para degustar una cena marroquí de varios platos (harira, mechoui asado tradicional, cuscús con verduras y postre). Durante la cena, grupos musicales de diferentes regiones desfilarán amenizando la velada. A continuación, pasará a la gran arena exterior para presenciar la carrera ecuestre de la Fantasia con saltos, piruetas y salvas ceremoniales de fusiles de pólvora. Regreso a su alojamiento hacia la medianoche."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Marrakech",
+      "day": "Salida",
+      "subtitle": "Recogida en Hotel",
+      "desc": "Traslado privado desde su alojamiento en Marrakech."
+    },
+    {
+      "number": 2,
+      "name": "Arena Chez Ali",
+      "day": "Noche",
+      "subtitle": "Cena en Jaima Caidal",
+      "desc": "Festín tradicional y música folclórica en directo de diferentes regiones."
+    },
+    {
+      "number": 3,
+      "name": "Estadio de la Fantasia",
+      "day": "Espectáculo",
+      "subtitle": "Caballería y Acrobacias",
+      "desc": "Demostración ecuestre tradicional, carrera de pólvora y fuegos artificiales."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/activities/fantasia-chez-ali-marrakech/images/thumbnail.jpg",
+      "cap": "Cena Espectáculo Fantasia Chez Ali en Marrakech",
+      "alt": "Jinetes tradicionales bereberes disparando al unísono en el espectáculo de la Fantasia Chez Ali"
+    }
+  ],
+  "faqs": []
+}

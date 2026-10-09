@@ -1,0 +1,461 @@
+---
+// src/pages/es/tours-from-fes.astro — Dedicated Spanish Fes Departure Hub
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getLocalizedMultiDayToursByCity } from '../../data/toursI18n';
+import { getAlternateUrls } from '../../data/i18n';
+
+const tours = getLocalizedMultiDayToursByCity('Fes', 'es');
+const alternateUrls = getAlternateUrls('/tours-from-fes');
+
+function getDurationTier(days: number): string {
+  if (days <= 3) return '2-3';
+  if (days <= 5) return '4-5';
+  return '7+';
+}
+
+const fesSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "name": "Circuitos Privados por Marruecos desde Fez | Sahara Star Tours",
+      "description": `Descubre nuestra colección completa de ${tours.length} circuitos privados multidía con salida desde Fez. Bosques de cedros del Medio Atlas, Valle del Ziz, jaimas de lujo en Erg Chebbi y travesías hacia Marrakech.`,
+      "url": alternateUrls.es
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": alternateUrls.es.replace('/tours-from-fes', '')
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Circuitos Multidía",
+          "item": "https://www.saharastartours.com/es/tours"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Circuitos desde Fez",
+          "item": alternateUrls.es
+        }
+      ]
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title={`Circuitos desde Fez (${tours.length} Rutas Privadas por el Desierto y hacia Marrakech) | Sahara Star Tours`}
+  description={`Reserva circuitos privados desde Fez de 2 a 10 días. Bosques de cedros del Medio Atlas, macacos de Berbería en Azrou, dunas de Erg Chebbi en dromedario y travesías a Marrakech.`}
+  keywords="circuitos desde fez, rutas desierto fez, fez a marrakech desierto, fez a merzouga 3 dias, viajes privados desde fez"
+  currentPage="tours"
+  lang="es"
+  alternateUrls={alternateUrls}
+  schemaData={fesSchema}
+>
+
+<!-- CITY HERO SECTION -->
+<section class="city-hero">
+  <div class="city-hero-overlay"></div>
+  <div class="city-hero-content">
+    <nav class="city-breadcrumbs" aria-label="Miga de pan">
+      <a href="/es">Inicio</a>
+      <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
+      <a href="/es/tours">Circuitos Multidía</a>
+      <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
+      <span class="current">Circuitos desde Fez</span>
+    </nav>
+    <span class="tag"><i class="fa-solid fa-archway"></i> De la Capital Espiritual a las Dunas del Sáhara</span>
+    <h1>Circuitos Privados por Marruecos desde Fez</h1>
+    <p>Fez es el corazón cultural de Marruecos y la puerta de entrada septentrional al desierto del Sáhara. Con salida directa desde tu riad en la medina histórica o el Aeropuerto de Fez Saïss (FEZ), nuestras rutas privadas cruzan la suiza marroquí de Ifrane, los bosques de cedros de Azrou y el imponente cañón del Ziz hacia las dunas doradas de Erg Chebbi, regresando a Fez o continuando hacia Marrakech.</p>
+  </div>
+</section>
+
+<!-- LOCAL EDITORIAL / ROUTE INSIGHTS -->
+<section class="city-editorial-section">
+  <div class="city-editorial-container">
+    <div class="city-editorial-grid">
+      <div class="editorial-card">
+        <div class="editorial-icon"><i class="fa-solid fa-tree"></i></div>
+        <h3>Medio Atlas y Bosques de Cedros</h3>
+        <p>Asciende hacia el Medio Atlas admirando la arquitectura alpina de Ifrane y parando a observar los macacos de Berbería en libertad en los centenarios bosques de Azrou.</p>
+      </div>
+      <div class="editorial-card">
+        <div class="editorial-icon"><i class="fa-solid fa-water"></i></div>
+        <h3>Garganta del Valle del Ziz</h3>
+        <p>Contempla el impresionante cinturón esmeralda del río Ziz bordeado por miles de palmeras datileras entre acantilados ocres a medida que el paisaje se transforma en desierto.</p>
+      </div>
+      <div class="editorial-card">
+        <div class="editorial-icon"><i class="fa-solid fa-campground"></i></div>
+        <h3>Atardecer y Jaimas en Erg Chebbi</h3>
+        <p>Pasea en dromedario sobre las dunas más altas de Marruecos con la luz dorada antes de descansar en un campamento de lujo con baños privados y música bereber.</p>
+      </div>
+      <div class="editorial-card">
+        <div class="editorial-icon"><i class="fa-solid fa-arrows-split-up-and-left"></i></div>
+        <h3>Travesías de Fez a Marrakech</h3>
+        <p>Combina las dos ciudades más fascinantes mediante un itinerario por el desierto visitando las Gargantas del Todra, el Valle del Dades y Ait Ben Haddou.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOURS CATALOGUE BODY -->
+<section class="city-catalog-body">
+  <div class="city-catalog-container" x-data="{ activeDuration: 'all' }">
+    
+    <!-- Filter bar -->
+    <div class="city-filter-panel">
+      <div class="filter-header-left">
+        <h2>{tours.length} Itinerarios Multidía con Salida desde Fez</h2>
+        <p>Recogida puerta a puerta en tu riad, chóferes expertos del desierto y ritmo a tu medida</p>
+      </div>
+      <div class="duration-pills-wrap">
+        <button
+          class="duration-pill"
+          :class="activeDuration === 'all' ? 'active' : ''"
+          @click="activeDuration = 'all'"
+          type="button"
+        >
+          Todas las duraciones ({tours.length})
+        </button>
+        <button
+          class="duration-pill"
+          :class="activeDuration === '2-3' ? 'active' : ''"
+          @click="activeDuration = '2-3'"
+          type="button"
+        >
+          2–3 Días ({tours.filter(t => t.durationDays <= 3).length})
+        </button>
+        <button
+          class="duration-pill"
+          :class="activeDuration === '4-5' ? 'active' : ''"
+          @click="activeDuration = '4-5'"
+          type="button"
+        >
+          4–5 Días ({tours.filter(t => t.durationDays >= 4 && t.durationDays <= 5).length})
+        </button>
+        <button
+          class="duration-pill"
+          :class="activeDuration === '7+' ? 'active' : ''"
+          @click="activeDuration = '7+'"
+          type="button"
+        >
+          7+ Días ({tours.filter(t => t.durationDays >= 7).length})
+        </button>
+      </div>
+    </div>
+
+    <!-- Tours Grid -->
+    <div class="city-tours-grid">
+      {tours.map(tour => {
+        const tier = getDurationTier(tour.durationDays);
+        return (
+          <article 
+            class="tour-card reveal active"
+            data-duration-tier={tier}
+            x-show={`activeDuration === 'all' || activeDuration === '${tier}'`}
+            x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="opacity-0 scale-95"
+            x-transition:enter-end="opacity-100 scale-100"
+          >
+            <div class="tour-img-wrapper">
+              <img 
+                src={tour.heroImage} 
+                alt={tour.shortTitle} 
+                loading="lazy"
+                onerror="this.src='/assets/placeholder-morocco.svg'"
+              />
+              {tour.badge && <span class="tour-badge">{tour.badge}</span>}
+            </div>
+            <div class="tour-info">
+              <div class="tour-meta">
+                <div><i class="fa-regular fa-clock"></i> {tour.duration}</div>
+                <div><i class="fa-solid fa-location-dot"></i> Hacia: {tour.arrivalCity}</div>
+              </div>
+              <h3 class="tour-title" style="font-size:1.35rem;">{tour.shortTitle}</h3>
+              <p class="tour-desc">{tour.description}</p>
+              <div class="tour-footer">
+                <div class="tour-price">
+                  <span class="tour-price-label">Desde</span>
+                  <span class="tour-price-value">{tour.price.replace(/^(From|Desde|Da|A partire da)\s*/i, '').replace(/\/(persona|person)\s*/i, '').trim()}</span>
+                </div>
+                <a href={`/es/tours/${tour.slug}`} class="btn btn-primary btn-sm">
+                  Ver Circuito <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+        );
+      })}
+    </div>
+
+  </div>
+</section>
+
+<!-- OTHER DEPARTURE HUBS NAVIGATION -->
+<section class="other-hubs-nav">
+  <div class="other-hubs-container">
+    <h3>Explora Circuitos Multidía desde Otras Ciudades</h3>
+    <div class="other-hubs-pills">
+      <a href="/es/tours-from-marrakech" class="hub-pill"><i class="fa-solid fa-sun"></i> Circuitos desde Marrakech</a>
+      <a href="/es/tours-from-casablanca" class="hub-pill"><i class="fa-solid fa-plane-arrival"></i> Circuitos desde Casablanca</a>
+      <a href="/es/tours-from-tangier" class="hub-pill"><i class="fa-solid fa-ship"></i> Circuitos desde Tánger</a>
+      <a href="/es/tours-from-ouarzazate" class="hub-pill"><i class="fa-solid fa-camera"></i> Circuitos desde Ouarzazate</a>
+      <a href="/es/tours" class="hub-pill active"><i class="fa-solid fa-compass"></i> Ver Todos los Circuitos</a>
+    </div>
+  </div>
+</section>
+
+</BaseLayout>
+
+<style>
+.city-hero {
+  position: relative;
+  padding: 160px 5% 70px;
+  text-align: center;
+  background: radial-gradient(circle at 50% 30%, rgba(217, 107, 67, 0.18) 0%, transparent 60%), linear-gradient(180deg, var(--night-surface) 0%, var(--night-bg) 100%);
+  border-bottom: 1px solid var(--glass-border);
+  overflow: hidden;
+}
+
+.city-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('/assets/zellij_pattern.svg');
+  background-repeat: repeat;
+  background-size: 180px 180px;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.city-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.city-breadcrumbs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.city-breadcrumbs a {
+  color: var(--text-muted);
+  transition: color 0.3s;
+}
+
+.city-breadcrumbs a:hover {
+  color: var(--sand-gold);
+}
+
+.city-breadcrumbs .sep {
+  font-size: 0.7rem;
+  opacity: 0.5;
+}
+
+.city-breadcrumbs .current {
+  color: var(--sand-gold);
+  font-weight: 500;
+}
+
+.city-hero h1 {
+  font-size: 3rem;
+  line-height: 1.15;
+  margin: 16px 0 20px;
+  background: linear-gradient(135deg, var(--text-main) 30%, var(--sand-gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.city-hero p {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* Editorial cards */
+.city-editorial-section {
+  padding: 50px 5% 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.city-editorial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+}
+
+.editorial-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  padding: 26px 22px;
+  transition: all 0.3s ease;
+}
+
+.editorial-card:hover {
+  border-color: var(--sand-gold);
+  transform: translateY(-2px);
+}
+
+.editorial-icon {
+  font-size: 1.6rem;
+  color: var(--sand-gold);
+  margin-bottom: 14px;
+}
+
+.editorial-card h3 {
+  font-size: 1.15rem;
+  color: var(--text-main);
+  margin: 0 0 8px;
+}
+
+.editorial-card p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Catalog Body */
+.city-catalog-body {
+  padding: 40px 0 80px;
+}
+
+.city-catalog-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.city-filter-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 40px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.filter-header-left h2 {
+  font-size: 1.6rem;
+  color: var(--text-main);
+  margin: 0 0 6px;
+}
+
+.filter-header-left p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.duration-pills-wrap {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.duration-pill {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--text-muted);
+  border-radius: 30px;
+  padding: 7px 18px;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.duration-pill:hover {
+  color: var(--sand-gold);
+  border-color: var(--sand-gold);
+}
+
+.duration-pill.active {
+  background: linear-gradient(135deg, var(--terracotta) 0%, hsl(14, 75%, 45%) 100%);
+  border-color: var(--terracotta);
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 4px 14px var(--terracotta-glow);
+}
+
+.city-tours-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 32px;
+}
+
+/* Other Hubs Navigation */
+.other-hubs-nav {
+  padding: 30px 5% 90px;
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.other-hubs-nav h3 {
+  font-size: 1.25rem;
+  color: var(--text-main);
+  margin-bottom: 20px;
+}
+
+.other-hubs-pills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.hub-pill {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--glass-border);
+  color: var(--text-muted);
+  border-radius: 30px;
+  padding: 8px 20px;
+  font-size: 0.85rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s;
+}
+
+.hub-pill:hover {
+  color: var(--sand-gold);
+  border-color: var(--sand-gold);
+  transform: translateY(-2px);
+}
+
+.hub-pill.active {
+  border-color: var(--sand-gold);
+  color: var(--sand-gold);
+}
+
+@media (max-width: 900px) {
+  .city-filter-panel {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .city-hero h1 {
+    font-size: 2.2rem;
+  }
+}
+</style>

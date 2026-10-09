@@ -1,0 +1,141 @@
+{
+  "slug": "2-day-desert-marrakech-tour-from-fes",
+  "title": "Tour di 2 Giorni nel Deserto da Fes a Marrakech via Merzouga | Sahara Star Tours",
+  "shortTitle": "Tour di 2 Giorni da Fes a Marrakech via Merzouga",
+  "description": "Attraversata express del deserto in 2 giorni da Fes a Marrakech. Trekking in cammello a Merzouga, campo tendato di lusso, Gole del Todra e Alto Atlante.",
+  "aboutHtml": "Questo entusiasmante tour privato di 2 giorni in Marocco inizia a Fes e si conclude a Marrakech. Un itinerario dinamico ideale per chi ha poco tempo ma non vuole perdersi l'emozione del Sahara: valico del Medio Atlante, foresta di cedri, Valle dello Ziz, notte magica sotto le stelle a Merzouga in campo tendato di lusso, Gole del Todra e superamento dell'Alto Atlante passando per Ait Ben Haddou fino a Marrakech.",
+  "duration": "2 Giorni / 1 Notte",
+  "startingFrom": "Fes",
+  "price": "Da 250 €/persona",
+  "highlights": [
+    "Deserto del Sahara a Merzouga e le maestose dune dell'Erg Chebbi",
+    "Trekking a dorso di cammello al tramonto",
+    "Kasbah di Ait Ben Haddou Patrimonio Mondiale dell'Umanità UNESCO",
+    "Valico panoramico attraverso le vette dell'Alto Atlante",
+    "Antica medina di Fes e i suoi tesori culturali millenari",
+    "Medina storica di Marrakech e i suoi monumenti principali"
+  ],
+  "inclusions": [
+    "Trasporto privato in 4x4 o minivan moderno con aria condizionata",
+    "Autista e guida locale esperta con transfer privati inclusi",
+    "Carburante, pedaggi e tutti i costi operativi del veicolo",
+    "Pernottamenti in riad e hotel di charme selezionati secondo programma",
+    "Prime colazioni giornaliere e cene specificate nell'itinerario",
+    "Escursione in cammello nel deserto e soggiorno in campo tendato di lusso"
+  ],
+  "exclusions": [
+    "Pranzi e bevande durante il viaggio",
+    "Voli aerei e servizi aeroportuali non menzionati",
+    "Spese personali e attività facoltative",
+    "Mance per autista e guide locali"
+  ],
+  "itinerary": [
+    {
+      "day": "Giorno 1",
+      "title": "Fes – Ifrane – Foresta di Cedri – Midelt – Valle dello Ziz – Deserto di Merzouga",
+      "content": "Partenza di primo mattino da Fes verso sud attraversando Ifrane (la 'Svizzera del Marocco') e la foresta di cedri di Azrou con i macachi di Barberia. Pranzo a Midelt e discesa attraverso il passo Tizi n'Tilghmt lungo le oasi della Valle dello Ziz. Arrivo nel pomeriggio a Merzouga e salita sui dromedari per attraversare le spettacolari dune dell'Erg Chebbi al tramonto. Arrivo al campo tendato di lusso, cena tradizionale berbera, musica attorno al fuoco e notte stellata."
+    },
+    {
+      "day": "Giorno 2",
+      "title": "Merzouga – Gole del Todra – Kasbah Ait Ben Haddou – Alto Atlante – Marrakech",
+      "content": "Alba sulle dune e colazione all'accampamento. Partenza verso ovest attraverso i palmeti di Tinjdad fino alle impressionanti Gole del Todra, canyon con pareti rocciose alte 300 metri. Proseguimento verso Ouarzazate per il pranzo e visita della celebre Kasbah di Ait Ben Haddou (Patrimonio UNESCO). Attraversamento delle cime dell'Alto Atlante attraverso il passo Tizi n'Tichka (2.260 m) con soste fotografiche, con arrivo a Marrakech in serata. Trasferimento in hotel o in aeroporto."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Da Fes a Merzouga",
+      "day": "Giorno 1",
+      "subtitle": "Verso il Deserto",
+      "desc": "Ifrane, foresta di cedri, Valle dello Ziz e notte in campo di lusso."
+    },
+    {
+      "number": 2,
+      "name": "Da Merzouga a Marrakech",
+      "day": "Giorno 2",
+      "subtitle": "Atlante e Marrakech",
+      "desc": "Gole del Todra, Kasbah Ait Ben Haddou e arrivo a Marrakech."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/2-day-desert-marrakech-tour-from-fes/images/gallery_1.webp",
+      "cap": "Galleria 1",
+      "alt": "Minareto della Torre di Hassan e colonne antiche al crepuscolo a Rabat"
+    },
+    {
+      "src": "/sahara-star-tours/2-day-desert-marrakech-tour-from-fes/images/gallery_10.webp",
+      "cap": "Galleria 10",
+      "alt": "Sciarpe blu cobalto e artigianato berbero in mostra ad Ait Ben Haddou"
+    },
+    {
+      "src": "/sahara-star-tours/2-day-desert-marrakech-tour-from-fes/images/gallery_2.webp",
+      "cap": "Galleria 2",
+      "alt": "Carovana di dromedari che attraversa le ampie dune dell'Erg Chebbi a Merzouga"
+    },
+    {
+      "src": "/sahara-star-tours/2-day-desert-marrakech-tour-from-fes/images/gallery_3.webp",
+      "cap": "Galleria 3",
+      "alt": "Donna in motorino d'epoca in una via della medina di Marrakech"
+    },
+    {
+      "src": "/sahara-star-tours/2-day-desert-marrakech-tour-from-fes/images/gallery_4.webp",
+      "cap": "Galleria 4",
+      "alt": "Turisti che esplorano botteghe di tappeti e artigianato ad Ait Ben Haddou"
+    },
+    {
+      "src": "/sahara-star-tours/2-day-desert-marrakech-tour-from-fes/images/gallery_5.webp",
+      "cap": "Galleria 5",
+      "alt": "Ombre e luce dorata del tramonto sulle dune ondulate dell'Erg Chebbi"
+    },
+    {
+      "src": "/sahara-star-tours/2-day-desert-marrakech-tour-from-fes/images/gallery_6.webp",
+      "cap": "Galleria 6",
+      "alt": "Minareto della Moschea Koutoubia e rovine storiche a Marrakech"
+    },
+    {
+      "src": "/sahara-star-tours/2-day-desert-marrakech-tour-from-fes/images/gallery_9.webp",
+      "cap": "Galleria 9",
+      "alt": "Intagli moreschi sulla Torre di Hassan incorniciati da foglie di palma"
+    },
+    {
+      "src": "/sahara-star-tours/2-day-desert-marrakech-tour-from-fes/images/hero_2.webp",
+      "cap": "Hero 2",
+      "alt": "Donne in djellaba tradizionale al mercato ortofrutticolo di Marrakech"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Questo tour è privato o condiviso?",
+      "answer": "È un tour interamente privato ed esclusivo per il vostro gruppo, con mezzo climatizzato e autista dedicato."
+    },
+    {
+      "question": "Quanto dura la cammellata ed esistono alternative?",
+      "answer": "La cammellata dura da 45 a 90 minuti. Se preferite non montare in sella, il transfer al campo avviene in fuoristrada 4x4."
+    },
+    {
+      "question": "La tenda nel campo ha il bagno privato?",
+      "answer": "Sì, l'accampamento di lusso offre ampie tende private con bagno ensuite interno e doccia con acqua calda."
+    },
+    {
+      "question": "Dove avvengono la partenza e l'arrivo?",
+      "answer": "La partenza avviene a Fes al mattino presto e il tour termina in serata a Marrakech (in hotel o aeroporto)."
+    },
+    {
+      "question": "Che tipo di veicolo viene utilizzato?",
+      "answer": "Un comodo fuoristrada 4x4 o minivan climatizzato ideale per le tratte panoramiche a lunga percorrenza."
+    },
+    {
+      "question": "È possibile richiedere menu per diete speciali?",
+      "answer": "Sì, segnalatecelo prima della partenza per predisporre menu vegetariani o specifici per le vostre esigenze."
+    },
+    {
+      "question": "L'itinerario è adatto a tutte le età?",
+      "answer": "Sì, benché siano due giornate intense di viaggio, sono previste soste frequenti per riposare e scattare foto."
+    },
+    {
+      "question": "Qual è il periodo migliore per questo viaggio?",
+      "answer": "Primavera e autunno sono ideali. L'inverno offre giornate limpide e soleggiate nel sud del paese."
+    }
+  ]
+}

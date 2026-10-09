@@ -1,0 +1,162 @@
+{
+  "slug": "3-day-morocco-desert-tour-from-marrakech",
+  "title": "Tour de 3 Días de Marrakech al Desierto de Merzouga | Sahara Star Tours",
+  "shortTitle": "Tour de 3 Días al Desierto desde Marrakech",
+  "description": "Descubra las dunas de Erg Chebbi en un tour privado de 3 días desde Marrakech. Visite Ait Ben Haddou, las Gargantas del Dades y del Todra, y pase la noche en un campamento de lujo.",
+  "aboutHtml": "<p>Este tour privado de 3 días desde Marrakech al desierto de Merzouga es una de las rutas más emblemáticas de Marruecos. Cruzando el Alto Atlas por el paso de Tizi N'Tichka, explorará el legendario ksar de Ait Ben Haddou, los impresionantes cañones de las Gargantas del Dades y del Todra, y se adentrará en el mar de dunas doradas de Erg Chebbi en Merzouga con paseo en camello al atardecer y velada musical bereber en un campamento de lujo.</p>",
+  "duration": "3 Días / 2 Noches",
+  "startingFrom": "Marrakech",
+  "price": "Desde $390/persona",
+  "highlights": [
+    "Paseo en camello al atardecer en las dunas de Erg Chebbi",
+    "Noche en campamento de lujo en el desierto con tambores bereberes",
+    "Gargantas del Dades y espectaculares cañones del Todra",
+    "Kasbah de Ait Ben Haddou, Patrimonio de la Humanidad por la UNESCO",
+    "Vistas panorámicas cruzando el paso de montaña Tizi N'Tichka"
+  ],
+  "inclusions": [
+    "Vehículo privado 4×4 o monovolumen con aire acondicionado",
+    "Chófer/guía profesional de habla hispana durante todo el viaje",
+    "Combustible, peajes y tasas de transporte",
+    "1 noche en hotel/riad en el Valle del Dades y 1 noche en campamento de lujo",
+    "Desayunos diarios y cenas en el Valle del Dades y en el campamento",
+    "Paseo en camello por las dunas de Merzouga (ida y vuelta al campamento)"
+  ],
+  "exclusions": [
+    "Almuerzos y bebidas",
+    "Vuelos internacionales o internos",
+    "Entradas a monumentos o estudios opcionales",
+    "Propinas y gastos personales"
+  ],
+  "itinerary": [
+    {
+      "day": "Día 1",
+      "title": "Marrakech – Alto Atlas – Kasbah Ait Ben Haddou – Valle de las Rosas – Boumalne Dades",
+      "content": "Su aventura de 3 días hacia el desierto de Merzouga comienza temprano con la recogida en su alojamiento o en el aeropuerto de Marrakech. Atravesará las impresionantes montañas del Alto Atlas a través del paso Tizi N'Tichka (2.260 m), disfrutando de paradas para fotos en aldeas bereberes tradicionales. Visitará la famosa Kasbah de Ait Ben Haddou, declarada Patrimonio de la Humanidad por la UNESCO y escenario de grandes producciones cinematográficas. Tras el almuerzo, continuará por Ouarzazate, el palmeral de Skoura y el fragante Valle de las Rosas en Kalaat M'Gouna, hasta llegar a Boumalne Dades para cenar y pasar la noche en un riad con encanto."
+    },
+    {
+      "day": "Día 2",
+      "title": "Valle del Dades – Gargantas del Todra – Desierto de Merzouga – Paseo en camello y campamento de lujo",
+      "content": "Tras el desayuno, admirará las vistas del Valle del Dades y sus singulares formaciones rocosas antes de continuar hacia las majestuosas Gargantas del Todra, un espectacular cañón de paredes verticales de roca caliza roja. Podrá caminar por el desfiladero y sentir la inmensidad del paisaje. Proseguirá viaje pasando por los palmerales de Touroug y Tinjdad con tiempo para almorzar. Por la tarde llegará a las doradas arenas de Merzouga, donde montará en camello para atravesar las dunas de Erg Chebbi, admirar una puesta de sol inolvidable y llegar al campamento de lujo para disfrutar de música bereber junto a la hoguera y una cena gourmet bajo un manto de estrellas."
+    },
+    {
+      "day": "Día 3",
+      "title": "Desierto de Merzouga – Valle del Draa – Anti-Atlas – Ouarzazate – Marrakech",
+      "content": "Madrugue para contemplar el sobrecogedor amanecer sobre las dunas y deguste un desayuno marroquí tradicional. Regresará en camello o en 4×4 a Merzouga para reencontrarse con su chófer. Viajará hacia Rissani, célebre por su mercado tradicional, y seguirá rumbo a Alnif y a lo largo del extenso Valle del Draa hasta Ouarzazate. Finalmente, volverá a cruzar el Alto Atlas para llegar a Marrakech al atardecer, donde le trasladaremos a su alojamiento. (Nota: Si desea acortar el viaje de regreso, es posible finalizar el tour en el aeropuerto de Errachidia o terminar en Fez en lugar de Marrakech)."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Marrakech",
+      "day": "Día 1",
+      "subtitle": "Marrakech – Alto Atlas – Ait Ben Haddou – Valle de las Rosas – Boumalne Dades",
+      "desc": "Salida desde Marrakech a través del paso Tizi N'Tichka hacia Ait Ben Haddou y noche en el Valle del Dades."
+    },
+    {
+      "number": 2,
+      "name": "Valle del Dades",
+      "day": "Día 2",
+      "subtitle": "Valle del Dades – Gargantas del Todra – Desierto de Merzouga – Campamento de lujo",
+      "desc": "Exploración de las Gargantas del Todra, llegada a Erg Chebbi y paseo en camello hacia el campamento de lujo."
+    },
+    {
+      "number": 3,
+      "name": "Desierto de Merzouga",
+      "day": "Día 3",
+      "subtitle": "Merzouga – Valle del Draa – Anti-Atlas – Ouarzazate – Marrakech",
+      "desc": "Amanecer en las dunas, viaje a través del Valle del Draa y regreso a Marrakech por el Alto Atlas."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/3-day-morocco-desert-tour-from-marrakech/images/gallery_1.webp",
+      "cap": "Gargantas del Todra",
+      "alt": "Chilabas tradicionales y tejidos a la venta a lo largo de las paredes rocosas de las Gargantas del Todra"
+    },
+    {
+      "src": "/sahara-star-tours/3-day-morocco-desert-tour-from-marrakech/images/gallery_10.webp",
+      "cap": "Zoco marroquí",
+      "alt": "Pirámides de especias coloridas y frascos de vidrio en un zoco tradicional marroquí"
+    },
+    {
+      "src": "/sahara-star-tours/3-day-morocco-desert-tour-from-marrakech/images/gallery_2.webp",
+      "cap": "Paisaje de Merzouga",
+      "alt": "Colinas volcánicas rocosas y picos de montañas desérticas cerca de Merzouga"
+    },
+    {
+      "src": "/sahara-star-tours/3-day-morocco-desert-tour-from-marrakech/images/gallery_3.webp",
+      "cap": "Camello en Erg Chebbi",
+      "alt": "Camello descansando frente a las altas dunas de arena y campamento en Erg Chebbi"
+    },
+    {
+      "src": "/sahara-star-tours/3-day-morocco-desert-tour-from-marrakech/images/gallery_4.webp",
+      "cap": "Artesanía de Marrakech",
+      "alt": "Farolillos de cobre artesanales y babuchas de cuero en un zoco de Marrakech"
+    },
+    {
+      "src": "/sahara-star-tours/3-day-morocco-desert-tour-from-marrakech/images/gallery_5.webp",
+      "cap": "Ait Ben Haddou",
+      "alt": "Ksar de Ait Ben Haddou visto al otro lado del valle del río a la luz del atardecer"
+    },
+    {
+      "src": "/sahara-star-tours/3-day-morocco-desert-tour-from-marrakech/images/gallery_6.webp",
+      "cap": "Lámparas de latón",
+      "alt": "Lámparas de latón perforado y artesanías de metal exhibidas en la medina de Marrakech"
+    },
+    {
+      "src": "/sahara-star-tours/3-day-morocco-desert-tour-from-marrakech/images/gallery_7.webp",
+      "cap": "Ait Ben Haddou iluminado",
+      "alt": "Cielo crepuscular púrpura sobre el pueblo de arcilla iluminado de Ait Ben Haddou"
+    },
+    {
+      "src": "/sahara-star-tours/3-day-morocco-desert-tour-from-marrakech/images/gallery_8.webp",
+      "cap": "Dunas del Sahara",
+      "alt": "Texturas de arena dorada que se unen con el cielo azul en el desierto del Sahara"
+    },
+    {
+      "src": "/sahara-star-tours/3-day-morocco-desert-tour-from-marrakech/images/gallery_9.webp",
+      "cap": "Kasbah de Skoura",
+      "alt": "Kasbah fortificada de tierra que se alza entre palmeras en el oasis de Skoura"
+    },
+    {
+      "src": "/sahara-star-tours/3-day-morocco-desert-tour-from-marrakech/images/hero_2.webp",
+      "cap": "Vista de Ait Ben Haddou",
+      "alt": "Vista panorámica del pueblo fortificado de Ait Ben Haddou y sus palmerales"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "¿Es este un tour privado o compartido?",
+      "answer": "Esta es una experiencia totalmente privada: el vehículo, conductor e itinerario están reservados exclusivamente para usted y su grupo, permitiéndole adaptar el ritmo del viaje."
+    },
+    {
+      "question": "¿Cuánto dura el paseo en camello y hay alternativa en 4×4?",
+      "answer": "El paseo en camello tiene una duración habitual de 40 a 90 minutos. Si lo prefiere, podemos coordinar el traslado directo al campamento en vehículo 4×4 sin coste adicional."
+    },
+    {
+      "question": "¿Cómo son las tiendas en el campamento de lujo?",
+      "answer": "Las tiendas del campamento de lujo cuentan con camas confortables, baño privado completo con inodoro y ducha con agua caliente caliente, además de electricidad para recargar dispositivos."
+    },
+    {
+      "question": "¿Dónde se realiza la recogida y el regreso?",
+      "answer": "Le recogeremos directamente en su hotel, riad o en el aeropuerto de Marrakech, y al finalizar le dejaremos en el punto acordado en Marrakech."
+    },
+    {
+      "question": "¿Qué tipo de vehículo se utiliza durante el viaje?",
+      "answer": "Viajará en un vehículo todoterreno 4×4 moderno o en un monovolumen de gama alta, ambos con aire acondicionado, asientos confortables y amplio espacio para equipaje."
+    },
+    {
+      "question": "¿Se pueden preparar comidas vegetarianas o dietas especiales?",
+      "answer": "Sí, podemos adaptarnos a dietas vegetarianas, veganas, sin gluten u otras necesidades alimentarias; simplemente avísenos con antelación al confirmar su reserva."
+    },
+    {
+      "question": "¿Es un itinerario adecuado para niños o personas mayores?",
+      "answer": "Sí, es apto para todas las edades. Tenga en cuenta que el último día de regreso a Marrakech incluye un trayecto largo por carretera con paradas regulares para descansar."
+    },
+    {
+      "question": "¿Cuál es la época recomendada para hacer esta excursión?",
+      "answer": "De octubre a mayo las temperaturas son muy agradables para viajar por el sur y el desierto. En los meses de verano las jornadas son más calurosas, pero los vehículos y alojamientos están climatizados."
+    }
+  ]
+}

@@ -2,8 +2,10 @@
 // src/pages/index.astro — Homepage
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { tours, categoryLabels } from '../data/tours';
+import { getAlternateUrls } from '../data/i18n';
 
 const allTours = tours;
+const alternateUrls = getAlternateUrls('/');
 
 // Curated 6 most popular flagship tours for homepage "All Tours" tab (2 rows of 3)
 const popularAllTours = [
@@ -103,6 +105,7 @@ const homeSchema = {
   description="Experience Morocco with Sahara Star Tours. Handcrafted Sahara desert safaris, imperial city tours, and private Atlas mountain treks with local Berber guides."
   keywords="sahara star tours, morocco travel agency, sahara desert tour, marrakech riad booking, moroccan tours, custom travel morocco"
   currentPage="home"
+  alternateUrls={alternateUrls}
   schemaData={homeSchema}
 >
 

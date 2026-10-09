@@ -1,0 +1,66 @@
+{
+  "slug": "hot-air-balloon-marrakech",
+  "title": "Vuelo en Globo Aerostático al Amanecer en Marrakech | Sahara Star Tours",
+  "shortTitle": "Vuelo en Globo Aerostático en Marrakech",
+  "description": "Sobrevuele el palmeral de Marrakech y las montañas del Alto Atlas al amanecer en globo aerostático. Incluye traslados privados y desayuno tradicional bereber.",
+  "aboutHtml": "Viva una experiencia inolvidable en globo aerostático sobrevolando los mágicos paisajes de Marrakech al amanecer. Admire las crestas del Alto Atlas teñidas por los primeros rayos del sol, los extensos palmerales y las aldeas tradicionales bereberes desde el cielo en una perspectiva sobrecogedora y pacífica.<br/><br/>Tras aterrizar suavemente, disfrutará de un exquisito desayuno bereber servido en una jaima tradicional y recibirá su certificado de vuelo personalizado.",
+  "duration": "Media Jornada / 3-4 Horas",
+  "startingFrom": "Marrakech",
+  "price": "Desde 190 $/persona",
+  "highlights": [
+    "Recogida temprana: Cómodo traslado privado desde su alojamiento en Marrakech hacia las 5:00 h de la madrugada.",
+    "Vuelo panorámico: Aproximadamente 45 a 60 minutos de vuelo con vistas inolvidables del Alto Atlas y el campo marroquí.",
+    "Desayuno tradicional bereber: Degustación de productos frescos locales en jaima tras el aterrizaje.",
+    "Recuerdos imborrables: Fotografías espectaculares a vista de pájaro y certificado de vuelo expedido por el piloto."
+  ],
+  "inclusions": [
+    "Traslados de ida y vuelta en vehículo 4x4 con chófer desde su hotel en Marrakech",
+    "Vuelo en globo aerostático de 45 a 60 minutos sobre los valles del Atlas",
+    "Auténtico desayuno bereber tradicional servido bajo jaima típica",
+    "Certificado de vuelo oficial conmemorativo firmado por el piloto"
+  ],
+  "exclusions": [
+    "Gastos personales y compras de recuerdos",
+    "Propinas para el equipo de vuelo y chófer (opcionales)",
+    "Comidas y bebidas adicionales no mencionadas en el programa",
+    "Fotografías o vídeos profesionales opcionales"
+  ],
+  "itinerary": [
+    {
+      "day": "Día 1",
+      "title": "Vuelo en Globo Aerostático en Marrakech",
+      "content": "05:00 – Recogida en su hotel o riad en un cómodo vehículo 4x4 y trayecto hacia la zona de despegue. 05:45 – Llegada al campo de vuelo donde asistirá al inflado de los globos mientras disfruta de un té o café de bienvenida. 06:15 – Despegue suave al alba: sobrevolará llanuras, palmerales y pueblos tradicionales con el telón de fondo de las cumbres nevadas del Alto Atlas durante 45 a 60 minutos. Aterrizaje y traslado al campamento bereber para saborear un copioso desayuno tradicional recién horneado. Entrega de certificados y regreso a su hotel en Marrakech hacia media mañana."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Marrakech",
+      "day": "Salida",
+      "subtitle": "Recogida en Hotel",
+      "desc": "Traslado privado desde su alojamiento en Marrakech de madrugada."
+    },
+    {
+      "number": 2,
+      "name": "Oasis del Palmeral de Marrakech",
+      "day": "Actividad",
+      "subtitle": "Vuelo sobre el Palmeral",
+      "desc": "Vistas aéreas del palmeral con la cordillera del Atlas de fondo."
+    },
+    {
+      "number": 3,
+      "name": "Campamento Oasis Bereber",
+      "day": "Desayuno",
+      "subtitle": "Hospitalidad y Té a la Menta",
+      "desc": "Desayuno tradicional en jaima bereber y té a la menta."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/activities/hot-air-balloon-in-marrakech/images/thumbnail.jpg",
+      "cap": "Vuelo en Globo Aerostático en Marrakech al Amanecer",
+      "alt": "Globos aerostáticos flotando sobre los paisajes rurales y montañas de Marrakech al amanecer"
+    }
+  ],
+  "faqs": []
+}

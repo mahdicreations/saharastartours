@@ -1,0 +1,145 @@
+{
+  "slug": "2-day-sahara-desert-tour-from-fes",
+  "title": "Tour di 2 Giorni nel Deserto del Sahara da Fes a Merzouga | Sahara Star Tours",
+  "shortTitle": "Tour di 2 Giorni nel Deserto da Fes a Merzouga",
+  "description": "Fuga rapida di 2 giorni nel Sahara da Fes a Merzouga andata e ritorno. Panorami del Medio Atlante, cammellata al tramonto e glamping a Merzouga.",
+  "aboutHtml": "Questa fuga privata di 2 giorni nel deserto inizia e si conclude a Fes. È l'itinerario perfetto per chi si trova a Fes e desidera vivere l'autentica magia del Sahara in poco tempo: attraverso le cime del Medio Atlante, le foreste di cedri di Azrou e la Valle dello Ziz, per poi ammirare il tramonto a dorso di cammello e pernottare in un lussuoso campo tendato tra le dune dell'Erg Chebbi.",
+  "duration": "2 Giorni / 1 Notte",
+  "startingFrom": "Fes",
+  "price": "Da 250 €/persona",
+  "highlights": [
+    "Deserto del Sahara a Merzouga e le maestose dune dell'Erg Chebbi",
+    "Trekking a dorso di cammello al tramonto",
+    "Medina storica di Fes e i suoi monumenti culturali",
+    "Ifrane, la Svizzera del Marocco",
+    "Foresta secolare di cedri di Azrou e macachi"
+  ],
+  "inclusions": [
+    "Trasporto privato in 4x4 o minivan moderno con aria condizionata",
+    "Autista e guida locale esperta con transfer privati inclusi",
+    "Carburante, pedaggi e tutti i costi operativi del veicolo",
+    "Pernottamenti in riad e hotel di charme selezionati secondo programma",
+    "Prime colazioni giornaliere e cene specificate nell'itinerario",
+    "Escursione in cammello nel deserto e soggiorno in campo tendato di lusso"
+  ],
+  "exclusions": [
+    "Pranzi e bevande durante il viaggio",
+    "Voli aerei e servizi aeroportuali non menzionati",
+    "Spese personali e attività facoltative",
+    "Mance per autista e guide locali"
+  ],
+  "itinerary": [
+    {
+      "day": "Giorno 1",
+      "title": "Fes – Ifrane – Foresta di Cedri – Midelt – Valle dello Ziz – Deserto di Merzouga",
+      "content": "Partenza di primo mattino dal vostro alloggio a Fes. Percorso verso sud attraverso Ifrane (la 'Svizzera del Marocco') e le secolari foreste di cedri di Azrou per osservare i macachi in libertà. Pranzo a Midelt e discesa lungo la Valle dello Ziz. Nel pomeriggio arrivo a Merzouga e salita sui dromedari per attraversare le spettacolari dune dorate dell'Erg Chebbi al tramonto. Arrivo al campo tendato di lusso con cena tipica berbera, musica attorno al fuoco e notte stellata."
+    },
+    {
+      "day": "Giorno 2",
+      "title": "Merzouga – Rissani – Erfoud – Valle dello Ziz – Ifrane – Fes",
+      "content": "Alba memorabile tra le dune e colazione all'accampamento prima del rientro in cammello o 4x4 a Merzouga. Visita al mercato tradizionale di Rissani e alle botteghe di marmi fossili a Erfoud. Viaggio di ritorno lungo il fiume Ziz con sosta panoramica. Risalita del Medio Atlante attraverso la foresta di cedri e Ifrane con arrivo a Fes verso le 18:00. Rientro al vostro alloggio o all'aeroporto."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Da Fes a Merzouga",
+      "day": "Giorno 1",
+      "subtitle": "Verso il Deserto",
+      "desc": "Ifrane, foresta di cedri, Valle dello Ziz e notte in campo di lusso."
+    },
+    {
+      "number": 2,
+      "name": "Da Merzouga a Fes",
+      "day": "Giorno 2",
+      "subtitle": "Rientro a Fes",
+      "desc": "Alba sulle dune, mercato di Rissani, Erfoud e arrivo a Fes."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/2-day-sahara-desert-tour-from-fes/images/gallery_1.webp",
+      "cap": "Galleria 1",
+      "alt": "Conciatori al lavoro nelle vasche in pietra delle concerie di Chouara a Fes"
+    },
+    {
+      "src": "/sahara-star-tours/2-day-sahara-desert-tour-from-fes/images/gallery_10.webp",
+      "cap": "Galleria 10",
+      "alt": "Cresta sinuosa delle dune di sabbia dell'Erg Chebbi sotto un cielo azzurro terso"
+    },
+    {
+      "src": "/sahara-star-tours/2-day-sahara-desert-tour-from-fes/images/gallery_3.webp",
+      "cap": "Galleria 3",
+      "alt": "Cime sabbiose delle dune dell'Erg Chebbi a Merzouga al calar del sole"
+    },
+    {
+      "src": "/sahara-star-tours/2-day-sahara-desert-tour-from-fes/images/gallery_4.webp",
+      "cap": "Galleria 4",
+      "alt": "Stretto vicolo con botteghe di gioielli nella medina antica di Fes"
+    },
+    {
+      "src": "/sahara-star-tours/2-day-sahara-desert-tour-from-fes/images/gallery_5.webp",
+      "cap": "Galleria 5",
+      "alt": "Disegni ondulati formati dal vento sulla sabbia dorata del deserto"
+    },
+    {
+      "src": "/sahara-star-tours/2-day-sahara-desert-tour-from-fes/images/gallery_6.webp",
+      "cap": "Galleria 6",
+      "alt": "Ampia panoramica sulle dune ondulate del Sahara al tramonto a Merzouga"
+    },
+    {
+      "src": "/sahara-star-tours/2-day-sahara-desert-tour-from-fes/images/gallery_7.webp",
+      "cap": "Galleria 7",
+      "alt": "Viaggiatori con turbanti blu in escursione a dorso di dromedario sulle dune dell'Erg Chebbi"
+    },
+    {
+      "src": "/sahara-star-tours/2-day-sahara-desert-tour-from-fes/images/gallery_8.webp",
+      "cap": "Galleria 8",
+      "alt": "Dune arancioni dell'Erg Chebbi che si innalzano oltre la pianura rocciosa"
+    },
+    {
+      "src": "/sahara-star-tours/2-day-sahara-desert-tour-from-fes/images/gallery_9.webp",
+      "cap": "Galleria 9",
+      "alt": "Tende bianche di un campo tendato di lusso incastonato tra le dune al tramonto"
+    },
+    {
+      "src": "/sahara-star-tours/2-day-sahara-desert-tour-from-fes/images/hero_2.webp",
+      "cap": "Hero 2",
+      "alt": "Alba panoramica sullo sconfinato mare di sabbia dell'Erg Chebbi a Merzouga"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Questo tour è privato o condiviso?",
+      "answer": "È un tour completamente privato per il vostro gruppo, con mezzo climatizzato e autista dedicato."
+    },
+    {
+      "question": "Quanto dura la cammellata ed esistono alternative?",
+      "answer": "La cammellata dura da 45 a 90 minuti. Se preferite non cavalcare, è possibile organizzare il transfer al campo in 4x4."
+    },
+    {
+      "question": "La tenda nel deserto dispone di bagno privato?",
+      "answer": "Sì, il campo tendato di lusso dispone di tende con bagno interno completo di doccia con acqua calda."
+    },
+    {
+      "question": "Dove avvengono la partenza e il rientro?",
+      "answer": "La partenza e il rientro avvengono direttamente presso il vostro hotel o all'aeroporto di Fes."
+    },
+    {
+      "question": "Che tipo di mezzo viene impiegato?",
+      "answer": "Un moderno mezzo fuoristrada 4x4 o minivan climatizzato comodo e sicuro per l'intero viaggio."
+    },
+    {
+      "question": "È possibile richiedere menu vegetariani o particolari?",
+      "answer": "Certamente, basta segnalarlo al momento della prenotazione per organizzare menu adatti."
+    },
+    {
+      "question": "L'itinerario è adatto a tutte le fasce d'età?",
+      "answer": "Sì, è perfetto sia per famiglie con bambini che per coppie, con soste regolari lungo il tragitto."
+    },
+    {
+      "question": "Qual è il periodo migliore per questo viaggio?",
+      "answer": "Primavera e autunno offrono condizioni splendide. L'inverno regala un clima soleggiato e fresco nel deserto."
+    }
+  ]
+}

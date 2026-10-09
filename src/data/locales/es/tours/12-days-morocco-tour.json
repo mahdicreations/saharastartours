@@ -1,0 +1,220 @@
+{
+  "slug": "12-days-morocco-tour",
+  "title": "Circuito de 12 Días Clásicos Destacados de Marruecos | Sahara Star Tours",
+  "shortTitle": "Circuito de 12 Días Clásicos de Marruecos",
+  "description": "Viaje privado de 12 días por Marruecos: Casablanca, Rabat, Tánger, Chefchaouen con día libre, Fez, dunas de Merzouga con jaima de lujo, Todra y Marrakech.",
+  "aboutHtml": "El Circuito de 12 Días Clásicos Destacados de Marruecos es una inmersión completa en la rica historia, arquitectura imperial y paisajes naturales del país. Comenzando en Casablanca y Rabat, el viaje recorre el norte atlántico hasta Tánger y la cautivadora ciudad azul de Chefchaouen, donde disfrutarás de un día libre para explorar a tu ritmo. Continúa hacia la milenaria Fez con guía local, cruza el Medio Atlas hacia las dunas de Merzouga para una noche de glamping bajo las estrellas del Sáhara, y finaliza descubriendo las espectaculares Gargantas del Todra, Ait Ben Haddou y los palacios de Marrakech.",
+  "duration": "12 Días / 11 Noches",
+  "startingFrom": "Casablanca",
+  "price": "Desde $1,490/persona",
+  "highlights": [
+    "Casablanca: Gran Mezquita Hassan II sobre el océano Atlántico y bulevar de la Corniche",
+    "Rabat: Capital política, Mausoleo real de Mohammed V, Torre Hassan y Kasbah de los Oudayas",
+    "Tánger: Cabo Espartel, confluencia del Mediterráneo y el Atlántico, y legendarias Cuevas de Hércules",
+    "Chefchaouen: Día completo libre en la emblemática Perla Azul en las montañas del Rif",
+    "Fez: Medina medieval Patrimonio de la Humanidad por la UNESCO, Universidad Al Quaraouiyine y curtidurías",
+    "Medio Atlas: Bosques de cedros protegidos de Azrou y observación de macacos en libertad",
+    "Merzouga: Dunas doradas de Erg Chebbi con paseo en dromedario y noche en campamento de lujo",
+    "Gargantas del Todra: Desfiladeros imponentes de roca caliza de 300 metros de altura",
+    "Valle del Dades y Ouarzazate: Ruta de las Mil Kasbahs y estudios de cine Atlas",
+    "Kasbah de Ait Ben Haddou: Pueblo fortificado de barro declarado por la UNESCO y escenario de cine",
+    "Marrakech: Palacio de la Bahía, Tumbas Saadíes, Jardines Majorelle y cena tradicional con espectáculo"
+  ],
+  "inclusions": [
+    "Visitas guiadas privadas en ciudades y entradas a monumentos especificados",
+    "Transporte privado confortable y climatizado con chófer profesional",
+    "Paseo en dromedario y noche en campamento de lujo en el desierto de Merzouga",
+    "Servicio de bienvenida y asistencia en traslados de llegada y salida",
+    "Cena tradicional en Marrakech con música marroquí y espectáculo folclórico",
+    "Régimen de media pensión durante el recorrido según el itinerario",
+    "Combustible y peajes de carretera incluidos",
+    "11 desayunos y cenas incluidas según programa"
+  ],
+  "exclusions": [
+    "Tasas aéreas y billetes de avión internacionales",
+    "Almuerzos diarios no especificados",
+    "Bebidas durante las comidas",
+    "Vuelos internacionales de conexión",
+    "Propinas y gratificaciones voluntarias",
+    "Seguro médico y de viaje personal",
+    "Propinas para guías y conductor (opcionales)",
+    "Cualquier concepto no indicado expresamente en el apartado de incluidos"
+  ],
+  "itinerary": [
+    {
+      "day": "Día 1",
+      "title": "Llegada a Casablanca",
+      "content": "Bienvenida en el aeropuerto Mohammed V de Casablanca y traslado a tu hotel. Visita a la imponente Mezquita Hassan II construida junto al Atlántico y paseo por la Corniche. Alojamiento en Casablanca."
+    },
+    {
+      "day": "Día 2",
+      "title": "Casablanca a Rabat",
+      "content": "Traslado a la capital del reino, Rabat. Visita al Mausoleo de Mohammed V, la Torre Hassan y los jardines andalusíes de la Kasbah de los Oudayas frente a la desembocadura del río Bu Regreg. Noche en Rabat."
+    },
+    {
+      "day": "Día 3",
+      "title": "Rabat a Tánger y Chefchaouen",
+      "content": "Ruta hacia el norte hasta Tánger para visitar el Cabo Espartel y las históricas Cuevas de Hércules. Por la tarde ascenderemos por las montañas del Rif hasta llegar a la mágica ciudad azul de Chefchaouen."
+    },
+    {
+      "day": "Día 4",
+      "title": "Día Libre en Chefchaouen",
+      "content": "Día completo a tu propio ritmo para explorar los callejones azules, descubrir talleres de artesanía, subir al manantial de Ras El Ma o contemplar el atardecer desde la colina con vistas a la cordillera del Rif."
+    },
+    {
+      "day": "Día 5",
+      "title": "Chefchaouen a Fez",
+      "content": "Salida de Chefchaouen hacia la capital cultural de Fez. Por la tarde primer contacto con la medina medieval de Fes El Bali, declarada Patrimonio de la Humanidad por la UNESCO, y descanso en un riad tradicional."
+    },
+    {
+      "day": "Día 6",
+      "title": "Visita Cultural Guiada de Fez",
+      "content": "Recorrido completo con guía local: la Mezquita y Universidad Al Quaraouiyine, la Madraza Bou Inania, la monumental puerta Bab Boujloud, las históricas curtidurías Chouara y talleres de cerámica tradicional."
+    },
+    {
+      "day": "Día 7",
+      "title": "Fez a Merzouga (Desierto del Sáhara)",
+      "content": "Viaje hacia el sur por las montañas del Medio Atlas con parada en el bosque de cedros de Azrou y Midelt. Llegada a Merzouga por la tarde, paseo en dromedario sobre las dunas de Erg Chebbi y noche en campamento prémium."
+    },
+    {
+      "day": "Día 8",
+      "title": "Merzouga a las Gargantas del Todra",
+      "content": "Amanecer dorado sobre el desierto y desayuno. Viaje hacia Tinghir para pasear entre los imponentes acantilados verticales de las Gargantas del Todra y relajarse en un hotel con encanto junto al río."
+    },
+    {
+      "day": "Día 9",
+      "title": "Gargantas del Todra a Ait Ben Haddou",
+      "content": "Ruta por el Valle del Dades y Ouarzazate hasta el legendario ksar fortificado de Ait Ben Haddou (UNESCO), famoso por películas como Gladiator y Lawrence de Arabia. Alojamiento en una kasbah tradicional."
+    },
+    {
+      "day": "Día 10",
+      "title": "Ait Ben Haddou a Marrakech",
+      "content": "Cruce del Alto Atlas a través del puerto de montaña de Tizi n'Tichka (2.260 m). Llegada por la tarde a Marrakech y visita a los tranquilos Jardines Majorelle antes de vivir la energía nocturna de Jemaa el-Fna."
+    },
+    {
+      "day": "Día 11",
+      "title": "Visita Monumental de Marrakech",
+      "content": "Tour guiado por los palacios históricos de Marrakech: Palacio de la Bahía, Tumbas Saadíes y zocos artesanos. Por la noche, cena de despedida en un restaurante tradicional con música y folclore marroquí."
+    },
+    {
+      "day": "Día 12",
+      "title": "Salida desde Marrakech",
+      "content": "Tiempo libre para últimas compras o paseo según tu horario de vuelo, y traslado organizado al aeropuerto de Marrakech Menara o Casablanca para tu viaje de regreso."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Casablanca",
+      "day": "Día 1",
+      "subtitle": "Llegada",
+      "desc": "Visita a la Mezquita Hassan II."
+    },
+    {
+      "number": 2,
+      "name": "Rabat",
+      "day": "Día 2",
+      "subtitle": "Capital",
+      "desc": "Torre Hassan y Kasbah de los Oudayas."
+    },
+    {
+      "number": 3,
+      "name": "Tánger",
+      "day": "Día 3",
+      "subtitle": "Estrecho de Gibraltar",
+      "desc": "Cabo Espartel y Cuevas de Hércules."
+    },
+    {
+      "number": 4,
+      "name": "Chefchaouen",
+      "day": "Día 4",
+      "subtitle": "Pueblo Azul del Rif",
+      "desc": "Día libre en la ciudad azul."
+    },
+    {
+      "number": 5,
+      "name": "Fez",
+      "day": "Días 5 y 6",
+      "subtitle": "Medina Medieval",
+      "desc": "Universidad Al Quaraouiyine y curtidurías."
+    },
+    {
+      "number": 6,
+      "name": "Desierto de Merzouga",
+      "day": "Días 7 y 8",
+      "subtitle": "Campamento Erg Chebbi",
+      "desc": "Paseo en dromedario y noche estrellada."
+    },
+    {
+      "number": 7,
+      "name": "Dades y Todra",
+      "day": "Día 9",
+      "subtitle": "Cañones",
+      "desc": "Gargantas profundas y kasbahs."
+    },
+    {
+      "number": 8,
+      "name": "Ouarzazate",
+      "day": "Día 10",
+      "subtitle": "Ciudad del Cine",
+      "desc": "Fortaleza de Ait Ben Haddou (UNESCO)."
+    },
+    {
+      "number": 9,
+      "name": "Marrakech",
+      "day": "Días 11 y 12",
+      "subtitle": "La Ciudad Roja",
+      "desc": "Palacios, zocos y cena especial."
+    },
+    {
+      "number": 10,
+      "name": "Casablanca",
+      "day": "Día 13",
+      "subtitle": "Salida",
+      "desc": "Traslado al aeropuerto y despedida."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/desert-tours/12-days-morocco-tour/images/thumbnail.webp",
+      "cap": "Circuito de 12 Días Clásicos Destacados de Marruecos",
+      "alt": "Circuito de 12 Días Clásicos Destacados de Marruecos – Sahara Star Tours"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/12-days-morocco-tour/images/image-01.jpg",
+      "cap": "Mezquita Hassan II en la costa de Casablanca",
+      "alt": "Minarete y explanada monumental de la Mezquita Hassan II"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/12-days-morocco-tour/images/image-02.jpg",
+      "cap": "Chefchaouen y fachadas de color azul índigo",
+      "alt": "Callejón escalonado y puertas decoradas en Chefchaouen"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/12-days-morocco-tour/images/image-03.jpg",
+      "cap": "Medina histórica de Fez y madrazas islámicas",
+      "alt": "Detalle arquitectónico en un patio tradicional de Fez"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/12-days-morocco-tour/images/image-04.jpg",
+      "cap": "Dunas doradas de Erg Chebbi en Merzouga",
+      "alt": "Paseo en dromedario durante el ocaso en el Sáhara"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/12-days-morocco-tour/images/image-05.jpg",
+      "cap": "Paredes verticales en las Gargantas del Todra",
+      "alt": "Cañón rocoso imponente y río en las Gargantas del Todra"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/12-days-morocco-tour/images/image-06.jpg",
+      "cap": "Kasbah histórica de Ait Ben Haddou",
+      "alt": "Construcción de adobe y torres defensivas en Ait Ben Haddou"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/12-days-morocco-tour/images/image-07.jpg",
+      "cap": "Plaza Jemaa el-Fna y bullicio de Marrakech",
+      "alt": "Puestos iluminados y ambiente nocturno en Marrakech"
+    }
+  ],
+  "faqs": []
+}

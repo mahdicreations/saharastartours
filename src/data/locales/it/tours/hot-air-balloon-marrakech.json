@@ -1,0 +1,66 @@
+{
+  "slug": "hot-air-balloon-marrakech",
+  "title": "Volo in Mongolfiera all'Alba a Marrakech | Sahara Star Tours",
+  "shortTitle": "Volo in Mongolfiera a Marrakech",
+  "description": "Sorvolate il palmeto di Marrakech e l'Alto Atlante all'alba in mongolfiera. Include trasferimenti privati dall'hotel e colazione tradizionale berbera.",
+  "aboutHtml": "Vivete un'esperienza emozionante e poetica in mongolfiera sorvolando i suggestivi scenari di Marrakech all'alba. Ammirate le vette dell'Alto Atlante illuminate dai primi raggi di sole, le distese di palme e i villaggi berberi dall'alto in un silenzio magico e rigenerante.<br/><br/>Dopo un atterraggio morbido, vi attende una ricca colazione tradizionale berbera servita sotto una tenda tipica, accompagnata dalla consegna del certificato di volo personalizzato.",
+  "duration": "Mezza Giornata / 3-4 Ore",
+  "startingFrom": "Marrakech",
+  "price": "Da 190 €/persona",
+  "highlights": [
+    "Pick-up all'alba: Comodo transfer privato dal vostro alloggio a Marrakech intorno alle 5:00 del mattino.",
+    "Volo panoramico: Circa 45-60 minuti di volo con vista mozzafiato sull'Alto Atlante e sulle campagne circostanti.",
+    "Colazione berbera: Ricca colazione a base di prodotti tipici locali servita dopo l'atterraggio.",
+    "Ricordi indimenticabili: Foto aeree spettacolari e rilascio del certificato di volo ufficiale firmato dal pilota."
+  ],
+  "inclusions": [
+    "Transfer privati andata e ritorno in 4x4 dal vostro hotel a Marrakech",
+    "Volo in mongolfiera di 45-60 minuti sui rilievi dell'Atlante",
+    "Autentica prima colazione tradizionale berbera sotto la tenda",
+    "Certificato di volo ufficiale rilasciato e firmato dal pilota"
+  ],
+  "exclusions": [
+    "Spese personali e souvenir",
+    "Mance per il team di volo e l'autista (facoltative)",
+    "Pasti o bevande supplementari non inclusi",
+    "Servizi fotografici o video professionali facoltativi"
+  ],
+  "itinerary": [
+    {
+      "day": "Giorno 1",
+      "title": "Volo in Mongolfiera a Marrakech",
+      "content": "05:00 – Pick-up dal vostro alloggio a Marrakech in comodo fuoristrada 4x4. 05:45 – Arrivo al campo di decollo dove assisterete ai preparativi dei palloni gustando un tè o caffè caldo. 06:15 – Decollo dolce all'alba: volo panoramico di 45-60 minuti sorvolando valli, palmeti e villaggi tradizionali con le cime dell'Alto Atlante all'orizzonte. Atterraggio e trasferimento al campo berbero per una deliziosa colazione casalinga. Consegna degli attestati di volo e rientro in hotel a Marrakech a metà mattinata."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Marrakech",
+      "day": "Partenza",
+      "subtitle": "Pick-up in Hotel",
+      "desc": "Transfer privato di primo mattino dal vostro hotel a Marrakech."
+    },
+    {
+      "number": 2,
+      "name": "Oasi del Palmeto di Marrakech",
+      "day": "Attività",
+      "subtitle": "Volo sul Palmeto",
+      "desc": "Panorami aerei del palmeto con lo sfondo dell'Alto Atlante."
+    },
+    {
+      "number": 3,
+      "name": "Accampamento Berbero",
+      "day": "Colazione",
+      "subtitle": "Ospitalità e Tè alla Menta",
+      "desc": "Colazione berbera tradizionale sotto la tenda con tè caldo."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/activities/hot-air-balloon-in-marrakech/images/thumbnail.jpg",
+      "cap": "Volo in Mongolfiera all'Alba a Marrakech",
+      "alt": "Mongolfiere che sorvolano la campagna di Marrakech e le montagne dell'Atlante all'alba"
+    }
+  ],
+  "faqs": []
+}

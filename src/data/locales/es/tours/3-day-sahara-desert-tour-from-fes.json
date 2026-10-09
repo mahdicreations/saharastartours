@@ -1,0 +1,152 @@
+{
+  "slug": "3-day-sahara-desert-tour-from-fes",
+  "title": "Tour de 3 Días de Fez al Desierto de Merzouga | Sahara Star Tours",
+  "shortTitle": "Tour de 3 Días al Desierto desde Fez",
+  "description": "Explore el desierto del Sahara desde Fez en un circuito privado de 3 días. Visite Ifrane, el bosque de cedros, nómadas en Merzouga y duerma en un campamento de lujo en Erg Chebbi.",
+  "aboutHtml": "<p>Este tour privado de 3 días desde Fez al desierto del Sahara es la forma ideal de sumergirse en los contrastes de Marruecos. Viajará a través de la cordillera del Medio Atlas, conociendo la pintoresca Ifrane y los macacos del bosque de cedros de Azrou, descenderá por el impresionante cañón del Valle del Ziz y llegará al grandioso desierto de Merzouga, donde vivirá la hospitalidad nómada, el ritmo de la música gnawa en Khamlia y una noche mágica en campamento bereber de lujo.</p>",
+  "duration": "3 Días / 2 Noches",
+  "startingFrom": "Fez",
+  "price": "Desde $350/persona",
+  "highlights": [
+    "Paseo en camello por las dunas doradas de Erg Chebbi al atardecer",
+    "Noche en campamento de lujo con música y tambores bereberes bajo las estrellas",
+    "Encuentro cultural con familias nómadas y música gnawa en Khamlia",
+    "Visita a Ifrane y el bosque de cedros de Azrou con macacos de Berbería",
+    "Vistas panorámicas del oasis y cañones del Valle del Ziz"
+  ],
+  "inclusions": [
+    "Vehículo privado 4×4 o monovolumen con aire acondicionado",
+    "Chófer/guía profesional de habla hispana durante todo el trayecto",
+    "Combustible, peajes y tasas de circulación",
+    "1 noche en hotel en Merzouga y 1 noche en campamento bereber de lujo",
+    "Desayunos diarios y cenas incluidas en Merzouga y en el campamento",
+    "Paseo en camello por las dunas de Merzouga con asistencia completa"
+  ],
+  "exclusions": [
+    "Almuerzos y bebidas",
+    "Vuelos y billetes de transporte aéreo",
+    "Gastos personales y compras de recuerdos",
+    "Propinas y gratificaciones"
+  ],
+  "itinerary": [
+    {
+      "day": "Día 1",
+      "title": "Fez – Ifrane – Bosque de Cedros – Midelt – Valle del Ziz – Desierto de Merzouga",
+      "content": "Su tour de 3 días por el Sahara comienza temprano con la recogida en su riad o en el aeropuerto de Fez. Viajará hacia el sur a través de Imouzzer hasta llegar a Ifrane, conocida como 'la Suiza de Marruecos' por su arquitectura alpina y clima fresco. Continuará hacia el Bosque de Cedros de Azrou, donde podrá observar y fotografiar a los macacos de Berbería en libertad. Tras cruzar el Medio Atlas y almorzar en Midelt, el paisaje cambiará drásticamente mientras desciende por el paso de Tizi N'Tilghmt y a lo largo de los sobrecogedores palmerales del Valle del Ziz. Por la tarde llegará a Merzouga, donde montará en camello para cruzar las dunas de Erg Chebbi, admirar una puesta de sol inolvidable y llegar a su campamento de lujo para disfrutar de una cena tradicional con tambores bereberes bajo el cielo estrellado."
+    },
+    {
+      "day": "Día 2",
+      "title": "Exploración de Merzouga – Familias Nómadas – Khamlia – Lago de Merzouga – Erg Chebbi – Palmeral",
+      "content": "Madrugar es imprescindible para presenciar el amanecer sobre las dunas del desierto. Tras el desayuno, regresará en camello o 4×4 para iniciar un día completo de exploración en todoterreno por la región de Merzouga. Visitará antiguas minas de kohl (delineador tradicional), compartirá un té con familias nómadas bereberes en sus tiendas tejidas a mano y conocerá el pueblo de Khamlia, donde asistirá a una emotiva actuación de música gnawa con raíces subsaharianas. Tiempo libre para almorzar (recomendamos degustar la tradicional pizza bereber 'madfouna'). Por la tarde paseará por el palmeral de Hassi Labied y contemplará el lago estacional de Dayet Srji, frecuentado por flamencos. Cena y noche en un agradable hotel a pie de dunas."
+    },
+    {
+      "day": "Día 3",
+      "title": "Merzouga – Rissani – Erfoud – Valle del Ziz – Ifrane – Fez",
+      "content": "Tras el desayuno en el hotel, partirá hacia la histórica ciudad de Rissani, antigua capital del Tafilalet y origen de la dinastía alauita, donde visitará su auténtico zoco tradicional (especialmente animado los martes, jueves y domingos). Continuará hacia Erfoud para conocer un taller artesanal de mármol fosilizado. Luego iniciará el viaje de regreso a través de los cañones del Valle del Ziz, Midelt y los bosques de cedros del Medio Atlas, llegando a Fez al final de la tarde con traslado directo a su alojamiento o al aeropuerto."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Fez",
+      "day": "Día 1",
+      "subtitle": "Fez – Ifrane – Bosque de Cedros – Midelt – Valle del Ziz – Merzouga",
+      "desc": "Salida desde Fez pasando por Ifrane, bosque de cedros y Valle del Ziz hacia el campamento de Erg Chebbi."
+    },
+    {
+      "number": 2,
+      "name": "Exploración de Merzouga",
+      "day": "Día 2",
+      "subtitle": "Región de Merzouga – Nómadas – Khamlia – Lago – Palmeral",
+      "desc": "Día completo explorando Merzouga en 4×4: minas antiguas, nómadas del desierto, música gnawa y oasis."
+    },
+    {
+      "number": 3,
+      "name": "Merzouga a Fez",
+      "day": "Día 3",
+      "subtitle": "Merzouga – Rissani – Erfoud – Valle del Ziz – Ifrane – Fez",
+      "desc": "Visita al zoco de Rissani, talleres de fósiles de Erfoud y retorno a Fez por el Medio Atlas."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/3-day-sahara-desert-tour-from-fes/images/gallery_1.webp",
+      "cap": "Curtidurías de Chouara",
+      "alt": "Cubas de tinte de cuero y pilas de lavado de piedra en la curtiduría de Chouara en Fez"
+    },
+    {
+      "src": "/sahara-star-tours/3-day-sahara-desert-tour-from-fes/images/gallery_10.webp",
+      "cap": "Dunas de Erg Chebbi",
+      "alt": "Vista panorámica de dunas de color naranja que se extienden hasta el horizonte en Erg Chebbi"
+    },
+    {
+      "src": "/sahara-star-tours/3-day-sahara-desert-tour-from-fes/images/gallery_2.webp",
+      "cap": "Macaco de Berbería",
+      "alt": "Mono macaco de Berbería descansando sobre una rama de cedro en el bosque del Medio Atlas"
+    },
+    {
+      "src": "/sahara-star-tours/3-day-sahara-desert-tour-from-fes/images/gallery_4.webp",
+      "cap": "Madrasa histórica de Fez",
+      "alt": "Detalles de madera de cedro tallada y estuco en una madrasa medieval de Fez"
+    },
+    {
+      "src": "/sahara-star-tours/3-day-sahara-desert-tour-from-fes/images/gallery_5.webp",
+      "cap": "Dunas doradas de Merzouga",
+      "alt": "Dunas doradas onduladas y cielo azul en el desierto de Merzouga"
+    },
+    {
+      "src": "/sahara-star-tours/3-day-sahara-desert-tour-from-fes/images/gallery_6.webp",
+      "cap": "Atardecer en Erg Chebbi",
+      "alt": "Puesta de sol proyectando sombras cálidas sobre las dunas de Erg Chebbi"
+    },
+    {
+      "src": "/sahara-star-tours/3-day-sahara-desert-tour-from-fes/images/gallery_8.webp",
+      "cap": "Paisaje del Valle del Ziz",
+      "alt": "Paisaje desértico con acacias y montañas distantes a lo largo del Valle del Ziz"
+    },
+    {
+      "src": "/sahara-star-tours/3-day-sahara-desert-tour-from-fes/images/gallery_9.webp",
+      "cap": "Campamento bereber",
+      "alt": "Campamento nómada bereber tradicional en el desierto del Sahara bajo el cielo crepuscular"
+    },
+    {
+      "src": "/sahara-star-tours/3-day-sahara-desert-tour-from-fes/images/hero_2.webp",
+      "cap": "Amanecer en Merzouga",
+      "alt": "Vastas dunas desérticas de Merzouga iluminadas por el sol de la mañana"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "¿Es este un tour privado o compartido?",
+      "answer": "Es un viaje 100% privado: el vehículo, conductor y guía están reservados exclusivamente para su grupo, con horarios y paradas flexibles según sus intereses."
+    },
+    {
+      "question": "¿Cuánto tiempo dura el paseo en camello y qué alternativas hay?",
+      "answer": "La travesía en camello dura habitualmente entre 45 y 75 minutos. Si lo desea, puede acceder al campamento directamente en 4×4 o alquilar quads/buggies con suplemento."
+    },
+    {
+      "question": "¿Cómo son las instalaciones del campamento en el desierto?",
+      "answer": "El campamento de lujo ofrece jaimas privadas con baño completo incorporado, agua caliente, camas de verdad y electricidad para recargar sus dispositivos."
+    },
+    {
+      "question": "¿Dónde se realiza la recogida y regreso en Fez?",
+      "answer": "Le recogeremos en la puerta de su riad, hotel o directamente en el aeropuerto de Fez Sais, y le dejaremos en el mismo punto al finalizar la ruta."
+    },
+    {
+      "question": "¿Qué modelo de vehículo se utiliza?",
+      "answer": "Utilizamos vehículos privados 4×4 todoterreno modernos o monovolúmenes espaciosos, todos equipados con aire acondicionado para máxima comodidad."
+    },
+    {
+      "question": "¿Pueden adaptarse a alergias o necesidades dietéticas?",
+      "answer": "Sí, solo tiene que indicarnos sus requisitos alimentarios (vegetariano, sin gluten, sin lactosa, etc.) al confirmar la reserva y adaptaremos todos los menús."
+    },
+    {
+      "question": "¿Es un circuito adecuado para todas las edades?",
+      "answer": "Sí, es idóneo para familias con niños y personas mayores. El viaje de Fez a Merzouga dura unas 7 horas en total, con múltiples paradas escénicas para descansar."
+    },
+    {
+      "question": "¿Cuál es la mejor temporada para realizar este viaje?",
+      "answer": "La primavera y el otoño brindan temperaturas ideales tanto en el Medio Atlas como en las dunas. En invierno los días son soleados y frescos, mientras que en verano recomendamos madrugar para evitar las horas centrales."
+    }
+  ]
+}

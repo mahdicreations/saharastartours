@@ -1,0 +1,193 @@
+{
+  "slug": "9-day-authentic-morocco-tour",
+  "title": "Tour di 9 Giorni Marocco Autentico e Odissea nel Deserto | Sahara Star Tours",
+  "shortTitle": "Tour di 9 Giorni Marocco Autentico",
+  "description": "Viaggio privato di 9 giorni in Marocco: Marrakech, Ouarzazate, dune di Merzouga in campo di lusso, medina di Fes, Chefchaouen e Casablanca.",
+  "aboutHtml": "Vivi un'autentica odissea di 9 giorni alla scoperta delle meraviglie del Marocco tra città imperiali, rilievi montuosi e le dune dorate del Sahara. Partendo da Marrakech, supererai l'Alto Atlante verso Ouarzazate e la Kasbah di Ait Ben Haddou, prima di inoltrarti nel deserto di Merzouga per una notte sotto le stelle. Il percorso prosegue verso il cuore culturale di Fes, i vicoli azzurri di Chefchaouen tra i monti del Rif e si conclude sulle rive dell'Atlantico a Casablanca.",
+  "duration": "9 Giorni / 8 Notti",
+  "startingFrom": "Casablanca",
+  "price": "Da $1,090/persona",
+  "highlights": [
+    "Marrakech: Palazzo Bahia, Moschea Koutoubia e la celebre piazza Jemaa el-Fna",
+    "Ouarzazate: La porta del deserto e la storica Kasbah di Ait Ben Haddou (UNESCO)",
+    "Merzouga: Cammellata al tramonto e pernottamento in campo tendato a Erg Chebbi",
+    "Valle dello Ziz: Oasi rigogliose di palme e gole suggestive tra Atlante e deserto",
+    "Fes: Medina medievale di Fes El Bali, Università Al Quaraouiyine e concerie Chouara",
+    "Chefchaouen: L'inconfondibile Perla Blu con la sua architettura montana rilassante",
+    "Rabat: Monumenti della capitale, Torre Hassan e la Kasbah degli Oudaïa",
+    "Casablanca: La metropoli moderna e la maestosa Moschea Hassan II sull'oceano"
+  ],
+  "inclusions": [
+    "Visite guidate delle città con guide locali autorizzate e ingressi inclusi",
+    "Trasporto privato confortevole e climatizzato con autista professionale",
+    "Trekking a dorso di dromedario e pernottamento in campo tendato di lusso a Merzouga",
+    "Servizio di accoglienza e assistenza per i trasferimenti aeroportuali",
+    "Cena tipica a Marrakech con spettacolo di musica tradizionale e danze locali",
+    "Trattamento di mezza pensione durante il circuito come indicato da programma",
+    "Carburante e pedaggi autostradali inclusi",
+    "8 prime colazioni e 3 cene nel deserto"
+  ],
+  "exclusions": [
+    "Tasse aeroportuali e voli internazionali",
+    "Pranzi non menzionati nel programma",
+    "Bevande durante i pasti",
+    "Voli di collegamento",
+    "Mance e gratifiche a discrezione personale",
+    "Assicurazione sanitaria e di viaggio personale",
+    "Mance per guide e autisti (facoltative)",
+    "Tutto quanto non espressamente indicato nella sezione dei servizi inclusi"
+  ],
+  "itinerary": [
+    {
+      "day": "Giorno 1",
+      "title": "Arrivo a Marrakech",
+      "content": "Benvenuto in Marocco! Al tuo arrivo all'aeroporto di Marrakech Menara sarai accolto dal nostro team e accompagnato in hotel o riad. Tempo a disposizione per immergerti nell'atmosfera serale di piazza Jemaa el-Fna o riposare. Pernottamento a Marrakech."
+    },
+    {
+      "day": "Giorno 2",
+      "title": "Visita Culturale di Marrakech",
+      "content": "Giornata dedicata alla scoperta dei capolavori di Marrakech: la Koutoubia, le sale decorate del Palazzo Bahia e i vivaci souk della medina. Nel pomeriggio visita rilassante ai Giardini Majorelle prima del tramonto. Pernottamento a Marrakech."
+    },
+    {
+      "day": "Giorno 3",
+      "title": "Da Marrakech a Ouarzazate",
+      "content": "Partenza verso Ouarzazate superando le vette dell'Alto Atlante attraverso il valico di Tizi n'Tichka. Sosta all'iconico ksar fortificato di Ait Ben Haddou (Patrimonio UNESCO). Arrivo a Ouarzazate e sistemazione in hotel."
+    },
+    {
+      "day": "Giorno 4",
+      "title": "Da Ouarzazate a Merzouga",
+      "content": "Percorso panoramico verso Merzouga passando per i palmeti della Valle del Draa e i tipici villaggi berberi. Alle pendici di Erg Chebbi monterai a dorso di dromedario per assistere al tramonto sulle dune prima della cena al campo tendato sotto le stelle."
+    },
+    {
+      "day": "Giorno 5",
+      "title": "Da Merzouga a Fes",
+      "content": "Alba spettacolare tra le sabbie dorate e colazione al campo. Rientro in dromedario e partenza per Fes attraversando le gole dello Ziz e i boschi di cedri del Medio Atlante ad Azrou. Arrivo serale a Fes e sistemazione in riad."
+    },
+    {
+      "day": "Giorno 6",
+      "title": "Tour Guidato di Fes",
+      "content": "Intera giornata nella medina di Fes El Bali: Università Al Quaraouiyine, Medersa Bou Inania, le storiche concerie Chouara e i quartieri degli artigiani. Pomeriggio tra i vicoli medievali e cena in ristorante tradizionale. Pernottamento a Fes."
+    },
+    {
+      "day": "Giorno 7",
+      "title": "Da Fes a Chefchaouen",
+      "content": "Viaggio verso nord alla volta di Chefchaouen, sui monti del Rif. Giornata dedicata alla scoperta dei vicoli dipinti d'azzurro, delle piazzette caratteristiche e delle botteghe d'artigianato locale. Notte a Chefchaouen."
+    },
+    {
+      "day": "Giorno 8",
+      "title": "Da Chefchaouen a Casablanca",
+      "content": "Trasferimento alla vivace Casablanca. Visita alla splendida Moschea Hassan II affacciata sulle onde dell'Atlantico, passeggiata sulla Corniche e cena conclusiva in ristorante locale. Pernottamento a Casablanca."
+    },
+    {
+      "day": "Giorno 9",
+      "title": "Partenza da Casablanca",
+      "content": "Prima colazione e trasferimento all'aeroporto Mohammed V di Casablanca in tempo utile per il volo di rientro, portando con te splendidi ricordi dell'avventura marocchina."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Casablanca",
+      "day": "Giorno 1",
+      "subtitle": "Arrivo",
+      "desc": "Moschea Hassan II e trasferimenti d'arrivo."
+    },
+    {
+      "number": 2,
+      "name": "Rabat",
+      "day": "Giorno 2",
+      "subtitle": "Capitale",
+      "desc": "Torre Hassan e Kasbah degli Oudaïa."
+    },
+    {
+      "number": 3,
+      "name": "Chefchaouen",
+      "day": "Giorno 3",
+      "subtitle": "Medina Blu",
+      "desc": "Vicoli suggestivi tra le montagne del Rif."
+    },
+    {
+      "number": 4,
+      "name": "Fes",
+      "day": "Giorni 4 e 5",
+      "subtitle": "Città Patrimonio UNESCO",
+      "desc": "Tour culturale guidato completo."
+    },
+    {
+      "number": 5,
+      "name": "Merzouga Sahara",
+      "day": "Giorno 6",
+      "subtitle": "Dune Dorate",
+      "desc": "Passeggiata in dromedario e campo tendato nel deserto."
+    },
+    {
+      "number": 6,
+      "name": "Todra e Dades",
+      "day": "Giorno 7",
+      "subtitle": "Canyon",
+      "desc": "Falesie rocciose spettacolari alte 300 metri."
+    },
+    {
+      "number": 7,
+      "name": "Ouarzazate",
+      "day": "Giorno 8",
+      "subtitle": "Ait Ben Haddou",
+      "desc": "Antica fortezza berbera in terra cruda dell'UNESCO."
+    },
+    {
+      "number": 8,
+      "name": "Marrakech",
+      "day": "Giorno 9",
+      "subtitle": "Finale nella Città Rossa",
+      "desc": "Giardini Majorelle e piazza Jemaa el-Fna."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/desert-tours/9-day-authentic-morocco-tour/images/thumbnail.jpg",
+      "cap": "Tour di 9 Giorni Marocco Autentico",
+      "alt": "Tour di 9 Giorni Marocco Autentico – Sahara Star Tours"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/9-day-authentic-morocco-tour/images/image-01.jpg",
+      "cap": "Medina di Marrakech e souk tradizionali",
+      "alt": "Banchi di spezie e lanterne artigianali nei souk di Marrakech"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/9-day-authentic-morocco-tour/images/image-02.jpg",
+      "cap": "Kasbah fortificata di Ait Ben Haddou",
+      "alt": "Architettura tradizionale in terra cruda ad Ait Ben Haddou"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/9-day-authentic-morocco-tour/images/image-03.jpg",
+      "cap": "Cammellata tra le dune di Merzouga",
+      "alt": "Carovana di dromedari che attraversa le sabbie di Erg Chebbi"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/9-day-authentic-morocco-tour/images/image-04.jpg",
+      "cap": "Campo tendato berbero di lusso nel Sahara",
+      "alt": "Tende illuminate sotto il cielo stellato del deserto"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/9-day-authentic-morocco-tour/images/image-05.jpg",
+      "cap": "Storiche concerie di Chouara a Fes",
+      "alt": "Antiche vasche di tintura delle pelli a Fes El Bali"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/9-day-authentic-morocco-tour/images/image-06.jpg",
+      "cap": "Vicoli dipinti di azzurro a Chefchaouen",
+      "alt": "Scorci e gradinate blu nella medina di Chefchaouen"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/9-day-authentic-morocco-tour/images/image-07.jpg",
+      "cap": "Moschea Hassan II sulla costa di Casablanca",
+      "alt": "Minareto e dettagli architettonici della Moschea Hassan II"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/9-day-authentic-morocco-tour/images/image-08.jpg",
+      "cap": "Valle dello Ziz e palmeti del sud",
+      "alt": "Oasi verdeggiante e palmeto nel canyon dello Ziz"
+    }
+  ],
+  "faqs": []
+}

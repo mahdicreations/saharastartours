@@ -1,0 +1,83 @@
+{
+  "slug": "day-trip-ouzoud-waterfalls",
+  "title": "Excursión de un Día a las Cascadas de Ouzoud desde Marrakech | Sahara Star",
+  "shortTitle": "Excursión de un Día a las Cascadas de Ouzoud",
+  "description": "Excursión desde Marrakech a las espectaculares Cascadas de Ouzoud de 110 metros en el Medio Atlas. Senderos junto al río, macacos de Berbería y paseo en barca.",
+  "aboutHtml": "Excursión de un día desde Marrakech a las Cascadas de Ouzoud y aldeas bereberes.<br/><br/>Esta excursión de un día hacia las cataratas de Ouzoud y las estribaciones del Atlas es una oportunidad fantástica para descubrir la impresionante naturaleza de Marruecos sin alejarse en exceso de Marrakech.<br/><br/>Saldremos a las 8:00 de la mañana en dirección a los valles del Medio Atlas en un viaje salpicado de olivares y pequeñas aldeas bereberes tradicionales de vida sosegada.<br/><br/>Caminar por los senderos de Ouzoud es una experiencia inolvidable que permite contemplar de cerca la grandeza de los saltos de agua de más de 110 metros de altura, refrescarse en las pozas naturales y avistar a los simpáticos macacos de Berbería que habitan libres en los peñones.<br/><br/>Disfrutaremos de un almuerzo tradicional con tajine en una terraza con vistas directas a las cataratas antes de regresar a Marrakech.",
+  "duration": "1 Día / Excursión de Día Completo",
+  "startingFrom": "Marrakech",
+  "price": "Desde 60 $/persona",
+  "highlights": [
+    "Ruta panorámica: Disfrute de hermosas vistas de aldeas bereberes y estribaciones del Medio Atlas.",
+    "Cascadas de Ouzoud: Admire la imponente majestuosidad de las cascadas más altas de Marruecos (110 metros).",
+    "Fauna autóctona: Observe macacos de Berbería salvajes en su hábitat natural en las rocas y árboles.",
+    "Ruta de senderismo: Caminata guiada por senderos naturales con miradores espectaculares.",
+    "Baño refrescante: Oportunidad de refrescarse en las aguas del río al pie de las cascadas.",
+    "Almuerzo tradicional bereber: Saboree un exquisito tajine elaborado por lugareños con vistas al río."
+  ],
+  "inclusions": [
+    "Transporte de ida y vuelta en vehículo moderno con aire acondicionado",
+    "Trayecto panorámico a través de aldeas bereberes y campos de olivos",
+    "Caminata guiada descendiendo hacia las espectaculares Cascadas de Ouzoud",
+    "Oportunidad de avistar macacos de Berbería salvajes"
+  ],
+  "exclusions": [
+    "Gastos personales y compras particulares",
+    "Propinas para guía local y chófer (opcionales)",
+    "Paseo opcional en barca de remos bajo la cascada",
+    "Almuerzo y bebidas no especificadas"
+  ],
+  "itinerary": [
+    {
+      "day": "Día 1",
+      "title": "Marrakech – Pueblos Bereberes – Medio Atlas – Cascadas de Ouzoud – Senderismo – Almuerzo Bereber",
+      "content": "Su jornada comienza con la recogida en Marrakech a las 8:00 h en dirección al noreste hacia el Medio Atlas. El trayecto discurre por fértiles llanuras agrícolas y colinas salpicadas de olivos milenarios y asentamientos bereberes. Al llegar a las Cascadas de Ouzoud, emprenderemos una caminata guiada por los senderos sombreados que descienden hacia la base del cañón, disfrutando del estruendo del agua cayendo desde 110 metros y de los arcoíris formados por el rocío. A lo largo del camino observará macacos salvajes que se aproximan curiosos a los visitantes. En la cuenca del río podrá cruzar en barcas tradicionales de madera hasta rozar la caída del agua. Disfrutaremos de un delicioso almuerzo bereber en un restaurante situado en la orilla con vistas panorámicas. Tiempo libre para descansar junto al agua antes de emprender el viaje de regreso a Marrakech a última hora de la tarde."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Marrakech",
+      "day": "Mañana",
+      "subtitle": "Salida",
+      "desc": "Trayecto matinal a través de las llanuras de Tadla."
+    },
+    {
+      "number": 2,
+      "name": "Estribaciones del Medio Atlas",
+      "day": "En Ruta",
+      "subtitle": "Aldeas Bereberes",
+      "desc": "Campos de olivos y arquitectura tradicional de adobe."
+    },
+    {
+      "number": 3,
+      "name": "Cascadas de Ouzoud",
+      "day": "Tarde",
+      "subtitle": "Saltos de 110 m y Macacos",
+      "desc": "Descenso a pie a las pozas, paseo en barca y monos en libertad."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/day-trips/one-day-trip-from-marrakech-to-the-ouzoud-waterfalls-and-berber-/images/thumbnail.jpg",
+      "cap": "Excursión de un Día a las Cascadas de Ouzoud y Aldeas Bereberes",
+      "alt": "Impresionante caída de agua de las Cascadas de Ouzoud en el Medio Atlas"
+    },
+    {
+      "src": "/sahara-star-tours/day-trips/one-day-trip-from-marrakech-to-the-ouzoud-waterfalls-and-berber-/images/image-01.jpg",
+      "cap": "Excursión de un Día a las Cascadas de Ouzoud y Aldeas Bereberes",
+      "alt": "Macaco salvaje de Berbería en las rocas de las cascadas de Ouzoud"
+    },
+    {
+      "src": "/sahara-star-tours/day-trips/one-day-trip-from-marrakech-to-the-ouzoud-waterfalls-and-berber-/images/image-02.webp",
+      "cap": "Excursión de un Día a las Cascadas de Ouzoud y Aldeas Bereberes",
+      "alt": "Barcas de madera tradicionales navegando bajo las cascadas de Ouzoud"
+    },
+    {
+      "src": "/sahara-star-tours/day-trips/one-day-trip-from-marrakech-to-the-ouzoud-waterfalls-and-berber-/images/image-03.jpeg",
+      "cap": "Excursión de un Día a las Cascadas de Ouzoud y Aldeas Bereberes",
+      "alt": "Restaurantes y terrazas tradicionales junto al río en Ouzoud"
+    }
+  ],
+  "faqs": []
+}

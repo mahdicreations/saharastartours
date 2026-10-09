@@ -1,10 +1,13 @@
 ---
 // contact.astro — Contact & Custom Trip Planning Page
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getAlternateUrls } from '../data/i18n';
+
+const alternateUrls = getAlternateUrls('/contact');
 
 const seoTitle = "Contact Sahara Star Tours | Plan Your Custom Morocco Tour";
 const seoDescription = "Contact Sahara Star Tours in Marrakech. Plan your custom private Morocco itinerary, Sahara desert expedition, or luxury riad journey with local experts.";
-const canonicalUrl = "https://www.saharastartours.com/contact";
+const canonicalUrl = alternateUrls.en;
 
 const contactSchema = {
   "@context": "https://schema.org",
@@ -53,6 +56,7 @@ const contactSchema = {
   description={seoDescription}
   canonicalUrl={canonicalUrl}
   currentPage="contact"
+  alternateUrls={alternateUrls}
   schemaData={contactSchema}
 >
   <!-- HERO BANNER -->

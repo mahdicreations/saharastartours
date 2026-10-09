@@ -1,0 +1,175 @@
+{
+  "slug": "4-days-marrakech-to-fes-desert-tour",
+  "title": "Tour di 4 Giorni da Marrakech a Fes nel Deserto di Merzouga | Sahara Star Tours",
+  "shortTitle": "Tour di 4 Giorni da Marrakech a Fes nel Deserto",
+  "description": "Circuito privato di 4 giorni da Marrakech a Fes attraverso Ait Ben Haddou, le Gole del Todra, le dune di Erg Chebbi e la foresta di cedri del Medio Atlante.",
+  "aboutHtml": "<p>Questo tour privato di 4 giorni da Marrakech a Fes è l'itinerario perfetto per viaggiare tra le due celebri città imperiali scoprendo le meraviglie del sud del Marocco. Attraverserai l'Alto Atlante visitando la leggendaria Kasbah di Ait Ben Haddou, esplorerai le maestose gole del Dades e del Todra e trascorrerai due notti indimenticabili a Merzouga: una in campo tendato di lusso tra le dune dell'Erg Chebbi e una in hotel dopo aver incontrato le famiglie nomadi e la musica gnawa, per poi raggiungere Fes attraverso il Medio Atlante.</p>",
+  "duration": "4 Giorni / 3 Notti",
+  "startingFrom": "Marrakech",
+  "price": "Da $520/persona",
+  "highlights": [
+    "Dune dorate di Merzouga ed Erg Chebbi",
+    "Trekking a dorso di dromedario nel deserto al tramonto",
+    "Notte in campo tendato di lusso con cena e colazione berbera",
+    "Kasbah di Ait Ben Haddou, sito UNESCO leggendario",
+    "Itinerario panoramico attraverso le montagne dell'Alto Atlante",
+    "Medina di Fes e tesori culturali storici"
+  ],
+  "inclusions": [
+    "Veicolo privato 4×4 o minivan con aria condizionata",
+    "Autista/guida locale professionista per l'intero viaggio",
+    "Carburante, pedaggi e spese operative del veicolo",
+    "Sistemazione in riad nel Dades, hotel a Merzouga e campo tendato di lusso",
+    "Colazioni e cene incluse come da itinerario",
+    "Trekking in dromedario tra le dune con assistenza completa"
+  ],
+  "exclusions": [
+    "Pranzi e bevande",
+    "Voli aerei nazionali e internazionali",
+    "Biglietti d'ingresso per monumenti facoltativi",
+    "Mance e spese personali"
+  ],
+  "itinerary": [
+    {
+      "day": "Giorno 1",
+      "title": "Marrakech – Alto Atlante – Kasbah Ait Ben Haddou – Ouarzazate – Valle delle Rose – Boumalne Dades",
+      "content": "Partenza al mattino presto dal tuo alloggio o dall'aeroporto di Marrakech. Attraverserai l'Alto Atlante attraverso il suggestivo valico del Tizi N'Tichka (2.260 m), ammirando villaggi berberi e spettacolari panorami montani. Visiterai la celebre Kasbah di Ait Ben Haddou, sito UNESCO set di film indimenticabili. Dopo il pranzo proseguirai oltre Ouarzazate, attraverso l'oasi di Skoura e la Valle delle Rose fino a raggiungere Boumalne Dades per cena e pernottamento in un caratteristico riad."
+    },
+    {
+      "day": "Giorno 2",
+      "title": "Boumalne Dades – Gole del Todra – Erfoud – Deserto di Merzouga – Campo di lusso",
+      "content": "Dopo la prima colazione ammirerai le suggestive gole della Valle del Dades prima di dirigerti verso le spettacolari Gole del Todra, passeggiando tra gigantesche falesie verticali di roccia rossa. Tempo per il pranzo. Proseguirai poi verso Erfoud per scoprire i laboratori di fossili e giungerai a Merzouga. Nel pomeriggio salirai a dorso di dromedario per ammirare il tramonto tra le dune dell'Erg Chebbi e raggiungere l'accampamento di lusso con cena tipica berbera e musica di tamburi attorno al fuoco."
+    },
+    {
+      "day": "Giorno 3",
+      "title": "Esplorazione di Merzouga – Famiglie Nomadi – Khamlia – Lago di Merzouga – Erg Chebbi – Palmeraie",
+      "content": "Sveglia all'alba per contemplare lo spettacolo del sole che sorge sulle dune, seguita dalla prima colazione. Rientro in dromedario a Merzouga per un'emozionante giornata in 4×4: visiterai antiche miniere di kohl, sosterai presso una famiglia nomade berbera per un tè alla menta e assisterai a una performance di musica spirituale gnawa a Khamlia. Nel pomeriggio passeggerai nell'oasi e visiterai il lago di Merzouga. Cena e pernottamento in hotel ai piedi delle dune."
+    },
+    {
+      "day": "Giorno 4",
+      "title": "Dune di Merzouga – Erfoud – Midelt – Foresta di Cedri – Ifrane – Fes",
+      "content": "L'ultima giornata ti condurrà a Rissani per una passeggiata nel caratteristico mercato tradizionale. Risalirai la Valle dello Ziz verso Midelt per il pranzo libero e attraverserai la Foresta di Cedri di Azrou per osservare le scimmie barbaresche. Dopo una sosta nella cittadina alpina di Ifrane, giungerai a Fes nel tardo pomeriggio con trasferimento al tuo riad o in aeroporto."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Marrakech",
+      "day": "Giorno 1",
+      "subtitle": "Marrakech – Alto Atlante – Ait Ben Haddou – Ouarzazate – Boumalne Dades",
+      "desc": "Partenza da Marrakech attraverso il Tizi N'Tichka e Ait Ben Haddou verso la Valle del Dades."
+    },
+    {
+      "number": 2,
+      "name": "Boumalne Dades",
+      "day": "Giorno 2",
+      "subtitle": "Boumalne Dades – Gole del Todra – Erfoud – Merzouga – Campo di lusso",
+      "desc": "Visita delle Gole del Todra, arrivo a Merzouga e notte in campo tendato di lusso."
+    },
+    {
+      "number": 3,
+      "name": "Regione di Merzouga",
+      "day": "Giorno 3",
+      "subtitle": "Esplorazione di Merzouga – Nomadi – Khamlia – Lago – Palmeraie",
+      "desc": "Escursione in 4×4 alla scoperta di famiglie nomadi, cultura Gnawa e oasi a Merzouga."
+    },
+    {
+      "number": 4,
+      "name": "Dune di Merzouga a Fes",
+      "day": "Giorno 4",
+      "subtitle": "Merzouga – Erfoud – Midelt – Foresta di Cedri – Ifrane – Fes",
+      "desc": "Viaggio attraverso la Valle dello Ziz, foresta di cedri e Ifrane con arrivo a Fes."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/4-days-marrakech-to-fes-desert-tour/images/gallery_1.webp",
+      "cap": "Passo Tizi N'Tichka",
+      "alt": "Spettacolare strada di montagna dell'Alto Atlante attraverso il passo Tizi N'Tichka"
+    },
+    {
+      "src": "/sahara-star-tours/4-days-marrakech-to-fes-desert-tour/images/gallery_10.webp",
+      "cap": "Madrasa Al Attarine",
+      "alt": "Corte storica della madrasa Al Attarine con intricati arabeschi a Fes"
+    },
+    {
+      "src": "/sahara-star-tours/4-days-marrakech-to-fes-desert-tour/images/gallery_2.webp",
+      "cap": "Ait Ben Haddou",
+      "alt": "Torri fortificate in mattoni di fango di Ait Ben Haddou contro il cielo del deserto"
+    },
+    {
+      "src": "/sahara-star-tours/4-days-marrakech-to-fes-desert-tour/images/gallery_3.webp",
+      "cap": "Kasbah Taourirt",
+      "alt": "Mura in argilla e palme della Kasbah Taourirt a Ouarzazate"
+    },
+    {
+      "src": "/sahara-star-tours/4-days-marrakech-to-fes-desert-tour/images/gallery_4.webp",
+      "cap": "Gole del Todra",
+      "alt": "Imponenti pareti verticali di roccia del canyon delle Gole del Todra"
+    },
+    {
+      "src": "/sahara-star-tours/4-days-marrakech-to-fes-desert-tour/images/gallery_5.webp",
+      "cap": "Dune di Erg Chebbi",
+      "alt": "Carovana di dromedari guidata tra le sabbie dorate dell'Erg Chebbi"
+    },
+    {
+      "src": "/sahara-star-tours/4-days-marrakech-to-fes-desert-tour/images/gallery_6.webp",
+      "cap": "Serata nel campo tendato",
+      "alt": "Incontro attorno al falò con tamburi tradizionali sotto le stelle del deserto"
+    },
+    {
+      "src": "/sahara-star-tours/4-days-marrakech-to-fes-desert-tour/images/gallery_7.webp",
+      "cap": "Valle dello Ziz",
+      "alt": "Palmeti e villaggi in terra cruda lungo il sinuoso canyon del fiume Ziz"
+    },
+    {
+      "src": "/sahara-star-tours/4-days-marrakech-to-fes-desert-tour/images/gallery_8.webp",
+      "cap": "Foresta di Cedri",
+      "alt": "Foresta di cedri di Azrou con le tipiche scimmie barbaresche autoctone"
+    },
+    {
+      "src": "/sahara-star-tours/4-days-marrakech-to-fes-desert-tour/images/gallery_9.webp",
+      "cap": "Panorama di Fes",
+      "alt": "Panorama della città medievale murata di Fes dalle Tombe Merinidi"
+    },
+    {
+      "src": "/sahara-star-tours/4-days-marrakech-to-fes-desert-tour/images/hero_2.webp",
+      "cap": "Tramonto a Merzouga",
+      "alt": "Tramonto che proietta lunghe ombre dorate sulle dune di sabbia di Merzouga"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Questo tour è privato o condiviso?",
+      "answer": "È un'esperienza completamente privata: auto, autista e itinerario sono riservati in esclusiva a te e al tuo gruppo."
+    },
+    {
+      "question": "Quanto dura il tragitto in dromedario e ci sono alternative?",
+      "answer": "La passeggiata dura circa 40-90 minuti. È possibile richiedere il trasferimento diretto al campo tendato in 4×4 senza alcun costo aggiuntivo."
+    },
+    {
+      "question": "Come sono organizzate le tende nel campo di lusso?",
+      "answer": "Le tende dispongono di comodi letti veri, bagno privato interno con wc e doccia calda ed elettricità."
+    },
+    {
+      "question": "Da dove si parte e dove termina il viaggio?",
+      "answer": "Verremo a prenderti presso il tuo riad, hotel o all'aeroporto di Marrakech e ti riaccompagneremo al tuo alloggio o all'aeroporto di Fes."
+    },
+    {
+      "question": "Quale mezzo di trasporto viene impiegato?",
+      "answer": "Il viaggio si svolge a bordo di un moderno fuoristrada 4×4 o comodo minivan con aria condizionata e capiente vano bagagli."
+    },
+    {
+      "question": "È possibile richiedere menu per particolari esigenze dietetiche?",
+      "answer": "Certamente: piatti vegetariani, vegani o senza glutine possono essere preparati senza problemi segnalandolo alla prenotazione."
+    },
+    {
+      "question": "Il viaggio è adatto anche a famiglie con bambini o anziani?",
+      "answer": "Sì, le 4 giornate di viaggio consentono di suddividere bene le distanze e prevedono frequenti soste panoramiche."
+    },
+    {
+      "question": "Qual è il periodo migliore per questo viaggio?",
+      "answer": "Da ottobre a maggio le temperature sono ideali per viaggiare tra le montagne e il deserto."
+    }
+  ]
+}

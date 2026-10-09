@@ -1,0 +1,66 @@
+{
+  "slug": "raid-buggy-marrakech",
+  "title": "Safari en Buggy por el Desierto y Palmeral de Marrakech | Sahara Star Tours",
+  "shortTitle": "Safari en Buggy en Marrakech",
+  "description": "Pilote potentes buggies todoterreno por los senderos del desierto de Marrakech, aldeas bereberes y oasis de palmeras. Aventura guiada con equipo de seguridad prémium.",
+  "aboutHtml": "Aventura en buggy de media jornada en Marrakech.<br/><br/>Disfrute de la emoción de pilotar un buggy de alta cilindrada por los espectaculares parajes naturales de Marrakech. Podrá elegir entre las ondulantes colinas del desierto de piedra de Agafay o los frondosos senderos del palmeral.<br/><br/>Sienta la adrenalina mientras sortea pistas de arena, cañadas secas y senderos rurales bajo el azul intenso del cielo marroquí y con la imponente cordillera del Atlas como telón de fondo.<br/><br/>El tour incluye equipamiento de seguridad completo, monitores profesionales y una agradable pausa para compartir un té tradicional con una familia bereber local en su hogar antes de regresar a la ciudad.",
+  "duration": "Media Jornada / 3-4 Horas",
+  "startingFrom": "Marrakech",
+  "price": "Desde 110 $/persona",
+  "highlights": [
+    "Emocionante ruta en buggy todoterreno por el palmeral o el desierto de Agafay.",
+    "Deguste té marroquí a la menta en una casa tradicional bereber.",
+    "Pase por aldeas rurales y caminos de tierra fuera de las rutas habituales.",
+    "Vistas panorámicas espectaculares de la cordillera del Alto Atlas."
+  ],
+  "inclusions": [
+    "Traslados de ida y vuelta al hotel en vehículo privado",
+    "Buggy todoterreno prémium y equipamiento completo de seguridad homologado",
+    "Guía profesional de rutas off-road y clase de iniciación técnica",
+    "Refrescos y té tradicional a la menta en una casa bereber"
+  ],
+  "exclusions": [
+    "Gastos personales y compras de recuerdos",
+    "Propinas para su monitor y chófer (opcionales)",
+    "Comidas y bebidas adicionales",
+    "Seguro facultativo especial para daños propios"
+  ],
+  "itinerary": [
+    {
+      "day": "Día 1",
+      "title": "Raid Buggy en Marrakech",
+      "content": "Recogida en su hotel en Marrakech y traslado al punto de inicio. Presentación de los buggies todoterreno, entrega de cascos y gafas, y detallada sesión informativa sobre la conducción segura del vehículo. Comienza una emocionante ruta guiada de dos horas explorando pistas de tierra y colinas pedregosas con magníficas vistas panorámicas. A mitad de recorrido, visita a un hogar bereber tradicional para disfrutar de un reconfortante té a la menta y conversar con los habitantes locales. Retorno a la base y traslado de vuelta a su hotel."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Marrakech",
+      "day": "Salida",
+      "subtitle": "Recogida en Hotel",
+      "desc": "Traslado privado desde su alojamiento en Marrakech."
+    },
+    {
+      "number": 2,
+      "name": "Oasis del Palmeral de Marrakech",
+      "day": "Actividad",
+      "subtitle": "Pistas y Palmeras",
+      "desc": "Pistas todoterreno en buggy con las cumbres del Atlas al fondo."
+    },
+    {
+      "number": 3,
+      "name": "Campamento Oasis Bereber",
+      "day": "Pausa Té",
+      "subtitle": "Hospitalidad y Té a la Menta",
+      "desc": "Descanso en un hogar tradicional bereber con té a la menta."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/activities/raid-buggy-in-marrakech/images/thumbnail.jpg",
+      "cap": "Safari en Buggy por el Desierto y Palmeral de Marrakech",
+      "alt": "Vehículo buggy todoterreno en pistas del desierto con palmeras y montañas al fondo"
+    }
+  ],
+  "faqs": []
+}

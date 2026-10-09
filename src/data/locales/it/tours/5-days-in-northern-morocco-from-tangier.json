@@ -1,0 +1,182 @@
+{
+  "slug": "5-days-in-northern-morocco-from-tangier",
+  "title": "Tour di 5 Giorni nel Nord del Marocco da Tangeri | Sahara Star Tours",
+  "shortTitle": "Tour di 5 Giorni nel Nord del Marocco",
+  "description": "Circuito privato di 5 giorni da Tangeri a Casablanca alla scoperta di Chefchaouen, Volubilis, Meknes, Fes e Rabat. Esplora la città blu e le capitali storiche.",
+  "aboutHtml": "<p>Questo tour privato di 5 giorni nel nord del Marocco è un magnifico itinerario culturale che parte dalla leggendaria Tangeri, si inerpica tra i rilievi del Rif verso i vicoli celesti di Chefchaouen, visita il sito archeologico di Volubilis e la città imperiale di Meknes, svela i segreti millenari di Fes con una guida locale e attraversa la capitale Rabat prima di giungere a Casablanca.</p>",
+  "duration": "5 Giorni / 4 Notti",
+  "startingFrom": "Tangeri",
+  "price": "Da $650/persona",
+  "highlights": [
+    "Chefchaouen, la città blu tra le montagne del Rif",
+    "Medina di Fes e tesori culturali storici",
+    "Tangeri, la porta cosmopolita dell'Africa",
+    "Volubilis e i suoi mosaici romani patrimonio UNESCO",
+    "Meknes e la monumentale porta Bab Mansour",
+    "Rabat, la capitale del regno e la Kasbah degli Oudaia"
+  ],
+  "inclusions": [
+    "Veicolo privato 4×4 o minivan con aria condizionata",
+    "Autista/guida locale esperto e trasferimenti privati",
+    "Carburante, pedaggi e spese operative del veicolo",
+    "Sistemazione in riad/hotel selezionati secondo l'itinerario",
+    "Colazioni e cene incluse come da programma"
+  ],
+  "exclusions": [
+    "Pranzi e bevande",
+    "Voli aerei e trasferimenti portuali/aeroportuali non specificati",
+    "Biglietti d'ingresso per monumenti facoltativi",
+    "Mance e gratifiche"
+  ],
+  "itinerary": [
+    {
+      "day": "Giorno 1",
+      "title": "Arrivo a Tangeri – Chefchaouen",
+      "content": "Il tuo tour nel nord del Marocco inizia con il prelievo al porto, all'aeroporto o al tuo alloggio a Tangeri. Conosciuta come 'la sposa del nord', visiterai i luoghi più suggestivi: le mitiche Grotte d'Ercole e Capo Spartel, dove le acque dell'Oceano Atlantico incontrano quelle del Mar Mediterraneo. Proseguirai quindi verso est attraverso le montagne del Rif fino alla meravigliosa Chefchaouen. Sistemazione e cena in un tipico riad."
+    },
+    {
+      "day": "Giorno 2",
+      "title": "Visita di Chefchaouen, la città blu",
+      "content": "Dopo la prima colazione avrai a disposizione l'intera giornata per esplorare Chefchaouen. Passeggerai tra le stradine dipinte in mille sfumature di blu e azzurro, scoprendo porte intagliate e scorci fotografici incantevoli. Visiterai piazza Outa el-Hammam, la kasbah in mattoni di terra cruda e la sorgente di Ras el-Maa, con la possibilità di salire alla Moschea Spagnola per ammirare un tramonto mozzafiato sulla vallata."
+    },
+    {
+      "day": "Giorno 3",
+      "title": "Chefchaouen – Rovine Romane di Volubilis – Meknes – Fes",
+      "content": "Dopo la prima colazione partirai verso il celebre sito romano di Volubilis (Patrimonio UNESCO), ammirando mosaici raffinati, basiliche e archi di trionfo. Proseguirai per la vicina città imperiale di Meknes per ammirare la maestosa porta Bab Mansour, i granai reali e il mausoleo di Moulay Ismail. Nel tardo pomeriggio giungerai a Fes per cena e pernottamento in riad."
+    },
+    {
+      "day": "Giorno 4",
+      "title": "Visita guidata di Fes con guida locale",
+      "content": "Intera giornata dedicata alla scoperta dell'antica medina di Fes el-Bali con una guida ufficiale locale. Inizierai con il Palazzo Reale e le sue porte in bronzo dorato, il quartiere ebraico del Mellah e la vista panoramica dal Borj Sud. Ti addentrerai poi a piedi nel cuore medievale della città patrimonio UNESCO: ammirerai la Madrasa Al Attarine, l'Università Al Quaraouiyine (la più antica università attiva al mondo), antiche fontane e le celebri concerie di Chouara. Pomeriggio di relax in riad."
+    },
+    {
+      "day": "Giorno 5",
+      "title": "Fes – Rabat – Casablanca",
+      "content": "Nell'ultima giornata viaggerai verso Rabat, capitale amministrativa del Marocco. Ammirerai la Torre Hassan, il Mausoleo di Mohammed V e la Kasbah degli Oudaia affacciata sull'oceano. Dopo il pranzo proseguirai per Casablanca per ammirare l'esterno della monumentale Moschea Hassan II. Il viaggio si concluderà con il trasferimento in aeroporto o al tuo alloggio a Casablanca."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Arrivo a Tangeri",
+      "day": "Giorno 1",
+      "subtitle": "Tangeri – Grotte d'Ercole – Chefchaouen",
+      "desc": "Pick-up a Tangeri, visita a Capo Spartel e trasferimento panoramico a Chefchaouen."
+    },
+    {
+      "number": 2,
+      "name": "Chefchaouen la città blu",
+      "day": "Giorno 2",
+      "subtitle": "Esplorazione della medina blu di Chefchaouen",
+      "desc": "Intera giornata tra vicoli dipinti d'azzurro, Kasbah e scorci suggestivi di Chefchaouen."
+    },
+    {
+      "number": 3,
+      "name": "Chefchaouen a Fes",
+      "day": "Giorno 3",
+      "subtitle": "Chefchaouen – Volubilis – Meknes – Fes",
+      "desc": "Visita delle rovine romane di Volubilis e dell'imperiale Meknes verso Fes."
+    },
+    {
+      "number": 4,
+      "name": "Visita di Fes",
+      "day": "Giorno 4",
+      "subtitle": "Tour guidato della medina storica di Fes",
+      "desc": "Percorso culturale tra Palazzo Reale, Mellah, madrasse storiche e concerie a Fes."
+    },
+    {
+      "number": 5,
+      "name": "Fes a Casablanca",
+      "day": "Giorno 5",
+      "subtitle": "Fes – Rabat – Casablanca",
+      "desc": "Monumenti di Rabat, Moschea Hassan II a Casablanca e conclusione del tour."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/5-days-in-northern-morocco-from-tangier/images/gallery_1.webp",
+      "cap": "Grotte d'Ercole",
+      "alt": "Apertura naturale sul mare delle Grotte d'Ercole scolpita nella roccia a Tangeri"
+    },
+    {
+      "src": "/sahara-star-tours/5-days-in-northern-morocco-from-tangier/images/gallery_10.webp",
+      "cap": "Torre Hassan",
+      "alt": "Spianata della Torre Hassan e del Mausoleo di Mohammed V a Rabat"
+    },
+    {
+      "src": "/sahara-star-tours/5-days-in-northern-morocco-from-tangier/images/gallery_2.webp",
+      "cap": "Capo Spartel",
+      "alt": "Promontorio di Capo Spartel dove l'Oceano Atlantico incontra il Mediterraneo"
+    },
+    {
+      "src": "/sahara-star-tours/5-days-in-northern-morocco-from-tangier/images/gallery_3.webp",
+      "cap": "Vicoli di Chefchaouen",
+      "alt": "Scalinata sinuosa dipinta di blu bordata da vasi di fiori a Chefchaouen"
+    },
+    {
+      "src": "/sahara-star-tours/5-days-in-northern-morocco-from-tangier/images/gallery_4.webp",
+      "cap": "Porte di Chefchaouen",
+      "alt": "Vie della medina dipinte d'azzurro e rustiche porte in legno a Chefchaouen"
+    },
+    {
+      "src": "/sahara-star-tours/5-days-in-northern-morocco-from-tangier/images/gallery_5.webp",
+      "cap": "Mosaici di Volubilis",
+      "alt": "Antichi mosaici pavimentali romani conservati tra le rovine di Volubilis"
+    },
+    {
+      "src": "/sahara-star-tours/5-days-in-northern-morocco-from-tangier/images/gallery_6.webp",
+      "cap": "Bab Mansour",
+      "alt": "Storica porta imperiale di Bab Mansour nella città antica di Meknes"
+    },
+    {
+      "src": "/sahara-star-tours/5-days-in-northern-morocco-from-tangier/images/gallery_7.webp",
+      "cap": "Belvedere di Fes",
+      "alt": "Veduta panoramica dei tetti della città medievale fortificata di Fes el-Bali"
+    },
+    {
+      "src": "/sahara-star-tours/5-days-in-northern-morocco-from-tangier/images/gallery_8.webp",
+      "cap": "Moschea Al Quaraouiyine",
+      "alt": "Architettura della moschea e biblioteca di Al Quaraouiyine nella Fes medievale"
+    },
+    {
+      "src": "/sahara-star-tours/5-days-in-northern-morocco-from-tangier/images/gallery_9.webp",
+      "cap": "Kasbah degli Oudaia",
+      "alt": "Mura in pietra della Kasbah degli Oudaia e giardini andalusi a Rabat"
+    },
+    {
+      "src": "/sahara-star-tours/5-days-in-northern-morocco-from-tangier/images/hero_2.webp",
+      "cap": "Panorama di Chefchaouen",
+      "alt": "Veduta panoramica della caratteristica cittadina blu di Chefchaouen"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Questo tour è privato o condiviso?",
+      "answer": "È un tour completamente privato: auto, conducente e programma sono a uso esclusivo del tuo gruppo per garantire massima flessibilità."
+    },
+    {
+      "question": "Dove avvengono la partenza e il termine del tour?",
+      "answer": "Il viaggio inizia al tuo arrivo al porto, aeroporto o alloggio a Tangeri e termina a Casablanca con rientro al tuo hotel o all'aeroporto Mohammed V."
+    },
+    {
+      "question": "Quale mezzo di trasporto viene impiegato?",
+      "answer": "Si viaggia in moderni fuoristrada 4×4 o comodi minivan con aria condizionata e capiente vano bagagli."
+    },
+    {
+      "question": "È possibile richiedere menu per particolari esigenze dietetiche?",
+      "answer": "Certamente: piatti vegetariani, vegani o senza glutine possono essere predisposti comunicandolo al momento della prenotazione."
+    },
+    {
+      "question": "Questo itinerario è consigliato per ogni fascia d'età?",
+      "answer": "Sì, è un circuito perfetto per famiglie con bambini, coppie e viaggiatori anziani con tappe calibrate e soste regolari."
+    },
+    {
+      "question": "Qual è il periodo migliore dell'anno per partire?",
+      "answer": "La primavera e l'autunno offrono temperature ideali per scoprire il nord, i monti del Rif e le storiche città imperiali."
+    },
+    {
+      "question": "Come si effettua la prenotazione?",
+      "answer": "Inviaci una richiesta indicando date e numero di persone: il team di Sahara Star Tours ti assisterà per confermare tutti i dettagli."
+    }
+  ]
+}

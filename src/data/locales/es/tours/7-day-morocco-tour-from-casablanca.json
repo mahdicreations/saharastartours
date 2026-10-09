@@ -1,0 +1,206 @@
+{
+  "slug": "7-day-morocco-tour-from-casablanca",
+  "title": "Circuito de 7 Días por Marruecos de Casablanca a Marrakech | Sahara Star Tours",
+  "shortTitle": "Circuito de 7 Días desde Casablanca a Marrakech",
+  "description": "Viaje privado de 7 días por Marruecos: Casablanca, Rabat, Chefchaouen la Perla Azul, ruinas de Volubilis, Medina de Fez, dunas de Merzouga y Marrakech.",
+  "aboutHtml": "Disfruta de una inolvidable expedición privada de 7 días comenzando en Casablanca y culminando en Marrakech. Descubre la majestuosa Mezquita Hassan II, la capital real de Rabat y el encanto azul de Chefchaouen en las montañas del Rif. Explora el legado romano de Volubilis y los tesoros medievales de Fez antes de cruzar el Medio Atlas hacia las dunas doradas de Erg Chebbi. Vive una noche mágica en un campamento de lujo bajo el cielo estrellado del Sáhara y continúa por las Gargantas del Todra, el Valle del Dades y la Kasbah de Ait Ben Haddou hasta llegar a Marrakech.",
+  "duration": "7 Días / 6 Noches",
+  "startingFrom": "Casablanca",
+  "price": "Desde $890/persona",
+  "highlights": [
+    "Mezquita Hassan II en Casablanca y capital de Rabat",
+    "Chefchaouen, la Perla Azul en las montañas del Rif",
+    "Ruinas romanas de Volubilis y ciudad imperial de Meknes",
+    "Visita cultural guiada en la medina medieval de Fez",
+    "Dunas doradas de Erg Chebbi con paseo en dromedario y campamento de lujo",
+    "Gargantas del Todra, Valle del Dades y Kasbah de Ait Ben Haddou"
+  ],
+  "inclusions": [
+    "Vehículo privado 4x4 o monovolumen con aire acondicionado",
+    "Conductor/guía local experimentado durante todo el viaje",
+    "Combustible, peajes y costes operativos del vehículo",
+    "Alojamiento en riads y hoteles confortables seleccionados",
+    "Desayunos diarios y cenas especificadas en el itinerario",
+    "Paseo en dromedario y noche en campamento de lujo en el desierto"
+  ],
+  "exclusions": [
+    "Almuerzos y bebidas",
+    "Vuelos internacionales y traslados no especificados",
+    "Gastos personales y actividades opcionales",
+    "Propinas y gratificaciones"
+  ],
+  "itinerary": [
+    {
+      "day": "Día 1",
+      "title": "Llegada a Casablanca – Visita de la Mayor Ciudad de Marruecos",
+      "content": "Bienvenida a tu llegada al aeropuerto o en tu hotel en Casablanca. Comenzaremos el viaje visitando la impresionante Mezquita Hassan II, una de las mayores obras arquitectónicas islámicas del mundo, situada al borde del Océano Atlántico. Recorrido por el paseo marítimo de la Corniche y traslado a tu hotel para descansar."
+    },
+    {
+      "day": "Día 2",
+      "title": "Casablanca – Rabat, la Capital – Chefchaouen",
+      "content": "Salida hacia Rabat, la capital política de Marruecos. Visitaremos la Torre Hassan, el Mausoleo de Mohammed V y la pintoresca Kasbah de los Oudayas. A continuación nos adentraremos en las montañas del Rif hacia Chefchaouen, la famosa \"Ciudad Azul\". Tiempo libre para pasear por sus callejuelas empedradas teñidas de añil y contemplar la puesta de sol desde el mirador."
+    },
+    {
+      "day": "Día 3",
+      "title": "Chefchaouen – Ruinas Romanas de Volubilis – Meknes – Fez",
+      "content": "Mañana libre para disfrutar de los rincones tranquilos de Chefchaouen. Después viajaremos hacia Volubilis para contemplar los asombrosos mosaicos romanos en este enclave de la UNESCO. Parada en Meknes para admirar la monumental puerta Bab El Mansour y continuación hacia Fez para instalarnos en un riad tradicional."
+    },
+    {
+      "day": "Día 4",
+      "title": "Visita Guiada Histórica de Fez con Guía Local",
+      "content": "Jornada dedicada a explorar Fez El Bali con un guía local oficial. Descubriremos la Mezquita y Universidad Al Quaraouiyine, la Madraza Bou Inania, las históricas curtidurías Chouara y el barrio judío del Mellah. Podrás contemplar a los artesanos tradicionales del cobre, cerámica y cuero en los antiguos gremios de la medina."
+    },
+    {
+      "day": "Día 5",
+      "title": "Fez – Ifrane – Bosque de Cedros – Midelt – Valle del Ziz – Merzouga",
+      "content": "Viaje hacia el sur atravesando Ifrane y los frondosos bosques de cedros de Azrou, donde habitan los macacos de Berbería. Parada para almorzar en Midelt y descenso por las impresionantes gargantas y palmerales del Valle del Ziz. Por la tarde llegaremos a Merzouga; cambio al dromedario para cruzar las dunas de Erg Chebbi y disfrutar del atardecer antes de cenar en nuestro campamento de lujo bajo las estrellas."
+    },
+    {
+      "day": "Día 6",
+      "title": "Merzouga – Rissani – Erfoud – Gargantas del Todra – Valle del Dades",
+      "content": "Amanecer sobre las dunas y desayuno en el campamento. Visita al histórico mercado de Rissani y a los talleres de fósiles de Erfoud. Paseo entre los imponentes acantilados verticales de las Gargantas del Todra y continuación por la ruta de las Kasbahs hasta el Valle del Dades para pasar la noche."
+    },
+    {
+      "day": "Día 7",
+      "title": "Valle del Dades – Valle de las Rosas – Ouarzazate – Kasbah Ait Ben Haddou – Alto Atlas – Marrakech",
+      "content": "Recorrido por el Valle de las Rosas y los palmerales de Skoura hasta Ouarzazate. Visita al emblemático ksar de Ait Ben Haddou, escenario de innumerables películas históricas. Cruzaremos el Alto Atlas por el sinuoso puerto de Tizi n'Tichka (2.260 m), culminando el viaje en Marrakech con traslado a tu hotel o al aeropuerto."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Casablanca",
+      "day": "Día 1",
+      "subtitle": "Llegada y Mezquita Hassan II",
+      "desc": "Bienvenida en Casablanca y visita a la majestuosa Mezquita Hassan II frente al océano."
+    },
+    {
+      "number": 2,
+      "name": "Rabat y Chefchaouen",
+      "day": "Día 2",
+      "subtitle": "Casablanca – Rabat – Chefchaouen",
+      "desc": "Monumentos de la capital Rabat y llegada a la mágica ciudad azul de Chefchaouen."
+    },
+    {
+      "number": 3,
+      "name": "Volubilis y Meknes",
+      "day": "Día 3",
+      "subtitle": "Chefchaouen – Volubilis – Meknes – Fez",
+      "desc": "Mosaicos romanos de Volubilis, Bab El Mansour en Meknes y llegada a Fez."
+    },
+    {
+      "number": 4,
+      "name": "Fez",
+      "day": "Día 4",
+      "subtitle": "Visita Guiada de Fez",
+      "desc": "Inmersión cultural por la medina medieval de Fez con guía local oficial."
+    },
+    {
+      "number": 5,
+      "name": "Merzouga Sáhara",
+      "day": "Día 5",
+      "subtitle": "Fez – Atlas – Valle del Ziz – Erg Chebbi",
+      "desc": "Travesía del Atlas, paseo en dromedario y noche en campamento bereber prémium."
+    },
+    {
+      "number": 6,
+      "name": "Valle del Dades",
+      "day": "Día 6",
+      "subtitle": "Merzouga – Todra – Valle del Dades",
+      "desc": "Amanecer en las dunas, acantilados del Todra y noche en el Valle del Dades."
+    },
+    {
+      "number": 7,
+      "name": "Marrakech",
+      "day": "Día 7",
+      "subtitle": "Dades – Ait Ben Haddou – Alto Atlas – Marrakech",
+      "desc": "Kasbah de Ait Ben Haddou, puerto de Tizi n'Tichka y llegada a Marrakech."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/7-day-morocco-tour-from-casablanca/images/gallery_1.webp",
+      "cap": "Ruinas de fortaleza de piedra en la cresta de la montaña con cumbres nevadas",
+      "alt": "Ruinas de antigua fortaleza de piedra en una cresta montañosa con cumbres nevadas"
+    },
+    {
+      "src": "/sahara-star-tours/7-day-morocco-tour-from-casablanca/images/gallery_10.webp",
+      "cap": "Fuente en forma de estrella y arcos moriscos en la Mezquita Hassan II",
+      "alt": "Fuente en forma de estrella y grandes arcos moriscos en la Mezquita Hassan II"
+    },
+    {
+      "src": "/sahara-star-tours/7-day-morocco-tour-from-casablanca/images/gallery_3.webp",
+      "cap": "Curtidores de cuero trabajando en los tintes de la Curtiduría Chouara en Fez",
+      "alt": "Curtidores de cuero trabajando en los históricos pozos de tinte de Chouara en Fez"
+    },
+    {
+      "src": "/sahara-star-tours/7-day-morocco-tour-from-casablanca/images/gallery_4.webp",
+      "cap": "Minarete de la Mezquita Hassan II y explanada de mármol en Casablanca",
+      "alt": "Minarete de la Mezquita Hassan II y amplia explanada de mármol en Casablanca"
+    },
+    {
+      "src": "/sahara-star-tours/7-day-morocco-tour-from-casablanca/images/gallery_5.webp",
+      "cap": "Torre Hassan alzándose tras las palmeras en Rabat",
+      "alt": "Alminar de la Torre Hassan elevándose tras las palmeras en Rabat"
+    },
+    {
+      "src": "/sahara-star-tours/7-day-morocco-tour-from-casablanca/images/gallery_6.webp",
+      "cap": "Minarete de la Mezquita Hassan II enmarcado por un arco morisco tallado",
+      "alt": "Minarete de la Mezquita Hassan II enmarcado por un arco morisco tallado"
+    },
+    {
+      "src": "/sahara-star-tours/7-day-morocco-tour-from-casablanca/images/gallery_7.webp",
+      "cap": "Puerta ornamental de hierro de acceso a los jardines de la Torre Hassan",
+      "alt": "Puerta decorativa de hierro hacia los jardines de la Torre Hassan en Rabat"
+    },
+    {
+      "src": "/sahara-star-tours/7-day-morocco-tour-from-casablanca/images/gallery_8.webp",
+      "cap": "Ruinas romanas y Arco de Caracalla en el sitio arqueológico de Volubilis",
+      "alt": "Ruinas romanas y Arco de Caracalla en el enclave arqueológico de Volubilis"
+    },
+    {
+      "src": "/sahara-star-tours/7-day-morocco-tour-from-casablanca/images/gallery_9.webp",
+      "cap": "Paseo peatonal con minaretes de azulejos",
+      "alt": "Paseo peatonal con minaretes de azulejos"
+    },
+    {
+      "src": "/sahara-star-tours/7-day-morocco-tour-from-casablanca/images/hero_2.webp",
+      "cap": "Atardecer panorámico sobre las casas azules de Chefchaouen",
+      "alt": "Vista panorámica al atardecer de los edificios teñidos de azul de Chefchaouen"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "¿Es este un circuito privado o compartido?",
+      "answer": "Es un recorrido totalmente privado. El vehículo, conductor y guía atienden en exclusiva a tu grupo durante todo el viaje."
+    },
+    {
+      "question": "¿Cuánto dura el paseo en dromedario y hay alternativa disponible?",
+      "answer": "El paseo dura entre 40 minutos y 1,5 horas. Quien lo prefiera puede realizar el traslado en vehículo 4x4 directo al campamento."
+    },
+    {
+      "question": "¿La tienda del campamento en el desierto es privada?",
+      "answer": "Sí, dispones de una jaima privada de lujo con cama de confort, baño privado interior y ducha con agua caliente."
+    },
+    {
+      "question": "¿Dónde se realiza la recogida y el regreso?",
+      "answer": "Te recogemos en tu alojamiento o aeropuerto en Casablanca y finalizamos en Marrakech con traslado al hotel o aeropuerto."
+    },
+    {
+      "question": "¿Qué tipo de vehículo se utiliza en la ruta?",
+      "answer": "Vehículo privado 4x4 o monovolumen con aire acondicionado, asientos cómodos y espacio generoso para el equipaje."
+    },
+    {
+      "question": "¿Se pueden atender necesidades dietéticas especiales?",
+      "answer": "Sí, podemos adaptar los menús para dietas vegetarianas, veganas, sin gluten o requerimientos halal si nos avisas con antelación."
+    },
+    {
+      "question": "¿Es este itinerario adecuado para todas las edades?",
+      "answer": "Sí, está adaptado a todas las edades, con paradas regulares para descansar y disfrutar del paisaje."
+    },
+    {
+      "question": "¿Cuál es la mejor época del año para realizar este viaje?",
+      "answer": "Primavera y otoño son épocas extraordinarias por su clima templado. El invierno es ideal para disfrutar del sol en el desierto."
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "slug": "agafay-desert-sunset-camel-ride",
+  "title": "Paseo en Camello al Atardecer y Cena en el Desierto de Agafay | Sahara Star",
+  "shortTitle": "Paseo en Camello al Atardecer y Cena en Agafay",
+  "description": "Escápese de Marrakech para disfrutar de un mágico paseo en camello al atardecer en el desierto de piedra de Agafay. Cena tradicional bereber bajo las estrellas con música.",
+  "aboutHtml": "Disfrute de una velada inolvidable en el desierto de Agafay con un paseo en camello al atardecer, cena tradicional marroquí en un campamento del desierto y música bereber en vivo alrededor de la hoguera.",
+  "duration": "1 Día / Excursión de Día Completo",
+  "startingFrom": "Marrakech",
+  "price": "Desde 85 $/persona",
+  "highlights": [
+    "Mágico paseo en camello al atardecer en el desierto de Agafay con vistas panorámicas a las montañas del Atlas.",
+    "Cena tradicional marroquí (tajines, cuscús, ensaladas, postre) servida en un acogedor campamento bajo jaimas bereberes.",
+    "Ambiente cultural auténtico con música bereber, tambores y espectáculo en vivo alrededor de la hoguera bajo las estrellas.",
+    "Experiencia en grupos reducidos con recogida y regreso al hotel desde Marrakech en transporte cómodo y climatizado.",
+    "Velada perfecta para parejas, familias y amigos que buscan una escapada corta al desierto sin largas horas de conducción."
+  ],
+  "inclusions": [
+    "Traslados privados o en grupo reducido desde Marrakech",
+    "Paseo en camello al atardecer por las colinas del desierto de Agafay",
+    "Cena tradicional marroquí de tres platos servida en jaima de lujo",
+    "Música en vivo junto a la hoguera y espectáculo tradicional"
+  ],
+  "exclusions": [
+    "Gastos personales y compras de recuerdos",
+    "Propinas para su guía y chófer (opcionales)",
+    "Comidas y bebidas adicionales no mencionadas explícitamente",
+    "Entradas a monumentos o atracciones opcionales"
+  ],
+  "itinerary": [
+    {
+      "day": "Día 1",
+      "title": "Itinerario Detallado",
+      "content": "16:30–17:00 – Recogida en su hotel o riad en Marrakech y trayecto al desierto de Agafay (unos 40–50 minutos). 17:30 – Llegada al campamento, bienvenida con té marroquí y pastas tradicionales, y encuentro con su guía de camellos. 18:00 – Paseo en camello al atardecer (unos 45–60 minutos) a través del desierto de piedra con paradas fotográficas vestidos con atuendo tradicional sahariano (pañuelo cheich disponible). 19:00 – Regreso al campamento y tiempo libre para relajarse y admirar el crepúsculo sobre Agafay y el Alto Atlas. 19:30 – Cena marroquí servida bajo jaima bereber o bajo las estrellas: surtido de ensaladas, tajine o cuscús, postre de temporada y té a la menta (opciones vegetarianas disponibles previa solicitud). 20:30–21:00 – Espectáculo tradicional con música bereber, tambores y animación alrededor del fuego. 21:30–22:00 – Regreso a Marrakech y traslado a su riad u hotel."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Marrakech",
+      "day": "Tarde",
+      "subtitle": "Salida",
+      "desc": "Recogida en el hotel o punto de encuentro céntrico."
+    },
+    {
+      "number": 2,
+      "name": "Desierto de Piedra de Agafay",
+      "day": "Atardecer",
+      "subtitle": "Paseo en Camello y Colinas Minerales",
+      "desc": "Paseo en camello vestidos de nómadas mientras el sol cae sobre las cumbres del Atlas."
+    },
+    {
+      "number": 3,
+      "name": "Campamento de Lujo en el Desierto",
+      "day": "Noche",
+      "subtitle": "Cena Bajo las Estrellas",
+      "desc": "Banquete tradicional marroquí a la luz de las velas, espectáculo de fuego y música junto a la hoguera."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/day-trips/agafay-desert-sunset-camel-ride-dinner-under-the-stars/images/thumbnail.jpg",
+      "cap": "Paseo en Camello al Atardecer y Cena Bajo las Estrellas en el Desierto de Agafay",
+      "alt": "Paseo en camello al atardecer por las colinas minerales de Agafay"
+    },
+    {
+      "src": "/sahara-star-tours/day-trips/agafay-desert-sunset-camel-ride-dinner-under-the-stars/images/image-01.jpg",
+      "cap": "Paseo en Camello al Atardecer y Cena Bajo las Estrellas en el Desierto de Agafay",
+      "alt": "Campamento iluminado por velas y farolillos en el desierto de Agafay"
+    },
+    {
+      "src": "/sahara-star-tours/day-trips/agafay-desert-sunset-camel-ride-dinner-under-the-stars/images/image-02.png",
+      "cap": "Paseo en Camello al Atardecer y Cena Bajo las Estrellas en el Desierto de Agafay",
+      "alt": "Hoguera nocturna con música tradicional bereber bajo el cielo estrellado de Agafay"
+    }
+  ],
+  "faqs": []
+}

@@ -1,0 +1,99 @@
+{
+  "slug": "day-trip-essaouira-mogador",
+  "title": "Escursione di un Giorno a Essaouira Mogador da Marrakech | Sahara Star",
+  "shortTitle": "Escursione di un Giorno a Essaouira Mogador",
+  "description": "Escursione privata di un giorno da Marrakech alla splendida Essaouira Mogador. Passeggiate sui bastioni portoghesi, tra i souk della medina e al porto dei pescatori.",
+  "aboutHtml": "Escursione di una giornata da Marrakech a Essaouira Mogador.<br/><br/>L'escursione di un giorno da Marrakech a Essaouira è una delle esperienze più amate in Marocco, grazie al fascino unico di questa città fortificata affacciata sull'Atlantico.<br/><br/>La giornata inizia intorno alle 8:00 con partenza da Marrakech per un comodo viaggio di circa 3 ore verso la costa oceanica.<br/><br/>Passeggeremo tra i suggestivi vicoli bianchi e blu dell'antica medina di Essaouira, sito Patrimonio Mondiale dell'Umanità UNESCO, e percorreremo le storiche mura della Skala affacciate sull'oceano. A pranzo degusteremo il pescato fresco che rende celebre la gastronomia locale.<br/><br/>Scopriremo le rinomate botteghe d'artigianato in legno di radica di tuia e visiteremo una cooperativa femminile locale per scoprire i segreti dell'olio di argan.<br/><br/>Nel tardo pomeriggio rientreremo a Marrakech dopo una giornata ricca di brezza marina e bellezza.",
+  "duration": "1 Giorno / Escursione di una Giornata",
+  "startingFrom": "Marrakech",
+  "price": "Da 65 €/persona",
+  "highlights": [
+    "Viaggio panoramico attraverso le pianure atlantiche verso la splendida città costiera di Essaouira.",
+    "Medina di Essaouira: Passeggiata tra i caratteristici vicoli candidi della medina Patrimonio UNESCO.",
+    "Bastioni della Skala: Esplorate le possenti mura fortificate del XVIII secolo affacciate sull'oceano.",
+    "Pranzo di mare: Gustate pesce e frutti di mare freschi alla griglia in un ristorante tipico.",
+    "Artigianato in legno di tuia e visita a una cooperativa femminile tradizionale di olio di argan puro."
+  ],
+  "inclusions": [
+    "Trasporto confortevole e climatizzato andata e ritorno da Marrakech",
+    "Visita a una cooperativa femminile tradizionale di produzione dell'olio di argan",
+    "Tempo libero per esplorare la medina murata di Essaouira e i bastioni della Skala",
+    "Soste fotografiche panoramiche lungo il percorso costiero"
+  ],
+  "exclusions": [
+    "Spese personali e acquisto di manufatti artigianali",
+    "Mance per autista e accompagnatore (facoltative)",
+    "Pranzo e bevande extra non specificati",
+    "Biglietti d'ingresso a monumenti o musei specifici"
+  ],
+  "itinerary": [
+    {
+      "day": "Giorno 1",
+      "title": "Marrakech – Foreste di Argan – Medina di Essaouira – Bastioni della Skala – Porto Peschereccio",
+      "content": "Partenza alle 8:00 con prelievo dal vostro riad o hotel a Marrakech per raggiungere la costa atlantica. Durante il percorso attraverso le distese dell'Haouz ammirerete le foreste di alberi di argan e le caratteristiche capre che si arrampicano sui rami per brucare le foglie. Sosta presso una cooperativa artigianale gestita da donne locali per scoprire il metodo di spremitura a freddo del prezioso olio di argan. Arrivati a Essaouira (l'antica Mogador portoghese), visiterete la medina murata UNESCO con i suoi caratteristici vicoli bianchi e blu, gallerie d'arte e botteghe di intaglio del legno di tuia. Salita sui bastioni della Skala della Kasbah con i cannoni storici in bronzo rivolti verso i faraglioni oceanici e passeggiata al porto dei pescatori tra centinaia di barche azzurre. Pranzo libero a base di pesce fresco grigliato al porto. Pomeriggio di relax sulla spiaggia sabbiosa o nei caffè all'aperto di Place Moulay Hassan prima del rientro a Marrakech in serata."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Marrakech",
+      "day": "Mattina",
+      "subtitle": "Partenza",
+      "desc": "Pick-up dal vostro hotel o riad a Marrakech."
+    },
+    {
+      "number": 2,
+      "name": "Foreste di Argan",
+      "day": "Lungo la Via",
+      "subtitle": "Cooperativa di Olio di Argan",
+      "desc": "Avvistamento delle capre sugli alberi e produzione artigianale di argan."
+    },
+    {
+      "number": 3,
+      "name": "Porto di Essaouira",
+      "day": "Mezzogiorno",
+      "subtitle": "Skala e Porto dei Pescatori",
+      "desc": "Tipiche barche blu, bastioni affacciati sull'Atlantico e pesce fresco."
+    },
+    {
+      "number": 4,
+      "name": "Medina di Essaouira",
+      "day": "Pomeriggio",
+      "subtitle": "Medina Fortificata UNESCO",
+      "desc": "Botteghe del legno di tuia, vicoli imbiancati a calce e brezza oceanica."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/day-trips/one-day-trip-from-marrakech-to-essaouira-mogador/images/thumbnail.jpeg",
+      "cap": "Escursione di una Giornata da Marrakech a Essaouira Mogador",
+      "alt": "Barche blu tradizionali ormeggiate nel porto dei pescatori di Essaouira"
+    },
+    {
+      "src": "/sahara-star-tours/day-trips/one-day-trip-from-marrakech-to-essaouira-mogador/images/image-01.jpg",
+      "cap": "Escursione di una Giornata da Marrakech a Essaouira Mogador",
+      "alt": "Bastioni in pietra della Skala con antichi cannoni di bronzo a Essaouira"
+    },
+    {
+      "src": "/sahara-star-tours/day-trips/one-day-trip-from-marrakech-to-essaouira-mogador/images/image-02.jpeg",
+      "cap": "Escursione di una Giornata da Marrakech a Essaouira Mogador",
+      "alt": "Vicolo acciottolato con pareti imbiancate a calce nella medina di Essaouira"
+    },
+    {
+      "src": "/sahara-star-tours/day-trips/one-day-trip-from-marrakech-to-essaouira-mogador/images/image-03.jpeg",
+      "cap": "Escursione di una Giornata da Marrakech a Essaouira Mogador",
+      "alt": "Manufatti in legno di tuia esposti nelle botteghe di Essaouira"
+    },
+    {
+      "src": "/sahara-star-tours/day-trips/one-day-trip-from-marrakech-to-essaouira-mogador/images/image-04.jpeg",
+      "cap": "Escursione di una Giornata da Marrakech a Essaouira Mogador",
+      "alt": "Veduta della spiaggia atlantica e delle fortificazioni di Essaouira"
+    },
+    {
+      "src": "/sahara-star-tours/day-trips/one-day-trip-from-marrakech-to-essaouira-mogador/images/image-05.jpg",
+      "cap": "Escursione di una Giornata da Marrakech a Essaouira Mogador",
+      "alt": "Piazza centrale animata e caffè storici nel cuore di Essaouira"
+    }
+  ],
+  "faqs": []
+}

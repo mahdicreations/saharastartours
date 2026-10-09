@@ -1,0 +1,66 @@
+{
+  "slug": "quad-biking-marrakech",
+  "title": "Aventura en Quads por el Desierto y Palmeral de Marrakech | Sahara Star",
+  "shortTitle": "Aventura en Quads en Marrakech",
+  "description": "Emocionante safari en quad de media jornada por las llanuras desérticas y senderos del palmeral de Marrakech. Equipamiento de seguridad y parada de té a la menta incluidos.",
+  "aboutHtml": "Aventura en quad en Marrakech.<br/><br/>Disfrute de una emocionante excursión de media jornada en quad explorando los senderos vírgenes del palmeral de Marrakech y las colinas desérticas circundantes.<br/><br/>Apta tanto para principiantes como para conductores experimentados, la ruta se adapta al nivel del grupo para garantizar la máxima seguridad y diversión. Los pilotos más aventureros disfrutarán de tramos técnicos y aceleraciones, mientras que quienes viajan en familia apreciarán un paseo relajado admirando los paisajes.<br/><br/>Equipados con quads modernos, cascos y gafas protectoras, seguirán a nuestro guía profesional a través de aldeas tradicionales bereberes, senderos de tierra y palmerales milenarios. Haremos una agradable parada en una casa rural bereber para saborear té a la menta antes de emprender el regreso.",
+  "duration": "Media Jornada / 3-4 Horas",
+  "startingFrom": "Marrakech",
+  "price": "Desde 60 $/persona",
+  "highlights": [
+    "Explore los senderos ocultos del palmeral de Marrakech y sus colinas minerales.",
+    "Apto tanto para debutantes como para pilotos experimentados con guía profesional.",
+    "Ruta a través de pueblos tradicionales bereberes y pistas todoterreno.",
+    "Parada para saborear té a la menta en una casa tradicional bereber."
+  ],
+  "inclusions": [
+    "Recogida y regreso al hotel en vehículo con aire acondicionado",
+    "Quad moderno de alta gama y equipo de protección completo (casco, gafas y guantes)",
+    "Ruta guiada en quad de 2 horas por el palmeral y pistas del desierto",
+    "Pausa para degustar té a la menta en una aldea bereber tradicional"
+  ],
+  "exclusions": [
+    "Gastos personales y compras de recuerdos",
+    "Propinas para el guía y chófer (opcionales)",
+    "Comidas y bebidas adicionales",
+    "Fotografías o vídeos profesionales opcionales"
+  ],
+  "itinerary": [
+    {
+      "day": "Día 1",
+      "title": "Ruta en Quad en Marrakech",
+      "content": "Recogida en su alojamiento en Marrakech y traslado a la base de quads en el Palmeral. Sesión informativa de seguridad y breve clase práctica para familiarizarse con el manejo del quad. Comienzo de la aventura de 2 horas a través de pistas de tierra, palmerales y llanuras áridas con vistas a las montañas. Parada de descanso en una casa tradicional bereber para compartir un té con menta y descubrir la hospitalidad local. Conclusión de la ruta y traslado de regreso a su hotel."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Marrakech",
+      "day": "Salida",
+      "subtitle": "Recogida en Hotel",
+      "desc": "Traslado privado desde su alojamiento en Marrakech."
+    },
+    {
+      "number": 2,
+      "name": "Oasis del Palmeral de Marrakech",
+      "day": "Actividad",
+      "subtitle": "Pistas y Palmeras",
+      "desc": "Circuito en quad por senderos de tierra y oasis."
+    },
+    {
+      "number": 3,
+      "name": "Campamento Oasis Bereber",
+      "day": "Pausa Té",
+      "subtitle": "Hospitalidad y Té a la Menta",
+      "desc": "Té a la menta y descanso en una casa tradicional bereber."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/activities/quad-biking-in-marrakech/images/thumbnail.jpeg",
+      "cap": "Aventura en Quads por el Desierto y Palmeral de Marrakech",
+      "alt": "Pilotos en quads recorriendo pistas de tierra en el desierto y palmeral de Marrakech"
+    }
+  ],
+  "faqs": []
+}

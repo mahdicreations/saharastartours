@@ -1,8 +1,9 @@
 ---
 // TourLayout.astro — Layout for all tour detail pages
-// Adds Leaflet CSS + script, tour hero, sidebar booking form
+// Adds Leaflet CSS + script, tour hero, sidebar booking form, multi-language support (EN, ES, IT)
 import BaseLayout from './BaseLayout.astro';
 import TourMap from '../components/TourMap.astro';
+import { getAlternateUrls } from '../data/i18n';
 
 interface TourStop {
   number: number;
@@ -18,8 +19,14 @@ interface Props {
   description: string;
   keywords?: string;
   ogImage?: string;
-  lang?: string;
+  lang?: 'en' | 'es' | 'it' | string;
   locale?: string;
+  alternateUrls?: {
+    en?: string;
+    es?: string;
+    it?: string;
+    xDefault?: string;
+  };
   touristType?: string;
   // Tour data
   tourName: string;
@@ -49,7 +56,8 @@ const {
   keywords,
   ogImage,
   lang = 'en',
-  locale = 'en_US',
+  locale,
+  alternateUrls,
   touristType,
   tourName,
   tourSlug,
@@ -72,23 +80,295 @@ const {
   schemaData,
 } = Astro.props;
 
+const currentLang = (['en', 'es', 'it'].includes(lang) ? lang : 'en') as 'en' | 'es' | 'it';
+const defaultLocale = currentLang === 'es' ? 'es_ES' : (currentLang === 'it' ? 'it_IT' : 'en_US');
+const activeLocale = locale ?? defaultLocale;
+const resolvedAlternateUrls = alternateUrls ?? getAlternateUrls(`/tours/${tourSlug}`);
+const currentCanonicalUrl = resolvedAlternateUrls[currentLang] || `https://www.saharastartours.com/tours/${tourSlug}`;
+
 // Resolve genuine tourist audience only when supported by authentic content; otherwise omit
 let resolvedTouristType: string | undefined = touristType;
 if (!resolvedTouristType && tourName) {
-  if (/\bcouple(s)?\b|\bromantic\b/i.test(tourName)) {
-    resolvedTouristType = 'Couples';
-  } else if (/\bfamil(y|ies)\b/i.test(tourName)) {
-    resolvedTouristType = 'Families';
+  if (/\bcouple(s)?\b|\bromantic\b|parejas|coppie/i.test(tourName)) {
+    resolvedTouristType = currentLang === 'es' ? 'Parejas' : (currentLang === 'it' ? 'Coppie' : 'Couples');
+  } else if (/\bfamil(y|ies)\b|familias|famiglie/i.test(tourName)) {
+    resolvedTouristType = currentLang === 'es' ? 'Familias' : (currentLang === 'it' ? 'Famiglie' : 'Families');
   }
 }
 
-// Departure city hubs mapping
-const citySlugMap: Record<string, { label: string; path: string }> = {
-  marrakech: { label: 'Tours from Marrakech', path: '/tours-from-marrakech' },
-  casablanca: { label: 'Tours from Casablanca', path: '/tours-from-casablanca' },
-  fes: { label: 'Tours from Fes', path: '/tours-from-fes' },
-  tangier: { label: 'Tours from Tangier', path: '/tours-from-tangier' },
-  ouarzazate: { label: 'Tours from Ouarzazate', path: '/tours-from-ouarzazate' },
+// Localized UI Dictionary
+const l10n = {
+  en: {
+    fromPrefix: 'From:',
+    overview: 'Overview',
+    itinerary: 'Itinerary',
+    gallery: 'Gallery',
+    included: 'Included',
+    map: 'Map',
+    faq: 'FAQ',
+    startingFrom: 'Starting from',
+    bookThisTour: 'Book This Tour',
+    aboutTour: 'About This Tour',
+    highlights: 'Highlights:',
+    programItinerary: 'Program Itinerary',
+    expeditionGallery: 'Expedition Media Gallery',
+    gallerySubtitle: 'A visual glimpse of the spectacular landscapes awaiting you.',
+    inclusionsHeading: 'Inclusions & Trip Details',
+    whatsIncluded: "What's Included",
+    notIncluded: 'Not Included',
+    faqHeading: 'Frequently Asked Questions',
+    relatedHeading: 'Recommended Similar Journeys',
+    relatedStarting: 'Starting',
+    travelStyle: 'Travel Style',
+    styles: { Standard: 'Standard', Comfort: 'Comfort', Luxury: 'Luxury' } as Record<string, string>,
+    fullName: 'Your Full Name',
+    email: 'Email Address',
+    prefDate: 'Preferred Date',
+    groupSize: 'Group Size',
+    groupOptions: [
+      { value: '1 Adult', label: '1 Adult' },
+      { value: '2 Adults', label: '2 Adults', selected: true },
+      { value: '3-4 People', label: '3 - 4 People' },
+      { value: '5+ Group', label: '5+ Group' },
+    ],
+    specialRequests: 'Special requests or questions...',
+    sendInquiry: 'Send My Inquiry',
+    requestReceived: 'Request Received!',
+    returnExploring: 'Return to Exploring',
+    quickInfo: 'Quick Tour Info',
+    durationLabel: 'Duration:',
+    startingLabel: 'Starting:',
+    groupLabel: 'Group:',
+    groupVal: 'Private & Custom',
+    guideLabel: 'Guide:',
+    guideVal: 'EN / FR / ES / IT',
+    transportLabel: 'Transport:',
+    transportVal: 'Private A/C Vehicle',
+    downloadPdf: 'Download Tour Brochure (PDF in English)',
+    whatsAppUs: 'WhatsApp Us',
+    instantReserve: 'INSTANT RESERVE',
+    bookNowBtn: 'Book Now ↓',
+    bookNowNav: 'Book Now',
+    fallbackFaqs: [
+      {
+        question: 'What luggage and clothing should I pack for this trip?',
+        answer: 'We recommend comfortable walking shoes for medina cobbles and dunes, loose breathable cotton layers for daytime exploration, and a warm fleece or jacket for crisp desert evenings and mountain passes. Sunglasses, sunscreen, a hat, and a camera are essential.',
+      },
+      {
+        question: 'Can this itinerary and accommodation level be customized?',
+        answer: 'Yes, absolutely! Every Sahara Star Tours package is 100% private and customizable. We can adjust the pacing, departure city, hotel tiers (Standard Riads, Comfort Boutique, or 5-Star Luxury Glamping), and add unique stops to match your travel dreams.',
+      },
+      {
+        question: `Where does pickup and drop-off take place?`,
+        answer: `We provide seamless door-to-door pickup and drop-off directly from your hotel, riad, or airport in ${startingFrom}. Your private English-speaking driver/guide will greet you warmly with personalized signage.`,
+      },
+      {
+        question: 'Are special dietary requirements catered for?',
+        answer: 'Yes, all partner riads and our Sahara desert luxury camp chefs cater happily to vegetarian, vegan, halal, and gluten-free dietary requirements. Simply let us know your preferences during booking.',
+      },
+      {
+        question: 'How do reservations and deposits work?',
+        answer: 'After submitting your inquiry, our local travel specialists in Marrakech will confirm availability and send your official itinerary voucher. A modest deposit secures your dates via credit card, PayPal, or wire transfer, with the balance paid safely upon arrival.',
+      },
+    ],
+  },
+  es: {
+    fromPrefix: 'Salida:',
+    overview: 'Resumen',
+    itinerary: 'Itinerario',
+    gallery: 'Galería',
+    included: 'Incluido',
+    map: 'Mapa',
+    faq: 'Preguntas',
+    startingFrom: 'Desde',
+    bookThisTour: 'Reservar Este Tour',
+    aboutTour: 'Sobre Este Circuito',
+    highlights: 'Puntos Destacados:',
+    programItinerary: 'Itinerario Detallado',
+    expeditionGallery: 'Galería Fotográfica de la Expedición',
+    gallerySubtitle: 'Una muestra visual de los espectaculares paisajes que te esperan.',
+    inclusionsHeading: 'Servicios Incluidos y Detalles del Viaje',
+    whatsIncluded: 'Qué Incluye',
+    notIncluded: 'No Incluye',
+    faqHeading: 'Preguntas Frecuentes',
+    relatedHeading: 'Rutas Similares Recomendadas',
+    relatedStarting: 'Desde',
+    travelStyle: 'Estilo de Viaje',
+    styles: { Standard: 'Estándar', Comfort: 'Confort', Luxury: 'Lujo' } as Record<string, string>,
+    fullName: 'Nombre Completo',
+    email: 'Correo Electrónico',
+    prefDate: 'Fecha Estimada',
+    groupSize: 'Tamaño del Grupo',
+    groupOptions: [
+      { value: '1 Adulto', label: '1 Adulto' },
+      { value: '2 Adultos', label: '2 Adultos', selected: true },
+      { value: '3-4 Personas', label: '3 - 4 Personas' },
+      { value: 'Grupo 5+', label: 'Grupo 5+' },
+    ],
+    specialRequests: 'Peticiones especiales o preguntas...',
+    sendInquiry: 'Enviar Consulta',
+    requestReceived: '¡Solicitud Recibida!',
+    returnExploring: 'Volver a Explorar',
+    quickInfo: 'Información Rápida',
+    durationLabel: 'Duración:',
+    startingLabel: 'Salida:',
+    groupLabel: 'Grupo:',
+    groupVal: 'Privado y a Medida',
+    guideLabel: 'Guía:',
+    guideVal: 'EN / FR / ES / IT',
+    transportLabel: 'Transporte:',
+    transportVal: 'Vehículo Privado A/C',
+    downloadPdf: 'Descargar Folleto (PDF en Inglés)',
+    whatsAppUs: 'Escríbenos por WhatsApp',
+    instantReserve: 'RESERVA INMEDIATA',
+    bookNowBtn: 'Reservar Ahora ↓',
+    bookNowNav: 'Reservar Ahora',
+    fallbackFaqs: [
+      {
+        question: '¿Qué tipo de equipaje y ropa debo llevar para este viaje?',
+        answer: 'Recomendamos calzado cómodo para caminar por medinas empedradas y dunas, ropa holgada y transpirable de algodón para el día, y un forro polar o chaqueta abrigada para las noches frescas del desierto y puertos de montaña. Gafas de sol, protector solar, sombrero y cámara son imprescindibles.',
+      },
+      {
+        question: '¿Se puede personalizar este itinerario y la categoría de alojamiento?',
+        answer: '¡Sí, por supuesto! Cada viaje de Sahara Star Tours es 100% privado y personalizable. Podemos ajustar el ritmo, ciudad de salida, categoría de hoteles (Riads Estándar, Boutique Confort o Campamentos de Lujo 5 estrellas) y añadir paradas exclusivas según tus preferencias.',
+      },
+      {
+        question: '¿Dónde se realizan la recogida y el regreso?',
+        answer: `Ofrecemos recogida y regreso puerta a puerta directamente en tu hotel, riad o aeropuerto en ${startingFrom}. Tu chófer/guía privado te recibirá puntualmente con un cartel personalizado.`,
+      },
+      {
+        question: '¿Se adaptan a necesidades dietéticas especiales?',
+        answer: 'Sí, todos nuestros riads asociados y los chefs de nuestro campamento en el desierto del Sáhara atienden con gusto dietas vegetarianas, veganas, halal y sin gluten. Solo indícanos tus preferencias al hacer la reserva.',
+      },
+      {
+        question: '¿Cómo funcionan las reservas y los depósitos?',
+        answer: 'Tras enviar tu consulta, nuestros especialistas locales en Marrakech confirmarán la disponibilidad y te enviarán el bono oficial del itinerario. Un depósito seguro confirma tus fechas mediante tarjeta, PayPal o transferencia, abonándose el resto a tu llegada a Marruecos.',
+      },
+    ],
+  },
+  it: {
+    fromPrefix: 'Partenza:',
+    overview: 'Panoramica',
+    itinerary: 'Itinerario',
+    gallery: 'Galleria',
+    included: 'Incluso',
+    map: 'Mappa',
+    faq: 'FAQ',
+    startingFrom: 'A partire da',
+    bookThisTour: 'Prenota Questo Tour',
+    aboutTour: 'Informazioni su Questo Tour',
+    highlights: 'Punti Salienti:',
+    programItinerary: 'Itinerario Dettagliato',
+    expeditionGallery: 'Galleria Fotografica della Spedizione',
+    gallerySubtitle: 'Uno sguardo visivo agli spettacolari paesaggi che ti attendono.',
+    inclusionsHeading: 'Servizi Inclusi e Dettagli del Viaggio',
+    whatsIncluded: 'Cosa è Incluso',
+    notIncluded: 'Non Incluso',
+    faqHeading: 'Domande Frequenti',
+    relatedHeading: 'Itinerari Simili Consigliati',
+    relatedStarting: 'A partire da',
+    travelStyle: 'Stile di Viaggio',
+    styles: { Standard: 'Standard', Comfort: 'Comfort', Luxury: 'Lusso' } as Record<string, string>,
+    fullName: 'Nome e Cognome',
+    email: 'Indirizzo Email',
+    prefDate: 'Data Preferita',
+    groupSize: 'Numero di Persone',
+    groupOptions: [
+      { value: '1 Adulto', label: '1 Adulto' },
+      { value: '2 Adulti', label: '2 Adulti', selected: true },
+      { value: '3-4 Persone', label: '3 - 4 Persone' },
+      { value: 'Gruppo 5+', label: 'Gruppo 5+' },
+    ],
+    specialRequests: 'Richieste speciali o domande...',
+    sendInquiry: 'Invia Richiesta',
+    requestReceived: 'Richiesta Ricevuta!',
+    returnExploring: 'Torna ad Esplorare',
+    quickInfo: 'Informazioni sul Tour',
+    durationLabel: 'Durata:',
+    startingLabel: 'Partenza:',
+    groupLabel: 'Gruppo:',
+    groupVal: 'Privato e su Misura',
+    guideLabel: 'Guida:',
+    guideVal: 'EN / FR / ES / IT',
+    transportLabel: 'Trasporto:',
+    transportVal: 'Veicolo Privato A/C',
+    downloadPdf: 'Scarica Brochure (PDF in Inglese)',
+    whatsAppUs: 'Contattaci su WhatsApp',
+    instantReserve: 'PRENOTAZIONE IMMEDIATA',
+    bookNowBtn: 'Prenota Ora ↓',
+    bookNowNav: 'Prenota Ora',
+    fallbackFaqs: [
+      {
+        question: 'Che tipo di bagaglio e abbigliamento dovrei portare per questo viaggio?',
+        answer: 'Consigliamo scarpe comode per camminare sui ciottoli delle medine e sulle dune, abiti leggeri e traspiranti in cotone per il giorno, e un pile o giacca calda per le serate fresche nel deserto e sui passi montani. Occhiali da sole, crema solare, cappello e macchina fotografica sono essenziali.',
+      },
+      {
+        question: 'È possibile personalizzare questo itinerario e il livello degli alloggi?',
+        answer: 'Assolutamente sì! Ogni viaggio di Sahara Star Tours è al 100% privato e personalizzabile. Possiamo modificare i ritmi, la città di partenza, la categoria degli alloggi (Riad Standard, Boutique Comfort o Campi Tendati di Lusso 5 Stelle) e aggiungere tappe uniche.',
+      },
+      {
+        question: 'Dove avvengono il punto di incontro e il rientro?',
+        answer: `Garantiamo il servizio di pick-up e drop-off direttamente presso il tuo hotel, riad o aeroporto a ${startingFrom}. Il tuo autista/guida privato ti accoglierà con un cartello personalizzato.`,
+      },
+      {
+        question: 'Vengono gestite esigenze alimentari particolari?',
+        answer: 'Sì, tutti i riad convenzionati e gli chef del nostro campo tendato nel Sahara preparano con cura menù vegetariani, vegani, halal e senza glutine. È sufficiente comunicarcelo al momento della prenotazione.',
+      },
+      {
+        question: 'Come funzionano le prenotazioni e gli acconti?',
+        answer: "Dopo aver inviato la richiesta, i nostri consulenti a Marrakech verificheranno la disponibilità e invieranno il voucher ufficiale dell'itinerario. Un piccolo acconto garantisce le date tramite carta di credito, PayPal o bonifico, con il saldo restante versato comodamente all'arrivo.",
+      },
+    ],
+  },
+}[currentLang];
+
+// Departure city hubs mapping per language
+const citySlugMap: Record<string, Record<string, { label: string; path: string }>> = {
+  en: {
+    marrakech: { label: 'Tours from Marrakech', path: '/tours-from-marrakech' },
+    casablanca: { label: 'Tours from Casablanca', path: '/tours-from-casablanca' },
+    fes: { label: 'Tours from Fes', path: '/tours-from-fes' },
+    tangier: { label: 'Tours from Tangier', path: '/tours-from-tangier' },
+    ouarzazate: { label: 'Tours from Ouarzazate', path: '/tours-from-ouarzazate' },
+  },
+  es: {
+    marrakech: { label: 'Circuitos desde Marrakech', path: '/es/tours-from-marrakech' },
+    casablanca: { label: 'Circuitos desde Casablanca', path: '/es/tours-from-casablanca' },
+    fes: { label: 'Circuitos desde Fez', path: '/es/tours-from-fes' },
+    tangier: { label: 'Circuitos desde Tánger', path: '/es/tours-from-tangier' },
+    ouarzazate: { label: 'Circuitos desde Ouarzazate', path: '/es/tours-from-ouarzazate' },
+  },
+  it: {
+    marrakech: { label: 'Tour da Marrakech', path: '/it/tours-from-marrakech' },
+    casablanca: { label: 'Tour da Casablanca', path: '/it/tours-from-casablanca' },
+    fes: { label: 'Tour da Fes', path: '/it/tours-from-fes' },
+    tangier: { label: 'Tour da Tangeri', path: '/it/tours-from-tangier' },
+    ouarzazate: { label: 'Tour da Ouarzazate', path: '/it/tours-from-ouarzazate' },
+  },
+};
+
+const homeBreadcrumbs: Record<string, { name: string; url: string }> = {
+  en: { name: 'Home', url: '/' },
+  es: { name: 'Inicio', url: '/es' },
+  it: { name: 'Home', url: '/it' },
+};
+
+const productBreadcrumbs: Record<string, Record<string, { name: string; url: string }>> = {
+  en: {
+    'day-trip': { name: 'Day Trips', url: '/day-trips' },
+    'activity': { name: 'Activities', url: '/activities' },
+    'multi-day': { name: 'Multi-Day Tours', url: '/tours' },
+  },
+  es: {
+    'day-trip': { name: 'Excursiones de un Día', url: '/es/day-trips' },
+    'activity': { name: 'Actividades', url: '/es/activities' },
+    'multi-day': { name: 'Circuitos Multidía', url: '/es/tours' },
+  },
+  it: {
+    'day-trip': { name: 'Escursioni Giornaliere', url: '/it/day-trips' },
+    'activity': { name: 'Attività', url: '/it/activities' },
+    'multi-day': { name: 'Tour di Più Giorni', url: '/it/tours' },
+  },
 };
 
 interface BreadcrumbItem {
@@ -97,21 +377,19 @@ interface BreadcrumbItem {
 }
 
 const breadcrumbs: BreadcrumbItem[] = [
-  { name: 'Home', url: '/' },
+  homeBreadcrumbs[currentLang],
 ];
 
-if (productType === 'day-trip') {
-  breadcrumbs.push({ name: 'Day Trips', url: '/day-trips' });
-} else if (productType === 'activity') {
-  breadcrumbs.push({ name: 'Activities', url: '/activities' });
-} else {
-  // Multi-day tour default
-  breadcrumbs.push({ name: 'Multi-Day Tours', url: '/tours' });
+const productTypeKey = productType === 'day-trip' || productType === 'activity' ? productType : 'multi-day';
+breadcrumbs.push(productBreadcrumbs[currentLang][productTypeKey]);
+
+if (productTypeKey === 'multi-day') {
   const cityKey = departureCity ? departureCity.toLowerCase().trim() : '';
-  if (cityKey && citySlugMap[cityKey]) {
+  const cityEntry = citySlugMap[currentLang]?.[cityKey];
+  if (cityEntry) {
     breadcrumbs.push({
-      name: citySlugMap[cityKey].label,
-      url: citySlugMap[cityKey].path,
+      name: cityEntry.label,
+      url: cityEntry.path,
     });
   }
 }
@@ -126,7 +404,7 @@ const breadcrumbSchema = {
     "@type": "ListItem",
     "position": idx + 1,
     "name": b.name,
-    "item": b.url ? `https://www.saharastartours.com${b.url}` : `https://www.saharastartours.com/tours/${tourSlug}`
+    "item": b.url ? `https://www.saharastartours.com${b.url}` : currentCanonicalUrl
   }))
 };
 
@@ -136,7 +414,8 @@ const touristTripEntity = {
   "name": tourName,
   "description": description,
   "image": `https://www.saharastartours.com${heroImage}`,
-  "url": `https://www.saharastartours.com/tours/${tourSlug}`,
+  "url": currentCanonicalUrl,
+  "inLanguage": currentLang === 'es' ? 'es-ES' : (currentLang === 'it' ? 'it-IT' : 'en-US'),
   ...(resolvedTouristType ? { "touristType": resolvedTouristType } : {}),
   "provider": {
     "@type": "TravelAgency",
@@ -165,6 +444,32 @@ const tourSchema = schemaData ?? {
   ]
 };
 
+const categoryLabels: Record<string, Record<string, string>> = {
+  en: {
+    'desert-tours': 'Desert Tours',
+    'imperial-cities': 'Imperial Cities',
+    'day-trips': 'Day Trips',
+    'activities': 'Activities',
+  },
+  es: {
+    'desert-tours': 'Circuitos por el Desierto',
+    'imperial-cities': 'Ciudades Imperiales',
+    'day-trips': 'Excursiones de un Día',
+    'activities': 'Actividades',
+  },
+  it: {
+    'desert-tours': 'Tour del Deserto',
+    'imperial-cities': 'Città Imperiali',
+    'day-trips': 'Escursioni Giornaliere',
+    'activities': 'Attività',
+  },
+};
+const catNormalized = category.toLowerCase().replace(/\s+/g, '-');
+const localizedCategory = categoryLabels[currentLang]?.[catNormalized] ?? category;
+
+const getTourDetailHref = (slug: string) => currentLang === 'en' ? `/tours/${slug}` : `/${currentLang}/tours/${slug}`;
+const cleanPriceVal = price.replace(/^(From|Desde|A partire da)\s*/i, '').trim();
+
 const galleryJSON = JSON.stringify(galleryImages);
 ---
 
@@ -175,8 +480,9 @@ const galleryJSON = JSON.stringify(galleryImages);
   ogImage={ogImage ?? heroImage}
   currentPage="tours"
   schemaData={tourSchema}
-  lang={lang}
-  locale={locale}
+  lang={currentLang}
+  locale={activeLocale}
+  alternateUrls={resolvedAlternateUrls}
 >
   <!-- Tour Hero Section -->
   <section class="tour-hero-section">
@@ -203,11 +509,11 @@ const galleryJSON = JSON.stringify(galleryImages);
           </>
         ))}
       </nav>
-      <span class="tour-tag">{category}</span>
+      <span class="tour-tag">{localizedCategory}</span>
       <h1>{tourName}</h1>
       <div class="tour-quick-meta">
         <span><i class="fa-regular fa-clock"></i> <strong>{duration}</strong></span>
-        <span><i class="fa-solid fa-location-dot"></i> From: <strong>{startingFrom}</strong></span>
+        <span><i class="fa-solid fa-location-dot"></i> {l10n.fromPrefix} <strong>{startingFrom}</strong></span>
       </div>
     </div>
   </section>
@@ -219,37 +525,37 @@ const galleryJSON = JSON.stringify(galleryImages);
     <div class="tour-subnav-container">
       <div class="tour-subnav-items">
         <a href="#tour-about" class="subnav-link active" data-section="tour-about">
-          <i class="fa-solid fa-circle-info"></i> <span>Overview</span>
+          <i class="fa-solid fa-circle-info"></i> <span>{l10n.overview}</span>
         </a>
         {itinerary.length > 0 && (
           <a href="#tour-itinerary" class="subnav-link" data-section="tour-itinerary">
-            <i class="fa-solid fa-route"></i> <span>Itinerary</span>
+            <i class="fa-solid fa-route"></i> <span>{l10n.itinerary}</span>
           </a>
         )}
         {galleryImages.length > 0 && (
           <a href="#tour-gallery" class="subnav-link" data-section="tour-gallery">
-            <i class="fa-solid fa-images"></i> <span>Gallery</span>
+            <i class="fa-solid fa-images"></i> <span>{l10n.gallery}</span>
           </a>
         )}
         <a href="#tour-inclusions" class="subnav-link" data-section="tour-inclusions">
-          <i class="fa-solid fa-list-check"></i> <span>Included</span>
+          <i class="fa-solid fa-list-check"></i> <span>{l10n.included}</span>
         </a>
         {mapDestinations.length > 0 && (
           <a href="#tour-map" class="subnav-link" data-section="tour-map">
-            <i class="fa-solid fa-map-location-dot"></i> <span>Map</span>
+            <i class="fa-solid fa-map-location-dot"></i> <span>{l10n.map}</span>
           </a>
         )}
         <a href="#tour-faq" class="subnav-link" data-section="tour-faq">
-          <i class="fa-solid fa-circle-question"></i> <span>FAQ</span>
+          <i class="fa-solid fa-circle-question"></i> <span>{l10n.faq}</span>
         </a>
       </div>
       <div class="tour-subnav-cta">
         <div class="subnav-price-chip">
-          <span class="subnav-price-lbl">Starting from</span>
-          <strong class="subnav-price-val">{price.replace(/^From\s*/i, '').trim()}</strong>
+          <span class="subnav-price-lbl">{l10n.startingFrom}</span>
+          <strong class="subnav-price-val">{cleanPriceVal}</strong>
         </div>
         <a href="#booking-form" class="subnav-book-btn">
-          <i class="fa-solid fa-calendar-check"></i> <span>Book This Tour</span>
+          <i class="fa-solid fa-calendar-check"></i> <span>{l10n.bookThisTour}</span>
         </a>
       </div>
     </div>
@@ -267,7 +573,7 @@ const galleryJSON = JSON.stringify(galleryImages);
         name: '',
         email: '',
         package: '${tourSlug}',
-        travelers: '2 Adults',
+        travelers: '${l10n.groupOptions.find(o => o.selected)?.value || '2 Adults'}',
         date: '',
         style: 'Standard',
         message: ''
@@ -285,7 +591,15 @@ const galleryJSON = JSON.stringify(galleryImages);
         this.activeIndex = (this.activeIndex + 1) % this.images.length;
       },
       submitBooking() {
-        this.successMsg = 'Shukran, ' + this.bookingData.name + '! Your inquiry for ${tourName} has been registered. Our travel designers in Marrakech will send your detailed personalized itinerary to ' + this.bookingData.email + ' within 24 hours.';
+        const langCode = '${currentLang}';
+        const tName = ${JSON.stringify(tourName)};
+        if (langCode === 'es') {
+          this.successMsg = '¡Shukran, ' + this.bookingData.name + '! Tu consulta para ' + tName + ' ha sido registrada. Nuestros diseñadores de viajes en Marrakech te enviarán tu itinerario personalizado detallado a ' + this.bookingData.email + ' en menos de 24 horas.';
+        } else if (langCode === 'it') {
+          this.successMsg = 'Shukran, ' + this.bookingData.name + '! La tua richiesta per ' + tName + ' è stata registrata. I nostri consulenti di viaggio a Marrakech ti invieranno l\\'itinerario personalizzato dettagliato a ' + this.bookingData.email + ' entro 24 ore.';
+        } else {
+          this.successMsg = 'Shukran, ' + this.bookingData.name + '! Your inquiry for ' + tName + ' has been registered. Our travel designers in Marrakech will send your detailed personalized itinerary to ' + this.bookingData.email + ' within 24 hours.';
+        }
         this.showSuccessModal = true;
         document.body.style.overflow = 'hidden';
       },
@@ -302,11 +616,11 @@ const galleryJSON = JSON.stringify(galleryImages);
     <div class="tour-main">
       <!-- About + Highlights -->
       <section class="timeline-card reveal active" id="tour-about">
-        <h2>About This Tour</h2>
+        <h2>{l10n.aboutTour}</h2>
         <slot name="about" />
         {highlights.length > 0 && (
           <>
-            <h3 class="highlights-heading">Highlights:</h3>
+            <h3 class="highlights-heading">{l10n.highlights}</h3>
             <ul style="margin-top: 10px; padding-left: 20px; color: var(--text-muted); line-height: 1.8;">
               {highlights.map(h => <li style="margin-bottom: 8px;">{h}</li>)}
             </ul>
@@ -317,7 +631,7 @@ const galleryJSON = JSON.stringify(galleryImages);
       <!-- Day-by-Day Itinerary -->
       {itinerary.length > 0 && (
         <section class="timeline-card reveal active" id="tour-itinerary">
-          <h2><i class="fa-solid fa-route" style="color:var(--sand-gold);margin-right:8px;"></i> Program Itinerary</h2>
+          <h2><i class="fa-solid fa-route" style="color:var(--sand-gold);margin-right:8px;"></i> {l10n.programItinerary}</h2>
           <div class="timeline-steps-wrapper" id="timeline-steps">
             {itinerary.map(item => (
               <div class="timeline-item">
@@ -333,8 +647,8 @@ const galleryJSON = JSON.stringify(galleryImages);
       <!-- Media Gallery -->
       {galleryImages.length > 0 && (
         <section class="gallery-card reveal active" id="tour-gallery">
-          <h2><i class="fa-solid fa-images" style="color:var(--sand-gold);margin-right:8px;"></i> Expedition Media Gallery</h2>
-          <p>A visual glimpse of the spectacular landscapes awaiting you.</p>
+          <h2><i class="fa-solid fa-images" style="color:var(--sand-gold);margin-right:8px;"></i> {l10n.expeditionGallery}</h2>
+          <p>{l10n.gallerySubtitle}</p>
           <div class="gallery-grid" id="gallery-grid">
             {galleryImages.map((img, idx) => (
               <div class="gallery-item" @click={`openLightbox(${idx})`}>
@@ -353,10 +667,10 @@ const galleryJSON = JSON.stringify(galleryImages);
 
       <!-- Inclusions & Exclusions -->
       <section class="inclusions-card reveal active" id="tour-inclusions">
-        <h2><i class="fa-solid fa-list-check" style="color:var(--sand-gold);margin-right:8px;"></i> Inclusions &amp; Trip Details</h2>
+        <h2><i class="fa-solid fa-list-check" style="color:var(--sand-gold);margin-right:8px;"></i> {l10n.inclusionsHeading}</h2>
         <div class="inc-exc-split">
           <div class="modal-inc-col included">
-            <h3><i class="fa-solid fa-circle-check" style="color:var(--sand-gold); margin-right:8px;"></i> What's Included</h3>
+            <h3><i class="fa-solid fa-circle-check" style="color:var(--sand-gold); margin-right:8px;"></i> {l10n.whatsIncluded}</h3>
             <ul class="modal-inc-list" style="list-style:none; display:flex; flex-direction:column; gap:12px; margin-top:16px;">
               {inclusions.map(item => (
                 <li><i class="fa-solid fa-circle-check" style="color:var(--sand-gold);margin-right:8px;"></i>{item}</li>
@@ -365,7 +679,7 @@ const galleryJSON = JSON.stringify(galleryImages);
             </ul>
           </div>
           <div class="modal-inc-col excluded">
-            <h3><i class="fa-solid fa-circle-xmark" style="color:var(--terracotta); margin-right:8px;"></i> Not Included</h3>
+            <h3><i class="fa-solid fa-circle-xmark" style="color:var(--terracotta); margin-right:8px;"></i> {l10n.notIncluded}</h3>
             <ul class="modal-exc-list" style="list-style:none; display:flex; flex-direction:column; gap:12px; margin-top:16px;">
               {exclusions.map(item => (
                 <li><i class="fa-solid fa-circle-xmark" style="color:var(--terracotta);margin-right:8px;"></i>{item}</li>
@@ -384,7 +698,7 @@ const galleryJSON = JSON.stringify(galleryImages);
 
       <!-- Frequently Asked Questions -->
       <section class="faq-card reveal active" id="tour-faq">
-        <h2><i class="fa-solid fa-circle-question" style="color:var(--sand-gold); margin-right:8px;"></i> Frequently Asked Questions</h2>
+        <h2><i class="fa-solid fa-circle-question" style="color:var(--sand-gold); margin-right:8px;"></i> {l10n.faqHeading}</h2>
         <div class="faq-list">
           {faqs && faqs.length > 0 ? (
             faqs.map((f, idx) => (
@@ -394,28 +708,12 @@ const galleryJSON = JSON.stringify(galleryImages);
               </details>
             ))
           ) : (
-            <>
-              <details class="faq-item" open>
-                <summary class="faq-question">What luggage and clothing should I pack for this trip? <i class="fa-solid fa-chevron-down"></i></summary>
-                <div class="faq-answer"><p>We recommend comfortable walking shoes for medina cobbles and dunes, loose breathable cotton layers for daytime exploration, and a warm fleece or jacket for crisp desert evenings and mountain passes. Sunglasses, sunscreen, a hat, and a camera are essential.</p></div>
+            l10n.fallbackFaqs.map((f, idx) => (
+              <details class="faq-item" open={idx === 0}>
+                <summary class="faq-question">{f.question} <i class="fa-solid fa-chevron-down"></i></summary>
+                <div class="faq-answer"><p>{f.answer}</p></div>
               </details>
-              <details class="faq-item">
-                <summary class="faq-question">Can this itinerary and accommodation level be customized? <i class="fa-solid fa-chevron-down"></i></summary>
-                <div class="faq-answer"><p>Yes, absolutely! Every Sahara Star Tours package is 100% private and customizable. We can adjust the pacing, departure city, hotel tiers (Standard Riads, Comfort Boutique, or 5-Star Luxury Glamping), and add unique stops to match your travel dreams.</p></div>
-              </details>
-              <details class="faq-item">
-                <summary class="faq-question">Where does pickup and drop-off take place? <i class="fa-solid fa-chevron-down"></i></summary>
-                <div class="faq-answer"><p>We provide seamless door-to-door pickup and drop-off directly from your hotel, riad, or airport in {startingFrom}. Your private English-speaking driver/guide will greet you warmly with personalized signage.</p></div>
-              </details>
-              <details class="faq-item">
-                <summary class="faq-question">Are special dietary requirements catered for? <i class="fa-solid fa-chevron-down"></i></summary>
-                <div class="faq-answer"><p>Yes, all partner riads and our Sahara desert luxury camp chefs cater happily to vegetarian, vegan, halal, and gluten-free dietary requirements. Simply let us know your preferences during booking.</p></div>
-              </details>
-              <details class="faq-item">
-                <summary class="faq-question">How do reservations and deposits work? <i class="fa-solid fa-chevron-down"></i></summary>
-                <div class="faq-answer"><p>After submitting your inquiry, our local travel specialists in Marrakech will confirm availability and send your official itinerary voucher. A modest deposit secures your dates via credit card, PayPal, or wire transfer, with the balance paid safely upon arrival.</p></div>
-              </details>
-            </>
+            ))
           )}
         </div>
       </section>
@@ -423,17 +721,17 @@ const galleryJSON = JSON.stringify(galleryImages);
       <!-- Recommended Related Experiences -->
       {relatedTours && relatedTours.length > 0 && (
         <div class="related-tours-card reveal active">
-          <h2><i class="fa-solid fa-compass" style="color:var(--terracotta); margin-right:8px;"></i> Recommended Similar Journeys</h2>
+          <h2><i class="fa-solid fa-compass" style="color:var(--terracotta); margin-right:8px;"></i> {l10n.relatedHeading}</h2>
           <div class="related-tours-grid">
             {relatedTours.map(rt => (
-              <a href={`/tours/${rt.slug}`} class="related-tour-item">
+              <a href={getTourDetailHref(rt.slug)} class="related-tour-item">
                 <div class="related-tour-img">
                   <img src={rt.heroImage} alt={rt.shortTitle} loading="lazy" onerror="this.src='/assets/placeholder-morocco.svg'" />
                 </div>
                 <div class="related-tour-content">
                   <span class="related-tour-dur"><i class="fa-regular fa-clock"></i> {rt.duration}</span>
                   <h3>{rt.shortTitle}</h3>
-                  <div class="related-tour-price">Starting <strong>{rt.price}</strong></div>
+                  <div class="related-tour-price">{l10n.relatedStarting} <strong>{rt.price.replace(/^(From|Desde|A partire da)\s*/i, '').trim()}</strong></div>
                 </div>
               </a>
             ))}
@@ -449,15 +747,15 @@ const galleryJSON = JSON.stringify(galleryImages);
     <aside class="tour-sidebar">
       <!-- Booking Form Card -->
       <div class="booking-sidebar-card" id="booking-form">
-        <h2>Book This Tour</h2>
+        <h2>{l10n.bookThisTour}</h2>
         <div class="booking-price-header">
-          <span class="booking-price-label">Starting from</span>
-          <span class="booking-price-val">{price.replace(/^From\s*/i, '').trim()}</span>
+          <span class="booking-price-label">{l10n.startingFrom}</span>
+          <span class="booking-price-val">{cleanPriceVal}</span>
         </div>
 
         <!-- Travel Style Selector -->
         <div class="travel-style-group">
-          <label class="travel-style-label"><i class="fa-solid fa-sliders"></i> Travel Style</label>
+          <label class="travel-style-label"><i class="fa-solid fa-sliders"></i> {l10n.travelStyle}</label>
           <div class="travel-style-grid">
             {['Standard', 'Comfort', 'Luxury'].map(style => (
               <div 
@@ -470,7 +768,7 @@ const galleryJSON = JSON.stringify(galleryImages);
                   {style === 'Comfort' && <i class="fa-solid fa-hotel"></i>}
                   {style === 'Luxury' && <i class="fa-solid fa-star"></i>}
                 </span>
-                <span class="ts-name">{style}</span>
+                <span class="ts-name">{l10n.styles[style] || style}</span>
               </div>
             ))}
           </div>
@@ -479,31 +777,30 @@ const galleryJSON = JSON.stringify(galleryImages);
         <form @submit.prevent="submitBooking()">
           <div class="form-group">
             <input type="text" id="booking-name" x-model="bookingData.name" placeholder=" " required />
-            <label for="booking-name">Your Full Name</label>
+            <label for="booking-name">{l10n.fullName}</label>
           </div>
           <div class="form-group">
             <input type="email" id="booking-email" x-model="bookingData.email" placeholder=" " required />
-            <label for="booking-email">Email Address</label>
+            <label for="booking-email">{l10n.email}</label>
           </div>
           <div class="form-group">
             <input type="date" id="booking-date" x-model="bookingData.date" placeholder=" " />
-            <label for="booking-date">Preferred Date</label>
+            <label for="booking-date">{l10n.prefDate}</label>
           </div>
           <div class="form-group">
             <select id="booking-travelers" x-model="bookingData.travelers" style="width:100%">
-              <option value="1 Adult">1 Adult</option>
-              <option value="2 Adults" selected>2 Adults</option>
-              <option value="3-4 People">3 - 4 People</option>
-              <option value="5+ Group">5+ Group</option>
+              {l10n.groupOptions.map(opt => (
+                <option value={opt.value} selected={opt.selected}>{opt.label}</option>
+              ))}
             </select>
-            <label for="booking-travelers">Group Size</label>
+            <label for="booking-travelers">{l10n.groupSize}</label>
           </div>
           <div class="form-group">
             <textarea id="booking-message" x-model="bookingData.message" placeholder=" " rows="3"></textarea>
-            <label for="booking-message">Special requests or questions...</label>
+            <label for="booking-message">{l10n.specialRequests}</label>
           </div>
           <button type="submit" class="btn btn-primary">
-            <i class="fa-solid fa-paper-plane"></i> Send My Inquiry
+            <i class="fa-solid fa-paper-plane"></i> {l10n.sendInquiry}
           </button>
         </form>
 
@@ -511,36 +808,36 @@ const galleryJSON = JSON.stringify(galleryImages);
         <div class="success-overlay" :class="showSuccessModal ? 'active' : ''" id="booking-success-modal">
           <div class="success-card">
             <div class="success-icon-box"><i class="fa-solid fa-circle-check"></i></div>
-            <h3>Request Received!</h3>
+            <h3>{l10n.requestReceived}</h3>
             <p x-text="successMsg"></p>
-            <button class="btn btn-primary" @click="closeModal()">Return to Exploring</button>
+            <button class="btn btn-primary" @click="closeModal()">{l10n.returnExploring}</button>
           </div>
         </div>
       </div>
 
       <!-- Quick Info Card -->
       <div class="booking-sidebar-card" style="padding:20px;">
-        <h3 style="font-size:1.1rem;color:var(--sand-gold);margin-bottom:16px;">Quick Tour Info</h3>
+        <h3 style="font-size:1.1rem;color:var(--sand-gold);margin-bottom:16px;">{l10n.quickInfo}</h3>
         <ul style="list-style:none;display:flex;flex-direction:column;gap:12px;font-size:0.9rem;">
           <li style="display:flex;align-items:center;gap:10px;color:var(--text-muted);">
             <i class="fa-regular fa-clock" style="color:var(--sand-gold);width:16px;"></i>
-            <span><strong style="color:var(--text-main);">Duration:</strong> {duration}</span>
+            <span><strong style="color:var(--text-main);">{l10n.durationLabel}</strong> {duration}</span>
           </li>
           <li style="display:flex;align-items:center;gap:10px;color:var(--text-muted);">
             <i class="fa-solid fa-location-dot" style="color:var(--sand-gold);width:16px;"></i>
-            <span><strong style="color:var(--text-main);">Starting:</strong> {startingFrom}</span>
+            <span><strong style="color:var(--text-main);">{l10n.startingLabel}</strong> {startingFrom}</span>
           </li>
           <li style="display:flex;align-items:center;gap:10px;color:var(--text-muted);">
             <i class="fa-solid fa-users" style="color:var(--sand-gold);width:16px;"></i>
-            <span><strong style="color:var(--text-main);">Group:</strong> Private & Custom</span>
+            <span><strong style="color:var(--text-main);">{l10n.groupLabel}</strong> {l10n.groupVal}</span>
           </li>
           <li style="display:flex;align-items:center;gap:10px;color:var(--text-muted);">
             <i class="fa-solid fa-language" style="color:var(--sand-gold);width:16px;"></i>
-            <span><strong style="color:var(--text-main);">Guide:</strong> EN / FR / ES / IT</span>
+            <span><strong style="color:var(--text-main);">{l10n.guideLabel}</strong> {l10n.guideVal}</span>
           </li>
           <li style="display:flex;align-items:center;gap:10px;color:var(--text-muted);">
             <i class="fa-solid fa-car-side" style="color:var(--sand-gold);width:16px;"></i>
-            <span><strong style="color:var(--text-main);">Transport:</strong> Private A/C Vehicle</span>
+            <span><strong style="color:var(--text-main);">{l10n.transportLabel}</strong> {l10n.transportVal}</span>
           </li>
         </ul>
         <hr style="border:none;border-top:1px solid var(--glass-border);margin:20px 0;" />
@@ -548,16 +845,16 @@ const galleryJSON = JSON.stringify(galleryImages);
           href={`/pdfs/tours/${tourSlug}.pdf`} 
           download={`${tourSlug}.pdf`}
           target="_blank" 
-          rel="noopener"
+          rel="noopener" 
           class="btn btn-secondary" 
           style="width:100%;justify-content:center;gap:10px;margin-bottom:10px;border-color:rgba(212,163,115,0.4);"
-          title={`Download ${tourName} itinerary PDF`}
+          title={`${l10n.downloadPdf} — ${tourName}`}
         >
           <i class="fa-solid fa-file-pdf" style="color:var(--sand-gold);font-size:1.1rem;"></i>
-          <span>Download Tour PDF</span>
+          <span>{l10n.downloadPdf}</span>
         </a>
         <a href="https://wa.me/212678317015" target="_blank" rel="noopener" class="btn btn-secondary" style="width:100%;justify-content:center;gap:10px;">
-          <i class="fa-brands fa-whatsapp" style="color:#25D366;font-size:1.2rem;"></i> WhatsApp Us
+          <i class="fa-brands fa-whatsapp" style="color:#25D366;font-size:1.2rem;"></i> {l10n.whatsAppUs}
         </a>
       </div>
     </aside>
@@ -601,11 +898,11 @@ const galleryJSON = JSON.stringify(galleryImages);
   <!-- Mobile Floating Action Bar -->
   <div class="mobile-floating-booking-bar" id="mobile-booking-bar">
     <div class="mf-left">
-      <span class="mf-tag"><i class="fa-solid fa-shield-halved"></i> INSTANT RESERVE</span>
-      <span class="mf-title">Book This Tour</span>
+      <span class="mf-tag"><i class="fa-solid fa-shield-halved"></i> {l10n.instantReserve}</span>
+      <span class="mf-title">{l10n.bookThisTour}</span>
     </div>
     <button type="button" class="mf-btn" onclick="const f=document.getElementById('booking-form');if(f){f.scrollIntoView({behavior:'smooth'});}">
-      Book Now ↓
+      {l10n.bookNowBtn}
     </button>
   </div>
 
@@ -614,39 +911,39 @@ const galleryJSON = JSON.stringify(galleryImages);
        ============================================== -->
   <aside class="tour-subnav-mobile-strip" id="tour-subnav-mobile-strip" aria-label="Tour quick navigation">
     <div class="mobile-strip-inner">
-      <a href="#tour-about" class="mobile-strip-item active" data-section="tour-about" title="Overview" aria-label="Overview">
+      <a href="#tour-about" class="mobile-strip-item active" data-section="tour-about" title={l10n.overview} aria-label={l10n.overview}>
         <i class="fa-solid fa-circle-info"></i>
-        <span class="mobile-strip-tooltip">Overview</span>
+        <span class="mobile-strip-tooltip">{l10n.overview}</span>
       </a>
       {itinerary.length > 0 && (
-        <a href="#tour-itinerary" class="mobile-strip-item" data-section="tour-itinerary" title="Itinerary" aria-label="Itinerary">
+        <a href="#tour-itinerary" class="mobile-strip-item" data-section="tour-itinerary" title={l10n.itinerary} aria-label={l10n.itinerary}>
           <i class="fa-solid fa-route"></i>
-          <span class="mobile-strip-tooltip">Itinerary</span>
+          <span class="mobile-strip-tooltip">{l10n.itinerary}</span>
         </a>
       )}
       {galleryImages.length > 0 && (
-        <a href="#tour-gallery" class="mobile-strip-item" data-section="tour-gallery" title="Gallery" aria-label="Gallery">
+        <a href="#tour-gallery" class="mobile-strip-item" data-section="tour-gallery" title={l10n.gallery} aria-label={l10n.gallery}>
           <i class="fa-solid fa-images"></i>
-          <span class="mobile-strip-tooltip">Gallery</span>
+          <span class="mobile-strip-tooltip">{l10n.gallery}</span>
         </a>
       )}
-      <a href="#tour-inclusions" class="mobile-strip-item" data-section="tour-inclusions" title="Inclusions" aria-label="Inclusions">
+      <a href="#tour-inclusions" class="mobile-strip-item" data-section="tour-inclusions" title={l10n.included} aria-label={l10n.included}>
         <i class="fa-solid fa-list-check"></i>
-        <span class="mobile-strip-tooltip">Included</span>
+        <span class="mobile-strip-tooltip">{l10n.included}</span>
       </a>
       {mapDestinations.length > 0 && (
-        <a href="#tour-map" class="mobile-strip-item" data-section="tour-map" title="Route Map" aria-label="Route Map">
+        <a href="#tour-map" class="mobile-strip-item" data-section="tour-map" title={l10n.map} aria-label={l10n.map}>
           <i class="fa-solid fa-map-location-dot"></i>
-          <span class="mobile-strip-tooltip">Route Map</span>
+          <span class="mobile-strip-tooltip">{l10n.map}</span>
         </a>
       )}
-      <a href="#tour-faq" class="mobile-strip-item" data-section="tour-faq" title="FAQ" aria-label="FAQ">
+      <a href="#tour-faq" class="mobile-strip-item" data-section="tour-faq" title={l10n.faq} aria-label={l10n.faq}>
         <i class="fa-solid fa-circle-question"></i>
-        <span class="mobile-strip-tooltip">FAQ</span>
+        <span class="mobile-strip-tooltip">{l10n.faq}</span>
       </a>
-      <a href="#booking-form" class="mobile-strip-item mobile-strip-item-book" data-section="booking-form" title="Book Now" aria-label="Book Now">
+      <a href="#booking-form" class="mobile-strip-item mobile-strip-item-book" data-section="booking-form" title={l10n.bookNowNav} aria-label={l10n.bookNowNav}>
         <i class="fa-solid fa-calendar-check"></i>
-        <span class="mobile-strip-tooltip">Book Now</span>
+        <span class="mobile-strip-tooltip">{l10n.bookNowNav}</span>
       </a>
     </div>
   </aside>

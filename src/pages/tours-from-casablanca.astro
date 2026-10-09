@@ -2,8 +2,10 @@
 // src/pages/tours-from-casablanca.astro — Dedicated Casablanca Departure Hub
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getMultiDayToursByCity } from '../data/tours';
+import { getAlternateUrls } from '../data/i18n';
 
 const tours = getMultiDayToursByCity('Casablanca');
+const alternateUrls = getAlternateUrls('/tours-from-casablanca');
 
 function getDurationTier(days: number): string {
   if (days <= 7) return '4-7';
@@ -18,7 +20,7 @@ const casablancaSchema = {
       "@type": "CollectionPage",
       "name": "Private Morocco Tours from Casablanca | Sahara Star Tours",
       "description": `Browse our complete collection of ${tours.length} private multi-day Morocco tours departing from Casablanca. Direct airport pickups, Imperial Cities loops, and grand Sahara desert expeditions from 4 to 16 days.`,
-      "url": "https://www.saharastartours.com/tours-from-casablanca"
+      "url": alternateUrls.en
     },
     {
       "@type": "BreadcrumbList",
@@ -39,7 +41,7 @@ const casablancaSchema = {
           "@type": "ListItem",
           "position": 3,
           "name": "Tours from Casablanca",
-          "item": "https://www.saharastartours.com/tours-from-casablanca"
+          "item": alternateUrls.en
         }
       ]
     }
@@ -52,6 +54,7 @@ const casablancaSchema = {
   description={`Book private tours from Casablanca from 4 to 16 days. Seamless CMN airport pickup, Hassan II Mosque visits, Imperial Cities of Rabat, Fes, and Marrakech, and luxury Erg Chebbi desert glamping.`}
   keywords="tours from casablanca, casablanca desert tour, casablanca to marrakech tour, grand morocco tour from casablanca, morocco private tours from casablanca"
   currentPage="tours"
+  alternateUrls={alternateUrls}
   schemaData={casablancaSchema}
 >
 

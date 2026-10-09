@@ -1,0 +1,187 @@
+{
+  "slug": "5-days-morocco-desert-tour-itinerary-from-tangier",
+  "title": "Tour de 5 Días por el Desierto de Tánger a Marrakech | Sahara Star Tours",
+  "shortTitle": "Tour de 5 Días de Tánger a Marrakech",
+  "description": "Circuito privado de 5 días desde Tánger hasta Marrakech visitando Chefchaouen, Volubilis, Fez, las dunas de Merzouga y la Kasbah Ait Ben Haddou.",
+  "aboutHtml": "<p>Este extraordinario tour privado de 5 días conecta el norte mediterráneo de Marruecos con la magia del sur y la vibrante Marrakech. Partiendo de Tánger, explorará la fotogénica Chefchaouen en las montañas del Rif, las ruinas romanas de Volubilis y la histórica medina de Fez. Cruzará el Atlas hacia el majestuoso desierto de Erg Chebbi en Merzouga con paseo en camello y noche en campamento de lujo, para luego recorrer las Gargantas del Todra, el Valle del Dades y la emblemática Kasbah de Ait Ben Haddou antes de llegar a Marrakech.</p>",
+  "duration": "5 Días / 4 Noches",
+  "startingFrom": "Tánger",
+  "price": "Desde $650/persona",
+  "highlights": [
+    "Chefchaouen, la ciudad azul en las montañas del Rif",
+    "Dunas de Merzouga y desierto de Erg Chebbi",
+    "Paseo en camello por el desierto al atardecer",
+    "Kasbah de Ait Ben Haddou, Patrimonio de la Humanidad por la UNESCO",
+    "Ruta panorámica a través de las montañas del Alto Atlas",
+    "Medina de Fez y lugares culturales históricos"
+  ],
+  "inclusions": [
+    "Vehículo privado 4×4 o monovolumen con aire acondicionado",
+    "Chófer/guía local experimentado de habla hispana",
+    "Combustible, peajes y gastos de funcionamiento del vehículo",
+    "Alojamiento en riads/hoteles seleccionados y campamento de lujo",
+    "Desayunos diarios y cenas según el itinerario",
+    "Paseo en camello por las dunas con asistencia completa"
+  ],
+  "exclusions": [
+    "Almuerzos y bebidas",
+    "Vuelos y gastos portuarios/aeroportuarios no especificados",
+    "Entradas a monumentos o visitas opcionales",
+    "Propinas y gratificaciones"
+  ],
+  "itinerary": [
+    {
+      "day": "Día 1",
+      "title": "Llegada a Tánger – Chefchaouen",
+      "content": "Su viaje comenzará con la recogida en su alojamiento, puerto o aeropuerto en Tánger. Conducirá hacia el sureste atravesando las verdes estribaciones de las montañas del Rif hasta llegar a la mágica Chefchaouen. Dispondrá de la tarde libre para perderse entre sus pintorescas callejuelas azuladas, visitar la plaza Outa el-Hammam y contemplar la puesta de sol. Cena y noche en un riad tradicional con encanto."
+    },
+    {
+      "day": "Día 2",
+      "title": "Chefchaouen – Ruinas Romanas de Volubilis – Mequinez – Fez",
+      "content": "Tras el desayuno en Chefchaouen, continuará viaje hacia las ruinas romanas de Volubilis (Patrimonio de la Humanidad por la UNESCO), famosas por sus mosaicos y su basílica. Luego visitará Mequinez para admirar la monumental puerta de Bab Mansour y el mausoleo de Moulay Ismail. Por la tarde llegará a Fez, la capital espiritual de Marruecos. Cena y noche en un riad en la medina."
+    },
+    {
+      "day": "Día 3",
+      "title": "Fez – Ifrane – Bosque de Cedros – Midelt – Valle del Ziz – Desierto de Merzouga",
+      "content": "Partirá hacia el sur cruzando Ifrane, conocida como 'la Suiza de Marruecos', y el Bosque de Cedros de Azrou para observar a los macacos de Berbería en libertad. Tras el almuerzo en Midelt, descenderá por las impresionantes gargantas y palmerales del Valle del Ziz y Errachidia. Por la tarde alcanzará las doradas dunas de Erg Chebbi en Merzouga, donde montará en camello para presenciar el atardecer sobre las dunas y llegar a su campamento de lujo con cena tradicional y música de tambores bereberes bajo las estrellas."
+    },
+    {
+      "day": "Día 4",
+      "title": "Desierto de Merzouga – Rissani – Erfoud – Gargantas del Todra – Valle del Dades",
+      "content": "Madrugará para presenciar el inolvidable amanecer sobre el mar de dunas. Tras el desayuno en el campamento, regresará en camello o 4×4 a Merzouga. Visitará Rissani con su animado zoco tradicional y continuará por Erfoud hacia las imponentes Gargantas del Todra, un cañón de colosales muros rojizos ideal para pasear a pie. Tiempo para almorzar. Por la tarde llegará al Valle del Dades, admirando las curiosas formaciones de los 'dedos de mono'. Cena y noche en riad en Dades."
+    },
+    {
+      "day": "Día 5",
+      "title": "Valle del Dades – Valle de las Rosas – Palmeral de Skoura – Ouarzazate – Kasbah Ait Ben Haddou – Alto Atlas – Marrakech",
+      "content": "En la última etapa viajará a través del Valle de las Rosas en Kalaat M'Gouna y el palmeral de Skoura hasta Ouarzazate, donde podrá visitar los estudios cinematográficos. Proseguirá hacia la famosa Kasbah de Ait Ben Haddou, pueblo fortificado de adobe declarado Patrimonio de la Humanidad por la UNESCO y escenario de grandes películas como Gladiator y La Momia. Por la tarde cruzará el Alto Atlas a través del puerto de Tizi N'Tichka (2.260 m) con paradas panorámicas, llegando a Marrakech al final del día donde concluirá el circuito."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Llegada a Tánger",
+      "day": "Día 1",
+      "subtitle": "Tánger – Chefchaouen",
+      "desc": "Recogida en Tánger y viaje panorámico cruzando el Rif hacia la ciudad azul de Chefchaouen."
+    },
+    {
+      "number": 2,
+      "name": "Chefchaouen a Fez",
+      "day": "Día 2",
+      "subtitle": "Chefchaouen – Volubilis – Mequinez – Fez",
+      "desc": "Visita a las ruinas romanas de Volubilis, Bab Mansour en Mequinez y llegada a Fez."
+    },
+    {
+      "number": 3,
+      "name": "Fez a Merzouga",
+      "day": "Día 3",
+      "subtitle": "Fez – Ifrane – Bosque de Cedros – Midelt – Valle del Ziz – Merzouga",
+      "desc": "Cruce del Medio Atlas y Valle del Ziz hacia las dunas de Erg Chebbi y campamento de lujo."
+    },
+    {
+      "number": 4,
+      "name": "Merzouga al Dades",
+      "day": "Día 4",
+      "subtitle": "Merzouga – Rissani – Erfoud – Todra – Valle del Dades",
+      "desc": "Amanecer en las dunas, zoco de Rissani, paseo por las Gargantas del Todra y noche en Dades."
+    },
+    {
+      "number": 5,
+      "name": "Valle del Dades a Marrakech",
+      "day": "Día 5",
+      "subtitle": "Dades – Valle de las Rosas – Skoura – Ait Ben Haddou – Marrakech",
+      "desc": "Visita a Ait Ben Haddou y cruce panorámico del Alto Atlas hasta Marrakech."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/5-days-morocco-desert-tour-itinerary-from-tangier/images/gallery_1.webp",
+      "cap": "Kasbah de Tánger",
+      "alt": "Kasbah de Tánger con vistas al estrecho de Gibraltar y al mar Mediterráneo"
+    },
+    {
+      "src": "/sahara-star-tours/5-days-morocco-desert-tour-itinerary-from-tangier/images/gallery_10.webp",
+      "cap": "Mezquita Koutoubia",
+      "alt": "Alminar de la mezquita Koutoubia y jardines de palmeras en Marrakech"
+    },
+    {
+      "src": "/sahara-star-tours/5-days-morocco-desert-tour-itinerary-from-tangier/images/gallery_2.webp",
+      "cap": "Callejones de Chefchaouen",
+      "alt": "Encantador callejón empedrado en Chefchaouen con paredes azules y macetas"
+    },
+    {
+      "src": "/sahara-star-tours/5-days-morocco-desert-tour-itinerary-from-tangier/images/gallery_3.webp",
+      "cap": "Ruinas de Volubilis",
+      "alt": "Columnas romanas y arco de triunfo en pie en las ruinas de Volubilis"
+    },
+    {
+      "src": "/sahara-star-tours/5-days-morocco-desert-tour-itinerary-from-tangier/images/gallery_4.webp",
+      "cap": "Bab Mansour",
+      "alt": "Histórica puerta de entrada de Bab Mansour en la ciudad imperial de Mequinez"
+    },
+    {
+      "src": "/sahara-star-tours/5-days-morocco-desert-tour-itinerary-from-tangier/images/gallery_5.webp",
+      "cap": "Tejados de Fez",
+      "alt": "Vista panorámica de los tejados de la medina de Fez desde las Tumbas Meriníes"
+    },
+    {
+      "src": "/sahara-star-tours/5-days-morocco-desert-tour-itinerary-from-tangier/images/gallery_6.webp",
+      "cap": "Bosque de Azrou",
+      "alt": "Paseo por el bosque de cedros cerca de Azrou en las montañas del Medio Atlas"
+    },
+    {
+      "src": "/sahara-star-tours/5-days-morocco-desert-tour-itinerary-from-tangier/images/gallery_7.webp",
+      "cap": "Caravana en Erg Chebbi",
+      "alt": "Caravana de camellos moviéndose a través de las doradas dunas de Erg Chebbi al atardecer"
+    },
+    {
+      "src": "/sahara-star-tours/5-days-morocco-desert-tour-itinerary-from-tangier/images/gallery_8.webp",
+      "cap": "Gargantas del Todra",
+      "alt": "Altas paredes de roca caliza roja de las Gargantas del Todra en el Alto Atlas oriental"
+    },
+    {
+      "src": "/sahara-star-tours/5-days-morocco-desert-tour-itinerary-from-tangier/images/gallery_9.webp",
+      "cap": "Ait Ben Haddou",
+      "alt": "Pueblo fortificado de Ait Ben Haddou, declarado Patrimonio de la Humanidad por la UNESCO"
+    },
+    {
+      "src": "/sahara-star-tours/5-days-morocco-desert-tour-itinerary-from-tangier/images/hero_2.webp",
+      "cap": "Chefchaouen y el Rif",
+      "alt": "Vista panorámica de casas encaladas de azul al pie de las montañas del Rif en Chefchaouen"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "¿Es este un tour privado o compartido?",
+      "answer": "Esta es una experiencia totalmente privada: el vehículo, conductor y programa están reservados exclusivamente para su grupo."
+    },
+    {
+      "question": "¿Cuánto tiempo dura el paseo en camello y qué opciones existen?",
+      "answer": "El paseo en camello suele durar entre 40 minutos y 1,5 horas. Como alternativa, se puede organizar el traslado directo en vehículo 4×4 sin coste adicional."
+    },
+    {
+      "question": "¿La tienda del campamento en el desierto es privada?",
+      "answer": "Sí, el campamento en el desierto cuenta con tiendas de campaña privadas de lujo con baño incorporado, agua caliente, camas de verdad y electricidad."
+    },
+    {
+      "question": "¿Dónde se realiza la recogida y el regreso?",
+      "answer": "La recogida se realiza en su alojamiento, puerto o aeropuerto de Tánger y el circuito concluye en Marrakech con traslado a su riad o al aeropuerto."
+    },
+    {
+      "question": "¿Qué tipo de vehículo se utiliza?",
+      "answer": "El viaje se realiza en un cómodo vehículo privado 4×4 o monovolumen con aire acondicionado. Para grupos más numerosos disponemos de minibuses adaptados."
+    },
+    {
+      "question": "¿Se pueden atender requerimientos dietéticos particulares?",
+      "answer": "Sí. Infórmenos sobre sus preferencias o restricciones dietéticas al reservar para que los riads, hoteles y el campamento preparen comidas adecuadas (vegetariano, vegano, sin gluten, etc.)."
+    },
+    {
+      "question": "¿Es este itinerario adecuado para todas las edades?",
+      "answer": "Sí, es perfectamente adecuado para todas las edades gracias al ritmo equilibrado de las etapas y a las paradas frecuentes para descansar."
+    },
+    {
+      "question": "¿Cuál es la mejor época del año para realizar este tour?",
+      "answer": "La primavera y el otoño brindan temperaturas suaves y cielos despejados muy recomendables para combinar el norte montañoso, las ciudades históricas y el desierto."
+    }
+  ]
+}

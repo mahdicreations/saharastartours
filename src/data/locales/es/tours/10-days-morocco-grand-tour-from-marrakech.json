@@ -1,0 +1,247 @@
+{
+  "slug": "10-days-morocco-grand-tour-from-marrakech",
+  "title": "Gran Tour de 10 Días por Marruecos de Marrakech a Tánger | Sahara Star Tours",
+  "shortTitle": "Gran Tour de 10 Días de Marrakech a Tánger",
+  "description": "Gran viaje privado de 10 días por Marruecos desde Marrakech hasta Tánger. Cruce el Alto Atlas, duerma bajo las estrellas en Erg Chebbi y explore la imperial Fez.",
+  "aboutHtml": "Este gran circuito privado de 10 días por Marruecos comienza en Marrakech y culmina en Tánger. A lo largo del camino disfrutará de la magia de Marrakech, la brisa de Essaouira, el cruce del Alto Atlas, la Kasbah de Ait Ben Haddou, el Valle de las Rosas, las dunas de Erg Chebbi, los palmerales del Ziz, la medina imperial de Fez, las ruinas romanas de Volubilis y la icónica perla azul de Chefchaouen.",
+  "duration": "10 Días / 9 Noches",
+  "startingFrom": "Marrakech",
+  "price": "Desde 1.250 $/persona",
+  "highlights": [
+    "Desierto del Sahara en Merzouga y las dunas de Erg Chebbi",
+    "Paseo en camello por el desierto al atardecer y campamento de lujo",
+    "Kasbah de Ait Ben Haddou declarada Patrimonio de la Humanidad por la UNESCO",
+    "Paso panorámico a través de las altas cumbres del Alto Atlas",
+    "Chefchaouen, la mágica ciudad azul en las montañas del Rif",
+    "Medina histórica de Fez y sus tesoros culturales milenarios"
+  ],
+  "inclusions": [
+    "Vehículo privado 4x4 o monovolumen moderno con aire acondicionado",
+    "Chófer y guía local profesional con traslados privados",
+    "Combustible, peajes y todos los gastos operativos del vehículo",
+    "Alojamiento en riads y hoteles con encanto especificados en el itinerario",
+    "Desayunos diarios y cenas incluidas según el programa detallado",
+    "Paseo en camello por el desierto y estancia en campamento de jaimas de lujo"
+  ],
+  "exclusions": [
+    "Almuerzos y bebidas durante el viaje",
+    "Billetes de avión internacionales y servicios no especificados",
+    "Gastos personales y actividades opcionales",
+    "Propinas para guías y chófer"
+  ],
+  "itinerary": [
+    {
+      "day": "Día 1",
+      "title": "Llegada a Marrakech",
+      "content": "Su viaje comienza con la bienvenida en el aeropuerto de Marrakech y el traslado privado a su alojamiento en un riad tradicional con encanto."
+    },
+    {
+      "day": "Día 2",
+      "title": "Marrakech – Excursión Costera a Essaouira",
+      "content": "Tras el desayuno, viaje hacia la costa atlántica a Essaouira. Paradas en cooperativas de aceite de argán para observar las cabras trepadoras. En Essaouira dispondrá de tiempo libre para recorrer las murallas de la Skala, el animado puerto pesquero y la medina blanca protegida por la UNESCO. Noche en riad de Essaouira."
+    },
+    {
+      "day": "Día 3",
+      "title": "Essaouira – Visita Guiada por Marrakech",
+      "content": "Regreso a Marrakech para descubrir los monumentos icónicos de la Ciudad Roja con un guía local oficial: el Palacio de la Bahía, la Madraza Ben Youssef, la mezquita Koutoubia y los zocos artesanales de la medina. Tarde en la Plaza Jemaa el-Fna y noche en riad."
+    },
+    {
+      "day": "Día 4",
+      "title": "Marrakech – Alto Atlas – Kasbah Ait Ben Haddou – Valle de las Rosas – Valle del Dades",
+      "content": "Travesía del Alto Atlas por el espectacular paso de Tizi n'Tichka con vistas a pueblos bereberes. Visita a pie de la Kasbah de Ait Ben Haddou (Patrimonio de la Humanidad por la UNESCO), célebre escenario de Gladiator. Continuación hacia Ouarzazate, el palmeral de Skoura y el Valle de las Rosas hasta llegar a Boumalne Dades. Cena y noche en riad."
+    },
+    {
+      "day": "Día 5",
+      "title": "Valle del Dades – Gargantas del Todra – Dunas de Merzouga – Noche en Campamento de Lujo",
+      "content": "Visita al majestuoso cañón de las Gargantas del Todra con paredes de 300 metros de altura. Almuerzo y trayecto a través de los palmerales hacia el desierto de Merzouga. Caravana en camello sobre las dunas doradas de Erg Chebbi al atardecer y llegada al campamento de lujo. Cena bereber, tambores junto al fuego y noche bajo las estrellas."
+    },
+    {
+      "day": "Día 6",
+      "title": "Exploración del Desierto – Familias Nómadas – Música Gnawa de Khamlia",
+      "content": "Amanecer inolvidable en las dunas y desayuno. Jornada en 4x4 por el desierto: antiguas minas de kohl, encuentro con familias nómadas bereberes en sus jaimas y concierto de música espiritual Gnawa en Khamlia. Paseo por el palmeral y el lago de los flamencos. Cena y noche en riad junto a las dunas."
+    },
+    {
+      "day": "Día 7",
+      "title": "Merzouga – Erfoud – Midelt – Bosque de Cedros – Ifrane – Fez",
+      "content": "Salida del desierto visitando el mercado de Rissani y talleres de fósiles en Erfoud. Travesía del Valle del Ziz y el Medio Atlas, deteniéndonos en el bosque de cedros de Azrou para ver a los macacos salvajes y en la alpina Ifrane antes de llegar a Fez. Noche en riad."
+    },
+    {
+      "day": "Día 8",
+      "title": "Visita Monumental Guiada de Fez",
+      "content": "Día dedicado a Fez el-Bali: las puertas doradas del Palacio Real, el barrio judío del Mellah, la vista panorámica desde Borj Sud, la Madraza Al Attarine, las milenarias tenerías de Chouara y la Universidad Al Quaraouiyine. Tarde libre para descansar o explorar los zocos."
+    },
+    {
+      "day": "Día 9",
+      "title": "Fez – Meknes – Ruinas Romanas de Volubilis – Chefchaouen",
+      "content": "Visita de Meknes (Bab Mansour y Mausoleo de Moulay Ismail) y las impresionantes ruinas romanas de Volubilis con sus mosaicos conservados. Continuación hacia las montañas del Rif hasta la perla azul de Chefchaouen. Tarde libre en sus callejones azules y noche en riad."
+    },
+    {
+      "day": "Día 10",
+      "title": "Chefchaouen – Traslado al Aeropuerto de Tánger",
+      "content": "Tiempo libre por la mañana para fotografiar los rincones azules de Chefchaouen antes del traslado panorámico hacia el aeropuerto de Tánger, concluyendo así este gran viaje de 10 días."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Llegada a Marrakech",
+      "day": "Día 1",
+      "subtitle": "Bienvenida",
+      "desc": "Recogida en el aeropuerto y traslado al riad."
+    },
+    {
+      "number": 2,
+      "name": "Marrakech a Essaouira",
+      "day": "Día 2",
+      "subtitle": "Costa Atlántica",
+      "desc": "Arganes, murallas de la Skala y puerto marinero."
+    },
+    {
+      "number": 3,
+      "name": "Visita de Marrakech",
+      "day": "Día 3",
+      "subtitle": "Ciudad Roja",
+      "desc": "Palacio de la Bahía, Madraza Ben Youssef y zocos."
+    },
+    {
+      "number": 4,
+      "name": "Marrakech a Dades",
+      "day": "Día 4",
+      "subtitle": "Alto Atlas y Kasbahs",
+      "desc": "Paso Tizi n'Tichka, Ait Ben Haddou y Valle de las Rosas."
+    },
+    {
+      "number": 5,
+      "name": "Dades a Merzouga",
+      "day": "Día 5",
+      "subtitle": "Gargantas y Desierto",
+      "desc": "Gargantas del Todra, dunas de Erg Chebbi y campamento de lujo."
+    },
+    {
+      "number": 6,
+      "name": "Región de Merzouga",
+      "day": "Día 6",
+      "subtitle": "Cultura Nómada",
+      "desc": "Música Gnawa en Khamlia y encuentro con nómadas del desierto."
+    },
+    {
+      "number": 7,
+      "name": "Merzouga a Fez",
+      "day": "Día 7",
+      "subtitle": "Medio Atlas",
+      "desc": "Valle del Ziz, bosque de cedros de Azrou e Ifrane."
+    },
+    {
+      "number": 8,
+      "name": "Visita de Fez",
+      "day": "Día 8",
+      "subtitle": "Medina Imperial",
+      "desc": "Recorrido oficial por la medina medieval y tenerías de Chouara."
+    },
+    {
+      "number": 9,
+      "name": "Fez a Chefchaouen",
+      "day": "Día 9",
+      "subtitle": "Volubilis y el Rif",
+      "desc": "Mosaicos romanos de Volubilis y calles azules de Chefchaouen."
+    },
+    {
+      "number": 10,
+      "name": "Tánger",
+      "day": "Día 10",
+      "subtitle": "Salida",
+      "desc": "Traslado al aeropuerto de Tánger y fin del itinerario."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/10-days-morocco-grand-tour-from-marrakech/images/gallery_1.webp",
+      "cap": "Galería 1",
+      "alt": "Patio ornamentado con cedro tallado y yeserías en la Madraza Ben Youssef"
+    },
+    {
+      "src": "/sahara-star-tours/10-days-morocco-grand-tour-from-marrakech/images/gallery_10.webp",
+      "cap": "Galería 10",
+      "alt": "Faroles marroquíes de latón brillante colgados en una terraza al anochecer"
+    },
+    {
+      "src": "/sahara-star-tours/10-days-morocco-grand-tour-from-marrakech/images/gallery_2.webp",
+      "cap": "Galería 2",
+      "alt": "Luz dorada de la tarde sobre los edificios azules de Chefchaouen"
+    },
+    {
+      "src": "/sahara-star-tours/10-days-morocco-grand-tour-from-marrakech/images/gallery_3.webp",
+      "cap": "Galería 3",
+      "alt": "Carro tirado por un burro en una callejuela tradicional de la medina de Marrakech"
+    },
+    {
+      "src": "/sahara-star-tours/10-days-morocco-grand-tour-from-marrakech/images/gallery_4.webp",
+      "cap": "Galería 4",
+      "alt": "Gatito descansando en un rincón de un patio embaldosado de terracota en la medina"
+    },
+    {
+      "src": "/sahara-star-tours/10-days-morocco-grand-tour-from-marrakech/images/gallery_5.webp",
+      "cap": "Galería 5",
+      "alt": "Caravana de viajeros a lomos de dromedarios cruzando las dunas del Sahara"
+    },
+    {
+      "src": "/sahara-star-tours/10-days-morocco-grand-tour-from-marrakech/images/gallery_6.webp",
+      "cap": "Galería 6",
+      "alt": "Residente local descansando con su carretilla en un callejón de Marrakech"
+    },
+    {
+      "src": "/sahara-star-tours/10-days-morocco-grand-tour-from-marrakech/images/gallery_7.webp",
+      "cap": "Galería 7",
+      "alt": "Dromedarios descansando frente a la histórica Kasbah de Ait Ben Haddou"
+    },
+    {
+      "src": "/sahara-star-tours/10-days-morocco-grand-tour-from-marrakech/images/gallery_8.webp",
+      "cap": "Galería 8",
+      "alt": "Crestas onduladas esculpidas por el viento en las dunas de arena de Erg Chebbi"
+    },
+    {
+      "src": "/sahara-star-tours/10-days-morocco-grand-tour-from-marrakech/images/gallery_9.webp",
+      "cap": "Galería 9",
+      "alt": "Anciano marroquí con fez tradicional junto a una puerta azul en Chefchaouen"
+    },
+    {
+      "src": "/sahara-star-tours/10-days-morocco-grand-tour-from-marrakech/images/hero_2.webp",
+      "cap": "Hero 2",
+      "alt": "Camellos galopando sobre las dunas doradas del Sahara a la luz del atardecer"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "¿Es este un tour privado o compartido?",
+      "answer": "Es una experiencia privada y exclusiva para su grupo, garantizando flexibilidad total en paradas, horarios y ritmo."
+    },
+    {
+      "question": "¿Cuánto dura el paseo en camello y qué alternativa hay?",
+      "answer": "El paseo en camello dura entre 45 minutos y una hora y media. Si prefiere no montar en camello, organizamos el traslado al campamento en 4x4 sin recargo."
+    },
+    {
+      "question": "¿Las tiendas del campamento en el desierto son privadas?",
+      "answer": "Sí, se alojará en tiendas privadas de lujo equipadas con camas confortables, baño privado, lavabo y ducha con agua caliente."
+    },
+    {
+      "question": "¿Dónde comienzan y terminan los traslados?",
+      "answer": "La recogida es en Marrakech (aeropuerto o riad) y el circuito finaliza en Tánger (o Casablanca/Marrakech según sus vuelos)."
+    },
+    {
+      "question": "¿Qué vehículo se utiliza para el transporte?",
+      "answer": "Se utiliza un vehículo privado 4x4 o monovolumen con aire acondicionado. Para familias grandes o grupos disponemos de minibuses de alta gama."
+    },
+    {
+      "question": "¿Se contemplan restricciones o dietas alimentarias?",
+      "answer": "Sí, avísenos de antemano para coordinar opciones vegetarianas, veganas, sin gluten o adaptadas a sus necesidades."
+    },
+    {
+      "question": "¿Es apto para familias con niños o personas mayores?",
+      "answer": "Sí, el itinerario está concebido para todas las edades con descansos regulares y actividades adaptables a cada ritmo."
+    },
+    {
+      "question": "¿Cuándo es la época idónea para este itinerario?",
+      "answer": "La primavera y el otoño son ideales por su clima templado. El invierno ofrece noches estrelladas y temperaturas diurnas muy agradables en el desierto."
+    }
+  ]
+}

@@ -1,0 +1,953 @@
+[
+  {
+    "slug": "agafay-desert-sunset-camel-ride",
+    "title": "Agafay Desert Sunset Camel Ride & Dinner | Sahara Star",
+    "shortTitle": "Agafay Desert Sunset Camel Ride & Dinner",
+    "description": "Escape Marrakech for a magical sunset camel ride in the stone desert of Agafay. Enjoy a traditional Berber dinner under the stars with live music.",
+    "aboutHtml": "Enjoy an unforgettable evening in the Agafay Desert with a sunset camel ride, traditional Moroccan dinner in a desert camp, and live Berber music around the campfire.",
+    "duration": "1 Day / Full Day Trip",
+    "startingFrom": "Marrakech",
+    "price": "From $85/person",
+    "highlights": [
+      "Magical sunset camel ride in the Agafay Desert with panoramic views of the Atlas Mountains.",
+      "Traditional Moroccan dinner (tajines, couscous, salads, dessert) served in a cozy desert camp under Berber tents.",
+      "Authentic cultural atmosphere with Berber music, drumming and live show around the campfire under the stars.",
+      "Small-group experience with hotel pick-up and drop-off from Marrakech in comfortable, air-conditioned transport.",
+      "Perfect evening for couples, families and friends who want a short desert escape without long driving hours."
+    ],
+    "inclusions": [
+      "Private or small-group transfers from Marrakech",
+      "Sunset camel ride across the Agafay Desert dunes",
+      "Three-course traditional Moroccan dinner served in a luxury tent",
+      "Live campfire music and fire show"
+    ],
+    "exclusions": [
+      "Personal expenses and souvenirs",
+      "Gratuities for your guide and driver (optional)",
+      "Extra meals and beverages not explicitly mentioned",
+      "Entrance fees to monuments (if any)"
+    ],
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "title": "Detailed itinerary",
+        "content": "16:30–17:00 – Pick-up from your hotel or riad in Marrakech and drive to the Agafay Desert (about 40–50 minutes). 17:30 – Arrival at the camp, welcome with Moroccan tea and pastries, meeting with your camel guide. 18:00 – Sunset camel ride (about 45–60 minutes) across the rocky desert with photo stops in traditional desert outfits (cheich/scarf on request). 19:00 – Return to camp and free time to relax and enjoy the sunset views over Agafay and the Atlas Mountains. 19:30 – Moroccan dinner under a Berber tent or under the stars: mixed salads, tajine or couscous, dessert (seasonal fruits or pastries), mint tea; vegetarian options available on request. 20:30–21:00 – Traditional entertainment with Berber music, drumming and sometimes fire show around the campfire. 21:30–22:00 – Drive back to Marrakech and drop-off at your hotel or riad."
+      }
+    ],
+    "mapDestinations": [
+      {
+        "number": 1,
+        "name": "Marrakech",
+        "day": "Afternoon",
+        "subtitle": "Departure",
+        "desc": "Pick up from hotel or meeting point."
+      },
+      {
+        "number": 2,
+        "name": "Agafay Stone Desert",
+        "day": "Sunset",
+        "subtitle": "Camel Ride & White Dunes",
+        "desc": "Camel trek in traditional nomadic attire as sun sets over Atlas peaks."
+      },
+      {
+        "number": 3,
+        "name": "Luxury Desert Camp",
+        "day": "Evening",
+        "subtitle": "Dinner Under the Stars",
+        "desc": "Candlelit Moroccan banquet, fire show, and Gnawa music around campfire."
+      }
+    ],
+    "galleryImages": [
+      {
+        "src": "/sahara-star-tours/day-trips/agafay-desert-sunset-camel-ride-dinner-under-the-stars/images/thumbnail.jpg",
+        "cap": "Agafay Desert Sunset Camel Ride & Dinner Under The Stars",
+        "alt": ""
+      },
+      {
+        "src": "/sahara-star-tours/day-trips/agafay-desert-sunset-camel-ride-dinner-under-the-stars/images/image-01.jpg",
+        "cap": "Agafay Desert Sunset Camel Ride & Dinner Under The Stars",
+        "alt": ""
+      },
+      {
+        "src": "/sahara-star-tours/day-trips/agafay-desert-sunset-camel-ride-dinner-under-the-stars/images/image-02.png",
+        "cap": "Agafay Desert Sunset Camel Ride & Dinner Under The Stars",
+        "alt": ""
+      }
+    ],
+    "faqs": []
+  },
+  {
+    "slug": "day-trip-essaouira-mogador",
+    "title": "Essaouira Mogador Day Trip from Marrakech | Sahara Star",
+    "shortTitle": "Essaouira Mogador Day Trip from Marrakech",
+    "description": "Private day excursion from Marrakech to coastal Essaouira Mogador. Stroll historical Portuguese ramparts, artisan medina souks, and fresh seafood stalls.",
+    "aboutHtml": "One Day Trip from Marrakech to Essaouira Mogador<br/><br/>The day trip from Marrakech to Essaouira is a very interesting one, considering Essaouira itself is a very interesting coastal town.<br/><br/>We will begin this one day excursion at around 8 am by leaving Marrakech and going on a 3 hours long road trip to get to Essaouira city, which falls on the Atlantic coast.<br/><br/>We will enjoy a walk through the narrow streets of Essaouira’s Old Medina, which is a UNESCO world heritage site. Similarly, we will also enjoy a walk through the city ramparts along its golden beach. For lunch, we will try out of the many seafood dishes that the city specializes in.<br/><br/>Next, we will drive deep into Essaouira old Medina, exploring its small shops and artisanal crafts. We might visit one of the local women cooperatives that specialize in the production of Argan oil.<br/><br/>Finally, we will head back to the red city after a wonderful day of exploring the vibrant and charming city of Essaouira.",
+    "duration": "1 Day / Full Day Trip",
+    "startingFrom": "Marrakech",
+    "price": "From $65/person",
+    "highlights": [
+      "Coastal Road Trip: A beautiful drive along the Atlantic coast to Essaouira.",
+      "Essaouira Medina: Walk through the narrow streets of the Old Medina, a UNESCO World Heritage Site.",
+      "City Ramparts: Explore the fortified walls of the city overlooking its golden beach.",
+      "Seafood Lunch: Enjoy a fresh seafood meal in one of the local restaurants.",
+      "Artisanal Crafts: Browse the small shops for unique, handcrafted items, and visit a women’s cooperative producing Argan oil."
+    ],
+    "inclusions": [
+      "Comfortable, air-conditioned transportation",
+      "Visit to an Argan oil women's cooperative",
+      "Free time to explore the Essaouira Medina and Ramparts",
+      "Stops for panoramic photos of the Atlantic coast"
+    ],
+    "exclusions": [
+      "Personal expenses and souvenirs",
+      "Gratuities for your guide and driver (optional)",
+      "Extra meals and beverages not explicitly mentioned",
+      "Entrance fees to monuments (if any)"
+    ],
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "title": "Essaouira – Atlantic Coast – Old Medina – City Ramparts – Seafood Lunch – Argan Oil Cooperative",
+        "content": "Title: One Day Trip from Marrakech to Essaouira Mogador Embark on a captivating journey from Marrakech to Essaouira Mogador. Immerse yourself in the charm of this coastal city as you explore its rich history, vibrant markets, and picturesque beaches. Indulge in local cuisine, visit historical landmarks, and soak in the serene atmosphere of Essaouira Mogador. Experience a day filled with unforgettable moments on this remarkable excursion. Title: One Day Trip from Marrakech to Essaouira Mogador Embark on an unforgettable journey from Marrakech to the enchanting coastal town of Essaouira Mogador. This day trip offers a perfect blend of history, culture, and natural beauty. Explore the charming medina, stroll along the pristine sandy beaches, and immerse yourself in the rich maritime heritage of this UNESCO World Heritage Site. Experience the magic of Essaouira Mogador in a single day, creating memories that will last a lifetime. Drive to Essaouira Your tour begins with a three-hour scenic drive from Marrakech to the coastal city of Essaouira. Along the way, you’ll pass by Argan trees and might even spot goats climbing them, a famous sight in the region. Explore the Old Medina Upon arrival in Essaouira, you’ll start with a guided tour of the Old Medina, a UNESCO World Heritage Site. You’ll walk through its narrow streets, discovering the city’s rich history, art galleries, and unique architecture. City Ramparts and the Beach Next, you’ll visit the city’s ancient ramparts that offer breathtaking views of the Atlantic Ocean. Afterward, take a stroll along Essaouira’s golden beach, where you can relax and enjoy the fresh sea breeze. Seafood Lunch For lunch, you’ll head to a local restaurant to enjoy some of the freshest seafood in Morocco. Essaouira is famous for its seafood dishes, and you’ll have the chance to try specialties like grilled fish, calamari, and prawns. Visit to an Argan Oil Cooperative In the afternoon, you’ll visit a women’s cooperative specializing in the production of Argan oil. You’ll learn about the traditional methods used to produce this valuable oil and have the opportunity to purchase products directly from the cooperative. Return to Marrakech After a full day of exploring Essaouira’s unique charm, you’ll return to Marrakech in the late afternoon."
+      }
+    ],
+    "mapDestinations": [
+      {
+        "number": 1,
+        "name": "Marrakech",
+        "day": "Morning",
+        "subtitle": "Departure",
+        "desc": "Pick-up from your riad or hotel."
+      },
+      {
+        "number": 2,
+        "name": "Argan Forest",
+        "day": "Mid-way",
+        "subtitle": "Argan Oil Cooperative",
+        "desc": "Witness goats climbing argan trees and women producing pure argan oil."
+      },
+      {
+        "number": 3,
+        "name": "Essaouira Port",
+        "day": "Afternoon",
+        "subtitle": "Historic Skala & Fishing Port",
+        "desc": "Blue wooden boats, fresh seafood stalls, and sea bastions."
+      },
+      {
+        "number": 4,
+        "name": "Essaouira Medina",
+        "day": "Afternoon",
+        "subtitle": "UNESCO Walled Medina",
+        "desc": "Artisan woodcarvers, white-washed lanes, and Atlantic breeze."
+      }
+    ],
+    "galleryImages": [
+      {
+        "src": "/sahara-star-tours/day-trips/one-day-trip-from-marrakech-to-essaouira-mogador/images/thumbnail.jpeg",
+        "cap": "One Day Trip From Marrakech To Essaouira Mogador",
+        "alt": ""
+      },
+      {
+        "src": "/sahara-star-tours/day-trips/one-day-trip-from-marrakech-to-essaouira-mogador/images/image-01.jpg",
+        "cap": "One Day Trip From Marrakech To Essaouira Mogador",
+        "alt": ""
+      },
+      {
+        "src": "/sahara-star-tours/day-trips/one-day-trip-from-marrakech-to-essaouira-mogador/images/image-02.jpeg",
+        "cap": "One Day Trip From Marrakech To Essaouira Mogador",
+        "alt": ""
+      },
+      {
+        "src": "/sahara-star-tours/day-trips/one-day-trip-from-marrakech-to-essaouira-mogador/images/image-03.jpeg",
+        "cap": "One Day Trip From Marrakech To Essaouira Mogador",
+        "alt": ""
+      },
+      {
+        "src": "/sahara-star-tours/day-trips/one-day-trip-from-marrakech-to-essaouira-mogador/images/image-04.jpeg",
+        "cap": "One Day Trip From Marrakech To Essaouira Mogador",
+        "alt": ""
+      },
+      {
+        "src": "/sahara-star-tours/day-trips/one-day-trip-from-marrakech-to-essaouira-mogador/images/image-05.jpg",
+        "cap": "One Day Trip From Marrakech To Essaouira Mogador",
+        "alt": ""
+      }
+    ],
+    "faqs": []
+  },
+  {
+    "slug": "day-trip-ait-ben-haddou",
+    "title": "Ait Ben Haddou & Ouarzazate Day Trip | Sahara Star Tours",
+    "shortTitle": "Ait Ben Haddou & Ouarzazate Day Trip",
+    "description": "Full-day excursion from Marrakech across the Tizi n'Tichka pass to UNESCO Ait Ben Haddou Kasbah and Ouarzazate, Morocco's legendary film-making capital.",
+    "aboutHtml": "One Day Trip from Marrakech to Ouarzazate and the Ait Ben Haddou Kasbah<br/><br/>This day trip from Marrakech to Ouarzazate is one of the most popular ones among tourists in Morocco, since it includes a visit the famous Ait Ben Haddou Kasbah.<br/><br/>Our one day tour begins by leaving Marrakech and going on a road trip through the High Atlas Mountains, before getting to our first destination: the city of Ouarzazate. Ouarzazate, also called “The Hollywood of Morocco”, is home to Morocco’s largest film studios, which helped produce some important international movies.<br/><br/>Not far from the city of Ouarzazate is located one of Morocco’s most important historical monuments: the Kasbah of Ait Ben Haddou. This Kasbah holds great value in filmmaking history, since it is backdrop where many historical movies were made, such as Gladiator, Lawrence of Arabia and Kingdom of Heaven. The Ait Ben Haddou Kasbah is also a UNESCO world heritage site.<br/><br/>Finally, we will pay a short visit to the nearby Taourirt Kasbah, before heading back to Marrakech in the evening.",
+    "duration": "1 Day / Full Day Trip",
+    "startingFrom": "Marrakech",
+    "price": "From $75/person",
+    "highlights": [
+      "High Atlas Mountains: A scenic drive through the mountains with stunning views.",
+      "Ouarzazate: Visit Morocco’s “Hollywood,” home to the largest film studios in the country.",
+      "Ait Ben Haddou Kasbah: Explore the UNESCO World Heritage Site, a historical marvel and iconic film location.",
+      "Taourirt Kasbah: A short visit to this nearby kasbah, rich in history and architecture."
+    ],
+    "inclusions": [
+      "Scenic drive across the High Atlas Mountains via Tizi n'Tichka pass",
+      "Guided visit to the UNESCO World Heritage Kasbah Ait Ben Haddou",
+      "Stop at Ouarzazate (Hollywood of Africa) and Taourirt Kasbah",
+      "English-speaking driver and guide"
+    ],
+    "exclusions": [
+      "Personal expenses and souvenirs",
+      "Gratuities for your guide and driver (optional)",
+      "Extra meals and beverages not explicitly mentioned",
+      "Entrance fees to monuments (if any)"
+    ],
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "title": "Marrakech – High Atlas Mountains – Ouarzazate – Ait Ben Haddou Kasbah – Taourirt Kasbah – Film Studios",
+        "content": "Drive through the High Atlas Mountains Your journey begins with a scenic drive through the High Atlas Mountains, where you’ll pass through winding roads and traditional Berber villages, enjoying stunning views of the rugged terrain. Arrival in Ouarzazate Your first destination is Ouarzazate, known as the “Hollywood of Morocco” due to its film studios where many famous movies were shot. You’ll visit these studios and learn about their role in the film industry. Ait Ben Haddou Kasbah Next, you’ll explore the UNESCO World Heritage site of Ait Ben Haddou, a stunning example of traditional Moroccan architecture. This kasbah has served as the backdrop for many blockbuster films, including Gladiator and Lawrence of Arabia. Lunch at a Local Restaurant Enjoy a traditional Moroccan lunch in a restaurant near Ait Ben Haddou, where you’ll savor local specialties while taking in the historical surroundings. Visit to Taourirt Kasbah After lunch, you’ll visit the nearby Taourirt Kasbah, another impressive structure with historical significance. The kasbah was once the residence of a powerful local leader, and its intricate design is a must-see. Return to Marrakech As the day winds down, you’ll head back to Marrakech, arriving in the evening after a day filled with history and cinematic wonder."
+      }
+    ],
+    "mapDestinations": [
+      {
+        "number": 1,
+        "name": "Marrakech",
+        "day": "Morning",
+        "subtitle": "Departure",
+        "desc": "Pick up and journey towards High Atlas."
+      },
+      {
+        "number": 2,
+        "name": "Tizi n'Tichka",
+        "day": "Mid-way",
+        "subtitle": "High Atlas Pass (2,260m)",
+        "desc": "Panoramic viewpoints overlooking winding mountain roads."
+      },
+      {
+        "number": 3,
+        "name": "Kasbah Ait Benhaddou",
+        "day": "Lunch",
+        "subtitle": "UNESCO World Heritage Fortress",
+        "desc": "Climb through the ancient earthen ksar filmed in Gladiator."
+      },
+      {
+        "number": 4,
+        "name": "Ouarzazate Film Studios",
+        "day": "Afternoon",
+        "subtitle": "Hollywood of Africa",
+        "desc": "Atlas Film Studios and Kasbah Taourirt."
+      }
+    ],
+    "galleryImages": [
+      {
+        "src": "/sahara-star-tours/day-trips/one-day-trip-from-marrakech-to-ouarzazate-and-the-ait-ben-haddou-/images/thumbnail.jpg",
+        "cap": "One Day Trip From Marrakech To Ouarzazate And The Ait Ben Haddou Kasbah",
+        "alt": ""
+      },
+      {
+        "src": "/sahara-star-tours/day-trips/one-day-trip-from-marrakech-to-ouarzazate-and-the-ait-ben-haddou-/images/image-01.jpg",
+        "cap": "One Day Trip From Marrakech To Ouarzazate And The Ait Ben Haddou Kasbah",
+        "alt": ""
+      },
+      {
+        "src": "/sahara-star-tours/day-trips/one-day-trip-from-marrakech-to-ouarzazate-and-the-ait-ben-haddou-/images/image-02.jpg",
+        "cap": "One Day Trip From Marrakech To Ouarzazate And The Ait Ben Haddou Kasbah",
+        "alt": ""
+      },
+      {
+        "src": "/sahara-star-tours/day-trips/one-day-trip-from-marrakech-to-ouarzazate-and-the-ait-ben-haddou-/images/image-03.jpg",
+        "cap": "One Day Trip From Marrakech To Ouarzazate And The Ait Ben Haddou Kasbah",
+        "alt": ""
+      }
+    ],
+    "faqs": []
+  },
+  {
+    "slug": "day-trip-ouzoud-waterfalls",
+    "title": "Ouzoud Waterfalls Day Trip from Marrakech | Sahara Star",
+    "shortTitle": "Ouzoud Waterfalls Day Trip from Marrakech",
+    "description": "Day trip from Marrakech to the spectacular 110-meter Ouzoud Waterfalls in the Middle Atlas. Enjoy scenic river walks, wild Barbary macaque monkeys, and boat rides.",
+    "aboutHtml": "One Day Trip from Marrakech to the Ouzoud Waterfalls and Berber Villages<br/><br/>This day trip from Marrakech to the Ouzoud waterfalls and Atlas Mountains is a fantastic way to discover the area and learn more about Morocco’s natural resources, without having to get too far away from Marrakech.<br/><br/>The tour will begin at around 8 in the morning, when we leave Marrakech in the direction of the Haouz region. Of course, you will be guided through this tour by an English speaking driver to facilitate communication with the locals. This exciting road trip is going to take us through many small Berber villages, where you can feel the simple and relaxed lifestyle of the locals. Through the Middle Atlas Mountains, we will finally get to our destination: the Ouzoud waterfalls.<br/><br/>Hiking through the surrounding area to the waterfall is a magical experience, since it allows you to witness up close the greatness of the 110 meters tall waterfalls. We might also see some wild Macaque monkeys since they inhabit the area. If you feel like it, you can totally go for a swim at the river, which is clean but cold (perfect for a hot summer day)!<br/><br/>We will have a traditional lunch at one of the restaurants in place run by Berber locals, then continue relaxing and enjoying our time at the waterfall before finally returning to Marrakech",
+    "duration": "1 Day / Full Day Trip",
+    "startingFrom": "Marrakech",
+    "price": "From $60/person",
+    "highlights": [
+      "Scenic Road Trip: Enjoy picturesque views of Berber villages and the Middle Atlas Mountains.",
+      "Ouzoud Waterfalls: Experience the majesty of Morocco’s tallest waterfalls (110 meters).",
+      "Wildlife: Spot wild Macaque monkeys in their natural habitat.",
+      "Hiking: Take a scenic hike around the falls, offering breathtaking views.",
+      "Swimming: Refresh yourself in the river at the base of the waterfalls.",
+      "Traditional Berber Lunch: Savor a delicious meal prepared by locals at a nearby restaurant."
+    ],
+    "inclusions": [
+      "Transportation in an air-conditioned vehicle",
+      "Scenic drive through Berber villages and olive groves",
+      "Guided hike down to the spectacular Ouzoud Waterfalls",
+      "Opportunity to see wild Barbary macaque monkeys"
+    ],
+    "exclusions": [
+      "Personal expenses and souvenirs",
+      "Gratuities for your guide and driver (optional)",
+      "Extra meals and beverages not explicitly mentioned",
+      "Entrance fees to monuments (if any)"
+    ],
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "title": "Marrakech – Berber Villages – Middle Atlas Mountains – Ouzoud Waterfalls – Hiking and Wildlife – Traditional Berber Lunch",
+        "content": "Drive through the Atlas Mountains Your day begins with a scenic drive from Marrakech through the Middle Atlas Mountains. Along the way, you’ll pass through small Berber villages and witness the rugged beauty of the region. Arrival at Ouzoud Waterfalls Upon arrival at the Ouzoud Waterfalls, you’ll embark on a guided hike that takes you through beautiful landscapes and offers several vantage points to admire the towering 110-meter waterfalls. You may even spot wild macaque monkeys along the trail. Hiking and Wildlife Observation The hike allows you to get up close to the waterfalls and take in the surrounding nature. You’ll enjoy the sound of rushing water, the sight of rainbows forming in the mist, and the chance to observe local wildlife, including birds and monkeys. Lunch at a Berber Restaurant After your hike, you’ll have lunch at a local restaurant run by Berber villagers. The menu typically includes traditional Moroccan dishes such as tajine, fresh bread, and mint tea, enjoyed while overlooking the waterfalls. Free Time for Swimming or Relaxing Following lunch, you’ll have free time to relax, swim in the river below the falls, or continue exploring the area at your leisure. The refreshing water is perfect for a dip, especially during the summer. Return to Marrakech In the late afternoon, you’ll depart from Ouzoud and begin the scenic drive back to Marrakech, reflecting on the natural beauty you experienced throughout the day."
+      }
+    ],
+    "mapDestinations": [
+      {
+        "number": 1,
+        "name": "Marrakech",
+        "day": "Morning",
+        "subtitle": "Departure",
+        "desc": "Scenic morning drive through Tadla plains."
+      },
+      {
+        "number": 2,
+        "name": "Middle Atlas Foothills",
+        "day": "Mid-way",
+        "subtitle": "Berber Villages",
+        "desc": "Rolling olive groves and traditional mudbrick villages."
+      },
+      {
+        "number": 3,
+        "name": "Ouzoud Waterfalls",
+        "day": "Afternoon",
+        "subtitle": "110m Cascades & Barbary Apes",
+        "desc": "Hiking down to the natural pools, boat ride under the falls, and wild monkeys."
+      }
+    ],
+    "galleryImages": [
+      {
+        "src": "/sahara-star-tours/day-trips/one-day-trip-from-marrakech-to-the-ouzoud-waterfalls-and-berber-/images/thumbnail.jpg",
+        "cap": "One Day Trip From Marrakech To The Ouzoud Waterfalls And Berber Villages",
+        "alt": ""
+      },
+      {
+        "src": "/sahara-star-tours/day-trips/one-day-trip-from-marrakech-to-the-ouzoud-waterfalls-and-berber-/images/image-01.jpg",
+        "cap": "One Day Trip From Marrakech To The Ouzoud Waterfalls And Berber Villages",
+        "alt": ""
+      },
+      {
+        "src": "/sahara-star-tours/day-trips/one-day-trip-from-marrakech-to-the-ouzoud-waterfalls-and-berber-/images/image-02.webp",
+        "cap": "One Day Trip From Marrakech To The Ouzoud Waterfalls And Berber Villages",
+        "alt": ""
+      },
+      {
+        "src": "/sahara-star-tours/day-trips/one-day-trip-from-marrakech-to-the-ouzoud-waterfalls-and-berber-/images/image-03.jpeg",
+        "cap": "One Day Trip From Marrakech To The Ouzoud Waterfalls And Berber Villages",
+        "alt": ""
+      }
+    ],
+    "faqs": []
+  },
+  {
+    "slug": "one-day-marrakech-city-tour",
+    "title": "Marrakech City Guided Day Tour | Sahara Star Tours",
+    "shortTitle": "Marrakech City Guided Day Tour",
+    "description": "Discover the heart of the Red City with a licensed local guide. Visit Bahia Palace, Koutoubia Mosque, Saadian Tombs, and the bustling Jemaa el-Fnaa medina.",
+    "aboutHtml": "This exciting day tour is going to take us through Marrakech’s most important attractions and monuments. With the help of an experienced local guide, we will uncover all of this red city’s secret gems.<br/><br/>After we pick you up in the morning, we will start by discovering the Majorelle botanical garden and its founder Jacques Majorelle. After his death, the famous designer Yves Saint Laurent purchased the garden and opened it to the public. The Majorelle garden is the result of Jacques Majorelle’s life-long work, containing both exotic and native species of plants and flowers all over it. While we’re here, we can also visit the Berber museum located inside the property. Then, we will head to the Old Medina to have lunch at one of the traditional restaurants.<br/><br/>After lunch, we will continue our tour by visiting the famous Bahia palace, with its intricate designs and traditional architecture. Next on our schedule is the Jewish quarter, which has a special vibe on its own; and the Saadian Tombs, which are a remnant of the 15th century during the reign of the Sultan Ahmed El Mansour.<br/><br/>Finally, we will end our tour by a visit to the famous Jamaa El Fna square, where the heritage and different arts of Morocco are showcased.",
+    "duration": "1 Day / Full Day Trip",
+    "startingFrom": "Marrakech",
+    "price": "From $55/person",
+    "highlights": [
+      "Majorelle Garden: Visit the stunning botanical garden created by Jacques Majorelle, later restored by Yves Saint Laurent.",
+      "Berber Museum: Discover the rich history and culture of Morocco’s Berber people.",
+      "Old Medina: Enjoy a traditional Moroccan lunch in the bustling heart of Marrakech.",
+      "Bahia Palace: Admire the beautiful architecture and intricate designs of this historic palace.",
+      "Jewish Quarter (Mellah): Experience the unique atmosphere of the Mellah district.",
+      "Saadian Tombs: Explore the royal tombs from the 15th century.",
+      "Jamaa El Fna Square: End your tour in the lively square, full of local artists, vendors, and street performers."
+    ],
+    "inclusions": [
+      "Certified local Marrakech city guide",
+      "Visit to Bahia Palace, Saadian Tombs, and Koutoubia Mosque",
+      "Guided walking tour through the Medina and vibrant souks",
+      "Time for shopping and photography in Jemaa el-Fnaa square"
+    ],
+    "exclusions": [
+      "Personal expenses and souvenirs",
+      "Gratuities for your guide and driver (optional)",
+      "Extra meals and beverages not explicitly mentioned",
+      "Entrance fees to monuments (if any)"
+    ],
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "title": "Marrakech – Majorelle Garden – Old Medina – Bahia Palace – Jewish Quarter – Saadian Tombs – Jamaa El Fna Square",
+        "content": "Majorelle Garden Your tour begins with a visit to the renowned Majorelle Garden, designed by French artist Jacques Majorelle. You’ll explore the lush greenery, exotic plants, and vibrant blue buildings that make this garden a true oasis. The garden is also home to the Berber Museum, where you can discover the rich heritage of Morocco’s Berber culture. Berber Museum After strolling through the garden, you’ll visit the Berber Museum located within the property. Here, you’ll delve deeper into the fascinating traditions and artifacts of the Berber people, Morocco’s indigenous inhabitants. Old Medina and Traditional Lunch Next, your guide will lead you into the heart of Marrakech’s Old Medina, a vibrant hub of traditional markets and narrow alleyways. After exploring the medina, you will stop for lunch at a local restaurant where you can indulge in authentic Moroccan cuisine, including tajines, couscous, and fresh salads. Bahia Palace After lunch, you will head to the majestic Bahia Palace, known for its beautiful courtyards, colorful tiles, and intricate wood carvings. This 19th-century palace offers a glimpse into the grandeur of Moroccan royalty. Jewish Quarter (Mellah) Following your visit to Bahia Palace, you will explore the Jewish Quarter, or Mellah, known for its unique charm and historical significance. You’ll learn about the Jewish community’s role in Marrakech’s history and visit local synagogues and markets. Saadian Tombs Your next stop will be the Saadian Tombs, which date back to the 15th century and showcase the architectural mastery of the Saadian dynasty. These tombs are an essential piece of Marrakech’s cultural history, housing the remains of royalty. Jamaa El Fna Square The tour concludes at the famous Jamaa El Fna Square, a lively cultural hub where you’ll witness street performances, musicians, storytellers, and food vendors showcasing Moroccan arts and heritage. This bustling square is the heart of Marrakech’s vibrant atmosphere. Return to Hotel After a full day of exploring Marrakech’s most iconic sites, you will be driven back to your hotel, concluding your unforgettable day in the Red City."
+      }
+    ],
+    "mapDestinations": [
+      {
+        "number": 1,
+        "name": "Koutoubia Mosque",
+        "day": "Morning",
+        "subtitle": "12th Century Minaret",
+        "desc": "Iconic landmark and Andalusian gardens."
+      },
+      {
+        "number": 2,
+        "name": "Bahia Palace",
+        "day": "Morning",
+        "subtitle": "Grand Vizier Residence",
+        "desc": "Intricate zellij tilework, painted cedarwood ceilings."
+      },
+      {
+        "number": 3,
+        "name": "Saadian Tombs",
+        "day": "Noon",
+        "subtitle": "Mausoleum of the Dynasty",
+        "desc": "Chamber of the Twelve Pillars in Carrara marble."
+      },
+      {
+        "number": 4,
+        "name": "Ben Youssef Medersa",
+        "day": "Afternoon",
+        "subtitle": "Islamic College",
+        "desc": "Courtyard with stucco and cedar calligraphy."
+      },
+      {
+        "number": 5,
+        "name": "Jemaa El-Fna",
+        "day": "Evening",
+        "subtitle": "UNESCO Square",
+        "desc": "Storytellers, musicians, and vibrant night food stalls."
+      },
+      {
+        "number": 6,
+        "name": "Majorelle Garden",
+        "day": "Late Afternoon",
+        "subtitle": "Yves Saint Laurent Botanical Oasis",
+        "desc": "Cobalt blue villa and exotic desert cacti."
+      }
+    ],
+    "galleryImages": [
+      {
+        "src": "/sahara-star-tours/day-trips/one-day-guided-tour-of-marrakech-city/images/thumbnail.jpg",
+        "cap": "One Day Guided Tour Of Marrakech City",
+        "alt": ""
+      },
+      {
+        "src": "/sahara-star-tours/day-trips/one-day-guided-tour-of-marrakech-city/images/image-01.jpg",
+        "cap": "One Day Guided Tour Of Marrakech City",
+        "alt": ""
+      },
+      {
+        "src": "/sahara-star-tours/day-trips/one-day-guided-tour-of-marrakech-city/images/image-02.jpg",
+        "cap": "One Day Guided Tour Of Marrakech City",
+        "alt": ""
+      },
+      {
+        "src": "/sahara-star-tours/day-trips/one-day-guided-tour-of-marrakech-city/images/image-03.jpg",
+        "cap": "One Day Guided Tour Of Marrakech City",
+        "alt": ""
+      },
+      {
+        "src": "/sahara-star-tours/day-trips/one-day-guided-tour-of-marrakech-city/images/image-04.jpeg",
+        "cap": "One Day Guided Tour Of Marrakech City",
+        "alt": ""
+      },
+      {
+        "src": "/sahara-star-tours/day-trips/one-day-guided-tour-of-marrakech-city/images/image-05.jpeg",
+        "cap": "One Day Guided Tour Of Marrakech City",
+        "alt": ""
+      }
+    ],
+    "faqs": []
+  },
+  {
+    "slug": "ourika-valley-nature-tour",
+    "title": "Ourika Valley Nature & Atlas Tour | Sahara Star Tours",
+    "shortTitle": "Ourika Valley Nature & Wildlife Tour",
+    "description": "Escape the heat of Marrakech on a scenic day tour to Ourika Valley. Hike to Setti Fatma waterfalls, visit Berber villages, and admire High Atlas vistas.",
+    "aboutHtml": "Discover the natural beauty and diverse wildlife of the Ourika Valley on this day trip from Marrakech. Explore the Setti Fatma waterfalls, visit a traditional Berber house, and enjoy a riverside lunch. This program is ideal for nature lovers and those wishing to discover local Berber culture.",
+    "duration": "1 Day / Full Day Trip",
+    "startingFrom": "Marrakech",
+    "price": "From $50/person",
+    "highlights": [
+      "Setti Fatma: Visit the traditional Berber village and discover its way of life.",
+      "Setti Fatma waterfalls: Hike to the picturesque waterfalls with swimming opportunities.",
+      "Berber House: Explore a traditional Berber house with mint tea tasting.",
+      "Traditional lunch: Enjoy a Moroccan meal on the banks of the Ourika River.",
+      "Argan cooperative: Visit a local cooperative to learn about the argan oil production process.",
+      "Jardin Bio-Aromatique de l’Ourika: Guided walk through the botanical gardens with explanations of medicinal plants.",
+      "Wildlife watching: Explore a nature reserve to observe Atlas monkeys and other native animals."
+    ],
+    "inclusions": [
+      "Pick-up and drop-off at your Marrakech accommodation",
+      "Drive through the lush Ourika Valley along the river",
+      "Guided hike to the seven waterfalls of Setti Fatma",
+      "Visit to a traditional Berber home and Argan cooperative"
+    ],
+    "exclusions": [
+      "Personal expenses and souvenirs",
+      "Gratuities for your guide and driver (optional)",
+      "Extra meals and beverages not explicitly mentioned",
+      "Entrance fees to monuments (if any)"
+    ],
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "title": "Marrakech – Berber Villages – High Atlas Mountains – Kasbah Ait Ben Haddou – Roses Valley – Dades Gorge :",
+        "content": "Setti Fatma village: The first stop on your tour is the picturesque village of Setti Fatma, located in the Ourika valley. This authentic Berber village is famous for its seven waterfalls and hiking trails. You’ll have the opportunity to visit a traditional Berber house, where you’ll learn about the local way of life and taste mint tea. Hike to the Cascades : Next, you’ll embark on a moderate hike to the Setti Fatma waterfalls. This trail takes you through breathtaking scenery, with natural pools where you can cool off. The hike also offers the chance to observe local wildlife and enjoy the tranquility of nature. Lunch by the river: After the hike, you’ll enjoy a traditional Moroccan lunch at a local restaurant on the banks of the Ourika River. The typical menu includes dishes such as tajine, couscous, Moroccan salads and fresh fruit, all accompanied by mint tea. Visit to an Argan cooperative: In the afternoon, you’ll visit an argan cooperative where you’ll learn about the process of making argan oil, often dubbed Morocco’s liquid gold. You’ll also have the opportunity to taste and buy handcrafted argan products. Jardin Bio-Aromatique de l’Ourika: Your next stop is the Jardin Bio-Aromatique de l’Ourika, an area dedicated to the cultivation of medicinal and aromatic plants. A guided walk will enable you to learn more about the various plants and their use in traditional medicine. Wildlife observation: To round off the day, you’ll explore a nature reserve in the valley, where you can observe local wildlife, including Atlas monkeys and a variety of birds. A specialist guide will provide detailed information on the species and ecosystems of the region. Return to Marrakech: In the late afternoon, you’ll head back to Marrakech with unforgettable memories of a day rich in natural and cultural discoveries."
+      }
+    ],
+    "mapDestinations": [
+      {
+        "number": 1,
+        "name": "Marrakech",
+        "day": "Morning",
+        "subtitle": "Departure",
+        "desc": "Drive along the lush Ourika river valley."
+      },
+      {
+        "number": 2,
+        "name": "Berber Village",
+        "day": "Mid-way",
+        "subtitle": "Traditional Family Home",
+        "desc": "Tea ceremony and local mountain lifestyle."
+      },
+      {
+        "number": 3,
+        "name": "Setti Fatma Waterfalls",
+        "day": "Afternoon",
+        "subtitle": "7 Cascades Hike",
+        "desc": "Guided hike along mountain boulders and riverfront lunch."
+      }
+    ],
+    "galleryImages": [
+      {
+        "src": "/sahara-star-tours/day-trips/ourika-valley-nature-wildlife-tour/images/thumbnail.jpg",
+        "cap": "Ourika Valley Nature & Wildlife Tour",
+        "alt": ""
+      },
+      {
+        "src": "/sahara-star-tours/day-trips/ourika-valley-nature-wildlife-tour/images/image-01.jpg",
+        "cap": "Ourika Valley Nature & Wildlife Tour",
+        "alt": ""
+      },
+      {
+        "src": "/sahara-star-tours/day-trips/ourika-valley-nature-wildlife-tour/images/image-02.jpg",
+        "cap": "Ourika Valley Nature & Wildlife Tour",
+        "alt": ""
+      },
+      {
+        "src": "/sahara-star-tours/day-trips/ourika-valley-nature-wildlife-tour/images/image-03.jpg",
+        "cap": "Ourika Valley Nature & Wildlife Tour",
+        "alt": ""
+      },
+      {
+        "src": "/sahara-star-tours/day-trips/ourika-valley-nature-wildlife-tour/images/image-04.jpg",
+        "cap": "Ourika Valley Nature & Wildlife Tour",
+        "alt": ""
+      },
+      {
+        "src": "/sahara-star-tours/day-trips/ourika-valley-nature-wildlife-tour/images/image-05.jpg",
+        "cap": "Ourika Valley Nature & Wildlife Tour",
+        "alt": ""
+      }
+    ],
+    "faqs": []
+  },
+  {
+    "slug": "hot-air-balloon-marrakech",
+    "title": "Marrakech Hot Air Balloon Flight | Sahara Star Tours",
+    "shortTitle": "Marrakech Hot Air Balloon Flight",
+    "description": "Soar over the Marrakech palmeraie and High Atlas Mountains at sunrise in a hot air balloon. Includes private hotel transfers and traditional Berber breakfast.",
+    "aboutHtml": "<strong>Desert Equestrian Escapades</strong><br/><br/>Dive into the serene beauty of the desert with an array of horseback riding experiences designed to captivate your senses and immerse you in the magic of Morocco’s landscapes.<br/><br/><strong>Enchanting Desert Rides</strong><br/><br/>Whether you’re seeking a brief escape for an hour or two, our Little Desert Ride offers a unique and easy way to explore the tranquil beauty of the desert. For those looking to experience the desert’s magic in a more dramatic light, our Sun Ride welcomes you to witness the awe-inspiring moments of sunrise or sunset. These magical times provide unparalleled views of the natural scenery, casting a spellbinding glow over the heart of the sand dunes.<br/><br/><strong>Cultural Journey to Gnawa Village</strong><br/><br/>Embark on a half-day tour that combines the thrill of horse riding with a cultural immersion into the heritage of a Gnawa village. This journey not only lets you enjoy the rhythmic melodies and historical significance of Gnaoua music but also includes a cultural picnic, enriching your experience with every beat and bite.<br/><br/><strong>Adventurous Day Tour to Desert Camp</strong><br/><br/>Set off on a beautiful day trip that traverses the dunes on horseback, leading to a serene layover and lunch at a traditional desert camp. This oasis amidst the vast desert landscape offers a picturesque setting that feels like a mirage come to life, providing a peaceful retreat from the world.<br/><br/><strong>Traditional Dress Riding Experience</strong><br/><br/>Enhance your desert adventure by donning traditional Moroccan attire for your horseback ride. This unique opportunity allows lovers of diverse Moroccan culture to fully embrace and celebrate its rich traditions. Capture this memorable experience through videos and pictures, taking a piece of Moroccan beauty with you.<br/><br/>Each of these experiences is designed to offer a different perspective of Morocco’s stunning desert landscapes, from the quiet beauty of a morning ride to the cultural richness of a Gnawa music session. Whether you’re a lover of nature, culture, or adventure, these equestrian escapades through the desert promise moments of beauty, tranquility, and unforgettable memories.",
+    "duration": "Half Day / 3-4 Hours",
+    "startingFrom": "Marrakech",
+    "price": "From $190/person",
+    "highlights": [
+      "Early Morning Pickup: Convenient pick-up from your accommodation in Marrakech at 5:00 AM.",
+      "Scenic Flight: Approximately 45 minutes of flying time with panoramic views of the Atlas Mountains and the picturesque Moroccan countryside.",
+      "Post-Flight Breakfast: Enjoy a delicious breakfast after your landing, making the experience even more delightful.",
+      "Unforgettable Memories: Capture stunning photographs and create lasting memories as you float above the breathtaking scenery."
+    ],
+    "inclusions": [
+      "Early morning 4x4 transfers from your hotel",
+      "45 to 60-minute hot air balloon flight over the Atlas foothills",
+      "Authentic Berber breakfast in a traditional tent",
+      "Official flight certificate signed by the pilot"
+    ],
+    "exclusions": [
+      "Personal expenses and souvenirs",
+      "Gratuities for your guide and driver (optional)",
+      "Extra meals and beverages not explicitly mentioned",
+      "Entrance fees to monuments (if any)"
+    ],
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "title": "Hot Air Balloon in Marrakech",
+        "content": "5:00 AM: Depart from your accommodation in a comfortable 4×4 vehicle. 5:45 AM: Arrive at the launch site where the balloons are prepared for takeoff. Flight Experience: Soar for approximately 45 minutes, taking in the stunning views. Return Journey: After landing, relax with a post-flight breakfast and then transport back to your accommodation."
+      }
+    ],
+    "mapDestinations": [
+      {
+        "number": 1,
+        "name": "Marrakech",
+        "day": "Start",
+        "subtitle": "Hotel Pick-up",
+        "desc": "Private transfer from your Marrakech accommodation."
+      },
+      {
+        "number": 2,
+        "name": "Marrakech Palmeraie Oasis",
+        "day": "Activity",
+        "subtitle": "Palm Grove & Trails",
+        "desc": "Scenic palm oasis trails with Atlas Mountain backdrop."
+      },
+      {
+        "number": 3,
+        "name": "Berber Oasis Camp",
+        "day": "Tea Break",
+        "subtitle": "Hospitality & Mint Tea",
+        "desc": "Relax with fresh Moroccan mint tea and traditional pastries."
+      }
+    ],
+    "galleryImages": [
+      {
+        "src": "/sahara-star-tours/activities/hot-air-balloon-in-marrakech/images/thumbnail.jpg",
+        "cap": "Hot Air Balloon In Marrakech",
+        "alt": ""
+      }
+    ],
+    "faqs": []
+  },
+  {
+    "slug": "horse-riding-morocco",
+    "title": "Marrakech Horseback Riding Experience | Sahara Star Tours",
+    "shortTitle": "Marrakech Horseback Riding Experience",
+    "description": "Ride spirited Arabian horses through the Marrakech palm groves and desert trails. Suitable for all riding levels with experienced equestrian guides.",
+    "aboutHtml": "<strong>Desert Equestrian Escapades</strong><br/><br/>Dive into the serene beauty of the desert with an array of horseback riding experiences designed to captivate your senses and immerse you in the magic of Morocco’s landscapes.<br/><br/><strong>Enchanting Desert Rides</strong><br/><br/>Whether you’re seeking a brief escape for an hour or two, our Little Desert Ride offers a unique and easy way to explore the tranquil beauty of the desert. For those looking to experience the desert’s magic in a more dramatic light, our Sun Ride welcomes you to witness the awe-inspiring moments of sunrise or sunset. These magical times provide unparalleled views of the natural scenery, casting a spellbinding glow over the heart of the sand dunes.<br/><br/><strong>Cultural Journey to Gnawa Village</strong><br/><br/>Embark on a half-day tour that combines the thrill of horse riding with a cultural immersion into the heritage of a Gnawa village. This journey not only lets you enjoy the rhythmic melodies and historical significance of Gnaoua music but also includes a cultural picnic, enriching your experience with every beat and bite.<br/><br/><strong>Adventurous Day Tour to Desert Camp</strong><br/><br/>Set off on a beautiful day trip that traverses the dunes on horseback, leading to a serene layover and lunch at a traditional desert camp. This oasis amidst the vast desert landscape offers a picturesque setting that feels like a mirage come to life, providing a peaceful retreat from the world.<br/><br/><strong>Traditional Dress Riding Experience</strong><br/><br/>Enhance your desert adventure by donning traditional Moroccan attire for your horseback ride. This unique opportunity allows lovers of diverse Moroccan culture to fully embrace and celebrate its rich traditions. Capture this memorable experience through videos and pictures, taking a piece of Moroccan beauty with you.<br/><br/>Each of these experiences is designed to offer a different perspective of Morocco’s stunning desert landscapes, from the quiet beauty of a morning ride to the cultural richness of a Gnawa music session. Whether you’re a lover of nature, culture, or adventure, these equestrian escapades through the desert promise moments of beauty, tranquility, and unforgettable memories.",
+    "duration": "Half Day / 3-4 Hours",
+    "startingFrom": "Marrakech",
+    "price": "From $65/person",
+    "highlights": [
+      "Enchanting Desert Rides: Choose between a brief escape or a dramatic sunrise/sunset ride to enjoy stunning views of the sand dunes.",
+      "Cultural Journey to Gnawa Village: Combine horseback riding with a cultural experience, enjoying Gnaoua music and a delightful picnic.",
+      "Adventurous Day Tour to Desert Camp: Ride through the dunes to a traditional desert camp for a scenic lunch in a tranquil oasis.",
+      "Traditional Dress Riding Experience: Wear traditional Moroccan attire during your ride, creating unforgettable memories and photo opportunities."
+    ],
+    "inclusions": [
+      "Hotel pickup and drop-off in an AC vehicle",
+      "High-quality saddlery and safety helmets",
+      "2 hours guided horseback riding experience",
+      "Professional equestrian guide"
+    ],
+    "exclusions": [
+      "Personal expenses and souvenirs",
+      "Gratuities for your guide and driver (optional)",
+      "Extra meals and beverages not explicitly mentioned",
+      "Entrance fees to monuments (if any)"
+    ],
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "title": "Horse Riding in Morocco",
+        "content": "Departure: Pickup from your accommodation in Marrakech. Arrival: Travel to the riding location in the desert. Horse Riding Experience: Enjoy your chosen ride (Little Desert Ride, Sun Ride, or cultural journey). Cultural Picnic: Savor local flavors and music during your ride to the Gnawa village. Return: Transport back to your accommodation."
+      }
+    ],
+    "mapDestinations": [
+      {
+        "number": 1,
+        "name": "Marrakech",
+        "day": "Start",
+        "subtitle": "Hotel Pick-up",
+        "desc": "Private transfer from your Marrakech accommodation."
+      },
+      {
+        "number": 2,
+        "name": "Marrakech Palmeraie Oasis",
+        "day": "Activity",
+        "subtitle": "Palm Grove & Trails",
+        "desc": "Scenic palm oasis trails with Atlas Mountain backdrop."
+      },
+      {
+        "number": 3,
+        "name": "Berber Oasis Camp",
+        "day": "Tea Break",
+        "subtitle": "Hospitality & Mint Tea",
+        "desc": "Relax with fresh Moroccan mint tea and traditional pastries."
+      }
+    ],
+    "galleryImages": [
+      {
+        "src": "/sahara-star-tours/activities/horse-riding-in-morocco/images/thumbnail.jpg",
+        "cap": "Horse Riding In Morocco",
+        "alt": ""
+      }
+    ],
+    "faqs": []
+  },
+  {
+    "slug": "fantasia-chez-ali-marrakech",
+    "title": "Fantasia Chez Ali Dinner & Show | Sahara Star Tours",
+    "shortTitle": "Fantasia Chez Ali Dinner & Show Marrakech",
+    "description": "Experience an enchanting Arabian Nights evening in Marrakech. Enjoy a multi-course Moroccan feast, folklore dancers, acrobats, and a thrilling cavalry show.",
+    "aboutHtml": "Half-Day Moroccan Cultural Experience<br/><br/>Discover the enchanting world of Fantasia Chez Ali, a celebrated Marrakech event that offers a deep dive into Moroccan culture, showcasing traditions unlike anything you might find back home. Prepare to be captivated by the vibrant performances of folk groups, indulge in a sumptuous dinner, and immerse yourself in the unique sights and sounds of this spectacular venue.<br/><br/>Set in a vast arena reminiscent of a football stadium, the event features a dazzling array of performances. You’ll witness professional acrobatic horse riders, partake in the excitement of the fantasia—a traditional Moroccan equestrian performance—, and enjoy beautiful traditional songs and dances, all set to mesmerizing music that transports you to another world.<br/><br/>The Chez Ali show is an amalgamation of magic, beauty, and grandeur, offering a delightful and fairy-tale-like experience. Over the years, its fame has reached international shores, marking it as a highlight of any trip to Marrakech. Dancers, musicians, acrobats, horsemen, and magicians pour their passion into their performances, ensuring your evening at Chez Ali is unforgettable.<br/><br/>As the night concludes, your driver will ensure a smooth return to your accommodation in Marrakech, be it a hotel or a riad, capping off a truly magical Moroccan cultural experience.",
+    "duration": "Half Day / 3-4 Hours",
+    "startingFrom": "Marrakech",
+    "price": "From $70/person",
+    "highlights": [
+      "Traditional Moroccan dinner",
+      "Fantasia equestrian performance with acrobats and horsemen",
+      "Enjoy Moroccan music, songs, and folk dances"
+    ],
+    "inclusions": [
+      "Round-trip transportation from your Marrakech hotel",
+      "Lavish traditional Moroccan dinner (Mechoui, Couscous, Pastilla)",
+      "Spectacular Fantasia show with horseback acrobatics",
+      "Live traditional music and belly dancing performances"
+    ],
+    "exclusions": [
+      "Personal expenses and souvenirs",
+      "Gratuities for your guide and driver (optional)",
+      "Extra meals and beverages not explicitly mentioned",
+      "Entrance fees to monuments (if any)"
+    ],
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "title": "Fantasia Chez Ali Marrakech",
+        "content": "Pick-up: A driver will collect you from your accommodation and take you to Chez Ali. Fantasia Show: A half-day cultural experience where you will enjoy a traditional Moroccan dinner while watching the Fantasia show, featuring acrobatic horse riders, musicians, and dancers. Return: After the show, you’ll be transported back to your accommodation."
+      }
+    ],
+    "mapDestinations": [
+      {
+        "number": 1,
+        "name": "Marrakech",
+        "day": "Start",
+        "subtitle": "Hotel Pick-up",
+        "desc": "Private transfer from your Marrakech accommodation."
+      },
+      {
+        "number": 2,
+        "name": "Marrakech Palmeraie Oasis",
+        "day": "Activity",
+        "subtitle": "Palm Grove & Trails",
+        "desc": "Scenic palm oasis trails with Atlas Mountain backdrop."
+      },
+      {
+        "number": 3,
+        "name": "Berber Oasis Camp",
+        "day": "Tea Break",
+        "subtitle": "Hospitality & Mint Tea",
+        "desc": "Relax with fresh Moroccan mint tea and traditional pastries."
+      }
+    ],
+    "galleryImages": [
+      {
+        "src": "/sahara-star-tours/activities/fantasia-chez-ali-marrakech/images/thumbnail.jpg",
+        "cap": "Fantasia Chez Ali Marrakech",
+        "alt": ""
+      }
+    ],
+    "faqs": []
+  },
+  {
+    "slug": "quad-biking-marrakech",
+    "title": "Marrakech Quad Biking Desert Adventure | Sahara Star",
+    "shortTitle": "Marrakech Quad Biking Desert Adventure",
+    "description": "Exhilarating half-day quad biking safari across Marrakech rocky desert plains and palm groves. Professional safety equipment and mint tea stop included.",
+    "aboutHtml": "Quad Biking Adventure in Marrakech<br/><br/>Pricing for this exhilarating half-day quad biking adventure is per person and adjusts based on the size of your group. This adventure offers an incredible opportunity to discover the hidden oasis of the Marrakech palm grove and the stunning scenery of the Palmeraie.<br/><br/>About the Activity<br/><br/>Suitable for beginners and seasoned quad bikers alike, this experience is tailored to match your skill level. Experienced riders will have the chance to venture off the beaten path and dive into more challenging terrains for an adrenaline-packed journey. Meanwhile, novices or those with families and young children will enjoy a gentler route designed to highlight the beauty of the landscape and ensure a pleasant ride for all.<br/><br/>Your adventure begins with a pickup from your Marrakech accommodation, transporting you to the Palmeraie. Upon arrival at our activity base in Marrakech, you’ll be equipped with a quad and helmets. Our guide will provide a brief tutorial on operating your vehicle before leading you on an unforgettable journey through Berber villages, mountainous terrain, and sand dunes, unveiling Marrakech’s lesser-seen vistas.<br/><br/>During this adventure, you’ll pause at a traditional Moroccan guest house to savor some mint tea, allowing you to soak in the natural beauty and tranquility that surrounds you. The journey concludes back at our Marrakech base, where your driver will be waiting to return you to your accommodation, marking the end of a memorable half-day activity.",
+    "duration": "Half Day / 3-4 Hours",
+    "startingFrom": "Marrakech",
+    "price": "From $60/person",
+    "highlights": [
+      "Explore the hidden oasis of the Marrakech Palm Grove",
+      "Suitable for beginners and experienced riders",
+      "Ride through Berber villages and sand dunes",
+      "Stop for mint tea in a traditional Moroccan guest house"
+    ],
+    "inclusions": [
+      "Hotel pickup and drop-off",
+      "High-quality quad bike (ATV) and safety gear (helmet, goggles, gloves)",
+      "2-hour guided quad biking adventure through palm groves and desert trails",
+      "Mint tea break in a traditional Berber village"
+    ],
+    "exclusions": [
+      "Personal expenses and souvenirs",
+      "Gratuities for your guide and driver (optional)",
+      "Extra meals and beverages not explicitly mentioned",
+      "Entrance fees to monuments (if any)"
+    ],
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "title": "Raid Buggy in Marrakech",
+        "content": "Pick-up: You’ll be picked up from your accommodation and transported to the Palmeraie. Quad Biking: A half-day adventure that starts with a safety briefing and tutorial, followed by a thrilling ride through desert landscapes and Berber villages. Mint Tea Break: Pause to enjoy Moroccan mint tea at a guest house, taking in the scenic surroundings. Return: After your quad biking experience, you’ll be driven back to your accommodation."
+      }
+    ],
+    "mapDestinations": [
+      {
+        "number": 1,
+        "name": "Marrakech",
+        "day": "Start",
+        "subtitle": "Hotel Pick-up",
+        "desc": "Private transfer from your Marrakech accommodation."
+      },
+      {
+        "number": 2,
+        "name": "Marrakech Palmeraie Oasis",
+        "day": "Activity",
+        "subtitle": "Palm Grove & Trails",
+        "desc": "Scenic palm oasis trails with Atlas Mountain backdrop."
+      },
+      {
+        "number": 3,
+        "name": "Berber Oasis Camp",
+        "day": "Tea Break",
+        "subtitle": "Hospitality & Mint Tea",
+        "desc": "Relax with fresh Moroccan mint tea and traditional pastries."
+      }
+    ],
+    "galleryImages": [
+      {
+        "src": "/sahara-star-tours/activities/quad-biking-in-marrakech/images/thumbnail.jpeg",
+        "cap": "Quad Biking In Marrakech",
+        "alt": ""
+      }
+    ],
+    "faqs": []
+  },
+  {
+    "slug": "raid-buggy-marrakech",
+    "title": "Marrakech Dune Buggy Desert Safari | Sahara Star Tours",
+    "shortTitle": "Marrakech Dune Buggy Desert Safari",
+    "description": "Drive high-powered off-road buggies through Marrakech desert trails, Berber villages, and palm oases. Guided adventure with top-tier safety gear.",
+    "aboutHtml": "Half-Day Adventures in Marrakech<br/><br/>The cost of these adventures varies with the group size. If you’re venturing to Morocco for the first time, or revisiting the enchanting city of Marrakech, we have curated several itinerary options to ensure you fully experience what this trip has to offer! Elevate your Moroccan journey with a thrilling buggy ride in some truly spectacular locations. We’ll transport you to either the lush Marrakech palm groves or the captivating Agafay desert, close to Marrakech. Embrace the exhilaration of navigating a buggy across the desert terrain, and afterwards, relax with a warm cup of mint tea in an idyllic setting amidst palm trees, under a brilliant blue sky, with views of the Atlas Mountains. This day promises to be an unforgettable adventure filled with lasting memories.<br/><br/>Embarking on a buggy ride in Marrakech promises an extraordinary and thrilling adventure! We will arrange pickup directly from your accommodation in Marrakech. You have the option to explore either Agafay or the Marrakech palm groves. The journey to Agafay takes approximately 25 minutes, while reaching the Marrakech palm groves is about a 45-minute ride. This Marrakech tour includes safety equipment, tea, and transportation. It stands out as our most sought-after activity, where you embark on a two-hour exploration of the desert and palm groves. This experience also offers a glimpse into Moroccan culture, inviting you to a local family’s home to enjoy mint tea and experience renowned Moroccan hospitality. At the conclusion of this memorable buggy adventure, we will ensure your safe return to your accommodation in Marrakech.",
+    "duration": "Half Day / 3-4 Hours",
+    "startingFrom": "Marrakech",
+    "price": "From $110/person",
+    "highlights": [
+      "Exciting buggy ride through the Palmeraie or Agafay desert",
+      "Enjoy mint tea in a traditional Moroccan house",
+      "Visit local Berber villages",
+      "Panoramic views of the Atlas Mountains"
+    ],
+    "inclusions": [
+      "Round-trip hotel transfers",
+      "Premium 4WD Buggy and full safety equipment",
+      "Professional off-road guide and briefing",
+      "Refreshments and mint tea with local villagers"
+    ],
+    "exclusions": [
+      "Personal expenses and souvenirs",
+      "Gratuities for your guide and driver (optional)",
+      "Extra meals and beverages not explicitly mentioned",
+      "Entrance fees to monuments (if any)"
+    ],
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "title": "Raid Buggy in Marrakech",
+        "content": "Pick-up: Your adventure begins with a pick-up from your accommodation in Marrakech. Buggy Ride: A thrilling two-hour exploration through desert landscapes or the lush Palm Grove, depending on your choice. Cultural Experience: Visit a local family’s home, where you will be served mint tea and learn more about Moroccan customs. Return to Marrakech: After a day of excitement, you’ll be safely returned to your accommodation."
+      }
+    ],
+    "mapDestinations": [
+      {
+        "number": 1,
+        "name": "Marrakech",
+        "day": "Start",
+        "subtitle": "Hotel Pick-up",
+        "desc": "Private transfer from your Marrakech accommodation."
+      },
+      {
+        "number": 2,
+        "name": "Marrakech Palmeraie Oasis",
+        "day": "Activity",
+        "subtitle": "Palm Grove & Trails",
+        "desc": "Scenic palm oasis trails with Atlas Mountain backdrop."
+      },
+      {
+        "number": 3,
+        "name": "Berber Oasis Camp",
+        "day": "Tea Break",
+        "subtitle": "Hospitality & Mint Tea",
+        "desc": "Relax with fresh Moroccan mint tea and traditional pastries."
+      }
+    ],
+    "galleryImages": [
+      {
+        "src": "/sahara-star-tours/activities/raid-buggy-in-marrakech/images/thumbnail.jpg",
+        "cap": "Raid Buggy In Marrakech",
+        "alt": ""
+      }
+    ],
+    "faqs": []
+  },
+  {
+    "slug": "camel-riding",
+    "title": "Marrakech Palmeraie Camel Ride | Sahara Star Tours",
+    "shortTitle": "Marrakech Palmeraie Camel Ride Experience",
+    "description": "Classic 1-hour camel trek through the scenic Marrakech Palmeraie in traditional nomad dress. Conclude with fresh Moroccan mint tea in a Berber tent.",
+    "aboutHtml": "<strong>Pricing and Details</strong><br/><br/>Starting at $35 per person, the cost adjusts with the group size. This adventure is available in the stunning Palmeraie of Marrakech at any time, offering half-day excursions with a pick-up at 9:00 am. This is a private tour, and we recommend wearing comfortable attire, shoes, a hat, a jacket, and sunscreen for your comfort. Payment is processed upon departure.<br/><br/><strong>Half-Day Camel Riding Experience in Marrakech</strong><br/><br/>Embarking on a camel ride through the Marrakech Palm Grove is an iconic and unforgettable experience during your visit to Morocco. Located to the north of Marrakech, the Palm Grove is an oasis featuring over 100,000 palm trees, providing a serene backdrop for a 1.5-hour camel trek. This journey offers an unparalleled opportunity to immerse yourself in the breathtaking landscapes and panoramic views of this exquisite region. The camel ride through this verdant oasis and its surrounding scenery is highly recommended for those looking to capture the essence of Marrakech in a truly unique way.",
+    "duration": "Half Day / 3-4 Hours",
+    "startingFrom": "Marrakech",
+    "price": "From $35/person",
+    "highlights": [
+      "Ride through the iconic Palm Grove of Marrakech",
+      "Experience Moroccan hospitality with mint tea",
+      "Serene landscapes with panoramic views of over 100,000 palm trees",
+      "Suitable for all ages, offering a cultural and natural immersion"
+    ],
+    "inclusions": [
+      "Air-conditioned round-trip hotel transfers",
+      "1 to 2 hours camel ride through the Palm Grove",
+      "Traditional Touareg scarf and clothing for photos",
+      "Moroccan mint tea break at a local Berber house"
+    ],
+    "exclusions": [
+      "Personal expenses and souvenirs",
+      "Gratuities for your guide and driver (optional)",
+      "Extra meals and beverages not explicitly mentioned",
+      "Entrance fees to monuments (if any)"
+    ],
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "title": "Camel Riding in Marrakech",
+        "content": "Pick-up: You will be collected from your accommodation at 9:00 AM and transported to the stunning Palmeraie. Camel Ride Experience: A 1.5-hour camel trek through the lush Palm Grove. You will enjoy the serene beauty of this unique oasis, home to over 100,000 palm trees. The ride offers a chance to connect with nature, capture incredible photos, and soak in the tranquility. Mint Tea Stop: Pause to enjoy a refreshing cup of Moroccan mint tea at a local house, experiencing the warmth of Moroccan hospitality. Return to Marrakech: After your camel ride, your driver will take you back to your accommodation by early afternoon."
+      }
+    ],
+    "mapDestinations": [
+      {
+        "number": 1,
+        "name": "Marrakech",
+        "day": "Start",
+        "subtitle": "Hotel Pick-up",
+        "desc": "Private transfer from your Marrakech accommodation."
+      },
+      {
+        "number": 2,
+        "name": "Marrakech Palmeraie Oasis",
+        "day": "Activity",
+        "subtitle": "Palm Grove & Trails",
+        "desc": "Scenic palm oasis trails with Atlas Mountain backdrop."
+      },
+      {
+        "number": 3,
+        "name": "Berber Oasis Camp",
+        "day": "Tea Break",
+        "subtitle": "Hospitality & Mint Tea",
+        "desc": "Relax with fresh Moroccan mint tea and traditional pastries."
+      }
+    ],
+    "galleryImages": [
+      {
+        "src": "/sahara-star-tours/activities/camel-riding/images/thumbnail.jpg",
+        "cap": "Camel Riding",
+        "alt": ""
+      }
+    ],
+    "faqs": []
+  }
+]

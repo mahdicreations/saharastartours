@@ -1,15 +1,17 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getActivities } from '../data/tours';
+import { getAlternateUrls } from '../data/i18n';
 
 const tours = getActivities();
+const alternateUrls = getAlternateUrls('/activities');
 
 const schemaData = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
   "name": "Morocco Activities & Experiences | Sahara Star Tours",
   "description": "Book unique Morocco activities: hot air balloon rides over Marrakech, camel treks, horse riding, quad biking, fantasia shows, and more adventure experiences.",
-  "url": "https://www.saharastartours.com/activities",
+  "url": alternateUrls.en,
   "mainEntity": {
     "@type": "ItemList",
     "numberOfItems": tours.length,
@@ -27,6 +29,7 @@ const schemaData = {
   title="Morocco Activities & Experiences | Sahara Star Tours"
   description="Book unique Morocco activities: hot air balloon rides over Marrakech, camel treks, horse riding, quad biking, fantasia shows, and more adventure experiences."
   currentPage="activities"
+  alternateUrls={alternateUrls}
   schemaData={schemaData}
 >
 <section class="cat-hero">

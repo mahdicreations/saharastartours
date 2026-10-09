@@ -1,0 +1,66 @@
+{
+  "slug": "quad-biking-marrakech",
+  "title": "Avventura in Quad nel Deserto e Palmeto di Marrakech | Sahara Star",
+  "shortTitle": "Avventura in Quad a Marrakech",
+  "description": "Entusiasmante safari in quad di mezza giornata tra le distese desertiche e i sentieri del palmeto di Marrakech. Attrezzatura di sicurezza e pausa tè alla menta incluse.",
+  "aboutHtml": "Avventura in Quad a Marrakech.<br/><br/>Godetevi un'emozionante escursione di mezza giornata in quad alla scoperta dei suggestivi sentieri del palmeto di Marrakech e dei paesaggi desertici che circondano la città.<br/><br/>Adatto sia ai principianti che ai guidatori più esperti, l'itinerario viene adattato per garantire il massimo divertimento nella totale sicurezza. I più esperti potranno godersi tratti panoramici e accelerazioni, mentre le famiglie potranno apprezzare una guida rilassata immersi nella natura.<br/><br/>Dotati di quad moderni, caschi e occhiali di protezione, seguirete la nostra guida esperta attraverso villaggi rurali berberi, colline sabbiose e distese di palme. Farete una piacevole sosta in una casa tipica per gustare un tè alla menta prima del rientro.",
+  "duration": "Mezza Giornata / 3-4 Ore",
+  "startingFrom": "Marrakech",
+  "price": "Da 60 €/persona",
+  "highlights": [
+    "Esplorate i suggestivi sentieri del Palmeto di Marrakech e le colline rocciose.",
+    "Adatto a tutti i livelli, dai principianti ai piloti esperti, con guida professionale.",
+    "Percorso fuoristrada attraverso villaggi berberi e piste desertiche.",
+    "Sosta per gustare il tradizionale tè alla menta in una casa berbera."
+  ],
+  "inclusions": [
+    "Pick-up e drop-off dal vostro hotel a Marrakech",
+    "Quad moderno di alta qualità e attrezzatura completa (casco, occhiali, guanti)",
+    "Tour guidato di 2 ore in quad tra palmeti e sentieri del deserto",
+    "Pausa per il tè alla menta in un autentico villaggio berbero"
+  ],
+  "exclusions": [
+    "Spese personali e souvenir",
+    "Mance per guida e autista (facoltative)",
+    "Pasti o bevande supplementari",
+    "Servizi fotografici o video professionali facoltativi"
+  ],
+  "itinerary": [
+    {
+      "day": "Giorno 1",
+      "title": "Safari in Quad a Marrakech",
+      "content": "Pick-up dal vostro alloggio a Marrakech e trasferimento alla base di partenza nel Palmeto. Briefing sulle regole di sicurezza e prova pratica per familiarizzare con il veicolo. Partenza per l'escursione di 2 ore lungo piste sterrate, palmeti e rilievi desertici con le vette dell'Atlante all'orizzonte. Sosta in un'abitazione rurale per gustare un ottimo tè alla menta marocchino e rilassarsi. Rientro alla base e transfer di ritorno al vostro alloggio."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Marrakech",
+      "day": "Partenza",
+      "subtitle": "Pick-up in Hotel",
+      "desc": "Transfer privato dal vostro alloggio a Marrakech."
+    },
+    {
+      "number": 2,
+      "name": "Oasi del Palmeto di Marrakech",
+      "day": "Attività",
+      "subtitle": "Piste nel Palmeto",
+      "desc": "Percorso fuoristrada in quad tra palme e sterrati."
+    },
+    {
+      "number": 3,
+      "name": "Accampamento Berbero",
+      "day": "Pausa Tè",
+      "subtitle": "Ospitalità e Tè alla Menta",
+      "desc": "Pausa rigenerante con tè caldo e ospitalità berbera."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/activities/quad-biking-in-marrakech/images/thumbnail.jpeg",
+      "cap": "Avventura in Quad nel Deserto e Palmeto di Marrakech",
+      "alt": "Gruppo di guidatori in quad su sentieri sterrati vicino al palmeto di Marrakech"
+    }
+  ],
+  "faqs": []
+}

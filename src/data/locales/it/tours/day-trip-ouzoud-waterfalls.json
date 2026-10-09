@@ -1,0 +1,83 @@
+{
+  "slug": "day-trip-ouzoud-waterfalls",
+  "title": "Escursione di un Giorno alle Cascate di Ouzoud da Marrakech | Sahara Star",
+  "shortTitle": "Escursione alle Cascate di Ouzoud da Marrakech",
+  "description": "Escursione da Marrakech alle spettacolari Cascate di Ouzoud di 110 metri nel Medio Atlante. Sentieri panoramici, macachi di Barberia e gite in barca.",
+  "aboutHtml": "Escursione di una giornata da Marrakech alle Cascate di Ouzoud e ai villaggi berberi.<br/><br/>Questa gita giornaliera da Marrakech verso le maestose Cascate di Ouzoud e le colline dell'Atlante è un'opportunità eccezionale per immergersi nella natura rigogliosa del Marocco.<br/><br/>Partiremo intorno alle 8:00 del mattino attraversando le pianure dell'Haouz verso il Medio Atlante, passando accanto a secolari oliveti e caratteristici villaggi berberi.<br/><br/>Scendere lungo i sentieri di Ouzoud è un'esperienza entusiasmante che permette di ammirare da vicino le cascate alte oltre 110 metri, rinfrescarsi vicino alle pozze naturali e scorgere i simpatici macachi di Barberia che popolano le rocce circostanti.<br/><br/>Pranzeremo con tajine tradizionale berbera su una terrazza affacciata sulle cascate prima di fare ritorno a Marrakech in serata.",
+  "duration": "1 Giorno / Escursione di una Giornata",
+  "startingFrom": "Marrakech",
+  "price": "Da 60 €/persona",
+  "highlights": [
+    "Percorso panoramico: Ammirate suggestivi scorci di villaggi berberi e delle colline del Medio Atlante.",
+    "Cascate di Ouzoud: Ammirate la potenza delle cascate più alte del Marocco con il loro salto di 110 metri.",
+    "Fauna selvatica: Incontrate i macachi di Barberia nel loro habitat naturale tra le rocce e gli ulivi.",
+    "Trekking panoramico: Passeggiata guidata lungo sentieri ombreggiati fino al fondo della gola.",
+    "Bagno rinfrescante: Possibilità di rinfrescarsi nelle acque del fiume ai piedi delle cascate.",
+    "Pranzo tradizionale berbero: Gustate un delizioso tajine preparato dalla gente del posto con vista sulle acque."
+  ],
+  "inclusions": [
+    "Trasporto andata e ritorno in comodo veicolo climatizzato",
+    "Itinerario panoramico attraverso villaggi berberi e coltivazioni di ulivi",
+    "Trekking guidato fino alla base delle spettacolari Cascate di Ouzoud",
+    "Opportunità di avvistare i macachi di Barberia in libertà"
+  ],
+  "exclusions": [
+    "Spese personali e souvenir",
+    "Mance per autista e guida locale (facoltative)",
+    "Giro facoltativo in barca a remi sotto il getto della cascata",
+    "Pranzo e bevande extra non specificati"
+  ],
+  "itinerary": [
+    {
+      "day": "Giorno 1",
+      "title": "Marrakech – Villaggi Berberi – Medio Atlante – Cascate di Ouzoud – Trekking – Pranzo Berbero",
+      "content": "Partenza alle 8:00 da Marrakech in direzione nord-est verso il Medio Atlante. Il tragitto attraversa fertili pianure coltivate a ulivi e piccoli borghi rurali berberi. Arrivati alle Cascate di Ouzoud, inizierete un'escursione guidata a piedi lungo sentieri gradinati che scendono nel canyon, ammirando il potente getto d'acqua che compie un salto di 110 metri tra mille sfumature d'arcobaleno. Durante la discesa si incontrano i macachi selvatici dell'Atlante abituati alla presenza dell'uomo. In fondo alla gola potrete fare un breve giro sulle tradizionali imbarcazioni di legno per avvicinarvi alla cascata. Pranzo tipico berbero in un ristorante terrazzato con vista panoramica sulle acque. Tempo per rilassarsi prima del comodo rientro a Marrakech nel tardo pomeriggio."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Marrakech",
+      "day": "Mattina",
+      "subtitle": "Partenza",
+      "desc": "Viaggio mattutino attraverso le pianure del Tadla."
+    },
+    {
+      "number": 2,
+      "name": "Colline del Medio Atlante",
+      "day": "Lungo la Via",
+      "subtitle": "Villaggi Berberi",
+      "desc": "Distese di uliveti e case tradizionali in terra battuta."
+    },
+    {
+      "number": 3,
+      "name": "Cascate di Ouzoud",
+      "day": "Pomeriggio",
+      "subtitle": "Salti di 110m e Macachi",
+      "desc": "Discesa a piedi alla gola, giro in barca e scimmie selvatiche."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/day-trips/one-day-trip-from-marrakech-to-the-ouzoud-waterfalls-and-berber-/images/thumbnail.jpg",
+      "cap": "Escursione di un Giorno alle Cascate di Ouzoud e Villaggi Berberi",
+      "alt": "Imponente salto d'acqua delle Cascate di Ouzoud nel Medio Atlante"
+    },
+    {
+      "src": "/sahara-star-tours/day-trips/one-day-trip-from-marrakech-to-the-ouzoud-waterfalls-and-berber-/images/image-01.jpg",
+      "cap": "Escursione di un Giorno alle Cascate di Ouzoud e Villaggi Berberi",
+      "alt": "Macaco di Barberia sulle scogliere vicino alle cascate di Ouzoud"
+    },
+    {
+      "src": "/sahara-star-tours/day-trips/one-day-trip-from-marrakech-to-the-ouzoud-waterfalls-and-berber-/images/image-02.webp",
+      "cap": "Escursione di un Giorno alle Cascate di Ouzoud e Villaggi Berberi",
+      "alt": "Barchette colorate in legno sul bacino delle Cascate di Ouzoud"
+    },
+    {
+      "src": "/sahara-star-tours/day-trips/one-day-trip-from-marrakech-to-the-ouzoud-waterfalls-and-berber-/images/image-03.jpeg",
+      "cap": "Escursione di un Giorno alle Cascate di Ouzoud e Villaggi Berberi",
+      "alt": "Ristorantini tradizionali berberi affacciati sul corso d'acqua a Ouzoud"
+    }
+  ],
+  "faqs": []
+}

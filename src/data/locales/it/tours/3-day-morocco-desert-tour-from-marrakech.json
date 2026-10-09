@@ -1,0 +1,162 @@
+{
+  "slug": "3-day-morocco-desert-tour-from-marrakech",
+  "title": "Tour di 3 Giorni da Marrakech al Deserto di Merzouga | Sahara Star Tours",
+  "shortTitle": "Tour di 3 Giorni nel Deserto da Marrakech",
+  "description": "Scopri le maestose dune dell'Erg Chebbi con un tour privato di 3 giorni da Marrakech. Ammira Ait Ben Haddou, le Gole del Dades e del Todra e pernotta in un campo tendato di lusso.",
+  "aboutHtml": "<p>Questo tour privato di 3 giorni da Marrakech al deserto di Merzouga rappresenta uno degli itinerari più spettacolari e richiesti del Marocco. Attraversando l'Alto Atlante tramite il passo Tizi N'Tichka, visiterai lo storico ksar di Ait Ben Haddou, le imponenti pareti rocciose delle Gole del Dades e del Todra, fino a raggiungere le dune dorate dell'Erg Chebbi per un'esperienza indimenticabile a dorso di dromedario al tramonto e una notte in accampamento di lusso.</p>",
+  "duration": "3 Giorni / 2 Notti",
+  "startingFrom": "Marrakech",
+  "price": "Da $390/persona",
+  "highlights": [
+    "Trekking a dorso di dromedario al tramonto tra le dune dell'Erg Chebbi",
+    "Notte in accampamento di lusso nel deserto con musica e tamburi berberi",
+    "Spettacolari canyon delle Gole del Dades e Gole del Todra",
+    "Kasbah di Ait Ben Haddou, sito Patrimonio Mondiale dell'UNESCO",
+    "Scorci panoramici attraverso il passo montano del Tizi N'Tichka"
+  ],
+  "inclusions": [
+    "Veicolo privato 4×4 o minivan con aria condizionata",
+    "Autista/guida locale professionista per l'intera durata del tour",
+    "Carburante, pedaggi e spese operative del veicolo",
+    "1 notte in riad/hotel nella Valle del Dades e 1 notte in accampamento di lusso",
+    "Colazioni e cene incluse nella Valle del Dades e all'accampamento",
+    "Trekking in dromedario tra le dune di Merzouga (andata e ritorno)"
+  ],
+  "exclusions": [
+    "Pranzi e bevande",
+    "Voli aerei nazionali e internazionali",
+    "Biglietti d'ingresso per monumenti facoltativi",
+    "Mance e spese personali"
+  ],
+  "itinerary": [
+    {
+      "day": "Giorno 1",
+      "title": "Marrakech – Alto Atlante – Kasbah Ait Ben Haddou – Valle delle Rose – Boumalne Dades",
+      "content": "La tua avventura di 3 giorni verso il deserto di Merzouga comincia di buon mattino con il prelievo dal tuo riad o dall'aeroporto di Marrakech. Attraverserai l'Alto Atlante attraverso il celebre passo Tizi N'Tichka (2.260 m), ammirando villaggi berberi arroccati e spettacolari panorami montani. Visiterai poi la leggendaria Kasbah di Ait Ben Haddou, patrimonio UNESCO celebre per aver ospitato pellicole storiche indimenticabili. Dopo il pranzo proseguirai oltre Ouarzazate, attraverso l'oasi di Skoura e la Valle delle Rose a Kalaat M'Gouna, per giungere a Boumalne Dades dove ti attendono cena e pernottamento in un caratteristico riad."
+    },
+    {
+      "day": "Giorno 2",
+      "title": "Valle del Dades – Gole del Todra – Deserto di Merzouga – Trekking in dromedario e campo di lusso",
+      "content": "Dopo la prima colazione ammirerai le suggestive gole della Valle del Dades prima di dirigerti verso le imponenti Gole del Todra, uno spettacolare canyon con pareti verticali alte fino a 300 metri. Potrai passeggiare lungo il torrente e respirare l'atmosfera selvaggia del luogo. Il viaggio proseguirà attraverso i palmeti di Touroug e Tinjdad con sosta per il pranzo. Nel pomeriggio arriverai a Merzouga: qui salirai a dorso di dromedario per attraversare le spettacolari dune dorate dell'Erg Chebbi al tramonto e raggiungere il tuo esclusivo accampamento di lusso, con cena gourmet e canti berberi attorno al falò sotto le stelle."
+    },
+    {
+      "day": "Giorno 3",
+      "title": "Deserto di Merzouga – Valle del Draa – Anti Atlante – Ouarzazate – Marrakech",
+      "content": "Sveglia all'alba per assistere al magico sorgere del sole sul mare di dune, seguita da una colazione tradizionale. Rientrerai a Merzouga in dromedario o in 4×4 dove ritroverai il tuo autista. Visiterai il mercato storico di Rissani e proseguirai verso Alnif e lungo la magnifica Valle del Draa fino a Ouarzazate. Nel pomeriggio risalirai il passo del Tizi N'Tichka per fare rientro a Marrakech in serata con trasferimento al tuo alloggio. (Nota: per chi desidera evitare il lungo tragitto di rientro, è possibile concludere il tour all'aeroporto di Errachidia o proseguire verso Fès anziché Marrakech)."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Marrakech",
+      "day": "Giorno 1",
+      "subtitle": "Marrakech – Alto Atlante – Ait Ben Haddou – Valle delle Rose – Boumalne Dades",
+      "desc": "Partenza da Marrakech attraverso il Tizi N'Tichka verso Ait Ben Haddou e la Valle del Dades."
+    },
+    {
+      "number": 2,
+      "name": "Valle del Dades",
+      "day": "Giorno 2",
+      "subtitle": "Valle del Dades – Gole del Todra – Deserto di Merzouga – Campo di lusso",
+      "desc": "Visita delle Gole del Todra, arrivo all'Erg Chebbi e trekking in dromedario verso il campo tendato."
+    },
+    {
+      "number": 3,
+      "name": "Deserto di Merzouga",
+      "day": "Giorno 3",
+      "subtitle": "Merzouga – Valle del Draa – Anti Atlante – Ouarzazate – Marrakech",
+      "desc": "Alba sulle dune, passaggio per la Valle del Draa e rientro a Marrakech attraverso l'Alto Atlante."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/3-day-morocco-desert-tour-from-marrakech/images/gallery_1.webp",
+      "cap": "Gole del Todra",
+      "alt": "Djellaba tradizionali e tessuti in vendita lungo le pareti rocciose delle Gole del Todra"
+    },
+    {
+      "src": "/sahara-star-tours/3-day-morocco-desert-tour-from-marrakech/images/gallery_10.webp",
+      "cap": "Souk marocchino",
+      "alt": "Piramidi di spezie variopinte e barattoli di vetro in un tradizionale souk marocchino"
+    },
+    {
+      "src": "/sahara-star-tours/3-day-morocco-desert-tour-from-marrakech/images/gallery_2.webp",
+      "cap": "Paesaggio di Merzouga",
+      "alt": "Colline vulcaniche rocciose e vette montuose desertiche nei pressi di Merzouga"
+    },
+    {
+      "src": "/sahara-star-tours/3-day-morocco-desert-tour-from-marrakech/images/gallery_3.webp",
+      "cap": "Dromedario a Erg Chebbi",
+      "alt": "Dromedario a riposo davanti alle alte dune di sabbia e accampamento nell'Erg Chebbi"
+    },
+    {
+      "src": "/sahara-star-tours/3-day-morocco-desert-tour-from-marrakech/images/gallery_4.webp",
+      "cap": "Artigianato di Marrakech",
+      "alt": "Lanterne in rame artigianali e babucce in pelle nel souk di Marrakech"
+    },
+    {
+      "src": "/sahara-star-tours/3-day-morocco-desert-tour-from-marrakech/images/gallery_5.webp",
+      "cap": "Ait Ben Haddou",
+      "alt": "Ksar di Ait Ben Haddou visto dal fiume nella suggestiva luce della sera"
+    },
+    {
+      "src": "/sahara-star-tours/3-day-morocco-desert-tour-from-marrakech/images/gallery_6.webp",
+      "cap": "Lampade in ottone",
+      "alt": "Lampade in ottone traforato e oggetti in metallo esposti nella medina di Marrakech"
+    },
+    {
+      "src": "/sahara-star-tours/3-day-morocco-desert-tour-from-marrakech/images/gallery_7.webp",
+      "cap": "Ait Ben Haddou illuminato",
+      "alt": "Cielo crepuscolare violaceo sul villaggio in argilla illuminato di Ait Ben Haddou"
+    },
+    {
+      "src": "/sahara-star-tours/3-day-morocco-desert-tour-from-marrakech/images/gallery_8.webp",
+      "cap": "Dune del Sahara",
+      "alt": "Sabbia dorata e cieli tersi nel cuore del deserto del Sahara"
+    },
+    {
+      "src": "/sahara-star-tours/3-day-morocco-desert-tour-from-marrakech/images/gallery_9.webp",
+      "cap": "Kasbah di Skoura",
+      "alt": "Kasbah fortificata in terra che svetta tra le palme nell'oasi di Skoura"
+    },
+    {
+      "src": "/sahara-star-tours/3-day-morocco-desert-tour-from-marrakech/images/hero_2.webp",
+      "cap": "Veduta di Ait Ben Haddou",
+      "alt": "Veduta panoramica del villaggio fortificato di Ait Ben Haddou e dei palmeti"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Questo tour è privato o di gruppo?",
+      "answer": "È un tour interamente privato: veicolo, conducente e programma sono riservati solo a te e ai tuoi compagni di viaggio per garantirti la massima libertà e flessibilità."
+    },
+    {
+      "question": "Quanto dura il giro in dromedario e c'è un'opzione in 4×4?",
+      "answer": "La passeggiata in dromedario dura tra i 40 e i 90 minuti. Se preferisci, possiamo provvedere al trasporto diretto all'accampamento in 4×4 senza alcun costo aggiuntivo."
+    },
+    {
+      "question": "Come sono organizzate le tende nel campo tendato di lusso?",
+      "answer": "Le tende dispongono di comodi letti veri, bagno privato con wc e doccia con acqua calda corrente ed elettricità per ricaricare fotocamere e smartphone."
+    },
+    {
+      "question": "Da dove si parte e dove termina il tour?",
+      "answer": "Il pick-up avverrà comodamente presso il tuo riad, hotel o all'aeroporto di Marrakech, e il rientro al termine del viaggio sarà concordato a Marrakech."
+    },
+    {
+      "question": "Quale mezzo di trasporto viene impiegato?",
+      "answer": "Viaggerai a bordo di un confortevole fuoristrada 4×4 o minivan privato di ultima generazione, con aria condizionata e ampio vano bagagli."
+    },
+    {
+      "question": "Possono essere soddisfatte richieste per diete particolari?",
+      "answer": "Certamente, possiamo accogliere richieste per menu vegetariani, vegani o per celiaci comunicandocelo in anticipo al momento della prenotazione."
+    },
+    {
+      "question": "Il viaggio è consigliato a famiglie con bambini o persone anziane?",
+      "answer": "Sì, l'itinerario è adatto a tutte le età; tieni presente che la terza giornata prevede diverse ore di guida verso Marrakech, con soste regolari lungo il percorso."
+    },
+    {
+      "question": "Qual è il periodo migliore per questa escursione?",
+      "answer": "Il periodo compreso tra ottobre e maggio offre il clima più mite nel deserto. Durante i mesi estivi le temperature sono elevate, ma tutti i veicoli e gli alloggi sono dotati di aria condizionata."
+    }
+  ]
+}

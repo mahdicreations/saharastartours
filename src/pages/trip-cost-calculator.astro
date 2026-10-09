@@ -1,12 +1,15 @@
 ---
 // src/pages/trip-cost-calculator.astro — Dedicated Morocco Trip Cost Calculator
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getAlternateUrls } from '../data/i18n';
+
+const alternateUrls = getAlternateUrls('/trip-cost-calculator');
 
 const calcSchema = {
   "@context": "https://schema.org",
   "@type": "WebApplication",
   "name": "Morocco Trip Cost Calculator | Sahara Star Tours",
-  "url": "https://www.saharastartours.com/trip-cost-calculator",
+  "url": alternateUrls.en,
   "description": "Interactive Morocco travel budget calculator to estimate custom private tours, desert safaris, and imperial cities packages.",
   "applicationCategory": "TravelApplication",
   "operatingSystem": "All"
@@ -18,6 +21,7 @@ const calcSchema = {
   description="Calculate the cost of your custom Morocco vacation in seconds. Select tour duration, group size, accommodation tier, and add-ons with 100% transparent pricing."
   keywords="morocco trip cost calculator, morocco travel budget, how much does a morocco tour cost, sahara desert tour price estimate, private tour morocco cost"
   currentPage="calculator"
+  alternateUrls={alternateUrls}
   schemaData={calcSchema}
 >
   <!-- Calculator Hero Header -->

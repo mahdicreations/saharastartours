@@ -1,0 +1,188 @@
+{
+  "slug": "8-days-itinerary-tour-from-casablanca",
+  "title": "Tour di 8 Giorni tra Deserto del Sahara e Città Imperiali | Sahara Star Tours",
+  "shortTitle": "Tour di 8 Giorni Sahara e Città Imperiali",
+  "description": "Itinerario privato di 8 giorni da Casablanca: Rabat, Chefchaouen, Volubilis, Fes, dune di Erg Chebbi con campo tendato di lusso, Gole del Todra e Marrakech.",
+  "aboutHtml": "Questo itinerario privato di 8 giorni da Casablanca unisce armoniosamente le meraviglie culturali e i grandi paesaggi naturali del Marocco. Viaggia lungo la costa atlantica fino a Rabat, sali verso la suggestiva Città Blu di Chefchaouen tra i monti del Rif e immergiti nella storia a Volubilis, Meknes e nell'antica medina di Fes. Attraversa l'Atlante per ammirare il tramonto dorato tra le dune di Merzouga e dormire in un raffinato campo tendato nel deserto. L'avventura prosegue attraverso le spettacolari Gole del Todra e del Dades, la storica Kasbah di Ait Ben Haddou e culmina con una ricca visita guidata a Marrakech.",
+  "duration": "8 Giorni / 7 Notti",
+  "startingFrom": "Casablanca",
+  "price": "Da $990/persona",
+  "highlights": [
+    "Moschea Hassan II a Casablanca e monumenti storici di Rabat",
+    "Chefchaouen, l'iconica Perla Blu incastonata nel Rif",
+    "Sito archeologico romano di Volubilis (UNESCO) e Meknes",
+    "Visita guidata approfondita della medina millenaria di Fes",
+    "Foresta di cedri di Azrou e gole panoramiche della Valle dello Ziz",
+    "Trekking sui dromedari e notte in campo tendato di lusso a Erg Chebbi",
+    "Gole del Todra e formazioni rocciose della Valle del Dades",
+    "Kasbah di Ait Ben Haddou e valico montano di Tizi n'Tichka",
+    "Tour guidato tra palazzi, madrase e souk animati di Marrakech"
+  ],
+  "inclusions": [
+    "Veicolo privato climatizzato e moderno (4x4 o minivan) con carburante incluso",
+    "Autista/guida professionale dedicato per tutti gli 8 giorni di tour",
+    "Accoglienza a Casablanca e trasferimento finale a Marrakech o Casablanca",
+    "Guida locale autorizzata per il tour a piedi della medina di Fes",
+    "Guida locale autorizzata per la visita culturale dei monumenti di Marrakech",
+    "Passeggiata a dorso di dromedario al tramonto sulle dune di Merzouga",
+    "1 notte in campo tendato di lusso nel deserto con bagno privato ensuite",
+    "6 notti in confortevoli riad tradizionali e hotel selezionati"
+  ],
+  "exclusions": [
+    "Voli aerei internazionali",
+    "Pranzi e bevande durante i pasti",
+    "Biglietti d'ingresso a monumenti storici e musei",
+    "Attività facoltative non comprese nell'itinerario",
+    "Mance per autista e guide locali",
+    "Assicurazione di viaggio personale",
+    "Spese personali e acquisti"
+  ],
+  "itinerary": [
+    {
+      "day": "Giorno 1",
+      "title": "Casablanca – Rabat",
+      "content": "Accoglienza all'aeroporto o presso il tuo alloggio a Casablanca. Visiteremo la grandiosa Moschea Hassan II eretta a ridosso dell'Atlantico. Nel pomeriggio proseguiremo verso Rabat per ammirare la Torre Hassan, il Mausoleo di Mohammed V e la Kasbah degli Oudaïa prima di sistemarci in riad."
+    },
+    {
+      "day": "Giorno 2",
+      "title": "Rabat – Chefchaouen",
+      "content": "Dopo colazione viaggeremo verso le montagne del Rif in direzione di Chefchaouen. Arrivo nella Città Blu, dove potrai passeggiare liberamente tra vicoli color indaco, ammirare piazza Uta el-Hammam e goderti la caratteristica quiete della medina."
+    },
+    {
+      "day": "Giorno 3",
+      "title": "Chefchaouen – Volubilis – Meknes – Fes",
+      "content": "Partenza dai monti del Rif per esplorare le magnifiche rovine romane di Volubilis e i suoi mosaici perfettamente conservati. Sosta nella vicina Meknes per fotografare la maestosa porta Bab El Mansour prima di arrivare a Fes per la cena e il pernottamento in riad."
+    },
+    {
+      "day": "Giorno 4",
+      "title": "Visita Guidata Storica di Fes",
+      "content": "Intera giornata con guida locale ufficiale alla scoperta di Fes El Bali. Ammireremo la Moschea Al Quaraouiyine, la Medersa Bou Inania, le concerie di cuoio Chouara, i quartieri artigianali e l'esterno del Palazzo Reale con le imponenti porte in ottone dorato."
+    },
+    {
+      "day": "Giorno 5",
+      "title": "Fes – Ifrane – Foresta dei Cedri – Valle dello Ziz – Deserto di Merzouga",
+      "content": "Viaggio verso sud con soste a Ifrane e nella foresta di cedri di Azrou per incontrare i macachi berberi. Pranzo a Midelt e discesa attraverso il palmeto della Valle dello Ziz. Nel pomeriggio arrivo a Merzouga, partenza a dorso di dromedario sulle dune di Erg Chebbi e serata magica nel campo tendato di lusso con cena tipica berbera attorno al fuoco."
+    },
+    {
+      "day": "Giorno 6",
+      "title": "Deserto di Merzouga – Rissani – Gole del Todra – Valle del Dades",
+      "content": "Alba indimenticabile sulle dune e colazione al campo. Visita al mercato carovaniero di Rissani e ai laboratori fossili di Erfoud. Passeggiata nelle spettacolari Gole del Todra tra pareti alte centinaia di metri e proseguimento nella suggestiva Valle del Dades per il pernottamento."
+    },
+    {
+      "day": "Giorno 7",
+      "title": "Gole del Dades – Ouarzazate – Ait Ben Haddou – Alto Atlante – Marrakech",
+      "content": "Attraversamento della Valle delle Rose e della città di Ouarzazate. Visita al ksar di Ait Ben Haddou (Patrimonio UNESCO), celebre fortezza di film leggendari come Il Gladiatore. Valico montano del passo di Tizi n'Tichka tra vette maestose e arrivo nella vivace Marrakech."
+    },
+    {
+      "day": "Giorno 8",
+      "title": "Tour Guidato di Marrakech e Trasferimento",
+      "content": "Mattinata dedicata alla visita guidata di Marrakech: la Koutoubia, il Palazzo Bahia, le Tombe Saadiane e la celebre piazza Jemaa el-Fna. Nel pomeriggio, in base all'orario del tuo volo, trasferimento all'aeroporto di Marrakech Menara (RAK) o all'aeroporto Mohammed V di Casablanca (CMN)."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Casablanca",
+      "day": "Giorno 1",
+      "subtitle": "Arrivo sull'Atlantico",
+      "desc": "Moschea Hassan II e trasferimento panoramico verso Rabat."
+    },
+    {
+      "number": 2,
+      "name": "Rabat",
+      "day": "Giorno 2",
+      "subtitle": "Capitale Imperiale",
+      "desc": "Torre Hassan, Palazzo Reale e Kasbah degli Oudaïa."
+    },
+    {
+      "number": 3,
+      "name": "Chefchaouen",
+      "day": "Giorno 3",
+      "subtitle": "La Perla Blu",
+      "desc": "Suggestiva medina dipinta di blu tra i monti del Rif."
+    },
+    {
+      "number": 4,
+      "name": "Volubilis e Fes",
+      "day": "Giorno 4 e 5",
+      "subtitle": "Eredità Romana e Medievale",
+      "desc": "Mosaici romani, Meknes e la medina storica di Fes."
+    },
+    {
+      "number": 5,
+      "name": "Merzouga Sahara",
+      "day": "Giorno 5 e 6",
+      "subtitle": "Campo Tendato a Erg Chebbi",
+      "desc": "Valle dello Ziz, Medio Atlante e notte di lusso nel deserto."
+    },
+    {
+      "number": 6,
+      "name": "Todra e Dades",
+      "day": "Giorno 6 e 7",
+      "subtitle": "Gole e Canyon dell'Atlante",
+      "desc": "Gole rocciose mozzafiato e profumata Valle delle Rose."
+    },
+    {
+      "number": 7,
+      "name": "Ait Ben Haddou",
+      "day": "Giorno 7",
+      "subtitle": "Kasbah Patrimonio UNESCO",
+      "desc": "Fortezza iconica del cinema e studi di Ouarzazate."
+    },
+    {
+      "number": 8,
+      "name": "Marrakech",
+      "day": "Giorno 8",
+      "subtitle": "Gran Finale nella Città Rossa",
+      "desc": "Souk vivaci, monumenti storici e transfer aeroportuale."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/desert-tours/8-days-itinerary-tour-from-casablanca/images/thumbnail.jpg",
+      "cap": "Tour di 8 Giorni in Marocco da Casablanca",
+      "alt": "Tour di 8 Giorni in Marocco da Casablanca – Sahara Star Tours"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/8-days-itinerary-tour-from-casablanca/images/image-01.jpg",
+      "cap": "Medina blu di Chefchaouen e paesaggi del Rif",
+      "alt": "Vicoli color indaco nella medina di Chefchaouen"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/8-days-itinerary-tour-from-casablanca/images/image-02.jpg",
+      "cap": "Sito archeologico romano di Volubilis",
+      "alt": "Rovine romane e colonne storiche a Volubilis"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/8-days-itinerary-tour-from-casablanca/images/image-03.jpg",
+      "cap": "Medina medievale e architettura islamica a Fes",
+      "alt": "Cortile decorato a mosaico in un'antica madrasa di Fes"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/8-days-itinerary-tour-from-casablanca/images/image-04.jpg",
+      "cap": "Carovana di dromedari tra le dune di Erg Chebbi",
+      "alt": "Passeggiata sui dromedari al tramonto tra le dune di Merzouga"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/8-days-itinerary-tour-from-casablanca/images/image-05.jpg",
+      "cap": "Campo tendato berbero di lusso nel Sahara",
+      "alt": "Tende di lusso e tappeti berberi sotto il cielo del deserto"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/8-days-itinerary-tour-from-casablanca/images/image-06.jpg",
+      "cap": "Gole del Todra e falesie rocciose dell'Atlante",
+      "alt": "Canyon roccioso e corso d'acqua nelle Gole del Todra"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/8-days-itinerary-tour-from-casablanca/images/image-07.jpg",
+      "cap": "Kasbah fortificata di Ait Ben Haddou",
+      "alt": "Ksar in terra cruda di Ait Ben Haddou tutelato dall'UNESCO"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/8-days-itinerary-tour-from-casablanca/images/image-08.jpg",
+      "cap": "Piazza Jemaa el-Fna e souk di Marrakech",
+      "alt": "Atmosfera vivace e minareto della Koutoubia a Marrakech"
+    }
+  ],
+  "faqs": []
+}

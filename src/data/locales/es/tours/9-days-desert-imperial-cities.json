@@ -1,0 +1,192 @@
+{
+  "slug": "9-days-desert-imperial-cities",
+  "title": "Circuito de 9 Días Dunas del Desierto y Ciudades Imperiales | Sahara Star Tours",
+  "shortTitle": "Circuito de 9 Días Dunas y Ciudades Imperiales",
+  "description": "Viaje privado de 9 días desde Casablanca: Rabat, Chefchaouen, Volubilis, Fez, dunas de Erg Chebbi con noche en campamento de lujo, cañones del Dades y Marrakech.",
+  "aboutHtml": "Un fascinante viaje privado de 9 días diseñado para descubrir las legendarias Ciudades Imperiales y los contrastes naturales de Marruecos. Desde la moderna Casablanca y la capital Rabat, viajarás a las montañas del Rif para contemplar el azul sereno de Chefchaouen. Explora las ruinas romanas de Volubilis y los secretos artesanales de Fez antes de cruzar el Atlas hacia el mar de dunas doradas de Erg Chebbi. Duerme en un campamento de lujo bajo el cielo estrellado del Sáhara y sigue la ruta de las Mil Kasbahs pasando por los cañones del Todra y Ait Ben Haddou hasta Marrakech.",
+  "duration": "9 Días / 8 Noches",
+  "startingFrom": "Casablanca",
+  "price": "Desde $1,150/persona",
+  "highlights": [
+    "Casablanca y Rabat: Mezquita Hassan II, Torre Hassan y Kasbah de los Oudayas",
+    "Chefchaouen: La pintoresca Perla Azul en las montañas del Rif",
+    "Volubilis y Meknes: Yacimiento romano de la UNESCO y puerta Bab El Mansour",
+    "Fez: Visita guiada completa por la medina medieval de Fes El Bali",
+    "Erg Chebbi: Paseo en dromedario y estancia en campamento de lujo en Merzouga",
+    "Gargantas del Todra y formaciones rocosas del Valle del Dades",
+    "Ait Ben Haddou y Marrakech: Fortaleza cinematográfica y bulliciosa plaza Jemaa el-Fna"
+  ],
+  "inclusions": [
+    "Vehículo privado moderno y climatizado (4x4 o minivan) con combustible incluido",
+    "Chófer/guía profesional de habla española durante todo el viaje",
+    "Recogida en Casablanca y traslados de salida al final del circuito",
+    "Guía local oficial para la visita guiada histórica en Fez",
+    "Guía local oficial para el recorrido monumental en Marrakech",
+    "Paseo en dromedario al atardecer sobre las dunas de Merzouga",
+    "1 noche en campamento de lujo en el desierto con tienda privada y baño ensuite",
+    "8 noches en hoteles confortables y riads tradicionales con encanto"
+  ],
+  "exclusions": [
+    "Vuelos internacionales de entrada y salida",
+    "Almuerzos diarios y bebidas",
+    "Entradas a monumentos históricos y museos",
+    "Actividades complementarias no detalladas en el itinerario",
+    "Propinas para guías y conductor",
+    "Seguro personal de viaje",
+    "Gastos personales y compras",
+    "Cualquier servicio no especificado en el apartado de incluidos"
+  ],
+  "itinerary": [
+    {
+      "day": "Día 1",
+      "title": "Casablanca – Rabat",
+      "content": "Llegada a Casablanca y visita a la majestuosa Mezquita Hassan II sobre el océano. Continuación hacia la capital, Rabat, para descubrir la Torre Hassan y la Kasbah de los Oudayas. Alojamiento en riad."
+    },
+    {
+      "day": "Día 2",
+      "title": "Rabat – Chefchaouen",
+      "content": "Viaje rumbo al norte adentrándonos en el Rif hasta Chefchaouen. Tarde libre para pasear por las cautivadoras callejuelas teñidas de azul añil y relajarse en la plaza central. Alojamiento en Chefchaouen."
+    },
+    {
+      "day": "Día 3",
+      "title": "Chefchaouen – Volubilis – Meknes – Fez",
+      "content": "Salida hacia Volubilis para contemplar los impresionantes mosaicos romanos. Parada en Meknes ante la majestuosa puerta Bab El Mansour y traslado por la tarde a la ciudad espiritual de Fez."
+    },
+    {
+      "day": "Día 4",
+      "title": "Visita Guiada de Fez",
+      "content": "Jornada completa con guía oficial recorriendo Fez El Bali: Universidad Al Quaraouiyine, Madraza Bou Inania, curtidurías Chouara, barrio judío Mellah y vista panorámica de la medina. Noche en Fez."
+    },
+    {
+      "day": "Día 5",
+      "title": "Fez – Azrou – Midelt – Valle del Ziz – Merzouga",
+      "content": "Travesía hacia el sur cruzando el Medio Atlas y el bosque de cedros de Azrou. Descenso por las gargantas del Ziz hasta Merzouga, donde montarás en dromedario hacia el campamento de lujo en las dunas de Erg Chebbi para cenar bajo las estrellas."
+    },
+    {
+      "day": "Día 6",
+      "title": "Merzouga – Gargantas del Todra – Gargantas del Dades",
+      "content": "Amanecer en el desierto y desayuno. Viaje hacia Tinghir para caminar bajo los imponentes acantilados del Todra y continuación por la carretera de las Mil Kasbahs hasta el Valle del Dades para pasar la noche."
+    },
+    {
+      "day": "Día 7",
+      "title": "Valle del Dades – Ait Ben Haddou – Marrakech",
+      "content": "Recorrido por el Valle de las Rosas y visita a la célebre Kasbah de Ait Ben Haddou (UNESCO). Cruce de las altas cumbres del Atlas por el puerto de Tizi n'Tichka (2.260 m) hasta llegar a Marrakech."
+    },
+    {
+      "day": "Día 8",
+      "title": "Visita Guiada de Marrakech",
+      "content": "Recorrido matinal guiado por la mezquita Koutoubia, el Palacio de la Bahía, las Tumbas Saadíes y los zocos. Por la tarde visita a los Jardines Majorelle y paseo nocturno por la animada plaza Jemaa el-Fna."
+    },
+    {
+      "day": "Día 9",
+      "title": "Fin del Circuito de 9 Días por Marruecos",
+      "content": "Desayuno en el riad y traslado organizado al aeropuerto para tu vuelo de regreso, culminando una experiencia inolvidable."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Casablanca",
+      "day": "Día 1",
+      "subtitle": "Llegada",
+      "desc": "Mezquita Hassan II y traslado costero."
+    },
+    {
+      "number": 2,
+      "name": "Rabat",
+      "day": "Día 2",
+      "subtitle": "Capital",
+      "desc": "Torre Hassan y Kasbah de los Oudayas."
+    },
+    {
+      "number": 3,
+      "name": "Chefchaouen",
+      "day": "Día 3",
+      "subtitle": "Medina Azul",
+      "desc": "Callejuelas del Rif en la Perla Azul."
+    },
+    {
+      "number": 4,
+      "name": "Fez",
+      "day": "Días 4 y 5",
+      "subtitle": "Ciudad UNESCO",
+      "desc": "Visita guiada histórica completa."
+    },
+    {
+      "number": 5,
+      "name": "Merzouga Sáhara",
+      "day": "Día 6",
+      "subtitle": "Dunas Doradas",
+      "desc": "Dromedarios y campamento en Erg Chebbi."
+    },
+    {
+      "number": 6,
+      "name": "Todra y Dades",
+      "day": "Día 7",
+      "subtitle": "Cañones",
+      "desc": "Gargantas del Todra y Valle del Dades."
+    },
+    {
+      "number": 7,
+      "name": "Ouarzazate",
+      "day": "Día 8",
+      "subtitle": "Ait Ben Haddou",
+      "desc": "Fortaleza histórica de cine de la UNESCO."
+    },
+    {
+      "number": 8,
+      "name": "Marrakech",
+      "day": "Día 9",
+      "subtitle": "Gran Final",
+      "desc": "Zocos, palacios y traslado final."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/desert-tours/morocco-itinerary-9-days-desert-imperial-cities/images/thumbnail.jpg",
+      "cap": "Circuito de 9 Días Dunas del Desierto y Ciudades Imperiales",
+      "alt": "Circuito de 9 Días Dunas del Desierto y Ciudades Imperiales – Sahara Star Tours"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/morocco-itinerary-9-days-desert-imperial-cities/images/image-01.jpg",
+      "cap": "Medina azul de Chefchaouen",
+      "alt": "Calle empedrada azul con macetas florales en Chefchaouen"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/morocco-itinerary-9-days-desert-imperial-cities/images/image-02.jpg",
+      "cap": "Mosaicos romanos en las ruinas de Volubilis",
+      "alt": "Suelo de mosaico romano clásico en el enclave arqueológico de Volubilis"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/morocco-itinerary-9-days-desert-imperial-cities/images/image-03.jpg",
+      "cap": "Patio histórico en una madraza de Fez",
+      "alt": "Talla de estuco y azulejos zellige en la madraza de Fez"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/morocco-itinerary-9-days-desert-imperial-cities/images/image-04.webp",
+      "cap": "Caravana al atardecer sobre las dunas de Erg Chebbi",
+      "alt": "Siluetas de dromedarios sobre crestas de dunas doradas en Merzouga"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/morocco-itinerary-9-days-desert-imperial-cities/images/image-05.webp",
+      "cap": "Campamento de lujo en el desierto del Sáhara",
+      "alt": "Jaimas confortables iluminadas en el desierto de Merzouga"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/morocco-itinerary-9-days-desert-imperial-cities/images/image-06.jpg",
+      "cap": "Desfiladero de roca en las Gargantas del Todra",
+      "alt": "Paredes verticales de caliza en las Gargantas del Todra"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/morocco-itinerary-9-days-desert-imperial-cities/images/image-07.jpg",
+      "cap": "Ksar histórico de Ait Ben Haddou",
+      "alt": "Arquitectura bereber de barro y torres defensivas en Ait Ben Haddou"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/morocco-itinerary-9-days-desert-imperial-cities/images/image-08.jpg",
+      "cap": "Ambiente vibrante en la plaza Jemaa el-Fna de Marrakech",
+      "alt": "Puestos de comida y animadores en la plaza Jemaa el-Fna"
+    }
+  ],
+  "faqs": []
+}

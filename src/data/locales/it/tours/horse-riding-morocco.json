@@ -1,0 +1,66 @@
+{
+  "slug": "horse-riding-morocco",
+  "title": "Passeggiata a Cavallo a Marrakech e nel Palmeto | Sahara Star Tours",
+  "shortTitle": "Passeggiata a Cavallo a Marrakech",
+  "description": "Cavalcatura su nobili cavalli arabi lungo i sentieri del palmeto di Marrakech e del deserto. Adatto a tutti i livelli con guide equestri professioniste.",
+  "aboutHtml": "<strong>Avventure Equestri a Marrakech</strong><br/><br/>Immergetevi nella tranquillità dei paesaggi marocchini in sella a splendidi cavalli arabi e berberi. Un'esperienza a contatto con la natura concepita per farvi scoprire l'arte dell'equitazione in Marocco.<br/><br/>Che siate cavalieri esperti o alle prime armi, le nostre guide certificate adatteranno il ritmo del percorso tra i viali del palmeto, le piste sterrate e i villaggi tradizionali.<br/><br/>Concluderete la cavalcata con una piacevole sosta a base di tè alla menta e dolci tradizionali prima del rientro a Marrakech.",
+  "duration": "Mezza Giornata / 3-4 Ore",
+  "startingFrom": "Marrakech",
+  "price": "Da 65 €/persona",
+  "highlights": [
+    "Passeggiate a cavallo: Percorsi tranquilli nel palmeto o suggestive cavalcate al tramonto con vista sull'Atlante.",
+    "Esperienza culturale: Combinate l'equitazione con la scoperta dell'ospitalità e della vita rurale locale.",
+    "A contatto con la natura: Sentieri tra palme secolari e piste sabbiose lontane dal traffico cittadino.",
+    "Abiti tradizionali e foto: Opportunità di indossare abiti tradizionali per scattare splendide fotografie a cavallo."
+  ],
+  "inclusions": [
+    "Pick-up e drop-off in hotel con veicolo climatizzato",
+    "Selle di qualità, cap e attrezzatura di sicurezza omologata",
+    "Passeggiata a cavallo guidata di 2 ore con istruttore esperto",
+    "Guida equestre professionista per tutta la durata dell'attività"
+  ],
+  "exclusions": [
+    "Spese personali e souvenir",
+    "Mance per guida e autista (facoltative)",
+    "Pasti o bevande supplementari",
+    "Assicurazioni sportive specifiche facoltative"
+  ],
+  "itinerary": [
+    {
+      "day": "Giorno 1",
+      "title": "Passeggiata a Cavallo in Marocco",
+      "content": "Pick-up dal vostro hotel a Marrakech e trasferimento alle scuderie alle porte della città. Assegnazione del cavallo in base al livello di esperienza e briefing di sicurezza con l'istruttore. Inizio dell'escursione a cavallo di 2 ore attraverso le piste sterrate del palmeto e della campagna circostante con vista sulle montagne dell'Atlante. Sosta per assaporare un rinfrescante tè alla menta berbero in una dimora tradizionale. Rientro alla scuderia e transfer di ritorno al vostro alloggio."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Marrakech",
+      "day": "Partenza",
+      "subtitle": "Pick-up in Hotel",
+      "desc": "Transfer privato dal vostro alloggio a Marrakech."
+    },
+    {
+      "number": 2,
+      "name": "Oasi del Palmeto di Marrakech",
+      "day": "Attività",
+      "subtitle": "Piste nel Palmeto",
+      "desc": "Percorso a cavallo tra le palme e le montagne dell'Atlante."
+    },
+    {
+      "number": 3,
+      "name": "Accampamento Berbero",
+      "day": "Pausa Tè",
+      "subtitle": "Ospitalità e Tè alla Menta",
+      "desc": "Pausa rilassante con tè alla menta e dolci tradizionali."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/activities/horse-riding-in-morocco/images/thumbnail.jpg",
+      "cap": "Passeggiata a Cavallo a Marrakech nel Palmeto",
+      "alt": "Cavalieri a cavallo che attraversano le piste del palmeto a Marrakech"
+    }
+  ],
+  "faqs": []
+}

@@ -1,0 +1,66 @@
+{
+  "slug": "horse-riding-morocco",
+  "title": "Paseo a Caballo en Marrakech y el Palmeral | Sahara Star Tours",
+  "shortTitle": "Paseo a Caballo en Marrakech",
+  "description": "Monte nobles caballos árabes por los senderos del palmeral de Marrakech y el desierto. Apto para todos los niveles con guías ecuestres profesionales.",
+  "aboutHtml": "<strong>Escapadas Ecuestres en Marrakech</strong><br/><br/>Sumérjase en la belleza y la serenidad de los paisajes marroquíes a lomos de magníficos caballos árabes y bereberes. Una experiencia diseñada para conectar con la naturaleza y la nobleza de la equitación tradicional.<br/><br/>Tanto si es un jinete principiante como experimentado, nuestros guías profesionales adaptarán el ritmo por los senderos sombreados del palmeral, los llanos minerales y las aldeas tradicionales.<br/><br/>Disfrute de una pausa relajante con té marroquí a la menta y pastas tradicionales en un entorno auténtico antes de regresar a la ciudad.",
+  "duration": "Media Jornada / 3-4 Horas",
+  "startingFrom": "Marrakech",
+  "price": "Desde 65 $/persona",
+  "highlights": [
+    "Paseos a caballo: Elija entre paseos tranquilos por el palmeral o recorridos al amanecer y atardecer entre las palmeras.",
+    "Ruta cultural: Combine la equitación con el descubrimiento de aldeas locales y hospitalidad tradicional bereber.",
+    "Aventura en la naturaleza: Recorra senderos arenosos y pistas de tierra con vistas panorámicas a la cordillera del Atlas.",
+    "Atuendo tradicional y fotografías: Posibilidad de utilizar prendas tradicionales para inmortalizar su experiencia a caballo."
+  ],
+  "inclusions": [
+    "Recogida y regreso al hotel en vehículo con aire acondicionado",
+    "Monturas de calidad, cascos y equipo de seguridad homologado",
+    "Ruta guiada a caballo de 2 horas con instructor profesional",
+    "Guía ecuestre profesional durante todo el recorrido"
+  ],
+  "exclusions": [
+    "Gastos personales y compras de recuerdos",
+    "Propinas para el instructor y chófer (opcionales)",
+    "Comidas y bebidas adicionales no especificadas",
+    "Seguro ecuestre deportivo especializado"
+  ],
+  "itinerary": [
+    {
+      "day": "Día 1",
+      "title": "Paseo a Caballo en Marruecos",
+      "content": "Recogida en su hotel en Marrakech y traslado al centro ecuestre situado a las afueras de la ciudad. Presentación de los caballos y asignación según la experiencia de cada jinete, junto con una breve sesión informativa de seguridad. Inicio del paseo de 2 horas a través de senderos de palmeras, llanuras y caminos rurales con el Atlas en el horizonte. Parada para degustar té a la menta tradicional marroquí y descanso. Regreso a las caballerizas y traslado de vuelta a su hotel."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Marrakech",
+      "day": "Salida",
+      "subtitle": "Recogida en Hotel",
+      "desc": "Traslado privado desde su alojamiento en Marrakech."
+    },
+    {
+      "number": 2,
+      "name": "Oasis del Palmeral de Marrakech",
+      "day": "Actividad",
+      "subtitle": "Pistas y Palmeras",
+      "desc": "Ruta a caballo por pistas entre palmeras con vistas al Atlas."
+    },
+    {
+      "number": 3,
+      "name": "Campamento Oasis Bereber",
+      "day": "Pausa Té",
+      "subtitle": "Hospitalidad y Té a la Menta",
+      "desc": "Pausa para reponer fuerzas con té tradicional marroquí."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/activities/horse-riding-in-morocco/images/thumbnail.jpg",
+      "cap": "Paseo a Caballo en Marrakech y el Palmeral",
+      "alt": "Jinetes a caballo recorriendo los senderos del palmeral con palmeras de Marrakech"
+    }
+  ],
+  "faqs": []
+}

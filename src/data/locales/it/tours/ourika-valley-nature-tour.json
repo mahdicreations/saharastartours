@@ -1,0 +1,94 @@
+{
+  "slug": "ourika-valley-nature-tour",
+  "title": "Escursione Natura nella Valle dell'Ourika e l'Atlante | Sahara Star Tours",
+  "shortTitle": "Escursione Natura nella Valle dell'Ourika",
+  "description": "Fuggite dal caldo di Marrakech con una splendida escursione nella Valle dell'Ourika. Camminate verso le cascate di Setti Fatma, visitate villaggi berberi e vette dell'Atlante.",
+  "aboutHtml": "Scoprite le meraviglie naturali e la biodiversità della Valle dell'Ourika in questa escursione giornaliera da Marrakech. Esplorate le cascate di Setti Fatma, visitate una casa tradizionale berbera e gustate un autentico pranzo sulle sponde del fiume. Un itinerario ideale per chi ama la natura e desidera conoscere da vicino la vita delle montagne dell'Atlante.",
+  "duration": "1 Giorno / Escursione di una Giornata",
+  "startingFrom": "Marrakech",
+  "price": "Da 50 €/persona",
+  "highlights": [
+    "Setti Fatma: Visitate il suggestivo villaggio berbero e scoprite le sue tradizioni montane.",
+    "Cascate di Setti Fatma: Trekking guidato verso le suggestive cascate con pozze naturali d'acqua fresca.",
+    "Casa tradizionale berbera: Esplorate un'autentica dimora con degustazione di tè alla menta.",
+    "Pranzo in riva al fiume: Gustate specialità marocchine nei tavoli allestiti direttamente vicino all'acqua.",
+    "Cooperativa di argan: Visita a una cooperativa femminile per scoprire la lavorazione dell'olio di argan.",
+    "Giardino Bio-Aromatico dell'Ourika: Passeggiata tra erbe aromatiche e piante officinali autoctone.",
+    "Osservazione naturalistica: Esplorate la natura della valle e ammirate la fauna e i paesaggi dell'Atlante."
+  ],
+  "inclusions": [
+    "Pick-up e drop-off presso il vostro alloggio a Marrakech",
+    "Viaggio panoramico lungo il corso del fiume Ourika",
+    "Trekking guidato alle cascate montane di Setti Fatma",
+    "Visita a una casa tradizionale berbera e a una cooperativa di argan"
+  ],
+  "exclusions": [
+    "Spese personali e souvenir",
+    "Mance per guida alpina e autista (facoltative)",
+    "Pranzo e bevande extra non specificati",
+    "Ingressi a giardini botanici o attività facoltative"
+  ],
+  "itinerary": [
+    {
+      "day": "Giorno 1",
+      "title": "Marrakech – Villaggi Berberi – Valle dell'Ourika – Cascate di Setti Fatma – Pranzo sul Fiume",
+      "content": "Partenza al mattino da Marrakech verso i contrafforti dell'Alto Atlante. Entriamo nella rigogliosa Valle dell'Ourika costeggiando le acque spumeggianti del torrente montano, con vedute di villaggi in pietra e argilla abbarbicati sulle pendici. Sosta presso una cooperativa femminile di olio di argan per osservare la lavorazione artigianale dei frutti. Successivamente visiteremo una casa berbera tradizionale dove sarete accolti con il rito del tè alla menta per scoprire la vita quotidiana dei montanari. Proseguimento fino al villaggio di Setti Fatma da cui, accompagnati da una guida locale, risalirete il sentiero che conduce alle cascate naturali tra massi e ruscelli. All'ora di pranzo ci accomoderemo in uno dei caratteristici ristoranti con i tavolini posizionati a pochi centimetri dal pelo dell'acqua per assaporare un ottimo tajine. Pomeriggio di relax tra i ponti sospesi prima del rientro a Marrakech."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Marrakech",
+      "day": "Mattina",
+      "subtitle": "Partenza",
+      "desc": "Percorso panoramico verso la valle del fiume Ourika."
+    },
+    {
+      "number": 2,
+      "name": "Villaggio Berbero",
+      "day": "Lungo la Via",
+      "subtitle": "Dimora Tradizionale",
+      "desc": "Cerimonia del tè e cultura tipica dell'Alto Atlante."
+    },
+    {
+      "number": 3,
+      "name": "Cascate di Setti Fatma",
+      "day": "Pomeriggio",
+      "subtitle": "Trekking alle Cascate",
+      "desc": "Sentiero guidato tra le rocce e pranzo in riva al torrente."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/day-trips/ourika-valley-nature-wildlife-tour/images/thumbnail.jpg",
+      "cap": "Escursione Natura e Paesaggi nella Valle dell'Ourika",
+      "alt": "Valle verdeggiante dell'Ourika con villaggi berberi dell'Alto Atlante"
+    },
+    {
+      "src": "/sahara-star-tours/day-trips/ourika-valley-nature-wildlife-tour/images/image-01.jpg",
+      "cap": "Escursione Natura e Paesaggi nella Valle dell'Ourika",
+      "alt": "Tavolini tradizionali posizionati sulle rive del torrente Ourika"
+    },
+    {
+      "src": "/sahara-star-tours/day-trips/ourika-valley-nature-wildlife-tour/images/image-02.jpg",
+      "cap": "Escursione Natura e Paesaggi nella Valle dell'Ourika",
+      "alt": "Salti d'acqua e pozze cristalline alle cascate di Setti Fatma"
+    },
+    {
+      "src": "/sahara-star-tours/day-trips/ourika-valley-nature-wildlife-tour/images/image-03.jpg",
+      "cap": "Escursione Natura e Paesaggi nella Valle dell'Ourika",
+      "alt": "Ponte pedonale sospeso in legno sul torrente nella valle dell'Ourika"
+    },
+    {
+      "src": "/sahara-star-tours/day-trips/ourika-valley-nature-wildlife-tour/images/image-04.jpg",
+      "cap": "Escursione Natura e Paesaggi nella Valle dell'Ourika",
+      "alt": "Abitazioni tradizionali in fango e pietra sui rilievi dell'Ourika"
+    },
+    {
+      "src": "/sahara-star-tours/day-trips/ourika-valley-nature-wildlife-tour/images/image-05.jpg",
+      "cap": "Escursione Natura e Paesaggi nella Valle dell'Ourika",
+      "alt": "Tradizionale preparazione del tè alla menta in un'abitazione berbera"
+    }
+  ],
+  "faqs": []
+}

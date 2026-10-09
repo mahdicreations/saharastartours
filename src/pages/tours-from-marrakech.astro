@@ -2,8 +2,10 @@
 // src/pages/tours-from-marrakech.astro — Dedicated Marrakech Departure Hub
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getMultiDayToursByCity } from '../data/tours';
+import { getAlternateUrls } from '../data/i18n';
 
 const tours = getMultiDayToursByCity('Marrakech');
+const alternateUrls = getAlternateUrls('/tours-from-marrakech');
 
 function getDurationTier(days: number): string {
   if (days <= 4) return '2-4';
@@ -18,7 +20,7 @@ const marrakechSchema = {
       "@type": "CollectionPage",
       "name": "Private Morocco Tours from Marrakech | Sahara Star Tours",
       "description": `Browse our complete collection of ${tours.length} private multi-day Morocco tours departing from Marrakech. Experience High Atlas mountain crossings, Ait Ben Haddou, Erg Chebbi luxury glamping, and desert traverses to Fes.`,
-      "url": "https://www.saharastartours.com/tours-from-marrakech"
+      "url": alternateUrls.en
     },
     {
       "@type": "BreadcrumbList",
@@ -39,7 +41,7 @@ const marrakechSchema = {
           "@type": "ListItem",
           "position": 3,
           "name": "Tours from Marrakech",
-          "item": "https://www.saharastartours.com/tours-from-marrakech"
+          "item": alternateUrls.en
         }
       ]
     }
@@ -52,6 +54,7 @@ const marrakechSchema = {
   description={`Book authentic private tours from Marrakech from 2 to 10 days. Cross the High Atlas via Tizi n'Tichka, explore Ait Ben Haddou kasbahs, sleep under the stars in Erg Chebbi, or travel onward to Fes.`}
   keywords="tours from marrakech, marrakech desert tour, marrakech to merzouga 3 days, marrakech to fes desert tour, private tours from marrakech"
   currentPage="tours"
+  alternateUrls={alternateUrls}
   schemaData={marrakechSchema}
 >
 

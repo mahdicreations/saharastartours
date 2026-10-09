@@ -1,0 +1,211 @@
+{
+  "slug": "7-day-morocco-tour-itinerary-from-fes",
+  "title": "Tour de 7 Días por Marruecos desde Fez | Sahara Star Tours",
+  "shortTitle": "Tour de 7 Días por Marruecos desde Fez",
+  "description": "Gran circuito circular de 7 días desde Fez explorando Chefchaouen, Rabat, Casablanca, Marrakech con guía local, Ait Ben Haddou y el desierto de Merzouga.",
+  "aboutHtml": "<p>Este tour privado de una semana con salida y llegada en Fez es el itinerario definitivo para conocer todas las facetas de Marruecos. Descubrirá la histórica Mequinez y las ruinas romanas de Volubilis, la perla azul de Chefchaouen, la costa atlántica con Rabat y Casablanca, la mágica Marrakech con visita guiada, y la inmensidad del sur marroquí a través de las Gargantas del Todra y las doradas dunas de Erg Chebbi con noche en campamento de lujo.</p>",
+  "duration": "7 Días / 6 Noches",
+  "price": "Desde $920/persona",
+  "startingFrom": "Fez",
+  "highlights": [
+    "Chefchaouen, la ciudad azul en las montañas del Rif",
+    "Dunas de Merzouga y desierto de Erg Chebbi",
+    "Paseo en camello por el desierto al atardecer",
+    "Kasbah de Ait Ben Haddou, Patrimonio de la Humanidad por la UNESCO",
+    "Ruta panorámica a través de las montañas del Alto Atlas",
+    "Medina de Fez y lugares culturales históricos"
+  ],
+  "inclusions": [
+    "Vehículo privado 4×4 o monovolumen con aire acondicionado",
+    "Chófer/guía local profesional de habla hispana",
+    "Combustible, peajes y gastos de funcionamiento del vehículo",
+    "Alojamiento en riads seleccionados y campamento de lujo",
+    "Desayunos diarios y cenas según el itinerario",
+    "Paseo en camello por las dunas con asistencia completa"
+  ],
+  "exclusions": [
+    "Almuerzos y bebidas",
+    "Vuelos y gastos aeroportuarios",
+    "Entradas opcionales a estudios o monumentos",
+    "Propinas y gastos personales"
+  ],
+  "itinerary": [
+    {
+      "day": "Día 1",
+      "title": "Fez – Mequinez – Ruinas de Volubilis – Chefchaouen",
+      "content": "Su gran viaje de 7 días comienza temprano con la recogida en su alojamiento o en el aeropuerto de Fez. Viajará hacia Mequinez, la capital ismaelita, donde admirará la monumental puerta de Bab Mansour, el estanque de Sahrij Souani y el Mausoleo de Moulay Ismail. A continuación visitará las ruinas romanas de Volubilis (Patrimonio de la Humanidad por la UNESCO) con sus mosaicos y columnas. Por la tarde ascenderá por las montañas del Rif hacia la hermosa Chefchaouen. Cena y alojamiento en un riad tradicional."
+    },
+    {
+      "day": "Día 2",
+      "title": "Chefchaouen – Rabat la capital",
+      "content": "Tras el desayuno disfrutará de tiempo libre para pasear por las fascinantes calles azules de Chefchaouen. Después viajará hacia Rabat, capital política de Marruecos, donde visitará la Torre Hassan, el Mausoleo de Mohammed V y la pintoresca Kasbah de los Udayas con vistas al estuario y al océano Atlántico. Cena y alojamiento en hotel en Rabat."
+    },
+    {
+      "day": "Día 3",
+      "title": "Rabat – Casablanca – Marrakech",
+      "content": "Saldrá de Rabat a lo largo de la costa atlántica hacia Casablanca, capital económica del reino. Visitará la espectacular Mezquita Hassan II sobre el océano y paseará por la Corniche. Por la tarde tomará la autopista hacia el sur hasta llegar a la vibrante 'ciudad roja' de Marrakech. Alojamiento y cena en riad."
+    },
+    {
+      "day": "Día 4",
+      "title": "Visita guiada de Marrakech con guía local",
+      "content": "Día completo dedicado a explorar Marrakech con un guía oficial local. Visitará el Palacio de la Bahía, las Tumbas Saadíes, la mezquita Koutoubia y los bulliciosos zocos de artesanos en la medina, culminando en la legendaria plaza Jemaa el-Fna. Tarde libre para relajarse o visitar el Jardín Majorelle."
+    },
+    {
+      "day": "Día 5",
+      "title": "Marrakech – Alto Atlas – Kasbah Ait Ben Haddou – Valle de las Rosas – Valle del Dades",
+      "content": "Dejará Marrakech para cruzar el Alto Atlas por el paso de Tizi N'Tichka (2.260 m) con vistas panorámicas. Visitará la famosa Kasbah de Ait Ben Haddou (UNESCO), célebre por películas como Gladiator y Juego de Tronos. Proseguirá por Ouarzazate, el palmeral de Skoura y el Valle de las Rosas hasta llegar al Valle del Dades para cenar y pernoctar en un acogedor riad."
+    },
+    {
+      "day": "Día 6",
+      "title": "Valle del Dades – Gargantas del Todra – Dunas de Merzouga – Campamento de lujo",
+      "content": "Tras el desayuno admirará los cañones del Dades y continuará hacia las imponentes Gargantas del Todra, un espectacular cañón de acantilados rojos verticales. Tiempo para pasear y almorzar. Continuará hacia Erfoud y las dunas de Merzouga, donde montará en camello al atardecer sobre las dunas de Erg Chebbi para llegar a su campamento de lujo con cena tradicional y música bereber bajo las estrellas."
+    },
+    {
+      "day": "Día 7",
+      "title": "Dunas de Merzouga – Erfoud – Midelt – Bosque de Cedros – Ifrane – Fez",
+      "content": "Amanecer en las dunas y desayuno en el campamento. Visitará el zoco de Rissani y talleres de fósiles en Erfoud antes de ascender por el cañón del Valle del Ziz hacia Midelt para almorzar. Atravesará el Bosque de Cedros de Azrou para observar los macacos de Berbería e Ifrane antes de llegar a Fez por la tarde con traslado directo a su alojamiento o aeropuerto."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Fez a Chefchaouen",
+      "day": "Día 1",
+      "subtitle": "Fez – Mequinez – Volubilis – Chefchaouen",
+      "desc": "Salida de Fez hacia Mequinez, ruinas de Volubilis y llegada a la ciudad azul de Chefchaouen."
+    },
+    {
+      "number": 2,
+      "name": "Chefchaouen a Rabat",
+      "day": "Día 2",
+      "subtitle": "Chefchaouen – Rabat",
+      "desc": "Mañana en Chefchaouen y viaje hacia Rabat para visitar la Torre Hassan y Kasbah Udayas."
+    },
+    {
+      "number": 3,
+      "name": "Rabat a Marrakech",
+      "day": "Día 3",
+      "subtitle": "Rabat – Casablanca – Marrakech",
+      "desc": "Visita a la Mezquita Hassan II en Casablanca y viaje hacia Marrakech."
+    },
+    {
+      "number": 4,
+      "name": "Visita de Marrakech",
+      "day": "Día 4",
+      "subtitle": "Visita guiada por la medina de Marrakech",
+      "desc": "Palacios históricos, zocos tradicionales y plaza Jemaa el-Fna con guía local."
+    },
+    {
+      "number": 5,
+      "name": "Marrakech al Dades",
+      "day": "Día 5",
+      "subtitle": "Marrakech – Alto Atlas – Ait Ben Haddou – Valle del Dades",
+      "desc": "Cruce del Alto Atlas, visita a Ait Ben Haddou y noche en el Valle del Dades."
+    },
+    {
+      "number": 6,
+      "name": "Dades a Merzouga",
+      "day": "Día 6",
+      "subtitle": "Valle del Dades – Todra – Merzouga – Campamento de lujo",
+      "desc": "Gargantas del Todra, llegada a Erg Chebbi, paseo en camello y campamento de lujo."
+    },
+    {
+      "number": 7,
+      "name": "Merzouga a Fez",
+      "day": "Día 7",
+      "subtitle": "Merzouga – Erfoud – Valle del Ziz – Ifrane – Fez",
+      "desc": "Valle del Ziz, bosque de cedros con macacos y regreso a Fez."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/7-day-morocco-tour-itinerary-from-fes/images/gallery_1.webp",
+      "cap": "Bab Bou Jeloud",
+      "alt": "Puerta histórica de la medina de Fez conocida como Bab Bou Jeloud o la Puerta Azul"
+    },
+    {
+      "src": "/sahara-star-tours/7-day-morocco-tour-itinerary-from-fes/images/gallery_10.webp",
+      "cap": "Jemaa el-Fna de noche",
+      "alt": "Plaza Jemaa el-Fna de Marrakech iluminada con puestos de comida y artistas por la noche"
+    },
+    {
+      "src": "/sahara-star-tours/7-day-morocco-tour-itinerary-from-fes/images/gallery_2.webp",
+      "cap": "Bab Mansour",
+      "alt": "Murallas de la ciudad imperial y arcos ornamentales de Bab Mansour en Mequinez"
+    },
+    {
+      "src": "/sahara-star-tours/7-day-morocco-tour-itinerary-from-fes/images/gallery_3.webp",
+      "cap": "Ruinas de Volubilis",
+      "alt": "Columnas de basílica romana y ruinas del Capitolio en Volubilis"
+    },
+    {
+      "src": "/sahara-star-tours/7-day-morocco-tour-itinerary-from-fes/images/gallery_4.webp",
+      "cap": "Callejones azules",
+      "alt": "Estrechos callejones azul celeste y casas encaladas en Chefchaouen"
+    },
+    {
+      "src": "/sahara-star-tours/7-day-morocco-tour-itinerary-from-fes/images/gallery_5.webp",
+      "cap": "Torre Hassan",
+      "alt": "Alminar de la Torre Hassan y columnas de mármol en el complejo Mohammed V en Rabat"
+    },
+    {
+      "src": "/sahara-star-tours/7-day-morocco-tour-itinerary-from-fes/images/gallery_6.webp",
+      "cap": "Mezquita Hassan II",
+      "alt": "Arquitectura costera moderna de la mezquita Hassan II en Casablanca"
+    },
+    {
+      "src": "/sahara-star-tours/7-day-morocco-tour-itinerary-from-fes/images/gallery_7.webp",
+      "cap": "Paseo en camello",
+      "alt": "Paseo en camello por las dunas de Erg Chebbi hacia un campamento de lujo bereber"
+    },
+    {
+      "src": "/sahara-star-tours/7-day-morocco-tour-itinerary-from-fes/images/gallery_8.webp",
+      "cap": "Gargantas del Todra",
+      "alt": "Altas paredes verticales de cañón en las Gargantas del Todra en el Alto Atlas"
+    },
+    {
+      "src": "/sahara-star-tours/7-day-morocco-tour-itinerary-from-fes/images/gallery_9.webp",
+      "cap": "Ait Ben Haddou",
+      "alt": "Torres de adobe y murallas fortificadas de Ait Ben Haddou"
+    },
+    {
+      "src": "/sahara-star-tours/7-day-morocco-tour-itinerary-from-fes/images/hero_2.webp",
+      "cap": "Carretera del Atlas",
+      "alt": "Paso de montaña del Alto Atlas con carretera panorámica serpenteando entre picos rocosos"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "¿Es este un tour privado o compartido?",
+      "answer": "Esta es una experiencia completamente privada: el vehículo, conductor y programa están reservados exclusivamente para su grupo."
+    },
+    {
+      "question": "¿Cuánto tiempo dura el paseo en camello y qué alternativas existen?",
+      "answer": "El paseo en camello suele durar de 40 a 90 minutos. Como alternativa, se puede coordinar el traslado directo en 4×4 sin coste adicional."
+    },
+    {
+      "question": "¿La tienda del campamento en el desierto es privada?",
+      "answer": "Sí, el campamento en el desierto cuenta con tiendas de campaña privadas de lujo con baño completo, agua caliente, camas de verdad y electricidad."
+    },
+    {
+      "question": "¿Dónde se realiza la recogida y el regreso?",
+      "answer": "La recogida y el regreso se organizan directamente en su alojamiento o en el aeropuerto de Fez Sais según sus horarios de vuelo."
+    },
+    {
+      "question": "¿Qué modelo de vehículo se utiliza?",
+      "answer": "Utilizamos vehículos privados 4×4 modernos o monovolúmenes con aire acondicionado, asientos ergonómicos y amplio maletero."
+    },
+    {
+      "question": "¿Se pueden adaptar dietas vegetarianas o especiales?",
+      "answer": "Sí, podemos coordinar opciones vegetarianas, veganas, sin gluten u otras preferencias dietéticas notificándolo al reservar."
+    },
+    {
+      "question": "¿Es este circuito adecuado para todas las edades?",
+      "answer": "Sí, es idóneo para familias y viajeros de todas las edades. El itinerario cuenta con pausas regulares para descansar y realizar fotografías."
+    },
+    {
+      "question": "¿Cuál es la mejor época del año para realizar este tour?",
+      "answer": "La primavera y el otoño brindan temperaturas suaves y cielos despejados ideales para viajar desde la costa hasta el desierto y las montañas."
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "slug": "6-days-morocco-desert-tour-from-marrakech",
+  "title": "Tour de 6 Días de Marrakech a Fez por el Desierto del Sahara | Sahara Star Tours",
+  "shortTitle": "Tour de 6 Días de Marrakech a Fez por el Desierto",
+  "description": "Circuito privado de 6 días desde Marrakech a Fez vía Ait Ben Haddou, Valle del Dades, dunas de Erg Chebbi y visita guiada a la medina de Fez.",
+  "aboutHtml": "<p>Este tour privado de 6 días de Marrakech a Fez es el itinerario desértico y cultural más completo de Marruecos. Cruzará el Alto Atlas y explorará el ksar de Ait Ben Haddou, los cañones del Dades y del Todra, y disfrutará de dos noches inolvidables en Merzouga: una en campamento de lujo entre las dunas de Erg Chebbi y otra en un confortable hotel tras conocer a familias nómadas y la música gnawa de Khamlia. Culminará con un día entero de visita guiada con guía oficial en la milenaria medina de Fez.</p>",
+  "duration": "6 Días / 5 Noches",
+  "startingFrom": "Marrakech",
+  "price": "Desde $790/persona",
+  "highlights": [
+    "Dunas de Merzouga y desierto de Erg Chebbi",
+    "Paseo en camello por el desierto al atardecer",
+    "Noche en campamento en el desierto con cena y desayuno",
+    "Kasbah de Ait Ben Haddou, Patrimonio de la Humanidad por la UNESCO",
+    "Ruta panorámica a través de las montañas del Alto Atlas",
+    "Medina de Fez y lugares culturales históricos"
+  ],
+  "inclusions": [
+    "Vehículo privado 4×4 o monovolumen con aire acondicionado",
+    "Chófer/guía local profesional de habla hispana",
+    "Combustible, peajes y gastos de funcionamiento del vehículo",
+    "Alojamiento en riads seleccionados y campamento de lujo",
+    "Desayunos diarios y cenas según el itinerario",
+    "Paseo en camello por las dunas con asistencia completa"
+  ],
+  "exclusions": [
+    "Almuerzos y bebidas",
+    "Vuelos y traslados no especificados",
+    "Entradas opcionales a estudios o monumentos",
+    "Propinas y gastos personales"
+  ],
+  "itinerary": [
+    {
+      "day": "Día 1",
+      "title": "Marrakech – Alto Atlas – Kasbah Ait Ben Haddou – Valle de las Rosas – Valle del Dades",
+      "content": "Su viaje de 6 días comienza temprano con la recogida en su alojamiento o en el aeropuerto de Marrakech. Conducirá a través del paso de Tizi N'Tichka (2.260 m) en el Alto Atlas, contemplando aldeas bereberes tradicionales y paisajes montañosos. Visitará la famosa Kasbah de Ait Ben Haddou, Patrimonio de la Humanidad por la UNESCO y escenario de famosas películas. Tras el almuerzo continuará pasando por Ouarzazate, el palmeral de Skoura y el Valle de las Rosas hasta llegar al Valle del Dades para cenar y descansar en un acogedor riad."
+    },
+    {
+      "day": "Día 2",
+      "title": "Valle del Dades – Gargantas del Todra – Dunas de Merzouga – Campamento de lujo",
+      "content": "Tras el desayuno admirará las impresionantes formaciones de las Gargantas del Dades antes de dirigirse a las colosales Gargantas del Todra, un espectacular cañón de acantilados rojos verticales. Tiempo para pasear y almorzar. Continuará hacia Erfoud para conocer sus famosos talleres de mármol fosilizado y seguirá hasta Merzouga. Por la tarde montará en camello para cruzar las dunas de Erg Chebbi al atardecer y llegar a su campamento de lujo con cena tradicional y música de tambores bereberes bajo el cielo estrellado."
+    },
+    {
+      "day": "Día 3",
+      "title": "Exploración de Merzouga – Familias Nómadas – Khamlia – Lago de Merzouga – Erg Chebbi – Palmeral",
+      "content": "Amanecer sobre las dunas doradas del desierto seguido de un completo desayuno marroquí. Regresará en camello a Merzouga para una jornada en todoterreno 4×4: visitará antiguas minas de kohl, compartirá un té con familias nómadas bereberes en sus jaimas tradicionales y asistirá a una actuación de música gnawa en el pueblo de Khamlia. Tiempo para almorzar (recomendamos degustar la tradicional pizza bereber). Por la tarde paseará por el palmeral y contemplará el lago de Merzouga. Cena y alojamiento en hotel frente a las dunas."
+    },
+    {
+      "day": "Día 4",
+      "title": "Dunas de Merzouga – Erfoud – Midelt – Bosque de Cedros – Ifrane – Fez",
+      "content": "En la cuarta jornada partirá hacia Rissani para visitar su zoco tradicional. Continuará hacia Erfoud y ascenderá por el cañón del Valle del Ziz hacia Midelt, donde disfrutará de tiempo libre para almorzar. Luego atravesará el Bosque de Cedros de Azrou para observar a los macacos de Berbería y visitará Ifrane, conocida como 'la Suiza de Marruecos'. Finalmente llegará a Fez por la tarde con traslado directo a su riad tradicional."
+    },
+    {
+      "day": "Día 5",
+      "title": "Visita guiada de Fez con guía local",
+      "content": "Día completo dedicado a explorar la fascinante medina de Fez el-Bali, una de las joyas medievales mejor conservadas del mundo islámico. Acompañado por un guía oficial local, visitará el Palacio Real, el barrio judío (Mellah), la histórica Madrasa Al Attarine, la Universidad Al Quaraouiyine y las famosas curtidurías de Chouara. Tarde libre para descansar o pasear por los zocos."
+    },
+    {
+      "day": "Día 6",
+      "title": "Traslado al aeropuerto de Fez",
+      "content": "A la hora convenida según el horario de su vuelo, su chófer le recogerá en su riad para trasladarle al aeropuerto de Fez Sais. Fin del tour por el desierto de Marrakech a Fez."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Marrakech",
+      "day": "Día 1",
+      "subtitle": "Marrakech – Alto Atlas – Ait Ben Haddou – Dades",
+      "desc": "Salida de Marrakech por el Alto Atlas y Ait Ben Haddou hacia el Valle del Dades."
+    },
+    {
+      "number": 2,
+      "name": "Valle del Dades",
+      "day": "Día 2",
+      "subtitle": "Dades – Gargantas del Todra – Merzouga – Campamento de lujo",
+      "desc": "Paseo por las Gargantas del Todra, llegada a Erg Chebbi y noche en campamento de lujo."
+    },
+    {
+      "number": 3,
+      "name": "Región de Merzouga",
+      "day": "Día 3",
+      "subtitle": "Exploración de Merzouga – Nómadas – Khamlia – Lago – Palmeral",
+      "desc": "Día completo en 4×4 conociendo familias nómadas, folclore gnawa y dunas de Erg Chebbi."
+    },
+    {
+      "number": 4,
+      "name": "Merzouga a Fez",
+      "day": "Día 4",
+      "subtitle": "Merzouga – Erfoud – Valle del Ziz – Ifrane – Fez",
+      "desc": "Viaje a través del Valle del Ziz, bosque de cedros e Ifrane con llegada a Fez."
+    },
+    {
+      "number": 5,
+      "name": "Visita guiada de Fez",
+      "day": "Día 5",
+      "subtitle": "Visita cultural guiada en la medina de Fez",
+      "desc": "Recorrido con guía local por palacios, mezquitas, madrasas y curtidurías de Fez."
+    },
+    {
+      "number": 6,
+      "name": "Traslado al aeropuerto",
+      "day": "Día 6",
+      "subtitle": "Traslado al aeropuerto de Fez",
+      "desc": "Despedida y traslado al aeropuerto de Fez según horario de vuelo."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/6-days-morocco-desert-tour-from-marrakech/images/gallery_1.webp",
+      "cap": "Paso Tizi N'Tichka",
+      "alt": "Paisaje de montaña a lo largo del paso Tizi n'Tichka en la cordillera del Alto Atlas"
+    },
+    {
+      "src": "/sahara-star-tours/6-days-morocco-desert-tour-from-marrakech/images/gallery_10.webp",
+      "cap": "Medina de Fez",
+      "alt": "Arquitectura histórica de la medina y puertas arqueadas en la Fez medieval"
+    },
+    {
+      "src": "/sahara-star-tours/6-days-morocco-desert-tour-from-marrakech/images/gallery_2.webp",
+      "cap": "Ait Ben Haddou",
+      "alt": "Antiguo pueblo fortificado de Ait Ben Haddou con torres de vigilancia de arcilla"
+    },
+    {
+      "src": "/sahara-star-tours/6-days-morocco-desert-tour-from-marrakech/images/gallery_3.webp",
+      "cap": "Valle de las Rosas",
+      "alt": "Paisaje del Valle de las Rosas en Kalaat M'Gouna con rosales en flor"
+    },
+    {
+      "src": "/sahara-star-tours/6-days-morocco-desert-tour-from-marrakech/images/gallery_4.webp",
+      "cap": "Valle del Dades",
+      "alt": "Paredes del cañón de roca roja y exuberantes huertos del Valle del Dades"
+    },
+    {
+      "src": "/sahara-star-tours/6-days-morocco-desert-tour-from-marrakech/images/gallery_5.webp",
+      "cap": "Gargantas del Todra",
+      "alt": "Paredes de escalada de roca en las Gargantas del Todra sobre el fondo del cañón"
+    },
+    {
+      "src": "/sahara-star-tours/6-days-morocco-desert-tour-from-marrakech/images/gallery_6.webp",
+      "cap": "Dunas de Merzouga",
+      "alt": "Viajeros montando camellos a través de las dunas de arena naranja de Merzouga"
+    },
+    {
+      "src": "/sahara-star-tours/6-days-morocco-desert-tour-from-marrakech/images/gallery_7.webp",
+      "cap": "Música gnawa",
+      "alt": "Noche de fogata con música gnawa en directo en un campamento de lujo"
+    },
+    {
+      "src": "/sahara-star-tours/6-days-morocco-desert-tour-from-marrakech/images/gallery_8.webp",
+      "cap": "Oasis del Ziz",
+      "alt": "Mirador panorámico sobre el oasis de palmeras verdes a lo largo del cañón del Ziz"
+    },
+    {
+      "src": "/sahara-star-tours/6-days-morocco-desert-tour-from-marrakech/images/gallery_9.webp",
+      "cap": "Bosque de Cedros",
+      "alt": "Cedros en el Medio Atlas donde habitan macacos salvajes de Berbería"
+    },
+    {
+      "src": "/sahara-star-tours/6-days-morocco-desert-tour-from-marrakech/images/hero_2.webp",
+      "cap": "Cumbres del Alto Atlas",
+      "alt": "Luz del sol iluminando un pico montañoso escarpado en el Alto Atlas"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "¿Es este un tour privado o compartido?",
+      "answer": "Esta es una experiencia 100% privada: el vehículo, conductor e itinerario son exclusivos para usted y sus acompañantes."
+    },
+    {
+      "question": "¿Cuánto tiempo dura el paseo en camello y qué opciones hay?",
+      "answer": "El paseo en camello suele durar de 40 a 90 minutos. Quienes lo prefieran pueden realizar el traslado directo al campamento en 4×4 sin cargo adicional."
+    },
+    {
+      "question": "¿Cómo son las tiendas en el campamento de lujo?",
+      "answer": "Las jaimas del campamento de lujo están equipadas con camas confortables, baño privado completo con ducha de agua caliente y electricidad."
+    },
+    {
+      "question": "¿Dónde se realiza la recogida y el regreso?",
+      "answer": "Le recogeremos en su riad, hotel o aeropuerto en Marrakech y le dejaremos en su alojamiento o en el aeropuerto de Fez."
+    },
+    {
+      "question": "¿Qué modelo de vehículo se utiliza?",
+      "answer": "El traslado se realiza en un moderno todoterreno 4×4 o en un monovolumen de gama alta con aire acondicionado y gran capacidad de equipaje."
+    },
+    {
+      "question": "¿Se pueden preparar dietas vegetarianas o especiales?",
+      "answer": "Sí, podemos adaptar todas las comidas para dietas vegetarianas, veganas o celíacas comunicándolo con antelación al confirmar la reserva."
+    },
+    {
+      "question": "¿Es un itinerario cómodo para niños y personas mayores?",
+      "answer": "Sí, el circuito de 6 días reparte muy bien las distancias y permite realizar descansos frecuentes en los lugares más bonitos del recorrido."
+    },
+    {
+      "question": "¿Cuál es la época recomendada para este viaje?",
+      "answer": "De octubre a mayo el clima es templado y muy agradable tanto en las montañas como en el desierto."
+    }
+  ]
+}

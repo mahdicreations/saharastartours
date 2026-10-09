@@ -1,0 +1,63 @@
+---
+// src/pages/es/imperial-cities.astro — Spanish Imperial Cities category page
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getLocalizedImperialCitiesTours } from '../../data/toursI18n';
+import { getAlternateUrls } from '../../data/i18n';
+
+const imperialTours = getLocalizedImperialCitiesTours('es');
+const alternateUrls = getAlternateUrls('/imperial-cities');
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Circuitos por las Ciudades Imperiales de Marruecos | Sahara Star Tours",
+  "description": "Descubre las capitales imperiales de Marruecos: Fez, Marrakech, Rabat y Meknes. Circuitos culturales privados de 10 a 15 días con guías locales oficiales.",
+  "url": alternateUrls.es
+};
+---
+
+<BaseLayout
+  title="Circuitos por las Ciudades Imperiales de Marruecos | Sahara Star Tours"
+  description="Descubre las capitales imperiales de Marruecos: Fez, Marrakech, Rabat y Meknes. Circuitos culturales privados de 10 a 15 días con guías locales oficiales."
+  keywords="ciudades imperiales marruecos, circuito fez marrakech rabat, viajes culturales marruecos, medina de fez"
+  currentPage="imperial-cities"
+  lang="es"
+  alternateUrls={alternateUrls}
+  schemaData={schemaData}
+>
+
+<section class="cat-hero">
+  <span class="tag" style="display:inline-block;color:var(--sand-gold);text-transform:uppercase;letter-spacing:3px;font-size:0.9rem;font-weight:600;margin-bottom:12px;">Ciudades Imperiales de Marruecos</span>
+  <h1 style="font-size:3rem;max-width:750px;margin:0 auto 20px;background:linear-gradient(135deg,var(--text-main) 30%,var(--sand-gold) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Ciudades Imperiales y Gran Patrimonio</h1>
+  <p style="max-width:680px;margin:0 auto;font-size:1.1rem;color:var(--text-muted);line-height:1.8;">Un viaje por siglos de historia y dinastías marroquíes. Recorre las laberínticas medinas medievales de Fez, los vibrantes palacios de Marrakech, las murallas costeras de Rabat y las majestuosas puertas de Meknes.</p>
+</section>
+
+<section style="padding: 60px 5%; max-width: 1400px; margin: 0 auto;">
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:32px;">
+    {imperialTours.map(tour => (
+      <article class="tour-card reveal active">
+        <div class="tour-img-wrapper">
+          <img src={tour.heroImage} alt={tour.shortTitle} loading="lazy" onerror="this.src='/assets/placeholder-morocco.svg'" />
+          {tour.badge && <span class="tour-badge">{tour.badge}</span>}
+        </div>
+        <div class="tour-info">
+          <div class="tour-meta">
+            <div><i class="fa-regular fa-clock"></i> {tour.duration}</div>
+            <div><i class="fa-solid fa-location-dot"></i> {tour.startingFrom}</div>
+          </div>
+          <h2 class="tour-title">{tour.shortTitle}</h2>
+          <p class="tour-desc">{tour.description}</p>
+          <div class="tour-footer">
+            <div class="tour-price">
+              <span class="tour-price-label">Desde</span>
+              <span class="tour-price-value">{tour.price.replace(/^(From|Desde|Da|A partire da)\s*/i, '').replace(/\/(persona|person)\s*/i, '').trim()}</span>
+            </div>
+            <a href={`/es/tours/${tour.slug}`} class="btn btn-primary btn-sm">Ver Circuito <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </article>
+    ))}
+  </div>
+</section>
+
+</BaseLayout>

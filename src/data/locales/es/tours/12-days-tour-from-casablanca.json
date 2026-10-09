@@ -1,0 +1,206 @@
+{
+  "slug": "12-days-tour-from-casablanca",
+  "title": "Gran Circuito de 12 Días por Marruecos y Descubrimiento del Sáhara | Sahara Star Tours",
+  "shortTitle": "Gran Circuito de 12 Días desde Casablanca",
+  "description": "Viaje privado de 12 días por Marruecos: Casablanca, Rabat, Chefchaouen con día libre, Fez, dunas de Merzouga en jaima de lujo, Todra, Marrakech y Essaouira.",
+  "aboutHtml": "El Gran Circuito de 12 Días por Marruecos es un viaje privado extraordinario y completo, diseñado para viajar a un ritmo relajado y enriquecedor. Incluye una jornada libre completa en la idílica Chefchaouen para perderse por sus calles azules, visitas con guías locales oficiales en las ciudades imperiales de Fez y Marrakech, y dos noches memorables en el desierto del Sáhara con campamento prémium en las dunas de Erg Chebbi. Atraviesa las Gargantas del Todra, el Valle del Dades y la Kasbah de Ait Ben Haddou antes de relajarte junto al Atlántico en Essaouira.",
+  "duration": "12 Días / 11 Noches",
+  "startingFrom": "Casablanca",
+  "price": "Desde $1,450/persona",
+  "highlights": [
+    "Punto de encuentro: En tu hotel o aeropuerto de Casablanca.",
+    "Lugar de inicio: Casablanca",
+    "Lugar de finalización: Casablanca o Marrakech"
+  ],
+  "inclusions": [
+    "Transporte en vehículo privado 4x4 o monovolumen con aire acondicionado",
+    "Tarifas y honorarios de guías locales en las ciudades imperiales",
+    "Chófer/guía profesional de habla española durante todo el circuito",
+    "11 noches de alojamiento en riads tradicionales y kasbahs con encanto (desayuno y cena)",
+    "Una noche en jaimas bereberes tradicionales de lujo en el desierto (media pensión)",
+    "Paseo en dromedario (un dromedario por cada viajero)"
+  ],
+  "exclusions": [
+    "Almuerzos diarios",
+    "Propinas y gratificaciones",
+    "Bebidas y consumiciones personales",
+    "Billetes de avión internacionales"
+  ],
+  "itinerary": [
+    {
+      "day": "Día 1",
+      "title": "Llegada a Casablanca – Rabat",
+      "content": "Llegada a Casablanca y visita guiada a la emblemática Mezquita Hassan II sobre el océano. Continuación hacia Rabat para visitar la Torre Hassan, el Mausoleo de Mohammed V y la Kasbah de los Oudayas. Noche en riad."
+    },
+    {
+      "day": "Día 2",
+      "title": "Rabat a Chefchaouen",
+      "content": "Viaje a través del Rif hacia Chefchaouen. Tarde para disfrutar de las primeras vistas panorámicas de la Ciudad Azul y cenar en la plaza central."
+    },
+    {
+      "day": "Día 3",
+      "title": "Día Libre en Chefchaouen para Explorar la Ciudad",
+      "content": "Día entero a tu propio ritmo para callejear por la medina azul, descubrir talleres de tejedores y carpinteros, subir a la mezquita española para el atardecer o relajarse en una terraza."
+    },
+    {
+      "day": "Día 4",
+      "title": "Chefchaouen – Meknes – Volubilis – Fez",
+      "content": "Salida hacia las ruinas romanas de Volubilis con sus mosaicos conservados. Parada en Meknes ante Bab El Mansour y llegada por la tarde a Fez para alojarnos en un riad tradicional."
+    },
+    {
+      "day": "Día 5",
+      "title": "Visita Guiada Histórica de Fez",
+      "content": "Jornada completa con guía oficial recorriendo Fez El Bali: Universidad Al Quaraouiyine, Madraza Bou Inania, curtidurías Chouara y el barrio de los artesanos."
+    },
+    {
+      "day": "Día 6",
+      "title": "Fez – Ifrane – Medio Atlas – Midelt – Errachidia – Erfoud – Merzouga",
+      "content": "Travesía del Atlas por Ifrane y el bosque de cedros de Azrou. Descenso por el Valle del Ziz hasta llegar al pie de las dunas de Erg Chebbi en Merzouga."
+    },
+    {
+      "day": "Día 7",
+      "title": "Merzouga – Khamlia – Ruta del Desierto – Merzouga",
+      "content": "Excursión 4x4 por las dunas, visita al pueblo de Khamlia para escuchar música Gnawa y paseo en dromedario al atardecer hacia el campamento de lujo para cenar bajo las estrellas."
+    },
+    {
+      "day": "Día 8",
+      "title": "Merzouga – Rissani – Gargantas del Todra – Valle del Dades",
+      "content": "Amanecer en las dunas y salida hacia el mercado tradicional de Rissani. Caminata bajo los impresionantes cañones del Todra y noche en el Valle del Dades."
+    },
+    {
+      "day": "Día 9",
+      "title": "Valle del Dades – Skoura – Ouarzazate – Kasbah Ait Ben Haddou – Alto Atlas – Marrakech",
+      "content": "Ruta por la Carretera de las Mil Kasbahs y visita al ksar fortificado de Ait Ben Haddou (UNESCO). Paso del Alto Atlas por Tizi n'Tichka y llegada a Marrakech."
+    },
+    {
+      "day": "Día 10",
+      "title": "Explorando Marrakech – Visita Guiada de la Ciudad",
+      "content": "Visita guiada de los monumentos principales de Marrakech: Palacio de la Bahía, Tumbas Saadíes, Koutoubia, zocos y la animada plaza Jemaa el-Fna."
+    },
+    {
+      "day": "Día 11",
+      "title": "Excursión de un Día a Essaouira desde Marrakech",
+      "content": "Excursión a la ciudad costera de Essaouira. Paseo por su medina marinera declarada por la UNESCO, murallas de cañones frente al mar y puerto pesquero tradicional."
+    },
+    {
+      "day": "Día 12",
+      "title": "Traslado al Aeropuerto de Marrakech o Casablanca",
+      "content": "Desayuno y traslado privado al aeropuerto de Marrakech Menara o Casablanca Mohammed V para tu vuelo de regreso, concluyendo este gran viaje."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Casablanca",
+      "day": "Día 1",
+      "subtitle": "Llegada",
+      "desc": "Mezquita Hassan II y ruta hacia Rabat."
+    },
+    {
+      "number": 2,
+      "name": "Rabat",
+      "day": "Día 2",
+      "subtitle": "Capital",
+      "desc": "Torre Hassan y Kasbah de los Oudayas."
+    },
+    {
+      "number": 3,
+      "name": "Chefchaouen",
+      "day": "Días 3 y 4",
+      "subtitle": "Ciudad Azul",
+      "desc": "Día libre completo para disfrutar de la medina."
+    },
+    {
+      "number": 4,
+      "name": "Fez",
+      "day": "Días 5 y 6",
+      "subtitle": "Medina Histórica",
+      "desc": "Volubilis y tour cultural completo en Fez."
+    },
+    {
+      "number": 5,
+      "name": "Merzouga Sáhara",
+      "day": "Días 7 y 8",
+      "subtitle": "Erg Chebbi",
+      "desc": "Dromedarios, campamento y música Gnawa."
+    },
+    {
+      "number": 6,
+      "name": "Todra y Dades",
+      "day": "Día 9",
+      "subtitle": "Cañones",
+      "desc": "Gargantas del Todra y Valle del Dades."
+    },
+    {
+      "number": 7,
+      "name": "Ait Ben Haddou",
+      "day": "Día 10",
+      "subtitle": "UNESCO Kasbah",
+      "desc": "Fortaleza histórica y puerto de Tizi n'Tichka."
+    },
+    {
+      "number": 8,
+      "name": "Marrakech",
+      "day": "Día 11",
+      "subtitle": "Ciudad Roja",
+      "desc": "Palacios, zocos y plaza Jemaa el-Fna."
+    },
+    {
+      "number": 9,
+      "name": "Essaouira",
+      "day": "Día 12",
+      "subtitle": "Costa Atlántica",
+      "desc": "Excursión a la medina y puerto pesquero."
+    },
+    {
+      "number": 10,
+      "name": "Salida",
+      "day": "Día 12",
+      "subtitle": "Despedida",
+      "desc": "Traslado a Marrakech o Casablanca."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/desert-tours/12-days-morocco-tour-from-casablanca/images/thumbnail.jpg",
+      "cap": "Gran Circuito de 12 Días por Marruecos desde Casablanca",
+      "alt": "Gran Circuito de 12 Días por Marruecos desde Casablanca – Sahara Star Tours"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/12-days-morocco-tour-from-casablanca/images/image-01.jpg",
+      "cap": "Chefchaouen, calle empedrada teñida de azul",
+      "alt": "Rincón tranquilo en la medina azul de Chefchaouen"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/12-days-morocco-tour-from-casablanca/images/image-02.jpg",
+      "cap": "Mosaicos y ruinas romanas en Volubilis",
+      "alt": "Yacimiento arqueológico romano de Volubilis"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/12-days-morocco-tour-from-casablanca/images/image-03.jpg",
+      "cap": "Curtidurías medievales de Chouara en Fez",
+      "alt": "Pozos de tinte tradicionales en la medina de Fez"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/12-days-morocco-tour-from-casablanca/images/image-04.jpg",
+      "cap": "Caravana de dromedarios al atardecer en Merzouga",
+      "alt": "Paseo en dromedario sobre las dunas doradas de Erg Chebbi"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/12-days-morocco-tour-from-casablanca/images/image-05.jpg",
+      "cap": "Campamento bereber de lujo en el Sáhara",
+      "alt": "Jaimas de lujo iluminadas en el desierto de Merzouga"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/12-days-morocco-tour-from-casablanca/images/image-06.jpg",
+      "cap": "Kasbah fortificada de Ait Ben Haddou (UNESCO)",
+      "alt": "Paisaje histórico de la Kasbah de Ait Ben Haddou"
+    },
+    {
+      "src": "/sahara-star-tours/desert-tours/12-days-morocco-tour-from-casablanca/images/image-07.jpg",
+      "cap": "Murallas marítimas y océano en Essaouira",
+      "alt": "Fortificación y costa atlántica en Essaouira"
+    }
+  ],
+  "faqs": []
+}

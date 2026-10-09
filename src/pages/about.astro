@@ -1,6 +1,38 @@
 ---
 // src/pages/about.astro — About Us page
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getAlternateUrls } from '../data/i18n';
+
+const alternateUrls = getAlternateUrls('/about');
+
+const aboutSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "AboutPage",
+      "name": "About Sahara Star Tours | Expert Local Moroccan Travel Agency",
+      "description": "Meet Sahara Star Tours — Marrakech-based local travel experts with 15+ years of experience crafting bespoke Morocco tours and Sahara desert safaris.",
+      "url": alternateUrls.en
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": alternateUrls.en.replace('/about', '/')
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About Us",
+          "item": alternateUrls.en
+        }
+      ]
+    }
+  ]
+};
 ---
 
 <BaseLayout
@@ -8,6 +40,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   description="Meet Sahara Star Tours — Marrakech-based local travel experts with 15+ years of experience crafting bespoke Morocco tours and Sahara desert safaris."
   keywords="about sahara star tours, morocco local travel agency, marrakech tour guides, moroccan experts"
   currentPage="about"
+  alternateUrls={alternateUrls}
+  schemaData={aboutSchema}
 >
 
 <section class="about-hero">

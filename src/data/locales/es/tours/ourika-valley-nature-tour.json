@@ -1,0 +1,94 @@
+{
+  "slug": "ourika-valley-nature-tour",
+  "title": "Excursión de Naturaleza al Valle de Ourika y el Atlas | Sahara Star Tours",
+  "shortTitle": "Excursión de Naturaleza al Valle de Ourika",
+  "description": "Escápese del calor de Marrakech con una excursión al Valle de Ourika. Camine hacia las cascadas de Setti Fatma, visite aldeas bereberes y admire las cumbres del Atlas.",
+  "aboutHtml": "Descubra la belleza natural y la biodiversidad del Valle de Ourika en esta excursión de un día desde Marrakech. Explore las cascadas de Setti Fatma, visite una casa tradicional bereber y disfrute de un almuerzo a la orilla del río. Un itinerario ideal para amantes de la naturaleza y quienes deseen sumergirse en la cultura rural del Atlas.",
+  "duration": "1 Día / Excursión de Día Completo",
+  "startingFrom": "Marrakech",
+  "price": "Desde 50 $/persona",
+  "highlights": [
+    "Setti Fatma: Visite la pintoresca aldea bereber y conozca su modo de vida ancestral.",
+    "Cascadas de Setti Fatma: Caminata guiada hacia los saltos de agua con pozas naturales de montaña.",
+    "Casa tradicional bereber: Descubra una auténtica vivienda familiar con degustación de té a la menta.",
+    "Almuerzo a la orilla del río: Saboree la gastronomía marroquí con mesas instaladas junto al agua de Ourika.",
+    "Cooperativa de argán: Visite una cooperativa local de mujeres para aprender la producción de aceite de argán.",
+    "Jardín Bio-Aromático de Ourika: Paseo guiado entre plantas aromáticas y medicinales tradicionales.",
+    "Observación de naturaleza: Descubra los paisajes protegidos del valle y aviste aves y macacos del Atlas."
+  ],
+  "inclusions": [
+    "Recogida y regreso en su alojamiento de Marrakech",
+    "Trayecto panorámico siguiendo el curso del río Ourika",
+    "Caminata guiada hacia las cascadas de montaña de Setti Fatma",
+    "Visita a un hogar tradicional bereber y a una cooperativa de argán"
+  ],
+  "exclusions": [
+    "Gastos personales y compras de recuerdos",
+    "Propinas para guía local de montaña y chófer (opcionales)",
+    "Almuerzo y bebidas no especificadas",
+    "Entradas a jardines privados o actividades opcionales"
+  ],
+  "itinerary": [
+    {
+      "day": "Día 1",
+      "title": "Marrakech – Pueblos Bereberes – Valle de Ourika – Cascadas de Setti Fatma – Almuerzo junto al Río",
+      "content": "Salida por la mañana desde Marrakech hacia las laderas del Alto Atlas. Nos adentramos en el fértil y verde Valle de Ourika, bordeando las aguas cristalinas del río y contemplando pueblos de adobe colgados de las montañas. Nuestra primera parada será en una cooperativa de argán para observar el proceso de triturado y prensado manual del fruto. A continuación, visitamos una vivienda tradicional bereber para compartir un té con menta y descubrir las costumbres domésticas de las familias del Atlas. Continuamos hasta el final de la carretera en la pintoresca aldea de Setti Fatma. Acompañados de un guía local de montaña, realizaremos una caminata por senderos rocosos ascendiendo hacia las cascadas de agua fresca. Al mediodía, disfrutaremos de un almuerzo tradicional con tajine servido en restaurantes rústicos con mesas colocadas directamente sobre el lecho del río. Tiempo libre para pasear por los puentes colgantes de madera y respirar el aire puro de montaña antes de regresar a Marrakech a media tarde."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Marrakech",
+      "day": "Mañana",
+      "subtitle": "Salida",
+      "desc": "Trayecto panorámico hacia el valle fluvial de Ourika."
+    },
+    {
+      "number": 2,
+      "name": "Pueblo Bereber",
+      "day": "En Ruta",
+      "subtitle": "Hogar Tradicional Familiar",
+      "desc": "Ceremonia del té y costumbres tradicionales del Atlas."
+    },
+    {
+      "number": 3,
+      "name": "Cascadas de Setti Fatma",
+      "day": "Tarde",
+      "subtitle": "Caminata de las Cascadas",
+      "desc": "Ruta guiada por rocas de montaña y almuerzo junto al río."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/day-trips/ourika-valley-nature-wildlife-tour/images/thumbnail.jpg",
+      "cap": "Excursión de Naturaleza y Paisajes en el Valle de Ourika",
+      "alt": "Paisaje verde del Valle de Ourika y aldeas bereberes del Alto Atlas"
+    },
+    {
+      "src": "/sahara-star-tours/day-trips/ourika-valley-nature-wildlife-tour/images/image-01.jpg",
+      "cap": "Excursión de Naturaleza y Paisajes en el Valle de Ourika",
+      "alt": "Mesas tradicionales sobre el río Ourika con sombrillas de colores"
+    },
+    {
+      "src": "/sahara-star-tours/day-trips/ourika-valley-nature-wildlife-tour/images/image-02.jpg",
+      "cap": "Excursión de Naturaleza y Paisajes en el Valle de Ourika",
+      "alt": "Saltos de agua y pozas naturales en las cascadas de Setti Fatma"
+    },
+    {
+      "src": "/sahara-star-tours/day-trips/ourika-valley-nature-wildlife-tour/images/image-03.jpg",
+      "cap": "Excursión de Naturaleza y Paisajes en el Valle de Ourika",
+      "alt": "Puente colgante de madera cruzando el río en el Valle de Ourika"
+    },
+    {
+      "src": "/sahara-star-tours/day-trips/ourika-valley-nature-wildlife-tour/images/image-04.jpg",
+      "cap": "Excursión de Naturaleza y Paisajes en el Valle de Ourika",
+      "alt": "Viviendas tradicionales de adobe escalonadas en la ladera de Ourika"
+    },
+    {
+      "src": "/sahara-star-tours/day-trips/ourika-valley-nature-wildlife-tour/images/image-05.jpg",
+      "cap": "Excursión de Naturaleza y Paisajes en el Valle de Ourika",
+      "alt": "Preparación de té tradicional a la menta en una casa bereber"
+    }
+  ],
+  "faqs": []
+}

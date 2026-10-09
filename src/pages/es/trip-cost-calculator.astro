@@ -1,0 +1,856 @@
+---
+// src/pages/es/trip-cost-calculator.astro — Spanish Morocco Trip Cost Calculator
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getAlternateUrls } from '../../data/i18n';
+
+const alternateUrls = getAlternateUrls('/trip-cost-calculator');
+
+const calcSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Calculadora de Coste de Viaje a Marruecos | Sahara Star Tours",
+  "url": alternateUrls.es,
+  "description": "Calculadora interactiva de presupuesto de viaje a Marruecos para estimar circuitos privados a medida, safaris por el desierto y ciudades imperiales.",
+  "applicationCategory": "TravelApplication",
+  "operatingSystem": "All"
+};
+---
+
+<BaseLayout
+  title="Calculadora de Coste de Viaje a Marruecos | Sahara Star Tours"
+  description="Calcula el presupuesto de tu viaje a Marruecos en segundos. Elige duración, viajeros, categoría de alojamiento y experiencias con precios 100% transparentes."
+  keywords="calculadora viaje marruecos, presupuesto viajar a marruecos, cuanto cuesta un circuito en marruecos, precio tour sahara merzouga"
+  currentPage="calculator"
+  lang="es"
+  alternateUrls={alternateUrls}
+  schemaData={calcSchema}
+>
+  <!-- Calculator Hero Header -->
+  <section class="calc-page-hero">
+    <div class="calc-hero-bg">
+      <img src="/assets/hero_sahara_sunset.png" alt="Calculadora de Viaje a Marruecos" />
+    </div>
+    <div class="calc-hero-gradient"></div>
+    <div class="calc-hero-content">
+      <span class="calc-hero-tag"><i class="fa-solid fa-calculator"></i> Precios 100% Transparentes</span>
+      <h1>Calculadora de Presupuesto <span>Marruecos</span></h1>
+      <p>Calcula el coste de tu ruta personalizada en cuestión de segundos. Elige la duración, número de personas, categoría de alojamiento y experiencias exclusivas con presupuesto en tiempo real.</p>
+    </div>
+  </section>
+
+  <!-- Interactive Calculator Section -->
+  <section class="calc-main-section">
+    <div 
+      class="calculator-container"
+      x-data="{
+        days: 7,
+        people: 2,
+        tier: 'comfort',
+        addons: { camel: true, balloon: false, private: true },
+        tiers: { standard: 120, comfort: 195, luxury: 320 },
+        get base() { return this.days * this.people * this.tiers[this.tier]; },
+        get addonTotal() {
+          return (this.addons.camel ? 45 * this.people : 0)
+            + (this.addons.balloon ? 180 * this.people : 0)
+            + (this.addons.private ? 80 * this.days : 0);
+        },
+        get total() { return this.base + this.addonTotal; },
+        get perPerson() { return Math.round(this.total / this.people); },
+        get whatsappLink() {
+          const text = encodeURIComponent(
+            `¡Hola! He utilizado su Calculadora de Precios para un viaje de ${this.days} días para ${this.people} personas (estilo ${this.tier.toUpperCase()}). Presupuesto estimado: $${this.total.toLocaleString()}. ¿Podrían enviarme una propuesta oficial detallada?`
+          );
+          return `https://wa.me/212678317015?text=${text}`;
+        }
+      }"
+    >
+      <!-- LEFT: CONTROLS & INPUTS -->
+      <div class="calc-inputs">
+        <div class="calc-header-box">
+          <span class="step-num">Paso 1 de 2</span>
+          <h3>Personaliza los Parámetros de tu Viaje</h3>
+          <p>Ajusta los controles para ver tu estimación personalizada en tiempo real.</p>
+        </div>
+
+        <!-- 1. Duration Slider -->
+        <div class="calc-group">
+          <div class="calc-label-row">
+            <label><i class="fa-regular fa-clock"></i> Duración del Circuito</label>
+            <span class="calc-value" x-text="days + ' Días / ' + (days - 1) + ' Noches'"></span>
+          </div>
+          <div class="range-slider-wrap">
+            <input type="range" min="3" max="16" x-model.number="days" aria-label="Duración del tour en días" />
+            <div class="range-ticks">
+              <span>3 Días</span>
+              <span>7 Días</span>
+              <span>10 Días</span>
+              <span>16 Días</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Group Size Slider -->
+        <div class="calc-group">
+          <div class="calc-label-row">
+            <label><i class="fa-solid fa-users"></i> Número de Viajeros</label>
+            <span class="calc-value" x-text="people + (people === 1 ? ' Viajero Individual' : ' Personas')"></span>
+          </div>
+          <div class="range-slider-wrap">
+            <input type="range" min="1" max="12" x-model.number="people" aria-label="Número de viajeros" />
+            <div class="range-ticks">
+              <span>1 Persona</span>
+              <span>2 (Parejas)</span>
+              <span>4 - 6</span>
+              <span>12 (Grupo)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Accommodation Tier -->
+        <div class="calc-group">
+          <div class="calc-label-row">
+            <label><i class="fa-solid fa-hotel"></i> Categoría de Alojamiento</label>
+            <span class="tier-hint" x-text="tier === 'standard' ? 'Riads Auténticos y Jaimas Bereberes' : (tier === 'comfort' ? 'Riads Boutique 4 Estrellas y Campamento Privado' : 'Palacios 5 Estrellas y Glamping Real VIP')"></span>
+          </div>
+          <div class="tier-cards">
+            <div 
+              class="tier-card" 
+              :class="tier === 'standard' ? 'active' : ''" 
+              @click="tier = 'standard'"
+              role="button"
+              tabindex="0"
+            >
+              <div class="tier-icon"><i class="fa-solid fa-tent"></i></div>
+              <span class="tier-name">Estándar</span>
+              <span class="tier-rate">$120 / día</span>
+              <small>Alojamientos auténticos, habitaciones privadas y campamento bereber en el desierto</small>
+            </div>
+
+            <div 
+              class="tier-card" 
+              :class="tier === 'comfort' ? 'active' : ''" 
+              @click="tier = 'comfort'"
+              role="button"
+              tabindex="0"
+            >
+              <div class="tier-pop-badge">Más Popular</div>
+              <div class="tier-icon"><i class="fa-solid fa-hotel"></i></div>
+              <span class="tier-name">Confort</span>
+              <span class="tier-rate">$195 / día</span>
+              <small>Riads boutique de 4 estrellas con patio y jaimas de lujo con baño privado</small>
+            </div>
+
+            <div 
+              class="tier-card" 
+              :class="tier === 'luxury' ? 'active' : ''" 
+              @click="tier = 'luxury'"
+              role="button"
+              tabindex="0"
+            >
+              <div class="tier-icon"><i class="fa-solid fa-star"></i></div>
+              <span class="tier-name">Lujo VIP</span>
+              <span class="tier-rate">$320 / día</span>
+              <small>Palacios históricos de 5 estrellas, suites privadas y glamping real en las dunas</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Signature Add-Ons -->
+        <div class="calc-group">
+          <div class="calc-label-row">
+            <label><i class="fa-solid fa-wand-magic-sparkles"></i> Experiencias Exclusivas y Mejoras</label>
+          </div>
+          <div class="addons-grid">
+            <div 
+              class="addon-item" 
+              :class="addons.camel ? 'active' : ''" 
+              @click="addons.camel = !addons.camel"
+              role="button"
+              tabindex="0"
+            >
+              <input type="checkbox" :checked="addons.camel" aria-label="Paseo en Camello al Atardecer" />
+              <div class="addon-icon-box"><i class="fa-solid fa-mountain-sun"></i></div>
+              <div class="addon-details">
+                <span class="addon-name">Paseo en Camello al Atardecer</span>
+                <span class="addon-sub">Safari por las dunas de Erg Chebbi</span>
+                <span class="addon-price">+$45 / persona</span>
+              </div>
+            </div>
+
+            <div 
+              class="addon-item" 
+              :class="addons.balloon ? 'active' : ''" 
+              @click="addons.balloon = !addons.balloon"
+              role="button"
+              tabindex="0"
+            >
+              <input type="checkbox" :checked="addons.balloon" aria-label="Vuelo en Globo Aerostático" />
+              <div class="addon-icon-box"><i class="fa-solid fa-cloud"></i></div>
+              <div class="addon-details">
+                <span class="addon-name">Globo Aerostático al Amanecer</span>
+                <span class="addon-sub">Vuelo sobre las faldas del Atlas</span>
+                <span class="addon-price">+$180 / persona</span>
+              </div>
+            </div>
+
+            <div 
+              class="addon-item" 
+              :class="addons.private ? 'active' : ''" 
+              @click="addons.private = !addons.private"
+              role="button"
+              tabindex="0"
+            >
+              <input type="checkbox" :checked="addons.private" aria-label="Chófer y Vehículo Mercedes Exclusivo" />
+              <div class="addon-icon-box"><i class="fa-solid fa-car-side"></i></div>
+              <div class="addon-details">
+                <span class="addon-name">Vehículo Mercedes y Chófer VIP</span>
+                <span class="addon-sub">Transporte privado de alta gama</span>
+                <span class="addon-price">+$80 / día</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: STICKY LIVE ESTIMATE SUMMARY -->
+      <div class="calc-summary-wrapper">
+        <div class="calc-summary">
+          <div class="calc-summary-head">
+            <span class="step-num">Paso 2 de 2</span>
+            <h4>Tu Presupuesto Estimado</h4>
+            <span class="live-pill"><span class="pulse-dot"></span> En Vivo</span>
+          </div>
+
+          <ul class="calc-summary-details">
+            <li>
+              <span><i class="fa-regular fa-calendar"></i> Duración:</span>
+              <strong x-text="days + ' días'"></strong>
+            </li>
+            <li>
+              <span><i class="fa-solid fa-user-group"></i> Grupo:</span>
+              <strong x-text="people + ' viajeros'"></strong>
+            </li>
+            <li>
+              <span><i class="fa-solid fa-bed"></i> Alojamiento:</span>
+              <strong x-text="tier === 'standard' ? 'Estándar' : (tier === 'comfort' ? 'Confort' : 'Lujo VIP')"></strong>
+            </li>
+            <li>
+              <span><i class="fa-solid fa-coins"></i> Coste base del tour:</span>
+              <strong x-text="'$' + base.toLocaleString()"></strong>
+            </li>
+            <li>
+              <span><i class="fa-solid fa-plus-circle"></i> Extras seleccionados:</span>
+              <strong x-text="'$' + addonTotal.toLocaleString()"></strong>
+            </li>
+          </ul>
+
+          <div class="calc-total-box">
+            <span class="total-label">Presupuesto Total Estimado</span>
+            <div class="total-amount" x-text="'$' + total.toLocaleString()"></div>
+            <div class="per-person-rate" x-text="'Aprox. $' + perPerson.toLocaleString() + ' por persona'"></div>
+          </div>
+
+          <div class="discount-badge">
+            <i class="fa-solid fa-tags"></i>
+            <span>La reserva anticipada ahorra hasta un <strong>15%</strong></span>
+          </div>
+
+          <div class="calc-actions-col">
+            <a href="/es/contact" class="btn btn-primary" style="width:100%;justify-content:center;gap:10px;">
+              <i class="fa-solid fa-paper-plane"></i> Solicitar Presupuesto Gratuito
+            </a>
+            <a :href="whatsappLink" target="_blank" rel="noopener" class="btn btn-secondary calc-wa-btn" style="width:100%;justify-content:center;gap:10px;">
+              <i class="fa-brands fa-whatsapp" style="color:#25D366;font-size:1.2rem;"></i> Consultar por WhatsApp
+            </a>
+          </div>
+
+          <div class="calc-trust-footer">
+            <span><i class="fa-solid fa-shield-halved"></i> Sin tarjeta de crédito</span>
+            <span><i class="fa-solid fa-handshake"></i> Asesoramiento 100% gratuito</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ / TRANSPARENT PRICING INFO -->
+  <section class="calc-faq-section">
+    <div class="section-header reveal active">
+      <span class="tag">Precios Claros</span>
+      <h2>Preguntas Frecuentes sobre el Coste del Viaje</h2>
+      <p>Todo lo que necesitas saber sobre cómo presupuestamos nuestros circuitos a medida por Marruecos.</p>
+    </div>
+
+    <div class="calc-faq-grid">
+      <div class="calc-faq-card">
+        <h4><i class="fa-solid fa-circle-check"></i> ¿Qué incluye exactamente el precio estimado?</h4>
+        <p>Todos los presupuestos incluyen vehículo privado moderno con aire acondicionado y combustible, chófer profesional durante todo el recorrido, alojamientos en régimen de media pensión (desayunos y cenas en el desierto), paseo en camello y tasas turísticas locales.</p>
+      </div>
+
+      <div class="calc-faq-card">
+        <h4><i class="fa-solid fa-circle-check"></i> ¿Hay suplementos por viajar en solitario o en pareja?</h4>
+        <p>Al tratarse de transporte totalmente privado, los grupos reducidos (1 o 2 personas) asumen el coste íntegro del vehículo y conductor. A partir de 3 o 4 viajeros, el precio por persona disminuye considerablemente.</p>
+      </div>
+
+      <div class="calc-faq-card">
+        <h4><i class="fa-solid fa-circle-check"></i> ¿Cómo funciona el pago y la fianza?</h4>
+        <p>Requerimos un pequeño depósito del 20% para asegurar los riads y campamentos boutique. El saldo restante se abona cómodamente a la llegada en Marrakech o Casablanca en efectivo o con tarjeta.</p>
+      </div>
+
+      <div class="calc-faq-card">
+        <h4><i class="fa-solid fa-circle-check"></i> ¿Puedo modificar las opciones tras solicitar el presupuesto?</h4>
+        <p>¡Por supuesto! Esta calculadora ofrece una estimación de referencia. Tras enviarnos tu solicitud, nuestros diseñadores ajustarán alojamientos, paradas y actividades hasta lograr tu itinerario soñado.</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .calc-page-hero {
+    position: relative;
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 130px 20px 70px;
+    overflow: hidden;
+  }
+  .calc-hero-bg {
+    position: absolute;
+    inset: 0;
+  }
+  .calc-hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.4) contrast(1.1);
+  }
+  .calc-hero-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(17,14,13,0.3) 0%, rgba(17,14,13,0.85) 75%, var(--night-bg) 100%);
+  }
+  .calc-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+  .calc-hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(232, 195, 158, 0.15);
+    border: 1px solid rgba(232, 195, 158, 0.3);
+    color: var(--sand-gold);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+  }
+  .calc-hero-content h1 {
+    font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+    font-family: var(--font-serif);
+    color: var(--text-main);
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+  .calc-hero-content h1 span {
+    color: var(--sand-gold);
+    font-style: italic;
+  }
+  .calc-hero-content p {
+    font-size: 1.15rem;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.7;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  /* CALCULATOR LAYOUT */
+  .calc-main-section {
+    padding: 40px 20px 90px;
+    background: var(--night-bg);
+  }
+  .calculator-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+
+  /* LEFT INPUTS */
+  .calc-inputs {
+    background: var(--night-card);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    padding: 40px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  .calc-header-box .step-num {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--sand-gold);
+    display: block;
+    margin-bottom: 6px;
+  }
+  .calc-header-box h3 {
+    font-size: 1.6rem;
+    font-family: var(--font-serif);
+    color: var(--text-main);
+    margin: 0 0 6px;
+  }
+  .calc-header-box p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin: 0;
+  }
+
+  .calc-group {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .calc-group:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .calc-label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .calc-label-row label {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .calc-label-row label i {
+    color: var(--sand-gold);
+  }
+  .calc-value {
+    background: rgba(232, 195, 158, 0.12);
+    border: 1px solid rgba(232, 195, 158, 0.25);
+    color: var(--sand-gold);
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 4px 12px;
+    border-radius: 20px;
+  }
+  .tier-hint {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    font-style: italic;
+  }
+
+  /* RANGE SLIDER */
+  .range-slider-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .range-slider-wrap input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
+    background: rgba(255,255,255,0.12);
+    outline: none;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .range-slider-wrap input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--sand-gold);
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(232, 195, 158, 0.6);
+    transition: transform 0.15s, background-color 0.15s;
+  }
+  .range-slider-wrap input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.15);
+    background: #f4d3b2;
+  }
+  .range-slider-wrap input[type="range"]::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--sand-gold);
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 0 10px rgba(232, 195, 158, 0.6);
+  }
+  .range-ticks {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    padding: 0 4px;
+  }
+
+  /* TIER CARDS */
+  .tier-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+  .tier-card {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--radius-sm);
+    padding: 20px 14px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.25s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+  .tier-card:hover {
+    border-color: rgba(232, 195, 158, 0.4);
+    transform: translateY(-2px);
+  }
+  .tier-card.active {
+    background: rgba(232, 195, 158, 0.08);
+    border-color: var(--sand-gold);
+    box-shadow: 0 0 0 2px rgba(232, 195, 158, 0.25);
+  }
+  .tier-pop-badge {
+    position: absolute;
+    top: -10px;
+    background: var(--sand-gold);
+    color: #110e0d;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 2px 8px;
+    border-radius: 10px;
+  }
+  .tier-icon {
+    font-size: 1.5rem;
+    color: var(--sand-gold);
+    margin-bottom: 4px;
+  }
+  .tier-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-main);
+  }
+  .tier-rate {
+    font-size: 0.85rem;
+    color: var(--sand-gold);
+    font-weight: 600;
+  }
+  .tier-card small {
+    font-size: 0.74rem;
+    color: var(--text-muted);
+    line-height: 1.35;
+    margin-top: 4px;
+  }
+
+  /* ADDONS GRID */
+  .addons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+  }
+  .addon-item {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: var(--radius-sm);
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .addon-item:hover {
+    border-color: rgba(232, 195, 158, 0.3);
+  }
+  .addon-item.active {
+    background: rgba(232, 195, 158, 0.06);
+    border-color: var(--sand-gold);
+  }
+  .addon-item input[type="checkbox"] {
+    accent-color: var(--sand-gold);
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+  }
+  .addon-icon-box {
+    font-size: 1.25rem;
+    color: var(--sand-gold);
+  }
+  .addon-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .addon-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-main);
+  }
+  .addon-sub {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+  }
+  .addon-price {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--sand-gold);
+    margin-top: 2px;
+  }
+
+  /* RIGHT STICKY SUMMARY */
+  .calc-summary-wrapper {
+    position: sticky;
+    top: 110px;
+  }
+  .calc-summary {
+    background: var(--night-card);
+    border: 1px solid var(--sand-gold);
+    border-radius: var(--radius-lg);
+    padding: 36px 30px;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+  .calc-summary-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding-bottom: 16px;
+  }
+  .calc-summary-head h4 {
+    font-size: 1.3rem;
+    font-family: var(--font-serif);
+    color: var(--text-main);
+    margin: 4px 0 0;
+  }
+  .live-pill {
+    background: rgba(37, 211, 102, 0.15);
+    color: #25D366;
+    border: 1px solid rgba(37, 211, 102, 0.3);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .pulse-dot {
+    width: 6px;
+    height: 6px;
+    background: #25D366;
+    border-radius: 50%;
+    animation: pulse 1.5s infinite;
+  }
+  @keyframes pulse {
+    0% { opacity: 0.4; transform: scale(0.9); }
+    50% { opacity: 1; transform: scale(1.2); }
+    100% { opacity: 0.4; transform: scale(0.9); }
+  }
+
+  .calc-summary-details {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .calc-summary-details li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.92rem;
+    color: var(--text-muted);
+  }
+  .calc-summary-details li span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .calc-summary-details li span i {
+    color: var(--sand-gold);
+    width: 14px;
+  }
+  .calc-summary-details li strong {
+    color: var(--text-main);
+  }
+
+  .calc-total-box {
+    background: rgba(232, 195, 158, 0.08);
+    border: 1px dashed rgba(232, 195, 158, 0.35);
+    border-radius: var(--radius-sm);
+    padding: 20px;
+    text-align: center;
+  }
+  .total-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--sand-gold);
+    font-weight: 700;
+    display: block;
+    margin-bottom: 6px;
+  }
+  .total-amount {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-main);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .per-person-rate {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+
+  .discount-badge {
+    background: rgba(217, 107, 67, 0.12);
+    border: 1px solid rgba(217, 107, 67, 0.25);
+    color: var(--terracotta);
+    padding: 8px 12px;
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .calc-actions-col {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .calc-wa-btn {
+    border-color: rgba(37, 211, 102, 0.4);
+  }
+  .calc-wa-btn:hover {
+    border-color: #25D366;
+    background: rgba(37, 211, 102, 0.1);
+  }
+
+  .calc-trust-footer {
+    display: flex;
+    justify-content: space-around;
+    font-size: 0.76rem;
+    color: var(--text-muted);
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding-top: 14px;
+  }
+  .calc-trust-footer span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .calc-trust-footer i {
+    color: var(--sand-gold);
+  }
+
+  /* FAQ SECTION */
+  .calc-faq-section {
+    padding: 60px 20px 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .calc-faq-section .section-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px;
+  }
+  .calc-faq-section .section-header h2 {
+    font-size: 2.2rem;
+    font-family: var(--font-serif);
+    color: var(--text-main);
+    margin: 10px 0 12px;
+  }
+  .calc-faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+  }
+  .calc-faq-card {
+    background: var(--night-card);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .calc-faq-card h4 {
+    font-size: 1.1rem;
+    color: var(--text-main);
+    margin: 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    line-height: 1.4;
+  }
+  .calc-faq-card h4 i {
+    color: var(--sand-gold);
+    font-size: 1rem;
+    margin-top: 3px;
+  }
+  .calc-faq-card p {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0;
+    padding-left: 24px;
+  }
+
+  @media (max-width: 992px) {
+    .calculator-container {
+      grid-template-columns: 1fr;
+    }
+    .calc-summary-wrapper {
+      position: static;
+    }
+    .tier-cards {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media (max-width: 600px) {
+    .calc-inputs {
+      padding: 24px 18px;
+    }
+    .addons-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

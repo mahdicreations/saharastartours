@@ -1,0 +1,55 @@
+---
+// src/pages/es/tours/[slug].astro
+// Spanish localized tour detail page
+import TourLayout from '../../../layouts/TourLayout.astro';
+import { tours } from '../../../data/tours';
+import { getLocalizedTour, getLocalizedRelatedTours } from '../../../data/toursI18n';
+import { getAlternateUrls } from '../../../data/i18n';
+import type { GetStaticPaths } from 'astro';
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  return tours.map(baseTour => {
+    const tour = getLocalizedTour(baseTour.slug, 'es') || baseTour;
+    const related = getLocalizedRelatedTours(baseTour, 'es');
+    const alternateUrls = getAlternateUrls(`/tours/${baseTour.slug}`);
+
+    return {
+      params: { slug: baseTour.slug },
+      props: { tour, relatedTours: related, alternateUrls },
+    };
+  });
+};
+
+const { tour, relatedTours, alternateUrls } = Astro.props;
+---
+
+<TourLayout
+  lang="es"
+  title={tour.title}
+  description={tour.description}
+  ogImage={tour.heroImage}
+  tourName={tour.shortTitle}
+  tourSlug={tour.slug}
+  duration={tour.duration}
+  startingFrom={tour.startingFrom}
+  category={tour.category}
+  productType={tour.productType}
+  departureCity={tour.departureCity}
+  price={tour.price}
+  heroImage={tour.heroImage}
+  highlights={tour.highlights}
+  inclusions={tour.inclusions}
+  exclusions={tour.exclusions}
+  itinerary={tour.itinerary}
+  mapDestinations={tour.mapDestinations}
+  mapRouteCoordinates={tour.mapRouteCoordinates}
+  galleryImages={tour.galleryImages}
+  relatedTours={relatedTours}
+  faqs={tour.faqs}
+  alternateUrls={alternateUrls}
+>
+  <!-- About slot: tour description paragraph -->
+  <div slot="about">
+    <p style="margin-bottom: 20px; line-height: 1.8;" set:html={tour.aboutHtml} />
+  </div>
+</TourLayout>

@@ -1,0 +1,66 @@
+{
+  "slug": "camel-riding",
+  "title": "Paseo en Camello por el Palmeral de Marrakech | Sahara Star Tours",
+  "shortTitle": "Paseo en Camello en el Palmeral de Marrakech",
+  "description": "Clásico paseo de 1 hora en camello por el pintoresco palmeral de Marrakech vestido con ropa tradicional de nómada. Concluye con té a la menta fresca en una jaima.",
+  "aboutHtml": "<strong>Paseo en Camello por el Palmeral de Marrakech</strong><br/><br/>Disfrutar de un apacible paseo en camello por el histórico Palmeral de Marrakech es una de las vivencias más icónicas de cualquier viaje a Marruecos.<br/><br/>Situado al norte de la ciudad, este inmenso oasis alberga más de 100.000 palmeras y ofrece un entorno tranquilo e idílico para una travesía en caravana de camellos de 1 a 1,5 horas.<br/><br/>Acompañado por camelleros locales y ataviado con la clásica chilaba y turbante nómada para protegerse del sol, contemplará la calma del oasis y el perfil del Alto Atlas. Concluirá la experiencia compartiendo un té tradicional a la menta en un hogar bereber.",
+  "duration": "Media Jornada / 3-4 Horas",
+  "startingFrom": "Marrakech",
+  "price": "Desde 35 $/persona",
+  "highlights": [
+    "Paseo en camello por el icónico oasis del Palmeral de Marrakech.",
+    "Experimente la auténtica hospitalidad marroquí compartiendo un té a la menta.",
+    "Paisajes serenos con vistas panorámicas entre más de 100.000 palmeras.",
+    "Actividad apta para todas las edades, perfecta para familias y parejas."
+  ],
+  "inclusions": [
+    "Traslados de ida y vuelta en vehículo con aire acondicionado desde su hotel",
+    "Paseo guiado en camello de 1 a 2 horas por el Palmeral",
+    "Indumentaria y pañuelo tradicional tuareg para protegerse y tomar fotos",
+    "Pausa para degustar té a la menta marroquí en una vivienda bereber local"
+  ],
+  "exclusions": [
+    "Gastos personales y compras de recuerdos",
+    "Propinas para el camellero y chófer (opcionales)",
+    "Comidas y bebidas adicionales no mencionadas en el programa",
+    "Entradas a museos o monumentos"
+  ],
+  "itinerary": [
+    {
+      "day": "Día 1",
+      "title": "Paseo en Camello en Marrakech",
+      "content": "Recogida matinal a las 9:00 h en su hotel o riad en Marrakech y traslado al frondoso Palmeral. Bienvenida y entrega de la indumentaria tradicional del desierto (chilaba y pañuelo cheich). Subida a lomos de los dromedarios para iniciar un agradable paseo guiado de hora y media a paso tranquilo entre palmeras datileras centenarias y senderos de arena. Parada en una casa rural bereber para saborear una reconfortante taza de té a la menta y pastas locales. Regreso a la base y traslado de vuelta a su hotel a primera hora de la tarde."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Marrakech",
+      "day": "Salida",
+      "subtitle": "Recogida en Hotel",
+      "desc": "Traslado privado desde su alojamiento en Marrakech."
+    },
+    {
+      "number": 2,
+      "name": "Oasis del Palmeral de Marrakech",
+      "day": "Actividad",
+      "subtitle": "Pistas y Palmeras",
+      "desc": "Tranquila caravana de dromedarios a través del palmeral."
+    },
+    {
+      "number": 3,
+      "name": "Campamento Oasis Bereber",
+      "day": "Pausa Té",
+      "subtitle": "Hospitalidad y Té a la Menta",
+      "desc": "Pausa para descansar con té a la menta en una tienda o casa bereber."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/activities/camel-riding/images/thumbnail.jpg",
+      "cap": "Paseo en Camello en el Palmeral de Marrakech",
+      "alt": "Caravana de dromedarios paseando entre altas palmeras en el palmeral de Marrakech"
+    }
+  ],
+  "faqs": []
+}

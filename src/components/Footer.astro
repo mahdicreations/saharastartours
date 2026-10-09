@@ -1,5 +1,15 @@
 ---
 // Footer.astro — Single shared footer for ALL pages
+import { useTranslations, getLocalizedPath, type SupportedLocale } from '../data/i18n';
+
+interface Props {
+  lang?: string;
+}
+
+const { lang = 'en' } = Astro.props;
+const t = useTranslations(lang as SupportedLocale);
+const currentLocale = lang as SupportedLocale;
+
 // Authentic TripAdvisor SVG
 const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" role="img" aria-label="Tripadvisor"><path d="M12.006 4.295c-2.67 0-5.338.784-7.645 2.353H0l1.963 2.135a5.997 5.997 0 0 0 4.04 10.43 5.976 5.976 0 0 0 4.075-1.6L12 19.705l1.922-2.09a5.972 5.972 0 0 0 4.072 1.598 6 6 0 0 0 6-5.998 5.982 5.982 0 0 0-1.957-4.432L24 6.648h-4.35a13.573 13.573 0 0 0-7.644-2.353zM12 6.255c1.531 0 3.063.303 4.504.903C13.943 8.138 12 10.43 12 13.1c0-2.671-1.942-4.962-4.504-5.942A11.72 11.72 0 0 1 12 6.256zM6.002 9.157a4.059 4.059 0 1 1 0 8.118 4.059 4.059 0 0 1 0-8.118zm11.992.002a4.057 4.057 0 1 1 .003 8.115 4.057 4.057 0 0 1-.003-8.115zm-11.992 1.93a2.128 2.128 0 0 0 0 4.256 2.128 2.128 0 0 0 0-4.256zm11.992 0a2.128 2.128 0 0 0 0 4.256 2.128 2.128 0 0 0 0-4.256z"/></svg>`;
 ---
@@ -7,10 +17,10 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="c
 <footer>
   <div class="footer-grid">
     <div class="footer-col">
-      <a href="/" class="logo" style="margin-bottom:20px;display:inline-block">
+      <a href={getLocalizedPath('/', currentLocale)} class="logo" style="margin-bottom:20px;display:inline-block">
         <img src="/assets/logo.png" alt="Sahara Star Tours Logo" width="120" height="120" />
       </a>
-      <p>Premium travel planning and bespoke itineraries crafted by local Moroccan guides. Making desert dreams and imperial medina secrets accessible in absolute comfort.</p>
+      <p>{t('footer.bio')}</p>
       <div class="footer-socials">
         <a href="https://facebook.com/saharastartours" class="social-link" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
         <a href="https://instagram.com/saharastartours" class="social-link" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
@@ -22,32 +32,32 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="c
     </div>
 
     <div class="footer-col">
-      <h4>Tour Gateways</h4>
+      <h4>{t('footer.gateways')}</h4>
       <ul class="footer-links">
-        <li><a href="/tours">All Multi-Day Tours</a></li>
-        <li><a href="/tours-from-marrakech">Tours from Marrakech</a></li>
-        <li><a href="/tours-from-casablanca">Tours from Casablanca</a></li>
-        <li><a href="/tours-from-fes">Tours from Fes</a></li>
-        <li><a href="/tours-from-tangier">Tours from Tangier</a></li>
-        <li><a href="/tours-from-ouarzazate">Tours from Ouarzazate</a></li>
+        <li><a href={getLocalizedPath('/tours', currentLocale)}>{t('footer.allTours')}</a></li>
+        <li><a href={getLocalizedPath('/tours-from-marrakech', currentLocale)}>{t('city.marrakech')}</a></li>
+        <li><a href={getLocalizedPath('/tours-from-casablanca', currentLocale)}>{t('city.casablanca')}</a></li>
+        <li><a href={getLocalizedPath('/tours-from-fes', currentLocale)}>{t('city.fes')}</a></li>
+        <li><a href={getLocalizedPath('/tours-from-tangier', currentLocale)}>{t('city.tangier')}</a></li>
+        <li><a href={getLocalizedPath('/tours-from-ouarzazate', currentLocale)}>{t('city.ouarzazate')}</a></li>
       </ul>
     </div>
 
     <div class="footer-col">
-      <h4>Helpful Resources</h4>
+      <h4>{t('footer.resources')}</h4>
       <ul class="footer-links">
-        <li><a href="/trip-cost-calculator">Trip Cost Calculator</a></li>
-        <li><a href="/day-trips">Day Trips from Marrakech</a></li>
-        <li><a href="/activities">Morocco Activities</a></li>
-        <li><a href="/imperial-cities">Imperial Cities Tours</a></li>
-        <li><a href="/about">About Sahara Star Tours</a></li>
-        <li><a href="/contact">Contact &amp; Custom Inquiry</a></li>
+        <li><a href={getLocalizedPath('/trip-cost-calculator', currentLocale)}>{t('footer.calculator')}</a></li>
+        <li><a href={getLocalizedPath('/day-trips', currentLocale)}>{t('footer.dayTrips')}</a></li>
+        <li><a href={getLocalizedPath('/activities', currentLocale)}>{t('footer.activities')}</a></li>
+        <li><a href={getLocalizedPath('/imperial-cities', currentLocale)}>{t('footer.imperial')}</a></li>
+        <li><a href={getLocalizedPath('/about', currentLocale)}>{t('footer.about')}</a></li>
+        <li><a href={getLocalizedPath('/contact', currentLocale)}>{t('footer.contact')}</a></li>
       </ul>
     </div>
 
     <div class="footer-col footer-concierge-col">
-      <h4>Plan Your Trip</h4>
-      <p>Ready to plan your Moroccan adventure? Talk directly with our licensed local tour designers in Marrakech.</p>
+      <h4>{t('footer.planTitle')}</h4>
+      <p>{t('footer.planDesc')}</p>
 
       <div class="footer-contact-actions">
         <a href="https://wa.me/212678317015" target="_blank" rel="noopener" class="footer-wa-card">
@@ -56,13 +66,13 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="c
             <span class="live-dot"></span>
           </div>
           <div class="footer-wa-info">
-            <span class="wa-label">WhatsApp 24/7 Support</span>
+            <span class="wa-label">{t('footer.whatsappSupport')}</span>
             <span class="wa-num">+212 678-317015</span>
           </div>
         </a>
 
-        <a href="/contact" class="btn btn-primary footer-plan-btn">
-          <i class="fa-solid fa-compass" style="margin-right:6px;"></i> Request Custom Itinerary
+        <a href={getLocalizedPath('/contact', currentLocale)} class="btn btn-primary footer-plan-btn">
+          <i class="fa-solid fa-compass" style="margin-right:6px;"></i> {t('footer.requestCustom')}
         </a>
 
         <div class="footer-trust-rating">
@@ -82,7 +92,7 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="c
   <!-- Secure Payments Trust Bar -->
   <div class="footer-payments-bar">
     <div class="payments-title">
-      <i class="fa-solid fa-lock"></i> 100% Secure Bookings
+      <i class="fa-solid fa-lock"></i> {t('footer.secureBookings')}
     </div>
     <div class="payments-icons">
       <span class="pay-badge" title="Visa"><i class="fa-brands fa-cc-visa"></i></span>
@@ -93,7 +103,7 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="c
       <span class="pay-badge" title="Bank Wire Transfer"><i class="fa-solid fa-building-columns"></i></span>
     </div>
     <div class="payments-guarantee">
-      <i class="fa-solid fa-shield-halved"></i> 256-Bit SSL Encrypted
+      <i class="fa-solid fa-shield-halved"></i> {t('footer.sslEncrypted')}
     </div>
   </div>
 

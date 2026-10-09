@@ -1,0 +1,170 @@
+{
+  "slug": "4-day-morocco-itinerary-desert-tour-from-fes",
+  "title": "Tour de 4 Días de Fez a Merzouga y Gargantas del Dades | Sahara Star Tours",
+  "shortTitle": "Tour de 4 Días de Fez a Merzouga y Dades",
+  "description": "Circuito circular de 4 días desde Fez al desierto de Merzouga y las Gargantas del Dades y Todra. Disfrute de paseos en camello, campamento de lujo y cultura nómada.",
+  "aboutHtml": "<p>Este circuito privado de 4 días con salida y regreso a Fez le permite explorar a fondo el gran sur de Marruecos sin las prisas de un viaje express. Disfrutará de los paisajes alpinos de Ifrane, los macacos del bosque de cedros, los impresionantes cañones de las Gargantas del Dades y del Todra, y dos noches memorables en la región de Merzouga: una en campamento de lujo bajo las estrellas del Erg Chebbi y otra en un confortable hotel frente a las dunas tras explorar la cultura nómada y gnawa.</p>",
+  "duration": "4 Días / 3 Noches",
+  "startingFrom": "Fez",
+  "price": "Desde $520/persona",
+  "highlights": [
+    "Dunas de Merzouga y desierto de Erg Chebbi",
+    "Paseo en camello por el desierto al atardecer",
+    "Noche en campamento en el desierto con cena y desayuno",
+    "Medina de Fez y lugares culturales históricos",
+    "Ifrane, la 'Suiza de Marruecos'",
+    "Bosque de Cedros y macacos de Berbería"
+  ],
+  "inclusions": [
+    "Vehículo privado 4×4 o monovolumen con aire acondicionado",
+    "Chófer/guía local experimentado de habla hispana",
+    "Combustible, peajes y gastos del vehículo",
+    "Alojamiento en riads seleccionados y campamento de lujo",
+    "Desayunos diarios y cenas según el itinerario",
+    "Paseo en camello por las dunas con asistencia completa"
+  ],
+  "exclusions": [
+    "Almuerzos y bebidas",
+    "Vuelos y gastos aeroportuarios",
+    "Gastos personales y compras de recuerdos",
+    "Propinas y gratificaciones"
+  ],
+  "itinerary": [
+    {
+      "day": "Día 1",
+      "title": "Fez – Ifrane – Bosque de Cedros – Midelt – Valle del Ziz – Errachidia – Gargantas del Dades",
+      "content": "Comenzará su viaje con la recogida temprana en su alojamiento en Fez. Conducirá hacia el sur pasando por Imouzzer e Ifrane, famosa por su arquitectura suiza y clima de montaña. Continuará al bosque de cedros para interactuar con los macacos de Berbería y seguirá hacia Midelt para almorzar. Luego descenderá por las espectaculares gargantas del Valle del Ziz y Errachidia, admirando los extensos oasis de palmeras datileras, antes de alcanzar el Valle del Dades para cenar y pasar la noche en un riad tradicional."
+    },
+    {
+      "day": "Día 2",
+      "title": "Gargantas del Dades – Gargantas del Todra – Erfoud – Desierto de Merzouga – Noche en campamento de lujo",
+      "content": "Tras el desayuno en el Dades, se dirigirá a las colosales Gargantas del Todra, un cañón de imponentes muros rojizos tallados por el río Todra ideal para pasear a pie. Tiempo libre para almorzar en un restaurante local. Continuará a través de Erfoud, conociendo talleres de mármol fosilizado, hasta alcanzar las majestuosas dunas de Merzouga. Montará en camello para contemplar una puesta de sol de ensueño y llegará a su campamento de lujo en Erg Chebbi, donde disfrutará de una deliciosa cena marroquí y música bereber alrededor de la fogata."
+    },
+    {
+      "day": "Día 3",
+      "title": "Exploración de Merzouga – Familias Nómadas – Khamlia – Lago de Merzouga – Erg Chebbi – Palmeral",
+      "content": "Madrugará para presenciar el inolvidable amanecer sobre el mar de dunas. Tras el desayuno regresará en camello a Merzouga para un día completo de exploración en 4×4: visitará antiguas minas de kohl, compartirá un té con familias nómadas bereberes en sus jaimas tradicionales y escuchará la emotiva música espiritual de los músicos gnawa en el pueblo de Khamlia. Tras un almuerzo tradicional, paseará por el oasis de palmeras y visitará el lago de Merzouga. Cena y alojamiento en un agradable hotel frente a las dunas."
+    },
+    {
+      "day": "Día 4",
+      "title": "Merzouga – Rissani – Erfoud – Valle del Ziz – Errachidia – Ifrane – Fez",
+      "content": "Tras el desayuno en el hotel, visitará la legendaria Rissani y su bullicioso zoco tradicional, corazón histórico del comercio del Tafilalet. Continuará por Erfoud y ascenderá por el cañón del Valle del Ziz, disfrutando de vistas panorámicas. Tras el almuerzo en Midelt, atravesará de nuevo los bosques de cedros del Medio Atlas e Ifrane antes de llegar a Fez por la tarde, donde le trasladaremos a su alojamiento o al aeropuerto."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Fez",
+      "day": "Día 1",
+      "subtitle": "Fez – Ifrane – Bosque de Cedros – Midelt – Valle del Ziz – Gargantas del Dades",
+      "desc": "Salida de Fez cruzando el Medio Atlas y Valle del Ziz hacia las Gargantas del Dades."
+    },
+    {
+      "number": 2,
+      "name": "Gargantas del Dades",
+      "day": "Día 2",
+      "subtitle": "Dades – Gargantas del Todra – Erfoud – Merzouga – Campamento de lujo",
+      "desc": "Visita a las Gargantas del Todra, llegada a Merzouga y noche en campamento de lujo."
+    },
+    {
+      "number": 3,
+      "name": "Región de Merzouga",
+      "day": "Día 3",
+      "subtitle": "Exploración de Merzouga – Nómadas – Khamlia – Lago – Palmeral",
+      "desc": "Recorrido en 4×4 conociendo familias nómadas, folclore gnawa y oasis en Erg Chebbi."
+    },
+    {
+      "number": 4,
+      "name": "Merzouga a Fez",
+      "day": "Día 4",
+      "subtitle": "Merzouga – Rissani – Erfoud – Valle del Ziz – Errachidia – Ifrane – Fez",
+      "desc": "Visita al zoco de Rissani y regreso a Fez a través del Medio Atlas."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/4-day-morocco-itinerary-desert-tour-from-fes/images/gallery_1.webp",
+      "cap": "Medina de Fez",
+      "alt": "Estrecho callejón empedrado en la medina medieval de Fez el-Bali"
+    },
+    {
+      "src": "/sahara-star-tours/4-day-morocco-itinerary-desert-tour-from-fes/images/gallery_10.webp",
+      "cap": "Gargantas del Todra",
+      "alt": "Puesta de sol sobre la impresionante garganta de piedra caliza del Valle del Todra"
+    },
+    {
+      "src": "/sahara-star-tours/4-day-morocco-itinerary-desert-tour-from-fes/images/gallery_2.webp",
+      "cap": "Ciudad de Ifrane",
+      "alt": "Arquitectura de estilo alpino y jardines en la ciudad montañosa de Ifrane"
+    },
+    {
+      "src": "/sahara-star-tours/4-day-morocco-itinerary-desert-tour-from-fes/images/gallery_3.webp",
+      "cap": "Oasis del Ziz",
+      "alt": "Exuberante oasis de palmeras datileras a lo largo del árido cañón del Valle del Ziz"
+    },
+    {
+      "src": "/sahara-star-tours/4-day-morocco-itinerary-desert-tour-from-fes/images/gallery_4.webp",
+      "cap": "Campamento nómada",
+      "alt": "Campamento de jaimas nómadas y camellos en las arenas del desierto cerca de Merzouga"
+    },
+    {
+      "src": "/sahara-star-tours/4-day-morocco-itinerary-desert-tour-from-fes/images/gallery_5.webp",
+      "cap": "Atardecer en Erg Chebbi",
+      "alt": "Puesta de sol dorada sobre las majestuosas dunas de Erg Chebbi"
+    },
+    {
+      "src": "/sahara-star-tours/4-day-morocco-itinerary-desert-tour-from-fes/images/gallery_7.webp",
+      "cap": "Música bereber",
+      "alt": "Músicos bereberes tocando tambores tradicionales del desierto alrededor de una fogata"
+    },
+    {
+      "src": "/sahara-star-tours/4-day-morocco-itinerary-desert-tour-from-fes/images/gallery_8.webp",
+      "cap": "Dedos de mono en Dades",
+      "alt": "Dramáticas formaciones rocosas conocidas como los dedos de mono en el Valle del Dades"
+    },
+    {
+      "src": "/sahara-star-tours/4-day-morocco-itinerary-desert-tour-from-fes/images/gallery_9.webp",
+      "cap": "Acantilados del Dades",
+      "alt": "Casas de aldea de adobe escalonadas a lo largo de los acantilados rojos de las Gargantas del Dades"
+    },
+    {
+      "src": "/sahara-star-tours/4-day-morocco-itinerary-desert-tour-from-fes/images/hero_2.webp",
+      "cap": "Dunas de Merzouga",
+      "alt": "Vasta extensión de las dunas del desierto del Sahara bajo un cielo matutino despejado"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "¿Es este un tour privado o compartido?",
+      "answer": "Es un viaje 100% privado en exclusiva para usted y sus acompañantes, con completa flexibilidad en horarios y paradas a lo largo del camino."
+    },
+    {
+      "question": "¿Cuánto tiempo dura el paseo en camello y qué opciones existen?",
+      "answer": "La travesía en camello dura entre 45 y 80 minutos. Para quienes lo deseen, disponemos de traslados al campamento en vehículo 4×4 sin ningún coste extra."
+    },
+    {
+      "question": "¿Cómo son las instalaciones en el campamento del desierto?",
+      "answer": "El campamento de lujo ofrece tiendas privadas con baño interior completo, agua caliente, camas confortables y luz eléctrica."
+    },
+    {
+      "question": "¿Dónde se realiza la recogida y el regreso?",
+      "answer": "La recogida y el regreso se organizan directamente en su riad, hotel o en el aeropuerto de Fez Sais, según sus billetes de viaje."
+    },
+    {
+      "question": "¿Qué modelo de vehículo se utiliza?",
+      "answer": "Viajará en un vehículo todoterreno 4×4 o en un monovolumen privado con aire acondicionado, asientos ergonómicos y amplio maletero."
+    },
+    {
+      "question": "¿Se pueden preparar menús vegetarianos o dietas especiales?",
+      "answer": "Sí, podemos coordinar opciones vegetarianas, veganas o para celíacos en todos los alojamientos indicándolo al realizar la reserva."
+    },
+    {
+      "question": "¿Es un itinerario cómodo para viajar con niños o personas mayores?",
+      "answer": "Sí, al disponer de 4 días el ritmo es equilibrado, con paradas constantes para estirar las piernas y contemplar los paisajes."
+    },
+    {
+      "question": "¿Cuál es la mejor época del año para realizar este tour?",
+      "answer": "De octubre a mayo el clima es templado e ideal para recorrer el sur y el desierto. Durante los meses de verano recomendamos actividades matinales."
+    }
+  ]
+}

@@ -6,11 +6,22 @@ import {
   getMultiDayToursByCity,
   type Tour,
 } from "../data/tours.ts";
+import { getLocalizedTour } from "../data/toursI18n.ts";
+import { useTranslations, getLocalizedPath, type SupportedLocale } from "../data/i18n.ts";
 
 interface Props {
   currentPage?: string;
+  lang?: string;
+  langUrls?: { en?: string; es?: string; it?: string };
 }
-const { currentPage = "" } = Astro.props;
+const { currentPage = "", lang = "en", langUrls } = Astro.props;
+const currentLocale = lang as SupportedLocale;
+const t = useTranslations(currentLocale);
+
+// In Phase 4C, localized tour detail pages exist under /es/tours/[slug] and /it/tours/[slug]
+const getTourLink = (slug: string) => {
+  return lang === "en" ? `/tours/${slug}` : `/${lang}/tours/${slug}`;
+};
 
 // Multi-Day Tours by Departure City (Submenus)
 const marrakechTours = getMultiDayToursByCity("Marrakech");
@@ -58,7 +69,19 @@ const navLabels: Record<string, string> = {
 };
 
 function getNavLabel(tour: Tour): string {
+  if (currentLocale !== 'en') {
+    const loc = getLocalizedTour(tour.slug, currentLocale);
+    if (loc?.shortTitle) return loc.shortTitle;
+  }
   return navLabels[tour.slug] || tour.shortTitle || tour.title;
+}
+
+function getTourLabel(tour: Tour): string {
+  if (currentLocale !== 'en') {
+    const loc = getLocalizedTour(tour.slug, currentLocale);
+    if (loc?.shortTitle) return loc.shortTitle;
+  }
+  return tour.shortTitle || tour.title;
 }
 
 // Flag SVGs as inline strings (no external requests, no errors)
@@ -145,8 +168,7 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="c
       </div>
       <div class="top-bar-right">
         <span class="top-bar-badge">
-          <i class="fa-solid fa-compass" style="color:var(--sand-gold);"></i> Authentic
-          Sahara &amp; Morocco Tours
+          <i class="fa-solid fa-compass" style="color:var(--sand-gold);"></i> {t('topbar.badge')}
         </span>
         <div class="top-bar-socials">
           <a
@@ -183,7 +205,7 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="c
 
   <!-- MAIN NAVBAR -->
   <div class="navbar">
-    <a href="/" class="logo" @click="closeMobileMenu()">
+    <a href={getLocalizedPath('/', currentLocale)} class="logo" @click="closeMobileMenu()">
       <img
         src="/assets/logo.png"
         alt="Sahara Star Tours Logo"
@@ -216,9 +238,9 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="c
 
       <li>
         <a
-          href="/"
+          href={getLocalizedPath('/', currentLocale)}
           class={`nav-link-main ${currentPage === "home" ? "active" : ""}`}
-          @click="closeMobileMenu()">Home</a
+          @click="closeMobileMenu()">{t('nav.home')}</a
         >
       </li>
 
@@ -230,11 +252,11 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="c
       >
         <div class="nav-item-row">
           <a
-            href="/tours"
+            href={getLocalizedPath('/tours', currentLocale)}
             class={`nav-link-main ${currentPage === "tours" || currentPage.startsWith("tours-") ? "active" : ""}`}
             @click="closeMobileMenu()"
           >
-            Tours <i class="fa-solid fa-chevron-down desktop-chevron"></i>
+            {t('nav.tours')} <i class="fa-solid fa-chevron-down desktop-chevron"></i>
           </a>
           <button
             type="button"
@@ -259,17 +281,17 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="c
             @mouseenter="activeCityFlyout = 'marrakech'"
             @mouseleave="activeCityFlyout = null"
           >
-            <a href="/tours-from-marrakech" class="dropdown-item dropdown-item-has-flyout">
+            <a href={getLocalizedPath('/tours-from-marrakech', currentLocale)} class="dropdown-item dropdown-item-has-flyout">
               <span class="dropdown-item-label">
-                <i class="fa-solid fa-location-dot"></i> Tours from Marrakech
+                <i class="fa-solid fa-location-dot"></i> {t('city.marrakech')}
               </span>
               <i class="fa-solid fa-chevron-right flyout-arrow"></i>
             </a>
             <ul class="dropdown-flyout" aria-label="Tours from Marrakech Submenu">
               {marrakechTours.map((tour) => (
                 <li>
-                  <a href={`/tours/${tour.slug}`} class="dropdown-item">
-                    <span>{tour.shortTitle || tour.title}</span>
+                  <a href={getTourLink(tour.slug)} class="dropdown-item">
+                    <span>{getTourLabel(tour)}</span>
                   </a>
                 </li>
               ))}
@@ -283,17 +305,17 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="c
             @mouseenter="activeCityFlyout = 'casablanca'"
             @mouseleave="activeCityFlyout = null"
           >
-            <a href="/tours-from-casablanca" class="dropdown-item dropdown-item-has-flyout">
+            <a href={getLocalizedPath('/tours-from-casablanca', currentLocale)} class="dropdown-item dropdown-item-has-flyout">
               <span class="dropdown-item-label">
-                <i class="fa-solid fa-location-dot"></i> Tours from Casablanca
+                <i class="fa-solid fa-location-dot"></i> {t('city.casablanca')}
               </span>
               <i class="fa-solid fa-chevron-right flyout-arrow"></i>
             </a>
             <ul class="dropdown-flyout" aria-label="Tours from Casablanca Submenu">
               {casablancaTours.map((tour) => (
                 <li>
-                  <a href={`/tours/${tour.slug}`} class="dropdown-item">
-                    <span>{tour.shortTitle || tour.title}</span>
+                  <a href={getTourLink(tour.slug)} class="dropdown-item">
+                    <span>{getTourLabel(tour)}</span>
                   </a>
                 </li>
               ))}
@@ -307,17 +329,17 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="c
             @mouseenter="activeCityFlyout = 'fes'"
             @mouseleave="activeCityFlyout = null"
           >
-            <a href="/tours-from-fes" class="dropdown-item dropdown-item-has-flyout">
+            <a href={getLocalizedPath('/tours-from-fes', currentLocale)} class="dropdown-item dropdown-item-has-flyout">
               <span class="dropdown-item-label">
-                <i class="fa-solid fa-location-dot"></i> Tours from Fes
+                <i class="fa-solid fa-location-dot"></i> {t('city.fes')}
               </span>
               <i class="fa-solid fa-chevron-right flyout-arrow"></i>
             </a>
             <ul class="dropdown-flyout" aria-label="Tours from Fes Submenu">
               {fesTours.map((tour) => (
                 <li>
-                  <a href={`/tours/${tour.slug}`} class="dropdown-item">
-                    <span>{tour.shortTitle || tour.title}</span>
+                  <a href={getTourLink(tour.slug)} class="dropdown-item">
+                    <span>{getTourLabel(tour)}</span>
                   </a>
                 </li>
               ))}
@@ -331,17 +353,17 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="c
             @mouseenter="activeCityFlyout = 'tangier'"
             @mouseleave="activeCityFlyout = null"
           >
-            <a href="/tours-from-tangier" class="dropdown-item dropdown-item-has-flyout">
+            <a href={getLocalizedPath('/tours-from-tangier', currentLocale)} class="dropdown-item dropdown-item-has-flyout">
               <span class="dropdown-item-label">
-                <i class="fa-solid fa-location-dot"></i> Tours from Tangier
+                <i class="fa-solid fa-location-dot"></i> {t('city.tangier')}
               </span>
               <i class="fa-solid fa-chevron-right flyout-arrow"></i>
             </a>
             <ul class="dropdown-flyout" aria-label="Tours from Tangier Submenu">
               {tangierTours.map((tour) => (
                 <li>
-                  <a href={`/tours/${tour.slug}`} class="dropdown-item">
-                    <span>{tour.shortTitle || tour.title}</span>
+                  <a href={getTourLink(tour.slug)} class="dropdown-item">
+                    <span>{getTourLabel(tour)}</span>
                   </a>
                 </li>
               ))}
@@ -355,17 +377,17 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="c
             @mouseenter="activeCityFlyout = 'ouarzazate'"
             @mouseleave="activeCityFlyout = null"
           >
-            <a href="/tours-from-ouarzazate" class="dropdown-item dropdown-item-has-flyout">
+            <a href={getLocalizedPath('/tours-from-ouarzazate', currentLocale)} class="dropdown-item dropdown-item-has-flyout">
               <span class="dropdown-item-label">
-                <i class="fa-solid fa-location-dot"></i> Tours from Ouarzazate
+                <i class="fa-solid fa-location-dot"></i> {t('city.ouarzazate')}
               </span>
               <i class="fa-solid fa-chevron-right flyout-arrow"></i>
             </a>
             <ul class="dropdown-flyout" aria-label="Tours from Ouarzazate Submenu">
               {ouarzazateTours.map((tour) => (
                 <li>
-                  <a href={`/tours/${tour.slug}`} class="dropdown-item">
-                    <span>{tour.shortTitle || tour.title}</span>
+                  <a href={getTourLink(tour.slug)} class="dropdown-item">
+                    <span>{getTourLabel(tour)}</span>
                   </a>
                 </li>
               ))}
@@ -374,8 +396,8 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="c
 
           <li class="dropdown-divider"></li>
           <li>
-            <a href="/tours" class="dropdown-item dropdown-item-all">
-              <span>View All Multi-Day Tours</span>
+            <a href={getLocalizedPath('/tours', currentLocale)} class="dropdown-item dropdown-item-all">
+              <span>{t('nav.viewAllTours')}</span>
               <i class="fa-solid fa-arrow-right"></i>
             </a>
           </li>
@@ -386,8 +408,8 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="c
           <!-- Marrakech -->
           <div class="mobile-city-group">
             <div class="mobile-city-row">
-              <a href="/tours-from-marrakech" @click="closeMobileMenu()" class="mobile-sub-link mobile-city-link">
-                <i class="fa-solid fa-location-dot"></i> <span>Tours from Marrakech</span>
+              <a href={getLocalizedPath('/tours-from-marrakech', currentLocale)} @click="closeMobileMenu()" class="mobile-sub-link mobile-city-link">
+                <i class="fa-solid fa-location-dot"></i> <span>{t('city.marrakech')}</span>
               </a>
               <button
                 type="button"
@@ -402,8 +424,8 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="c
             </div>
             <div class="mobile-city-tours" :class="activeCities['marrakech'] ? 'open' : ''">
               {marrakechTours.map((tour) => (
-                <a href={`/tours/${tour.slug}`} @click="closeMobileMenu()" class="mobile-tour-item-link">
-                  <i class="fa-solid fa-angle-right"></i> {tour.shortTitle || tour.title}
+                <a href={getTourLink(tour.slug)} @click="closeMobileMenu()" class="mobile-tour-item-link">
+                  <i class="fa-solid fa-angle-right"></i> {getTourLabel(tour)}
                 </a>
               ))}
             </div>
@@ -412,8 +434,8 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="c
           <!-- Casablanca -->
           <div class="mobile-city-group">
             <div class="mobile-city-row">
-              <a href="/tours-from-casablanca" @click="closeMobileMenu()" class="mobile-sub-link mobile-city-link">
-                <i class="fa-solid fa-location-dot"></i> <span>Tours from Casablanca</span>
+              <a href={getLocalizedPath('/tours-from-casablanca', currentLocale)} @click="closeMobileMenu()" class="mobile-sub-link mobile-city-link">
+                <i class="fa-solid fa-location-dot"></i> <span>{t('city.casablanca')}</span>
               </a>
               <button
                 type="button"
@@ -428,8 +450,8 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="c
             </div>
             <div class="mobile-city-tours" :class="activeCities['casablanca'] ? 'open' : ''">
               {casablancaTours.map((tour) => (
-                <a href={`/tours/${tour.slug}`} @click="closeMobileMenu()" class="mobile-tour-item-link">
-                  <i class="fa-solid fa-angle-right"></i> {tour.shortTitle || tour.title}
+                <a href={getTourLink(tour.slug)} @click="closeMobileMenu()" class="mobile-tour-item-link">
+                  <i class="fa-solid fa-angle-right"></i> {getTourLabel(tour)}
                 </a>
               ))}
             </div>
@@ -438,8 +460,8 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="c
           <!-- Fes -->
           <div class="mobile-city-group">
             <div class="mobile-city-row">
-              <a href="/tours-from-fes" @click="closeMobileMenu()" class="mobile-sub-link mobile-city-link">
-                <i class="fa-solid fa-location-dot"></i> <span>Tours from Fes</span>
+              <a href={getLocalizedPath('/tours-from-fes', currentLocale)} @click="closeMobileMenu()" class="mobile-sub-link mobile-city-link">
+                <i class="fa-solid fa-location-dot"></i> <span>{t('city.fes')}</span>
               </a>
               <button
                 type="button"
@@ -454,8 +476,8 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="c
             </div>
             <div class="mobile-city-tours" :class="activeCities['fes'] ? 'open' : ''">
               {fesTours.map((tour) => (
-                <a href={`/tours/${tour.slug}`} @click="closeMobileMenu()" class="mobile-tour-item-link">
-                  <i class="fa-solid fa-angle-right"></i> {tour.shortTitle || tour.title}
+                <a href={getTourLink(tour.slug)} @click="closeMobileMenu()" class="mobile-tour-item-link">
+                  <i class="fa-solid fa-angle-right"></i> {getTourLabel(tour)}
                 </a>
               ))}
             </div>
@@ -464,8 +486,8 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="c
           <!-- Tangier -->
           <div class="mobile-city-group">
             <div class="mobile-city-row">
-              <a href="/tours-from-tangier" @click="closeMobileMenu()" class="mobile-sub-link mobile-city-link">
-                <i class="fa-solid fa-location-dot"></i> <span>Tours from Tangier</span>
+              <a href={getLocalizedPath('/tours-from-tangier', currentLocale)} @click="closeMobileMenu()" class="mobile-sub-link mobile-city-link">
+                <i class="fa-solid fa-location-dot"></i> <span>{t('city.tangier')}</span>
               </a>
               <button
                 type="button"
@@ -480,8 +502,8 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="c
             </div>
             <div class="mobile-city-tours" :class="activeCities['tangier'] ? 'open' : ''">
               {tangierTours.map((tour) => (
-                <a href={`/tours/${tour.slug}`} @click="closeMobileMenu()" class="mobile-tour-item-link">
-                  <i class="fa-solid fa-angle-right"></i> {tour.shortTitle || tour.title}
+                <a href={getTourLink(tour.slug)} @click="closeMobileMenu()" class="mobile-tour-item-link">
+                  <i class="fa-solid fa-angle-right"></i> {getTourLabel(tour)}
                 </a>
               ))}
             </div>
@@ -490,8 +512,8 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="c
           <!-- Ouarzazate -->
           <div class="mobile-city-group">
             <div class="mobile-city-row">
-              <a href="/tours-from-ouarzazate" @click="closeMobileMenu()" class="mobile-sub-link mobile-city-link">
-                <i class="fa-solid fa-location-dot"></i> <span>Tours from Ouarzazate</span>
+              <a href={getLocalizedPath('/tours-from-ouarzazate', currentLocale)} @click="closeMobileMenu()" class="mobile-sub-link mobile-city-link">
+                <i class="fa-solid fa-location-dot"></i> <span>{t('city.ouarzazate')}</span>
               </a>
               <button
                 type="button"
@@ -506,15 +528,15 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="c
             </div>
             <div class="mobile-city-tours" :class="activeCities['ouarzazate'] ? 'open' : ''">
               {ouarzazateTours.map((tour) => (
-                <a href={`/tours/${tour.slug}`} @click="closeMobileMenu()" class="mobile-tour-item-link">
-                  <i class="fa-solid fa-angle-right"></i> {tour.shortTitle || tour.title}
+                <a href={getTourLink(tour.slug)} @click="closeMobileMenu()" class="mobile-tour-item-link">
+                  <i class="fa-solid fa-angle-right"></i> {getTourLabel(tour)}
                 </a>
               ))}
             </div>
           </div>
 
-          <a href="/tours" @click="closeMobileMenu()" class="mobile-sub-link mobile-sub-link-all">
-            <span>View All Multi-Day Tours</span>
+          <a href={getLocalizedPath('/tours', currentLocale)} @click="closeMobileMenu()" class="mobile-sub-link mobile-sub-link-all">
+            <span>{t('nav.viewAllTours')}</span>
             <i class="fa-solid fa-arrow-right"></i>
           </a>
         </div>
@@ -528,11 +550,11 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="c
       >
         <div class="nav-item-row">
           <a
-            href="/imperial-cities"
+            href={getLocalizedPath('/imperial-cities', currentLocale)}
             class={`nav-link-main ${currentPage === "imperial-cities" ? "active" : ""}`}
             @click="closeMobileMenu()"
           >
-            Imperial Cities <i class="fa-solid fa-chevron-down desktop-chevron"></i>
+            {t('nav.imperial')} <i class="fa-solid fa-chevron-down desktop-chevron"></i>
           </a>
           <button
             type="button"
@@ -552,15 +574,15 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="c
         <ul class="dropdown-menu dropdown-standard compact-dropdown desktop-only" aria-label="Imperial Cities Navigation">
           {featuredImperialTours.map((tour) => (
             <li>
-              <a href={`/tours/${tour.slug}`} class="dropdown-item">
+              <a href={getTourLink(tour.slug)} class="dropdown-item">
                 <i class="fa-solid fa-landmark"></i> {getNavLabel(tour)}
               </a>
             </li>
           ))}
           <li class="dropdown-divider"></li>
           <li>
-            <a href="/imperial-cities" class="dropdown-item dropdown-item-all">
-              <span>View All Imperial Cities</span>
+            <a href={getLocalizedPath('/imperial-cities', currentLocale)} class="dropdown-item dropdown-item-all">
+              <span>{t('nav.viewAllImperial')}</span>
               <i class="fa-solid fa-arrow-right"></i>
             </a>
           </li>
@@ -569,12 +591,12 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="c
         <!-- 2. MOBILE SUBMENU -->
         <div class="mobile-submenu mobile-only" :class="activeDropdowns['imperial'] ? 'open' : ''">
           {featuredImperialTours.map((tour) => (
-            <a href={`/tours/${tour.slug}`} @click="closeMobileMenu()" class="mobile-sub-link">
+            <a href={getTourLink(tour.slug)} @click="closeMobileMenu()" class="mobile-sub-link">
               <i class="fa-solid fa-landmark"></i> {getNavLabel(tour)}
             </a>
           ))}
-          <a href="/imperial-cities" @click="closeMobileMenu()" class="mobile-sub-link mobile-sub-link-all">
-            <span>View All Imperial Cities</span>
+          <a href={getLocalizedPath('/imperial-cities', currentLocale)} @click="closeMobileMenu()" class="mobile-sub-link mobile-sub-link-all">
+            <span>{t('nav.viewAllImperial')}</span>
             <i class="fa-solid fa-arrow-right"></i>
           </a>
         </div>
@@ -588,11 +610,11 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="c
       >
         <div class="nav-item-row">
           <a
-            href="/day-trips"
+            href={getLocalizedPath('/day-trips', currentLocale)}
             class={`nav-link-main ${currentPage === "day-trips" ? "active" : ""}`}
             @click="closeMobileMenu()"
           >
-            Day Trips <i class="fa-solid fa-chevron-down desktop-chevron"></i>
+            {t('nav.daytrips')} <i class="fa-solid fa-chevron-down desktop-chevron"></i>
           </a>
           <button
             type="button"
@@ -612,15 +634,15 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="c
         <ul class="dropdown-menu dropdown-standard compact-dropdown desktop-only" aria-label="Day Trips Navigation">
           {dayTripsList.map((tour) => (
             <li>
-              <a href={`/tours/${tour.slug}`} class="dropdown-item">
+              <a href={getTourLink(tour.slug)} class="dropdown-item">
                 <i class="fa-solid fa-sun"></i> {getNavLabel(tour)}
               </a>
             </li>
           ))}
           <li class="dropdown-divider"></li>
           <li>
-            <a href="/day-trips" class="dropdown-item dropdown-item-all">
-              <span>View All Day Trips</span>
+            <a href={getLocalizedPath('/day-trips', currentLocale)} class="dropdown-item dropdown-item-all">
+              <span>{t('nav.viewAllDayTrips')}</span>
               <i class="fa-solid fa-arrow-right"></i>
             </a>
           </li>
@@ -629,12 +651,12 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="c
         <!-- 2. MOBILE SUBMENU -->
         <div class="mobile-submenu mobile-only" :class="activeDropdowns['daytrips'] ? 'open' : ''">
           {dayTripsList.map((tour) => (
-            <a href={`/tours/${tour.slug}`} @click="closeMobileMenu()" class="mobile-sub-link">
+            <a href={getTourLink(tour.slug)} @click="closeMobileMenu()" class="mobile-sub-link">
               <i class="fa-solid fa-sun"></i> {getNavLabel(tour)}
             </a>
           ))}
-          <a href="/day-trips" @click="closeMobileMenu()" class="mobile-sub-link mobile-sub-link-all">
-            <span>View All Day Trips</span>
+          <a href={getLocalizedPath('/day-trips', currentLocale)} @click="closeMobileMenu()" class="mobile-sub-link mobile-sub-link-all">
+            <span>{t('nav.viewAllDayTrips')}</span>
             <i class="fa-solid fa-arrow-right"></i>
           </a>
         </div>
@@ -648,11 +670,11 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="c
       >
         <div class="nav-item-row">
           <a
-            href="/activities"
+            href={getLocalizedPath('/activities', currentLocale)}
             class={`nav-link-main ${currentPage === "activities" ? "active" : ""}`}
             @click="closeMobileMenu()"
           >
-            Activities <i class="fa-solid fa-chevron-down desktop-chevron"></i>
+            {t('nav.activities')} <i class="fa-solid fa-chevron-down desktop-chevron"></i>
           </a>
           <button
             type="button"
@@ -672,15 +694,15 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="c
         <ul class="dropdown-menu dropdown-standard compact-dropdown desktop-only" aria-label="Activities Navigation">
           {activitiesList.map((tour) => (
             <li>
-              <a href={`/tours/${tour.slug}`} class="dropdown-item">
+              <a href={getTourLink(tour.slug)} class="dropdown-item">
                 <i class="fa-solid fa-compass"></i> {getNavLabel(tour)}
               </a>
             </li>
           ))}
           <li class="dropdown-divider"></li>
           <li>
-            <a href="/activities" class="dropdown-item dropdown-item-all">
-              <span>View All Activities</span>
+            <a href={getLocalizedPath('/activities', currentLocale)} class="dropdown-item dropdown-item-all">
+              <span>{t('nav.viewAllActivities')}</span>
               <i class="fa-solid fa-arrow-right"></i>
             </a>
           </li>
@@ -689,12 +711,12 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="c
         <!-- 2. MOBILE SUBMENU -->
         <div class="mobile-submenu mobile-only" :class="activeDropdowns['activities'] ? 'open' : ''">
           {activitiesList.map((tour) => (
-            <a href={`/tours/${tour.slug}`} @click="closeMobileMenu()" class="mobile-sub-link">
+            <a href={getTourLink(tour.slug)} @click="closeMobileMenu()" class="mobile-sub-link">
               <i class="fa-solid fa-compass"></i> {getNavLabel(tour)}
             </a>
           ))}
-          <a href="/activities" @click="closeMobileMenu()" class="mobile-sub-link mobile-sub-link-all">
-            <span>View All Activities</span>
+          <a href={getLocalizedPath('/activities', currentLocale)} @click="closeMobileMenu()" class="mobile-sub-link mobile-sub-link-all">
+            <span>{t('nav.viewAllActivities')}</span>
             <i class="fa-solid fa-arrow-right"></i>
           </a>
         </div>
@@ -702,99 +724,159 @@ const tripadvisorIcon = `<svg viewBox="0 0 24 24" width="16" height="16" fill="c
 
       <li>
         <a
-          href="/about"
+          href={getLocalizedPath('/about', currentLocale)}
           class={`nav-link-main ${currentPage === "about" ? "active" : ""}`}
-          @click="closeMobileMenu()">About Us</a
+          @click="closeMobileMenu()">{t('nav.about')}</a
         >
       </li>
       <li>
         <a
-          href="/contact"
+          href={getLocalizedPath('/contact', currentLocale)}
           class={`nav-link-main ${currentPage === "contact" ? "active" : ""}`}
-          @click="closeMobileMenu()">Contact Us</a
+          @click="closeMobileMenu()">{t('nav.contact')}</a
         >
       </li>
 
       <!-- Mobile: Plan a Trip CTA (at the bottom of mobile menu) -->
       <li class="mobile-cta-li">
         <a
-          href="/contact"
+          href={getLocalizedPath('/contact', currentLocale)}
           class="btn btn-primary mobile-menu-cta"
           @click="closeMobileMenu()"
         >
-          <i class="fa-solid fa-compass" style="margin-right:8px;"></i> Plan a Trip
+          <i class="fa-solid fa-compass" style="margin-right:8px;"></i> {t('nav.planTrip')}
         </a>
       </li>
     </ul>
 
     <!-- Language Flags (Desktop) -->
     <div class="lang-flags-wrap desktop-only">
-      <button
-        type="button"
-        class="lang-flag-btn"
-        :class="$root.currentLang==='en'?'active':''"
-        @click="$root.currentLang='en'"
-        title="English"
-      >
-        <Fragment set:html={ukFlag} />
-      </button>
-      <button
-        type="button"
-        class="lang-flag-btn"
-        :class="$root.currentLang==='es'?'active':''"
-        @click="$root.currentLang='es'"
-        title="Español"
-      >
-        <Fragment set:html={esFlag} />
-      </button>
-      <button
-        type="button"
-        class="lang-flag-btn"
-        :class="$root.currentLang==='it'?'active':''"
-        @click="$root.currentLang='it'"
-        title="Italiano"
-      >
-        <Fragment set:html={itFlag} />
-      </button>
+      {langUrls?.en ? (
+        <a
+          href={langUrls.en}
+          class={`lang-flag-btn ${lang === 'en' ? 'active' : ''}`}
+          title="English"
+          aria-label="Switch to English"
+        >
+          <Fragment set:html={ukFlag} />
+        </a>
+      ) : (
+        <button
+          type="button"
+          class={`lang-flag-btn ${lang === 'en' ? 'active' : ''}`}
+          title="English"
+          aria-label="English"
+        >
+          <Fragment set:html={ukFlag} />
+        </button>
+      )}
+      {langUrls?.es ? (
+        <a
+          href={langUrls.es}
+          class={`lang-flag-btn ${lang === 'es' ? 'active' : ''}`}
+          title="Español"
+          aria-label="Cambiar a Español"
+        >
+          <Fragment set:html={esFlag} />
+        </a>
+      ) : (
+        <button
+          type="button"
+          class={`lang-flag-btn ${lang === 'es' ? 'active' : ''}`}
+          title="Español"
+          aria-label="Español"
+        >
+          <Fragment set:html={esFlag} />
+        </button>
+      )}
+      {langUrls?.it ? (
+        <a
+          href={langUrls.it}
+          class={`lang-flag-btn ${lang === 'it' ? 'active' : ''}`}
+          title="Italiano"
+          aria-label="Passa all'Italiano"
+        >
+          <Fragment set:html={itFlag} />
+        </a>
+      ) : (
+        <button
+          type="button"
+          class={`lang-flag-btn ${lang === 'it' ? 'active' : ''}`}
+          title="Italiano"
+          aria-label="Italiano"
+        >
+          <Fragment set:html={itFlag} />
+        </button>
+      )}
     </div>
 
     <!-- Language Flags (Mobile - between hamburger area) -->
     <div class="lang-flags-wrap mobile-only">
-      <button
-        type="button"
-        class="lang-flag-btn"
-        :class="$root.currentLang==='en'?'active':''"
-        @click="$root.currentLang='en'"
-        title="English"
-      >
-        <Fragment set:html={ukFlag} />
-      </button>
-      <button
-        type="button"
-        class="lang-flag-btn"
-        :class="$root.currentLang==='es'?'active':''"
-        @click="$root.currentLang='es'"
-        title="Español"
-      >
-        <Fragment set:html={esFlag} />
-      </button>
-      <button
-        type="button"
-        class="lang-flag-btn"
-        :class="$root.currentLang==='it'?'active':''"
-        @click="$root.currentLang='it'"
-        title="Italiano"
-      >
-        <Fragment set:html={itFlag} />
-      </button>
+      {langUrls?.en ? (
+        <a
+          href={langUrls.en}
+          class={`lang-flag-btn ${lang === 'en' ? 'active' : ''}`}
+          title="English"
+          aria-label="Switch to English"
+        >
+          <Fragment set:html={ukFlag} />
+        </a>
+      ) : (
+        <button
+          type="button"
+          class={`lang-flag-btn ${lang === 'en' ? 'active' : ''}`}
+          title="English"
+          aria-label="English"
+        >
+          <Fragment set:html={ukFlag} />
+        </button>
+      )}
+      {langUrls?.es ? (
+        <a
+          href={langUrls.es}
+          class={`lang-flag-btn ${lang === 'es' ? 'active' : ''}`}
+          title="Español"
+          aria-label="Cambiar a Español"
+        >
+          <Fragment set:html={esFlag} />
+        </a>
+      ) : (
+        <button
+          type="button"
+          class={`lang-flag-btn ${lang === 'es' ? 'active' : ''}`}
+          title="Español"
+          aria-label="Español"
+        >
+          <Fragment set:html={esFlag} />
+        </button>
+      )}
+      {langUrls?.it ? (
+        <a
+          href={langUrls.it}
+          class={`lang-flag-btn ${lang === 'it' ? 'active' : ''}`}
+          title="Italiano"
+          aria-label="Passa all'Italiano"
+        >
+          <Fragment set:html={itFlag} />
+        </a>
+      ) : (
+        <button
+          type="button"
+          class={`lang-flag-btn ${lang === 'it' ? 'active' : ''}`}
+          title="Italiano"
+          aria-label="Italiano"
+        >
+          <Fragment set:html={itFlag} />
+        </button>
+      )}
     </div>
 
     <!-- CTA Button (Desktop) -->
     <a
-      href="/contact"
+      href={getLocalizedPath('/contact', currentLocale)}
       class="btn btn-primary desktop-only"
       id="nav-cta"
-      @click="closeMobileMenu()">Plan a Trip</a
+      @click="closeMobileMenu()">{t('nav.planTrip')}</a
     >
 
     <!-- Hamburger -->

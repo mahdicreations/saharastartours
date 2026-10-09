@@ -1,0 +1,637 @@
+---
+// src/pages/es/tours/index.astro — Spanish Multi-Day Tours Catalogue Hub
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getLocalizedMultiDayTours } from '../../../data/toursI18n';
+import { getAlternateUrls } from '../../../data/i18n';
+
+const multiDayTours = getLocalizedMultiDayTours('es');
+const alternateUrls = getAlternateUrls('/tours');
+
+// Departure city counts
+const marrakechCount = multiDayTours.filter(t => (t.departureCityKey || t.departureCity).toLowerCase() === 'marrakech').length;
+const casablancaCount = multiDayTours.filter(t => (t.departureCityKey || t.departureCity).toLowerCase() === 'casablanca').length;
+const fesCount = multiDayTours.filter(t => ['fes', 'fez'].includes((t.departureCityKey || t.departureCity).toLowerCase())).length;
+const tangierCount = multiDayTours.filter(t => ['tangier', 'tanger'].includes((t.departureCityKey || t.departureCity).toLowerCase())).length;
+const ouarzazateCount = multiDayTours.filter(t => (t.departureCityKey || t.departureCity).toLowerCase() === 'ouarzazate').length;
+
+// Duration tier helper
+function getDurationTier(days: number): string {
+  if (days <= 4) return '2-4';
+  if (days <= 7) return '5-7';
+  if (days <= 10) return '8-10';
+  return '11+';
+}
+
+const toursSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "name": "Circuitos Multidía por Marruecos y Rutas Privadas | Sahara Star Tours",
+      "description": `Descubre nuestra colección de ${multiDayTours.length} circuitos privados multidía por Marruecos. Safaris de lujo en el Sáhara, Ciudades Imperiales y travesías del Atlas desde Marrakech, Casablanca, Fez, Tánger y Ouarzazate.`,
+      "url": alternateUrls.es
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": alternateUrls.es.replace('/tours', '')
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Circuitos Multidía",
+          "item": alternateUrls.es
+        }
+      ]
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title={`Circuitos Multidía por Marruecos (${multiDayTours.length} Rutas Privadas) | Sahara Star Tours`}
+  description={`Explora ${multiDayTours.length} circuitos privados a medida por Marruecos de 2 a 16 días. Desierto del Sáhara, medinas imperiales, pasos del Alto Atlas y rutas bereberes con transporte privado y guías oficiales.`}
+  keywords="circuitos marruecos varios dias, rutas desierto sahara, circuitos marrakech, circuitos casablanca, circuitos fez, circuitos tanger, viajes privados marruecos"
+  currentPage="tours"
+  lang="es"
+  alternateUrls={alternateUrls}
+  schemaData={toursSchema}
+>
+
+<!-- CATALOGUE HERO -->
+<section class="tours-cat-hero">
+  <div class="tours-cat-hero-overlay"></div>
+  <div class="tours-cat-hero-content">
+    <nav class="tours-breadcrumbs" aria-label="Miga de pan">
+      <a href="/es">Inicio</a>
+      <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
+      <span class="current">Circuitos Multidía</span>
+    </nav>
+    <span class="tag"><i class="fa-solid fa-compass"></i> Expediciones Privadas a Medida</span>
+    <h1>Circuitos Multidía y Rutas por Marruecos</h1>
+    <p>Desde escapadas de 2 días a las dunas del Sáhara hasta grandes odiseas de 16 días por todo Marruecos: descubre {multiDayTours.length} itinerarios privados diseñados con guías locales oficiales, transporte de alta gama en 4x4 o monovolumen con aire acondicionado, y riads boutique seleccionados.</p>
+  </div>
+</section>
+
+<!-- DEPARTURE CITY HUBS QUICK JUMP CARDS -->
+<section class="city-hubs-section">
+  <div class="city-hubs-container">
+    <div class="section-badge-center">
+      <span class="tag"><i class="fa-solid fa-map-location-dot"></i> Explora por Ciudad de Partida</span>
+    </div>
+    <div class="city-hubs-grid">
+      <a href="/es/tours-from-marrakech" class="city-hub-card">
+        <div class="city-hub-info">
+          <h3>Circuitos desde Marrakech</h3>
+          <p>Dunas del desierto, pasos del Alto Atlas y travesías a Fez</p>
+        </div>
+        <span class="city-hub-count">{marrakechCount} Circuitos <i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+
+      <a href="/es/tours-from-casablanca" class="city-hub-card">
+        <div class="city-hub-info">
+          <h3>Circuitos desde Casablanca</h3>
+          <p>Grandes rutas, Ciudades Imperiales y llegadas de vuelos</p>
+        </div>
+        <span class="city-hub-count">{casablancaCount} Circuitos <i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+
+      <a href="/es/tours-from-fes" class="city-hub-card">
+        <div class="city-hub-info">
+          <h3>Circuitos desde Fez</h3>
+          <p>Bosques de cedros del Medio Atlas y rutas a Merzouga</p>
+        </div>
+        <span class="city-hub-count">{fesCount} Circuitos <i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+
+      <a href="/es/tours-from-tangier" class="city-hub-card">
+        <div class="city-hub-info">
+          <h3>Circuitos desde Tánger</h3>
+          <p>Chefchaouen, montes del Rif y travesías de Norte a Sur</p>
+        </div>
+        <span class="city-hub-count">{tangierCount} Circuitos <i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+
+      <a href="/es/tours-from-ouarzazate" class="city-hub-card">
+        <div class="city-hub-info">
+          <h3>Circuitos desde Ouarzazate</h3>
+          <p>Puerta directa al Sáhara, Valle del Draa y ruta de kasbahs</p>
+        </div>
+        <span class="city-hub-count">{ouarzazateCount} Circuitos <i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- TOURS SHOWCASE SECTION WITH DUAL FILTERS -->
+<section class="tours-catalogue-body">
+  <div class="category-showcase-container" x-data="{ activeCity: 'all', activeDuration: 'all' }">
+    
+    <!-- Filter Controls Bar -->
+    <div class="filters-master-panel">
+      <!-- Departure City Filter Pills -->
+      <div class="filter-row">
+        <span class="filter-row-label"><i class="fa-solid fa-location-dot" style="color:var(--sand-gold);margin-right:6px;"></i> Ciudad de Partida:</span>
+        <div class="filter-pills-group">
+          <button
+            class="filter-pill"
+            :class="activeCity === 'all' ? 'active' : ''"
+            @click="activeCity = 'all'"
+            type="button"
+          >
+            Todas las Ciudades ({multiDayTours.length})
+          </button>
+          <button
+            class="filter-pill"
+            :class="activeCity === 'marrakech' ? 'active' : ''"
+            @click="activeCity = 'marrakech'"
+            type="button"
+          >
+            Marrakech ({marrakechCount})
+          </button>
+          <button
+            class="filter-pill"
+            :class="activeCity === 'casablanca' ? 'active' : ''"
+            @click="activeCity = 'casablanca'"
+            type="button"
+          >
+            Casablanca ({casablancaCount})
+          </button>
+          <button
+            class="filter-pill"
+            :class="activeCity === 'fes' ? 'active' : ''"
+            @click="activeCity = 'fes'"
+            type="button"
+          >
+            Fez ({fesCount})
+          </button>
+          <button
+            class="filter-pill"
+            :class="activeCity === 'tangier' ? 'active' : ''"
+            @click="activeCity = 'tangier'"
+            type="button"
+          >
+            Tánger ({tangierCount})
+          </button>
+          <button
+            class="filter-pill"
+            :class="activeCity === 'ouarzazate' ? 'active' : ''"
+            @click="activeCity = 'ouarzazate'"
+            type="button"
+          >
+            Ouarzazate ({ouarzazateCount})
+          </button>
+        </div>
+      </div>
+
+      <!-- Duration Filter Pills -->
+      <div class="filter-row" style="margin-top: 14px;">
+        <span class="filter-row-label"><i class="fa-regular fa-clock" style="color:var(--sand-gold);margin-right:6px;"></i> Duración:</span>
+        <div class="filter-pills-group">
+          <button
+            class="filter-pill"
+            :class="activeDuration === 'all' ? 'active' : ''"
+            @click="activeDuration = 'all'"
+            type="button"
+          >
+            Todas las Duraciones
+          </button>
+          <button
+            class="filter-pill"
+            :class="activeDuration === '2-4' ? 'active' : ''"
+            @click="activeDuration = '2-4'"
+            type="button"
+          >
+            2–4 Días
+          </button>
+          <button
+            class="filter-pill"
+            :class="activeDuration === '5-7' ? 'active' : ''"
+            @click="activeDuration = '5-7'"
+            type="button"
+          >
+            5–7 Días
+          </button>
+          <button
+            class="filter-pill"
+            :class="activeDuration === '8-10' ? 'active' : ''"
+            @click="activeDuration = '8-10'"
+            type="button"
+          >
+            8–10 Días
+          </button>
+          <button
+            class="filter-pill"
+            :class="activeDuration === '11+' ? 'active' : ''"
+            @click="activeDuration = '11+'"
+            type="button"
+          >
+            11+ Días
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Multi-Day Tour Cards Grid -->
+    <div class="category-tours-wrapper">
+      <div class="category-tour-grid">
+        {multiDayTours.map(tour => {
+          const tier = getDurationTier(tour.durationDays);
+          return (
+            <article 
+              class="tour-card reveal active"
+              data-duration-tier={tier}
+              data-city={(tour.departureCityKey || tour.departureCity).toLowerCase()}
+              x-show={`(activeCity === 'all' || activeCity === '${(tour.departureCityKey || tour.departureCity).toLowerCase()}' || (activeCity === 'fes' && '${(tour.departureCityKey || tour.departureCity).toLowerCase()}' === 'fez') || (activeCity === 'tangier' && '${(tour.departureCityKey || tour.departureCity).toLowerCase()}' === 'tanger')) && (activeDuration === 'all' || activeDuration === '${tier}')`}
+              x-transition:enter="transition ease-out duration-300"
+              x-transition:enter-start="opacity-0 scale-95"
+              x-transition:enter-end="opacity-100 scale-100"
+            >
+              <div class="tour-img-wrapper">
+                <img 
+                  src={tour.heroImage} 
+                  alt={tour.shortTitle} 
+                  loading="lazy"
+                  onerror="this.src='/assets/placeholder-morocco.svg'"
+                />
+                {tour.badge && <span class="tour-badge">{tour.badge}</span>}
+              </div>
+              <div class="tour-info">
+                <div class="tour-meta">
+                  <div><i class="fa-regular fa-clock"></i> {tour.duration}</div>
+                  <div><i class="fa-solid fa-location-dot"></i> {tour.departureCity} &rarr; {tour.arrivalCity}</div>
+                </div>
+                <h3 class="tour-title" style="font-size:1.35rem;">{tour.shortTitle}</h3>
+                <p class="tour-desc">{tour.description}</p>
+                <div class="tour-footer">
+                  <div class="tour-price">
+                    <span class="tour-price-label">Desde</span>
+                    <span class="tour-price-value">{tour.price.replace(/^(From|Desde|Da|A partire da)\s*/i, '').replace(/\/(persona|person)\s*/i, '').trim()}</span>
+                  </div>
+                  <a href={`/es/tours/${tour.slug}`} class="btn btn-primary btn-sm">
+                    Ver Circuito <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+          );
+        })}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEPARATE PRODUCT FAMILIES CONTEXTUAL CROSS-LINK -->
+<section class="cross-silo-banner">
+  <div class="cross-silo-container">
+    <div class="cross-silo-box">
+      <div class="cross-silo-text">
+        <span class="tag"><i class="fa-solid fa-compass"></i> Otras Experiencias de Viaje</span>
+        <h3>¿Buscas Excursiones de un Día o Actividades al Aire Libre?</h3>
+        <p>Además de nuestros {multiDayTours.length} circuitos multidía, ofrecemos excursiones de un día y auténticas actividades en el desierto con salida desde Marrakech:</p>
+      </div>
+      <div class="cross-silo-links">
+        <a href="/es/imperial-cities" class="btn btn-secondary">
+          <i class="fa-solid fa-landmark"></i> Ciudades Imperiales
+        </a>
+        <a href="/es/day-trips" class="btn btn-secondary">
+          <i class="fa-solid fa-mountain-sun"></i> Excursiones de un Día
+        </a>
+        <a href="/es/activities" class="btn btn-secondary">
+          <i class="fa-solid fa-star"></i> Actividades y Espectáculos
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CUSTOM TRIP CTA BANNER -->
+<section class="custom-trip-cta">
+  <div class="custom-cta-card">
+    <div class="custom-cta-text">
+      <span class="tag"><i class="fa-solid fa-wand-magic-sparkles"></i> ¿Buscas algo a tu medida?</span>
+      <h3>¿No encuentras tu itinerario soñado?</h3>
+      <p>Nuestros diseñadores de viajes en Marrakech crearán una ruta 100% personalizada con transporte privado Mercedes, selección de riads de lujo y paradas secretas en el desierto adaptadas a tus fechas.</p>
+    </div>
+    <div class="custom-cta-btn">
+      <a href="/es/contact" class="btn btn-primary btn-lg">
+        <i class="fa-solid fa-paper-plane"></i> Solicitar Itinerario a Medida
+      </a>
+    </div>
+  </div>
+</section>
+
+</BaseLayout>
+
+<style>
+.tours-cat-hero {
+  position: relative;
+  padding: 160px 5% 80px;
+  text-align: center;
+  background: radial-gradient(circle at 50% 30%, rgba(217, 107, 67, 0.18) 0%, transparent 60%), linear-gradient(180deg, var(--night-surface) 0%, var(--night-bg) 100%);
+  border-bottom: 1px solid var(--glass-border);
+  overflow: hidden;
+}
+
+.tours-cat-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('/assets/zellij_pattern.svg');
+  background-repeat: repeat;
+  background-size: 180px 180px;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.tours-cat-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.tours-breadcrumbs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.tours-breadcrumbs a {
+  color: var(--text-muted);
+  transition: color 0.3s;
+}
+
+.tours-breadcrumbs a:hover {
+  color: var(--sand-gold);
+}
+
+.tours-breadcrumbs .sep {
+  font-size: 0.7rem;
+  opacity: 0.5;
+}
+
+.tours-breadcrumbs .current {
+  color: var(--sand-gold);
+  font-weight: 500;
+}
+
+.tours-cat-hero h1 {
+  font-size: 3.2rem;
+  line-height: 1.15;
+  margin: 16px 0 20px;
+  background: linear-gradient(135deg, var(--text-main) 30%, var(--sand-gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tours-cat-hero p {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* Departure City Quick Jump Cards */
+.city-hubs-section {
+  padding: 60px 5% 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.section-badge-center {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.city-hubs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+.city-hub-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  padding: 22px 20px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 14px;
+  transition: all 0.3s ease;
+}
+
+.city-hub-card:hover {
+  background: rgba(232, 195, 158, 0.05);
+  border-color: var(--sand-gold);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.city-hub-info h3 {
+  font-size: 1.15rem;
+  color: var(--text-main);
+  margin: 0 0 6px;
+  transition: color 0.3s;
+}
+
+.city-hub-card:hover .city-hub-info h3 {
+  color: var(--sand-gold);
+}
+
+.city-hub-info p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.city-hub-count {
+  font-size: 0.82rem;
+  color: var(--sand-gold);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Master Filter Panel */
+.tours-catalogue-body {
+  padding: 40px 0 80px;
+}
+
+.category-showcase-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.filters-master-panel {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  padding: 24px 26px;
+  margin-bottom: 45px;
+}
+
+.filter-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.filter-row-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-main);
+  min-width: 140px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.filter-pills-group {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.filter-pill {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--text-muted);
+  border-radius: 30px;
+  padding: 6px 16px;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.filter-pill:hover {
+  color: var(--sand-gold);
+  border-color: var(--sand-gold);
+}
+
+.filter-pill.active {
+  background: linear-gradient(135deg, var(--terracotta) 0%, hsl(14, 75%, 45%) 100%);
+  border-color: var(--terracotta);
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 4px 12px var(--terracotta-glow);
+}
+
+/* Tours Grid */
+.category-tour-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 32px;
+}
+
+/* Cross-Silo Banner */
+.cross-silo-banner {
+  padding: 40px 5% 50px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.cross-silo-box {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 40px 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 35px;
+  flex-wrap: wrap;
+}
+
+.cross-silo-text h3 {
+  font-size: 1.45rem;
+  color: var(--text-main);
+  margin: 8px 0 8px;
+}
+
+.cross-silo-text p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin: 0;
+  max-width: 650px;
+}
+
+.cross-silo-links {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* Custom Trip CTA Banner */
+.custom-trip-cta {
+  padding: 20px 5% 90px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.custom-cta-card {
+  background: radial-gradient(circle at 80% 50%, rgba(217, 107, 67, 0.15) 0%, transparent 60%), linear-gradient(135deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%);
+  border: 1px solid rgba(232, 195, 158, 0.25);
+  border-radius: var(--radius-lg);
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.custom-cta-text h3 {
+  font-size: 1.85rem;
+  color: var(--text-main);
+  margin: 10px 0 10px;
+}
+
+.custom-cta-text p {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin: 0;
+  max-width: 650px;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .tours-cat-hero h1 {
+    font-size: 2.3rem;
+  }
+  .filter-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .filter-row-label {
+    min-width: auto;
+  }
+  .cross-silo-box {
+    flex-direction: column;
+    text-align: center;
+  }
+  .cross-silo-links {
+    justify-content: center;
+  }
+  .custom-cta-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 35px 25px;
+  }
+}
+</style>

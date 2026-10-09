@@ -1,0 +1,523 @@
+---
+// src/pages/it/tours-from-casablanca.astro — Dedicated Italian Casablanca Departure Hub
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getLocalizedMultiDayToursByCity } from '../../data/toursI18n';
+import { getAlternateUrls } from '../../data/i18n';
+
+const tours = getLocalizedMultiDayToursByCity('Casablanca', 'it');
+const alternateUrls = getAlternateUrls('/tours-from-casablanca');
+
+function getDurationTier(days: number): string {
+  if (days <= 7) return '4-7';
+  if (days <= 10) return '8-10';
+  return '11+';
+}
+
+const casablancaSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "name": "Tour Privati in Marocco da Casablanca | Sahara Star Tours",
+      "description": `Scopri la nostra collezione completa di ${tours.length} tour privati di più giorni con partenza da Casablanca. Trasferimenti aeroportuali CMN, Città Imperiali e grandi spedizioni nel deserto del Sahara da 4 a 16 giorni.`,
+      "url": alternateUrls.it
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": alternateUrls.it.replace('/tours-from-casablanca', '')
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tour di Più Giorni",
+          "item": "https://www.saharastartours.com/it/tours"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Tour da Casablanca",
+          "item": alternateUrls.it
+        }
+      ]
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title={`Tour da Casablanca (${tours.length} Grandi Itinerari e Deserto) | Sahara Star Tours`}
+  description={`Prenota tour privati da Casablanca da 4 a 16 giorni. Accoglienza all'aeroporto CMN, Moschea Hassan II, Città Imperiali (Rabat, Fes, Marrakech) e glamping a Erg Chebbi.`}
+  keywords="tour da casablanca, tour deserto casablanca, casablanca marrakech tour, gran tour marocco casablanca, tour privati casablanca"
+  currentPage="tours"
+  lang="it"
+  alternateUrls={alternateUrls}
+  schemaData={casablancaSchema}
+>
+
+<!-- CITY HERO SECTION -->
+<section class="city-hero">
+  <div class="city-hero-overlay"></div>
+  <div class="city-hero-content">
+    <nav class="city-breadcrumbs" aria-label="Percorso">
+      <a href="/it">Home</a>
+      <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
+      <a href="/it/tours">Tour di Più Giorni</a>
+      <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
+      <span class="current">Tour da Casablanca</span>
+    </nav>
+    <span class="tag"><i class="fa-solid fa-plane-arrival"></i> Porta d'Accesso ai Grandi Tour del Marocco</span>
+    <h1>Tour Privati in Marocco da Casablanca</h1>
+    <p>Casablanca è la principale porta d'accesso aerea internazionale del Marocco. Con partenza diretta dall'Aeroporto Internazionale Mohammed V (CMN) o dal tuo hotel, i nostri itinerari privati collegano l'iconica Moschea Hassan II con le Città Imperiali, i vicoli blu di Chefchaouen e le profonde dune dorate del deserto del Sahara.</p>
+  </div>
+</section>
+
+<!-- LOCAL EDITORIAL / ROUTE INSIGHTS -->
+<section class="city-editorial-section">
+  <div class="city-editorial-container">
+    <div class="city-editorial-grid">
+      <div class="editorial-card">
+        <div class="editorial-icon"><i class="fa-solid fa-plane-departure"></i></div>
+        <h3>Accoglienza Diretta in Aeroporto</h3>
+        <p>Il tuo autista privato ti accoglie calorosamente agli arrivi dell'aeroporto CMN, accompagnandoti a bordo di un moderno veicolo climatizzato senza alcuno stress.</p>
+      </div>
+      <div class="editorial-card">
+        <div class="editorial-icon"><i class="fa-solid fa-mosque"></i></div>
+        <h3>Moschea Hassan II e Costa Atlantica</h3>
+        <p>Ammira una delle più straordinarie meraviglie architettoniche del mondo affacciata sull'Oceano Atlantico prima di proseguire verso le città storiche dell'interno.</p>
+      </div>
+      <div class="editorial-card">
+        <div class="editorial-icon"><i class="fa-solid fa-landmark"></i></div>
+        <h3>Quattro Capitali Imperiali</h3>
+        <p>Le partenze da Casablanca collegano le torri di Rabat, i portali di Meknes, il labirinto medievale di Fes e i vivaci souk di Marrakech in un unico grande viaggio.</p>
+      </div>
+      <div class="editorial-card">
+        <div class="editorial-icon"><i class="fa-solid fa-sun"></i></div>
+        <h3>Spedizioni Complete nel Sahara</h3>
+        <p>Dalle traversate express di 4 giorni alle grandi odissee di 16 giorni, vivi le dune di Erg Chebbi, le Gole del Todra e la rotta delle kasbah con campi tendati di lusso.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOURS CATALOGUE BODY -->
+<section class="city-catalog-body">
+  <div class="city-catalog-container" x-data="{ activeDuration: 'all' }">
+    
+    <!-- Filter bar -->
+    <div class="city-filter-panel">
+      <div class="filter-header-left">
+        <h2>{tours.length} Itinerari di Più Giorni con Partenza da Casablanca</h2>
+        <p>Trasporto privato di fascia alta, guide locali certificate nelle medine e alloggi boutique selezionati</p>
+      </div>
+      <div class="duration-pills-wrap">
+        <button
+          class="duration-pill"
+          :class="activeDuration === 'all' ? 'active' : ''"
+          @click="activeDuration = 'all'"
+          type="button"
+        >
+          Tutte le durate ({tours.length})
+        </button>
+        <button
+          class="duration-pill"
+          :class="activeDuration === '4-7' ? 'active' : ''"
+          @click="activeDuration = '4-7'"
+          type="button"
+        >
+          4–7 Giorni ({tours.filter(t => t.durationDays <= 7).length})
+        </button>
+        <button
+          class="duration-pill"
+          :class="activeDuration === '8-10' ? 'active' : ''"
+          @click="activeDuration = '8-10'"
+          type="button"
+        >
+          8–10 Giorni ({tours.filter(t => t.durationDays >= 8 && t.durationDays <= 10).length})
+        </button>
+        <button
+          class="duration-pill"
+          :class="activeDuration === '11+' ? 'active' : ''"
+          @click="activeDuration = '11+'"
+          type="button"
+        >
+          11+ Giorni ({tours.filter(t => t.durationDays >= 11).length})
+        </button>
+      </div>
+    </div>
+
+    <!-- Tours Grid -->
+    <div class="city-tours-grid">
+      {tours.map(tour => {
+        const tier = getDurationTier(tour.durationDays);
+        return (
+          <article 
+            class="tour-card reveal active"
+            data-duration-tier={tier}
+            x-show={`activeDuration === 'all' || activeDuration === '${tier}'`}
+            x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="opacity-0 scale-95"
+            x-transition:enter-end="opacity-100 scale-100"
+          >
+            <div class="tour-img-wrapper">
+              <img 
+                src={tour.heroImage} 
+                alt={tour.shortTitle} 
+                loading="lazy"
+                onerror="this.src='/assets/placeholder-morocco.svg'"
+              />
+              {tour.badge && <span class="tour-badge">{tour.badge}</span>}
+            </div>
+            <div class="tour-info">
+              <div class="tour-meta">
+                <div><i class="fa-regular fa-clock"></i> {tour.duration}</div>
+                <div><i class="fa-solid fa-location-dot"></i> A: {tour.arrivalCity}</div>
+              </div>
+              <h3 class="tour-title" style="font-size:1.35rem;">{tour.shortTitle}</h3>
+              <p class="tour-desc">{tour.description}</p>
+              <div class="tour-footer">
+                <div class="tour-price">
+                  <span class="tour-price-label">Da</span>
+                  <span class="tour-price-value">{tour.price.replace(/^(From|Desde|Da|A partire da)\s*/i, '').replace(/\/(persona|person)\s*/i, '').trim()}</span>
+                </div>
+                <a href={`/it/tours/${tour.slug}`} class="btn btn-primary btn-sm">
+                  Vedi Tour <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+        );
+      })}
+    </div>
+
+  </div>
+</section>
+
+<!-- THEMATIC CROSS-LINK BANNER (Imperial Cities) -->
+<section class="city-silo-nav">
+  <div class="city-silo-container">
+    <div class="silo-callout">
+      <div class="silo-callout-text">
+        <span class="tag"><i class="fa-solid fa-landmark"></i> Patrimonio Culturale e Storico</span>
+        <h3>Ti interessano i Tour delle Città Imperiali?</h3>
+        <p>Molti dei nostri itinerari da Casablanca visitano le antiche capitali dinastiche del Marocco. Se desideri concentrarti sulle medine UNESCO, le rovine romane e i palazzi storici, esplora la nostra sezione dedicata:</p>
+      </div>
+      <div class="silo-callout-btns">
+        <a href="/it/imperial-cities" class="btn btn-secondary">
+          <i class="fa-solid fa-archway"></i> Esplora le Città Imperiali
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OTHER DEPARTURE HUBS NAVIGATION -->
+<section class="other-hubs-nav">
+  <div class="other-hubs-container">
+    <h3>Scopri Tour di Più Giorni da Altre Città di Partenza</h3>
+    <div class="other-hubs-pills">
+      <a href="/it/tours-from-marrakech" class="hub-pill"><i class="fa-solid fa-sun"></i> Tour da Marrakech</a>
+      <a href="/it/tours-from-fes" class="hub-pill"><i class="fa-solid fa-landmark"></i> Tour da Fes</a>
+      <a href="/it/tours-from-tangier" class="hub-pill"><i class="fa-solid fa-ship"></i> Tour da Tangeri</a>
+      <a href="/it/tours-from-ouarzazate" class="hub-pill"><i class="fa-solid fa-camera"></i> Tour da Ouarzazate</a>
+      <a href="/it/tours" class="hub-pill active"><i class="fa-solid fa-compass"></i> Tutti i Tour di Più Giorni</a>
+    </div>
+  </div>
+</section>
+
+</BaseLayout>
+
+<style>
+.city-hero {
+  position: relative;
+  padding: 160px 5% 70px;
+  text-align: center;
+  background: radial-gradient(circle at 50% 30%, rgba(217, 107, 67, 0.18) 0%, transparent 60%), linear-gradient(180deg, var(--night-surface) 0%, var(--night-bg) 100%);
+  border-bottom: 1px solid var(--glass-border);
+  overflow: hidden;
+}
+
+.city-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('/assets/zellij_pattern.svg');
+  background-repeat: repeat;
+  background-size: 180px 180px;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.city-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.city-breadcrumbs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.city-breadcrumbs a {
+  color: var(--text-muted);
+  transition: color 0.3s;
+}
+
+.city-breadcrumbs a:hover {
+  color: var(--sand-gold);
+}
+
+.city-breadcrumbs .sep {
+  font-size: 0.7rem;
+  opacity: 0.5;
+}
+
+.city-breadcrumbs .current {
+  color: var(--sand-gold);
+  font-weight: 500;
+}
+
+.city-hero h1 {
+  font-size: 3rem;
+  line-height: 1.15;
+  margin: 16px 0 20px;
+  background: linear-gradient(135deg, var(--text-main) 30%, var(--sand-gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.city-hero p {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* Editorial cards */
+.city-editorial-section {
+  padding: 50px 5% 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.city-editorial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+}
+
+.editorial-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  padding: 26px 22px;
+  transition: all 0.3s ease;
+}
+
+.editorial-card:hover {
+  border-color: var(--sand-gold);
+  transform: translateY(-2px);
+}
+
+.editorial-icon {
+  font-size: 1.6rem;
+  color: var(--sand-gold);
+  margin-bottom: 14px;
+}
+
+.editorial-card h3 {
+  font-size: 1.15rem;
+  color: var(--text-main);
+  margin: 0 0 8px;
+}
+
+.editorial-card p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Catalog Body */
+.city-catalog-body {
+  padding: 40px 0 80px;
+}
+
+.city-catalog-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.city-filter-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 40px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.filter-header-left h2 {
+  font-size: 1.6rem;
+  color: var(--text-main);
+  margin: 0 0 6px;
+}
+
+.filter-header-left p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.duration-pills-wrap {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.duration-pill {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--text-muted);
+  border-radius: 30px;
+  padding: 7px 18px;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.duration-pill:hover {
+  color: var(--sand-gold);
+  border-color: var(--sand-gold);
+}
+
+.duration-pill.active {
+  background: linear-gradient(135deg, var(--terracotta) 0%, hsl(14, 75%, 45%) 100%);
+  border-color: var(--terracotta);
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 4px 14px var(--terracotta-glow);
+}
+
+.city-tours-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 32px;
+}
+
+/* Silo callout */
+.city-silo-nav {
+  padding: 20px 5% 50px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.silo-callout {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 35px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.silo-callout-text h3 {
+  font-size: 1.35rem;
+  color: var(--text-main);
+  margin: 8px 0 6px;
+}
+
+.silo-callout-text p {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.silo-callout-btns {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* Other Hubs Navigation */
+.other-hubs-nav {
+  padding: 30px 5% 90px;
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.other-hubs-nav h3 {
+  font-size: 1.25rem;
+  color: var(--text-main);
+  margin-bottom: 20px;
+}
+
+.other-hubs-pills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.hub-pill {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--glass-border);
+  color: var(--text-muted);
+  border-radius: 30px;
+  padding: 8px 20px;
+  font-size: 0.85rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s;
+}
+
+.hub-pill:hover {
+  color: var(--sand-gold);
+  border-color: var(--sand-gold);
+  transform: translateY(-2px);
+}
+
+.hub-pill.active {
+  border-color: var(--sand-gold);
+  color: var(--sand-gold);
+}
+
+@media (max-width: 900px) {
+  .city-filter-panel {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .silo-callout {
+    flex-direction: column;
+    text-align: center;
+  }
+  .silo-callout-btns {
+    justify-content: center;
+  }
+  .city-hero h1 {
+    font-size: 2.2rem;
+  }
+}
+</style>

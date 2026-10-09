@@ -1,0 +1,115 @@
+{
+  "slug": "one-day-marrakech-city-tour",
+  "title": "Visita Guiada de un Día por la Ciudad de Marrakech | Sahara Star Tours",
+  "shortTitle": "Visita Guiada de un Día por Marrakech",
+  "description": "Descubra el corazón de la Ciudad Roja con un guía local oficial. Visite el Palacio de la Bahía, la Koutoubia, las Tumbas Saadíes y la medina de Jemaa el-Fna.",
+  "aboutHtml": "Esta apasionante visita guiada de un día le llevará por los monumentos y rincones más emblemáticos de Marrakech. Acompañado por un guía local titulado, descubrirá todos los secretos y joyas ocultas de la Ciudad Roja.<br/><br/>Por la mañana visitaremos el célebre Jardín Majorelle fundado por Jacques Majorelle y restaurado por Yves Saint Laurent, con su exuberante colección botánica y el Museo Bereber. Después nos adentraremos en la antigua medina para disfrutar de un almuerzo tradicional en un riad marroquí.<br/><br/>Por la tarde continuaremos descubriendo el fastuoso Palacio de la Bahía con sus patios alicatados de azulejos zellige y techos de cedro pintado, el histórico barrio judío del Mellah y las majestuosas Tumbas Saadíes del siglo XVI.<br/><br/>Culminaremos el recorrido en la legendaria Plaza Jemaa el-Fna, corazón latente del arte y las tradiciones vivas de Marruecos.",
+  "duration": "1 Día / Excursión de Día Completo",
+  "startingFrom": "Marrakech",
+  "price": "Desde 55 $/persona",
+  "highlights": [
+    "Jardín Majorelle: Visite el extraordinario jardín botánico creado por Jacques Majorelle y restaurado por Yves Saint Laurent.",
+    "Museo Bereber: Conozca la rica historia, joyas y tradiciones del pueblo bereber originario de Marruecos.",
+    "Antigua Medina: Disfrute de un almuerzo marroquí tradicional en el corazón palpitante de Marrakech.",
+    "Palacio de la Bahía: Admire la deslumbrante arquitectura andalusí y los patios palaciegos del siglo XIX.",
+    "Barrio Judío (Mellah): Descubra la atmósfera única, mercados y sinagogas del histórico barrio judío.",
+    "Tumbas Saadíes: Explore el sobrecogedor mausoleo real del siglo XVI con columnas de mármol de Carrara.",
+    "Plaza Jemaa el-Fna: Concluya en la vibrante plaza declarada Patrimonio de la Humanidad por la UNESCO."
+  ],
+  "inclusions": [
+    "Guía oficial local titulado de Marrakech",
+    "Visita guiada exterior e interior del Palacio de la Bahía, Tumbas Saadíes y Mezquita Koutoubia",
+    "Recorrido a pie por los zocos gremiales y callejuelas históricas de la medina",
+    "Tiempo para compras de artesanía y fotografías en la mítica Plaza Jemaa el-Fna"
+  ],
+  "exclusions": [
+    "Gastos personales y compras de recuerdos",
+    "Propinas para su guía oficial y chófer (opcionales)",
+    "Almuerzo y bebidas no especificadas",
+    "Entradas a los monumentos y jardines históricos"
+  ],
+  "itinerary": [
+    {
+      "day": "Día 1",
+      "title": "Marrakech – Jardín Majorelle – Medina Antigua – Palacio de la Bahía – Mellah – Tumbas Saadíes – Jemaa el-Fna",
+      "content": "Su recorrido comienza con el encuentro con su guía oficial. La primera parada es el Jardín Majorelle, célebre por sus plantas exóticas, cactus gigantes y edificios pintados de azul cobalto intenso, donde también se ubica el Museo Bereber con colecciones de trajes y joyas tribales. A continuación, nos adentramos en la medina histórica de Marrakech para recorrer sus callejones y zocos gremiales especializados en especias, babuchas, alfombras y forja. Almuerzo tradicional marroquí en un riad o restaurante de la medina. Por la tarde, visitamos el Palacio de la Bahía, una obra cumbre de la arquitectura palaciega del siglo XIX con patios de mármol, fuentes y techos artesonados de cedro. Pasaremos por el Mellah (antiguo barrio judío) antes de llegar a las Tumbas Saadíes, donde reposan los monarcas de la dinastía con sus doce columnas de mármol de Carrara y delicadas yeserías. Para culminar, llegamos a la icónica Plaza Jemaa el-Fna, donde conviven encantadores de serpientes, músicos y cuentacuentos bajo la mirada del minarete de la Koutoubia. Regreso a su hotel al término de la visita."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Mezquita Koutoubia",
+      "day": "Mañana",
+      "subtitle": "Minarete del Siglo XII",
+      "desc": "Monumento icónico y jardines andalusíes de entrada."
+    },
+    {
+      "number": 2,
+      "name": "Palacio de la Bahía",
+      "day": "Mañana",
+      "subtitle": "Residencia del Gran Visir",
+      "desc": "Mosaicos zellige y techos artesonados de madera de cedro."
+    },
+    {
+      "number": 3,
+      "name": "Tumbas Saadíes",
+      "day": "Mediodía",
+      "subtitle": "Mausoleo Real",
+      "desc": "Sala de las Doce Columnas en mármol de Carrara."
+    },
+    {
+      "number": 4,
+      "name": "Madraza Ben Youssef",
+      "day": "Tarde",
+      "subtitle": "Antigua Escuela Coránica",
+      "desc": "Patios con yeserías y caligrafía árabe monumental."
+    },
+    {
+      "number": 5,
+      "name": "Plaza Jemaa el-Fna",
+      "day": "Tarde-Noche",
+      "subtitle": "Plaza UNESCO",
+      "desc": "Músicos, cuentacuentos y vibrantes puestos de comida."
+    },
+    {
+      "number": 6,
+      "name": "Jardín Majorelle",
+      "day": "Tarde",
+      "subtitle": "Oasis de Yves Saint Laurent",
+      "desc": "Villa azul cobalto y colección botánica exótica."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/day-trips/one-day-guided-tour-of-marrakech-city/images/thumbnail.jpg",
+      "cap": "Visita Guiada de un Día por la Ciudad de Marrakech",
+      "alt": "Patios y arquitectura tradicional del Palacio de la Bahía en Marrakech"
+    },
+    {
+      "src": "/sahara-star-tours/day-trips/one-day-guided-tour-of-marrakech-city/images/image-01.jpg",
+      "cap": "Visita Guiada de un Día por la Ciudad de Marrakech",
+      "alt": "Minarete de la mezquita Koutoubia elevándose sobre los jardines de Marrakech"
+    },
+    {
+      "src": "/sahara-star-tours/day-trips/one-day-guided-tour-of-marrakech-city/images/image-02.jpg",
+      "cap": "Visita Guiada de un Día por la Ciudad de Marrakech",
+      "alt": "Detalles de azulejos zellige y yeserías en las Tumbas Saadíes"
+    },
+    {
+      "src": "/sahara-star-tours/day-trips/one-day-guided-tour-of-marrakech-city/images/image-03.jpg",
+      "cap": "Visita Guiada de un Día por la Ciudad de Marrakech",
+      "alt": "Edificio azul cobalto y fuentes en el Jardín Majorelle"
+    },
+    {
+      "src": "/sahara-star-tours/day-trips/one-day-guided-tour-of-marrakech-city/images/image-04.jpeg",
+      "cap": "Visita Guiada de un Día por la Ciudad de Marrakech",
+      "alt": "Callejones y puestos de especias en los zocos de la medina de Marrakech"
+    },
+    {
+      "src": "/sahara-star-tours/day-trips/one-day-guided-tour-of-marrakech-city/images/image-05.jpeg",
+      "cap": "Visita Guiada de un Día por la Ciudad de Marrakech",
+      "alt": "Animación de cuentacuentos y puestos al atardecer en la Plaza Jemaa el-Fna"
+    }
+  ],
+  "faqs": []
+}

@@ -1,0 +1,151 @@
+{
+  "slug": "2-day-zagora-desert-tour-from-marrakech",
+  "title": "Tour di 2 Giorni nel Deserto di Zagora da Marrakech | Sahara Star Tours",
+  "shortTitle": "Tour di 2 Giorni nel Deserto di Zagora da Marrakech",
+  "description": "Vivi una splendida fuga express di 2 giorni nel deserto di Zagora da Marrakech. Attraversa l'Alto Atlante, visita la Kasbah di Ait Ben Haddou e dormi in un accampamento berbero.",
+  "aboutHtml": "<p>Questo tour privato di 2 giorni nel deserto di Zagora da Marrakech è l'itinerario perfetto per chi ha tempi ristretti ma non vuole rinunciare all'emozione del deserto marocchino. Viaggerai attraverso le maestose vette dell'Alto Atlante attraverso il valico di Tizi N'Tichka, scoprirai la celebre Kasbah di Ait Ben Haddou (Patrimonio UNESCO) e attraverserai la rigogliosa Valle del Draa prima di goderti una passeggiata a dorso di dromedario al tramonto e una notte sotto il cielo stellato di Zagora.</p>",
+  "duration": "2 Giorni / 1 Notte",
+  "startingFrom": "Marrakech",
+  "price": "Da $250/persona",
+  "highlights": [
+    "Trekking a dorso di dromedario nel deserto al tramonto",
+    "Kasbah di Ait Ben Haddou, patrimonio mondiale UNESCO",
+    "Itinerario panoramico attraverso le montagne dell'Alto Atlante",
+    "Medina storica e punti di riferimento iconici di Marrakech",
+    "Ouarzazate, la porta d'accesso al deserto",
+    "Zagora e i maestosi palmeti della Valle del Draa"
+  ],
+  "inclusions": [
+    "Veicolo privato 4×4 o minivan con aria condizionata",
+    "Autista/guida locale esperto e trasferimenti privati",
+    "Carburante, pedaggi stradali e costi operativi del veicolo",
+    "Sistemazione in riad/hotel selezionati secondo l'itinerario",
+    "Colazioni e cene incluse come da programma",
+    "Trekking in dromedario nel deserto e accesso all'accampamento"
+  ],
+  "exclusions": [
+    "Pranzi e bevande",
+    "Voli e servizi aeroportuali non specificati",
+    "Spese personali e attività facoltative",
+    "Mance e gratifiche"
+  ],
+  "itinerary": [
+    {
+      "day": "Giorno 1",
+      "title": "Marrakech – Kasbah di Ait Ben Haddou – Ouarzazate – Agdez – Deserto di Zagora",
+      "content": "Il tuo tour di 2 giorni nel deserto di Zagora inizia al mattino presto con il prelievo dal tuo alloggio o dall'aeroporto di Marrakech. Attraverserai il passo di Tizi N'Tichka (2.260 m), ammirando villaggi berberi arroccati e splendidi scorci panoramici. Raggiungerai la Kasbah di Ait Ben Haddou per una piacevole passeggiata in questo sito UNESCO leggendario, celebre set cinematografico di film come Il Gladiatore e Lawrence d'Arabia, nonché della serie Il Trono di Spade. Dopo il pranzo ad Ait Ben Haddou o a Ouarzazate, proseguirai attraverso l'Anti Atlante e lungo la suggestiva Valle del Draa, il palmeto più esteso del Marocco. Nel pomeriggio arriverai a Zagora per iniziare il trekking a dorso di dromedario al tramonto verso l'accampamento nel deserto, dove ti attende una cena tipica berbera con musica di tamburi sotto una magnifica volta stellata."
+    },
+    {
+      "day": "Giorno 2",
+      "title": "Deserto di Zagora a Marrakech",
+      "content": "Sveglia presto per ammirare il magico sorgere del sole a dorso di dromedario tra le dune, seguita da una ricca colazione marocchina. Partirai poi verso Ouarzazate, la porta del deserto, dove potrai visitare la Kasbah Taourirt e i rinomati studi cinematografici. Proseguirai quindi il viaggio di rientro verso Marrakech attraverso il valico di Tizi N'Tichka e i paesaggi dell'Alto Atlante. Il tour si concluderà con il rientro al tuo alloggio o all'aeroporto di Marrakech."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Marrakech",
+      "day": "Giorno 1",
+      "subtitle": "Marrakech – Kasbah di Ait Ben Haddou – Ouarzazate – Agdez – Deserto di Zagora",
+      "desc": "Partenza mattutina da Marrakech attraverso il Tizi N'Tichka verso Ait Ben Haddou, Ouarzazate e la Valle del Draa fino all'accampamento di Zagora."
+    },
+    {
+      "number": 2,
+      "name": "Deserto di Zagora a Marrakech",
+      "day": "Giorno 2",
+      "subtitle": "Deserto di Zagora a Marrakech",
+      "desc": "Alba sulle dune, visita di Ouarzazate e rientro a Marrakech attraverso l'Alto Atlante."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/2-day-zagora-desert-tour-from-marrakech/images/gallery_1.webp",
+      "cap": "Dune di Zagora",
+      "alt": "Increspature di sabbia scolpite dal vento su una duna del deserto sotto il cielo azzurro brillante"
+    },
+    {
+      "src": "/sahara-star-tours/2-day-zagora-desert-tour-from-marrakech/images/gallery_10.webp",
+      "cap": "Ait Ben Haddou",
+      "alt": "Porta in argilla fortificata di Ait Ben Haddou con dromedari a riposo nel letto del fiume"
+    },
+    {
+      "src": "/sahara-star-tours/2-day-zagora-desert-tour-from-marrakech/images/gallery_2.webp",
+      "cap": "Valle del Draa",
+      "alt": "Strada panoramica di montagna che si snoda tra i palmeti nella Valle del Draa"
+    },
+    {
+      "src": "/sahara-star-tours/2-day-zagora-desert-tour-from-marrakech/images/gallery_3.webp",
+      "cap": "Oasi del Draa",
+      "alt": "Alte palme da dattero contro il cielo blu in una lussureggiante oasi marocchina"
+    },
+    {
+      "src": "/sahara-star-tours/2-day-zagora-desert-tour-from-marrakech/images/gallery_4.webp",
+      "cap": "Villaggio dell'Alto Atlante",
+      "alt": "Abitazioni in terra cruda di una kasbah su un pendio roccioso dell'Alto Atlante"
+    },
+    {
+      "src": "/sahara-star-tours/2-day-zagora-desert-tour-from-marrakech/images/gallery_5.webp",
+      "cap": "Torre fortificata",
+      "alt": "Torre fortificata in mattoni di fango con motivi geometrici contro il cielo"
+    },
+    {
+      "src": "/sahara-star-tours/2-day-zagora-desert-tour-from-marrakech/images/gallery_6.webp",
+      "cap": "Aeroporto di Marrakech",
+      "alt": "Moderna architettura curva del terminal dell'aeroporto Menara di Marrakech"
+    },
+    {
+      "src": "/sahara-star-tours/2-day-zagora-desert-tour-from-marrakech/images/gallery_7.webp",
+      "cap": "Cime dell'Alto Atlante",
+      "alt": "Valle verdeggiante e torrente di montagna con le vette innevate dell'Alto Atlante"
+    },
+    {
+      "src": "/sahara-star-tours/2-day-zagora-desert-tour-from-marrakech/images/gallery_8.webp",
+      "cap": "Ksar al crepuscolo",
+      "alt": "Ksar fortificato di Ait Ben Haddou all'imbrunire con il granaio sulla collina"
+    },
+    {
+      "src": "/sahara-star-tours/2-day-zagora-desert-tour-from-marrakech/images/gallery_9.webp",
+      "cap": "Kasbah e palmeto",
+      "alt": "Torri della kasbah in terra battuta incorniciate da palme e ulivi"
+    },
+    {
+      "src": "/sahara-star-tours/2-day-zagora-desert-tour-from-marrakech/images/hero_2.webp",
+      "cap": "Panoramica di Ait Ben Haddou",
+      "alt": "Veduta panoramica dello ksar in mattoni di fango di Ait Ben Haddou"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Questo tour è privato o condiviso?",
+      "answer": "Si tratta di un'esperienza completamente privata: veicolo, autista e itinerario sono riservati in esclusiva al tuo gruppo. Il percorso e i ritmi possono essere personalizzati in base ai tuoi desideri."
+    },
+    {
+      "question": "Quanto dura il trekking in dromedario e ci sono alternative?",
+      "answer": "La passeggiata a dorso di dromedario dura solitamente tra 40 minuti e 1,5 ore. Su richiesta è possibile organizzare il trasferimento in 4×4, oppure noleggiare quad a un costo aggiuntivo."
+    },
+    {
+      "question": "La tenda nell'accampamento nel deserto è privata?",
+      "answer": "Sì, l'accampamento nel deserto include tende private dotate di bagno interno e doccia con acqua calda, a seconda della categoria confermata."
+    },
+    {
+      "question": "Dove vengono effettuati il prelievo e il rientro?",
+      "answer": "Il prelievo viene concordato presso il tuo alloggio, in aeroporto o in un punto d'incontro a Marrakech. Il tour si conclude a Marrakech con rientro al punto stabilito."
+    },
+    {
+      "question": "Quale tipologia di veicolo viene utilizzata?",
+      "answer": "Il viaggio si svolge in un moderno veicolo privato 4×4 o minivan dotato di aria condizionata. Per gruppi più numerosi viene impiegato un minibus adeguato."
+    },
+    {
+      "question": "È possibile soddisfare esigenze alimentari particolari?",
+      "answer": "Certamente. Comunicaci eventuali preferenze o allergie al momento della prenotazione in modo che riad, hotel e accampamento possano predisporre pasti adatti (vegetariani, vegani, halal, senza glutine, ecc.)."
+    },
+    {
+      "question": "Questo itinerario è adatto a viaggiatori di ogni età?",
+      "answer": "Sì, sebbene preveda alcune ore di viaggio su strada (fino a circa 6 ore). Sono previste frequenti soste panoramiche ed è sempre possibile concordare un percorso più rilassato."
+    },
+    {
+      "question": "Qual è il periodo migliore per questo viaggio?",
+      "answer": "La primavera e l'autunno offrono un clima particolarmente piacevole in tutto il Marocco. Anche l'inverno è ottimo per il deserto del sud, pur con temperature più fresche sui passi montani."
+    }
+  ]
+}

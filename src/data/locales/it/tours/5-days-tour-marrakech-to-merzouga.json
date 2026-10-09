@@ -1,0 +1,176 @@
+{
+  "slug": "5-days-tour-marrakech-to-merzouga",
+  "title": "Tour Privato di 5 Giorni da Marrakech a Merzouga | Sahara Star Tours",
+  "shortTitle": "Tour Privato di 5 Giorni a Merzouga",
+  "description": "Viaggio privato di 5 giorni da Marrakech: Alto Atlante, Kasbah Telouet, Ait Ben Haddou, Valle del Draa, giornata completa a Merzouga con i nomadi e Valle del Dades.",
+  "aboutHtml": "Il Tour Privato di 5 Giorni da Marrakech al desierto di Merzouga è la scelta ideale per immergersi appieno nei ritmi e nei paesaggi del sud marocchino senza alcuna fretta. Include la visita alla storica Kasbah di Telouet e allo ksar di Ait Ben Haddou (UNESCO), l'attraversamento della suggestiva Valle del Draa e un'intera giornata a Merzouga dedicata a scoprire i villaggi nomadi in 4x4 e ad ascoltare la musica Gnawa a Khamlia. Vivi una cammellata al tramonto sulle dune di Erg Chebbi e due notti memorabili nel Sahara prima di fare ritorno tra i canyon del Todra e del Dades.",
+  "duration": "5 Giorni / 4 Notti",
+  "startingFrom": "Marrakech",
+  "price": "Da $650/persona",
+  "highlights": [
+    "Deserto del Sahara a Merzouga e le dune di Erg Chebbi",
+    "Passeggiata a dorso di dromedario nel deserto al tramonto",
+    "Kasbah di Ait Ben Haddou, Patrimonio Mondiale dell'UNESCO",
+    "Percorso panoramico attraverso le vette dell'Alto Atlante",
+    "Medina storica e monumenti iconici di Marrakech"
+  ],
+  "inclusions": [
+    "Veicolo privato 4x4 o minivan dotato di aria condizionata",
+    "Autista/guida locale esperto e trasferimenti privati dedicati",
+    "Carburante, pedaggi stradali e costi operativi standard del veicolo",
+    "Pernottamento in riad/hotel selezionati come indicato nell'itinerario",
+    "Colazioni quotidiane e cene incluse secondo l'itinerario",
+    "Trekking in dromedario nel deserto e accesso al campo tendato tra le dune"
+  ],
+  "exclusions": [
+    "Pranzi e bevande",
+    "Voli aerei e servizi aeroportuali non esplicitamente indicati",
+    "Spese personali e attività facoltative",
+    "Mance e gratifiche"
+  ],
+  "itinerary": [
+    {
+      "day": "Giorno 1",
+      "title": "Marrakech – Alto Atlante – Kasbah Telouet – Kasbah Ait Ben Haddou – Ouarzazate",
+      "content": "Partenza da Marrakech attraverso il valico di Tizi n'Tichka (2.260 m). Visita alla splendida Kasbah di Telouet e discesa nella Valle di Ounila fino al celeberrimo ksar di Ait Ben Haddou (Patrimonio UNESCO). Arrivo a Ouarzazate per la cena e il pernottamento."
+    },
+    {
+      "day": "Giorno 2",
+      "title": "Ouarzazate – Agdz – Valle del Draa – Nkob – Deserto di Merzouga",
+      "content": "Viaggio verso sud oltre il passo di Tinififft e gli sterminati palmeti della Valle del Draa. Proseguimento via Nkob e Rissani fino a Merzouga. Passeggiata sui dromedari al tramonto verso il campo tendato di lusso a Erg Chebbi per una cena tipica sotto le stelle."
+    },
+    {
+      "day": "Giorno 3",
+      "title": "Esplorazione di Merzouga – Famiglie Nomadi – Khamlia – Oasi di Erg Chebbi",
+      "content": "Intera giornata nel deserto in 4x4: visita alle famiglie nomadi berbere nelle tende tradizionali, spettacolo musicale dei maestri Gnawa a Khamlia e sosta all'oasi. Pomeriggio tra le dune e seconda notte a Merzouga."
+    },
+    {
+      "day": "Giorno 4",
+      "title": "Sahara di Merzouga – Rissani – Erfoud – Gole del Todra – Valle del Dades",
+      "content": "Alba indimenticabile sulle dune e partenza verso il mercato carovaniero di Rissani. Sosta a Erfoud per i fossili e passeggiata nelle suggestive Gole del Todra tra falesie a strapiombo. Cena e pernottamento nella Valle del Dades."
+    },
+    {
+      "day": "Giorno 5",
+      "title": "Valle del Dades – Valle delle Rose – Palmeraie di Skoura – Kasbah Amridil – Marrakech",
+      "content": "Ritorno attraverso la Valle delle Rose e visita alla storica Kasbah Amridil a Skoura. Attraversamento dell'Alto Atlante e arrivo a Marrakech nel tardo pomeriggio con accompagnamento al tuo alloggio."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Marrakech",
+      "day": "Giorno 1",
+      "subtitle": "Partenza",
+      "desc": "Kasbah Telouet, Ait Ben Haddou e Ouarzazate."
+    },
+    {
+      "number": 2,
+      "name": "Valle del Draa",
+      "day": "Giorno 2",
+      "subtitle": "Oasi e Palmeti",
+      "desc": "Viaggio lungo il Draa verso le dune di Merzouga."
+    },
+    {
+      "number": 3,
+      "name": "Merzouga Sahara",
+      "day": "Giorno 3",
+      "subtitle": "Esperienza Nomade",
+      "desc": "Musica Gnawa, nomadi berberi e 4x4."
+    },
+    {
+      "number": 4,
+      "name": "Gole del Todra",
+      "day": "Giorno 4",
+      "subtitle": "Canyon dell'Atlante",
+      "desc": "Falesie del Todra e Valle del Dades."
+    },
+    {
+      "number": 5,
+      "name": "Marrakech",
+      "day": "Giorno 5",
+      "subtitle": "Rientro",
+      "desc": "Kasbah Amridil, Alto Atlante e arrivo a Marrakech."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/5-days-tour-marrakech-to-merzouga/images/gallery_1.webp",
+      "cap": "Torri e merli della Kasbah fortificata di Ait Ben Haddou",
+      "alt": "Torri in terra battuta e merlature alla Kasbah di Ait Ben Haddou"
+    },
+    {
+      "src": "/sahara-star-tours/5-days-tour-marrakech-to-merzouga/images/gallery_10.webp",
+      "cap": "Mongolfiere che sorvolano la palmeraie di Marrakech all'alba",
+      "alt": "Mongolfiere in volo sopra la piana del palmeto di Marrakech all'aurora"
+    },
+    {
+      "src": "/sahara-star-tours/5-days-tour-marrakech-to-merzouga/images/gallery_2.webp",
+      "cap": "Guida con dromedari tra le dune sotto un cielo tempestoso",
+      "alt": "Guida che conduce la carovana di dromedari sulle dune sabbiose"
+    },
+    {
+      "src": "/sahara-star-tours/5-days-tour-marrakech-to-merzouga/images/gallery_3.webp",
+      "cap": "Donne in abaya tradizionale lungo un vicolo color ocra",
+      "alt": "Donne tradizionali che camminano in un vicolo ocra della medina"
+    },
+    {
+      "src": "/sahara-star-tours/5-days-tour-marrakech-to-merzouga/images/gallery_4.webp",
+      "cap": "Mura in argilla rossa e finestre della Kasbah Taourirt a Ouarzazate",
+      "alt": "Pareti in terra rossa e finestre intagliate alla Kasbah Taourirt"
+    },
+    {
+      "src": "/sahara-star-tours/5-days-tour-marrakech-to-merzouga/images/gallery_5.webp",
+      "cap": "Gatta che allatta il cucciolo su un cuscino berbero in riad",
+      "alt": "Mamma gatta che nutre il micetto su un cuscino artigianale berbero"
+    },
+    {
+      "src": "/sahara-star-tours/5-days-tour-marrakech-to-merzouga/images/gallery_6.webp",
+      "cap": "Boccette di profumo e specchi decorati in bottega artigianale",
+      "alt": "Flaconi di profumo artigianale e specchi intarsiati in negozio locale"
+    },
+    {
+      "src": "/sahara-star-tours/5-days-tour-marrakech-to-merzouga/images/gallery_8.webp",
+      "cap": "Uomo locale con turbante arancione davanti a edificio in adobe",
+      "alt": "Uomo del deserto con turbante color arancio davanti a una casa in terra cruda"
+    },
+    {
+      "src": "/sahara-star-tours/5-days-tour-marrakech-to-merzouga/images/hero_2.webp",
+      "cap": "Veduta panoramica della fortezza arroccata di Ait Ben Haddou",
+      "alt": "Panorama dell'antica fortezza sulla collina di Ait Ben Haddou"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Questo tour è privato o condiviso?",
+      "answer": "È un viaggio interamente privato: il veicolo, l'autista e le escursioni sono a tuo uso esclusivo."
+    },
+    {
+      "question": "Quanto dura la passeggiata sui dromedari e c'è un'alternativa?",
+      "answer": "Dura da 45 minuti a un'ora e mezza. Su richiesta è disponibile il trasferimento in fuoristrada 4x4 senza supplementi."
+    },
+    {
+      "question": "La tenda nel campo del deserto dispone di bagno privato?",
+      "answer": "Sì, ogni tenda del nostro campo di lusso è dotata di letti confortevoli e bagno privato con doccia e acqua calda."
+    },
+    {
+      "question": "Dove avvengono il prelievo e il rientro?",
+      "answer": "Ti preleveremo direttamente al tuo alloggio a Marrakech e ti riaccompagneremo al termine dell'itinerario."
+    },
+    {
+      "question": "Che tipo di veicolo viene impiegato per il tour?",
+      "answer": "Impieghiamo comodi fuoristrada 4x4 o moderni minivan con aria condizionata e capienza ottimale per i bagagli."
+    },
+    {
+      "question": "È possibile richiedere menu per esigenze dietetiche particolari?",
+      "answer": "Certamente, segnalaci regimi vegetariani, vegani, celiaci o halal in fase di prenotazione per predisporre menu su misura."
+    },
+    {
+      "question": "Il viaggio è indicato per persone di ogni età?",
+      "answer": "Assolutamente sì: con 5 giorni a disposizione le tappe sono calibrate e rilassanti per famiglie, coppie e anziani."
+    },
+    {
+      "question": "Qual è il periodo migliore dell'anno per effettuare questo tour?",
+      "answer": "La primavera e l'autunno sono le stagioni più piacevoli. Anche l'inverno offre giornate limpide e temperature miti di giorno."
+    }
+  ]
+}

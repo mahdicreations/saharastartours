@@ -1,0 +1,283 @@
+{
+  "slug": "13-day-absolute-morocco-tour-from-tangier",
+  "title": "Gran Tour de 13 Días por Marruecos desde Tánger | Sahara Star Tours",
+  "shortTitle": "Gran Tour de 13 Días por Marruecos desde Tánger",
+  "description": "Circuito completo de 13 días por Marruecos en bucle desde Tánger. Chefchaouen, Fez imperial, glamping en el Sahara, Marrakech, Essaouira costera y Rabat.",
+  "aboutHtml": "Este gran circuito privado de 13 días comienza y termina en Tánger. A lo largo del recorrido disfrutará de Tánger, Chefchaouen, Volubilis, Meknes, Fez, los bosques de cedros del Medio Atlas, las dunas de Merzouga en el Sahara con campamento de lujo, las Gargantas del Todra y Dades, Ouarzazate, Marrakech, la marinera Essaouira, Casablanca, Rabat y Arcila.",
+  "duration": "13 Días / 12 Noches",
+  "startingFrom": "Tánger",
+  "price": "Desde 1.590 $/persona",
+  "highlights": [
+    "Desierto del Sahara en Merzouga y las dunas de Erg Chebbi",
+    "Paseo en camello por el desierto al atardecer",
+    "Kasbah de Ait Ben Haddou declarada Patrimonio de la Humanidad por la UNESCO",
+    "Paso panorámico a través de las altas cumbres del Alto Atlas",
+    "Chefchaouen, la mágica ciudad azul en las montañas del Rif",
+    "Medina histórica de Fez y sus tesoros culturales milenarios"
+  ],
+  "inclusions": [
+    "Vehículo privado 4x4 o monovolumen moderno con aire acondicionado",
+    "Chófer y guía local profesional con traslados privados",
+    "Combustible, peajes y todos los gastos operativos del vehículo",
+    "Alojamiento en riads y hoteles con encanto especificados en el itinerario",
+    "Desayunos diarios y cenas incluidas según el programa detallado",
+    "Paseo en camello por el desierto y estancia en campamento de jaimas de lujo"
+  ],
+  "exclusions": [
+    "Almuerzos y bebidas durante el viaje",
+    "Billetes de avión internacionales y servicios no especificados",
+    "Gastos personales y actividades opcionales",
+    "Propinas para guías y chófer"
+  ],
+  "itinerary": [
+    {
+      "day": "Día 1",
+      "title": "Llegada a Tánger – Chefchaouen",
+      "content": "Recepción en el aeropuerto o puerto de Tánger. Recorrido por el Cabo Espartel y las Grutas de Hércules frente al Estrecho de Gibraltar. Almuerzo y trayecto montañoso a través del Rif hacia Chefchaouen. Alojamiento en riad tradicional en la medina azul."
+    },
+    {
+      "day": "Día 2",
+      "title": "Visita de Chefchaouen, la Ciudad Azul",
+      "content": "Visita guiada matinal por las callejuelas empedradas de azul cobalto de Chefchaouen y sus puertas andalusíes. Almuerzo libre y caminata por la tarde hasta la Mezquita Española sobre la colina para contemplar la panorámica al atardecer. Noche en el mismo riad."
+    },
+    {
+      "day": "Día 3",
+      "title": "Chefchaouen – Volubilis – Meknes – Fez",
+      "content": "Visita a las ruinas romanas de Volubilis (Patrimonio de la Humanidad UNESCO) y sus bellos mosaicos. Continuación hacia la imperial Meknes para ver la monumental puerta Bab Mansour y el Mausoleo de Moulay Ismail. Llegada a Fez y alojamiento en riad."
+    },
+    {
+      "day": "Día 4",
+      "title": "Visita Guiada Monumental de Fez",
+      "content": "Jornada completa en Fez el-Bali con guía oficial: el Palacio Real, el barrio judío del Mellah, el mirador de Borj Sud, la Madraza Al Attarine, la mezquita Al Quaraouiyine y las históricas tenerías de Chouara. Tarde libre en los zocos y noche en riad."
+    },
+    {
+      "day": "Día 5",
+      "title": "Fez – Ifrane – Bosque de Cedros – Midelt – Valle del Ziz – Desierto de Merzouga",
+      "content": "Travesía del Medio Atlas pasando por Ifrane y el bosque de cedros de Azrou para ver a los macacos salvajes. Almuerzo en Midelt y descenso por el Valle del Ziz. Por la tarde, llegada a Merzouga e inicio del paseo en camello por las dunas de Erg Chebbi. Puesta de sol, cena bereber y noche en campamento de jaimas de lujo."
+    },
+    {
+      "day": "Día 6",
+      "title": "Exploración de Merzouga – Familias Nómadas – Khamlia – Erg Chebbi",
+      "content": "Amanecer en las dunas y desayuno. Excursión en 4x4 por las minas de kohl, encuentro con nómadas en sus jaimas y música espiritual Gnawa en Khamlia. Paseo por los palmerales y el lago de los flamencos. Cena y noche en hotel junto a las dunas."
+    },
+    {
+      "day": "Día 7",
+      "title": "Merzouga – Rissani – Erfoud – Gargantas del Todra – Valle del Dades",
+      "content": "Visita al mercado de Rissani y talleres de mármol fosilizado en Erfoud. Paseo por las monumentales Gargantas del Todra con paredes de 300 metros. Continuación hacia el Valle del Dades con paradas en las formaciones de los dedos de mono. Cena y noche en riad."
+    },
+    {
+      "day": "Día 8",
+      "title": "Valle del Dades – Valle de las Rosas – Ouarzazate – Ait Ben Haddou – Alto Atlas – Marrakech",
+      "content": "Paso por el Valle de las Rosas y los estudios de cine de Ouarzazate. Visita guiada a pie por la famosa Kasbah de Ait Ben Haddou (Patrimonio UNESCO). Cruce del Alto Atlas por el sinuoso paso de Tizi n'Tichka (2.260 m) hasta llegar a Marrakech. Noche en riad."
+    },
+    {
+      "day": "Día 9",
+      "title": "Visita Monumental Guiada de Marrakech",
+      "content": "Recorrido por los monumentos históricos de Marrakech: el Palacio de la Bahía, la Madraza Ben Youssef, la Koutoubia y los zocos gremiales. Tiempo libre en la animada Plaza Jemaa el-Fna. Por la tarde, visita opcional a los Jardines Majorelle. Noche en riad."
+    },
+    {
+      "day": "Día 10",
+      "title": "Marrakech – Essaouira",
+      "content": "Viaje a la costa atlántica con paradas en los bosques de argán para observar las cabras trepadoras. En Essaouira recorrerá las murallas de la Skala, el puerto pesquero artesanal y la medina blanca. Alojamiento en hotel de Essaouira."
+    },
+    {
+      "day": "Día 11",
+      "title": "Essaouira – Visita de Casablanca",
+      "content": "Ruta por autopista hacia Casablanca, capital económica del país. Visita a la monumental Mezquita Hassan II sobre el océano, la cornisa de Ain Diab, la Plaza Mohamed V y parada fotográfica en el emblemático Rick's Café. Alojamiento en Casablanca."
+    },
+    {
+      "day": "Día 12",
+      "title": "Casablanca – Visita de Rabat – Arcila",
+      "content": "Traslado a Rabat para visitar la Torre Hassan, el Mausoleo de Mohamed V y la Kasbah de los Oudayas. Por la tarde, nos dirigimos a la costera y artística villa de Arcila (Asilah) con sus murallas marinas. Noche en riad de Arcila."
+    },
+    {
+      "day": "Día 13",
+      "title": "Arcila – Traslado a Tánger y Fin del Viaje",
+      "content": "Desayuno en el riad y traslado privado al puerto o aeropuerto de Tánger para su salida internacional, dando por concluido este gran circuito de 13 días."
+    }
+  ],
+  "mapDestinations": [
+    {
+      "number": 1,
+      "name": "Llegada a Tánger",
+      "day": "Día 1",
+      "subtitle": "Bienvenida",
+      "desc": "Cabo Espartel, Grutas de Hércules y ruta a Chefchaouen."
+    },
+    {
+      "number": 2,
+      "name": "Chefchaouen",
+      "day": "Día 2",
+      "subtitle": "Ciudad Azul",
+      "desc": "Visita guiada por callejones azules y Mezquita Española."
+    },
+    {
+      "number": 3,
+      "name": "Chefchaouen a Fez",
+      "day": "Día 3",
+      "subtitle": "Volubilis y Meknes",
+      "desc": "Mosaicos romanos de Volubilis y puerta Bab Mansour."
+    },
+    {
+      "number": 4,
+      "name": "Visita de Fez",
+      "day": "Día 4",
+      "subtitle": "Medina Medieval",
+      "desc": "Palacio Real, madrazas históricas y tenerías de Chouara."
+    },
+    {
+      "number": 5,
+      "name": "Fez a Merzouga",
+      "day": "Día 5",
+      "subtitle": "Sahara",
+      "desc": "Ifrane, bosque de cedros, dunas de Erg Chebbi y campamento de lujo."
+    },
+    {
+      "number": 6,
+      "name": "Región de Merzouga",
+      "day": "Día 6",
+      "subtitle": "Vida Nómada",
+      "desc": "Música Gnawa en Khamlia y té con familias del desierto."
+    },
+    {
+      "number": 7,
+      "name": "Merzouga a Dades",
+      "day": "Día 7",
+      "subtitle": "Gargantas del Todra",
+      "desc": "Mercado de Rissani y cañón rocoso del Todra."
+    },
+    {
+      "number": 8,
+      "name": "Dades a Marrakech",
+      "day": "Día 8",
+      "subtitle": "Kasbahs y Atlas",
+      "desc": "Kasbah de Ait Ben Haddou y paso de Tizi n'Tichka."
+    },
+    {
+      "number": 9,
+      "name": "Marrakech",
+      "day": "Día 9",
+      "subtitle": "Ciudad Roja",
+      "desc": "Palacio de la Bahía, zocos y Plaza Jemaa el-Fna."
+    },
+    {
+      "number": 10,
+      "name": "Marrakech a Essaouira",
+      "day": "Día 10",
+      "subtitle": "Costa de Mogador",
+      "desc": "Arganes, murallas oceánicas y puerto pesquero."
+    },
+    {
+      "number": 11,
+      "name": "Essaouira a Casablanca",
+      "day": "Día 11",
+      "subtitle": "Mezquita Hassan II",
+      "desc": "Gran mezquita sobre el mar y cornisa de Casablanca."
+    },
+    {
+      "number": 12,
+      "name": "Rabat y Arcila",
+      "day": "Día 12",
+      "subtitle": "Capital y Costa",
+      "desc": "Torre Hassan en Rabat y murallas marítimas de Arcila."
+    },
+    {
+      "number": 13,
+      "name": "Tánger",
+      "day": "Día 13",
+      "subtitle": "Salida",
+      "desc": "Traslado final al aeropuerto o puerto de Tánger."
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/sahara-star-tours/13-day-absolute-morocco-tour-from-tangier/images/gallery_1.webp",
+      "cap": "Galería 1",
+      "alt": "Portal de entrada decorativo con celosía geométrica islámica tradicional"
+    },
+    {
+      "src": "/sahara-star-tours/13-day-absolute-morocco-tour-from-tangier/images/gallery_10.webp",
+      "cap": "Galería 10",
+      "alt": "Dunas onduladas de Erg Chebbi brillando bajo la suave luz de la mañana"
+    },
+    {
+      "src": "/sahara-star-tours/13-day-absolute-morocco-tour-from-tangier/images/gallery_2.webp",
+      "cap": "Galería 2",
+      "alt": "Torre de ladrillo en ruinas sobre una colina verde en el norte de Marruecos"
+    },
+    {
+      "src": "/sahara-star-tours/13-day-absolute-morocco-tour-from-tangier/images/gallery_3.webp",
+      "cap": "Galería 3",
+      "alt": "Viajeros montando en camellos a través de las dunas hacia el campamento"
+    },
+    {
+      "src": "/sahara-star-tours/13-day-absolute-morocco-tour-from-tangier/images/gallery_4.webp",
+      "cap": "Galería 4",
+      "alt": "Arcos arquitectónicos minimalistas de tono rosado en un patio tradicional"
+    },
+    {
+      "src": "/sahara-star-tours/13-day-absolute-morocco-tour-from-tangier/images/gallery_5.webp",
+      "cap": "Galería 5",
+      "alt": "Plato tradicional de cuscús marroquí con carne tierna y cebolla caramelizada tfaya"
+    },
+    {
+      "src": "/sahara-star-tours/13-day-absolute-morocco-tour-from-tangier/images/gallery_6.webp",
+      "cap": "Galería 6",
+      "alt": "Ficus centenario y cañones en las murallas de los Jardines de Mendoubia en Tánger"
+    },
+    {
+      "src": "/sahara-star-tours/13-day-absolute-morocco-tour-from-tangier/images/gallery_7.webp",
+      "cap": "Galería 7",
+      "alt": "Faro de Cabo Espartel asomado sobre el océano Atlántico cerca de Tánger"
+    },
+    {
+      "src": "/sahara-star-tours/13-day-absolute-morocco-tour-from-tangier/images/gallery_8.webp",
+      "cap": "Galería 8",
+      "alt": "Casas encaladas de azul en la ladera de Chefchaouen rodeadas de montañas verdes"
+    },
+    {
+      "src": "/sahara-star-tours/13-day-absolute-morocco-tour-from-tangier/images/gallery_9.webp",
+      "cap": "Galería 9",
+      "alt": "Antiguas columnas romanas y ruinas de piedra en Volubilis vistas a través de un arco"
+    },
+    {
+      "src": "/sahara-star-tours/13-day-absolute-morocco-tour-from-tangier/images/hero_2.webp",
+      "cap": "Hero 2",
+      "alt": "Vista panorámica de la ciudad azul de montaña de Chefchaouen"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "¿Es este un tour privado o compartido?",
+      "answer": "Es un viaje 100% privado en exclusiva para usted y su grupo, con chófer y guía a su entera disposición."
+    },
+    {
+      "question": "¿Cuánto dura el paseo en camello y qué alternativa hay?",
+      "answer": "La excursión en camello dura entre 45 minutos y una hora y media. Puede solicitar el traslado al campamento en vehículo 4x4 si no desea montar en camello."
+    },
+    {
+      "question": "¿La jaima del campamento en el desierto es privada?",
+      "answer": "Sí, dispondrá de una jaima privada de lujo con baño ensuite completo, ducha y agua corriente caliente."
+    },
+    {
+      "question": "¿Dónde se efectúa la recogida y el traslado de vuelta?",
+      "answer": "El tour comienza y finaliza en Tánger (aeropuerto, puerto u hotel), coordinándose exactamente al confirmar la reserva."
+    },
+    {
+      "question": "¿Qué tipo de vehículo se emplea para el recorrido?",
+      "answer": "El trayecto se realiza en un moderno vehículo 4x4 o monovolumen con aire acondicionado. Para grupos más amplios se utilizan minibuses."
+    },
+    {
+      "question": "¿Se pueden satisfacer dietas alimentarias especiales?",
+      "answer": "Sí, solo tiene que indicarnos si necesita menús vegetarianos, veganos, sin gluten o halal al reservar."
+    },
+    {
+      "question": "¿Es este itinerario apropiado para todas las edades?",
+      "answer": "Sí, está adaptado para parejas, familias y seniors con etapas bien dosificadas y paradas regulares."
+    },
+    {
+      "question": "¿Cuál es la época más aconsejable para hacer este tour?",
+      "answer": "Tanto la primavera como el otoño ofrecen condiciones climáticas muy agradables en todo el territorio marroquí."
+    }
+  ]
+}

@@ -2,8 +2,10 @@
 // src/pages/tours-from-ouarzazate.astro — Dedicated Ouarzazate Departure Hub
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getMultiDayToursByCity } from '../data/tours';
+import { getAlternateUrls } from '../data/i18n';
 
 const tours = getMultiDayToursByCity('Ouarzazate');
+const alternateUrls = getAlternateUrls('/tours-from-ouarzazate');
 
 const ouarzazateSchema = {
   "@context": "https://schema.org",
@@ -12,7 +14,7 @@ const ouarzazateSchema = {
       "@type": "CollectionPage",
       "name": "Private Morocco Tours from Ouarzazate | Sahara Star Tours",
       "description": `Browse our complete collection of ${tours.length} private multi-day Morocco desert tours departing from Ouarzazate. Gateway to Erg Chebbi, Draa Valley, Todra Gorge, and scenic desert traverses to Fes and Marrakech.`,
-      "url": "https://www.saharastartours.com/tours-from-ouarzazate"
+      "url": alternateUrls.en
     },
     {
       "@type": "BreadcrumbList",
@@ -33,7 +35,7 @@ const ouarzazateSchema = {
           "@type": "ListItem",
           "position": 3,
           "name": "Tours from Ouarzazate",
-          "item": "https://www.saharastartours.com/tours-from-ouarzazate"
+          "item": alternateUrls.en
         }
       ]
     }
@@ -46,6 +48,7 @@ const ouarzazateSchema = {
   description={`Book authentic private desert tours from Ouarzazate to Fes and Marrakech. Explore Taourirt Kasbah, Dades and Todra gorges, ride camels in Erg Chebbi, and sleep under desert stars.`}
   keywords="tours from ouarzazate, ouarzazate desert tour, ouarzazate to fes tour, ouarzazate to marrakech tour, merzouga from ouarzazate"
   currentPage="tours"
+  alternateUrls={alternateUrls}
   schemaData={ouarzazateSchema}
 >
 
