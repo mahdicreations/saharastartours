@@ -53,7 +53,7 @@ export interface Tour {
   itinerary: Array<{ day: string; title: string; content: string }>;
   mapDestinations: TourStop[];
   mapRouteCoordinates: [number, number][];
-  galleryImages: Array<{ src: string; cap: string }>;
+  galleryImages: Array<{ src: string; cap: string; alt?: string }>;
   featured?: boolean;
   badge?: string;
   faqs?: TourFAQ[];
@@ -71,7 +71,7 @@ export const tours: Tour[] = [
     "slug": "6-days-desert-tour-from-casablanca",
     "title": "6-Day Morocco Tour from Casablanca to Marrakech | Sahara Star Tours",
     "shortTitle": "6-Day Morocco Tour from Casablanca to Marrakech",
-    "description": "Private 6-day Morocco tour from Casablanca to Marrakech. Explore Fes. Local support and flexible planning.",
+    "description": "Travel from Casablanca to Marrakech on a 6-day private tour. Explore the blue alleys of Chefchaouen, imperial Fes, golden Erg Chebbi dunes, and Ait Ben Haddou.",
     "aboutHtml": "This private 6-day Morocco journey begins in Casablanca and finishes in Marrakech. Along the route, you will experience Casablanca, Volubilis, Meknes, Fes, Ifrane, and more. The itinerary is designed to balance long scenic drives with meaningful stops, authentic local experiences, and time to enjoy the destination rather than simply pass through it. With Sahara Star Tours, the experience is arranged as a private trip with air-conditioned transport, local support, and an itinerary that can be tailored to your travel style. The pace is designed for travelers who want a structured private itinerary without sacrificing time for local discovery.",
     "category": "desert-tours",
     "duration": "6 Days / 5 Nights",
@@ -248,43 +248,53 @@ export const tours: Tour[] = [
     "galleryImages": [
       {
         "src": "/sahara-star-tours/6-days-desert-tour-from-casablanca/images/gallery_1.webp",
-        "cap": "Gallery 1"
+        "cap": "Gallery 1",
+        "alt": "Panoramic view of Jemaa el-Fnaa square in Marrakech with the High Atlas Mountains"
       },
       {
         "src": "/sahara-star-tours/6-days-desert-tour-from-casablanca/images/gallery_10.webp",
-        "cap": "Gallery 10"
+        "cap": "Gallery 10",
+        "alt": "Ornate horseshoe arches and mosaic fountain courtyard at Hassan II Mosque"
       },
       {
         "src": "/sahara-star-tours/6-days-desert-tour-from-casablanca/images/gallery_2.webp",
-        "cap": "Gallery 2"
+        "cap": "Gallery 2",
+        "alt": "Red clay mountains and lush green valley oasis in the High Atlas region"
       },
       {
         "src": "/sahara-star-tours/6-days-desert-tour-from-casablanca/images/gallery_3.webp",
-        "cap": "Gallery 3"
+        "cap": "Gallery 3",
+        "alt": "Camel caravan trekking across the golden Erg Chebbi sand dunes in Merzouga"
       },
       {
         "src": "/sahara-star-tours/6-days-desert-tour-from-casablanca/images/gallery_4.webp",
-        "cap": "Gallery 4"
+        "cap": "Gallery 4",
+        "alt": "Hassan II Mosque standing along the Atlantic coast in Casablanca"
       },
       {
         "src": "/sahara-star-tours/6-days-desert-tour-from-casablanca/images/gallery_5.webp",
-        "cap": "Gallery 5"
+        "cap": "Gallery 5",
+        "alt": "Ancient Roman stone arches overlooking the sea at archaeological ruins"
       },
       {
         "src": "/sahara-star-tours/6-days-desert-tour-from-casablanca/images/gallery_6.webp",
-        "cap": "Gallery 6"
+        "cap": "Gallery 6",
+        "alt": "Hassan II Mosque and coastal promenade in Casablanca at sunset"
       },
       {
         "src": "/sahara-star-tours/6-days-desert-tour-from-casablanca/images/gallery_7.webp",
-        "cap": "Gallery 7"
+        "cap": "Gallery 7",
+        "alt": "Arch of Caracalla at the UNESCO Roman ruins of Volubilis"
       },
       {
         "src": "/sahara-star-tours/6-days-desert-tour-from-casablanca/images/gallery_8.webp",
-        "cap": "Gallery 8"
+        "cap": "Gallery 8",
+        "alt": "Historical minaret with stork nest at Chellah necropolis in Rabat"
       },
       {
         "src": "/sahara-star-tours/6-days-desert-tour-from-casablanca/images/gallery_9.webp",
-        "cap": "Gallery 9"
+        "cap": "Gallery 9",
+        "alt": "Traditional Berber village nestled against arid hillside and palm trees"
       }
     ],
     "faqs": [
@@ -331,7 +341,7 @@ export const tours: Tour[] = [
     "slug": "7-day-morocco-tour-from-casablanca",
     "title": "7-Day Morocco Tour from Casablanca to Marrakech | Sahara Star Tours",
     "shortTitle": "7-Day Morocco Tour from Casablanca to Marrakech",
-    "description": "Private 7-day Morocco tour from Casablanca to Marrakech. Explore Fes, Chefchaouen, Rabat. Local support and flexible planning.",
+    "description": "Discover Morocco in 7 days from Casablanca to Marrakech. Journey through Rabat, Chefchaouen, the Fes medina, Erg Chebbi luxury camp, and dramatic Atlas gorges.",
     "aboutHtml": "This private 7-day Morocco journey begins in Casablanca and finishes in Marrakech. Along the route, you will experience Casablanca, Rabat, Chefchaouen, Volubilis, Meknes, and more. The itinerary is designed to balance long scenic drives with meaningful stops, authentic local experiences, and time to enjoy the destination rather than simply pass through it. With Sahara Star Tours, the experience is arranged as a private trip with air-conditioned transport, local support, and an itinerary that can be tailored to your travel style. The pace is designed for travelers who want a structured private itinerary without sacrificing time for local discovery.",
     "category": "desert-tours",
     "duration": "7 Days / 6 Nights",
@@ -528,43 +538,53 @@ export const tours: Tour[] = [
     "galleryImages": [
       {
         "src": "/sahara-star-tours/7-day-morocco-tour-from-casablanca/images/gallery_1.webp",
-        "cap": "Gallery 1"
+        "cap": "Gallery 1",
+        "alt": "Ancient stone fortress ruins on a mountain ridge with snow-covered peaks"
       },
       {
         "src": "/sahara-star-tours/7-day-morocco-tour-from-casablanca/images/gallery_10.webp",
-        "cap": "Gallery 10"
+        "cap": "Gallery 10",
+        "alt": "Star-shaped fountain and grand Moorish arches at Hassan II Mosque"
       },
       {
         "src": "/sahara-star-tours/7-day-morocco-tour-from-casablanca/images/gallery_3.webp",
-        "cap": "Gallery 3"
+        "cap": "Gallery 3",
+        "alt": "Leather tanners working in the historic dye vats of Chouara Tannery in Fes"
       },
       {
         "src": "/sahara-star-tours/7-day-morocco-tour-from-casablanca/images/gallery_4.webp",
-        "cap": "Gallery 4"
+        "cap": "Gallery 4",
+        "alt": "Hassan II Mosque minaret and expansive marble esplanade in Casablanca"
       },
       {
         "src": "/sahara-star-tours/7-day-morocco-tour-from-casablanca/images/gallery_5.webp",
-        "cap": "Gallery 5"
+        "cap": "Gallery 5",
+        "alt": "Hassan Tower minaret rising behind palm trees in Rabat"
       },
       {
         "src": "/sahara-star-tours/7-day-morocco-tour-from-casablanca/images/gallery_6.webp",
-        "cap": "Gallery 6"
+        "cap": "Gallery 6",
+        "alt": "Minaret of Hassan II Mosque framed by a carved Moorish archway"
       },
       {
         "src": "/sahara-star-tours/7-day-morocco-tour-from-casablanca/images/gallery_7.webp",
-        "cap": "Gallery 7"
+        "cap": "Gallery 7",
+        "alt": "Decorative iron gate leading into the Hassan Tower gardens in Rabat"
       },
       {
         "src": "/sahara-star-tours/7-day-morocco-tour-from-casablanca/images/gallery_8.webp",
-        "cap": "Gallery 8"
+        "cap": "Gallery 8",
+        "alt": "Roman ruins and Arch of Caracalla at Volubilis archaeological site"
       },
       {
         "src": "/sahara-star-tours/7-day-morocco-tour-from-casablanca/images/gallery_9.webp",
-        "cap": "Gallery 9"
+        "cap": "Gallery 9",
+        "alt": "Pedestrian promenade with tiled minarets"
       },
       {
         "src": "/sahara-star-tours/7-day-morocco-tour-from-casablanca/images/hero_2.webp",
-        "cap": "Hero 2"
+        "cap": "Hero 2",
+        "alt": "Panoramic sunset view of the blue-washed buildings of Chefchaouen"
       }
     ],
     "faqs": [
@@ -3618,7 +3638,7 @@ export const tours: Tour[] = [
     "slug": "4-days-marrakech-desert-tour",
     "title": "4-Day Marrakech to Merzouga Desert Tour | Sahara Star Tours",
     "shortTitle": "4-Day Marrakech to Merzouga Desert Tour",
-    "description": "Private 4-day Morocco desert tour from Marrakech (round-trip). Explore Marrakech, Ait Ben Haddou, Ouarzazate. Local support and flexible planning.",
+    "description": "Immerse yourself in the Sahara on a 4-day round-trip desert tour from Marrakech. Cross the High Atlas, explore Ait Ben Haddou, and ride camels into Erg Chebbi.",
     "aboutHtml": "This private 4-day Morocco journey begins in Marrakech and finishes in Marrakech. Along the route, you will experience Marrakech, High Atlas Mountains, Ounila Valley, Ait Ben Haddou, Ouarzazate, and more. The itinerary is designed to balance long scenic drives with meaningful stops, authentic local experiences, and time to enjoy the destination rather than simply pass through it. With Sahara Star Tours, the experience is arranged as a private trip with air-conditioned transport, local support, and an itinerary that can be tailored to your travel style. This route is ideal for travelers who want to combine Morocco's landscapes and cultural heritage with a genuine Sahara experience.",
     "category": "desert-tours",
     "duration": "4 Days / 3 Nights",
@@ -3753,43 +3773,53 @@ export const tours: Tour[] = [
     "galleryImages": [
       {
         "src": "/sahara-star-tours/4-days-marrakech-desert-tour/images/gallery_1.webp",
-        "cap": "Gallery 1"
+        "cap": "Gallery 1",
+        "alt": "Berber guide in desert robe leading loaded camels across Sahara sand dunes"
       },
       {
         "src": "/sahara-star-tours/4-days-marrakech-desert-tour/images/gallery_10.webp",
-        "cap": "Gallery 10"
+        "cap": "Gallery 10",
+        "alt": "Reflecting pool in the carved stucco courtyard of Ben Youssef Madrasa"
       },
       {
         "src": "/sahara-star-tours/4-days-marrakech-desert-tour/images/gallery_2.webp",
-        "cap": "Gallery 2"
+        "cap": "Gallery 2",
+        "alt": "Cat resting on handwoven Moroccan wool rugs and cushions in a souk"
       },
       {
         "src": "/sahara-star-tours/4-days-marrakech-desert-tour/images/gallery_3.webp",
-        "cap": "Gallery 3"
+        "cap": "Gallery 3",
+        "alt": "Ahwash folk dancers and drummers performing outside Taourirt Kasbah"
       },
       {
         "src": "/sahara-star-tours/4-days-marrakech-desert-tour/images/gallery_4.webp",
-        "cap": "Gallery 4"
+        "cap": "Gallery 4",
+        "alt": "Camel caravan walking across Erg Chebbi dunes in the afternoon sun"
       },
       {
         "src": "/sahara-star-tours/4-days-marrakech-desert-tour/images/gallery_5.webp",
-        "cap": "Gallery 5"
+        "cap": "Gallery 5",
+        "alt": "Traditional horse-drawn carriage in front of Koutoubia Mosque in Marrakech"
       },
       {
         "src": "/sahara-star-tours/4-days-marrakech-desert-tour/images/gallery_7.webp",
-        "cap": "Gallery 7"
+        "cap": "Gallery 7",
+        "alt": "Rammed-earth walls and sunken orange gardens of El Badi Palace in Marrakech"
       },
       {
         "src": "/sahara-star-tours/4-days-marrakech-desert-tour/images/gallery_8.webp",
-        "cap": "Gallery 8"
+        "cap": "Gallery 8",
+        "alt": "Carved cedarwood and zellij tile pillars at Ben Youssef Madrasa"
       },
       {
         "src": "/sahara-star-tours/4-days-marrakech-desert-tour/images/gallery_9.webp",
-        "cap": "Gallery 9"
+        "cap": "Gallery 9",
+        "alt": "Fortified mudbrick ksar of Ait Ben Haddou with defensive gate and towers"
       },
       {
         "src": "/sahara-star-tours/4-days-marrakech-desert-tour/images/hero_2.webp",
-        "cap": "Hero 2"
+        "cap": "Hero 2",
+        "alt": "Road cutting through the vast date palm groves of the Draa Valley"
       }
     ],
     "faqs": [
@@ -3836,7 +3866,7 @@ export const tours: Tour[] = [
     "slug": "5-days-tour-marrakech-to-merzouga",
     "title": "5-Day Private Marrakech to Merzouga Desert Tour | Sahara Star Tours",
     "shortTitle": "5-Day Private Marrakech to Merzouga Desert Tour",
-    "description": "Private 5-day Morocco desert tour from Marrakech (round-trip). Explore Merzouga, Marrakech, Ait Ben Haddou. Local support and flexible planning.",
+    "description": "Experience a relaxed 5-day Sahara expedition from Marrakech. Explore Ait Ben Haddou, Todra Gorges, and enjoy two nights in Merzouga with nomad encounters.",
     "aboutHtml": "This private 5-day Morocco journey begins in Marrakech and finishes in Marrakech. Along the route, you will experience Marrakech, High Atlas Mountains, Telouat Kasbah, Ait Ben Haddou, Ouarzazate, and more. The itinerary is designed to balance long scenic drives with meaningful stops, authentic local experiences, and time to enjoy the destination rather than simply pass through it. With Sahara Star Tours, the experience is arranged as a private trip with air-conditioned transport, local support, and an itinerary that can be tailored to your travel style. This route is ideal for travelers who want to combine Morocco's landscapes and cultural heritage with a genuine Sahara experience.",
     "category": "desert-tours",
     "duration": "5 Days / 4 Nights",
@@ -3991,39 +4021,48 @@ export const tours: Tour[] = [
     "galleryImages": [
       {
         "src": "/sahara-star-tours/5-days-tour-marrakech-to-merzouga/images/gallery_1.webp",
-        "cap": "Gallery 1"
+        "cap": "Gallery 1",
+        "alt": "Fortified earthen kasbah towers and crenellations at Ait Ben Haddou"
       },
       {
         "src": "/sahara-star-tours/5-days-tour-marrakech-to-merzouga/images/gallery_10.webp",
-        "cap": "Gallery 10"
+        "cap": "Gallery 10",
+        "alt": "Hot air balloons drifting over Marrakech palmeraie plains at dawn"
       },
       {
         "src": "/sahara-star-tours/5-days-tour-marrakech-to-merzouga/images/gallery_2.webp",
-        "cap": "Gallery 2"
+        "cap": "Gallery 2",
+        "alt": "Camel guide leading camels across desert dunes under dramatic storm clouds"
       },
       {
         "src": "/sahara-star-tours/5-days-tour-marrakech-to-merzouga/images/gallery_3.webp",
-        "cap": "Gallery 3"
+        "cap": "Gallery 3",
+        "alt": "Traditional women in abayas walking down an ochre medina alley"
       },
       {
         "src": "/sahara-star-tours/5-days-tour-marrakech-to-merzouga/images/gallery_4.webp",
-        "cap": "Gallery 4"
+        "cap": "Gallery 4",
+        "alt": "Red clay walls and windows of Taourirt Kasbah in Ouarzazate"
       },
       {
         "src": "/sahara-star-tours/5-days-tour-marrakech-to-merzouga/images/gallery_5.webp",
-        "cap": "Gallery 5"
+        "cap": "Gallery 5",
+        "alt": "Mother cat nursing kitten on a woven Berber cushion in a riad"
       },
       {
         "src": "/sahara-star-tours/5-days-tour-marrakech-to-merzouga/images/gallery_6.webp",
-        "cap": "Gallery 6"
+        "cap": "Gallery 6",
+        "alt": "Handmade Moroccan perfume bottles and inlaid mirrors in an artisan shop"
       },
       {
         "src": "/sahara-star-tours/5-days-tour-marrakech-to-merzouga/images/gallery_8.webp",
-        "cap": "Gallery 8"
+        "cap": "Gallery 8",
+        "alt": "Local man in orange turban outside an earthen building in a desert village"
       },
       {
         "src": "/sahara-star-tours/5-days-tour-marrakech-to-merzouga/images/hero_2.webp",
-        "cap": "Hero 2"
+        "cap": "Hero 2",
+        "alt": "Panoramic view of the ancient hilltop fortress of Ait Ben Haddou"
       }
     ],
     "faqs": [
@@ -6593,7 +6632,7 @@ export const tours: Tour[] = [
     "slug": "10-days-in-morocco-from-fes",
     "title": "10-Day Morocco Tour from Fes to Tangier | Sahara Star Tours",
     "shortTitle": "10-Day Morocco Tour from Fes to Tangier",
-    "description": "Private 10-day Morocco tour from Fes to Tangier (or Fes, depending on your flight plans). Explore Merzouga, Fes. Local support and flexible planning.",
+    "description": "Embark on a private 10-day Morocco tour from Fes. Discover the Sahara dunes of Merzouga, vibrant Marrakech, coastal Casablanca, and the blue pearl Chefchaouen.",
     "aboutHtml": "This private 10-day Morocco journey begins in Fes and finishes in Tangier (or Fes, depending on your flight plans). Along the route, you will experience Fes, Ifrane, Cedar Forest, Midelt, Ziz Valley, and more. The itinerary is designed to balance long scenic drives with meaningful stops, authentic local experiences, and time to enjoy the destination rather than simply pass through it. With Sahara Star Tours, the experience is arranged as a private trip with air-conditioned transport, local support, and an itinerary that can be tailored to your travel style. The pace is designed for travelers who want a structured private itinerary without sacrificing time for local discovery.",
     "category": "desert-tours",
     "duration": "10 Days / 9 Nights",
@@ -6849,47 +6888,58 @@ export const tours: Tour[] = [
     "galleryImages": [
       {
         "src": "/sahara-star-tours/10-days-in-morocco-from-fes/images/gallery_1.webp",
-        "cap": "Gallery 1"
+        "cap": "Gallery 1",
+        "alt": "Long shadows of camel riders stretching across Erg Chebbi desert sands"
       },
       {
         "src": "/sahara-star-tours/10-days-in-morocco-from-fes/images/gallery_10.webp",
-        "cap": "Gallery 10"
+        "cap": "Gallery 10",
+        "alt": "Hillside vista of blue-painted houses in the Chefchaouen medina"
       },
       {
         "src": "/sahara-star-tours/10-days-in-morocco-from-fes/images/gallery_2.webp",
-        "cap": "Gallery 2"
+        "cap": "Gallery 2",
+        "alt": "Koutoubia Mosque minaret silhouetted against a pastel sunset sky in Marrakech"
       },
       {
         "src": "/sahara-star-tours/10-days-in-morocco-from-fes/images/gallery_3.webp",
-        "cap": "Gallery 3"
+        "cap": "Gallery 3",
+        "alt": "Elevated view of Chouara Tannery stone dye vats in Fes el-Bali"
       },
       {
         "src": "/sahara-star-tours/10-days-in-morocco-from-fes/images/gallery_4.webp",
-        "cap": "Gallery 4"
+        "cap": "Gallery 4",
+        "alt": "Blue-washed buildings of Chefchaouen medina nestled on the mountain slope"
       },
       {
         "src": "/sahara-star-tours/10-days-in-morocco-from-fes/images/gallery_5.webp",
-        "cap": "Gallery 5"
+        "cap": "Gallery 5",
+        "alt": "Arch of Caracalla and stone basilica columns at the Roman site of Volubilis"
       },
       {
         "src": "/sahara-star-tours/10-days-in-morocco-from-fes/images/gallery_6.webp",
-        "cap": "Gallery 6"
+        "cap": "Gallery 6",
+        "alt": "Narrow blue stairway alley with traditional studded doors in Chefchaouen"
       },
       {
         "src": "/sahara-star-tours/10-days-in-morocco-from-fes/images/gallery_7.webp",
-        "cap": "Gallery 7"
+        "cap": "Gallery 7",
+        "alt": "Earthen ramparts and bastion towers of Taourirt Kasbah in Ouarzazate"
       },
       {
         "src": "/sahara-star-tours/10-days-in-morocco-from-fes/images/gallery_8.webp",
-        "cap": "Gallery 8"
+        "cap": "Gallery 8",
+        "alt": "Vast rocky hamada desert plateau stretching toward the horizon"
       },
       {
         "src": "/sahara-star-tours/10-days-in-morocco-from-fes/images/gallery_9.webp",
-        "cap": "Gallery 9"
+        "cap": "Gallery 9",
+        "alt": "Bustling evening market stalls and crowds at Jemaa el-Fnaa square"
       },
       {
         "src": "/sahara-star-tours/10-days-in-morocco-from-fes/images/hero_2.webp",
-        "cap": "Hero 2"
+        "cap": "Hero 2",
+        "alt": "Ancient Roman Capitol Corinthian columns and steps at Volubilis"
       }
     ],
     "faqs": [
@@ -6936,7 +6986,7 @@ export const tours: Tour[] = [
     "slug": "10-days-morocco-grand-tour-from-marrakech",
     "title": "10-Day Grand Morocco Tour from Marrakech to Tangier | Sahara Star Tours",
     "shortTitle": "10-Day Grand Morocco Tour from Marrakech to Tangier",
-    "description": "Private 10-day Morocco tour from Marrakech to Tangier. Explore Merzouga, Marrakech, Ait Ben Haddou. Local support and flexible planning.",
+    "description": "Grand 10-day private Morocco journey from Marrakech to Tangier. Cross the High Atlas, sleep under Sahara stars in Erg Chebbi, and explore imperial Fes.",
     "aboutHtml": "This private 10-day Morocco journey begins in Marrakech and finishes in Tangier. Along the route, you will experience Marrakech, Essaouira, High Atlas Mountains, Ait Ben Haddou, Roses Valley, and more. The itinerary is designed to balance long scenic drives with meaningful stops, authentic local experiences, and time to enjoy the destination rather than simply pass through it. With Sahara Star Tours, the experience is arranged as a private trip with air-conditioned transport, local support, and an itinerary that can be tailored to your travel style. The pace is designed for travelers who want a structured private itinerary without sacrificing time for local discovery.",
     "category": "desert-tours",
     "duration": "10 Days / 9 Nights",
@@ -7193,47 +7243,58 @@ export const tours: Tour[] = [
     "galleryImages": [
       {
         "src": "/sahara-star-tours/10-days-morocco-grand-tour-from-marrakech/images/gallery_1.webp",
-        "cap": "Gallery 1"
+        "cap": "Gallery 1",
+        "alt": "Ornate carved cedar and plasterwork courtyard of Ben Youssef Madrasa"
       },
       {
         "src": "/sahara-star-tours/10-days-morocco-grand-tour-from-marrakech/images/gallery_10.webp",
-        "cap": "Gallery 10"
+        "cap": "Gallery 10",
+        "alt": "Glowing brass Moroccan lanterns hanging on a rooftop terrace at night"
       },
       {
         "src": "/sahara-star-tours/10-days-morocco-grand-tour-from-marrakech/images/gallery_2.webp",
-        "cap": "Gallery 2"
+        "cap": "Gallery 2",
+        "alt": "Late afternoon sunlight over the blue-washed town of Chefchaouen"
       },
       {
         "src": "/sahara-star-tours/10-days-morocco-grand-tour-from-marrakech/images/gallery_3.webp",
-        "cap": "Gallery 3"
+        "cap": "Gallery 3",
+        "alt": "Donkey cart passing through a historic pink clay alley in Marrakech medina"
       },
       {
         "src": "/sahara-star-tours/10-days-morocco-grand-tour-from-marrakech/images/gallery_4.webp",
-        "cap": "Gallery 4"
+        "cap": "Gallery 4",
+        "alt": "Medina kitten sitting in the corner of a terracotta tiled courtyard"
       },
       {
         "src": "/sahara-star-tours/10-days-morocco-grand-tour-from-marrakech/images/gallery_5.webp",
-        "cap": "Gallery 5"
+        "cap": "Gallery 5",
+        "alt": "Line of travelers on camels trekking across the Sahara Desert dunes"
       },
       {
         "src": "/sahara-star-tours/10-days-morocco-grand-tour-from-marrakech/images/gallery_6.webp",
-        "cap": "Gallery 6"
+        "cap": "Gallery 6",
+        "alt": "Local resident resting with a handcart in a Marrakech medina street"
       },
       {
         "src": "/sahara-star-tours/10-days-morocco-grand-tour-from-marrakech/images/gallery_7.webp",
-        "cap": "Gallery 7"
+        "cap": "Gallery 7",
+        "alt": "White dromedaries with saddle blankets resting in front of Ait Ben Haddou"
       },
       {
         "src": "/sahara-star-tours/10-days-morocco-grand-tour-from-marrakech/images/gallery_8.webp",
-        "cap": "Gallery 8"
+        "cap": "Gallery 8",
+        "alt": "Wind-sculpted curving crests of the Erg Chebbi sand dunes"
       },
       {
         "src": "/sahara-star-tours/10-days-morocco-grand-tour-from-marrakech/images/gallery_9.webp",
-        "cap": "Gallery 9"
+        "cap": "Gallery 9",
+        "alt": "Elderly Moroccan man in tarboosh cap by a blue doorway in Chefchaouen"
       },
       {
         "src": "/sahara-star-tours/10-days-morocco-grand-tour-from-marrakech/images/hero_2.webp",
-        "cap": "Hero 2"
+        "cap": "Hero 2",
+        "alt": "Camels galloping across golden Sahara dunes in the sunset light"
       }
     ],
     "faqs": [
@@ -7280,7 +7341,7 @@ export const tours: Tour[] = [
     "slug": "10-days-morocco-holiday-itinerary-from-tangier",
     "title": "10-Day Morocco Tour from Tangier to Marrakech | Sahara Star Tours",
     "shortTitle": "10-Day Morocco Tour from Tangier to Marrakech",
-    "description": "Private 10-day Morocco tour from Tangier to Marrakech or Casablanca. Explore Fes, Chefchaouen. Local support and flexible planning.",
+    "description": "Explore Morocco from north to south on a 10-day tour from Tangier to Marrakech. Wander Chefchaouen, medieval Fes, golden Merzouga dunes, and Ait Ben Haddou.",
     "aboutHtml": "This private 10-day Morocco journey begins in Tangier and finishes in Marrakech or Casablanca. Along the route, you will experience Tangier, Chefchaouen, Volubilis, Meknes, Fes, and more. The itinerary is designed to balance long scenic drives with meaningful stops, authentic local experiences, and time to enjoy the destination rather than simply pass through it. With Sahara Star Tours, the experience is arranged as a private trip with air-conditioned transport, local support, and an itinerary that can be tailored to your travel style. The pace is designed for travelers who want a structured private itinerary without sacrificing time for local discovery.",
     "category": "desert-tours",
     "duration": "10 Days / 9 Nights",
@@ -7537,47 +7598,58 @@ export const tours: Tour[] = [
     "galleryImages": [
       {
         "src": "/sahara-star-tours/10-days-morocco-holiday-itinerary-from-tangier/images/gallery_1.webp",
-        "cap": "Gallery 1"
+        "cap": "Gallery 1",
+        "alt": "Herd of dromedary camels grazing on sandy plains in the desert"
       },
       {
         "src": "/sahara-star-tours/10-days-morocco-holiday-itinerary-from-tangier/images/gallery_10.webp",
-        "cap": "Gallery 10"
+        "cap": "Gallery 10",
+        "alt": "Shadows of a camel caravan marching across golden desert dunes"
       },
       {
         "src": "/sahara-star-tours/10-days-morocco-holiday-itinerary-from-tangier/images/gallery_2.webp",
-        "cap": "Gallery 2"
+        "cap": "Gallery 2",
+        "alt": "Illuminated Jemaa el-Fnaa night market with Koutoubia minaret in Marrakech"
       },
       {
         "src": "/sahara-star-tours/10-days-morocco-holiday-itinerary-from-tangier/images/gallery_3.webp",
-        "cap": "Gallery 3"
+        "cap": "Gallery 3",
+        "alt": "Street sign on stone steps in the historic Kasbah of Tangier"
       },
       {
         "src": "/sahara-star-tours/10-days-morocco-holiday-itinerary-from-tangier/images/gallery_4.webp",
-        "cap": "Gallery 4"
+        "cap": "Gallery 4",
+        "alt": "Cat sleeping by a bright blue doorway and stairs in Chefchaouen"
       },
       {
         "src": "/sahara-star-tours/10-days-morocco-holiday-itinerary-from-tangier/images/gallery_5.webp",
-        "cap": "Gallery 5"
+        "cap": "Gallery 5",
+        "alt": "Visitors in the carved marble courtyard of Ben Youssef Madrasa"
       },
       {
         "src": "/sahara-star-tours/10-days-morocco-holiday-itinerary-from-tangier/images/gallery_6.webp",
-        "cap": "Gallery 6"
+        "cap": "Gallery 6",
+        "alt": "Cargo ship crossing the Strait of Gibraltar at dusk off the Tangier coast"
       },
       {
         "src": "/sahara-star-tours/10-days-morocco-holiday-itinerary-from-tangier/images/gallery_7.webp",
-        "cap": "Gallery 7"
+        "cap": "Gallery 7",
+        "alt": "Colorful hanging fabric lanterns in a stone alley in Chefchaouen"
       },
       {
         "src": "/sahara-star-tours/10-days-morocco-holiday-itinerary-from-tangier/images/gallery_8.webp",
-        "cap": "Gallery 8"
+        "cap": "Gallery 8",
+        "alt": "Clay tagine cooking vessels displayed above the ksar of Ait Ben Haddou"
       },
       {
         "src": "/sahara-star-tours/10-days-morocco-holiday-itinerary-from-tangier/images/gallery_9.webp",
-        "cap": "Gallery 9"
+        "cap": "Gallery 9",
+        "alt": "Earthen watchtower with geometric Berber designs at Ait Ben Haddou"
       },
       {
         "src": "/sahara-star-tours/10-days-morocco-holiday-itinerary-from-tangier/images/hero_2.webp",
-        "cap": "Hero 2"
+        "cap": "Hero 2",
+        "alt": "High vantage point overlooking Ait Ben Haddou ksar and the Ounila riverbed"
       }
     ],
     "faqs": [
@@ -7624,7 +7696,7 @@ export const tours: Tour[] = [
     "slug": "13-day-absolute-morocco-tour-from-tangier",
     "title": "13-Day Morocco Grand Tour from Tangier | Sahara Star Tours",
     "shortTitle": "13-Day Morocco Grand Tour from Tangier",
-    "description": "Private 13-day Morocco tour from Tangier (round-trip). Explore Fes, Chefchaouen. Local support and flexible planning.",
+    "description": "Comprehensive 13-day Morocco grand loop from Tangier. Discover Chefchaouen, imperial Fes, Sahara desert glamping, Marrakech, coastal Essaouira, and Rabat.",
     "aboutHtml": "This private 13-day Morocco journey begins in Tangier and finishes in Tangier. Along the route, you will experience Tangier, Chefchaouen, Volubilis, Meknes, Fes, and more. The itinerary is designed to balance long scenic drives with meaningful stops, authentic local experiences, and time to enjoy the destination rather than simply pass through it. With Sahara Star Tours, the experience is arranged as a private trip with air-conditioned transport, local support, and an itinerary that can be tailored to your travel style. The pace is designed for travelers who want a structured private itinerary without sacrificing time for local discovery.",
     "category": "desert-tours",
     "duration": "13 Days / 12 Nights",
@@ -7940,47 +8012,58 @@ export const tours: Tour[] = [
     "galleryImages": [
       {
         "src": "/sahara-star-tours/13-day-absolute-morocco-tour-from-tangier/images/gallery_1.webp",
-        "cap": "Gallery 1"
+        "cap": "Gallery 1",
+        "alt": "Decorative entrance portal with geometric Islamic latticework"
       },
       {
         "src": "/sahara-star-tours/13-day-absolute-morocco-tour-from-tangier/images/gallery_10.webp",
-        "cap": "Gallery 10"
+        "cap": "Gallery 10",
+        "alt": "Rippled sand dunes of Erg Chebbi glowing in soft morning light"
       },
       {
         "src": "/sahara-star-tours/13-day-absolute-morocco-tour-from-tangier/images/gallery_2.webp",
-        "cap": "Gallery 2"
+        "cap": "Gallery 2",
+        "alt": "Ruined brick tower on a green hill"
       },
       {
         "src": "/sahara-star-tours/13-day-absolute-morocco-tour-from-tangier/images/gallery_3.webp",
-        "cap": "Gallery 3"
+        "cap": "Gallery 3",
+        "alt": "Travelers riding camels across desert sand dunes towards camp"
       },
       {
         "src": "/sahara-star-tours/13-day-absolute-morocco-tour-from-tangier/images/gallery_4.webp",
-        "cap": "Gallery 4"
+        "cap": "Gallery 4",
+        "alt": "Minimalist pink architectural arches"
       },
       {
         "src": "/sahara-star-tours/13-day-absolute-morocco-tour-from-tangier/images/gallery_5.webp",
-        "cap": "Gallery 5"
+        "cap": "Gallery 5",
+        "alt": "Traditional Moroccan couscous dish with tender meat and caramelized tfaya"
       },
       {
         "src": "/sahara-star-tours/13-day-absolute-morocco-tour-from-tangier/images/gallery_6.webp",
-        "cap": "Gallery 6"
+        "cap": "Gallery 6",
+        "alt": "Historic ficus tree and cannon ramparts at Mendoubia Gardens in Tangier"
       },
       {
         "src": "/sahara-star-tours/13-day-absolute-morocco-tour-from-tangier/images/gallery_7.webp",
-        "cap": "Gallery 7"
+        "cap": "Gallery 7",
+        "alt": "Cap Spartel Lighthouse overlooking the Atlantic Ocean near Tangier"
       },
       {
         "src": "/sahara-star-tours/13-day-absolute-morocco-tour-from-tangier/images/gallery_8.webp",
-        "cap": "Gallery 8"
+        "cap": "Gallery 8",
+        "alt": "Blue-washed hillside houses of Chefchaouen surrounded by green mountains"
       },
       {
         "src": "/sahara-star-tours/13-day-absolute-morocco-tour-from-tangier/images/gallery_9.webp",
-        "cap": "Gallery 9"
+        "cap": "Gallery 9",
+        "alt": "Ancient Roman columns and stone ruins at Volubilis through an archway"
       },
       {
         "src": "/sahara-star-tours/13-day-absolute-morocco-tour-from-tangier/images/hero_2.webp",
-        "cap": "Hero 2"
+        "cap": "Hero 2",
+        "alt": "Panoramic view of the blue mountain city of Chefchaouen"
       }
     ],
     "faqs": [
@@ -8027,7 +8110,7 @@ export const tours: Tour[] = [
     "slug": "14-days-grand-morocco-tour-itinerary-from-casablanca",
     "title": "14-Day Grand Morocco Tour from Casablanca | Sahara Star Tours",
     "shortTitle": "14-Day Grand Morocco Tour from Casablanca",
-    "description": "Private 14-day Morocco tour from Casablanca to Marrakech or Casablanca. Explore Fes, Chefchaouen, Rabat. Local support and flexible planning.",
+    "description": "Epic 14-day grand Morocco circuit from Casablanca. Tour northern coastlines, Chefchaouen, ancient Fes, Erg Chebbi sand dunes, Marrakech, and Essaouira.",
     "aboutHtml": "This private 14-day Morocco journey begins in Casablanca and finishes in Marrakech or Casablanca. Along the route, you will experience Casablanca, Rabat, Tangier, Chefchaouen, Volubilis, and more. The itinerary is designed to balance long scenic drives with meaningful stops, authentic local experiences, and time to enjoy the destination rather than simply pass through it. With Sahara Star Tours, the experience is arranged as a private trip with air-conditioned transport, local support, and an itinerary that can be tailored to your travel style. The pace is designed for travelers who want a structured private itinerary without sacrificing time for local discovery.",
     "category": "desert-tours",
     "duration": "14 Days / 13 Nights",
@@ -8364,47 +8447,58 @@ export const tours: Tour[] = [
     "galleryImages": [
       {
         "src": "/sahara-star-tours/14-days-grand-morocco-tour-itinerary-from-casablanca/images/gallery_1.webp",
-        "cap": "Gallery 1"
+        "cap": "Gallery 1",
+        "alt": "Bicycle rider passing through a bustling artisan souk in Marrakech"
       },
       {
         "src": "/sahara-star-tours/14-days-grand-morocco-tour-itinerary-from-casablanca/images/gallery_10.webp",
-        "cap": "Gallery 10"
+        "cap": "Gallery 10",
+        "alt": "Desert shrub growing on wind-rippled sand in the Sahara Desert"
       },
       {
         "src": "/sahara-star-tours/14-days-grand-morocco-tour-itinerary-from-casablanca/images/gallery_2.webp",
-        "cap": "Gallery 2"
+        "cap": "Gallery 2",
+        "alt": "Camel trek following the curving ridge of Erg Chebbi dunes in Merzouga"
       },
       {
         "src": "/sahara-star-tours/14-days-grand-morocco-tour-itinerary-from-casablanca/images/gallery_3.webp",
-        "cap": "Gallery 3"
+        "cap": "Gallery 3",
+        "alt": "Moroccan woman sitting with a cat outside a medina shop"
       },
       {
         "src": "/sahara-star-tours/14-days-grand-morocco-tour-itinerary-from-casablanca/images/gallery_4.webp",
-        "cap": "Gallery 4"
+        "cap": "Gallery 4",
+        "alt": "Sqala du Port stone sea bastion and seagulls in coastal Essaouira"
       },
       {
         "src": "/sahara-star-tours/14-days-grand-morocco-tour-itinerary-from-casablanca/images/gallery_5.webp",
-        "cap": "Gallery 5"
+        "cap": "Gallery 5",
+        "alt": "Minaret of Hassan II Mosque in Casablanca against a deep blue sky"
       },
       {
         "src": "/sahara-star-tours/14-days-grand-morocco-tour-itinerary-from-casablanca/images/gallery_6.webp",
-        "cap": "Gallery 6"
+        "cap": "Gallery 6",
+        "alt": "Sunset glow behind the Moorish arches of Hassan II Mosque"
       },
       {
         "src": "/sahara-star-tours/14-days-grand-morocco-tour-itinerary-from-casablanca/images/gallery_7.webp",
-        "cap": "Gallery 7"
+        "cap": "Gallery 7",
+        "alt": "Carved stone arch and bronze doors of the Mausoleum of Mohammed V in Rabat"
       },
       {
         "src": "/sahara-star-tours/14-days-grand-morocco-tour-itinerary-from-casablanca/images/gallery_8.webp",
-        "cap": "Gallery 8"
+        "cap": "Gallery 8",
+        "alt": "Ginger cat sitting on a whitewashed step beside a blue door in Chefchaouen"
       },
       {
         "src": "/sahara-star-tours/14-days-grand-morocco-tour-itinerary-from-casablanca/images/gallery_9.webp",
-        "cap": "Gallery 9"
+        "cap": "Gallery 9",
+        "alt": "Woven straw bags and artisan handicrafts on a terracotta wall in Marrakech"
       },
       {
         "src": "/sahara-star-tours/14-days-grand-morocco-tour-itinerary-from-casablanca/images/hero_2.webp",
-        "cap": "Hero 2"
+        "cap": "Hero 2",
+        "alt": "Sunrise over the hillside houses and Rif mountains of Chefchaouen"
       }
     ],
     "faqs": [
@@ -8451,7 +8545,7 @@ export const tours: Tour[] = [
     "slug": "2-day-desert-marrakech-tour-from-fes",
     "title": "2-Day Fes to Marrakech Desert Tour via Merzouga | Sahara Star Tours",
     "shortTitle": "2-Day Fes to Marrakech Desert Tour via Merzouga",
-    "description": "Private 2-day Morocco desert tour from Fes to Marrakech. Explore Merzouga, Fes, Todra Gorges. Local support and flexible planning.",
+    "description": "Fast-paced 2-day desert crossing from Fes to Marrakech. Experience sunset camel trekking in Merzouga, a luxury Berber camp, Todra Gorges, and the High Atlas.",
     "aboutHtml": "This private 2-day Morocco journey begins in Fes and finishes in Marrakech. Along the route, you will experience Fes, Ifrane, Cedar Forest, Midelt, Ziz Valley, and more. The itinerary is designed to balance long scenic drives with meaningful stops, authentic local experiences, and time to enjoy the destination rather than simply pass through it. With Sahara Star Tours, the experience is arranged as a private trip with air-conditioned transport, local support, and an itinerary that can be tailored to your travel style. This route is ideal for travelers who want to combine Morocco's landscapes and cultural heritage with a genuine Sahara experience.",
     "category": "desert-tours",
     "duration": "2 Days / 1 Night",
@@ -8548,39 +8642,48 @@ export const tours: Tour[] = [
     "galleryImages": [
       {
         "src": "/sahara-star-tours/2-day-desert-marrakech-tour-from-fes/images/gallery_1.webp",
-        "cap": "Gallery 1"
+        "cap": "Gallery 1",
+        "alt": "Tour Hassan minaret and ancient stone columns at dusk in Rabat"
       },
       {
         "src": "/sahara-star-tours/2-day-desert-marrakech-tour-from-fes/images/gallery_10.webp",
-        "cap": "Gallery 10"
+        "cap": "Gallery 10",
+        "alt": "Bright blue scarves and Berber crafts displayed in Ait Ben Haddou"
       },
       {
         "src": "/sahara-star-tours/2-day-desert-marrakech-tour-from-fes/images/gallery_2.webp",
-        "cap": "Gallery 2"
+        "cap": "Gallery 2",
+        "alt": "Camel caravan traversing the wide Erg Chebbi sand dunes near Merzouga"
       },
       {
         "src": "/sahara-star-tours/2-day-desert-marrakech-tour-from-fes/images/gallery_3.webp",
-        "cap": "Gallery 3"
+        "cap": "Gallery 3",
+        "alt": "Woman in yellow riding a vintage moped in a Marrakech medina street"
       },
       {
         "src": "/sahara-star-tours/2-day-desert-marrakech-tour-from-fes/images/gallery_4.webp",
-        "cap": "Gallery 4"
+        "cap": "Gallery 4",
+        "alt": "Tourists exploring colorful carpet and handicraft shops in Ait Ben Haddou"
       },
       {
         "src": "/sahara-star-tours/2-day-desert-marrakech-tour-from-fes/images/gallery_5.webp",
-        "cap": "Gallery 5"
+        "cap": "Gallery 5",
+        "alt": "Shadows and golden sunlight contouring the dunes of Erg Chebbi"
       },
       {
         "src": "/sahara-star-tours/2-day-desert-marrakech-tour-from-fes/images/gallery_6.webp",
-        "cap": "Gallery 6"
+        "cap": "Gallery 6",
+        "alt": "Koutoubia Mosque minaret and ancient prayer hall ruins in Marrakech"
       },
       {
         "src": "/sahara-star-tours/2-day-desert-marrakech-tour-from-fes/images/gallery_9.webp",
-        "cap": "Gallery 9"
+        "cap": "Gallery 9",
+        "alt": "Moorish stone carvings on Hassan Tower framed by palm fronds in Rabat"
       },
       {
         "src": "/sahara-star-tours/2-day-desert-marrakech-tour-from-fes/images/hero_2.webp",
-        "cap": "Hero 2"
+        "cap": "Hero 2",
+        "alt": "Women in traditional djellabas shopping at a medina produce stall in Marrakech"
       }
     ],
     "faqs": [
@@ -8627,7 +8730,7 @@ export const tours: Tour[] = [
     "slug": "2-day-sahara-desert-tour-from-fes",
     "title": "2-Day Fes to Merzouga Sahara Desert Tour | Sahara Star Tours",
     "shortTitle": "2-Day Fes to Merzouga Sahara Desert Tour",
-    "description": "Private 2-day Morocco desert tour from Fes (round-trip). Explore Merzouga, Fes. Local support and flexible planning.",
+    "description": "Quick 2-day Sahara getaway from Fes to Merzouga and back. Enjoy scenic Middle Atlas mountain drives, sunset camel trekking, and overnight desert glamping.",
     "aboutHtml": "This private 2-day Morocco journey begins in Fes and finishes in Fes. Along the route, you will experience Fes, Ifrane, Cedar Forest, Midelt, Ziz Valley, and more. The itinerary is designed to balance long scenic drives with meaningful stops, authentic local experiences, and time to enjoy the destination rather than simply pass through it. With Sahara Star Tours, the experience is arranged as a private trip with air-conditioned transport, local support, and an itinerary that can be tailored to your travel style. This route is ideal for travelers who want to combine Morocco's landscapes and cultural heritage with a genuine Sahara experience.",
     "category": "desert-tours",
     "duration": "2 Days / 1 Night",
@@ -8722,43 +8825,53 @@ export const tours: Tour[] = [
     "galleryImages": [
       {
         "src": "/sahara-star-tours/2-day-sahara-desert-tour-from-fes/images/gallery_1.webp",
-        "cap": "Gallery 1"
+        "cap": "Gallery 1",
+        "alt": "Tanners working in stone dye pits at Chouara Tannery in Fes"
       },
       {
         "src": "/sahara-star-tours/2-day-sahara-desert-tour-from-fes/images/gallery_10.webp",
-        "cap": "Gallery 10"
+        "cap": "Gallery 10",
+        "alt": "Curving sand dune ridge in Erg Chebbi under clear blue desert sky"
       },
       {
         "src": "/sahara-star-tours/2-day-sahara-desert-tour-from-fes/images/gallery_3.webp",
-        "cap": "Gallery 3"
+        "cap": "Gallery 3",
+        "alt": "Crests of the Erg Chebbi sand dunes in Merzouga under pale dusk sky"
       },
       {
         "src": "/sahara-star-tours/2-day-sahara-desert-tour-from-fes/images/gallery_4.webp",
-        "cap": "Gallery 4"
+        "cap": "Gallery 4",
+        "alt": "Narrow artisan souk alley in Fes old medina with jewelry shops"
       },
       {
         "src": "/sahara-star-tours/2-day-sahara-desert-tour-from-fes/images/gallery_5.webp",
-        "cap": "Gallery 5"
+        "cap": "Gallery 5",
+        "alt": "Wind-formed ripple patterns across golden desert sand dunes"
       },
       {
         "src": "/sahara-star-tours/2-day-sahara-desert-tour-from-fes/images/gallery_6.webp",
-        "cap": "Gallery 6"
+        "cap": "Gallery 6",
+        "alt": "Expansive view of rolling Sahara sand dunes at sunset in Merzouga"
       },
       {
         "src": "/sahara-star-tours/2-day-sahara-desert-tour-from-fes/images/gallery_7.webp",
-        "cap": "Gallery 7"
+        "cap": "Gallery 7",
+        "alt": "Travelers in blue turbans on a camel excursion over Erg Chebbi dunes"
       },
       {
         "src": "/sahara-star-tours/2-day-sahara-desert-tour-from-fes/images/gallery_8.webp",
-        "cap": "Gallery 8"
+        "cap": "Gallery 8",
+        "alt": "Orange dunes of Erg Chebbi rising beyond the rocky hamada plain"
       },
       {
         "src": "/sahara-star-tours/2-day-sahara-desert-tour-from-fes/images/gallery_9.webp",
-        "cap": "Gallery 9"
+        "cap": "Gallery 9",
+        "alt": "White tents of a luxury desert camp nestled between sand dunes at dusk"
       },
       {
         "src": "/sahara-star-tours/2-day-sahara-desert-tour-from-fes/images/hero_2.webp",
-        "cap": "Hero 2"
+        "cap": "Hero 2",
+        "alt": "Panoramic sunrise over the vast dune sea of Erg Chebbi in Merzouga"
       }
     ],
     "faqs": [
@@ -8805,7 +8918,7 @@ export const tours: Tour[] = [
     "slug": "2-day-zagora-desert-tour-from-marrakech",
     "title": "2-Day Zagora Desert Tour from Marrakech | Sahara Star Tours",
     "shortTitle": "2-Day Zagora Desert Tour from Marrakech",
-    "description": "Private 2-day Morocco desert tour from Marrakech (round-trip). Explore Marrakech, Ait Ben Haddou, Zagora. Local support and flexible planning.",
+    "description": "Short 2-day Zagora desert tour from Marrakech. Cross the High Atlas, tour UNESCO-listed Ait Ben Haddou Kasbah, and ride camels into the palm-fringed Draa Valley.",
     "aboutHtml": "This private 2-day Morocco journey begins in Marrakech and finishes in Marrakech. Along the route, you will experience Marrakech, Ait Ben Haddou, Ouarzazate, Zagora. The itinerary is designed to balance long scenic drives with meaningful stops, authentic local experiences, and time to enjoy the destination rather than simply pass through it. With Sahara Star Tours, the experience is arranged as a private trip with air-conditioned transport, local support, and an itinerary that can be tailored to your travel style. This route is ideal for travelers who want to combine Morocco's landscapes and cultural heritage with a genuine Sahara experience.",
     "category": "desert-tours",
     "duration": "2 Days / 1 Night",
@@ -8897,47 +9010,58 @@ export const tours: Tour[] = [
     "galleryImages": [
       {
         "src": "/sahara-star-tours/2-day-zagora-desert-tour-from-marrakech/images/gallery_1.webp",
-        "cap": "Gallery 1"
+        "cap": "Gallery 1",
+        "alt": "Wind-sculpted sand ripples on a desert dune against bright blue sky"
       },
       {
         "src": "/sahara-star-tours/2-day-zagora-desert-tour-from-marrakech/images/gallery_10.webp",
-        "cap": "Gallery 10"
+        "cap": "Gallery 10",
+        "alt": "Fortified clay gate of Ait Ben Haddou with resting camels in the riverbed"
       },
       {
         "src": "/sahara-star-tours/2-day-zagora-desert-tour-from-marrakech/images/gallery_2.webp",
-        "cap": "Gallery 2"
+        "cap": "Gallery 2",
+        "alt": "Scenic mountain road winding through palm groves in the Draa Valley"
       },
       {
         "src": "/sahara-star-tours/2-day-zagora-desert-tour-from-marrakech/images/gallery_3.webp",
-        "cap": "Gallery 3"
+        "cap": "Gallery 3",
+        "alt": "Tall date palm trees against blue sky in a lush Moroccan oasis"
       },
       {
         "src": "/sahara-star-tours/2-day-zagora-desert-tour-from-marrakech/images/gallery_4.webp",
-        "cap": "Gallery 4"
+        "cap": "Gallery 4",
+        "alt": "Earthen kasbah dwellings on a rocky hillside in the High Atlas"
       },
       {
         "src": "/sahara-star-tours/2-day-zagora-desert-tour-from-marrakech/images/gallery_5.webp",
-        "cap": "Gallery 5"
+        "cap": "Gallery 5",
+        "alt": "Fortified mudbrick kasbah tower with geometric patterns against the sky"
       },
       {
         "src": "/sahara-star-tours/2-day-zagora-desert-tour-from-marrakech/images/gallery_6.webp",
-        "cap": "Gallery 6"
+        "cap": "Gallery 6",
+        "alt": "Modern curved architecture of Marrakech Menara Airport terminal"
       },
       {
         "src": "/sahara-star-tours/2-day-zagora-desert-tour-from-marrakech/images/gallery_7.webp",
-        "cap": "Gallery 7"
+        "cap": "Gallery 7",
+        "alt": "Green valley and mountain stream with snow-capped High Atlas peaks"
       },
       {
         "src": "/sahara-star-tours/2-day-zagora-desert-tour-from-marrakech/images/gallery_8.webp",
-        "cap": "Gallery 8"
+        "cap": "Gallery 8",
+        "alt": "Ait Ben Haddou fortified ksar at dusk with its hilltop granary"
       },
       {
         "src": "/sahara-star-tours/2-day-zagora-desert-tour-from-marrakech/images/gallery_9.webp",
-        "cap": "Gallery 9"
+        "cap": "Gallery 9",
+        "alt": "Earthen kasbah towers framed by palm trees and olive trees"
       },
       {
         "src": "/sahara-star-tours/2-day-zagora-desert-tour-from-marrakech/images/hero_2.webp",
-        "cap": "Hero 2"
+        "cap": "Hero 2",
+        "alt": "Panoramic landscape of the mudbrick ksar of Ait Ben Haddou"
       }
     ],
     "faqs": [
@@ -8984,7 +9108,7 @@ export const tours: Tour[] = [
     "slug": "3-day-morocco-desert-tour-from-marrakech",
     "title": "3-Day Marrakech to Merzouga Sahara Desert Tour | Sahara Star Tours",
     "shortTitle": "3-Day Marrakech to Merzouga Sahara Desert Tour",
-    "description": "Private 3-day Morocco desert tour from Marrakech (round-trip). Explore Merzouga, Marrakech, Ait Ben Haddou. Local support and flexible planning.",
+    "description": "Classic 3-day round-trip Sahara tour from Marrakech to Merzouga. Travel through the Dades Valley, Todra Gorges, and sleep under the stars in Erg Chebbi dunes.",
     "aboutHtml": "This private 3-day Morocco journey begins in Marrakech and finishes in Marrakech. Along the route, you will experience Marrakech, High Atlas Mountains, Ait Ben Haddou, Roses Valley, Dades Valley, and more. The itinerary is designed to balance long scenic drives with meaningful stops, authentic local experiences, and time to enjoy the destination rather than simply pass through it. With Sahara Star Tours, the experience is arranged as a private trip with air-conditioned transport, local support, and an itinerary that can be tailored to your travel style. This route is ideal for travelers who want to combine Morocco's landscapes and cultural heritage with a genuine Sahara experience.",
     "category": "desert-tours",
     "duration": "3 Days / 2 Nights",
@@ -9099,47 +9223,58 @@ export const tours: Tour[] = [
     "galleryImages": [
       {
         "src": "/sahara-star-tours/3-day-morocco-desert-tour-from-marrakech/images/gallery_1.webp",
-        "cap": "Gallery 1"
+        "cap": "Gallery 1",
+        "alt": "Traditional djellabas and textiles for sale along Todra Gorges canyon wall"
       },
       {
         "src": "/sahara-star-tours/3-day-morocco-desert-tour-from-marrakech/images/gallery_10.webp",
-        "cap": "Gallery 10"
+        "cap": "Gallery 10",
+        "alt": "Colorful spice pyramids and glass jars in a traditional Moroccan souk"
       },
       {
         "src": "/sahara-star-tours/3-day-morocco-desert-tour-from-marrakech/images/gallery_2.webp",
-        "cap": "Gallery 2"
+        "cap": "Gallery 2",
+        "alt": "Rocky volcanic hills and desert mountain peak near Merzouga"
       },
       {
         "src": "/sahara-star-tours/3-day-morocco-desert-tour-from-marrakech/images/gallery_3.webp",
-        "cap": "Gallery 3"
+        "cap": "Gallery 3",
+        "alt": "Resting camel in front of high sand dunes and desert camp in Erg Chebbi"
       },
       {
         "src": "/sahara-star-tours/3-day-morocco-desert-tour-from-marrakech/images/gallery_4.webp",
-        "cap": "Gallery 4"
+        "cap": "Gallery 4",
+        "alt": "Artisan copper lanterns and leather babouche slippers in Marrakech souk"
       },
       {
         "src": "/sahara-star-tours/3-day-morocco-desert-tour-from-marrakech/images/gallery_5.webp",
-        "cap": "Gallery 5"
+        "cap": "Gallery 5",
+        "alt": "Ait Ben Haddou ksar viewed across the river valley in evening light"
       },
       {
         "src": "/sahara-star-tours/3-day-morocco-desert-tour-from-marrakech/images/gallery_6.webp",
-        "cap": "Gallery 6"
+        "cap": "Gallery 6",
+        "alt": "Pierced brass lamps and metalcrafts displayed in Marrakech medina"
       },
       {
         "src": "/sahara-star-tours/3-day-morocco-desert-tour-from-marrakech/images/gallery_7.webp",
-        "cap": "Gallery 7"
+        "cap": "Gallery 7",
+        "alt": "Twilight purple sky over the illuminated clay village of Ait Ben Haddou"
       },
       {
         "src": "/sahara-star-tours/3-day-morocco-desert-tour-from-marrakech/images/gallery_8.webp",
-        "cap": "Gallery 8"
+        "cap": "Gallery 8",
+        "alt": "Textured golden sand dunes meeting a blue sky in the Sahara Desert"
       },
       {
         "src": "/sahara-star-tours/3-day-morocco-desert-tour-from-marrakech/images/gallery_9.webp",
-        "cap": "Gallery 9"
+        "cap": "Gallery 9",
+        "alt": "Fortified earthen kasbah rising amidst palm trees in Skoura oasis"
       },
       {
         "src": "/sahara-star-tours/3-day-morocco-desert-tour-from-marrakech/images/hero_2.webp",
-        "cap": "Hero 2"
+        "cap": "Hero 2",
+        "alt": "Scenic overview of Ait Ben Haddou fortified village and palm groves"
       }
     ],
     "faqs": [
@@ -9186,7 +9321,7 @@ export const tours: Tour[] = [
     "slug": "3-day-sahara-desert-tour-from-fes",
     "title": "3-Day Fes to Merzouga Sahara Desert Tour | Sahara Star Tours",
     "shortTitle": "3-Day Fes to Merzouga Sahara Desert Tour",
-    "description": "Private 3-day Morocco desert tour from Fes (round-trip). Explore Merzouga, Erg Chebbi, Fes. Local support and flexible planning.",
+    "description": "In-depth 3-day Sahara desert tour from Fes to Merzouga. Features Middle Atlas vistas, Erg Chebbi camel rides, Gnawa music in Khamlia, and desert glamping.",
     "aboutHtml": "This private 3-day Morocco journey begins in Fes and finishes in Fes. Along the route, you will experience Fes, Ifrane, Cedar Forest, Midelt, Ziz Valley, and more. The itinerary is designed to balance long scenic drives with meaningful stops, authentic local experiences, and time to enjoy the destination rather than simply pass through it. With Sahara Star Tours, the experience is arranged as a private trip with air-conditioned transport, local support, and an itinerary that can be tailored to your travel style. This route is ideal for travelers who want to combine Morocco's landscapes and cultural heritage with a genuine Sahara experience.",
     "category": "desert-tours",
     "duration": "3 Days / 2 Nights",
@@ -9301,39 +9436,48 @@ export const tours: Tour[] = [
     "galleryImages": [
       {
         "src": "/sahara-star-tours/3-day-sahara-desert-tour-from-fes/images/gallery_1.webp",
-        "cap": "Gallery 1"
+        "cap": "Gallery 1",
+        "alt": "Leather dye vats and stone wash basins at Chouara Tannery in Fes"
       },
       {
         "src": "/sahara-star-tours/3-day-sahara-desert-tour-from-fes/images/gallery_10.webp",
-        "cap": "Gallery 10"
+        "cap": "Gallery 10",
+        "alt": "Panoramic vista of orange dunes stretching to the horizon in Erg Chebbi"
       },
       {
         "src": "/sahara-star-tours/3-day-sahara-desert-tour-from-fes/images/gallery_2.webp",
-        "cap": "Gallery 2"
+        "cap": "Gallery 2",
+        "alt": "Barbary macaque monkey resting on a cedar branch in the Middle Atlas forest"
       },
       {
         "src": "/sahara-star-tours/3-day-sahara-desert-tour-from-fes/images/gallery_4.webp",
-        "cap": "Gallery 4"
+        "cap": "Gallery 4",
+        "alt": "Carved cedarwood and stucco details at a medieval madrasa in Fes"
       },
       {
         "src": "/sahara-star-tours/3-day-sahara-desert-tour-from-fes/images/gallery_5.webp",
-        "cap": "Gallery 5"
+        "cap": "Gallery 5",
+        "alt": "Rippled golden dunes and blue sky in the Merzouga desert"
       },
       {
         "src": "/sahara-star-tours/3-day-sahara-desert-tour-from-fes/images/gallery_6.webp",
-        "cap": "Gallery 6"
+        "cap": "Gallery 6",
+        "alt": "Sunset casting warm shadows over the dunes of Erg Chebbi"
       },
       {
         "src": "/sahara-star-tours/3-day-sahara-desert-tour-from-fes/images/gallery_8.webp",
-        "cap": "Gallery 8"
+        "cap": "Gallery 8",
+        "alt": "Desert landscape with acacia trees and distant mountains along Ziz Valley"
       },
       {
         "src": "/sahara-star-tours/3-day-sahara-desert-tour-from-fes/images/gallery_9.webp",
-        "cap": "Gallery 9"
+        "cap": "Gallery 9",
+        "alt": "Traditional Berber nomad camp in the Sahara Desert under twilight sky"
       },
       {
         "src": "/sahara-star-tours/3-day-sahara-desert-tour-from-fes/images/hero_2.webp",
-        "cap": "Hero 2"
+        "cap": "Hero 2",
+        "alt": "Vast desert dunes of Merzouga illuminated by morning sun"
       }
     ],
     "faqs": [
@@ -9380,7 +9524,7 @@ export const tours: Tour[] = [
     "slug": "4-day-morocco-desert-tour-from-fes-to-marrakech",
     "title": "4-Day Fes to Marrakech Desert Tour via Merzouga | Sahara Star Tours",
     "shortTitle": "4-Day Fes to Marrakech Desert Tour via Merzouga",
-    "description": "Private 4-day Morocco desert tour from Fes to Marrakech. Explore Merzouga, Erg Chebbi, Fes. Local support and flexible planning.",
+    "description": "Scenic 4-day desert itinerary connecting Fes to Marrakech. Spend two nights in Merzouga, explore nomad encampments, hike Todra Gorges, and visit Ait Ben Haddou.",
     "aboutHtml": "This private 4-day Morocco journey begins in Fes and finishes in Marrakech. Along the route, you will experience Fes, Ifrane, Cedar Forest, Midelt, Ziz Valley, and more. The itinerary is designed to balance long scenic drives with meaningful stops, authentic local experiences, and time to enjoy the destination rather than simply pass through it. With Sahara Star Tours, the experience is arranged as a private trip with air-conditioned transport, local support, and an itinerary that can be tailored to your travel style. This route is ideal for travelers who want to combine Morocco's landscapes and cultural heritage with a genuine Sahara experience.",
     "category": "desert-tours",
     "duration": "4 Days / 3 Nights",
@@ -9517,39 +9661,48 @@ export const tours: Tour[] = [
     "galleryImages": [
       {
         "src": "/sahara-star-tours/4-day-morocco-desert-tour-from-fes-to-marrakech/images/gallery_1.webp",
-        "cap": "Gallery 1"
+        "cap": "Gallery 1",
+        "alt": "Artisan copper lanterns and brass metalwork in Fes medina souk"
       },
       {
         "src": "/sahara-star-tours/4-day-morocco-desert-tour-from-fes-to-marrakech/images/gallery_10.webp",
-        "cap": "Gallery 10"
+        "cap": "Gallery 10",
+        "alt": "Towering red limestone cliffs of Todra Gorges in the eastern High Atlas"
       },
       {
         "src": "/sahara-star-tours/4-day-morocco-desert-tour-from-fes-to-marrakech/images/gallery_3.webp",
-        "cap": "Gallery 3"
+        "cap": "Gallery 3",
+        "alt": "Camel caravan moving along the crest of Erg Chebbi dunes at sunset"
       },
       {
         "src": "/sahara-star-tours/4-day-morocco-desert-tour-from-fes-to-marrakech/images/gallery_4.webp",
-        "cap": "Gallery 4"
+        "cap": "Gallery 4",
+        "alt": "Historic earthen kasbah standing beside date palms in Dades Valley"
       },
       {
         "src": "/sahara-star-tours/4-day-morocco-desert-tour-from-fes-to-marrakech/images/gallery_5.webp",
-        "cap": "Gallery 5"
+        "cap": "Gallery 5",
+        "alt": "Winding switchbacks of the Dades Gorge mountain road"
       },
       {
         "src": "/sahara-star-tours/4-day-morocco-desert-tour-from-fes-to-marrakech/images/gallery_6.webp",
-        "cap": "Gallery 6"
+        "cap": "Gallery 6",
+        "alt": "Traditional Berber carpet weaver displaying vibrant wool rugs"
       },
       {
         "src": "/sahara-star-tours/4-day-morocco-desert-tour-from-fes-to-marrakech/images/gallery_8.webp",
-        "cap": "Gallery 8"
+        "cap": "Gallery 8",
+        "alt": "UNESCO World Heritage fortified village of Ait Ben Haddou at sunrise"
       },
       {
         "src": "/sahara-star-tours/4-day-morocco-desert-tour-from-fes-to-marrakech/images/gallery_9.webp",
-        "cap": "Gallery 9"
+        "cap": "Gallery 9",
+        "alt": "Clay towers and battlements of Taourirt Kasbah in Ouarzazate"
       },
       {
         "src": "/sahara-star-tours/4-day-morocco-desert-tour-from-fes-to-marrakech/images/hero_2.webp",
-        "cap": "Hero 2"
+        "cap": "Hero 2",
+        "alt": "Panoramic view of the Draa Valley date palm oasis and arid mountains"
       }
     ],
     "faqs": [
@@ -9596,7 +9749,7 @@ export const tours: Tour[] = [
     "slug": "4-day-morocco-itinerary-desert-tour-from-fes",
     "title": "4-Day Fes to Merzouga & Dades Desert Tour | Sahara Star Tours",
     "shortTitle": "4-Day Fes to Merzouga & Dades Desert Tour",
-    "description": "Private 4-day Morocco desert tour from Fes (round-trip). Explore Fes, Todra Gorges. Local support and flexible planning.",
+    "description": "Unwind on a 4-day round-trip desert journey from Fes to Merzouga. Enjoy camel treks across Erg Chebbi, fossil workshops in Erfoud, and serene desert landscapes.",
     "aboutHtml": "This private 4-day Morocco journey begins in Fes and finishes in Fes. Along the route, you will experience Fes, Ifrane, Cedar Forest, Midelt, Ziz Valley, and more. The itinerary is designed to balance long scenic drives with meaningful stops, authentic local experiences, and time to enjoy the destination rather than simply pass through it. With Sahara Star Tours, the experience is arranged as a private trip with air-conditioned transport, local support, and an itinerary that can be tailored to your travel style. This route is ideal for travelers who want to combine Morocco's landscapes and cultural heritage with a genuine Sahara experience.",
     "category": "desert-tours",
     "duration": "4 Days / 3 Nights",
@@ -9732,43 +9885,53 @@ export const tours: Tour[] = [
     "galleryImages": [
       {
         "src": "/sahara-star-tours/4-day-morocco-itinerary-desert-tour-from-fes/images/gallery_1.webp",
-        "cap": "Gallery 1"
+        "cap": "Gallery 1",
+        "alt": "Narrow cobbled alleyway in the medieval medina of Fes el-Bali"
       },
       {
         "src": "/sahara-star-tours/4-day-morocco-itinerary-desert-tour-from-fes/images/gallery_10.webp",
-        "cap": "Gallery 10"
+        "cap": "Gallery 10",
+        "alt": "Sunset over the dramatic limestone gorge of Todra Valley"
       },
       {
         "src": "/sahara-star-tours/4-day-morocco-itinerary-desert-tour-from-fes/images/gallery_2.webp",
-        "cap": "Gallery 2"
+        "cap": "Gallery 2",
+        "alt": "Alpine style architecture and park gardens in the mountain town of Ifrane"
       },
       {
         "src": "/sahara-star-tours/4-day-morocco-itinerary-desert-tour-from-fes/images/gallery_3.webp",
-        "cap": "Gallery 3"
+        "cap": "Gallery 3",
+        "alt": "Lush green date palm oasis stretching through the arid Ziz Valley canyon"
       },
       {
         "src": "/sahara-star-tours/4-day-morocco-itinerary-desert-tour-from-fes/images/gallery_4.webp",
-        "cap": "Gallery 4"
+        "cap": "Gallery 4",
+        "alt": "Nomad tent camp and camels on the desert sands near Merzouga"
       },
       {
         "src": "/sahara-star-tours/4-day-morocco-itinerary-desert-tour-from-fes/images/gallery_5.webp",
-        "cap": "Gallery 5"
+        "cap": "Gallery 5",
+        "alt": "Golden sunset over the majestic dunes of Erg Chebbi"
       },
       {
         "src": "/sahara-star-tours/4-day-morocco-itinerary-desert-tour-from-fes/images/gallery_7.webp",
-        "cap": "Gallery 7"
+        "cap": "Gallery 7",
+        "alt": "Berber musicians playing traditional desert drums around a campfire"
       },
       {
         "src": "/sahara-star-tours/4-day-morocco-itinerary-desert-tour-from-fes/images/gallery_8.webp",
-        "cap": "Gallery 8"
+        "cap": "Gallery 8",
+        "alt": "Dramatic rock formations known as the monkey fingers in Dades Valley"
       },
       {
         "src": "/sahara-star-tours/4-day-morocco-itinerary-desert-tour-from-fes/images/gallery_9.webp",
-        "cap": "Gallery 9"
+        "cap": "Gallery 9",
+        "alt": "Earthen village dwellings terraced along the red cliffs of Dades Gorge"
       },
       {
         "src": "/sahara-star-tours/4-day-morocco-itinerary-desert-tour-from-fes/images/hero_2.webp",
-        "cap": "Hero 2"
+        "cap": "Hero 2",
+        "alt": "Vast expanse of the Sahara Desert dunes under a clear morning sky"
       }
     ],
     "faqs": [
@@ -9815,7 +9978,7 @@ export const tours: Tour[] = [
     "slug": "4-day-morocco-tour-from-casablanca",
     "title": "4-Day Morocco Tour from Casablanca to Marrakech | Sahara Star Tours",
     "shortTitle": "4-Day Morocco Tour from Casablanca to Marrakech",
-    "description": "Private 4-day Morocco tour from Casablanca to Marrakech. Explore Merzouga, Fes. Local support and flexible planning.",
+    "description": "Express 4-day Morocco highlights tour from Casablanca to Marrakech. Tour the Hassan II Mosque, medieval Fes, sunset dunes in Merzouga, and High Atlas Kasbahs.",
     "aboutHtml": "This private 4-day Morocco journey begins in Casablanca and finishes in Marrakech. Along the route, you will experience Casablanca, Fes, Ifrane, Cedar Forest, Midelt, and more. The itinerary is designed to balance long scenic drives with meaningful stops, authentic local experiences, and time to enjoy the destination rather than simply pass through it. With Sahara Star Tours, the experience is arranged as a private trip with air-conditioned transport, local support, and an itinerary that can be tailored to your travel style. The pace is designed for travelers who want a structured private itinerary without sacrificing time for local discovery.",
     "category": "desert-tours",
     "duration": "4 Days / 3 Nights",
@@ -9952,47 +10115,58 @@ export const tours: Tour[] = [
     "galleryImages": [
       {
         "src": "/sahara-star-tours/4-day-morocco-tour-from-casablanca/images/gallery_1.webp",
-        "cap": "Gallery 1"
+        "cap": "Gallery 1",
+        "alt": "View of the oceanfront promenade and Hassan II Mosque in Casablanca"
       },
       {
         "src": "/sahara-star-tours/4-day-morocco-tour-from-casablanca/images/gallery_10.webp",
-        "cap": "Gallery 10"
+        "cap": "Gallery 10",
+        "alt": "Bustling evening atmosphere with food stalls in Marrakech Jemaa el-Fnaa"
       },
       {
         "src": "/sahara-star-tours/4-day-morocco-tour-from-casablanca/images/gallery_2.webp",
-        "cap": "Gallery 2"
+        "cap": "Gallery 2",
+        "alt": "Intricate mosaic zellij tilework fountain in Casablanca"
       },
       {
         "src": "/sahara-star-tours/4-day-morocco-tour-from-casablanca/images/gallery_3.webp",
-        "cap": "Gallery 3"
+        "cap": "Gallery 3",
+        "alt": "Ancient Roman ruins and olive groves at UNESCO site of Volubilis"
       },
       {
         "src": "/sahara-star-tours/4-day-morocco-tour-from-casablanca/images/gallery_4.webp",
-        "cap": "Gallery 4"
+        "cap": "Gallery 4",
+        "alt": "Grand monumental city gate of Bab Mansour in imperial Meknes"
       },
       {
         "src": "/sahara-star-tours/4-day-morocco-tour-from-casablanca/images/gallery_5.webp",
-        "cap": "Gallery 5"
+        "cap": "Gallery 5",
+        "alt": "Chouara Tannery leather workers in the historic medina of Fes"
       },
       {
         "src": "/sahara-star-tours/4-day-morocco-tour-from-casablanca/images/gallery_6.webp",
-        "cap": "Gallery 6"
+        "cap": "Gallery 6",
+        "alt": "Snow-capped Middle Atlas mountain peaks on the route to the desert"
       },
       {
         "src": "/sahara-star-tours/4-day-morocco-tour-from-casablanca/images/gallery_7.webp",
-        "cap": "Gallery 7"
+        "cap": "Gallery 7",
+        "alt": "Camel excursion across the high dunes of Erg Chebbi in Merzouga"
       },
       {
         "src": "/sahara-star-tours/4-day-morocco-tour-from-casablanca/images/gallery_8.webp",
-        "cap": "Gallery 8"
+        "cap": "Gallery 8",
+        "alt": "Traditional Moroccan riad courtyard with fountain and ceramic tilework"
       },
       {
         "src": "/sahara-star-tours/4-day-morocco-tour-from-casablanca/images/gallery_9.webp",
-        "cap": "Gallery 9"
+        "cap": "Gallery 9",
+        "alt": "Fortified clay kasbah of Ait Ben Haddou illuminated at sunset"
       },
       {
         "src": "/sahara-star-tours/4-day-morocco-tour-from-casablanca/images/hero_2.webp",
-        "cap": "Hero 2"
+        "cap": "Hero 2",
+        "alt": "Classic view of the Koutoubia Mosque minaret in Marrakech at dusk"
       }
     ],
     "faqs": [
@@ -10039,7 +10213,7 @@ export const tours: Tour[] = [
     "slug": "4-days-marrakech-to-fes-desert-tour",
     "title": "4-Day Marrakech to Fes Desert Tour via Merzouga | Sahara Star Tours",
     "shortTitle": "4-Day Marrakech to Fes Desert Tour via Merzouga",
-    "description": "Private 4-day Morocco desert tour from Marrakech to Fes. Explore Merzouga, Erg Chebbi, Marrakech. Local support and flexible planning.",
+    "description": "Private 4-day desert crossing from Marrakech to Fes. Journey through Kasbah Ait Ben Haddou, Dades Valley, Erg Chebbi luxury dunes, and the Cedar Forest of Azrou.",
     "aboutHtml": "This private 4-day Morocco journey begins in Marrakech and finishes in Fes. Along the route, you will experience Marrakech, High Atlas Mountains, Ait Ben Haddou, Ouarzazate, Todra Gorges, and more. The itinerary is designed to balance long scenic drives with meaningful stops, authentic local experiences, and time to enjoy the destination rather than simply pass through it. With Sahara Star Tours, the experience is arranged as a private trip with air-conditioned transport, local support, and an itinerary that can be tailored to your travel style. This route is ideal for travelers who want to combine Morocco's landscapes and cultural heritage with a genuine Sahara experience.",
     "category": "desert-tours",
     "duration": "4 Days / 3 Nights",
@@ -10176,47 +10350,58 @@ export const tours: Tour[] = [
     "galleryImages": [
       {
         "src": "/sahara-star-tours/4-days-marrakech-to-fes-desert-tour/images/gallery_1.webp",
-        "cap": "Gallery 1"
+        "cap": "Gallery 1",
+        "alt": "Spectacular High Atlas mountain road over the Tizi n'Tichka pass"
       },
       {
         "src": "/sahara-star-tours/4-days-marrakech-to-fes-desert-tour/images/gallery_10.webp",
-        "cap": "Gallery 10"
+        "cap": "Gallery 10",
+        "alt": "Historic Al Attarine Madrasa courtyard with intricate arabesques in Fes"
       },
       {
         "src": "/sahara-star-tours/4-days-marrakech-to-fes-desert-tour/images/gallery_2.webp",
-        "cap": "Gallery 2"
+        "cap": "Gallery 2",
+        "alt": "Fortified mudbrick towers of Ait Ben Haddou against the desert sky"
       },
       {
         "src": "/sahara-star-tours/4-days-marrakech-to-fes-desert-tour/images/gallery_3.webp",
-        "cap": "Gallery 3"
+        "cap": "Gallery 3",
+        "alt": "Taourirt Kasbah earthen walls and palm trees in Ouarzazate"
       },
       {
         "src": "/sahara-star-tours/4-days-marrakech-to-fes-desert-tour/images/gallery_4.webp",
-        "cap": "Gallery 4"
+        "cap": "Gallery 4",
+        "alt": "Towering vertical rock walls of the Todra Gorges canyon"
       },
       {
         "src": "/sahara-star-tours/4-days-marrakech-to-fes-desert-tour/images/gallery_5.webp",
-        "cap": "Gallery 5"
+        "cap": "Gallery 5",
+        "alt": "Camel caravan guided through the golden sands of Erg Chebbi"
       },
       {
         "src": "/sahara-star-tours/4-days-marrakech-to-fes-desert-tour/images/gallery_6.webp",
-        "cap": "Gallery 6"
+        "cap": "Gallery 6",
+        "alt": "Berber campfire gathering with traditional drumming under the desert stars"
       },
       {
         "src": "/sahara-star-tours/4-days-marrakech-to-fes-desert-tour/images/gallery_7.webp",
-        "cap": "Gallery 7"
+        "cap": "Gallery 7",
+        "alt": "Palm groves and adobe villages along the winding Ziz River canyon"
       },
       {
         "src": "/sahara-star-tours/4-days-marrakech-to-fes-desert-tour/images/gallery_8.webp",
-        "cap": "Gallery 8"
+        "cap": "Gallery 8",
+        "alt": "Cedar forest of Azrou with native Barbary macaque monkeys"
       },
       {
         "src": "/sahara-star-tours/4-days-marrakech-to-fes-desert-tour/images/gallery_9.webp",
-        "cap": "Gallery 9"
+        "cap": "Gallery 9",
+        "alt": "Panorama of the medieval walled city of Fes from the Marinid Tombs"
       },
       {
         "src": "/sahara-star-tours/4-days-marrakech-to-fes-desert-tour/images/hero_2.webp",
-        "cap": "Hero 2"
+        "cap": "Hero 2",
+        "alt": "Sunset casting long golden shadows over the sand dunes of Merzouga"
       }
     ],
     "faqs": [
@@ -10263,7 +10448,7 @@ export const tours: Tour[] = [
     "slug": "5-day-morocco-sahara-tour-from-casablanca",
     "title": "5-Day Morocco Sahara Desert Tour from Casablanca | Sahara Star Tours",
     "shortTitle": "5-Day Morocco Sahara Desert Tour from Casablanca",
-    "description": "Private 5-day Morocco desert tour from Casablanca to Marrakech. Explore Fes. Local support and flexible planning.",
+    "description": "Essential 5-day tour from Casablanca to Marrakech. Visit imperial Rabat and Fes, experience luxury Sahara glamping in Merzouga, and traverse dramatic Atlas passes.",
     "aboutHtml": "This private 5-day Morocco journey begins in Casablanca and finishes in Marrakech. Along the route, you will experience Casablanca, Volubilis, Meknes, Fes, Ifrane, and more. The itinerary is designed to balance long scenic drives with meaningful stops, authentic local experiences, and time to enjoy the destination rather than simply pass through it. With Sahara Star Tours, the experience is arranged as a private trip with air-conditioned transport, local support, and an itinerary that can be tailored to your travel style. This route is ideal for travelers who want to combine Morocco's landscapes and cultural heritage with a genuine Sahara experience.",
     "category": "desert-tours",
     "duration": "5 Days / 4 Nights",
@@ -10420,39 +10605,48 @@ export const tours: Tour[] = [
     "galleryImages": [
       {
         "src": "/sahara-star-tours/5-day-morocco-sahara-tour-from-casablanca/images/gallery_1.webp",
-        "cap": "Gallery 1"
+        "cap": "Gallery 1",
+        "alt": "Hassan II Mosque minaret rising above the Atlantic coastline in Casablanca"
       },
       {
         "src": "/sahara-star-tours/5-day-morocco-sahara-tour-from-casablanca/images/gallery_10.webp",
-        "cap": "Gallery 10"
+        "cap": "Gallery 10",
+        "alt": "Sunset silhouette of camel riders on the dunes of Erg Chebbi"
       },
       {
         "src": "/sahara-star-tours/5-day-morocco-sahara-tour-from-casablanca/images/gallery_2.webp",
-        "cap": "Gallery 2"
+        "cap": "Gallery 2",
+        "alt": "Roman triumphal arch and stone paved street at Volubilis"
       },
       {
         "src": "/sahara-star-tours/5-day-morocco-sahara-tour-from-casablanca/images/gallery_3.webp",
-        "cap": "Gallery 3"
+        "cap": "Gallery 3",
+        "alt": "Historic Bab el-Mansour gate with Moorish carved arches in Meknes"
       },
       {
         "src": "/sahara-star-tours/5-day-morocco-sahara-tour-from-casablanca/images/gallery_4.webp",
-        "cap": "Gallery 4"
+        "cap": "Gallery 4",
+        "alt": "Leather tanners at Chouara Tannery in the old quarter of Fes"
       },
       {
         "src": "/sahara-star-tours/5-day-morocco-sahara-tour-from-casablanca/images/gallery_5.webp",
-        "cap": "Gallery 5"
+        "cap": "Gallery 5",
+        "alt": "Verdant date palm oasis contrasting with red cliffs in Ziz Valley"
       },
       {
         "src": "/sahara-star-tours/5-day-morocco-sahara-tour-from-casablanca/images/gallery_6.webp",
-        "cap": "Gallery 6"
+        "cap": "Gallery 6",
+        "alt": "Glamping tents at a luxury desert camp in the Merzouga dunes"
       },
       {
         "src": "/sahara-star-tours/5-day-morocco-sahara-tour-from-casablanca/images/gallery_7.webp",
-        "cap": "Gallery 7"
+        "cap": "Gallery 7",
+        "alt": "Sheer canyon cliffs of Todra Gorges in the High Atlas Mountains"
       },
       {
         "src": "/sahara-star-tours/5-day-morocco-sahara-tour-from-casablanca/images/gallery_8.webp",
-        "cap": "Gallery 8"
+        "cap": "Gallery 8",
+        "alt": "Fortified earthen ksar of Ait Ben Haddou viewed from across the river"
       }
     ],
     "faqs": [
@@ -10499,7 +10693,7 @@ export const tours: Tour[] = [
     "slug": "5-days-in-northern-morocco-from-tangier",
     "title": "5-Day Northern Morocco Tour from Tangier | Sahara Star Tours",
     "shortTitle": "5-Day Northern Morocco Tour from Tangier",
-    "description": "Private 5-day Morocco tour from Tangier to Casablanca. Explore Fes, Chefchaouen, Rabat. Local support and flexible planning.",
+    "description": "Explore the culture of northern Morocco on a 5-day private tour from Tangier to Casablanca. Visit Chefchaouen, Roman Volubilis, ancient Fes, and coastal Rabat.",
     "aboutHtml": "This private 5-day Morocco journey begins in Tangier and finishes in Casablanca. Along the route, you will experience Tangier, Chefchaouen, Volubilis, Meknes, Fes, and more. The itinerary combines cultural visits, scenic landscapes, and comfortable overland travel with time to experience each destination. With Sahara Star Tours, the experience is arranged as a private trip with air-conditioned transport, local support, and an itinerary that can be tailored to your travel style. The pace is designed for travelers who want a structured private itinerary without sacrificing time for local discovery.",
     "category": "imperial-cities",
     "duration": "5 Days / 4 Nights",
@@ -10653,47 +10847,58 @@ export const tours: Tour[] = [
     "galleryImages": [
       {
         "src": "/sahara-star-tours/5-days-in-northern-morocco-from-tangier/images/gallery_1.webp",
-        "cap": "Gallery 1"
+        "cap": "Gallery 1",
+        "alt": "Hercules Caves sea window carved into the limestone cliff in Tangier"
       },
       {
         "src": "/sahara-star-tours/5-days-in-northern-morocco-from-tangier/images/gallery_10.webp",
-        "cap": "Gallery 10"
+        "cap": "Gallery 10",
+        "alt": "Hassan Tower and Mohammed V Mausoleum esplanade in Rabat"
       },
       {
         "src": "/sahara-star-tours/5-days-in-northern-morocco-from-tangier/images/gallery_2.webp",
-        "cap": "Gallery 2"
+        "cap": "Gallery 2",
+        "alt": "Cap Spartel promontory where the Atlantic Ocean meets the Mediterranean"
       },
       {
         "src": "/sahara-star-tours/5-days-in-northern-morocco-from-tangier/images/gallery_3.webp",
-        "cap": "Gallery 3"
+        "cap": "Gallery 3",
+        "alt": "Winding blue stairway lane lined with flower pots in Chefchaouen"
       },
       {
         "src": "/sahara-star-tours/5-days-in-northern-morocco-from-tangier/images/gallery_4.webp",
-        "cap": "Gallery 4"
+        "cap": "Gallery 4",
+        "alt": "Blue-painted medina streets and rustic wooden doorways of Chefchaouen"
       },
       {
         "src": "/sahara-star-tours/5-days-in-northern-morocco-from-tangier/images/gallery_5.webp",
-        "cap": "Gallery 5"
+        "cap": "Gallery 5",
+        "alt": "Ancient Roman mosaic floors preserved among the ruins of Volubilis"
       },
       {
         "src": "/sahara-star-tours/5-days-in-northern-morocco-from-tangier/images/gallery_6.webp",
-        "cap": "Gallery 6"
+        "cap": "Gallery 6",
+        "alt": "Historic imperial gate of Bab Mansour in the old city of Meknes"
       },
       {
         "src": "/sahara-star-tours/5-days-in-northern-morocco-from-tangier/images/gallery_7.webp",
-        "cap": "Gallery 7"
+        "cap": "Gallery 7",
+        "alt": "Panoramic overlook of the ancient walled medina of Fes el-Bali"
       },
       {
         "src": "/sahara-star-tours/5-days-in-northern-morocco-from-tangier/images/gallery_8.webp",
-        "cap": "Gallery 8"
+        "cap": "Gallery 8",
+        "alt": "Al Quaraouiyine Mosque and library architecture in medieval Fes"
       },
       {
         "src": "/sahara-star-tours/5-days-in-northern-morocco-from-tangier/images/gallery_9.webp",
-        "cap": "Gallery 9"
+        "cap": "Gallery 9",
+        "alt": "Kasbah of the Udayas stone walls and Andalusian gardens in Rabat"
       },
       {
         "src": "/sahara-star-tours/5-days-in-northern-morocco-from-tangier/images/hero_2.webp",
-        "cap": "Hero 2"
+        "cap": "Hero 2",
+        "alt": "Panoramic view of the picturesque blue-washed town of Chefchaouen"
       }
     ],
     "faqs": [
@@ -10737,7 +10942,7 @@ export const tours: Tour[] = [
     "slug": "5-days-marrakech-to-fes-morocco-sahara-desert-tour",
     "title": "5-Day Marrakech to Fes Sahara Desert Tour | Sahara Star Tours",
     "shortTitle": "5-Day Marrakech to Fes Sahara Desert Tour",
-    "description": "Private 5-day Morocco desert tour from Marrakech to Fes. Explore Marrakech, Ait Ben Haddou, Todra Gorges. Local support and flexible planning.",
+    "description": "Immersive 5-day desert journey from Marrakech to Fes. Explore Skoura palm groves, Todra Gorges, two nights in Merzouga with nomad hospitality, and cedar forests.",
     "aboutHtml": "This private 5-day Morocco journey begins in Marrakech and finishes in Fes. Along the route, you will experience Marrakech, High Atlas Mountains, Ait Ben Haddou, Ouarzazate, Skoura, and more. The itinerary is designed to balance long scenic drives with meaningful stops, authentic local experiences, and time to enjoy the destination rather than simply pass through it. With Sahara Star Tours, the experience is arranged as a private trip with air-conditioned transport, local support, and an itinerary that can be tailored to your travel style. This route is ideal for travelers who want to combine Morocco's landscapes and cultural heritage with a genuine Sahara experience.",
     "category": "desert-tours",
     "duration": "5 Days / 4 Nights",
@@ -10894,47 +11099,58 @@ export const tours: Tour[] = [
     "galleryImages": [
       {
         "src": "/sahara-star-tours/5-days-marrakech-to-fes-morocco-sahara-desert-tour/images/gallery_1.webp",
-        "cap": "Gallery 1"
+        "cap": "Gallery 1",
+        "alt": "Winding hairpin turns of the Tizi n'Tichka pass in the High Atlas Mountains"
       },
       {
         "src": "/sahara-star-tours/5-days-marrakech-to-fes-morocco-sahara-desert-tour/images/gallery_10.webp",
-        "cap": "Gallery 10"
+        "cap": "Gallery 10",
+        "alt": "Traditional copper and brass lanterns hanging in Fes artisan market"
       },
       {
         "src": "/sahara-star-tours/5-days-marrakech-to-fes-morocco-sahara-desert-tour/images/gallery_2.webp",
-        "cap": "Gallery 2"
+        "cap": "Gallery 2",
+        "alt": "Iconic earthen kasbahs of Ait Ben Haddou across the stony riverbed"
       },
       {
         "src": "/sahara-star-tours/5-days-marrakech-to-fes-morocco-sahara-desert-tour/images/gallery_3.webp",
-        "cap": "Gallery 3"
+        "cap": "Gallery 3",
+        "alt": "Lush green date palm groves surrounding Kasbah Amridil in Skoura"
       },
       {
         "src": "/sahara-star-tours/5-days-marrakech-to-fes-morocco-sahara-desert-tour/images/gallery_4.webp",
-        "cap": "Gallery 4"
+        "cap": "Gallery 4",
+        "alt": "Red sandstone rock towers in Dades Valley known as monkey fingers"
       },
       {
         "src": "/sahara-star-tours/5-days-marrakech-to-fes-morocco-sahara-desert-tour/images/gallery_5.webp",
-        "cap": "Gallery 5"
+        "cap": "Gallery 5",
+        "alt": "Steep limestone cliffs of Todra Gorges with visitors along the stream"
       },
       {
         "src": "/sahara-star-tours/5-days-marrakech-to-fes-morocco-sahara-desert-tour/images/gallery_6.webp",
-        "cap": "Gallery 6"
+        "cap": "Gallery 6",
+        "alt": "Camel trek across the golden dunes of Erg Chebbi towards luxury camp"
       },
       {
         "src": "/sahara-star-tours/5-days-marrakech-to-fes-morocco-sahara-desert-tour/images/gallery_7.webp",
-        "cap": "Gallery 7"
+        "cap": "Gallery 7",
+        "alt": "Starry night sky over white canvas tents at a Sahara desert camp"
       },
       {
         "src": "/sahara-star-tours/5-days-marrakech-to-fes-morocco-sahara-desert-tour/images/gallery_8.webp",
-        "cap": "Gallery 8"
+        "cap": "Gallery 8",
+        "alt": "Panoramic vista of the green Ziz Valley oasis canyon"
       },
       {
         "src": "/sahara-star-tours/5-days-marrakech-to-fes-morocco-sahara-desert-tour/images/gallery_9.webp",
-        "cap": "Gallery 9"
+        "cap": "Gallery 9",
+        "alt": "Cedar forest near Ifrane with Barbary macaque monkeys among ancient trees"
       },
       {
         "src": "/sahara-star-tours/5-days-marrakech-to-fes-morocco-sahara-desert-tour/images/hero_2.webp",
-        "cap": "Hero 2"
+        "cap": "Hero 2",
+        "alt": "Golden sunrise illuminating the rippled crests of Merzouga sand dunes"
       }
     ],
     "faqs": [
@@ -10981,7 +11197,7 @@ export const tours: Tour[] = [
     "slug": "5-days-morocco-desert-tour-itinerary-from-tangier",
     "title": "5-Day Tangier to Marrakech Desert Tour | Sahara Star Tours",
     "shortTitle": "5-Day Tangier to Marrakech Desert Tour",
-    "description": "Private 5-day Morocco desert tour from Tangier to Marrakech. Explore Fes, Chefchaouen. Local support and flexible planning.",
+    "description": "Discover Morocco from Tangier to Marrakech on a 5-day private desert tour. Wander Chefchaouen's blue medina, imperial Fes, golden Erg Chebbi, and Ait Ben Haddou.",
     "aboutHtml": "This private 5-day Morocco journey begins in Tangier and finishes in Marrakech. Along the route, you will experience Tangier, Chefchaouen, Volubilis, Meknes, Fes, and more. The itinerary is designed to balance long scenic drives with meaningful stops, authentic local experiences, and time to enjoy the destination rather than simply pass through it. With Sahara Star Tours, the experience is arranged as a private trip with air-conditioned transport, local support, and an itinerary that can be tailored to your travel style. This route is ideal for travelers who want to combine Morocco's landscapes and cultural heritage with a genuine Sahara experience.",
     "category": "desert-tours",
     "duration": "5 Days / 4 Nights",
@@ -11138,47 +11354,58 @@ export const tours: Tour[] = [
     "galleryImages": [
       {
         "src": "/sahara-star-tours/5-days-morocco-desert-tour-itinerary-from-tangier/images/gallery_1.webp",
-        "cap": "Gallery 1"
+        "cap": "Gallery 1",
+        "alt": "Tangier Kasbah overlooking the Strait of Gibraltar and Mediterranean"
       },
       {
         "src": "/sahara-star-tours/5-days-morocco-desert-tour-itinerary-from-tangier/images/gallery_10.webp",
-        "cap": "Gallery 10"
+        "cap": "Gallery 10",
+        "alt": "Koutoubia Mosque minaret and palm gardens in Marrakech"
       },
       {
         "src": "/sahara-star-tours/5-days-morocco-desert-tour-itinerary-from-tangier/images/gallery_2.webp",
-        "cap": "Gallery 2"
+        "cap": "Gallery 2",
+        "alt": "Charming cobblestone alley in Chefchaouen with vivid blue walls and potted plants"
       },
       {
         "src": "/sahara-star-tours/5-days-morocco-desert-tour-itinerary-from-tangier/images/gallery_3.webp",
-        "cap": "Gallery 3"
+        "cap": "Gallery 3",
+        "alt": "Roman columns and triumphal arch standing at the ruins of Volubilis"
       },
       {
         "src": "/sahara-star-tours/5-days-morocco-desert-tour-itinerary-from-tangier/images/gallery_4.webp",
-        "cap": "Gallery 4"
+        "cap": "Gallery 4",
+        "alt": "Historic Bab Mansour entrance gate in the imperial city of Meknes"
       },
       {
         "src": "/sahara-star-tours/5-days-morocco-desert-tour-itinerary-from-tangier/images/gallery_5.webp",
-        "cap": "Gallery 5"
+        "cap": "Gallery 5",
+        "alt": "Panoramic view of Fes medina rooftops from the historic Marinid Tombs"
       },
       {
         "src": "/sahara-star-tours/5-days-morocco-desert-tour-itinerary-from-tangier/images/gallery_6.webp",
-        "cap": "Gallery 6"
+        "cap": "Gallery 6",
+        "alt": "Stroll through the cedar forest near Azrou in the Middle Atlas Mountains"
       },
       {
         "src": "/sahara-star-tours/5-days-morocco-desert-tour-itinerary-from-tangier/images/gallery_7.webp",
-        "cap": "Gallery 7"
+        "cap": "Gallery 7",
+        "alt": "Camel caravan moving through the golden dunes of Erg Chebbi at sunset"
       },
       {
         "src": "/sahara-star-tours/5-days-morocco-desert-tour-itinerary-from-tangier/images/gallery_8.webp",
-        "cap": "Gallery 8"
+        "cap": "Gallery 8",
+        "alt": "High red limestone walls of Todra Gorges in the eastern High Atlas"
       },
       {
         "src": "/sahara-star-tours/5-days-morocco-desert-tour-itinerary-from-tangier/images/gallery_9.webp",
-        "cap": "Gallery 9"
+        "cap": "Gallery 9",
+        "alt": "UNESCO World Heritage site of Ait Ben Haddou fortified village"
       },
       {
         "src": "/sahara-star-tours/5-days-morocco-desert-tour-itinerary-from-tangier/images/hero_2.webp",
-        "cap": "Hero 2"
+        "cap": "Hero 2",
+        "alt": "Panoramic view of blue-washed houses nestled beneath Rif mountains in Chefchaouen"
       }
     ],
     "faqs": [
@@ -11225,7 +11452,7 @@ export const tours: Tour[] = [
     "slug": "5-days-morocco-tour-itinerary-from-fes-marrakech",
     "title": "5-Day Fes to Marrakech Morocco Tour via Merzouga | Sahara Star Tours",
     "shortTitle": "5-Day Fes to Marrakech Morocco Tour via Merzouga",
-    "description": "Private 5-day Morocco tour from Fes to Marrakech. Explore Merzouga, Erg Chebbi, Fes. Local support and flexible planning.",
+    "description": "Travel leisurely from Fes to Marrakech on a 5-day desert safari. Includes two nights in Erg Chebbi, nomad cultural visits, Todra canyons, and the High Atlas.",
     "aboutHtml": "This private 5-day Morocco journey begins in Fes and finishes in Marrakech. Along the route, you will experience Fes, Ifrane, Cedar Forest, Midelt, Ziz Valley, and more. The itinerary is designed to balance long scenic drives with meaningful stops, authentic local experiences, and time to enjoy the destination rather than simply pass through it. With Sahara Star Tours, the experience is arranged as a private trip with air-conditioned transport, local support, and an itinerary that can be tailored to your travel style. The pace is designed for travelers who want a structured private itinerary without sacrificing time for local discovery.",
     "category": "desert-tours",
     "duration": "5 Days / 4 Nights",
@@ -11382,47 +11609,58 @@ export const tours: Tour[] = [
     "galleryImages": [
       {
         "src": "/sahara-star-tours/5-days-morocco-tour-itinerary-from-fes-marrakech/images/gallery_1.webp",
-        "cap": "Gallery 1"
+        "cap": "Gallery 1",
+        "alt": "Chouara Tannery stone dye vats and colorful leather drying in Fes"
       },
       {
         "src": "/sahara-star-tours/5-days-morocco-tour-itinerary-from-fes-marrakech/images/gallery_10.webp",
-        "cap": "Gallery 10"
+        "cap": "Gallery 10",
+        "alt": "Vibrant performers and market stalls in Jemaa el-Fnaa square, Marrakech"
       },
       {
         "src": "/sahara-star-tours/5-days-morocco-tour-itinerary-from-fes-marrakech/images/gallery_2.webp",
-        "cap": "Gallery 2"
+        "cap": "Gallery 2",
+        "alt": "European style stone houses and manicured gardens in mountain town Ifrane"
       },
       {
         "src": "/sahara-star-tours/5-days-morocco-tour-itinerary-from-fes-marrakech/images/gallery_3.webp",
-        "cap": "Gallery 3"
+        "cap": "Gallery 3",
+        "alt": "Barbary macaque monkey perched on a branch in Azrou cedar forest"
       },
       {
         "src": "/sahara-star-tours/5-days-morocco-tour-itinerary-from-fes-marrakech/images/gallery_4.webp",
-        "cap": "Gallery 4"
+        "cap": "Gallery 4",
+        "alt": "Panoramic view of lush date palm oasis lining the Ziz River valley"
       },
       {
         "src": "/sahara-star-tours/5-days-morocco-tour-itinerary-from-fes-marrakech/images/gallery_5.webp",
-        "cap": "Gallery 5"
+        "cap": "Gallery 5",
+        "alt": "Camel caravan walking along the crest of Erg Chebbi dunes at sunset"
       },
       {
         "src": "/sahara-star-tours/5-days-morocco-tour-itinerary-from-fes-marrakech/images/gallery_6.webp",
-        "cap": "Gallery 6"
+        "cap": "Gallery 6",
+        "alt": "Berber campfire with musicians performing traditional desert melodies"
       },
       {
         "src": "/sahara-star-tours/5-days-morocco-tour-itinerary-from-fes-marrakech/images/gallery_7.webp",
-        "cap": "Gallery 7"
+        "cap": "Gallery 7",
+        "alt": "High vertical rock cliffs of Todra Gorges beside the mountain stream"
       },
       {
         "src": "/sahara-star-tours/5-days-morocco-tour-itinerary-from-fes-marrakech/images/gallery_8.webp",
-        "cap": "Gallery 8"
+        "cap": "Gallery 8",
+        "alt": "Red clay kasbahs and terraced gardens along the Dades River valley"
       },
       {
         "src": "/sahara-star-tours/5-days-morocco-tour-itinerary-from-fes-marrakech/images/gallery_9.webp",
-        "cap": "Gallery 9"
+        "cap": "Gallery 9",
+        "alt": "Fortified mudbrick ksar of Ait Ben Haddou against a deep blue sky"
       },
       {
         "src": "/sahara-star-tours/5-days-morocco-tour-itinerary-from-fes-marrakech/images/hero_2.webp",
-        "cap": "Hero 2"
+        "cap": "Hero 2",
+        "alt": "Sunrise glow over the sweeping sand dune sea of Erg Chebbi in Merzouga"
       }
     ],
     "faqs": [
@@ -11469,7 +11707,7 @@ export const tours: Tour[] = [
     "slug": "6-days-morocco-desert-tour-from-marrakech",
     "title": "6-Day Marrakech to Fes Morocco Desert Tour | Sahara Star Tours",
     "shortTitle": "6-Day Marrakech to Fes Morocco Desert Tour",
-    "description": "Private 6-day Morocco desert tour from Marrakech to Fes. Explore Merzouga, Erg Chebbi, Marrakech. Local support and flexible planning.",
+    "description": "Complete 6-day desert adventure from Marrakech to Fes. Experience Ait Ben Haddou, Dades canyons, luxury desert camping in Merzouga, and a guided tour of Fes.",
     "aboutHtml": "This private 6-day Morocco journey begins in Marrakech and finishes in Fes. Along the route, you will experience Marrakech, Ait Ben Haddou, Roses Valley, Dades Valley, Todra Gorges, and more. The itinerary is designed to balance long scenic drives with meaningful stops, authentic local experiences, and time to enjoy the destination rather than simply pass through it. With Sahara Star Tours, the experience is arranged as a private trip with air-conditioned transport, local support, and an itinerary that can be tailored to your travel style. This route is ideal for travelers who want to combine Morocco's landscapes and cultural heritage with a genuine Sahara experience.",
     "category": "desert-tours",
     "duration": "6 Days / 5 Nights",
@@ -11646,47 +11884,58 @@ export const tours: Tour[] = [
     "galleryImages": [
       {
         "src": "/sahara-star-tours/6-days-morocco-desert-tour-from-marrakech/images/gallery_1.webp",
-        "cap": "Gallery 1"
+        "cap": "Gallery 1",
+        "alt": "Mountain scenery along the Tizi n'Tichka pass in the High Atlas range"
       },
       {
         "src": "/sahara-star-tours/6-days-morocco-desert-tour-from-marrakech/images/gallery_10.webp",
-        "cap": "Gallery 10"
+        "cap": "Gallery 10",
+        "alt": "Historic medina architecture and arched gateways in medieval Fes"
       },
       {
         "src": "/sahara-star-tours/6-days-morocco-desert-tour-from-marrakech/images/gallery_2.webp",
-        "cap": "Gallery 2"
+        "cap": "Gallery 2",
+        "alt": "Ancient fortified village of Ait Ben Haddou with clay watchtowers"
       },
       {
         "src": "/sahara-star-tours/6-days-morocco-desert-tour-from-marrakech/images/gallery_3.webp",
-        "cap": "Gallery 3"
+        "cap": "Gallery 3",
+        "alt": "Roses Valley landscape in Kelaat M'Gouna with blooming rose bushes"
       },
       {
         "src": "/sahara-star-tours/6-days-morocco-desert-tour-from-marrakech/images/gallery_4.webp",
-        "cap": "Gallery 4"
+        "cap": "Gallery 4",
+        "alt": "Dramatic red rock canyon walls and lush orchards of Dades Valley"
       },
       {
         "src": "/sahara-star-tours/6-days-morocco-desert-tour-from-marrakech/images/gallery_5.webp",
-        "cap": "Gallery 5"
+        "cap": "Gallery 5",
+        "alt": "Todra Gorges rock climbing cliffs rising above the shallow canyon floor"
       },
       {
         "src": "/sahara-star-tours/6-days-morocco-desert-tour-from-marrakech/images/gallery_6.webp",
-        "cap": "Gallery 6"
+        "cap": "Gallery 6",
+        "alt": "Travelers riding camels across the orange sand dunes of Merzouga"
       },
       {
         "src": "/sahara-star-tours/6-days-morocco-desert-tour-from-marrakech/images/gallery_7.webp",
-        "cap": "Gallery 7"
+        "cap": "Gallery 7",
+        "alt": "Campfire evening with live Gnawa music at a luxury desert camp"
       },
       {
         "src": "/sahara-star-tours/6-days-morocco-desert-tour-from-marrakech/images/gallery_8.webp",
-        "cap": "Gallery 8"
+        "cap": "Gallery 8",
+        "alt": "Scenic lookout over the green palm oasis winding through Ziz Gorge"
       },
       {
         "src": "/sahara-star-tours/6-days-morocco-desert-tour-from-marrakech/images/gallery_9.webp",
-        "cap": "Gallery 9"
+        "cap": "Gallery 9",
+        "alt": "Cedar trees in the Middle Atlas where wild Barbary macaques roam"
       },
       {
         "src": "/sahara-star-tours/6-days-morocco-desert-tour-from-marrakech/images/hero_2.webp",
-        "cap": "Hero 2"
+        "cap": "Hero 2",
+        "alt": "Sunlight illuminating a rugged mountain peak in the High Atlas Mountains"
       }
     ],
     "faqs": [
@@ -11733,7 +11982,7 @@ export const tours: Tour[] = [
     "slug": "6-days-morocco-tour-itinerary-from-tangier-to-marrakech",
     "title": "6-Day Tangier to Marrakech Desert Tour via Merzouga | Sahara Star Tours",
     "shortTitle": "6-Day Tangier to Marrakech Desert Tour via Merzouga",
-    "description": "Private 6-day Morocco desert tour from Tangier to Marrakech. Explore Fes, Chefchaouen. Local support and flexible planning.",
+    "description": "6-day private Morocco tour from Tangier to Marrakech. Visit picturesque Chefchaouen, UNESCO Fes medina, Erg Chebbi desert dunes, and Kasbah Ait Ben Haddou.",
     "aboutHtml": "This private 6-day Morocco journey begins in Tangier and finishes in Marrakech. Along the route, you will experience Tangier, Chefchaouen, Volubilis, Meknes, Fes, and more. The itinerary is designed to balance long scenic drives with meaningful stops, authentic local experiences, and time to enjoy the destination rather than simply pass through it. With Sahara Star Tours, the experience is arranged as a private trip with air-conditioned transport, local support, and an itinerary that can be tailored to your travel style. This route is ideal for travelers who want to combine Morocco's landscapes and cultural heritage with a genuine Sahara experience.",
     "category": "desert-tours",
     "duration": "6 Days / 5 Nights",
@@ -11910,47 +12159,58 @@ export const tours: Tour[] = [
     "galleryImages": [
       {
         "src": "/sahara-star-tours/6-days-morocco-tour-itinerary-from-tangier-to-marrakech/images/gallery_1.webp",
-        "cap": "Gallery 1"
+        "cap": "Gallery 1",
+        "alt": "Cap Spartel coastal cliffs and lighthouse overlooking the ocean in Tangier"
       },
       {
         "src": "/sahara-star-tours/6-days-morocco-tour-itinerary-from-tangier-to-marrakech/images/gallery_10.webp",
-        "cap": "Gallery 10"
+        "cap": "Gallery 10",
+        "alt": "Historic Koutoubia Mosque minaret surrounded by rose gardens in Marrakech"
       },
       {
         "src": "/sahara-star-tours/6-days-morocco-tour-itinerary-from-tangier-to-marrakech/images/gallery_2.webp",
-        "cap": "Gallery 2"
+        "cap": "Gallery 2",
+        "alt": "Winding blue stairs and decorative tile doorways in Chefchaouen"
       },
       {
         "src": "/sahara-star-tours/6-days-morocco-tour-itinerary-from-tangier-to-marrakech/images/gallery_3.webp",
-        "cap": "Gallery 3"
+        "cap": "Gallery 3",
+        "alt": "Ancient Roman ruins of Volubilis with columns overlooking green valleys"
       },
       {
         "src": "/sahara-star-tours/6-days-morocco-tour-itinerary-from-tangier-to-marrakech/images/gallery_4.webp",
-        "cap": "Gallery 4"
+        "cap": "Gallery 4",
+        "alt": "Meknes city ramparts and monumental imperial gate of Bab Mansour"
       },
       {
         "src": "/sahara-star-tours/6-days-morocco-tour-itinerary-from-tangier-to-marrakech/images/gallery_5.webp",
-        "cap": "Gallery 5"
+        "cap": "Gallery 5",
+        "alt": "Traditional leather craftsmen working at Chouara Tannery in Fes"
       },
       {
         "src": "/sahara-star-tours/6-days-morocco-tour-itinerary-from-tangier-to-marrakech/images/gallery_6.webp",
-        "cap": "Gallery 6"
+        "cap": "Gallery 6",
+        "alt": "Alpine cottages and snowy pine trees in the winter resort town of Ifrane"
       },
       {
         "src": "/sahara-star-tours/6-days-morocco-tour-itinerary-from-tangier-to-marrakech/images/gallery_7.webp",
-        "cap": "Gallery 7"
+        "cap": "Gallery 7",
+        "alt": "Sunset camel excursion across the undulating dunes of Erg Chebbi"
       },
       {
         "src": "/sahara-star-tours/6-days-morocco-tour-itinerary-from-tangier-to-marrakech/images/gallery_8.webp",
-        "cap": "Gallery 8"
+        "cap": "Gallery 8",
+        "alt": "Narrow red rock canyon passage through the spectacular Todra Gorges"
       },
       {
         "src": "/sahara-star-tours/6-days-morocco-tour-itinerary-from-tangier-to-marrakech/images/gallery_9.webp",
-        "cap": "Gallery 9"
+        "cap": "Gallery 9",
+        "alt": "Terraced earthen buildings of the fortified ksar at Ait Ben Haddou"
       },
       {
         "src": "/sahara-star-tours/6-days-morocco-tour-itinerary-from-tangier-to-marrakech/images/hero_2.webp",
-        "cap": "Hero 2"
+        "cap": "Hero 2",
+        "alt": "Overview of Chefchaouen blue medina with the Spanish Mosque on the hill"
       }
     ],
     "faqs": [
@@ -11997,7 +12257,7 @@ export const tours: Tour[] = [
     "slug": "7-day-morocco-tour-itinerary-from-fes",
     "title": "7-Day Morocco Desert & Imperial Cities Tour from Fes | Sahara Star Tours",
     "shortTitle": "7-Day Morocco Desert & Imperial Cities Tour from Fes",
-    "description": "Private 7-day Morocco desert tour from Fes (round-trip). Explore Fes, Chefchaouen, Marrakech. Local support and flexible planning.",
+    "description": "Grand 7-day round-trip tour from Fes. Highlights include Chefchaouen, Rabat, Marrakech, Kasbah Ait Ben Haddou, and an unforgettable Sahara desert camel safari.",
     "aboutHtml": "This private 7-day Morocco journey begins in Fes and finishes in Fes. Along the route, you will experience Fes, Meknes, Volubilis, Chefchaouen, Rabat, and more. The itinerary is designed to balance long scenic drives with meaningful stops, authentic local experiences, and time to enjoy the destination rather than simply pass through it. With Sahara Star Tours, the experience is arranged as a private trip with air-conditioned transport, local support, and an itinerary that can be tailored to your travel style. This route is ideal for travelers who want to combine Morocco's landscapes and cultural heritage with a genuine Sahara experience.",
     "category": "desert-tours",
     "duration": "7 Days / 6 Nights",
@@ -12193,47 +12453,58 @@ export const tours: Tour[] = [
     "galleryImages": [
       {
         "src": "/sahara-star-tours/7-day-morocco-tour-itinerary-from-fes/images/gallery_1.webp",
-        "cap": "Gallery 1"
+        "cap": "Gallery 1",
+        "alt": "Historic gateway to Fes medina known as Bab Bou Jeloud or the Blue Gate"
       },
       {
         "src": "/sahara-star-tours/7-day-morocco-tour-itinerary-from-fes/images/gallery_10.webp",
-        "cap": "Gallery 10"
+        "cap": "Gallery 10",
+        "alt": "Marrakech Jemaa el-Fnaa square alive with food stalls and performers at night"
       },
       {
         "src": "/sahara-star-tours/7-day-morocco-tour-itinerary-from-fes/images/gallery_2.webp",
-        "cap": "Gallery 2"
+        "cap": "Gallery 2",
+        "alt": "Imperial city ramparts and ornamental archways of Bab Mansour in Meknes"
       },
       {
         "src": "/sahara-star-tours/7-day-morocco-tour-itinerary-from-fes/images/gallery_3.webp",
-        "cap": "Gallery 3"
+        "cap": "Gallery 3",
+        "alt": "Roman basilica columns and stone Capitol ruins at Volubilis"
       },
       {
         "src": "/sahara-star-tours/7-day-morocco-tour-itinerary-from-fes/images/gallery_4.webp",
-        "cap": "Gallery 4"
+        "cap": "Gallery 4",
+        "alt": "Narrow azure-blue alleys and whitewashed houses in Chefchaouen"
       },
       {
         "src": "/sahara-star-tours/7-day-morocco-tour-itinerary-from-fes/images/gallery_5.webp",
-        "cap": "Gallery 5"
+        "cap": "Gallery 5",
+        "alt": "Hassan Tower minaret and marble columns at the Mohammed V complex in Rabat"
       },
       {
         "src": "/sahara-star-tours/7-day-morocco-tour-itinerary-from-fes/images/gallery_6.webp",
-        "cap": "Gallery 6"
+        "cap": "Gallery 6",
+        "alt": "Modern oceanfront architecture of Hassan II Mosque in Casablanca"
       },
       {
         "src": "/sahara-star-tours/7-day-morocco-tour-itinerary-from-fes/images/gallery_7.webp",
-        "cap": "Gallery 7"
+        "cap": "Gallery 7",
+        "alt": "Camel trek across Erg Chebbi sand dunes towards a Berber luxury camp"
       },
       {
         "src": "/sahara-star-tours/7-day-morocco-tour-itinerary-from-fes/images/gallery_8.webp",
-        "cap": "Gallery 8"
+        "cap": "Gallery 8",
+        "alt": "Towering vertical canyon walls of Todra Gorges in the High Atlas"
       },
       {
         "src": "/sahara-star-tours/7-day-morocco-tour-itinerary-from-fes/images/gallery_9.webp",
-        "cap": "Gallery 9"
+        "cap": "Gallery 9",
+        "alt": "Earthen mudbrick towers and village walls of Ait Ben Haddou"
       },
       {
         "src": "/sahara-star-tours/7-day-morocco-tour-itinerary-from-fes/images/hero_2.webp",
-        "cap": "Hero 2"
+        "cap": "Hero 2",
+        "alt": "High Atlas mountain pass with scenic road winding through rocky peaks"
       }
     ],
     "faqs": [
@@ -12283,7 +12554,7 @@ export const tours: Tour[] = [
     "slug": "7-days-morocco-tour-itinerary-from-tangier-one-week",
     "title": "7-Day Tangier to Marrakech Morocco Tour via Merzouga | Sahara Star Tours",
     "shortTitle": "7-Day Tangier to Marrakech Morocco Tour via Merzouga",
-    "description": "Private 7-day Morocco tour from Tangier to Marrakech. Explore Fes, Chefchaouen. Local support and flexible planning.",
+    "description": "One-week private tour from Tangier to Marrakech. Experience the Blue Pearl Chefchaouen, ancient Fes, Erg Chebbi sand dunes, Dades Valley, and Marrakech.",
     "aboutHtml": "This private 7-day Morocco journey begins in Tangier and finishes in Marrakech. Along the route, you will experience Tangier, Chefchaouen, Volubilis, Meknes, Fes, and more. The itinerary is designed to balance long scenic drives with meaningful stops, authentic local experiences, and time to enjoy the destination rather than simply pass through it. With Sahara Star Tours, the experience is arranged as a private trip with air-conditioned transport, local support, and an itinerary that can be tailored to your travel style. The pace is designed for travelers who want a structured private itinerary without sacrificing time for local discovery.",
     "category": "desert-tours",
     "duration": "7 Days / 6 Nights",
@@ -12480,47 +12751,58 @@ export const tours: Tour[] = [
     "galleryImages": [
       {
         "src": "/sahara-star-tours/7-days-morocco-tour-itinerary-from-tangier-one-week/images/gallery_1.webp",
-        "cap": "Gallery 1"
+        "cap": "Gallery 1",
+        "alt": "White Mediterranean houses of Tangier medina looking out over the bay"
       },
       {
         "src": "/sahara-star-tours/7-days-morocco-tour-itinerary-from-tangier-one-week/images/gallery_10.webp",
-        "cap": "Gallery 10"
+        "cap": "Gallery 10",
+        "alt": "Bustling souk alleys of Marrakech filled with spices, rugs, and lanterns"
       },
       {
         "src": "/sahara-star-tours/7-days-morocco-tour-itinerary-from-tangier-one-week/images/gallery_2.webp",
-        "cap": "Gallery 2"
+        "cap": "Gallery 2",
+        "alt": "Blue-washed medina pathway with vibrant potted plants in Chefchaouen"
       },
       {
         "src": "/sahara-star-tours/7-days-morocco-tour-itinerary-from-tangier-one-week/images/gallery_3.webp",
-        "cap": "Gallery 3"
+        "cap": "Gallery 3",
+        "alt": "Ancient triumphal arch and stone columns at UNESCO site Volubilis"
       },
       {
         "src": "/sahara-star-tours/7-days-morocco-tour-itinerary-from-tangier-one-week/images/gallery_4.webp",
-        "cap": "Gallery 4"
+        "cap": "Gallery 4",
+        "alt": "Grand Bab Mansour gate leading into the imperial medina of Meknes"
       },
       {
         "src": "/sahara-star-tours/7-days-morocco-tour-itinerary-from-tangier-one-week/images/gallery_5.webp",
-        "cap": "Gallery 5"
+        "cap": "Gallery 5",
+        "alt": "Tanners working with natural dyes in stone vats at Chouara Tannery, Fes"
       },
       {
         "src": "/sahara-star-tours/7-days-morocco-tour-itinerary-from-tangier-one-week/images/gallery_6.webp",
-        "cap": "Gallery 6"
+        "cap": "Gallery 6",
+        "alt": "Cedar forest of Azrou in the Middle Atlas Mountains with Barbary macaques"
       },
       {
         "src": "/sahara-star-tours/7-days-morocco-tour-itinerary-from-tangier-one-week/images/gallery_7.webp",
-        "cap": "Gallery 7"
+        "cap": "Gallery 7",
+        "alt": "Camel caravan guided over the undulating sand dunes of Erg Chebbi"
       },
       {
         "src": "/sahara-star-tours/7-days-morocco-tour-itinerary-from-tangier-one-week/images/gallery_8.webp",
-        "cap": "Gallery 8"
+        "cap": "Gallery 8",
+        "alt": "Red limestone canyon walls of Todra Gorges with stream flowing below"
       },
       {
         "src": "/sahara-star-tours/7-days-morocco-tour-itinerary-from-tangier-one-week/images/gallery_9.webp",
-        "cap": "Gallery 9"
+        "cap": "Gallery 9",
+        "alt": "Fortified clay ksar of Ait Ben Haddou glowing in late afternoon light"
       },
       {
         "src": "/sahara-star-tours/7-days-morocco-tour-itinerary-from-tangier-one-week/images/hero_2.webp",
-        "cap": "Hero 2"
+        "cap": "Hero 2",
+        "alt": "Chefchaouen nestled in the valley between the rocky peaks of the Rif mountains"
       }
     ],
     "faqs": [
@@ -12567,7 +12849,7 @@ export const tours: Tour[] = [
     "slug": "8-day-essential-morocco-tour-from-marrakech",
     "title": "8-Day Morocco Tour from Marrakech to Tangier | Sahara Star Tours",
     "shortTitle": "8-Day Morocco Tour from Marrakech to Tangier",
-    "description": "Private 8-day Morocco tour from Marrakech to Tangier. Explore Marrakech, Ait Ben Haddou, Todra Gorges. Local support and flexible planning.",
+    "description": "Essential 8-day Morocco itinerary from Marrakech to Tangier. Discover Ait Ben Haddou, Merzouga desert luxury glamping, medieval Fes, and blue Chefchaouen.",
     "aboutHtml": "This private 8-day Morocco journey begins in Marrakech and finishes in Tangier. Along the route, you will experience Marrakech, High Atlas Mountains, Telouat Kasbah, Ait Ben Haddou, Ouarzazate, and more. The itinerary is designed to balance long scenic drives with meaningful stops, authentic local experiences, and time to enjoy the destination rather than simply pass through it. With Sahara Star Tours, the experience is arranged as a private trip with air-conditioned transport, local support, and an itinerary that can be tailored to your travel style. The pace is designed for travelers who want a structured private itinerary without sacrificing time for local discovery.",
     "category": "desert-tours",
     "duration": "8 Days / 7 Nights",
@@ -12784,35 +13066,43 @@ export const tours: Tour[] = [
     "galleryImages": [
       {
         "src": "/sahara-star-tours/8-day-essential-morocco-tour-from-marrakech/images/gallery_3.webp",
-        "cap": "Gallery 3"
+        "cap": "Gallery 3",
+        "alt": "High Atlas mountain road winding up towards the Tizi n'Tichka pass"
       },
       {
         "src": "/sahara-star-tours/8-day-essential-morocco-tour-from-marrakech/images/gallery_4.webp",
-        "cap": "Gallery 4"
+        "cap": "Gallery 4",
+        "alt": "Historic Telouet Kasbah with intricate Moorish zellij and carved stucco"
       },
       {
         "src": "/sahara-star-tours/8-day-essential-morocco-tour-from-marrakech/images/gallery_5.webp",
-        "cap": "Gallery 5"
+        "cap": "Gallery 5",
+        "alt": "Fortified clay village of Ait Ben Haddou beside the palm-lined riverbed"
       },
       {
         "src": "/sahara-star-tours/8-day-essential-morocco-tour-from-marrakech/images/gallery_6.webp",
-        "cap": "Gallery 6"
+        "cap": "Gallery 6",
+        "alt": "Taourirt Kasbah fortified earthen walls and decorative windows in Ouarzazate"
       },
       {
         "src": "/sahara-star-tours/8-day-essential-morocco-tour-from-marrakech/images/gallery_7.webp",
-        "cap": "Gallery 7"
+        "cap": "Gallery 7",
+        "alt": "Camel caravan journey across the vast golden sands of Erg Chebbi"
       },
       {
         "src": "/sahara-star-tours/8-day-essential-morocco-tour-from-marrakech/images/gallery_8.webp",
-        "cap": "Gallery 8"
+        "cap": "Gallery 8",
+        "alt": "Chouara Tannery stone vats and tanners in the historic medina of Fes"
       },
       {
         "src": "/sahara-star-tours/8-day-essential-morocco-tour-from-marrakech/images/gallery_9.webp",
-        "cap": "Gallery 9"
+        "cap": "Gallery 9",
+        "alt": "Narrow blue alleyway with stone stairs in the mountain town of Chefchaouen"
       },
       {
         "src": "/sahara-star-tours/8-day-essential-morocco-tour-from-marrakech/images/hero_2.webp",
-        "cap": "Hero 2"
+        "cap": "Hero 2",
+        "alt": "Panoramic sunrise across the high sand dunes of Merzouga in the Sahara"
       }
     ],
     "faqs": [
@@ -12859,7 +13149,7 @@ export const tours: Tour[] = [
     "slug": "fes-marrakech-3-days-desert-tour",
     "title": "3-Day Fes to Marrakech Desert Tour via Merzouga | Sahara Star Tours",
     "shortTitle": "3-Day Fes to Marrakech Desert Tour via Merzouga",
-    "description": "Private 3-day Morocco desert tour from Fes to Marrakech. Explore Merzouga, Fes. Local support and flexible planning.",
+    "description": "Classic 3-day desert route from Fes to Marrakech. Cross the Middle Atlas, ride camels across Erg Chebbi dunes, marvel at Todra Gorges, and visit Ait Ben Haddou.",
     "aboutHtml": "This private 3-day Morocco journey begins in Fes and finishes in Marrakech. Along the route, you will experience Fes, Ifrane, Cedar Forest, Midelt, Ziz Valley, and more. The itinerary is designed to balance long scenic drives with meaningful stops, authentic local experiences, and time to enjoy the destination rather than simply pass through it. With Sahara Star Tours, the experience is arranged as a private trip with air-conditioned transport, local support, and an itinerary that can be tailored to your travel style. This route is ideal for travelers who want to combine Morocco's landscapes and cultural heritage with a genuine Sahara experience.",
     "category": "desert-tours",
     "duration": "3 Days / 2 Nights",
@@ -12976,47 +13266,58 @@ export const tours: Tour[] = [
     "galleryImages": [
       {
         "src": "/sahara-star-tours/fes-marrakech-3-days-desert-tour/images/gallery_1.webp",
-        "cap": "Gallery 1"
+        "cap": "Gallery 1",
+        "alt": "Leather tanners at the historic Chouara Tannery dye vats in Fes el-Bali"
       },
       {
         "src": "/sahara-star-tours/fes-marrakech-3-days-desert-tour/images/gallery_10.webp",
-        "cap": "Gallery 10"
+        "cap": "Gallery 10",
+        "alt": "Jemaa el-Fnaa square in Marrakech at twilight with illuminated food stalls"
       },
       {
         "src": "/sahara-star-tours/fes-marrakech-3-days-desert-tour/images/gallery_2.webp",
-        "cap": "Gallery 2"
+        "cap": "Gallery 2",
+        "alt": "Alpine style chalets and stone architecture in the mountain town of Ifrane"
       },
       {
         "src": "/sahara-star-tours/fes-marrakech-3-days-desert-tour/images/gallery_3.webp",
-        "cap": "Gallery 3"
+        "cap": "Gallery 3",
+        "alt": "Friendly Barbary macaque sitting on a mossy cedar branch in Azrou forest"
       },
       {
         "src": "/sahara-star-tours/fes-marrakech-3-days-desert-tour/images/gallery_4.webp",
-        "cap": "Gallery 4"
+        "cap": "Gallery 4",
+        "alt": "Verdant date palm oasis lining the winding river through Ziz Gorge"
       },
       {
         "src": "/sahara-star-tours/fes-marrakech-3-days-desert-tour/images/gallery_5.webp",
-        "cap": "Gallery 5"
+        "cap": "Gallery 5",
+        "alt": "Camel caravan traversing the golden ridge of Erg Chebbi sand dunes"
       },
       {
         "src": "/sahara-star-tours/fes-marrakech-3-days-desert-tour/images/gallery_6.webp",
-        "cap": "Gallery 6"
+        "cap": "Gallery 6",
+        "alt": "Traditional Berber drum performance around a desert campfire under the stars"
       },
       {
         "src": "/sahara-star-tours/fes-marrakech-3-days-desert-tour/images/gallery_7.webp",
-        "cap": "Gallery 7"
+        "cap": "Gallery 7",
+        "alt": "Red canyon rock walls of Todra Gorges towering over the valley road"
       },
       {
         "src": "/sahara-star-tours/fes-marrakech-3-days-desert-tour/images/gallery_8.webp",
-        "cap": "Gallery 8"
+        "cap": "Gallery 8",
+        "alt": "Winding Dades Gorge mountain road with scenic canyon hairpin turns"
       },
       {
         "src": "/sahara-star-tours/fes-marrakech-3-days-desert-tour/images/gallery_9.webp",
-        "cap": "Gallery 9"
+        "cap": "Gallery 9",
+        "alt": "Fortified mudbrick ksar of Ait Ben Haddou against a bright blue sky"
       },
       {
         "src": "/sahara-star-tours/fes-marrakech-3-days-desert-tour/images/hero_2.webp",
-        "cap": "Hero 2"
+        "cap": "Hero 2",
+        "alt": "Vast golden sand dunes of Erg Chebbi glowing in warm morning sunlight"
       }
     ],
     "faqs": [
@@ -13063,7 +13364,7 @@ export const tours: Tour[] = [
     "slug": "morocco-2-day-desert-fes-tour-from-ouarzazate",
     "title": "2-Day Ouarzazate to Fes Desert Tour via Merzouga | Sahara Star Tours",
     "shortTitle": "2-Day Ouarzazate to Fes Desert Tour via Merzouga",
-    "description": "Private 2-day Morocco desert tour from Ouarzazate to Fes. Explore Merzouga, Fes, Todra Gorges. Local support and flexible planning.",
+    "description": "2-day desert connection from Ouarzazate to Fes. Admire the Todra Gorges, ride camels into Erg Chebbi for luxury camping, and cross the Middle Atlas to Fes.",
     "aboutHtml": "This private 2-day Morocco journey begins in Ouarzazate and finishes in Fes. Along the route, you will experience Ouarzazate, Todra Gorges, Merzouga, Erfoud, Midelt, and more. The itinerary is designed to balance long scenic drives with meaningful stops, authentic local experiences, and time to enjoy the destination rather than simply pass through it. With Sahara Star Tours, the experience is arranged as a private trip with air-conditioned transport, local support, and an itinerary that can be tailored to your travel style. This route is ideal for travelers who want to combine Morocco's landscapes and cultural heritage with a genuine Sahara experience.",
     "category": "desert-tours",
     "duration": "2 Days / 1 Night",
@@ -13159,47 +13460,58 @@ export const tours: Tour[] = [
     "galleryImages": [
       {
         "src": "/sahara-star-tours/morocco-2-day-desert-fes-tour-from-ouarzazate/images/gallery_1.webp",
-        "cap": "Gallery 1"
+        "cap": "Gallery 1",
+        "alt": "Fortified earthen walls of Taourirt Kasbah under blue sky in Ouarzazate"
       },
       {
         "src": "/sahara-star-tours/morocco-2-day-desert-fes-tour-from-ouarzazate/images/gallery_10.webp",
-        "cap": "Gallery 10"
+        "cap": "Gallery 10",
+        "alt": "Historic medina architecture and minarets across the rooftops of Fes"
       },
       {
         "src": "/sahara-star-tours/morocco-2-day-desert-fes-tour-from-ouarzazate/images/gallery_2.webp",
-        "cap": "Gallery 2"
+        "cap": "Gallery 2",
+        "alt": "Todra Gorges canyon floor flanked by towering vertical limestone cliffs"
       },
       {
         "src": "/sahara-star-tours/morocco-2-day-desert-fes-tour-from-ouarzazate/images/gallery_3.webp",
-        "cap": "Gallery 3"
+        "cap": "Gallery 3",
+        "alt": "Camel excursion across the high orange dunes of Erg Chebbi at sunset"
       },
       {
         "src": "/sahara-star-tours/morocco-2-day-desert-fes-tour-from-ouarzazate/images/gallery_4.webp",
-        "cap": "Gallery 4"
+        "cap": "Gallery 4",
+        "alt": "White luxury tents at a desert camp in Merzouga under a starry night sky"
       },
       {
         "src": "/sahara-star-tours/morocco-2-day-desert-fes-tour-from-ouarzazate/images/gallery_5.webp",
-        "cap": "Gallery 5"
+        "cap": "Gallery 5",
+        "alt": "Fossil workshops and artisan marble displays in the town of Erfoud"
       },
       {
         "src": "/sahara-star-tours/morocco-2-day-desert-fes-tour-from-ouarzazate/images/gallery_6.webp",
-        "cap": "Gallery 6"
+        "cap": "Gallery 6",
+        "alt": "Scenic drive through the green palm oasis and cliffs of Ziz Valley"
       },
       {
         "src": "/sahara-star-tours/morocco-2-day-desert-fes-tour-from-ouarzazate/images/gallery_7.webp",
-        "cap": "Gallery 7"
+        "cap": "Gallery 7",
+        "alt": "High mountain landscape and apple orchards around Midelt in the Atlas"
       },
       {
         "src": "/sahara-star-tours/morocco-2-day-desert-fes-tour-from-ouarzazate/images/gallery_8.webp",
-        "cap": "Gallery 8"
+        "cap": "Gallery 8",
+        "alt": "Barbary macaque monkey in the cedar forest of Azrou near Ifrane"
       },
       {
         "src": "/sahara-star-tours/morocco-2-day-desert-fes-tour-from-ouarzazate/images/gallery_9.webp",
-        "cap": "Gallery 9"
+        "cap": "Gallery 9",
+        "alt": "Panoramic view of the sprawling medieval city of Fes el-Bali"
       },
       {
         "src": "/sahara-star-tours/morocco-2-day-desert-fes-tour-from-ouarzazate/images/hero_2.webp",
-        "cap": "Hero 2"
+        "cap": "Hero 2",
+        "alt": "Sunrise over the vast golden sand dune ridges of Erg Chebbi in Merzouga"
       }
     ],
     "faqs": [
@@ -13246,7 +13558,7 @@ export const tours: Tour[] = [
     "slug": "morocco-3-day-desert-fes-tour-from-ouarzazate",
     "title": "3-Day Ouarzazate to Fes Desert Tour via Merzouga | Sahara Star Tours",
     "shortTitle": "3-Day Ouarzazate to Fes Desert Tour via Merzouga",
-    "description": "Private 3-day Morocco desert tour from Ouarzazate to Fes. Explore Merzouga, Erg Chebbi, Todra Gorges. Local support and flexible planning.",
+    "description": "Rewarding 3-day desert journey from Ouarzazate to Fes. Discover Todra Canyons, enjoy two nights in Merzouga with nomad visits, and journey through Ifrane to Fes.",
     "aboutHtml": "This private 3-day Morocco journey begins in Ouarzazate and finishes in Fes. Along the route, you will experience Ouarzazate, Todra Gorges, Merzouga, Erg Chebbi, Erfoud, and more. The itinerary is designed to balance long scenic drives with meaningful stops, authentic local experiences, and time to enjoy the destination rather than simply pass through it. With Sahara Star Tours, the experience is arranged as a private trip with air-conditioned transport, local support, and an itinerary that can be tailored to your travel style. This route is ideal for travelers who want to combine Morocco's landscapes and cultural heritage with a genuine Sahara experience.",
     "category": "desert-tours",
     "duration": "3 Days / 2 Nights",
@@ -13363,47 +13675,58 @@ export const tours: Tour[] = [
     "galleryImages": [
       {
         "src": "/sahara-star-tours/morocco-3-day-desert-fes-tour-from-ouarzazate/images/gallery_1.webp",
-        "cap": "Gallery 1"
+        "cap": "Gallery 1",
+        "alt": "Taourirt Kasbah earthen bastion and palm trees in central Ouarzazate"
       },
       {
         "src": "/sahara-star-tours/morocco-3-day-desert-fes-tour-from-ouarzazate/images/gallery_10.webp",
-        "cap": "Gallery 10"
+        "cap": "Gallery 10",
+        "alt": "Ancient Bab Bou Jeloud gateway with blue ceramic tilework in Fes"
       },
       {
         "src": "/sahara-star-tours/morocco-3-day-desert-fes-tour-from-ouarzazate/images/gallery_2.webp",
-        "cap": "Gallery 2"
+        "cap": "Gallery 2",
+        "alt": "Sheer limestone canyon walls of Todra Gorges rising above visitors"
       },
       {
         "src": "/sahara-star-tours/morocco-3-day-desert-fes-tour-from-ouarzazate/images/gallery_3.webp",
-        "cap": "Gallery 3"
+        "cap": "Gallery 3",
+        "alt": "Camel caravan moving along the curving dune ridges of Erg Chebbi"
       },
       {
         "src": "/sahara-star-tours/morocco-3-day-desert-fes-tour-from-ouarzazate/images/gallery_4.webp",
-        "cap": "Gallery 4"
+        "cap": "Gallery 4",
+        "alt": "Traditional Berber nomad family dwelling in the desert plains near Merzouga"
       },
       {
         "src": "/sahara-star-tours/morocco-3-day-desert-fes-tour-from-ouarzazate/images/gallery_5.webp",
-        "cap": "Gallery 5"
+        "cap": "Gallery 5",
+        "alt": "Gnawa musicians performing spiritual desert music in Khamlia village"
       },
       {
         "src": "/sahara-star-tours/morocco-3-day-desert-fes-tour-from-ouarzazate/images/gallery_6.webp",
-        "cap": "Gallery 6"
+        "cap": "Gallery 6",
+        "alt": "Lush green date palm oasis stretching through the rocky Ziz Valley"
       },
       {
         "src": "/sahara-star-tours/morocco-3-day-desert-fes-tour-from-ouarzazate/images/gallery_7.webp",
-        "cap": "Gallery 7"
+        "cap": "Gallery 7",
+        "alt": "Midelt mountain valley with views of Mount Ayachi in the eastern Atlas"
       },
       {
         "src": "/sahara-star-tours/morocco-3-day-desert-fes-tour-from-ouarzazate/images/gallery_8.webp",
-        "cap": "Gallery 8"
+        "cap": "Gallery 8",
+        "alt": "Cedar trees in the Middle Atlas Mountains where wild macaques live"
       },
       {
         "src": "/sahara-star-tours/morocco-3-day-desert-fes-tour-from-ouarzazate/images/gallery_9.webp",
-        "cap": "Gallery 9"
+        "cap": "Gallery 9",
+        "alt": "Stone dye pits and leather processing at Chouara Tannery in Fes"
       },
       {
         "src": "/sahara-star-tours/morocco-3-day-desert-fes-tour-from-ouarzazate/images/hero_2.webp",
-        "cap": "Hero 2"
+        "cap": "Hero 2",
+        "alt": "Panoramic morning light across the expansive dunes of Erg Chebbi in Merzouga"
       }
     ],
     "faqs": [
@@ -13450,7 +13773,7 @@ export const tours: Tour[] = [
     "slug": "morocco-3-day-desert-tour-ouarzazate-marrakech",
     "title": "3-Day Ouarzazate to Marrakech Desert Tour via Merzouga | Sahara Star Tours",
     "shortTitle": "3-Day Ouarzazate to Marrakech Desert Tour via Merzouga",
-    "description": "Private 3-day Morocco desert tour from Ouarzazate to Marrakech. Explore Merzouga, Erg Chebbi, Marrakech. Local support and flexible planning.",
+    "description": "Captivating 3-day desert tour from Ouarzazate to Marrakech. Experience Todra Gorges, two nights in Merzouga dunes, Gnawa music in Khamlia, and Ait Ben Haddou.",
     "aboutHtml": "This private 3-day Morocco journey begins in Ouarzazate and finishes in Marrakech. Along the route, you will experience Ouarzazate, Todra Gorges, Merzouga, Erg Chebbi, Ait Ben Haddou, and more. The itinerary is designed to balance long scenic drives with meaningful stops, authentic local experiences, and time to enjoy the destination rather than simply pass through it. With Sahara Star Tours, the experience is arranged as a private trip with air-conditioned transport, local support, and an itinerary that can be tailored to your travel style. This route is ideal for travelers who want to combine Morocco's landscapes and cultural heritage with a genuine Sahara experience.",
     "category": "desert-tours",
     "duration": "3 Days / 2 Nights",
@@ -13564,47 +13887,58 @@ export const tours: Tour[] = [
     "galleryImages": [
       {
         "src": "/sahara-star-tours/morocco-3-day-desert-tour-ouarzazate-marrakech/images/gallery_1.webp",
-        "cap": "Gallery 1"
+        "cap": "Gallery 1",
+        "alt": "Fortified earthen towers of Taourirt Kasbah against blue sky in Ouarzazate"
       },
       {
         "src": "/sahara-star-tours/morocco-3-day-desert-tour-ouarzazate-marrakech/images/gallery_10.webp",
-        "cap": "Gallery 10"
+        "cap": "Gallery 10",
+        "alt": "Koutoubia Mosque minaret and palm gardens in central Marrakech"
       },
       {
         "src": "/sahara-star-tours/morocco-3-day-desert-tour-ouarzazate-marrakech/images/gallery_2.webp",
-        "cap": "Gallery 2"
+        "cap": "Gallery 2",
+        "alt": "Massive sheer rock cliffs of Todra Gorges with mountain stream"
       },
       {
         "src": "/sahara-star-tours/morocco-3-day-desert-tour-ouarzazate-marrakech/images/gallery_3.webp",
-        "cap": "Gallery 3"
+        "cap": "Gallery 3",
+        "alt": "Camel trek across the golden dunes of Erg Chebbi during desert sunset"
       },
       {
         "src": "/sahara-star-tours/morocco-3-day-desert-tour-ouarzazate-marrakech/images/gallery_4.webp",
-        "cap": "Gallery 4"
+        "cap": "Gallery 4",
+        "alt": "Desert glamping camp with luxury tents surrounded by Merzouga sand dunes"
       },
       {
         "src": "/sahara-star-tours/morocco-3-day-desert-tour-ouarzazate-marrakech/images/gallery_5.webp",
-        "cap": "Gallery 5"
+        "cap": "Gallery 5",
+        "alt": "Khamlia village musicians playing traditional metal castanets and drums"
       },
       {
         "src": "/sahara-star-tours/morocco-3-day-desert-tour-ouarzazate-marrakech/images/gallery_6.webp",
-        "cap": "Gallery 6"
+        "cap": "Gallery 6",
+        "alt": "Scenic drive through the lush date palm oasis of the Draa River valley"
       },
       {
         "src": "/sahara-star-tours/morocco-3-day-desert-tour-ouarzazate-marrakech/images/gallery_7.webp",
-        "cap": "Gallery 7"
+        "cap": "Gallery 7",
+        "alt": "UNESCO World Heritage site of Ait Ben Haddou fortified clay village"
       },
       {
         "src": "/sahara-star-tours/morocco-3-day-desert-tour-ouarzazate-marrakech/images/gallery_8.webp",
-        "cap": "Gallery 8"
+        "cap": "Gallery 8",
+        "alt": "High Atlas mountain road winding through the Tizi n'Tichka pass"
       },
       {
         "src": "/sahara-star-tours/morocco-3-day-desert-tour-ouarzazate-marrakech/images/gallery_9.webp",
-        "cap": "Gallery 9"
+        "cap": "Gallery 9",
+        "alt": "Bustling Jemaa el-Fnaa square in Marrakech with snake charmers and stalls"
       },
       {
         "src": "/sahara-star-tours/morocco-3-day-desert-tour-ouarzazate-marrakech/images/hero_2.webp",
-        "cap": "Hero 2"
+        "cap": "Hero 2",
+        "alt": "Sunset casting warm orange glow across the sand dunes of Erg Chebbi"
       }
     ],
     "faqs": [

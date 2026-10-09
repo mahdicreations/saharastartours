@@ -13,10 +13,37 @@ function getDurationTier(days: number): string {
 
 const casablancaSchema = {
   "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "name": "Private Morocco Tours from Casablanca | Sahara Star Tours",
-  "description": `Browse our complete collection of ${tours.length} private multi-day Morocco tours departing from Casablanca. Direct airport pickups, Imperial Cities loops, and grand Sahara desert expeditions from 4 to 16 days.`,
-  "url": "https://www.saharastartours.com/tours-from-casablanca"
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "name": "Private Morocco Tours from Casablanca | Sahara Star Tours",
+      "description": `Browse our complete collection of ${tours.length} private multi-day Morocco tours departing from Casablanca. Direct airport pickups, Imperial Cities loops, and grand Sahara desert expeditions from 4 to 16 days.`,
+      "url": "https://www.saharastartours.com/tours-from-casablanca"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.saharastartours.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Multi-Day Tours",
+          "item": "https://www.saharastartours.com/tours"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Tours from Casablanca",
+          "item": "https://www.saharastartours.com/tours-from-casablanca"
+        }
+      ]
+    }
+  ]
 };
 ---
 

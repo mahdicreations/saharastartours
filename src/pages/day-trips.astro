@@ -3,12 +3,31 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { getDayTrips } from '../data/tours';
 
 const tours = getDayTrips();
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Day Trips from Marrakech | Sahara Star Tours",
+  "description": "Book top day trips from Marrakech: Essaouira, Ait Ben Haddou, Ouzoud Waterfalls, and Ourika Valley. Private air-conditioned transport and local guides.",
+  "url": "https://www.saharastartours.com/day-trips",
+  "mainEntity": {
+    "@type": "ItemList",
+    "numberOfItems": tours.length,
+    "itemListElement": tours.map((tour, idx) => ({
+      "@type": "ListItem",
+      "position": idx + 1,
+      "name": tour.shortTitle,
+      "url": `https://www.saharastartours.com/tours/${tour.slug}`
+    }))
+  }
+};
 ---
 
 <BaseLayout
   title="Day Trips from Marrakech | Sahara Star Tours"
   description="Book top day trips from Marrakech: Essaouira, Ait Ben Haddou, Ouzoud Waterfalls, and Ourika Valley. Private air-conditioned transport and local guides."
   currentPage="day-trips"
+  schemaData={schemaData}
 >
 <section class="cat-hero">
   <span class="tag" style="display:inline-block;color:var(--sand-gold);text-transform:uppercase;letter-spacing:3px;font-size:0.9rem;font-weight:600;margin-bottom:12px;">Day Excursions</span>

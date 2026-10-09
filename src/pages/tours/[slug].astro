@@ -56,6 +56,8 @@ const { tour, relatedTours } = Astro.props;
   duration={tour.duration}
   startingFrom={tour.startingFrom}
   category={tour.category.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())}
+  productType={tour.productType}
+  departureCity={tour.departureCity}
   price={tour.price}
   heroImage={tour.heroImage}
   highlights={tour.highlights}

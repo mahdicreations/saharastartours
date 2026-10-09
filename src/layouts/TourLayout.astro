@@ -18,12 +18,17 @@ interface Props {
   description: string;
   keywords?: string;
   ogImage?: string;
+  lang?: string;
+  locale?: string;
+  touristType?: string;
   // Tour data
   tourName: string;
   tourSlug: string;
   duration: string;
   startingFrom: string;
   category: string;
+  productType?: string;
+  departureCity?: string;
   price?: string;
   heroImage: string;
   highlights?: string[];
@@ -32,7 +37,7 @@ interface Props {
   itinerary?: Array<{ day: string; title: string; content: string }>;
   mapDestinations?: TourStop[];
   mapRouteCoordinates?: [number, number][];
-  galleryImages?: Array<{ src: string; cap: string }>;
+  galleryImages?: Array<{ src: string; cap: string; alt?: string }>;
   relatedTours?: Array<{ slug: string; shortTitle: string; duration: string; price: string; heroImage: string }>;
   faqs?: Array<{ question: string; answer: string }>;
   schemaData?: Record<string, unknown>;
@@ -43,11 +48,16 @@ const {
   description,
   keywords,
   ogImage,
+  lang = 'en',
+  locale = 'en_US',
+  touristType,
   tourName,
   tourSlug,
   duration,
   startingFrom,
   category,
+  productType = 'multi-day',
+  departureCity,
   price = 'From $XXX/person',
   heroImage,
   highlights = [],
@@ -62,20 +72,97 @@ const {
   schemaData,
 } = Astro.props;
 
-// Build Tour schema (TouristTrip with authentic page data only)
-const tourSchema = schemaData ?? {
-  "@context": "https://schema.org",
+// Resolve genuine tourist audience only when supported by authentic content; otherwise omit
+let resolvedTouristType: string | undefined = touristType;
+if (!resolvedTouristType && tourName) {
+  if (/\bcouple(s)?\b|\bromantic\b/i.test(tourName)) {
+    resolvedTouristType = 'Couples';
+  } else if (/\bfamil(y|ies)\b/i.test(tourName)) {
+    resolvedTouristType = 'Families';
+  }
+}
+
+// Departure city hubs mapping
+const citySlugMap: Record<string, { label: string; path: string }> = {
+  marrakech: { label: 'Tours from Marrakech', path: '/tours-from-marrakech' },
+  casablanca: { label: 'Tours from Casablanca', path: '/tours-from-casablanca' },
+  fes: { label: 'Tours from Fes', path: '/tours-from-fes' },
+  tangier: { label: 'Tours from Tangier', path: '/tours-from-tangier' },
+  ouarzazate: { label: 'Tours from Ouarzazate', path: '/tours-from-ouarzazate' },
+};
+
+interface BreadcrumbItem {
+  name: string;
+  url: string;
+}
+
+const breadcrumbs: BreadcrumbItem[] = [
+  { name: 'Home', url: '/' },
+];
+
+if (productType === 'day-trip') {
+  breadcrumbs.push({ name: 'Day Trips', url: '/day-trips' });
+} else if (productType === 'activity') {
+  breadcrumbs.push({ name: 'Activities', url: '/activities' });
+} else {
+  // Multi-day tour default
+  breadcrumbs.push({ name: 'Multi-Day Tours', url: '/tours' });
+  const cityKey = departureCity ? departureCity.toLowerCase().trim() : '';
+  if (cityKey && citySlugMap[cityKey]) {
+    breadcrumbs.push({
+      name: citySlugMap[cityKey].label,
+      url: citySlugMap[cityKey].path,
+    });
+  }
+}
+
+// Current page item (no link in HTML navigation)
+breadcrumbs.push({ name: tourName, url: '' });
+
+// BreadcrumbList JSON-LD
+const breadcrumbSchema = {
+  "@type": "BreadcrumbList",
+  "itemListElement": breadcrumbs.map((b, idx) => ({
+    "@type": "ListItem",
+    "position": idx + 1,
+    "name": b.name,
+    "item": b.url ? `https://www.saharastartours.com${b.url}` : `https://www.saharastartours.com/tours/${tourSlug}`
+  }))
+};
+
+// Build Tour schema (TouristTrip with authentic visible page content only)
+const touristTripEntity = {
   "@type": "TouristTrip",
   "name": tourName,
   "description": description,
   "image": `https://www.saharastartours.com${heroImage}`,
   "url": `https://www.saharastartours.com/tours/${tourSlug}`,
-  "touristType": "Adventure",
+  ...(resolvedTouristType ? { "touristType": resolvedTouristType } : {}),
   "provider": {
     "@type": "TravelAgency",
     "name": "Sahara Star Tours",
     "url": "https://www.saharastartours.com"
-  }
+  },
+  ...(itinerary && itinerary.length > 0 ? {
+    "itinerary": {
+      "@type": "ItemList",
+      "numberOfItems": itinerary.length,
+      "itemListElement": itinerary.map((item, idx) => ({
+        "@type": "ListItem",
+        "position": idx + 1,
+        "name": item.title,
+        "description": item.content ? item.content.replace(/<[^>]*>/g, '').trim() : ''
+      }))
+    }
+  } : {})
+};
+
+const tourSchema = schemaData ?? {
+  "@context": "https://schema.org",
+  "@graph": [
+    touristTripEntity,
+    breadcrumbSchema
+  ]
 };
 
 const galleryJSON = JSON.stringify(galleryImages);
@@ -88,6 +175,8 @@ const galleryJSON = JSON.stringify(galleryImages);
   ogImage={ogImage ?? heroImage}
   currentPage="tours"
   schemaData={tourSchema}
+  lang={lang}
+  locale={locale}
 >
   <!-- Tour Hero Section -->
   <section class="tour-hero-section">
@@ -95,11 +184,25 @@ const galleryJSON = JSON.stringify(galleryImages);
       <img 
         src={heroImage} 
         alt={tourName} 
+        fetchpriority="high"
+        loading="eager"
         onerror="this.src='/assets/placeholder-morocco.svg'"
       />
     </div>
     <div class="tour-hero-gradient"></div>
     <div class="tour-hero-content">
+      <nav class="tour-breadcrumbs" aria-label="Breadcrumb">
+        {breadcrumbs.map((b, idx) => (
+          <>
+            {idx > 0 && <span class="sep" aria-hidden="true"><i class="fa-solid fa-chevron-right"></i></span>}
+            {b.url ? (
+              <a href={b.url}>{b.name}</a>
+            ) : (
+              <span class="current" aria-current="page">{b.name}</span>
+            )}
+          </>
+        ))}
+      </nav>
       <span class="tour-tag">{category}</span>
       <h1>{tourName}</h1>
       <div class="tour-quick-meta">
@@ -199,11 +302,11 @@ const galleryJSON = JSON.stringify(galleryImages);
     <div class="tour-main">
       <!-- About + Highlights -->
       <section class="timeline-card reveal active" id="tour-about">
-        <h3>About This Tour</h3>
+        <h2>About This Tour</h2>
         <slot name="about" />
         {highlights.length > 0 && (
           <>
-            <h5>Highlights:</h5>
+            <h3 class="highlights-heading">Highlights:</h3>
             <ul style="margin-top: 10px; padding-left: 20px; color: var(--text-muted); line-height: 1.8;">
               {highlights.map(h => <li style="margin-bottom: 8px;">{h}</li>)}
             </ul>
@@ -214,12 +317,12 @@ const galleryJSON = JSON.stringify(galleryImages);
       <!-- Day-by-Day Itinerary -->
       {itinerary.length > 0 && (
         <section class="timeline-card reveal active" id="tour-itinerary">
-          <h3><i class="fa-solid fa-route" style="color:var(--sand-gold);margin-right:8px;"></i> Program Itinerary</h3>
+          <h2><i class="fa-solid fa-route" style="color:var(--sand-gold);margin-right:8px;"></i> Program Itinerary</h2>
           <div class="timeline-steps-wrapper" id="timeline-steps">
             {itinerary.map(item => (
               <div class="timeline-item">
                 <div class="timeline-day-tag">{item.day}</div>
-                <h4>{item.title}</h4>
+                <h3>{item.title}</h3>
                 <p set:html={item.content} />
               </div>
             ))}
@@ -230,14 +333,14 @@ const galleryJSON = JSON.stringify(galleryImages);
       <!-- Media Gallery -->
       {galleryImages.length > 0 && (
         <section class="gallery-card reveal active" id="tour-gallery">
-          <h3><i class="fa-solid fa-images" style="color:var(--sand-gold);margin-right:8px;"></i> Expedition Media Gallery</h3>
+          <h2><i class="fa-solid fa-images" style="color:var(--sand-gold);margin-right:8px;"></i> Expedition Media Gallery</h2>
           <p>A visual glimpse of the spectacular landscapes awaiting you.</p>
           <div class="gallery-grid" id="gallery-grid">
             {galleryImages.map((img, idx) => (
               <div class="gallery-item" @click={`openLightbox(${idx})`}>
                 <img 
                   src={img.src} 
-                  alt={img.cap} 
+                  alt={img.alt || img.cap} 
                   loading="lazy" 
                   onerror="this.src='/assets/placeholder-morocco.svg'" 
                 />
@@ -250,10 +353,10 @@ const galleryJSON = JSON.stringify(galleryImages);
 
       <!-- Inclusions & Exclusions -->
       <section class="inclusions-card reveal active" id="tour-inclusions">
-        <h3><i class="fa-solid fa-list-check" style="color:var(--sand-gold);margin-right:8px;"></i> Inclusions &amp; Trip Details</h3>
+        <h2><i class="fa-solid fa-list-check" style="color:var(--sand-gold);margin-right:8px;"></i> Inclusions &amp; Trip Details</h2>
         <div class="inc-exc-split">
           <div class="modal-inc-col included">
-            <h5><i class="fa-solid fa-circle-check" style="color:var(--sand-gold); margin-right:8px;"></i> What's Included</h5>
+            <h3><i class="fa-solid fa-circle-check" style="color:var(--sand-gold); margin-right:8px;"></i> What's Included</h3>
             <ul class="modal-inc-list" style="list-style:none; display:flex; flex-direction:column; gap:12px; margin-top:16px;">
               {inclusions.map(item => (
                 <li><i class="fa-solid fa-circle-check" style="color:var(--sand-gold);margin-right:8px;"></i>{item}</li>
@@ -262,7 +365,7 @@ const galleryJSON = JSON.stringify(galleryImages);
             </ul>
           </div>
           <div class="modal-inc-col excluded">
-            <h5><i class="fa-solid fa-circle-xmark" style="color:var(--terracotta); margin-right:8px;"></i> Not Included</h5>
+            <h3><i class="fa-solid fa-circle-xmark" style="color:var(--terracotta); margin-right:8px;"></i> Not Included</h3>
             <ul class="modal-exc-list" style="list-style:none; display:flex; flex-direction:column; gap:12px; margin-top:16px;">
               {exclusions.map(item => (
                 <li><i class="fa-solid fa-circle-xmark" style="color:var(--terracotta);margin-right:8px;"></i>{item}</li>
@@ -281,7 +384,7 @@ const galleryJSON = JSON.stringify(galleryImages);
 
       <!-- Frequently Asked Questions -->
       <section class="faq-card reveal active" id="tour-faq">
-        <h3><i class="fa-solid fa-circle-question" style="color:var(--sand-gold); margin-right:8px;"></i> Frequently Asked Questions</h3>
+        <h2><i class="fa-solid fa-circle-question" style="color:var(--sand-gold); margin-right:8px;"></i> Frequently Asked Questions</h2>
         <div class="faq-list">
           {faqs && faqs.length > 0 ? (
             faqs.map((f, idx) => (
@@ -320,7 +423,7 @@ const galleryJSON = JSON.stringify(galleryImages);
       <!-- Recommended Related Experiences -->
       {relatedTours && relatedTours.length > 0 && (
         <div class="related-tours-card reveal active">
-          <h3><i class="fa-solid fa-compass" style="color:var(--terracotta); margin-right:8px;"></i> Recommended Similar Journeys</h3>
+          <h2><i class="fa-solid fa-compass" style="color:var(--terracotta); margin-right:8px;"></i> Recommended Similar Journeys</h2>
           <div class="related-tours-grid">
             {relatedTours.map(rt => (
               <a href={`/tours/${rt.slug}`} class="related-tour-item">
@@ -329,7 +432,7 @@ const galleryJSON = JSON.stringify(galleryImages);
                 </div>
                 <div class="related-tour-content">
                   <span class="related-tour-dur"><i class="fa-regular fa-clock"></i> {rt.duration}</span>
-                  <h4>{rt.shortTitle}</h4>
+                  <h3>{rt.shortTitle}</h3>
                   <div class="related-tour-price">Starting <strong>{rt.price}</strong></div>
                 </div>
               </a>
@@ -346,7 +449,7 @@ const galleryJSON = JSON.stringify(galleryImages);
     <aside class="tour-sidebar">
       <!-- Booking Form Card -->
       <div class="booking-sidebar-card" id="booking-form">
-        <h3>Book This Tour</h3>
+        <h2>Book This Tour</h2>
         <div class="booking-price-header">
           <span class="booking-price-label">Starting from</span>
           <span class="booking-price-val">{price.replace(/^From\s*/i, '').trim()}</span>
@@ -417,7 +520,7 @@ const galleryJSON = JSON.stringify(galleryImages);
 
       <!-- Quick Info Card -->
       <div class="booking-sidebar-card" style="padding:20px;">
-        <h4 style="font-size:1.1rem;color:var(--sand-gold);margin-bottom:16px;">Quick Tour Info</h4>
+        <h3 style="font-size:1.1rem;color:var(--sand-gold);margin-bottom:16px;">Quick Tour Info</h3>
         <ul style="list-style:none;display:flex;flex-direction:column;gap:12px;font-size:0.9rem;">
           <li style="display:flex;align-items:center;gap:10px;color:var(--text-muted);">
             <i class="fa-regular fa-clock" style="color:var(--sand-gold);width:16px;"></i>
@@ -484,7 +587,7 @@ const galleryJSON = JSON.stringify(galleryImages);
           class="lightbox-img" 
           :src="images[activeIndex]?.src" 
           alt="Tour photo gallery preview"
-          :alt="images[activeIndex]?.cap || 'Tour photo gallery preview'"
+          :alt="images[activeIndex]?.alt || images[activeIndex]?.cap || 'Tour photo gallery preview'"
           onerror="this.src='/assets/hero_sahara_sunset.png'" 
         />
         <button class="lightbox-btn lightbox-next" type="button" @click="nextImage()" aria-label="Next image">
@@ -626,6 +729,99 @@ const galleryJSON = JSON.stringify(galleryImages);
 
 <style>
 
+  /* Breadcrumbs */
+  .tour-breadcrumbs {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+    line-height: 1.4;
+  }
+  .tour-breadcrumbs a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.25s ease;
+  }
+  .tour-breadcrumbs a:hover,
+  .tour-breadcrumbs a:focus {
+    color: var(--sand-gold);
+  }
+  .tour-breadcrumbs a:focus-visible {
+    outline: 2px solid var(--sand-gold);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+  .tour-breadcrumbs .sep {
+    font-size: 0.65rem;
+    opacity: 0.5;
+    color: var(--text-muted);
+    display: inline-flex;
+    align-items: center;
+  }
+  .tour-breadcrumbs .current {
+    color: var(--sand-gold);
+    font-weight: 500;
+  }
+
+  /* Heading Hierarchy Preservation */
+  .timeline-card h2 {
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+    color: var(--sand-gold);
+    border-bottom: 1px solid var(--glass-border);
+    padding-bottom: 15px;
+    font-family: var(--font-serif);
+    font-weight: 600;
+  }
+  .highlights-heading {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-main);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+    font-family: var(--font-serif);
+  }
+  .timeline-item h3 {
+    font-size: 1.35rem;
+    color: var(--text-main);
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-family: var(--font-serif);
+  }
+  .gallery-card h2 {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+    color: var(--sand-gold);
+    font-family: var(--font-serif);
+    font-weight: 600;
+  }
+  .inclusions-card h2 {
+    font-size: 1.6rem;
+    margin-bottom: 24px;
+    color: var(--text-main);
+    font-family: var(--font-serif);
+    font-weight: 600;
+  }
+  .inc-exc-split h3,
+  .inc-exc-split h5 {
+    font-size: 1rem;
+    color: var(--text-main);
+    margin-bottom: 4px;
+    font-family: var(--font-serif);
+    font-weight: 600;
+  }
+  .booking-sidebar-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    color: var(--text-main);
+    font-family: var(--font-serif);
+    font-weight: 600;
+  }
+
   .milestone-node {
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid var(--glass-border);
@@ -647,12 +843,12 @@ const galleryJSON = JSON.stringify(galleryImages);
   }
   .milestone-arrow { color: var(--text-muted); font-size: 0.75rem; }
   .map-milestones-wrapper { margin-top: 24px; border-top: 1px solid var(--glass-border); padding-top: 20px; }
+  .map-milestones-wrapper h3,
   .map-milestones-wrapper h5 { font-size: 0.9rem; color: var(--sand-gold); margin-bottom: 14px; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600; }
   .map-milestones { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
   .modal-inc-list li, .modal-exc-list li { color: var(--text-muted); font-size: 0.9rem; }
   .modal-inc-list li i { color: var(--sand-gold); }
   .modal-exc-list li i { color: var(--terracotta); }
-  .inc-exc-split h5 { font-size: 1rem; color: var(--text-main); margin-bottom: 4px; }
 
   /* Map Section Wrapper */
   .map-section-wrap {
@@ -670,7 +866,8 @@ const galleryJSON = JSON.stringify(galleryImages);
     padding: 32px;
     margin-top: 0;
   }
-  .faq-card h3 { font-size: 1.35rem; margin-bottom: 20px; color: var(--text-main); }
+  .faq-card h2,
+  .faq-card h3 { font-size: 1.35rem; margin-bottom: 20px; color: var(--text-main); font-family: var(--font-serif); font-weight: 600; }
   .faq-list { display: flex; flex-direction: column; gap: 12px; }
   .faq-item {
     background: rgba(255, 255, 255, 0.02);
@@ -709,7 +906,8 @@ const galleryJSON = JSON.stringify(galleryImages);
     padding: 32px;
     margin-top: 32px;
   }
-  .related-tours-card h3 { font-size: 1.35rem; margin-bottom: 20px; color: var(--text-main); }
+  .related-tours-card h2,
+  .related-tours-card h3 { font-size: 1.35rem; margin-bottom: 20px; color: var(--text-main); font-family: var(--font-serif); font-weight: 600; }
   .related-tours-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -754,11 +952,14 @@ const galleryJSON = JSON.stringify(galleryImages);
     color: var(--sand-gold);
     font-weight: 600;
   }
+  .related-tour-content h3,
   .related-tour-content h4 {
     font-size: 0.92rem;
     color: var(--text-main);
     line-height: 1.4;
     margin: 0;
+    font-family: var(--font-serif);
+    font-weight: 600;
   }
   .related-tour-price {
     font-size: 0.85rem;
@@ -1043,6 +1244,11 @@ const galleryJSON = JSON.stringify(galleryImages);
     .tour-hero-content {
       padding-left: 58px !important;
       padding-right: 18px !important;
+    }
+    .tour-breadcrumbs {
+      font-size: 0.8rem;
+      gap: 6px;
+      margin-bottom: 12px;
     }
   }
 

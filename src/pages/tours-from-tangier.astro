@@ -12,10 +12,37 @@ function getDurationTier(days: number): string {
 
 const tangierSchema = {
   "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "name": "Private Morocco Tours from Tangier | Sahara Star Tours",
-  "description": `Browse our complete collection of ${tours.length} private multi-day Morocco tours departing from Tangier. Ferry port and TNG airport meet-and-greet, Chefchaouen blue city, Fes medina, Erg Chebbi Sahara dunes, and Marrakech traverses.`,
-  "url": "https://www.saharastartours.com/tours-from-tangier"
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "name": "Private Morocco Tours from Tangier | Sahara Star Tours",
+      "description": `Browse our complete collection of ${tours.length} private multi-day Morocco tours departing from Tangier. Ferry port and TNG airport meet-and-greet, Chefchaouen blue city, Fes medina, Erg Chebbi Sahara dunes, and Marrakech traverses.`,
+      "url": "https://www.saharastartours.com/tours-from-tangier"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.saharastartours.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Multi-Day Tours",
+          "item": "https://www.saharastartours.com/tours"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Tours from Tangier",
+          "item": "https://www.saharastartours.com/tours-from-tangier"
+        }
+      ]
+    }
+  ]
 };
 ---
 

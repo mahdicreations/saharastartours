@@ -4,6 +4,24 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { getImperialCitiesTours } from '../data/tours';
 
 const imperialTours = getImperialCitiesTours();
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Morocco Imperial Cities Tours | Sahara Star Tours",
+  "description": "Explore Morocco's imperial capitals: Fes, Marrakech, Rabat, and Meknes. Private cultural heritage tours from 10 to 15 days with licensed local medina guides.",
+  "url": "https://www.saharastartours.com/imperial-cities",
+  "mainEntity": {
+    "@type": "ItemList",
+    "numberOfItems": imperialTours.length,
+    "itemListElement": imperialTours.map((tour, idx) => ({
+      "@type": "ListItem",
+      "position": idx + 1,
+      "name": tour.shortTitle,
+      "url": `https://www.saharastartours.com/tours/${tour.slug}`
+    }))
+  }
+};
 ---
 
 <BaseLayout
@@ -11,6 +29,7 @@ const imperialTours = getImperialCitiesTours();
   description="Explore Morocco's imperial capitals: Fes, Marrakech, Rabat, and Meknes. Private cultural heritage tours from 10 to 15 days with licensed local medina guides."
   keywords="morocco imperial cities, fes medina tour, marrakech imperial tour, rabat landmarks, meknes volubilis, 15 days morocco tour, 11 days morocco classic tour"
   currentPage="imperial-cities"
+  schemaData={schemaData}
 >
 
 <section class="cat-hero">

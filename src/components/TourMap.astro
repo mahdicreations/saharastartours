@@ -29,7 +29,7 @@ const routeData = JSON.stringify(routeCoordinates);
       <span class="timeline-day-tag">
         <i class="fa-solid fa-map-location-dot" style="margin-right:6px;"></i> Interactive Route Map
       </span>
-      <h3>Interactive Route Map</h3>
+      <h2>Interactive Route Map</h2>
     </div>
     <div class="tour-map-header-badges">
       <span class="tour-map-badge">
@@ -96,7 +96,7 @@ const routeData = JSON.stringify(routeCoordinates);
 
   {destinations.length > 0 && (
     <div class="map-milestones-wrapper">
-      <h5>Route Milestones</h5>
+      <h3>Route Milestones</h3>
       <div class="map-milestones">
         {destinations.map((destination, index) => (
           <span class={`milestone-node ${index === 0 ? 'start-node' : ''}`}>
@@ -386,6 +386,7 @@ const routeData = JSON.stringify(routeCoordinates);
     border-bottom: 1px solid var(--glass-border);
     padding-bottom: 18px;
   }
+  .tour-map-header h2,
   .tour-map-header h3 {
     font-size: 1.6rem;
     color: var(--sand-gold);
@@ -564,6 +565,7 @@ const routeData = JSON.stringify(routeCoordinates);
     border-top: 1px solid var(--glass-border);
     padding-top: 20px;
   }
+  .map-milestones-wrapper h3,
   .map-milestones-wrapper h5 {
     font-size: 0.9rem;
     color: var(--sand-gold);
@@ -646,6 +648,7 @@ const routeData = JSON.stringify(routeCoordinates);
       align-items: flex-start;
       gap: 12px;
     }
+    .tour-map-header h2,
     .tour-map-header h3 {
       font-size: 1.35rem;
     }

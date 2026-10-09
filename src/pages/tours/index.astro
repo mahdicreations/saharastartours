@@ -22,10 +22,31 @@ function getDurationTier(days: number): string {
 
 const toursSchema = {
   "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "name": "Multi-Day Morocco Tours & Private Expeditions | Sahara Star Tours",
-  "description": `Discover our collection of ${multiDayTours.length} private multi-day Morocco tours. Luxury Sahara desert safaris, Imperial Cities circuits, and grand mountain odysseys from Marrakech, Casablanca, Fes, Tangier, and Ouarzazate.`,
-  "url": "https://www.saharastartours.com/tours"
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "name": "Multi-Day Morocco Tours & Private Expeditions | Sahara Star Tours",
+      "description": `Discover our collection of ${multiDayTours.length} private multi-day Morocco tours. Luxury Sahara desert safaris, Imperial Cities circuits, and grand mountain odysseys from Marrakech, Casablanca, Fes, Tangier, and Ouarzazate.`,
+      "url": "https://www.saharastartours.com/tours"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.saharastartours.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Multi-Day Tours",
+          "item": "https://www.saharastartours.com/tours"
+        }
+      ]
+    }
+  ]
 };
 ---
 

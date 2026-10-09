@@ -13,6 +13,8 @@ interface Props {
   canonicalUrl?: string;
   currentPage?: string;
   noIndex?: boolean;
+  lang?: string;
+  locale?: string;
   // Schema.org structured data (JSON-LD)
   schemaData?: Record<string, unknown>;
 }
@@ -25,6 +27,8 @@ const {
   canonicalUrl,
   currentPage = '',
   noIndex = false,
+  lang = 'en',
+  locale = 'en_US',
   schemaData,
 } = Astro.props;
 
@@ -34,7 +38,7 @@ const ogImageAbsolute = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogIm
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang={lang}>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -53,7 +57,7 @@ const ogImageAbsolute = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogIm
   <meta property="og:url" content={canonical} />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Sahara Star Tours" />
-  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale" content={locale} />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />

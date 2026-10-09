@@ -8,22 +8,43 @@ const canonicalUrl = "https://www.saharastartours.com/contact";
 
 const contactSchema = {
   "@context": "https://schema.org",
-  "@type": "ContactPage",
-  "name": seoTitle,
-  "description": seoDescription,
-  "url": canonicalUrl,
-  "mainEntity": {
-    "@type": "TravelAgency",
-    "name": "Sahara Star Tours",
-    "telephone": "+212678317015",
-    "email": "contact@saharastartours.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Derb Dabachi, Medina",
-      "addressLocality": "Marrakech",
-      "addressCountry": "MA"
+  "@graph": [
+    {
+      "@type": "ContactPage",
+      "name": seoTitle,
+      "description": seoDescription,
+      "url": canonicalUrl,
+      "mainEntity": {
+        "@type": "TravelAgency",
+        "name": "Sahara Star Tours",
+        "telephone": "+212678317015",
+        "email": "contact@saharastartours.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Derb Dabachi, Medina",
+          "addressLocality": "Marrakech",
+          "addressCountry": "MA"
+        }
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.saharastartours.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Contact & Custom Trip Planning",
+          "item": canonicalUrl
+        }
+      ]
     }
-  }
+  ]
 };
 ---
 
